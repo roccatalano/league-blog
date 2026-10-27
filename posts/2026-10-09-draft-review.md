@@ -13,26 +13,28 @@ The model plays each drafted roster against all 13 others over a typical week. "
 
 | Team | Win % | Grade | Best category | Weakest |
 | --- | --- | --- | --- | --- |
-| The Serbian Empire | 78% | A | PTS | TO |
-| Al-Shaida | 73% | A- | AST | TO |
-| HE IS HIM ( G.O.A.T) | 68% | B+ | BLK | TO |
-| Popoviched | 67% | B+ | 3PM | TO |
-| JAReusalem | 65% | B | 3PM | REB |
-| Torta Pounders | 57% | B- | 3PM | REB |
-| mr charloooooo | 51% | C+ | FG% | 3PM |
-| The haliban | 49% | C+ | BLK | 3PM |
-| Giddey up Horsey | 44% | C | AST | TO |
-| Gets On Base | 42% | C | REB | AST |
-| Viva La Raza! | 31% | D+ | TO | BLK |
-| Derrick White Girl Wasted | 30% | D+ | FT% | PTS |
-| Stairway to Devin | 23% | D | TO | REB |
-| The Real OG | 21% | D | PTS | BLK |
+| The Serbian Empire | 79% | A | PTS | TO |
+| Al-Shaida | 75% | A- | AST | TO |
+| HE IS HIM ( G.O.A.T) | 70% | B+ | BLK | TO |
+| Popoviched | 69% | B+ | 3PM | TO |
+| JAReusalem | 68% | B | STL | REB |
+| mr charloooooo | 54% | C+ | PTS | 3PM |
+| Giddey up Horsey | 47% | C | AST | TO |
+| Torta Pounders | 45% | C | 3PM | REB |
+| Gets On Base | 45% | C | REB | AST |
+| The haliban | 35% | C- | TO | AST |
+| Viva La Raza! | 33% | D+ | TO | BLK |
+| Derrick White Girl Wasted | 33% | D+ | AST | PTS |
+| Stairway to Devin | 25% | D | FT% | REB |
+| The Real OG | 23% | D | TO | BLK |
 
 **The Serbian Empire** took Nikola Jokic first overall and he is still the model's number one player. Add Pascal Siakam and a 6th-round steal in Ty Jerome, and they rate 72% or better in PTS, REB, AST and 3PM. That's the team to beat.
 
 **Al-Shaida** got Luka Doncic at 4, and he now rates as the second-best player in the draft. Then Joel Embiid fell to them at pick 81 (more below).
 
 At the bottom, **The Real OG** and **Stairway to Devin** are both hurt by injuries: Paolo Banchero, Kon Knueppel and Chet Holmgren are all out right now. Stairway's drafted roster rates just 9% in rebounds.
+
+Two picks count for nothing: **Kevin Porter Jr.** (The haliban, pick 117) and **Russell Westbrook** (Torta Pounders, pick 125) don't have an NBA team this season.
 
 ## The first round, one week in
 
@@ -61,15 +63,15 @@ Jalen Johnson at 10 (now 6th) and Giannis at 7 (now 4th) look like the best valu
 - **Zach LaVine** to mr charloooooo at 138, now ranked 73rd.
 - **Ja Morant** to mr charloooooo at 115, now 52nd. Two of the draft's top three steals went to the same team.
 - **Paul George** to JAReusalem at 102, now 47th. He opened the season with 38 points and seven threes.
-- **Russell Westbrook** to Torta Pounders at 125, now 77th.
 - **Ty Jerome** to The Serbian Empire at 84, now 41st, helped by a 45-point night.
+- **Collin Sexton** to The haliban at 173, now 132nd.
 
 ## 📉 Early busts
 
-- **Mikal Bridges** to The haliban at 33, now ranked 125th: the biggest drop in the draft so far.
+- **Mikal Bridges** to The haliban at 33, now ranked 123rd: the biggest drop in the draft so far.
 - **Derrick White** to The haliban at 24, now 69th.
 - **Amen Thompson** to JAReusalem at 18, now 56th.
-- **Dyson Daniels** to JAReusalem at 46, now 83rd.
-- **Donovan Clingan** to Gets On Base at 50, now 84th.
+- **Dyson Daniels** to JAReusalem at 46, now 82nd.
+- **Donovan Clingan** to Gets On Base at 50, now 83rd.
 
 It's early. A slow fortnight isn't a season, and half of these will look fine by Christmas. But the model has noticed.

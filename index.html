@@ -88,6 +88,19 @@
   .ladder small { color: var(--muted); display: block; font-size: 12px; }
   .up { color: #2f9e44; font-size: 12px; } .down { color: #e03131; font-size: 12px; }
   .scroll { overflow-x: auto; }
+  .dg { display: grid; grid-template-columns: 26px 1fr auto; gap: 10px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--line); }
+  .dg:last-child { border-bottom: 0; }
+  .dg .rk { color: var(--muted); font-size: 13px; }
+  .dg .nm { font-weight: 700; font-size: 15px; line-height: 1.25; }
+  .dg .sub { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+  .dg .score { font-family: "Archivo Black", Inter, sans-serif; font-size: 24px; min-width: 44px; text-align: right; }
+  .chips { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 5px; }
+  .chip { font-size: 11.5px; font-weight: 600; padding: 2px 7px; border-radius: 99px; background: var(--accent-soft); color: var(--accent); }
+  .chip.off { background: transparent; color: var(--muted); border: 1px dashed var(--line); }
+  .explain h3 { font-size: 16px; margin: 16px 0 4px; }
+  .explain p, .explain li { font-size: 14.5px; }
+  .filters { display: flex; gap: 8px; margin-bottom: 12px; }
+  .filters select { flex: 1; font: inherit; font-size: 14px; padding: 7px 10px; border-radius: 10px; border: 1px solid var(--line); background: var(--card); color: var(--ink); }
   footer { color: var(--muted); font-size: 13px; text-align: center; padding: 0 16px 32px; }
 </style>
 </head>
@@ -95,7 +108,7 @@
 <header><div class="wrap">
   <a href="#"><div class="brand">NBA FANTASY <span>2026</span></div></a>
   <div class="tag">Daily posts, trade reviews and weekly roundups. Updated automatically.</div>
-  <nav><a href="#/" data-n="posts">Posts</a><a href="#/ladder" data-n="ladder">Ladder</a><a href="#/odds" data-n="odds">Live odds</a><a href="#/trade" data-n="trade">Trade calculator</a></nav>
+  <nav><a href="#/" data-n="posts">Posts</a><a href="#/ladder" data-n="ladder">Ladder</a><a href="#/odds" data-n="odds">Live odds</a><a href="#/trade" data-n="trade">Trade calculator</a><a href="#/dawg" data-n="dawg">Dawg index</a></nav>
 </div></header>
 <main class="wrap" id="app"><p class="empty">Loading…</p></main>
 <footer>Odds and expected wins come from a model, not a crystal ball.</footer>
@@ -180,6 +193,41 @@ async function ladderPage() {
     <div class="card scroll"><table class="ladder"><tr><th>#</th><th>Team</th><th>Rec</th><th>Finals</th><th>Title</th></tr>${rows}</table></div>`;
 }
 
+let DAWG = null;
+async function dawgPage() {
+  setNav("dawg"); document.title = "Dawg index · NBA Fantasy 2026";
+  app.innerHTML = '<p class="empty">Loading…</p>';
+  try { if (!DAWG) DAWG = await (await fetch("data/dawg.json", { cache: "no-cache" })).json(); }
+  catch (e) { app.innerHTML = '<p class="empty">The Dawg index isn\'t available yet.</p>'; return; }
+  const teams = [...new Set(DAWG.players.map(p => p.team))].sort();
+  app.innerHTML = `<p class="updated">Who's playing like a dawg? A 0-100 score for every rostered player, updated ${esc(ago(DAWG.updated_utc))}.</p>
+    <details class="card explain"><summary>How the Dawg index works</summary>
+      <p>Every player gets three scores from 0 to 100. Each one is a <strong>percentile</strong>: a Hustle of 90 means he's out-hustling 90% of the players on a fantasy roster in this league.</p>
+      <h3>🐶 Hustle (40%)</h3>
+      <p>The dirty work, per 36 minutes this season: rebounds, steals and blocks, minus turnovers. Steals and blocks count 2.5 times as much as a rebound. Rebounds are scaled by position, because a guard grabbing boards is grittier than a centre doing it: guards ×1.4, small forwards ×1.1, power forwards ×0.8, centres ×0.6. Then it's scaled by availability: a player who has played every one of his team's games keeps 100%, one who has played none keeps 70%. Needs 2+ games and 8+ minutes a night.</p>
+      <h3>🔥 Heat check (40%)</h3>
+      <p>His fantasy score per game over the last 7 days, compared with his normal level (ESPN's projection for him, or last season if there isn't one). The "+30%" next to it means he's been 30% better than usual this week. Fantasy score = points + 1.2×rebounds + 1.5×assists + 3×steals + 3×blocks + threes − 1.5×turnovers. Needs 2+ games in the last week.</p>
+      <h3>💪 Big-game (20%)</h3>
+      <p>Does he show up when it matters? We take every game he started for his fantasy team while that team's matchup was close (decided by 2 categories or fewer, or within 2 right now for this week), and compare his fantasy score in those games with his average in all his games. Needs 2+ close-matchup games, so it's blank for most players early in the season. When it's blank, Hustle and Heat count 50/50.</p>
+      <h3>The Dawg index</h3>
+      <p>40% Hustle + 40% Heat + 20% Big-game, rounded to a 0-100 score. It's for fun and bragging rights: it rewards effort and form, not overall fantasy value, which is why role players can top it.</p>
+    </details>
+    <div class="filters"><select id="dt"><option value="">All teams</option>${teams.map(t => `<option>${esc(t)}</option>`).join("")}</select></div>
+    <div class="card" id="dl"></div>`;
+  const draw = () => {
+    const team = document.getElementById("dt").value;
+    const list = DAWG.players.filter(p => p.dawg !== null && (!team || p.team === team));
+    const shown = team ? list : list.slice(0, 50);
+    const chip = (label, v, extra) => v === null || v === undefined ? `<span class="chip off">${label} —</span>` : `<span class="chip">${label} ${v}${extra || ""}</span>`;
+    const sgn = x => x === undefined || x === null ? "" : ` (${x >= 0 ? "+" : ""}${x}%)`;
+    document.getElementById("dl").innerHTML = shown.map((p, i) => `<div class="dg"><div class="rk">${i + 1}</div>
+      <div><div class="nm">${esc(p.name)}</div><div class="sub">${esc(p.pos)} · ${esc(p.team)}${p.status !== "ACTIVE" ? " · " + esc(p.status.replace(/_/g, " ").toLowerCase()) : ""}</div>
+      <div class="chips">${chip("Hustle", p.hustle)}${chip("Heat", p.heat, sgn(p.heat_vs_normal_pct))}${chip("Big-game", p.big, sgn(p.big_vs_normal_pct))}</div></div>
+      <div class="score">${p.dawg}</div></div>`).join("") + (team ? "" : `<p class="note">Top 50 shown. Pick a team to see its whole roster.</p>`);
+  };
+  document.getElementById("dt").onchange = draw; draw();
+}
+
 let MODEL = null, LM = null;
 async function tradePage() {
   setNav("trade"); document.title = "Trade calculator · NBA Fantasy 2026";
@@ -232,6 +280,7 @@ function route() {
   const slug = decodeURIComponent(location.hash.replace(/^#\/?/, ""));
   if (slug === "odds") return oddsPage();
   if (slug === "ladder") return ladderPage();
+  if (slug === "dawg") return dawgPage();
   if (slug === "trade") return tradePage();
   setNav("posts");
   slug ? show(slug) : home();

@@ -12,7 +12,7 @@ sys.path.insert(0, HERE)
 logging.disable(logging.CRITICAL)
 import server as S  # noqa: E402
 
-TRADES_SEEN = os.path.join(HERE, "blog_trades_seen.json")
+TRADES_SEEN = os.path.join(HERE, "blog_trades_seen_v2.json")
 
 
 def _load(path, default):
@@ -55,9 +55,9 @@ def trade_reviews():
         if len(teams) != 2 or any(t not in ids for t in teams):
             continue
         a, b = ids[teams[0]], ids[teams[1]]
-        # "team X traded player P" = P leaves X
-        gives = {a: [m["player"] for m in moves if m["team"] == teams[0]],
-                 b: [m["player"] for m in moves if m["team"] == teams[1]]}
+        # ESPN logs each traded player under the team RECEIVING him.
+        gets = {a: [m["player"] for m in moves if m["team"] == teams[0]],
+                b: [m["player"] for m in moves if m["team"] == teams[1]]}
 
         def find(name):
             for tid, pl in rosters.items():
@@ -69,21 +69,21 @@ def trade_reviews():
         objs = {}
         ok = True
         for side in (a, b):
-            for n in gives[side]:
+            for n in gets[side]:
                 tid, p = find(n)
                 if p is None:
                     ok = False
                 objs[n] = (tid, p)
         if not ok:
             continue
-        processed = all(objs[n][0] != side for side in (a, b) for n in gives[side])
+        processed = all(objs[n][0] == side for side in (a, b) for n in gets[side])
         other = {a: b, b: a}
         result = {"date_utc": entry["date"],
                   "status": "processed" if processed else "accepted, in league review (players not moved yet)",
                   "sides": []}
         for side in (a, b):
-            give_p = [objs[n][1] for n in gives[side]]
-            get_p = [objs[n][1] for n in gives[other[side]]]
+            get_p = [objs[n][1] for n in gets[side]]
+            give_p = [objs[n][1] for n in gets[other[side]]]
             cur = rosters[side]
             if processed:
                 after = cur
@@ -120,13 +120,21 @@ def main():
     now_mel = datetime.now(timezone.utc) + timedelta(hours=11)
     data = {"kind": kind, "generated_utc": datetime.now(timezone.utc).isoformat(),
             "date_melbourne_approx": now_mel.strftime("%Y-%m-%d")}
+    out_path = os.path.join(ROOT, "data", "latest.json")
+    os.makedirs(os.path.join(ROOT, "data"), exist_ok=True)
     if kind == "weekly":
         data["weekly"] = json.loads(S.weekly_post_data())
+    elif kind == "trade":
+        data["trades"] = trade_reviews()
+        if not data["trades"]:
+            if os.path.exists(out_path):
+                os.remove(out_path)
+            print("no new trades")
+            return
     else:
         data["daily"] = json.loads(S.daily_post_data())
         data["trades"] = trade_reviews()
-    os.makedirs(os.path.join(ROOT, "data"), exist_ok=True)
-    with open(os.path.join(ROOT, "data", "latest.json"), "w") as f:
+    with open(out_path, "w") as f:
         json.dump(data, f, indent=1, default=str)
     print(f"wrote data/latest.json ({kind}), trades: {len(data.get('trades', []))}")
 

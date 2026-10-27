@@ -1,0 +1,98 @@
+name: League blog
+
+on:
+  schedule:
+    - cron: "45 7 * * *"   # daily post, 6:45pm Melbourne (daylight saving time)
+    - cron: "15 8 * * 1"   # weekly roundup, Monday 7:15pm Melbourne (daylight saving time)
+  workflow_dispatch:
+    inputs:
+      kind:
+        description: "daily or weekly"
+        default: "daily"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: league-blog
+  cancel-in-progress: false
+
+env:
+  PYTHONDONTWRITEBYTECODE: "1"
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Put files in their folders (only does anything the first time)
+        run: |
+          mkdir -p scripts posts
+          for f in server.py fetch.py build_index.py blog_trades_seen.json league_posts_history.json power_history.json; do
+            if [ -f "$f" ]; then git mv "$f" scripts/; fi
+          done
+          if [ -f 2026-10-27-queen-reed-trade.md ]; then git mv 2026-10-27-queen-reed-trade.md posts/; fi
+          if [ -f index.json ]; then git rm -q index.json; fi
+          git rm -r -q --cached scripts/__pycache__ 2>/dev/null || true
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install Python packages
+        run: pip install httpx "mcp[cli]<2"
+
+      - name: Decide post type
+        id: kind
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "kind=${{ inputs.kind }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "15 8 * * 1" ]; then
+            echo "kind=weekly" >> "$GITHUB_OUTPUT"
+          else
+            echo "kind=daily" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Fetch league data from ESPN
+        env:
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          ESPN_SWID: ${{ secrets.ESPN_SWID }}
+          ESPN_LEAGUE_ID: "665726760"
+          ESPN_TEAM_ID: "8"
+          ESPN_SEASON: "2027"
+        run: python scripts/fetch.py "${{ steps.kind.outputs.kind }}"
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Claude writes the post
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: |
+          claude -p "Follow WRITING.md exactly: read data/latest.json and write today's post as a new file in posts/." \
+            --allowedTools "Read,Write,Glob"
+
+      - name: Rebuild the post list
+        run: python scripts/build_index.py
+
+      - name: Publish
+        run: |
+          git config user.name "league-blog-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A posts scripts
+          if git diff --cached --quiet; then
+            echo "Nothing new to publish"
+          else
+            git commit -m "New ${{ steps.kind.outputs.kind }} post"
+            for i in 1 2 3; do
+              git pull --rebase --autostash && git push && exit 0
+              sleep 10
+            done
+            exit 1
+          fi

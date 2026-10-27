@@ -10,15 +10,20 @@ permissions:
 
 concurrency:
   group: live-odds
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 env:
   PYTHONDONTWRITEBYTECODE: "1"
+  ESPN_S2: ${{ secrets.ESPN_S2 }}
+  ESPN_SWID: ${{ secrets.ESPN_SWID }}
+  ESPN_LEAGUE_ID: "665726760"
+  ESPN_TEAM_ID: "8"
+  ESPN_SEASON: "2027"
 
 jobs:
   odds:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v5
 
@@ -30,19 +35,35 @@ jobs:
         run: pip install httpx "mcp[cli]<2"
 
       - name: Refresh odds and trade calculator data
-        env:
-          ESPN_S2: ${{ secrets.ESPN_S2 }}
-          ESPN_SWID: ${{ secrets.ESPN_SWID }}
-          ESPN_LEAGUE_ID: "665726760"
-          ESPN_TEAM_ID: "8"
-          ESPN_SEASON: "2027"
         run: python scripts/live.py
+
+      - name: Check for new trades
+        id: trades
+        run: |
+          python scripts/fetch.py trade
+          if [ -f data/latest.json ]; then echo "found=true" >> "$GITHUB_OUTPUT"; fi
+
+      - if: steps.trades.outputs.found == 'true'
+        uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+
+      - name: Claude writes the trade post
+        if: steps.trades.outputs.found == 'true'
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: |
+          npm install -g @anthropic-ai/claude-code
+          claude -p "Follow WRITING.md exactly: read data/latest.json (kind: trade) and write a trade post as a new file in posts/." \
+            --allowedTools "Read,Write,Glob"
+          python scripts/build_index.py
 
       - name: Publish
         run: |
           git config user.name "league-blog-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/odds.json data/model.json
+          if [ "${{ steps.trades.outputs.found }}" = "true" ]; then git add -A posts scripts; fi
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "Update live odds"
           for i in 1 2 3; do

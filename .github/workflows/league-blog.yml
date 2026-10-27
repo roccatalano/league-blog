@@ -17,6 +17,9 @@ concurrency:
   group: league-blog
   cancel-in-progress: false
 
+env:
+  PYTHONDONTWRITEBYTECODE: "1"
+
 jobs:
   post:
     runs-on: ubuntu-latest
@@ -32,6 +35,7 @@ jobs:
           done
           if [ -f 2026-10-27-queen-reed-trade.md ]; then git mv 2026-10-27-queen-reed-trade.md posts/; fi
           if [ -f index.json ]; then git rm -q index.json; fi
+          git rm -r -q --cached scripts/__pycache__ 2>/dev/null || true
 
       - uses: actions/setup-python@v6
         with:
@@ -86,5 +90,9 @@ jobs:
             echo "Nothing new to publish"
           else
             git commit -m "New ${{ steps.kind.outputs.kind }} post"
-            git push
+            for i in 1 2 3; do
+              git pull --rebase --autostash && git push && exit 0
+              sleep 10
+            done
+            exit 1
           fi

@@ -1,0 +1,81 @@
+name: League blog
+
+on:
+  schedule:
+    - cron: "45 7 * * *"   # daily post, 6:45pm Melbourne (daylight saving time)
+    - cron: "15 8 * * 1"   # weekly roundup, Monday 7:15pm Melbourne (daylight saving time)
+  workflow_dispatch:
+    inputs:
+      kind:
+        description: "daily or weekly"
+        default: "daily"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: league-blog
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python packages
+        run: pip install httpx "mcp[cli]<2"
+
+      - name: Decide post type
+        id: kind
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "kind=${{ inputs.kind }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "15 8 * * 1" ]; then
+            echo "kind=weekly" >> "$GITHUB_OUTPUT"
+          else
+            echo "kind=daily" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Fetch league data from ESPN
+        env:
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          ESPN_SWID: ${{ secrets.ESPN_SWID }}
+          ESPN_LEAGUE_ID: "665726760"
+          ESPN_TEAM_ID: "8"
+          ESPN_SEASON: "2027"
+        run: python scripts/fetch.py "${{ steps.kind.outputs.kind }}"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Claude writes the post
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: |
+          claude -p "Follow WRITING.md exactly: read data/latest.json and write today's post as a new file in posts/." \
+            --allowedTools "Read,Write,Glob"
+
+      - name: Rebuild the post list
+        run: python scripts/build_index.py
+
+      - name: Publish
+        run: |
+          git config user.name "league-blog-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add posts scripts/*.json
+          if git diff --cached --quiet; then
+            echo "Nothing new to publish"
+          else
+            git commit -m "New ${{ steps.kind.outputs.kind }} post"
+            git push
+          fi

@@ -22,9 +22,18 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - name: Put files in their folders (only does anything the first time)
+        run: |
+          mkdir -p scripts posts
+          for f in server.py fetch.py build_index.py blog_trades_seen.json league_posts_history.json power_history.json; do
+            if [ -f "$f" ]; then git mv "$f" scripts/; fi
+          done
+          if [ -f 2026-10-27-queen-reed-trade.md ]; then git mv 2026-10-27-queen-reed-trade.md posts/; fi
+          if [ -f index.json ]; then git rm -q index.json; fi
+
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
@@ -51,9 +60,9 @@ jobs:
           ESPN_SEASON: "2027"
         run: python scripts/fetch.py "${{ steps.kind.outputs.kind }}"
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
-          node-version: "20"
+          node-version: "22"
 
       - name: Install Claude Code
         run: npm install -g @anthropic-ai/claude-code
@@ -72,7 +81,7 @@ jobs:
         run: |
           git config user.name "league-blog-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add posts scripts/*.json
+          git add -A posts scripts
           if git diff --cached --quiet; then
             echo "Nothing new to publish"
           else

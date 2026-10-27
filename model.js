@@ -63,11 +63,28 @@
       for (const t of others) { const pr = catProbs(md, weeklyDist(rosters[t.id] || t.players)); CATS.forEach(k => acc[k] += pr[k] / others.length); }
       return acc;
     }
+    const REPL = C.REPLACEMENT || { "0": 8.0, "6": 3.5, "3": 1.8, "2": 0.7, "1": 0.4, "17": 0.9, "11": 1.0, "13": 3.1, "14": 7.0, "15": 1.0, "16": 1.3 };
+    const active = r => r.filter(p => p.slot !== 13).length;  // IR spots don't count toward the roster limit
+    // Uneven trades: the team that ends up with too many players drops its least valuable one;
+    // the team left with an open spot picks up a replacement-level free agent.
+    function balance(before, after, protect) {
+      const r = after.slice(), moves = { drops: [], adds: 0 };
+      while (active(r) > active(before)) {
+        const cands = r.filter(p => p.slot !== 13 && !protect.includes(p));
+        const pool = cands.length ? cands : r.filter(p => p.slot !== 13);
+        const worst = pool.reduce((x, y) => (pp(y.status) * value(y.rates) < pp(x.status) * value(x.rates) ? y : x));
+        r.splice(r.indexOf(worst), 1); moves.drops.push(worst.name);
+      }
+      while (active(r) < active(before)) { r.push({ name: "Free agent", status: "ACTIVE", slot: 0, rates: REPL }); moves.adds++; }
+      return [r, moves];
+    }
     // give = names leaving team a, get = names leaving team b
     function evaluate(a, b, giveNames, getNames, opts = {}) {
       const ra = rosterOf(a), rb = rosterOf(b);
       const give = ra.filter(p => giveNames.includes(p.name)), get = rb.filter(p => getNames.includes(p.name));
-      const na = ra.filter(p => !give.includes(p)).concat(get), nb = rb.filter(p => !get.includes(p)).concat(give);
+      let na = ra.filter(p => !give.includes(p)).concat(get), nb = rb.filter(p => !get.includes(p)).concat(give);
+      let ma = { drops: [], adds: 0 }, mb = { drops: [], adds: 0 };
+      if (!opts.noBalance) { [na, ma] = balance(ra, na, get); [nb, mb] = balance(rb, nb, give); }
       const after = opts.originalOpponents ? {} : { [a]: na, [b]: nb };
       const side = (tid, before, aft) => {
         const bv = fixtureValue(tid, { [tid]: before });
@@ -76,7 +93,7 @@
         const cats = {}; CATS.forEach(k => cats[C.CN[k]] = pa[k] - pb[k]);
         return { change: (av - bv) * C.GAIN_CALIBRATION, cats };
       };
-      return { a: side(a, ra, na), b: side(b, rb, nb) };
+      return { a: Object.assign(side(a, ra, na), { moves: ma }), b: Object.assign(side(b, rb, nb), { moves: mb }) };
     }
     return { evaluate, weeklyDist, catProbs, matchWin, fixtureValue };
   }

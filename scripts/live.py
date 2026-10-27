@@ -12,6 +12,20 @@ sys.path.insert(0, HERE)
 logging.disable(logging.CRITICAL)
 import server as S  # noqa: E402
 
+# Players with no NBA team (unsigned) can't play: count them as OUT everywhere.
+_team_players_orig = S._team_players
+
+
+def _team_players(team_id, d=None):
+    name, players = _team_players_orig(team_id, d)
+    for p in players:
+        if not p.get("pro"):
+            p["status"] = "OUT"
+    return name, players
+
+
+S._team_players = _team_players
+
 
 def price(p, margin=0.10):
     """Decimal odds with a bookmaker margin, like the daily post uses."""

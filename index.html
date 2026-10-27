@@ -46,6 +46,38 @@
   article blockquote { margin: 16px 0; padding: 4px 16px; border-left: 3px solid var(--accent); color: var(--muted); }
   .back { display: inline-block; margin-bottom: 8px; color: var(--accent); text-decoration: none; font-weight: 600; font-size: 15px; }
   .empty { color: var(--muted); }
+  nav { display: flex; gap: 6px; margin-top: 16px; flex-wrap: wrap; }
+  nav a { color: #cfd5e0; text-decoration: none; font-weight: 600; font-size: 14px; padding: 6px 12px;
+          border-radius: 99px; border: 1px solid #2c3446; }
+  nav a.on { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .updated { font-size: 13px; color: var(--muted); margin: 0 0 14px; }
+  .mu-head { display: grid; grid-template-columns: 1fr auto 1fr; gap: 8px; align-items: center; }
+  .mu-team { font-weight: 700; font-size: 15px; line-height: 1.25; }
+  .mu-team.r { text-align: right; }
+  .mu-score { font-family: "Archivo Black", Inter, sans-serif; font-size: 22px; text-align: center; white-space: nowrap; }
+  .bar { display: flex; height: 8px; border-radius: 99px; overflow: hidden; margin: 10px 0 4px; background: var(--line); }
+  .bar i { display: block; background: var(--accent); }
+  .bar b { display: block; background: var(--muted); opacity: .45; }
+  .mu-odds { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); }
+  .mu-odds strong { color: var(--ink); }
+  details { margin-top: 10px; }
+  summary { cursor: pointer; font-size: 14px; font-weight: 600; color: var(--accent); }
+  .cats { width: 100%; border-collapse: collapse; font-size: 13.5px; margin-top: 8px; }
+  .cats td, .cats th { padding: 5px 4px; border-bottom: 1px solid var(--line); text-align: center; }
+  .cats th { color: var(--muted); font-weight: 600; font-size: 12px; }
+  .cats td:first-child, .cats th:first-child { text-align: left; font-weight: 600; }
+  .win { font-weight: 700; }
+  .calc label.lbl { display: block; font-size: 13px; color: var(--muted); font-weight: 600; margin: 4px 0; }
+  .calc select { width: 100%; font: inherit; padding: 8px 10px; border-radius: 10px; border: 1px solid var(--line);
+                 background: var(--card); color: var(--ink); }
+  .plist { margin-top: 10px; display: grid; gap: 4px; }
+  .plist label { display: flex; gap: 10px; align-items: center; font-size: 15px; padding: 6px 4px; border-radius: 8px; }
+  .plist label:hover { background: var(--accent-soft); }
+  .plist small { color: var(--muted); }
+  .res { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .res .big { font-family: "Archivo Black", Inter, sans-serif; font-size: 28px; }
+  .pos { color: #2f9e44; } .neg { color: #e03131; }
+  .note { font-size: 13px; color: var(--muted); }
   footer { color: var(--muted); font-size: 13px; text-align: center; padding: 0 16px 32px; }
 </style>
 </head>
@@ -53,14 +85,16 @@
 <header><div class="wrap">
   <a href="#"><div class="brand">NBA FANTASY <span>2026</span></div></a>
   <div class="tag">Daily posts, trade reviews and weekly roundups. Updated automatically.</div>
+  <nav><a href="#/" data-n="posts">Posts</a><a href="#/odds" data-n="odds">Live odds</a><a href="#/trade" data-n="trade">Trade calculator</a></nav>
 </div></header>
 <main class="wrap" id="app"><p class="empty">Loading…</p></main>
 <footer>Odds and expected wins come from a model, not a crystal ball.</footer>
 <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+<script src="model.js"></script>
 <script>
 const app = document.getElementById("app");
-const KIND = { daily: "Daily", weekly: "Weekly roundup", trade: "Trade review" };
+const KIND = { daily: "Daily", weekly: "Weekly roundup", trade: "Trade review", draft: "Draft review" };
 let posts = [];
 
 function niceDate(d) {
@@ -89,8 +123,86 @@ async function show(slug) {
   } catch (e) { app.innerHTML = '<p class="empty">Couldn\'t load that post.</p>'; }
 }
 
+function setNav(n) { document.querySelectorAll("nav a").forEach(a => a.classList.toggle("on", a.dataset.n === n)); }
+const pct = x => (x > 0 ? "+" : "") + (100 * x).toFixed(1) + " pts";
+function ago(iso) {
+  const m = Math.round((Date.now() - Date.parse(iso)) / 60000);
+  return m < 1 ? "just now" : m < 60 ? m + " min ago" : Math.round(m / 60) + " h ago";
+}
+
+const short = n => n.replace(/[^A-Za-z0-9 ]/g, "").trim().split(/\s+/)[0].slice(0, 9);
+async function oddsPage() {
+  setNav("odds"); document.title = "Live odds · NBA Fantasy 2026";
+  app.innerHTML = '<p class="empty">Loading…</p>';
+  let o;
+  try { o = await (await fetch("data/odds.json", { cache: "no-cache" })).json(); }
+  catch (e) { app.innerHTML = '<p class="empty">Live odds aren\'t available yet.</p>'; return; }
+  const cards = o.matchups.map(m => {
+    const rows = m.categories.map(c => {
+      const h = c.home_win_pct, fmt = v => c.cat.includes("%") ? Number(v).toFixed(3).replace(/^0/, "") : Math.round(v);
+      return `<tr><td>${esc(c.cat)}</td><td>${fmt(c.now_home)}</td><td>${fmt(c.now_away)}</td><td class="${h >= 50 ? "win" : ""}">${h}%</td><td class="${h < 50 ? "win" : ""}">${100 - h}%</td></tr>`;
+    }).join("");
+    return `<div class="card"><div class="mu-head"><div class="mu-team">${esc(m.home)}</div>
+      <div class="mu-score">${m.score_now[0]}-${m.score_now[1]}${m.score_now[2] ? "-" + m.score_now[2] : ""}</div>
+      <div class="mu-team r">${esc(m.away)}</div></div>
+      <div class="bar"><i style="width:${m.home_win_pct}%"></i><b style="width:${m.away_win_pct}%"></b></div>
+      <div class="mu-odds"><span><strong>${m.home_win_pct}%</strong> · $${m.price_home.toFixed(2)}</span><span>$${m.price_away.toFixed(2)} · <strong>${m.away_win_pct}%</strong></span></div>
+      <details><summary>Categories</summary><table class="cats"><tr><th></th><th colspan="2">Right now</th><th colspan="2">Chance to win</th></tr><tr><th>Cat</th><th>${esc(short(m.home))}</th><th>${esc(short(m.away))}</th><th>${esc(short(m.home))}</th><th>${esc(short(m.away))}</th></tr>${rows}</table></details></div>`;
+  }).join("");
+  app.innerHTML = `<p class="updated">Week ${o.matchup_period} · updated ${esc(ago(o.updated_utc))} · refreshes every 30 min. Score = categories won right now; win % simulates the rest of the week 1,000 times.</p>${cards}`;
+}
+
+let MODEL = null, LM = null;
+async function tradePage() {
+  setNav("trade"); document.title = "Trade calculator · NBA Fantasy 2026";
+  app.innerHTML = '<p class="empty">Loading…</p>';
+  try { if (!MODEL) { MODEL = await (await fetch("data/model.json", { cache: "no-cache" })).json(); LM = LeagueModel.make(MODEL); } }
+  catch (e) { app.innerHTML = '<p class="empty">The calculator isn\'t available yet.</p>'; return; }
+  const teams = MODEL.teams.slice().sort((x, y) => x.name.localeCompare(y.name));
+  const opts = sel => teams.map(t => `<option value="${t.id}" ${t.id === sel ? "selected" : ""}>${esc(t.name)}</option>`).join("");
+  app.innerHTML = `<div class="calc">
+    <p class="updated">Pick two teams and tick the players each side sends. The model scores every remaining matchup (weeks ${MODEL.weeks[0]}-${MODEL.weeks[1]}) before and after.</p>
+    <div class="card"><label class="lbl">Team A sends</label><select id="ta">${opts(teams[0].id)}</select><div class="plist" id="pa"></div></div>
+    <div class="card"><label class="lbl">Team B sends</label><select id="tb">${opts(teams[1].id)}</select><div class="plist" id="pb"></div></div>
+    <div id="out"></div></div>`;
+  const ta = document.getElementById("ta"), tb = document.getElementById("tb");
+  const list = (sel, box) => {
+    const t = MODEL.teams.find(x => x.id === +sel.value);
+    box.innerHTML = t.players.slice().sort((x, y) => (y.rates ? y.rates["0"] : 0) - (x.rates ? x.rates["0"] : 0)).map(p => {
+      const r = p.rates, line = r ? `${r["0"].toFixed(1)} pts · ${r["6"].toFixed(1)} reb · ${r["3"].toFixed(1)} ast` : "no stats";
+      const inj = p.status && p.status !== "ACTIVE" ? ` · ${esc(p.status.replace(/_/g, " ").toLowerCase())}` : "";
+      return `<label><input type="checkbox" value="${esc(p.name)}"> <span>${esc(p.name)}<br><small>${line}${inj}</small></span></label>`;
+    }).join("");
+  };
+  const run = () => {
+    const out = document.getElementById("out");
+    const a = +ta.value, b = +tb.value;
+    const give = [...document.querySelectorAll("#pa input:checked")].map(x => x.value);
+    const get = [...document.querySelectorAll("#pb input:checked")].map(x => x.value);
+    if (a === b) { out.innerHTML = '<p class="note">Pick two different teams.</p>'; return; }
+    if (!give.length || !get.length) { out.innerHTML = '<p class="note">Tick at least one player on each side.</p>'; return; }
+    const r = LM.evaluate(a, b, give, get), na = MODEL.teams.find(t => t.id === a).name, nb = MODEL.teams.find(t => t.id === b).name;
+    const sgn = x => (x >= 0 ? "+" : "") + x.toFixed(3), cls = x => x > 0.0005 ? "pos" : x < -0.0005 ? "neg" : "";
+    const rows = Object.keys(r.a.cats).map(k => `<tr><td>${k}</td><td class="${cls(r.a.cats[k])}">${pct(r.a.cats[k])}</td><td class="${cls(r.b.cats[k])}">${pct(r.b.cats[k])}</td></tr>`).join("");
+    const winner = Math.abs(r.a.change - r.b.change) < 0.03 ? "Pretty even trade." : (r.a.change > r.b.change ? esc(na) : esc(nb)) + " win this one.";
+    out.innerHTML = `<div class="card"><div class="res">
+      <div><div class="note">${esc(na)}</div><div class="big ${cls(r.a.change)}">${sgn(r.a.change)}</div><div class="note">expected wins</div></div>
+      <div><div class="note">${esc(nb)}</div><div class="big ${cls(r.b.change)}">${sgn(r.b.change)}</div><div class="note">expected wins</div></div></div>
+      <p><strong>${winner}</strong></p>
+      <table class="cats"><tr><th>Category win rate vs league</th><th>${esc(na)}</th><th>${esc(nb)}</th></tr>${rows}</table>
+      <p class="note">Same model as the trade reviews. Rosters as of ${esc(ago(MODEL.updated_utc))}.</p></div>`;
+  };
+  ta.onchange = () => { list(ta, document.getElementById("pa")); run(); };
+  tb.onchange = () => { list(tb, document.getElementById("pb")); run(); };
+  app.querySelector(".calc").addEventListener("change", e => { if (e.target.type === "checkbox") run(); });
+  list(ta, document.getElementById("pa")); list(tb, document.getElementById("pb")); run();
+}
+
 function route() {
   const slug = decodeURIComponent(location.hash.replace(/^#\/?/, ""));
+  if (slug === "odds") return oddsPage();
+  if (slug === "trade") return tradePage();
+  setNav("posts");
   slug ? show(slug) : home();
 }
 

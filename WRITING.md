@@ -6,7 +6,7 @@ reading on their phones.
 
 ## Your job each run
 
-1. Read `data/latest.json`. `kind` is `daily` or `weekly`.
+1. Read `data/latest.json`. `kind` is `daily`, `weekly` or `trade`.
 2. Write ONE new post to `posts/<date_melbourne_approx>-<kind>.md` (for example
    `posts/2026-10-28-daily.md`). If that file already exists, add `-2` to the name.
 3. Do not edit or delete any other file. The workflow rebuilds the index and publishes.
@@ -35,6 +35,14 @@ Post body in Markdown.
   win chances, odds movers and momentum swings, knife-edge categories.
 - **Awards of the day:** performance of the day, worst performance, ice-cold shooter, bench blunders.
 - **Injury watch** and **FAAB splash / transactions** if anything notable.
+
+## What goes in a trade post (`kind: trade`)
+
+A breaking-news post about the trade(s) in `trades`, written as soon as they happen. Name the file
+`posts/<date_melbourne_approx>-trade.md` (add `-2`, `-3` if it exists). For each trade: who got whom,
+the case for each side, each side's expected win change to 3 decimal places (rest of season), the
+categories each side gains or loses, a verdict and a letter grade per side. Say whether it has gone
+through or is still in league review (`status`). 200-400 words. Use `kind: trade` in the front matter.
 
 ## What goes in a weekly roundup (from `weekly`)
 

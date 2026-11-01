@@ -112,24 +112,41 @@ def league(d, names, live_pairs):
 
 
 def stats(d, names):
-    """Per-category averages per finished matchup, for the Stat ranks page."""
+    """Per-category averages for the Stat ranks page: per finished matchup, per day of those matchups,
+    and per game played (starters only, from the Dawg index game log cache)."""
+    try:
+        games = json.load(open(os.path.join(ROOT, "data", "dawg_games.json")))
+    except Exception:
+        games = {}
+    periods = ((d.get("settings") or {}).get("scheduleSettings") or {}).get("matchupPeriods") or {}
     tot = {t["id"]: {k: 0.0 for k in S.CATS} for t in d["teams"]}
-    n = {t["id"]: 0 for t in d["teams"]}
+    n = {t["id"]: {"matchups": 0, "days": 0, "games": 0} for t in d["teams"]}
     weeks = set()
     for m in d["schedule"]:
         if "away" not in m or m.get("winner") in (None, "UNDECIDED"):
             continue
-        weeks.add(m["matchupPeriodId"])
+        mp = m["matchupPeriodId"]
+        weeks.add(mp)
+        sps = [str(sp) for sp in periods.get(str(mp), [])]
         for side in (m["home"], m["away"]):
+            tid = side["teamId"]
             _, sc = S._side_score(side, live=False)
             for k in S.CATS:
-                tot[side["teamId"]][k] += sc[k]
-            n[side["teamId"]] += 1
+                tot[tid][k] += sc[k]
+            n[tid]["matchups"] += 1
+            n[tid]["days"] += len(sps)
+            n[tid]["games"] += sum(1 for sp in sps for g in (games.get(sp) or {}).get(str(tid), []) if g[2])
     cats = []
     for k in S.CATS:
-        rows = [{"team": names[t], "avg": round(tot[t][k] / n[t], 4 if k in ("19", "20") else 1), "matchups": n[t]}
-                for t in tot if n[t]]
-        rows.sort(key=lambda r: r["avg"], reverse=(S.CN[k] != "TO"))  # fewest turnovers ranks first
+        pct = k in ("19", "20")
+        rows = []
+        for t in tot:
+            c = n[t]
+            if not c["matchups"]:
+                continue
+            per = lambda x: round(tot[t][k] / c["matchups"] if pct else tot[t][k] / x, 4 if pct else 2) if x else None
+            rows.append({"team": names[t], "matchup": per(c["matchups"]), "day": per(c["days"]),
+                         "game": per(c["games"]), **c})
         cats.append({"cat": S.CN[k], "rows": rows})
     return {"weeks_done": len(weeks), "categories": cats}
 

@@ -101,6 +101,9 @@
   .explain p, .explain li { font-size: 14.5px; }
   .filters { display: flex; gap: 8px; margin-bottom: 12px; }
   .filters select { flex: 1; font: inherit; font-size: 14px; padding: 7px 10px; border-radius: 10px; border: 1px solid var(--line); background: var(--card); color: var(--ink); }
+  .seg { display: flex; gap: 4px; background: var(--card); border: 1px solid var(--line); border-radius: 99px; padding: 4px; margin-bottom: 12px; }
+  .seg button { flex: 1; font: inherit; font-size: 13.5px; font-weight: 600; border: 0; background: none; color: var(--muted); padding: 7px 6px; border-radius: 99px; cursor: pointer; }
+  .seg button.on { background: var(--accent); color: #fff; }
   footer { color: var(--muted); font-size: 13px; text-align: center; padding: 0 16px 32px; }
 </style>
 </head>
@@ -193,20 +196,30 @@ async function ladderPage() {
     <div class="card scroll"><table class="ladder"><tr><th>#</th><th>Team</th><th>Rec</th><th>Finals</th><th>Title</th></tr>${rows}</table></div>`;
 }
 
+let STATS = null, STAT_MODE = "matchup";
 async function statsPage() {
   setNav("stats"); document.title = "Stat ranks · NBA Fantasy 2026";
   app.innerHTML = '<p class="empty">Loading…</p>';
-  let S;
-  try { S = await (await fetch("data/stats.json", { cache: "no-cache" })).json(); }
+  try { if (!STATS) STATS = await (await fetch("data/stats.json", { cache: "no-cache" })).json(); }
   catch (e) { app.innerHTML = '<p class="empty">Stat ranks aren\'t available yet. They appear after the next data refresh.</p>'; return; }
-  if (!S.weeks_done) { app.innerHTML = '<p class="empty">No finished matchups yet.</p>'; return; }
+  if (!STATS.weeks_done) { app.innerHTML = '<p class="empty">No finished matchups yet.</p>'; return; }
+  const S = STATS, MODES = { matchup: "Per matchup", day: "Per day", game: "Per game" };
+  const open = new Set([...app.querySelectorAll("details[open]")].map(d => d.dataset.cat));
+  if (!open.size) open.add("PTS");
+  const mode = STAT_MODE in (S.categories[0].rows[0] || {}) ? STAT_MODE : "matchup";
   const cards = S.categories.map(c => {
-    const pct = c.cat.includes("%"), fmt = v => pct ? v.toFixed(3).replace(/^0/, "") : v.toFixed(1);
-    const rows = c.rows.map((r, i) => `<tr><td>${i + 1}</td><td><span class="tm">${esc(r.team)}</span></td><td>${fmt(r.avg)}</td></tr>`).join("");
-    return `<details class="card scroll"${c.cat === "PTS" ? " open" : ""}><summary>${esc(c.cat)}${c.cat === "TO" ? " · fewest first" : ""} — top: ${esc(c.rows[0].team)} (${fmt(c.rows[0].avg)})</summary>
-      <table class="ladder"><tr><th>#</th><th>Team</th><th>Per matchup</th></tr>${rows}</table></details>`;
+    const pct = c.cat.includes("%"), fmt = v => v == null ? "–" : pct ? v.toFixed(3).replace(/^0/, "") : v.toFixed(mode === "matchup" ? 1 : 2);
+    const rows = c.rows.filter(r => r[mode] != null).sort((a, b) => c.cat === "TO" ? a[mode] - b[mode] : b[mode] - a[mode]);
+    const sub = r => mode === "game" ? `<small>${r.games} games</small>` : mode === "day" ? `<small>${r.days} days</small>` : "";
+    const body = rows.map((r, i) => `<tr><td>${i + 1}</td><td><span class="tm">${esc(r.team)}</span>${sub(r)}</td><td>${fmt(r[mode])}</td></tr>`).join("");
+    const top = rows[0] ? ` — top: ${esc(rows[0].team)} (${fmt(rows[0][mode])})` : "";
+    return `<details class="card scroll" data-cat="${esc(c.cat)}"${open.has(c.cat) ? " open" : ""}><summary>${esc(c.cat)}${c.cat === "TO" ? " · fewest first" : ""}${top}</summary>
+      <table class="ladder"><tr><th>#</th><th>Team</th><th>${MODES[mode]}</th></tr>${body}</table></details>`;
   }).join("");
-  app.innerHTML = `<p class="updated">Average per matchup over ${S.weeks_done} finished week${S.weeks_done > 1 ? "s" : ""} · updated ${esc(ago(S.updated_utc))}. FG% and FT% are the average of each week's percentage.</p>${cards}`;
+  const toggles = Object.entries(MODES).map(([k, v]) => `<button type="button" data-m="${k}" class="${k === mode ? "on" : ""}">${v}</button>`).join("");
+  app.innerHTML = `<div class="seg">${toggles}</div>
+    <p class="updated">Over ${S.weeks_done} finished week${S.weeks_done > 1 ? "s" : ""} · updated ${esc(ago(S.updated_utc))}. Per game played spreads each team's totals over the games its starters actually played, so it rewards player quality, not streaming volume. FG% and FT% are the same in every view.</p>${cards}`;
+  app.querySelectorAll(".seg button").forEach(b => b.onclick = () => { STAT_MODE = b.dataset.m; statsPage(); });
 }
 
 let DAWG = null;

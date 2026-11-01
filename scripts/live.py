@@ -118,7 +118,18 @@ def stats(d, names):
         games = json.load(open(os.path.join(ROOT, "data", "dawg_games.json")))
     except Exception:
         games = {}
-    periods = ((d.get("settings") or {}).get("scheduleSettings") or {}).get("matchupPeriods") or {}
+    # Map each scoring period (one NBA day) to its matchup week. latestScoringPeriod is today (US Eastern);
+    # weeks run Monday-Sunday, and week 1 is everything before the first Monday.
+    from datetime import timedelta
+    today = datetime.now(S.ET).date()
+    latest = d["status"].get("latestScoringPeriod") or 1
+    cur = d["status"].get("currentMatchupPeriod") or 1
+    monday = today - timedelta(days=today.weekday())
+    periods = {}
+    for sp in range(1, latest + 1):
+        day = today - timedelta(days=latest - sp)
+        mp = max(1, cur + ((day - timedelta(days=day.weekday())) - monday).days // 7)
+        periods.setdefault(str(mp), []).append(sp)
     tot = {t["id"]: {k: 0.0 for k in S.CATS} for t in d["teams"]}
     n = {t["id"]: {"matchups": 0, "days": 0, "games": 0} for t in d["teams"]}
     weeks = set()

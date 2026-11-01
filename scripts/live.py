@@ -201,6 +201,7 @@ def stats(d, names):
         for t in ids:
             v = season(t, k)
             rows.append({"team": names[t],
+                         "total": None if v is None else round(v, 4 if pct else 1),
                          "matchup": round(wk[t][k] / nm[t], 4 if pct else 2) if nm[t] else None,
                          "day": None if v is None or not nd else round(v if pct else v / nd, 4 if pct else 2),
                          "game": None if v is None or not tot[t]["g"] else round(v if pct else v / tot[t]["g"], 4 if pct else 2),

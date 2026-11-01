@@ -202,7 +202,7 @@ async function statsPage() {
   app.innerHTML = '<p class="empty">Loading…</p>';
   try { if (!STATS) STATS = await (await fetch("data/stats.json", { cache: "no-cache" })).json(); }
   catch (e) { app.innerHTML = '<p class="empty">Stat ranks aren\'t available yet. They appear after the next data refresh.</p>'; return; }
-  const S = STATS, MODES = { matchup: "Per matchup", day: "Per day", game: "Per game" };
+  const S = STATS, MODES = { total: "Total", matchup: "Per matchup", day: "Per day", game: "Per game" };
   if (!S.days_done) { app.innerHTML = '<p class="empty">Stat ranks appear after the next data refresh.</p>'; return; }
   const open = new Set([...app.querySelectorAll("details[open]")].map(d => d.dataset.cat));
   if (!open.size) { open.add("PTS"); open.add("GP"); }
@@ -214,9 +214,9 @@ async function statsPage() {
     <table class="ladder"><tr><th>#</th><th>Team</th><th>Per day</th><th>Per matchup</th></tr>${gRows}</table>
     <p class="note">Starters' games only. Per day uses all ${S.days_done} finished days; per matchup uses finished matchups. More games usually means more streaming.</p></details>`;
   const cards = S.categories.map(c => {
-    const pct = c.cat.includes("%"), fmt = v => v == null ? "–" : pct ? v.toFixed(3).replace(/^0/, "") : v.toFixed(mode === "matchup" ? 1 : 2);
+    const pct = c.cat.includes("%"), fmt = v => v == null ? "–" : pct ? v.toFixed(3).replace(/^0/, "") : v.toFixed(mode === "total" ? 0 : mode === "matchup" ? 1 : 2);
     const rows = c.rows.filter(r => r[mode] != null).sort((a, b) => c.cat === "TO" ? a[mode] - b[mode] : b[mode] - a[mode]);
-    const sub = r => mode === "game" ? `<small>${r.games} games</small>` : "";
+    const sub = r => mode === "game" || mode === "total" ? `<small>${r.games} games</small>` : "";
     const body = rows.map((r, i) => `<tr><td>${i + 1}</td><td><span class="tm">${esc(r.team)}</span>${sub(r)}</td><td>${fmt(r[mode])}</td></tr>`).join("");
     const top = rows[0] ? ` — top: ${esc(rows[0].team)} (${fmt(rows[0][mode])})` : "";
     return `<details class="card scroll" data-cat="${esc(c.cat)}"${open.has(c.cat) ? " open" : ""}><summary>${esc(c.cat)}${c.cat === "TO" ? " · fewest first" : ""}${top}</summary>

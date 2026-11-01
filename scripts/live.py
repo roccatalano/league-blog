@@ -1,5 +1,6 @@
 """Refresh the site's live data (no posts, no AI). Writes:
   data/odds.json  - every current matchup: live category score, win chance, odds, per-category chances
+  data/stats.json - each team's average per category per finished matchup (Stat ranks page)
   data/model.json - rosters + remaining schedule, used by the trade calculator in the browser
 Needs ESPN_S2 and ESPN_SWID in the environment.
 """
@@ -110,6 +111,29 @@ def league(d, names, live_pairs):
     return {"finals_teams": po_n, "in_playoffs": in_playoffs, "sims": S.SEASON_SIMS, "ladder": rows}
 
 
+def stats(d, names):
+    """Per-category averages per finished matchup, for the Stat ranks page."""
+    tot = {t["id"]: {k: 0.0 for k in S.CATS} for t in d["teams"]}
+    n = {t["id"]: 0 for t in d["teams"]}
+    weeks = set()
+    for m in d["schedule"]:
+        if "away" not in m or m.get("winner") in (None, "UNDECIDED"):
+            continue
+        weeks.add(m["matchupPeriodId"])
+        for side in (m["home"], m["away"]):
+            _, sc = S._side_score(side, live=False)
+            for k in S.CATS:
+                tot[side["teamId"]][k] += sc[k]
+            n[side["teamId"]] += 1
+    cats = []
+    for k in S.CATS:
+        rows = [{"team": names[t], "avg": round(tot[t][k] / n[t], 4 if k in ("19", "20") else 1), "matchups": n[t]}
+                for t in tot if n[t]]
+        rows.sort(key=lambda r: r["avg"], reverse=(S.CN[k] != "TO"))  # fewest turnovers ranks first
+        cats.append({"cat": S.CN[k], "rows": rows})
+    return {"weeks_done": len(weeks), "categories": cats}
+
+
 def model(d, names):
     weeks = S._remaining_weeks(d)
     teams = []
@@ -134,6 +158,7 @@ def main():
     o = odds(d, names); o["updated_utc"] = stamp
     m = model(d, names); m["updated_utc"] = stamp
     lg = league(d, names, LIVE); lg["updated_utc"] = stamp
+    st = stats(d, names); st["updated_utc"] = stamp
     # keep ~30h of title/finals history so the page can show movement over the last day
     lpath = os.path.join(ROOT, "data", "league.json")
     try:
@@ -155,6 +180,8 @@ def main():
         json.dump(lg, f, separators=(",", ":"))
     with open(os.path.join(ROOT, "data", "odds.json"), "w") as f:
         json.dump(o, f, separators=(",", ":"))
+    with open(os.path.join(ROOT, "data", "stats.json"), "w") as f:
+        json.dump(st, f, separators=(",", ":"))
     with open(os.path.join(ROOT, "data", "model.json"), "w") as f:
         json.dump(m, f, separators=(",", ":"))
     print(f"league: {len(lg['ladder'])} teams; odds: {len(o['matchups'])} matchups; model: {len(m['teams'])} teams, {len(m['fixtures'])} fixtures")

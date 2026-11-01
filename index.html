@@ -108,7 +108,7 @@
 <header><div class="wrap">
   <a href="#"><div class="brand">NBA FANTASY <span>2026</span></div></a>
   <div class="tag">Daily posts, trade reviews and weekly roundups. Updated automatically.</div>
-  <nav><a href="#/" data-n="posts">Posts</a><a href="#/ladder" data-n="ladder">Ladder</a><a href="#/odds" data-n="odds">Live odds</a><a href="#/trade" data-n="trade">Trade calculator</a><a href="#/dawg" data-n="dawg">Dawg index</a></nav>
+  <nav><a href="#/" data-n="posts">Posts</a><a href="#/ladder" data-n="ladder">Ladder</a><a href="#/odds" data-n="odds">Live odds</a><a href="#/trade" data-n="trade">Trade calculator</a><a href="#/dawg" data-n="dawg">Dawg index</a><a href="#/stats" data-n="stats">Stat ranks</a></nav>
 </div></header>
 <main class="wrap" id="app"><p class="empty">Loading…</p></main>
 <footer>Odds and expected wins come from a model, not a crystal ball.</footer>
@@ -191,6 +191,22 @@ async function ladderPage() {
     <td>${r.title_pct >= 1 ? Math.round(r.title_pct) : r.title_pct.toFixed(1)}%${mv(r.title_move)}<small>${price(r.title_price)}</small></td></tr>`).join("");
   app.innerHTML = `<p class="updated">Updated ${esc(ago(L.updated_utc))}. Top ${L.finals_teams} make the finals (dashed line). Finals and title chances come from ${L.sims.toLocaleString()} simulated seasons, using this week's live odds; arrows show the change over the last day.</p>
     <div class="card scroll"><table class="ladder"><tr><th>#</th><th>Team</th><th>Rec</th><th>Finals</th><th>Title</th></tr>${rows}</table></div>`;
+}
+
+async function statsPage() {
+  setNav("stats"); document.title = "Stat ranks · NBA Fantasy 2026";
+  app.innerHTML = '<p class="empty">Loading…</p>';
+  let S;
+  try { S = await (await fetch("data/stats.json", { cache: "no-cache" })).json(); }
+  catch (e) { app.innerHTML = '<p class="empty">Stat ranks aren\'t available yet. They appear after the next data refresh.</p>'; return; }
+  if (!S.weeks_done) { app.innerHTML = '<p class="empty">No finished matchups yet.</p>'; return; }
+  const cards = S.categories.map(c => {
+    const pct = c.cat.includes("%"), fmt = v => pct ? v.toFixed(3).replace(/^0/, "") : v.toFixed(1);
+    const rows = c.rows.map((r, i) => `<tr><td>${i + 1}</td><td><span class="tm">${esc(r.team)}</span></td><td>${fmt(r.avg)}</td></tr>`).join("");
+    return `<details class="card scroll"${c.cat === "PTS" ? " open" : ""}><summary>${esc(c.cat)}${c.cat === "TO" ? " · fewest first" : ""} — top: ${esc(c.rows[0].team)} (${fmt(c.rows[0].avg)})</summary>
+      <table class="ladder"><tr><th>#</th><th>Team</th><th>Per matchup</th></tr>${rows}</table></details>`;
+  }).join("");
+  app.innerHTML = `<p class="updated">Average per matchup over ${S.weeks_done} finished week${S.weeks_done > 1 ? "s" : ""} · updated ${esc(ago(S.updated_utc))}. FG% and FT% are the average of each week's percentage.</p>${cards}`;
 }
 
 let DAWG = null;
@@ -282,6 +298,7 @@ function route() {
   if (slug === "ladder") return ladderPage();
   if (slug === "dawg") return dawgPage();
   if (slug === "trade") return tradePage();
+  if (slug === "stats") return statsPage();
   setNav("posts");
   slug ? show(slug) : home();
 }

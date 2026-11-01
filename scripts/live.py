@@ -1,6 +1,7 @@
 """Refresh the site's live data (no posts, no AI). Writes:
   data/odds.json  - every current matchup: live category score, win chance, odds, per-category chances
-  data/stats.json - each team's average per category per finished matchup (Stat ranks page)
+  data/stats.json - Stat ranks page: per matchup / per day / per game averages, games played
+  data/stats_days.json - cache of each finished day's starter totals per team
   data/model.json - rosters + remaining schedule, used by the trade calculator in the browser
 Needs ESPN_S2 and ESPN_SWID in the environment.
 """
@@ -111,55 +112,104 @@ def league(d, names, live_pairs):
     return {"finals_teams": po_n, "in_playoffs": in_playoffs, "sims": S.SEASON_SIMS, "ladder": rows}
 
 
-def stats(d, names):
-    """Per-category averages for the Stat ranks page: per finished matchup, per day of those matchups,
-    and per game played (starters only, from the Dawg index game log cache)."""
+DAY_KEYS = ["0", "6", "3", "2", "1", "17", "11", "13", "14", "15", "16"]  # cats + FGM/FGA/FTM/FTA
+
+
+def day_totals(d):
+    """{sp: {team_id: {"g": games, stat_id: total}}} for every finished NBA day, starters only. Cached."""
+    path = os.path.join(ROOT, "data", "stats_days.json")
     try:
-        games = json.load(open(os.path.join(ROOT, "data", "dawg_games.json")))
+        cache = json.load(open(path))
     except Exception:
-        games = {}
-    # Map each scoring period (one NBA day) to its matchup week. latestScoringPeriod is today (US Eastern);
-    # weeks run Monday-Sunday, and week 1 is everything before the first Monday.
+        cache = {}
+    latest = d["status"].get("latestScoringPeriod") or 1
+    first = d["status"].get("firstScoringPeriod") or 1
+    for sp in range(first, latest):  # today may still be in progress
+        if str(sp) in cache:
+            continue
+        try:
+            dd = S._get(["mRoster", "mTeam"], params={"scoringPeriodId": sp})
+        except Exception:
+            continue
+        day = {}
+        for t in dd["teams"]:
+            row = {"g": 0, **{k: 0.0 for k in DAY_KEYS}}
+            for e in t["roster"]["entries"]:
+                if e["lineupSlotId"] in (12, 13):  # bench / IR
+                    continue
+                st = S._day_line(e["playerPoolEntry"]["player"], sp)
+                if st:
+                    row["g"] += 1
+                    for k in DAY_KEYS:
+                        row[k] += float(st.get(k, 0) or 0)
+            day[str(t["id"])] = row
+        cache[str(sp)] = day
+    with open(path, "w") as f:
+        json.dump(cache, f, separators=(",", ":"))
+    return cache, latest
+
+
+def stats(d, names):
+    """Stat ranks page. Per matchup: finished matchups. Per day / per game: every finished day so far."""
+    ids = [t["id"] for t in d["teams"]]
+    days, latest = day_totals(d)
+    # Map each day to its matchup week (Mon-Sun; week 1 is everything before the first Monday).
     from datetime import timedelta
     today = datetime.now(S.ET).date()
-    latest = d["status"].get("latestScoringPeriod") or 1
     cur = d["status"].get("currentMatchupPeriod") or 1
     monday = today - timedelta(days=today.weekday())
-    periods = {}
+    week_of = {}
     for sp in range(1, latest + 1):
         day = today - timedelta(days=latest - sp)
-        mp = max(1, cur + ((day - timedelta(days=day.weekday())) - monday).days // 7)
-        periods.setdefault(str(mp), []).append(sp)
-    tot = {t["id"]: {k: 0.0 for k in S.CATS} for t in d["teams"]}
-    n = {t["id"]: {"matchups": 0, "days": 0, "games": 0} for t in d["teams"]}
-    weeks = set()
+        week_of[str(sp)] = max(1, cur + ((day - timedelta(days=day.weekday())) - monday).days // 7)
+
+    wk = {t: {k: 0.0 for k in S.CATS} for t in ids}
+    nm = {t: 0 for t in ids}
+    gm = {t: 0 for t in ids}  # games played in finished matchups
+    done = set()
     for m in d["schedule"]:
         if "away" not in m or m.get("winner") in (None, "UNDECIDED"):
             continue
-        mp = m["matchupPeriodId"]
-        weeks.add(mp)
-        sps = [str(sp) for sp in periods.get(str(mp), [])]
+        done.add(m["matchupPeriodId"])
         for side in (m["home"], m["away"]):
-            tid = side["teamId"]
             _, sc = S._side_score(side, live=False)
             for k in S.CATS:
-                tot[tid][k] += sc[k]
-            n[tid]["matchups"] += 1
-            n[tid]["days"] += len(sps)
-            n[tid]["games"] += sum(1 for sp in sps for g in (games.get(sp) or {}).get(str(tid), []) if g[2])
+                wk[side["teamId"]][k] += sc[k]
+            nm[side["teamId"]] += 1
+    tot = {t: {"g": 0, **{k: 0.0 for k in DAY_KEYS}} for t in ids}
+    for sp, day in days.items():
+        for t in ids:
+            r = day.get(str(t)) or {}
+            for k in tot[t]:
+                tot[t][k] += r.get(k, 0)
+            if week_of.get(sp) in done:
+                gm[t] += r.get("g", 0)
+    nd = len(days)
+
+    def season(t, k):
+        T = tot[t]
+        if k == "19":
+            return T["13"] / T["14"] if T["14"] else None
+        if k == "20":
+            return T["15"] / T["16"] if T["16"] else None
+        return T[k]
+
     cats = []
     for k in S.CATS:
         pct = k in ("19", "20")
         rows = []
-        for t in tot:
-            c = n[t]
-            if not c["matchups"]:
-                continue
-            per = lambda x: round(tot[t][k] / c["matchups"] if pct else tot[t][k] / x, 4 if pct else 2) if x else None
-            rows.append({"team": names[t], "matchup": per(c["matchups"]), "day": per(c["days"]),
-                         "game": per(c["games"]), **c})
+        for t in ids:
+            v = season(t, k)
+            rows.append({"team": names[t],
+                         "matchup": round(wk[t][k] / nm[t], 4 if pct else 2) if nm[t] else None,
+                         "day": None if v is None or not nd else round(v if pct else v / nd, 4 if pct else 2),
+                         "game": None if v is None or not tot[t]["g"] else round(v if pct else v / tot[t]["g"], 4 if pct else 2),
+                         "matchups": nm[t], "days": nd, "games": tot[t]["g"]})
         cats.append({"cat": S.CN[k], "rows": rows})
-    return {"weeks_done": len(weeks), "categories": cats}
+    games = [{"team": names[t], "per_day": round(tot[t]["g"] / nd, 2) if nd else None,
+              "per_matchup": round(gm[t] / nm[t], 1) if nm[t] else None,
+              "games": tot[t]["g"]} for t in ids]
+    return {"weeks_done": len(done), "days_done": nd, "games": games, "categories": cats}
 
 
 def model(d, names):

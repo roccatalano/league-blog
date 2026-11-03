@@ -9,9 +9,129 @@
   "post": "2026-11-03-trade",
   "at_time_source": "trade review"
  },
- "_scan": {
-  "v": 2,
-  "done_through": 14,
-  "trades": []
+ "_trades": {
+  "Derik Queen|Paul Reed": {
+   "gets": {
+    "Stairway to Devin": [
+     "Derik Queen"
+    ],
+    "Derrick White Girl Wasted": [
+     "Paul Reed"
+    ]
+   },
+   "dates": [
+    "2026-10-27T02:10:01+00:00"
+   ]
+  },
+  "Damian Lillard|Matas Buzelis|Moussa Diabate|Paul George": {
+   "gets": {
+    "Stairway to Devin": [
+     "Matas Buzelis",
+     "Paul George"
+    ],
+    "JAReusalem": [
+     "Moussa Diabate",
+     "Damian Lillard"
+    ]
+   },
+   "dates": [
+    "2026-10-27T09:09:39+00:00",
+    "2026-10-28T09:05:01+00:00"
+   ]
+  },
+  "Fred VanVleet|Onyeka Okongwu|Scottie Barnes|Trae Young": {
+   "gets": {
+    "Al-Shaida": [
+     "Fred VanVleet",
+     "Scottie Barnes"
+    ],
+    "Viva La Raza!": [
+     "Onyeka Okongwu",
+     "Trae Young"
+    ]
+   },
+   "dates": [
+    "2026-10-27T08:45:13+00:00",
+    "2026-10-28T08:45:01+00:00"
+   ]
+  },
+  "Franz Wagner|Josh Hart|Onyeka Okongwu|RJ Barrett": {
+   "gets": {
+    "Viva La Raza!": [
+     "Franz Wagner",
+     "Josh Hart"
+    ],
+    "mr charloooooo": [
+     "RJ Barrett",
+     "Onyeka Okongwu"
+    ]
+   },
+   "dates": [
+    "2026-11-02T21:12:52+00:00"
+   ]
+  }
+ },
+ "Derik Queen|Paul Reed": {
+  "first_seen": "2026-11-02",
+  "history": [
+   [
+    "2026-11-02",
+    -0.185,
+    0.06
+   ]
+  ],
+  "at_time": {
+   "Stairway to Devin": 0.341,
+   "Derrick White Girl Wasted": -0.337
+  },
+  "post": "2026-10-27-trade",
+  "at_time_source": "trade review",
+  "now": {
+   "date": "2026-11-02",
+   "Derrick White Girl Wasted": -0.185,
+   "Stairway to Devin": 0.06
+  }
+ },
+ "Damian Lillard|Matas Buzelis|Moussa Diabate|Paul George": {
+  "first_seen": "2026-11-02",
+  "history": [
+   [
+    "2026-11-02",
+    -0.29,
+    0.338
+   ]
+  ],
+  "at_time": {
+   "Stairway to Devin": 0.286,
+   "JAReusalem": -0.22
+  },
+  "post": "2026-10-28-trade",
+  "at_time_source": "trade review",
+  "now": {
+   "date": "2026-11-02",
+   "JAReusalem": -0.29,
+   "Stairway to Devin": 0.338
+  }
+ },
+ "Fred VanVleet|Onyeka Okongwu|Scottie Barnes|Trae Young": {
+  "first_seen": "2026-11-02",
+  "history": [
+   [
+    "2026-11-02",
+    0.052,
+    -0.099
+   ]
+  ],
+  "at_time": {
+   "Al-Shaida": 0.048,
+   "Viva La Raza!": -0.112
+  },
+  "post": "2026-10-28-trade",
+  "at_time_source": "trade review",
+  "now": {
+   "date": "2026-11-02",
+   "Al-Shaida": 0.052,
+   "Viva La Raza!": -0.099
+  }
  }
 }

@@ -1,19 +1,19 @@
 {
- "updated_utc": "2026-11-03T03:47:04.947088+00:00",
+ "updated_utc": "2026-11-03T03:48:56.496987+00:00",
  "teams_order": "alphabetical",
  "trades": [
   {
    "key": "Franz Wagner|Josh Hart|Onyeka Okongwu|RJ Barrett",
-   "accepted_utc": "2026-11-02T21:12:52.890000+00:00",
+   "accepted_utc": "2026-11-02T21:12:52+00:00",
    "status": "in league review",
    "gets": {
-    "mr charloooooo": [
-     "RJ Barrett",
-     "Onyeka Okongwu"
-    ],
     "Viva La Raza!": [
      "Franz Wagner",
      "Josh Hart"
+    ],
+    "mr charloooooo": [
+     "RJ Barrett",
+     "Onyeka Okongwu"
     ]
    },
    "at_time": {
@@ -21,6 +21,381 @@
     "mr charloooooo": -0.183
    },
    "post": "2026-11-03-trade"
+  },
+  {
+   "key": "Damian Lillard|Matas Buzelis|Moussa Diabate|Paul George",
+   "accepted_utc": "2026-10-27T09:09:39+00:00",
+   "status": "processed",
+   "gets": {
+    "Stairway to Devin": [
+     "Matas Buzelis",
+     "Paul George"
+    ],
+    "JAReusalem": [
+     "Moussa Diabate",
+     "Damian Lillard"
+    ]
+   },
+   "at_time": {
+    "Stairway to Devin": 0.286,
+    "JAReusalem": -0.22
+   },
+   "post": "2026-10-28-trade",
+   "so_far": {
+    "from": "2026-10-29",
+    "score": [
+     3,
+     5,
+     1
+    ],
+    "cats": [
+     {
+      "cat": "PTS",
+      "got": 51.0,
+      "gave": 49.0,
+      "res": 1
+     },
+     {
+      "cat": "REB",
+      "got": 27.0,
+      "gave": 17.0,
+      "res": 1
+     },
+     {
+      "cat": "AST",
+      "got": 10.0,
+      "gave": 17.0,
+      "res": -1
+     },
+     {
+      "cat": "STL",
+      "got": 4.0,
+      "gave": 5.0,
+      "res": -1
+     },
+     {
+      "cat": "BLK",
+      "got": 3.0,
+      "gave": 2.0,
+      "res": 1
+     },
+     {
+      "cat": "3PM",
+      "got": 4.0,
+      "gave": 7.0,
+      "res": -1
+     },
+     {
+      "cat": "TO",
+      "got": 8.0,
+      "gave": 8.0,
+      "res": 0
+     },
+     {
+      "cat": "FG%",
+      "got": 0.413,
+      "gave": 0.45,
+      "res": -1
+     },
+     {
+      "cat": "FT%",
+      "got": 0.75,
+      "gave": 1.0,
+      "res": -1
+     }
+    ],
+    "games": {
+     "JAReusalem": 4,
+     "Stairway to Devin": 3
+    },
+    "series": [
+     [
+      "2026-10-29",
+      3
+     ],
+     [
+      "2026-10-30",
+      -4
+     ],
+     [
+      "2026-10-31",
+      2
+     ],
+     [
+      "2026-11-01",
+      -2
+     ]
+    ],
+    "grade": {
+     "JAReusalem": "Too early",
+     "Stairway to Devin": "Too early"
+    }
+   },
+   "now": {
+    "date": "2026-11-02",
+    "JAReusalem": -0.29,
+    "Stairway to Devin": 0.338
+   },
+   "now_frozen": false,
+   "now_history": [
+    [
+     "2026-11-02",
+     -0.29,
+     0.338
+    ]
+   ]
+  },
+  {
+   "key": "Fred VanVleet|Onyeka Okongwu|Scottie Barnes|Trae Young",
+   "accepted_utc": "2026-10-27T08:45:13+00:00",
+   "status": "processed",
+   "gets": {
+    "Al-Shaida": [
+     "Fred VanVleet",
+     "Scottie Barnes"
+    ],
+    "Viva La Raza!": [
+     "Onyeka Okongwu",
+     "Trae Young"
+    ]
+   },
+   "at_time": {
+    "Al-Shaida": 0.048,
+    "Viva La Raza!": -0.112
+   },
+   "post": "2026-10-28-trade",
+   "so_far": {
+    "from": "2026-10-29",
+    "score": [
+     4,
+     5,
+     0
+    ],
+    "cats": [
+     {
+      "cat": "PTS",
+      "got": 86.0,
+      "gave": 56.0,
+      "res": 1
+     },
+     {
+      "cat": "REB",
+      "got": 16.0,
+      "gave": 28.0,
+      "res": -1
+     },
+     {
+      "cat": "AST",
+      "got": 16.0,
+      "gave": 12.0,
+      "res": 1
+     },
+     {
+      "cat": "STL",
+      "got": 5.0,
+      "gave": 4.0,
+      "res": 1
+     },
+     {
+      "cat": "BLK",
+      "got": 0.0,
+      "gave": 3.0,
+      "res": -1
+     },
+     {
+      "cat": "3PM",
+      "got": 4.0,
+      "gave": 5.0,
+      "res": -1
+     },
+     {
+      "cat": "TO",
+      "got": 9.0,
+      "gave": 6.0,
+      "res": -1
+     },
+     {
+      "cat": "FG%",
+      "got": 0.507,
+      "gave": 0.474,
+      "res": 1
+     },
+     {
+      "cat": "FT%",
+      "got": 0.556,
+      "gave": 0.833,
+      "res": -1
+     }
+    ],
+    "games": {
+     "Al-Shaida": 3,
+     "Viva La Raza!": 3
+    },
+    "series": [
+     [
+      "2026-10-29",
+      -5
+     ],
+     [
+      "2026-10-30",
+      -4
+     ],
+     [
+      "2026-10-31",
+      -3
+     ],
+     [
+      "2026-11-01",
+      -1
+     ]
+    ],
+    "grade": {
+     "Al-Shaida": "Too early",
+     "Viva La Raza!": "Too early"
+    }
+   },
+   "now": {
+    "date": "2026-11-02",
+    "Al-Shaida": 0.052,
+    "Viva La Raza!": -0.099
+   },
+   "now_frozen": false,
+   "now_history": [
+    [
+     "2026-11-02",
+     0.052,
+     -0.099
+    ]
+   ]
+  },
+  {
+   "key": "Derik Queen|Paul Reed",
+   "accepted_utc": "2026-10-27T02:10:01+00:00",
+   "status": "processed",
+   "gets": {
+    "Stairway to Devin": [
+     "Derik Queen"
+    ],
+    "Derrick White Girl Wasted": [
+     "Paul Reed"
+    ]
+   },
+   "at_time": {
+    "Stairway to Devin": 0.341,
+    "Derrick White Girl Wasted": -0.337
+   },
+   "post": "2026-10-27-trade",
+   "so_far": {
+    "from": "2026-10-27",
+    "score": [
+     7,
+     2,
+     0
+    ],
+    "cats": [
+     {
+      "cat": "PTS",
+      "got": 50.0,
+      "gave": 28.0,
+      "res": 1
+     },
+     {
+      "cat": "REB",
+      "got": 17.0,
+      "gave": 22.0,
+      "res": -1
+     },
+     {
+      "cat": "AST",
+      "got": 4.0,
+      "gave": 8.0,
+      "res": -1
+     },
+     {
+      "cat": "STL",
+      "got": 6.0,
+      "gave": 2.0,
+      "res": 1
+     },
+     {
+      "cat": "BLK",
+      "got": 2.0,
+      "gave": 1.0,
+      "res": 1
+     },
+     {
+      "cat": "3PM",
+      "got": 3.0,
+      "gave": 1.0,
+      "res": 1
+     },
+     {
+      "cat": "TO",
+      "got": 7.0,
+      "gave": 12.0,
+      "res": 1
+     },
+     {
+      "cat": "FG%",
+      "got": 0.645,
+      "gave": 0.526,
+      "res": 1
+     },
+     {
+      "cat": "FT%",
+      "got": 0.875,
+      "gave": 0.778,
+      "res": 1
+     }
+    ],
+    "games": {
+     "Derrick White Girl Wasted": 3,
+     "Stairway to Devin": 3
+    },
+    "series": [
+     [
+      "2026-10-27",
+      5
+     ],
+     [
+      "2026-10-28",
+      8
+     ],
+     [
+      "2026-10-29",
+      5
+     ],
+     [
+      "2026-10-30",
+      8
+     ],
+     [
+      "2026-10-31",
+      5
+     ],
+     [
+      "2026-11-01",
+      5
+     ]
+    ],
+    "grade": {
+     "Derrick White Girl Wasted": "Too early",
+     "Stairway to Devin": "Too early"
+    }
+   },
+   "now": {
+    "date": "2026-11-02",
+    "Derrick White Girl Wasted": -0.185,
+    "Stairway to Devin": 0.06
+   },
+   "now_frozen": false,
+   "now_history": [
+    [
+     "2026-11-02",
+     -0.185,
+     0.06
+    ]
+   ]
   }
  ]
 }

@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-03T03:16:31.741085+00:00",
+ "updated_utc": "2026-11-03T03:44:29.678993+00:00",
  "overall": {
   "matchups": 14,
   "called": 10,
@@ -46,6 +46,7 @@
   {
    "period": 2,
    "source": "stored Monday opening odds",
+   "started": false,
    "matchups": [
     {
      "home": "The Real OG",
@@ -170,6 +171,7 @@
   {
    "period": 1,
    "source": "first daily post (2026-10-24)",
+   "started": false,
    "matchups": [
     {
      "home": "Al-Shaida",

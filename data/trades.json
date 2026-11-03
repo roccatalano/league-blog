@@ -1,0 +1,26 @@
+{
+ "updated_utc": "2026-11-03T03:44:28.727129+00:00",
+ "teams_order": "alphabetical",
+ "trades": [
+  {
+   "key": "Franz Wagner|Josh Hart|Onyeka Okongwu|RJ Barrett",
+   "accepted_utc": "2026-11-02T21:12:52.890000+00:00",
+   "status": "in league review",
+   "gets": {
+    "mr charloooooo": [
+     "RJ Barrett",
+     "Onyeka Okongwu"
+    ],
+    "Viva La Raza!": [
+     "Franz Wagner",
+     "Josh Hart"
+    ]
+   },
+   "at_time": {
+    "Viva La Raza!": 0.17,
+    "mr charloooooo": -0.183
+   },
+   "post": "2026-11-03-trade"
+  }
+ ]
+}

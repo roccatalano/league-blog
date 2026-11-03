@@ -108,8 +108,23 @@ def league(d, names, live_pairs):
                      "finals_pct": round(100 * sim[t["id"]]["finals"], 1),
                      "title_pct": round(100 * sim[t["id"]]["title"], 1),
                      "title_price": title_prices[i], "finals_price": finals_prices[i]})
+    # power rank, projected final record, and category strengths (chance to win each category vs the
+    # average opponent in a typical week, from the season model) with league ranks
+    reg = d["settings"]["scheduleSettings"]["matchupPeriodCount"]
+    order = sorted(ids, key=lambda t: -power[t])
+    dists = {t: S._weekly_dist(S._team_players(t, d)[1]) for t in ids}
+    prof = {}
+    for t in ids:
+        pr = [S._cat_probs(dists[t], dists[o]) for o in ids if o != t]
+        prof[t] = {S.CN[k]: sum(x[k] for x in pr) / len(pr) for k in S.CATS}
+    for r, t in zip(rows, ids):
+        r["power_rank"] = order.index(t) + 1
+        r["proj_w"] = round(sim[t]["exp_wins"], 1)
+        r["proj_l"] = round(reg - sim[t]["exp_wins"], 1)
+        r["cat_strength"] = {c: round(100 * v) for c, v in prof[t].items()}
+        r["cat_rank"] = {c: 1 + sum(prof[o][c] > v for o in ids) for c, v in prof[t].items()}
     rows.sort(key=lambda x: (x["seed"] or 99))
-    return {"finals_teams": po_n, "in_playoffs": in_playoffs, "sims": S.SEASON_SIMS, "ladder": rows}
+    return {"finals_teams": po_n, "in_playoffs": in_playoffs, "sims": S.SEASON_SIMS, "weeks": reg, "ladder": rows}
 
 
 DAY_KEYS = ["0", "6", "3", "2", "1", "17", "11", "13", "14", "15", "16"]  # cats + FGM/FGA/FTM/FTA
@@ -246,7 +261,8 @@ def main():
     except Exception:
         hist = []
     hist.append({"t": stamp, "title": {r["team"]: r["title_pct"] for r in lg["ladder"]},
-                 "finals": {r["team"]: r["finals_pct"] for r in lg["ladder"]}})
+                 "finals": {r["team"]: r["finals_pct"] for r in lg["ladder"]},
+                 "power": {r["team"]: r["power_rank"] for r in lg["ladder"]}})
     hist = hist[-64:]
     now_ts = datetime.fromisoformat(stamp).timestamp()
     old = [h for h in hist if now_ts - datetime.fromisoformat(h["t"]).timestamp() >= 20 * 3600]
@@ -254,6 +270,7 @@ def main():
     for r in lg["ladder"]:
         r["title_move"] = round(r["title_pct"] - ref["title"].get(r["team"], r["title_pct"]), 1)
         r["finals_move"] = round(r["finals_pct"] - ref["finals"].get(r["team"], r["finals_pct"]), 1)
+        r["power_move"] = (ref.get("power") or {}).get(r["team"], r["power_rank"]) - r["power_rank"]  # + = climbed
     lg["moves_since_utc"] = ref["t"]
     lg["history"] = hist
     with open(lpath, "w") as f:

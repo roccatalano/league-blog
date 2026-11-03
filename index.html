@@ -104,6 +104,17 @@
   .seg { display: flex; gap: 4px; background: var(--card); border: 1px solid var(--line); border-radius: 99px; padding: 4px; margin-bottom: 12px; }
   .seg button { flex: 1; font: inherit; font-size: 13.5px; font-weight: 600; border: 0; background: none; color: var(--muted); padding: 7px 6px; border-radius: 99px; cursor: pointer; }
   .seg button.on { background: var(--accent); color: #fff; }
+  .inj { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .inj:last-child { border-bottom: 0; }
+  .inj .nm { font-weight: 700; font-size: 15px; line-height: 1.25; }
+  .inj .sub { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+  .inj .ret { text-align: right; white-space: nowrap; }
+  .inj .ret b { display: block; font-family: "Archivo Black", Inter, sans-serif; font-size: 18px; font-weight: 400; }
+  .inj .ret small { color: var(--muted); font-size: 12px; }
+  .inj .nt { grid-column: 1 / -1; font-size: 13px; color: var(--muted); }
+  .grp { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .6px; color: var(--muted); margin: 18px 0 6px; }
+  .chip.out { background: #fde2e2; color: #c92a2a; } .chip.dtd { background: #fff3bf; color: #946200; } .chip.ft { background: transparent; color: var(--muted); border: 1px solid var(--line); }
+  @media (prefers-color-scheme: dark) { .chip.out { background: #3b1717; color: #ff8787; } .chip.dtd { background: #3a2f0b; color: #ffd43b; } }
   footer { color: var(--muted); font-size: 13px; text-align: center; padding: 0 16px 32px; }
 </style>
 </head>
@@ -111,7 +122,7 @@
 <header><div class="wrap">
   <a href="#"><div class="brand">NBA FANTASY <span>2026</span></div></a>
   <div class="tag">Daily posts, trade reviews and weekly roundups. Updated automatically.</div>
-  <nav><a href="#/" data-n="posts">Posts</a><a href="#/ladder" data-n="ladder">Ladder</a><a href="#/odds" data-n="odds">Live odds</a><a href="#/trade" data-n="trade">Trade calculator</a><a href="#/dawg" data-n="dawg">Dawg index</a><a href="#/stats" data-n="stats">Stat ranks</a></nav>
+  <nav><a href="#/" data-n="posts">Posts</a><a href="#/ladder" data-n="ladder">Ladder</a><a href="#/odds" data-n="odds">Live odds</a><a href="#/trade" data-n="trade">Trade calculator</a><a href="#/dawg" data-n="dawg">Dawg index</a><a href="#/stats" data-n="stats">Stat ranks</a><a href="#/injuries" data-n="injuries">Injuries</a></nav>
 </div></header>
 <main class="wrap" id="app"><p class="empty">Loading…</p></main>
 <footer>Odds and expected wins come from a model, not a crystal ball.</footer>
@@ -312,6 +323,39 @@ async function tradePage() {
   list(ta, document.getElementById("pa")); list(tb, document.getElementById("pb")); run();
 }
 
+let INJ = null, INJ_F = "owned";
+async function injuriesPage() {
+  setNav("injuries"); document.title = "Injuries · NBA Fantasy 2026";
+  app.innerHTML = '<p class="empty">Loading…</p>';
+  try { if (!INJ) INJ = await (await fetch("data/injuries.json", { cache: "no-cache" })).json(); }
+  catch (e) { app.innerHTML = '<p class="empty">The injury report isn\'t available yet. It appears after the next data refresh.</p>'; return; }
+  const all = INJ.players, teams = [...new Set(all.map(p => p.fantasy_team).filter(Boolean))].sort();
+  const f = INJ_F, list = all.filter(p => f === "all" ? true : f === "owned" ? p.fantasy_team : f === "fa" ? !p.fantasy_team : p.fantasy_team === f);
+  const ORDER = ["Days", "1 week", "1-2 weeks", "2-4 weeks", "1-2 months", "2+ months", "Season", "Unknown"];
+  const LABEL = { "Days": "Back within a couple of days", "1 week": "Out up to a week", "1-2 weeks": "Out 1–2 weeks", "2-4 weeks": "Out 2–4 weeks",
+                  "1-2 months": "Out 1–2 months", "2+ months": "Out 2+ months", "Season": "Out for the season", "Unknown": "No return date" };
+  const d = s => s ? new Date(s + "T12:00:00").toLocaleDateString("en-AU", { day: "numeric", month: "short" }) : "–";
+  const chip = p => { const s = (p.status || "").toLowerCase(); return `<span class="chip ${s.startsWith("day") ? "dtd" : "out"}">${esc(p.status)}</span>`; };
+  const row = p => {
+    const line = p.per_game ? ` · ${p.per_game.PTS}/${p.per_game.REB}/${p.per_game.AST}` : "";
+    const owner = p.fantasy_team ? `${esc(p.fantasy_team)}${p.on_ir ? " (IR)" : ""}` : "Free agent";
+    const ret = p.timeframe === "Season" ? "Season" : p.days_out === 0 ? "Any day" : d(p.return_date);
+    const g = p.games_missed == null ? "" : `${p.games_missed} game${p.games_missed === 1 ? "" : "s"} missed`;
+    return `<div class="inj"><div><div class="nm">${esc(p.name)}</div>
+      <div class="sub">${esc(p.nba_team)} ${esc(p.pos || "")} · ${owner}${line}</div>
+      <div class="chips">${chip(p)}${p.injury ? `<span class="chip ft">${esc(p.injury)}</span>` : ""}</div></div>
+      <div class="ret"><small>Back</small><b>${esc(ret)}</b><small>${g}</small></div>
+      ${p.note ? `<div class="nt">${esc(p.note)} <small>(${d(p.note_date)})</small></div>` : ""}</div>`;
+  };
+  const groups = ORDER.map(k => [k, list.filter(p => p.timeframe === k)]).filter(([, l]) => l.length)
+    .map(([k, l]) => `<div class="grp">${LABEL[k]} · ${l.length}</div><div class="card">${l.map(row).join("")}</div>`).join("");
+  const opt = (v, t) => `<option value="${esc(v)}"${v === f ? " selected" : ""}>${esc(t)}</option>`;
+  app.innerHTML = `<div class="filters"><select id="injf">${opt("owned", "On a fantasy team")}${opt("fa", "Free agents")}${opt("all", "Whole NBA")}${teams.map(t => opt(t, t)).join("")}</select></div>
+    <p class="updated">${list.length} injured · updated ${esc(ago(INJ.updated_utc))} · refreshes every 30 min. "Back" is ESPN's projected return date (US time); games missed counts that NBA team's games until then. Projections often move, so check the latest note.</p>
+    ${groups || '<p class="empty">Nobody injured here. Enjoy it while it lasts.</p>'}`;
+  document.getElementById("injf").onchange = e => { INJ_F = e.target.value; injuriesPage(); };
+}
+
 function route() {
   const slug = decodeURIComponent(location.hash.replace(/^#\/?/, ""));
   if (slug === "odds") return oddsPage();
@@ -319,6 +363,7 @@ function route() {
   if (slug === "dawg") return dawgPage();
   if (slug === "trade") return tradePage();
   if (slug === "stats") return statsPage();
+  if (slug === "injuries") return injuriesPage();
   setNav("posts");
   slug ? show(slug) : home();
 }

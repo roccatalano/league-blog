@@ -126,6 +126,7 @@
   .mrow { display: grid; grid-template-columns: 1fr auto; gap: 8px; padding: 8px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
   .mrow:last-child { border-bottom: 0; }
   .mrow small { color: var(--muted); display: block; font-size: 12px; }
+  .cats.bl td:last-child, .cats.bl th:last-child { text-align: left; }
   .ok { color: #2f9e44; font-weight: 700; } .miss { color: #e03131; font-weight: 700; }
   @media (max-width: 420px) { .kpi b { font-size: 20px; } }
   footer { color: var(--muted); font-size: 13px; text-align: center; padding: 0 16px 32px; }
@@ -433,17 +434,33 @@ async function recordPage() {
   const kpis = `<div class="kpis">
     <div class="kpi"><b>${O.called} of ${O.matchups}</b><span>times it picked the winner</span></div>
     <div class="kpi"><b>${pc(O.called / O.matchups)}</b><span>hit rate (guessing would get ~50%)</span></div>
-    <div class="kpi"><b>${ps.toFixed(2)}</b><span>prediction score: ${psWord}</span></div></div>`;
+    <a class="kpi" href="#/record" onclick="document.getElementById('brier').scrollIntoView({behavior:'smooth'});return false" style="color:inherit;text-decoration:none"><b>${ps.toFixed(3)}</b><span>Brier score: ${psWord} (lower is better) ↓</span></a></div>`;
 
-  const scoreExplain = `<details class="card"><summary>What's the "prediction score"?</summary><div class="explain">
-    <p>Just counting right picks is a bit unfair: calling a 51% coin flip right is luck, but calling a 95% lock wrong is a real miss. The prediction score takes the <strong>% chance</strong> into account.</p>
-    <p>Each matchup gets a penalty. Confident and right: almost no penalty. A 50/50 call: a medium penalty either way. Confident and <strong>wrong</strong>: a big penalty. The score is the average penalty, so <strong>lower is better</strong>.</p>
-    <p><strong>0</strong> = perfect &nbsp;·&nbsp; <strong>0.25</strong> = the same as saying "50/50" for every matchup &nbsp;·&nbsp; above 0.25 = worse than guessing.</p>
-    <p class="note">(Maths fans: it's the Brier score, the average of (chance − result)², where result is 1 for a win and 0 for a loss.)</p></div></details>`;
+  const scoreExplain = `<div class="card" id="brier"><h2 style="margin-top:0">The Brier score, explained</h2><div class="explain">
+    <p>Counting right picks misses something: calling a <strong>51% coin flip</strong> right is mostly luck, but calling a <strong>95% "lock"</strong> wrong is a big miss. The Brier score gives the model credit for being <strong>right and confident</strong>, and punishes it for being <strong>confident and wrong</strong>.</p>
+    <h3>How each matchup is scored</h3>
+    <p>Take the chance the model gave the team that <em>won</em>, and see how far short of 100% it was. Then square that gap (multiply it by itself). That's the penalty.</p>
+    <table class="cats"><tr><th>Model gave the winner</th><th>Gap to 100%</th><th>Penalty</th></tr>
+      <tr><td>95%</td><td>0.05</td><td class="pos">0.00</td></tr>
+      <tr><td>80%</td><td>0.20</td><td class="pos">0.04</td></tr>
+      <tr><td>50% (shrug)</td><td>0.50</td><td>0.25</td></tr>
+      <tr><td>20% (backed the loser)</td><td>0.80</td><td class="neg">0.64</td></tr>
+      <tr><td>5% (backed the loser hard)</td><td>0.95</td><td class="neg">0.90</td></tr></table>
+    <p>Squaring is what makes confident misses hurt so much: one 95%-wrong call costs as much as 20 decent calls.</p>
+    <h3>The weekly score</h3>
+    <p>Average the penalties across every matchup. <strong>Lower is better.</strong></p>
+    <table class="cats bl"><tr><th>Brier</th><th>What it means</th></tr>
+      <tr><td>0.00</td><td>Perfect: 100% sure and right every time</td></tr>
+      <tr><td>under 0.15</td><td>Very good</td></tr>
+      <tr><td>0.15 – 0.20</td><td>Good</td></tr>
+      <tr><td>0.20 – 0.25</td><td>A bit better than guessing</td></tr>
+      <tr><td>0.25</td><td>Same as saying "50/50" for every matchup</td></tr>
+      <tr><td>over 0.25</td><td>Worse than not trying</td></tr></table>
+    <p>So far this season: <strong>${O.brier.toFixed(3)}</strong> (${psWord}).</p></div></div>`;
 
   const catCard = O.categories ? `<div class="card"><h2 style="margin-top:0">Category by category</h2>
     <p class="note">Which stats the model predicts best. It called ${Math.round(O.cat_called)} of ${O.categories} category winners (${pc(O.cat_called / O.categories)}).</p>
-    <table class="cats"><tr><th>Category</th><th>Called right</th><th>Score</th></tr>${O.by_category.map(c => `<tr><td>${esc(c.cat)}</td><td>${Math.round(c.called)} of ${c.n}</td><td>${c.brier.toFixed(2)}</td></tr>`).join("")}</table></div>` : "";
+    <table class="cats"><tr><th>Category</th><th>Called right</th><th>Brier</th></tr>${O.by_category.map(c => `<tr><td>${esc(c.cat)}</td><td>${Math.round(c.called)} of ${c.n}</td><td>${c.brier.toFixed(3)}</td></tr>`).join("")}</table></div>` : "";
 
   const weeks = W.map(w => {
     const rows = w.matchups.map(m => {
@@ -453,7 +470,7 @@ async function recordPage() {
         <div class="${m.called ? "ok" : "miss"}">${m.called ? "✓" : "✗"}</div></div>`;
     }).join("");
     const src = w.source === "live" || w.source.startsWith("stored") ? "picks made Monday before the week started" : "picks taken from the first daily post, a few days in, so this week is a bit flattering";
-    return `<details class="card"><summary>Week ${w.period}: picked ${w.called} of ${w.n} · score ${w.brier.toFixed(2)}</summary>
+    return `<details class="card"><summary>Week ${w.period}: picked ${w.called} of ${w.n} · Brier ${w.brier.toFixed(3)}</summary>
       <p class="note">${esc(src)}.</p>${rows}</details>`;
   }).join("");
 

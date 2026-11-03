@@ -241,6 +241,7 @@
   .tr-score small { font-size: 14px; color: var(--muted); }
   .tr-lead { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .4px; margin-top: 4px; max-width: 90px; }
   .tc { margin-top: 16px; }
+  .tc-dates { display: flex; justify-content: space-between; font-size: 11px; font-weight: 600; color: var(--muted); margin: 4px 0 2px; }
   .tb-row { display: grid; grid-template-columns: 22px 1fr auto; gap: 10px; align-items: center; padding: 11px 0; border-bottom: 1px solid var(--line); color: inherit; text-decoration: none; }
   .tb-row:last-child { border-bottom: 0; }
   .tb-row small { display: block; color: var(--muted); font-size: 12px; }
@@ -680,15 +681,16 @@ function tradeChart(series, A, B) {
   const line = series.map((p, i) => (i ? "L" : "M") + X(i).toFixed(1) + " " + Y(p[1]).toFixed(1)).join(" ");
   const area = `${line} L${W} ${Y(0)} L0 ${Y(0)} Z`, id = "t" + Math.random().toString(36).slice(2, 8);
   const last = series[n];
-  const ticks = series.map((p, i) => [p, i]).filter(([p], i) => i === 0 || i === n || new Date(p[0] + "T12:00:00").getDay() === 1)
-    .map(([p, i]) => `<text x="${X(i)}" y="${H + 14}" class="wp-day" text-anchor="${i === 0 ? "start" : i === n ? "end" : "middle"}">${new Date(p[0] + "T12:00:00").toLocaleDateString("en-AU", { day: "numeric", month: "short" })}</text>`).join("");
-  return `<div class="wp tc"><div class="wp-lbl top">${esc(A)} winning</div><div class="wp-plot" style="height:136px">
-    <svg viewBox="0 -2 ${W} ${H + 18}" preserveAspectRatio="none" style="height:136px">
+  const fd = x => new Date(x + "T12:00:00").toLocaleDateString("en-AU", { day: "numeric", month: "short" });
+  const ticks = "";
+  return `<div class="wp tc"><div class="wp-lbl top">${esc(A)} winning</div><div class="wp-plot" style="height:122px">
+    <svg viewBox="0 -2 ${W} ${H + 4}" preserveAspectRatio="none" style="height:122px">
       <defs><clipPath id="${id}a"><rect x="0" y="0" width="${W}" height="${Y(0)}"/></clipPath><clipPath id="${id}b"><rect x="0" y="${Y(0)}" width="${W}" height="${H}"/></clipPath></defs>
       <line x1="0" x2="${W}" y1="${Y(0)}" y2="${Y(0)}" class="wp-mid"/>
       <path d="${area}" class="wp-fh" clip-path="url(#${id}a)"/><path d="${area}" class="wp-fa" clip-path="url(#${id}b)"/>
       <path d="${line}" class="wp-line" vector-effect="non-scaling-stroke"/>${ticks}</svg>
-    <span class="wp-dot${last[1] < 0 ? " a" : ""}" style="left:${X(n) / W * 100}%;top:${(Y(last[1]) + 2) / (H + 18) * 100}%"></span></div>
+    <span class="wp-dot${last[1] < 0 ? " a" : ""}" style="left:${X(n) / W * 100}%;top:${(Y(last[1]) + 2) / (H + 4) * 100}%"></span></div>
+    <div class="tc-dates"><span>${fd(series[0][0])}</span><span>${fd(series[n][0])}</span></div>
     <div class="wp-lbl bot">${esc(B)} winning</div></div>`;
 }
 async function tradesPage() {

@@ -129,6 +129,70 @@
   .cats.bl td:last-child, .cats.bl th:last-child { text-align: left; }
   .ok { color: #2f9e44; font-weight: 700; } .miss { color: #e03131; font-weight: 700; }
   @media (max-width: 420px) { .kpi b { font-size: 20px; } }
+  /* ---- model record ---- */
+  .rc section { margin-bottom: 26px; }
+  .rc-hero { background: var(--head); color: #fff; border-radius: 18px; padding: 20px 20px 16px; margin-bottom: 26px; position: relative; overflow: hidden; }
+  .rc-hero::after { content: ""; position: absolute; right: -60px; top: -60px; width: 200px; height: 200px; border-radius: 50%; background: radial-gradient(circle, rgba(232,89,12,.35), transparent 70%); }
+  .rc-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: .9px; text-transform: uppercase; color: #9aa3b5; }
+  .rc-big { font-family: "Archivo Black", Inter, sans-serif; font-size: clamp(30px, 8.5vw, 42px); line-height: 1.02; margin: 8px 0 6px; color: var(--accent); }
+  .rc-big span { color: #fff; display: block; font-size: .62em; }
+  .rc-sub { font-size: 14px; color: #c3c9d5; }
+  .rc-sub strong { color: #fff; }
+  .rc-ruler { position: relative; margin: 34px 4px 0; padding-bottom: 4px; }
+  .rc-track { height: 8px; border-radius: 99px; background: linear-gradient(90deg, #3a2a24, #2f3a2f 60%, #2f9e44); position: relative; overflow: hidden; }
+  .rc-worse { position: absolute; left: 0; top: 0; bottom: 0; background: repeating-linear-gradient(135deg, rgba(224,49,49,.55) 0 4px, transparent 4px 8px); }
+  .rc-tick { position: absolute; top: -4px; width: 1px; height: 16px; background: rgba(255,255,255,.45); }
+  .rc-tick em { position: absolute; top: 19px; transform: translateX(-50%); font-style: normal; font-size: 10.5px; color: #9aa3b5; white-space: nowrap; }
+  .rc-me { position: absolute; top: -6px; width: 20px; height: 20px; margin-left: -10px; border-radius: 50%; background: var(--accent); border: 3px solid #fff; box-shadow: 0 0 0 4px rgba(232,89,12,.3); animation: rcIn .7s cubic-bezier(.2,.8,.2,1) both; }
+  .rc-me b { position: absolute; bottom: 22px; left: 50%; transform: translateX(-50%); font-size: 10.5px; letter-spacing: .5px; text-transform: uppercase; color: #fff; white-space: nowrap; }
+  .rc-pin { position: absolute; top: -18px; transform: translateX(-50%); font-size: 9.5px; font-weight: 700; color: #16181d; background: #cfd5e0; border-radius: 4px; padding: 0 4px; line-height: 14px; opacity: .85; }
+  .rc-pin::before { content: "W"; }
+  .rc-key { position: static; transform: none; display: inline-block; }
+  .rc-ends > span:nth-child(2) { color: #9aa3b5; }
+  @media (prefers-color-scheme: dark) { .rc-hero { border: 1px solid #262c37; } }
+  .rc-ends { display: flex; justify-content: space-between; font-size: 10.5px; color: #6f7889; margin-top: 30px; }
+  @keyframes rcIn { from { left: 0; opacity: 0; } }
+  .rc-h { font-family: "Archivo Black", Inter, sans-serif; font-weight: 400; font-size: 18px; margin: 0 0 10px; }
+  .rc-h small { display: block; font-family: Inter, sans-serif; font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+  .rc-list, .rc-panel { background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+  .rc-panel { padding: 4px 16px; }
+  .rc-wk { border-bottom: 1px solid var(--line); margin: 0; }
+  .rc-wk:last-child { border-bottom: 0; }
+  .rc-wk summary { list-style: none; display: grid; grid-template-columns: 40px 1fr auto; gap: 10px; align-items: center; padding: 13px 16px; color: var(--ink); font-weight: 400; }
+  .rc-wk summary::-webkit-details-marker { display: none; }
+  .rc-wk[open] summary { background: var(--accent-soft); }
+  .rc-wn { font-family: "Archivo Black", Inter, sans-serif; font-size: 17px; color: var(--muted); }
+  .rc-mid { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+  .rc-lbl { font-size: 13.5px; font-weight: 600; }
+  .rc-val { font-family: "Archivo Black", Inter, sans-serif; font-size: 18px; }
+  .rc-wk.live .rc-val { font-family: Inter, sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .6px; color: var(--accent); }
+  .rc-wk.live .rc-val::before { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); margin-right: 5px; animation: rcPulse 1.6s infinite; }
+  @keyframes rcPulse { 50% { opacity: .25; } }
+  .rc-dots { display: inline-flex; gap: 4px; flex-wrap: wrap; }
+  .rc-dots i { width: 10px; height: 10px; border-radius: 50%; display: block; }
+  i.ok, i.up { background: #2f9e44; } i.no, i.dn { background: #e03131; } i.lvl { background: var(--line); }
+  i.up, i.dn { background: transparent; border: 2px solid; } i.up { border-color: #2f9e44; } i.dn { border-color: #e03131; }
+  .rc-m { display: grid; grid-template-columns: 10px 1fr; gap: 12px; align-items: start; padding: 9px 16px 9px 66px; font-size: 14px; border-top: 1px dashed var(--line); }
+  .rc-m i { width: 10px; height: 10px; border-radius: 50%; margin-top: 6px; display: block; }
+  .rc-m small { display: block; color: var(--muted); font-size: 12.5px; }
+  .rc-m b small { display: inline; }
+  .rc-note { margin: 0; padding: 8px 16px 8px 66px; font-size: 12.5px; color: var(--muted); }
+  .rc-band { display: grid; grid-template-columns: 70px 1fr auto; gap: 10px; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .rc-band:last-child { border-bottom: 0; }
+  .rc-bl { font-family: "Archivo Black", Inter, sans-serif; font-size: 13.5px; white-space: nowrap; }
+  .rc-band small { display: block; color: var(--muted); font-size: 12px; margin-top: 4px; }
+  .rc-chip { font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 99px; background: var(--line); color: var(--muted); white-space: nowrap; }
+  .rc-chip.good { background: #d3f9d8; color: #2b8a3e; } .rc-chip.bad { background: #ffe3e3; color: #c92a2a; } .rc-chip.warn { background: #fff3bf; color: #946200; }
+  @media (prefers-color-scheme: dark) { .rc-chip.good { background: #173a20; color: #8ce99a; } .rc-chip.bad { background: #3b1717; color: #ff8787; } .rc-chip.warn { background: #3a2f0b; color: #ffd43b; } }
+  .rc-cat { display: grid; grid-template-columns: 44px 1fr 92px; gap: 10px; align-items: center; padding: 9px 0; font-size: 13px; }
+  .rc-cat small { color: var(--muted); text-align: right; }
+  .rc-bar { position: relative; height: 8px; background: var(--line); border-radius: 99px; }
+  .rc-bar i { position: absolute; left: 0; top: 0; bottom: 0; background: var(--accent); border-radius: 99px; }
+  .rc-bar u { position: absolute; top: -3px; bottom: -3px; width: 2px; background: var(--ink); opacity: .5; }
+  .rc-how { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; }
+  .rc-how summary { font-weight: 700; color: var(--accent); }
+  .rc-how ol { padding-left: 20px; } .rc-how li { margin-bottom: 6px; }
+  @media (max-width: 400px) { .rc-m, .rc-note { padding-left: 16px; } }
   footer { color: var(--muted); font-size: 13px; text-align: center; padding: 0 16px 32px; }
 </style>
 </head>
@@ -381,111 +445,96 @@ async function recordPage() {
     if (!PLOG) PLOG = await (await fetch("data/prediction_log.json", { cache: "no-cache" })).json();
     ODDS = await (await fetch("data/odds.json", { cache: "no-cache" })).json();
   } catch (e) { if (!ACC) { app.innerHTML = '<p class="empty">The model record isn\'t available yet. It appears after the next data refresh.</p>'; return; } }
-  const O = ACC.overall, W = ACC.weeks, pc = x => Math.round(x * 100) + "%";
-  const score = s => `${Math.max(s[0], s[1])}-${Math.min(s[0], s[1])}${s[2] ? "-" + s[2] : ""}`;
+  const O = ACC.overall, W = ACC.weeks.slice().sort((a, b) => b.period - a.period);
+  const pc = x => Math.round(x * 100) + "%";
+  const sk = b => Math.round((0.25 - b) / 0.25 * 100);
+  const skTxt = b => { const x = sk(b); return x >= 0 ? `${x}% better` : `${-x}% worse`; };
+  const MAX = 0.30, pos = b => Math.max(0, Math.min(100, (1 - Math.min(b, MAX) / MAX) * 100));  // 0.30 left → 0.00 right
+  const sc = s => `${Math.max(s[0], s[1])}-${Math.min(s[0], s[1])}${s[2] ? "-" + s[2] : ""}`;
+  const dots = list => `<span class="rc-dots">${list.map(x => `<i class="${x}"></i>`).join("")}</span>`;
 
-  const howItWorks = `<details class="card"><summary>How does the model work? (plain English)</summary><div class="explain">
-    <h3>1. How good is each player?</h3>
-    <p>For every player we work out what they average per game in each of the 9 categories. Early in the season we mix this year's numbers with last year's (or ESPN's projection), and lean more on this year as games pile up, so one hot week doesn't fool it.</p>
-    <h3>2. How many games will they play?</h3>
-    <p>We use the real NBA schedule. Healthy players are expected to play about 93% of their games (rest days happen). Injured players count as out until ESPN's projected return date, then healthy again.</p>
-    <h3>3. Who starts each day?</h3>
-    <p>We assume every manager sets their best possible lineup every day, using whoever has a game. (Real managers sometimes forget, so this flatters lazy teams a little.)</p>
-    <h3>4. Play the week 1,000 times</h3>
-    <p>Real games are random: a 20-point scorer might drop 8 or 35. So the computer plays out the rest of the week 1,000 times with that randomness built in, adds up each team's stats, and counts who wins each category. If Team A wins in 700 of the 1,000 runs, that's a 70% chance.</p>
-    <h3>5. Odds</h3>
-    <p>The % chance is turned into bookie-style prices (70% ≈ $1.35) with a small margin, just for fun. Nobody's actually betting. We hope.</p>
-  </div></details>`;
+  // ---------- hero: the ruler
+  const tick = (v, l) => `<span class="rc-tick" style="left:${pos(v)}%"><em>${l}</em></span>`;
+  const wkPins = W.map(w => `<span class="rc-pin" style="left:${pos(w.brier)}%" title="Week ${w.period}: ${w.brier.toFixed(3)}">${w.period}</span>`).join("");
+  const hero = `<section class="rc-hero">
+    <div class="rc-eyebrow">Model report card · ${W.length} finished week${W.length === 1 ? "" : "s"}</div>
+    <div class="rc-big">${skTxt(O.brier)} <span>than guessing</span></div>
+    <div class="rc-sub">Brier score <strong>${O.brier.toFixed(3)}</strong> · picked <strong>${O.called} of ${O.matchups}</strong> winners</div>
+    <div class="rc-ruler">
+      <div class="rc-track"><span class="rc-worse" style="width:${pos(0.25)}%"></span></div>
+      ${tick(0.25, "guessing")}${tick(0.15, "good")}${tick(0.05, "elite")}
+      <span class="rc-me" style="left:${pos(O.brier)}%"></span>${wkPins}
+      <div class="rc-ends"><span>← worse</span><span>● season &nbsp; <span class="rc-pin rc-key">1</span> week</span><span>better →</span></div>
+    </div>
+  </section>`;
 
-  // ---- this week (in progress)
-  let live = "";
+  // ---------- weeks (in progress + finished)
+  let rows = "";
   const cur = ODDS && PLOG && PLOG[String(ODDS.matchup_period)];
   if (cur && !W.some(w => w.period === ODDS.matchup_period)) {
-    const rows = cur.matchups.map(m => {
+    const ms = cur.matchups.map(m => {
       const now = ODDS.matchups.find(x => x.home === m.home && x.away === m.away);
-      const fav = m.p_home >= 0.5 ? m.home : m.away, fp = Math.max(m.p_home, 1 - m.p_home);
-      let st = "";
-      if (now) {
-        const [h, a] = now.score_now, lead = h === a ? "Level" : (h > a ? now.home : now.away) + " leads";
-        const onTrack = h === a ? "" : ((h > a) === (m.p_home >= 0.5) ? ' · <span class="ok">favourite ahead</span>' : ' · <span class="miss">underdog ahead</span>');
-        st = `${esc(lead)} ${score(now.score_now)}${onTrack}`;
+      const favHome = m.p_home >= 0.5, fav = favHome ? m.home : m.away, fp = Math.max(m.p_home, 1 - m.p_home);
+      let st = "lvl", txt = "level";
+      if (now && now.score_now[0] !== now.score_now[1]) {
+        const homeLead = now.score_now[0] > now.score_now[1];
+        st = homeLead === favHome ? "up" : "dn"; txt = (st === "up" ? "favourite ahead " : "underdog ahead ") + sc(now.score_now);
       }
-      return `<div class="mrow"><div><strong>${esc(m.home)}</strong> v <strong>${esc(m.away)}</strong>
-        <small>Monday pick: ${esc(fav)} (${pc(fp)} chance)</small><small>Right now: ${st}</small></div></div>`;
-    }).join("");
-    live = `<details class="card" open><summary>Week ${ODDS.matchup_period}: in progress</summary>
-      <p class="note">The model's pick from Monday vs the score right now. Early leads swing a lot, so don't read much into the first few days. This week gets marked right or wrong once it finishes on Sunday (US time).</p>${rows}</details>`;
+      return { st, html: `<div class="rc-m"><i class="${st}"></i><div><b>${esc(fav)}</b> <small>${pc(fp)} to beat ${esc(favHome ? m.away : m.home)}</small><small>Now: ${txt}</small></div></div>` };
+    });
+    rows += `<details class="rc-wk live"><summary><span class="rc-wn">W${ODDS.matchup_period}</span>
+      <span class="rc-mid"><span class="rc-lbl">In progress</span>${dots(ms.map(m => m.st))}</span><span class="rc-val">live</span></summary>
+      <p class="rc-note">Monday's picks vs the score now. Early leads swing a lot. Scored when the week ends.</p>${ms.map(m => m.html).join("")}</details>`;
   }
+  rows += W.map(w => {
+    const ms = w.matchups.map(m => {
+      const win = m.winner === "TIE" ? "Tied" : (m.winner === "HOME" ? m.home : m.away) + " won";
+      return `<div class="rc-m"><i class="${m.called ? "ok" : "no"}"></i><div><b>${esc(m.fav)}</b> <small>${pc(m.fav_p)} to beat ${esc(m.fav === m.home ? m.away : m.home)}</small><small>${esc(win)} ${sc(m.score)}</small></div></div>`;
+    }).join("");
+    const x = sk(w.brier);
+    const note = w.source === "live" || w.source.startsWith("stored") ? "" : `<p class="rc-note">Picks taken from the first daily post a few days in, so this week flatters the model a little.</p>`;
+    return `<details class="rc-wk"><summary><span class="rc-wn">W${w.period}</span>
+      <span class="rc-mid"><span class="rc-lbl">${w.called} of ${w.n} right · Brier ${w.brier.toFixed(3)}</span>${dots(w.matchups.map(m => m.called ? "ok" : "no"))}</span>
+      <span class="rc-val ${x >= 0 ? "pos" : "neg"}">${x >= 0 ? "+" : "−"}${Math.abs(x)}%</span></summary>${note}${ms}</details>`;
+  }).join("");
+  const weeks = `<section><h2 class="rc-h">Week by week <small>% = better or worse than guessing</small></h2><div class="rc-list">${rows}</div></section>`;
 
-  if (!W.length) { app.innerHTML = howItWorks + live + '<p class="empty">No finished weeks yet.</p>'; return; }
-
-  // ---- confidence check, in words
-  const groups = [["Coin flips (50–60%)", 0.5, 0.6], ["Leaning (60–75%)", 0.6, 0.75], ["Confident (75–90%)", 0.75, 0.9], ["Very confident (90%+)", 0.9, 1.01]];
+  // ---------- confidence
   const all = W.flatMap(w => w.matchups);
-  const conf = groups.map(([label, lo, hi]) => {
-    const g = all.filter(m => m.fav_p >= lo && m.fav_p < hi);
+  const bands = [["50–60%", .5, .6], ["60–75%", .6, .75], ["75–90%", .75, .9], ["90%+", .9, 1.01]].map(([l, lo, hi]) => {
+    const g = all.filter(m => m.fav_p >= lo && m.fav_p < hi).sort((a, b) => b.called - a.called);
     if (!g.length) return "";
     const won = g.filter(m => m.called).length, exp = g.reduce((t, m) => t + m.fav_p, 0);
-    const verdict = g.length < 4 ? "too few games to judge yet" : won > exp + 1 ? "too cautious: favourites won more than it said" : won < exp - 1 ? "too cocky: favourites won less than it said" : "about right";
-    return `<div class="mrow"><div><strong>${label}</strong><small>Favourite won ${won} of ${g.length}. The model expected about ${exp.toFixed(1)}.</small><small><strong>Verdict:</strong> ${verdict}</small></div></div>`;
+    const [cls, v] = g.length < 4 ? ["", "Too early"] : won > exp + 1 ? ["warn", "Too cautious"] : won < exp - 1 ? ["bad", "Too cocky"] : ["good", "About right"];
+    return `<div class="rc-band"><span class="rc-bl">${l}</span><span>${dots(g.map(m => m.called ? "ok" : "no"))}<small>won ${won} of ${g.length} · expected ${exp.toFixed(1)}</small></span><span class="rc-chip ${cls}">${v}</span></div>`;
   }).join("");
+  const conf = `<section><h2 class="rc-h">Does it know when it's sure? <small>favourite's chance → how often they won</small></h2><div class="rc-panel">${bands}</div></section>`;
 
-  const skillTxt = b => { const x = Math.round((0.25 - b) / 0.25 * 100); return x >= 0 ? x + "% better" : -x + "% worse"; };
-  const ps = O.brier, psWord = ps < 0.15 ? "very good" : ps < 0.2 ? "good" : ps < 0.25 ? "a bit better than guessing" : "no better than guessing";
-  const kpis = `<div class="kpis">
-    <div class="kpi"><b>${O.called} of ${O.matchups}</b><span>times it picked the winner</span></div>
-    <div class="kpi"><b>${pc(O.called / O.matchups)}</b><span>hit rate (guessing would get ~50%)</span></div>
-    <a class="kpi" href="#/record" onclick="document.getElementById('brier').scrollIntoView({behavior:'smooth'});return false" style="color:inherit;text-decoration:none"><b>${ps.toFixed(3)}</b><span>Brier score: ${skillTxt(ps)} than guessing ↓</span></a></div>`;
+  // ---------- categories
+  const cats = O.categories ? `<section><h2 class="rc-h">By category <small>${Math.round(O.cat_called)} of ${O.categories} right</small></h2><div class="rc-panel rc-cats">${
+    O.by_category.slice().sort((a, b) => a.brier - b.brier).map(c => `<div class="rc-cat"><b>${esc(c.cat)}</b><span class="rc-bar"><i style="width:${pos(c.brier)}%"></i><u style="left:${pos(0.25)}%"></u></span><small>${skTxt(c.brier)}</small></div>`).join("")}</div></section>` : "";
 
-  const scoreExplain = `<div class="card" id="brier"><h2 style="margin-top:0">The Brier score, explained</h2><div class="explain">
-    <p>Counting right picks misses something: calling a <strong>51% coin flip</strong> right is mostly luck, but calling a <strong>95% "lock"</strong> wrong is a big miss. The Brier score gives the model credit for being <strong>right and confident</strong>, and punishes it for being <strong>confident and wrong</strong>.</p>
-    <h3>How each matchup is scored</h3>
-    <p>Take the chance the model gave the team that <em>won</em>, and see how far short of 100% it was. Then square that gap (multiply it by itself). That's the penalty.</p>
-    <table class="cats"><tr><th>Model gave the winner</th><th>Gap to 100%</th><th>Penalty</th></tr>
-      <tr><td>95%</td><td>0.05</td><td class="pos">0.00</td></tr>
-      <tr><td>80%</td><td>0.20</td><td class="pos">0.04</td></tr>
-      <tr><td>50% (shrug)</td><td>0.50</td><td>0.25</td></tr>
-      <tr><td>20% (backed the loser)</td><td>0.80</td><td class="neg">0.64</td></tr>
-      <tr><td>5% (backed the loser hard)</td><td>0.95</td><td class="neg">0.90</td></tr></table>
-    <p>Squaring is what makes confident misses hurt so much: one 95%-wrong call costs as much as 20 decent calls.</p>
-    <h3>Why does guessing score 0.25?</h3>
-    <p>"Guessing" means a model that knows nothing and just says <strong>50%</strong> for every matchup. Whoever wins, it gave them 50%, so it's always 0.50 short of 100%. Square that: 0.50 × 0.50 = <strong>0.25</strong>. Every matchup, every week. That's the score for not even trying, so it's the line to beat.</p>
-    <h3>The weekly score</h3>
-    <p>Average the penalties across every matchup. <strong>Lower is better.</strong> To see how much better than guessing the model is, compare its score with 0.25:</p>
-    <p style="text-align:center"><strong>% better than guessing = (0.25 − score) ÷ 0.25</strong></p>
-    <p class="note">Example: a score of 0.10 is 0.15 below 0.25, and 0.15 ÷ 0.25 = 60% better than guessing.</p>
-    <table class="cats bl"><tr><th>Brier</th><th>vs guessing</th><th>What it means</th></tr>
-      <tr><td>0.00</td><td class="pos">100% better</td><td>Perfect: 100% sure and right every time (impossible in practice)</td></tr>
-      <tr><td>0.05</td><td class="pos">80% better</td><td>Elite</td></tr>
-      <tr><td>0.10</td><td class="pos">60% better</td><td>Very good</td></tr>
-      <tr><td>0.15</td><td class="pos">40% better</td><td>Good</td></tr>
-      <tr><td>0.20</td><td>20% better</td><td>A bit better than guessing</td></tr>
-      <tr><td>0.25</td><td>0%</td><td>Same as saying "50/50" every time</td></tr>
-      <tr><td>0.30</td><td class="neg">20% worse</td><td>Worse than not trying: confidently wrong too often</td></tr></table>
-    <p>So far this season: <strong>${O.brier.toFixed(3)}</strong>, which is <strong>${skillTxt(O.brier)}</strong> than guessing.</p></div></div>`;
+  // ---------- how it works (one drawer)
+  const how = `<details class="rc-how"><summary>How this works</summary><div class="explain">
+    <h3>The model, in five steps</h3>
+    <ol><li><strong>How good is each player?</strong> Their per-game averages in all 9 categories, mixed with last season early on so one hot week doesn't fool it.</li>
+      <li><strong>How many games?</strong> The real NBA schedule. Healthy players play about 93% of games; injured players count as out until their projected return.</li>
+      <li><strong>Who starts?</strong> It assumes every manager sets their best lineup each day.</li>
+      <li><strong>Play the week 1,000 times</strong> with real-game randomness. Win 700 of the runs and that's a 70% chance.</li>
+      <li><strong>Odds</strong> are that % turned into bookie prices, just for fun.</li></ol>
+    <h3>The Brier score</h3>
+    <p>Counting right picks treats a lucky 51% call the same as a 95% "lock". The Brier score rewards being <strong>confident and right</strong> and punishes being <strong>confident and wrong</strong>.</p>
+    <p>For each matchup, take the chance the model gave the team that won, see how far short of 100% it was, and square it. That's the penalty:</p>
+    <table class="cats"><tr><th>Model gave the winner</th><th>Penalty</th></tr>
+      <tr><td>95%</td><td class="pos">0.00</td></tr><tr><td>80%</td><td class="pos">0.04</td></tr><tr><td>50%</td><td>0.25</td></tr>
+      <tr><td>20% (backed the loser)</td><td class="neg">0.64</td></tr><tr><td>5% (backed the loser hard)</td><td class="neg">0.90</td></tr></table>
+    <p>The score is the average penalty, so <strong>lower is better</strong>. One confident miss costs as much as about 20 decent calls.</p>
+    <h3>Why guessing scores 0.25</h3>
+    <p>"Guessing" means saying 50/50 for every matchup. Whoever wins, that's 0.50 short of 100%, and 0.50 × 0.50 = 0.25. Every time. That's the line to beat.</p>
+    <p><strong>% better than guessing = (0.25 − score) ÷ 0.25.</strong> So 0.10 is 60% better, 0.15 is 40% better, 0.20 is 20% better, and anything over 0.25 is worse than guessing.</p>
+  </div></details>`;
 
-  const catCard = O.categories ? `<div class="card"><h2 style="margin-top:0">Category by category</h2>
-    <p class="note">Which stats the model predicts best. It called ${Math.round(O.cat_called)} of ${O.categories} category winners (${pc(O.cat_called / O.categories)}).</p>
-    <table class="cats"><tr><th>Category</th><th>Called right</th><th>Brier</th></tr>${O.by_category.map(c => `<tr><td>${esc(c.cat)}</td><td>${Math.round(c.called)} of ${c.n}</td><td>${c.brier.toFixed(3)}</td></tr>`).join("")}</table></div>` : "";
-
-  const weeks = W.map(w => {
-    const rows = w.matchups.map(m => {
-      const winner = m.winner === "TIE" ? "Tied" : (m.winner === "HOME" ? m.home : m.away) + " won";
-      return `<div class="mrow"><div><strong>${esc(m.home)}</strong> v <strong>${esc(m.away)}</strong>
-        <small>Picked ${esc(m.fav)} (${pc(m.fav_p)} chance) · ${esc(winner)} ${score(m.score)}</small></div>
-        <div class="${m.called ? "ok" : "miss"}">${m.called ? "✓" : "✗"}</div></div>`;
-    }).join("");
-    const src = w.source === "live" || w.source.startsWith("stored") ? "picks made Monday before the week started" : "picks taken from the first daily post, a few days in, so this week is a bit flattering";
-    return `<details class="card"><summary>Week ${w.period}: picked ${w.called} of ${w.n} · Brier ${w.brier.toFixed(3)} (${skillTxt(w.brier)} than guessing)</summary>
-      <p class="note">${esc(src)}.</p>${rows}</details>`;
-  }).join("");
-
-  app.innerHTML = `<p class="updated">Every Monday the model picks a winner for each matchup and gives a % chance. This page checks how those picks turned out. Updated ${esc(ago(ACC.updated_utc))}.</p>
-    ${kpis}${howItWorks}${live}
-    <div class="card"><h2 style="margin-top:0">When it's confident, is it right?</h2>
-      <p class="note">If the model says 80% for a bunch of teams, about 8 in 10 of them should win. Fewer means it's too cocky; more means it's too cautious.</p>${conf}</div>
-    ${catCard}
-    <h2 class="grp">Finished weeks</h2>${weeks}${scoreExplain}`;
+  app.innerHTML = `<div class="rc">${hero}${weeks}${conf}${cats}${how}</div>`;
 }
 
 function route() {

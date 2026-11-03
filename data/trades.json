@@ -1,7 +1,27 @@
 {
- "updated_utc": "2026-11-03T04:28:28.998675+00:00",
+ "updated_utc": "2026-11-03T11:11:29.063069+00:00",
  "teams_order": "alphabetical",
  "trades": [
+  {
+   "key": "Aaron Gordon|Kyle Kuzma|Moussa Diabate|Rui Hachimura",
+   "accepted_utc": "2026-11-03T09:53:38.236000+00:00",
+   "status": "in league review",
+   "gets": {
+    "JAReusalem": [
+     "Aaron Gordon",
+     "Rui Hachimura"
+    ],
+    "Viva La Raza!": [
+     "Kyle Kuzma",
+     "Moussa Diabate"
+    ]
+   },
+   "at_time": {
+    "JAReusalem": 0.093,
+    "Viva La Raza!": 0.033
+   },
+   "post": null
+  },
   {
    "key": "Franz Wagner|Josh Hart|Onyeka Okongwu|RJ Barrett",
    "accepted_utc": "2026-11-02T21:12:52+00:00",
@@ -43,71 +63,71 @@
    "post": "2026-10-28-trade",
    "so_far": {
     "from": "2026-10-29",
-    "days": 4,
+    "days": 5,
     "score": [
-     3,
      5,
-     1
+     4,
+     0
     ],
     "cats": [
      {
       "cat": "PTS",
-      "got": 51.0,
-      "gave": 49.0,
+      "got": 78.0,
+      "gave": 53.0,
       "res": 1
      },
      {
       "cat": "REB",
-      "got": 27.0,
-      "gave": 17.0,
+      "got": 42.0,
+      "gave": 20.0,
       "res": 1
      },
      {
       "cat": "AST",
-      "got": 10.0,
-      "gave": 17.0,
+      "got": 18.0,
+      "gave": 19.0,
       "res": -1
      },
      {
       "cat": "STL",
-      "got": 4.0,
+      "got": 8.0,
       "gave": 5.0,
-      "res": -1
+      "res": 1
      },
      {
       "cat": "BLK",
-      "got": 3.0,
-      "gave": 2.0,
+      "got": 4.0,
+      "gave": 3.0,
       "res": 1
      },
      {
       "cat": "3PM",
-      "got": 4.0,
+      "got": 5.0,
       "gave": 7.0,
       "res": -1
      },
      {
       "cat": "TO",
-      "got": 8.0,
-      "gave": 8.0,
-      "res": 0
+      "got": 10.0,
+      "gave": 13.0,
+      "res": 1
      },
      {
       "cat": "FG%",
-      "got": 0.413,
-      "gave": 0.45,
+      "got": 0.429,
+      "gave": 0.444,
       "res": -1
      },
      {
       "cat": "FT%",
-      "got": 0.75,
+      "got": 0.826,
       "gave": 1.0,
       "res": -1
      }
     ],
     "games": {
-     "JAReusalem": 4,
-     "Stairway to Devin": 3
+     "JAReusalem": 6,
+     "Stairway to Devin": 4
     },
     "series": [
      [
@@ -125,19 +145,25 @@
      [
       "2026-10-31",
       2,
-      0.021,
-      -0.026
+      0.023,
+      -0.025
      ],
      [
       "2026-11-01",
       -2,
-      -0.02,
+      -0.019,
       0.013
+     ],
+     [
+      "2026-11-02",
+      1,
+      0.041,
+      -0.04
      ]
     ],
     "wins_added": {
-     "JAReusalem": -0.02,
-     "Stairway to Devin": 0.013
+     "JAReusalem": 0.041,
+     "Stairway to Devin": -0.04
     },
     "grade": {
      "JAReusalem": "Too early",
@@ -145,9 +171,9 @@
     }
    },
    "now": {
-    "date": "2026-11-02",
-    "JAReusalem": -0.268,
-    "Stairway to Devin": 0.319
+    "date": "2026-11-03",
+    "JAReusalem": -0.285,
+    "Stairway to Devin": 0.326
    },
    "now_frozen": false,
    "now_history": [
@@ -155,6 +181,11 @@
      "2026-11-02",
      -0.268,
      0.319
+    ],
+    [
+     "2026-11-03",
+     -0.285,
+     0.326
     ]
    ]
   },
@@ -179,7 +210,7 @@
    "post": "2026-10-28-trade",
    "so_far": {
     "from": "2026-10-29",
-    "days": 4,
+    "days": 5,
     "score": [
      4,
      5,
@@ -188,26 +219,26 @@
     "cats": [
      {
       "cat": "PTS",
-      "got": 86.0,
-      "gave": 56.0,
+      "got": 116.0,
+      "gave": 84.0,
       "res": 1
      },
      {
       "cat": "REB",
-      "got": 16.0,
-      "gave": 28.0,
+      "got": 33.0,
+      "gave": 41.0,
       "res": -1
      },
      {
       "cat": "AST",
-      "got": 16.0,
-      "gave": 12.0,
+      "got": 33.0,
+      "gave": 24.0,
       "res": 1
      },
      {
       "cat": "STL",
-      "got": 5.0,
-      "gave": 4.0,
+      "got": 8.0,
+      "gave": 5.0,
       "res": 1
      },
      {
@@ -218,38 +249,38 @@
      },
      {
       "cat": "3PM",
-      "got": 4.0,
-      "gave": 5.0,
+      "got": 6.0,
+      "gave": 9.0,
       "res": -1
      },
      {
       "cat": "TO",
-      "got": 9.0,
-      "gave": 6.0,
+      "got": 13.0,
+      "gave": 9.0,
       "res": -1
      },
      {
       "cat": "FG%",
-      "got": 0.507,
-      "gave": 0.474,
+      "got": 0.484,
+      "gave": 0.459,
       "res": 1
      },
      {
       "cat": "FT%",
-      "got": 0.556,
-      "gave": 0.833,
+      "got": 0.545,
+      "gave": 0.76,
       "res": -1
      }
     ],
     "games": {
-     "Al-Shaida": 3,
-     "Viva La Raza!": 3
+     "Al-Shaida": 5,
+     "Viva La Raza!": 5
     },
     "series": [
      [
       "2026-10-29",
       -5,
-      -0.023,
+      -0.022,
       0.021
      ],
      [
@@ -261,19 +292,25 @@
      [
       "2026-10-31",
       -3,
-      -0.03,
+      -0.029,
       0.025
      ],
      [
       "2026-11-01",
       -1,
-      -0.019,
+      -0.018,
       0.02
+     ],
+     [
+      "2026-11-02",
+      -1,
+      -0.016,
+      0.017
      ]
     ],
     "wins_added": {
-     "Al-Shaida": -0.019,
-     "Viva La Raza!": 0.02
+     "Al-Shaida": -0.016,
+     "Viva La Raza!": 0.017
     },
     "grade": {
      "Al-Shaida": "Too early",
@@ -281,9 +318,9 @@
     }
    },
    "now": {
-    "date": "2026-11-02",
-    "Al-Shaida": 0.082,
-    "Viva La Raza!": -0.128
+    "date": "2026-11-03",
+    "Al-Shaida": 0.121,
+    "Viva La Raza!": -0.161
    },
    "now_frozen": false,
    "now_history": [
@@ -291,6 +328,11 @@
      "2026-11-02",
      0.082,
      -0.128
+    ],
+    [
+     "2026-11-03",
+     0.121,
+     -0.161
     ]
    ]
   },
@@ -313,71 +355,71 @@
    "post": "2026-10-27-trade",
    "so_far": {
     "from": "2026-10-27",
-    "days": 6,
+    "days": 7,
     "score": [
-     7,
+     6,
      2,
-     0
+     1
     ],
     "cats": [
      {
       "cat": "PTS",
-      "got": 50.0,
-      "gave": 28.0,
+      "got": 61.0,
+      "gave": 48.0,
       "res": 1
      },
      {
       "cat": "REB",
-      "got": 17.0,
-      "gave": 22.0,
+      "got": 22.0,
+      "gave": 29.0,
       "res": -1
      },
      {
       "cat": "AST",
-      "got": 4.0,
-      "gave": 8.0,
+      "got": 8.0,
+      "gave": 13.0,
       "res": -1
      },
      {
       "cat": "STL",
-      "got": 6.0,
-      "gave": 2.0,
+      "got": 8.0,
+      "gave": 4.0,
       "res": 1
      },
      {
       "cat": "BLK",
-      "got": 2.0,
-      "gave": 1.0,
+      "got": 4.0,
+      "gave": 2.0,
       "res": 1
      },
      {
       "cat": "3PM",
       "got": 3.0,
-      "gave": 1.0,
+      "gave": 2.0,
       "res": 1
      },
      {
       "cat": "TO",
-      "got": 7.0,
-      "gave": 12.0,
+      "got": 8.0,
+      "gave": 13.0,
       "res": 1
      },
      {
       "cat": "FG%",
-      "got": 0.645,
-      "gave": 0.526,
+      "got": 0.676,
+      "gave": 0.531,
       "res": 1
      },
      {
       "cat": "FT%",
-      "got": 0.875,
-      "gave": 0.778,
-      "res": 1
+      "got": 0.8,
+      "gave": 0.8,
+      "res": 0
      }
     ],
     "games": {
-     "Derrick White Girl Wasted": 3,
-     "Stairway to Devin": 3
+     "Derrick White Girl Wasted": 4,
+     "Stairway to Devin": 4
     },
     "series": [
      [
@@ -401,8 +443,8 @@
      [
       "2026-10-30",
       8,
-      0.059,
-      -0.049
+      0.058,
+      -0.048
      ],
      [
       "2026-10-31",
@@ -415,11 +457,17 @@
       5,
       0.047,
       -0.039
+     ],
+     [
+      "2026-11-02",
+      4,
+      0.043,
+      -0.035
      ]
     ],
     "wins_added": {
-     "Derrick White Girl Wasted": 0.047,
-     "Stairway to Devin": -0.039
+     "Derrick White Girl Wasted": 0.043,
+     "Stairway to Devin": -0.035
     },
     "grade": {
      "Derrick White Girl Wasted": "Too early",
@@ -427,9 +475,9 @@
     }
    },
    "now": {
-    "date": "2026-11-02",
-    "Derrick White Girl Wasted": -0.184,
-    "Stairway to Devin": 0.06
+    "date": "2026-11-03",
+    "Derrick White Girl Wasted": -0.182,
+    "Stairway to Devin": 0.059
    },
    "now_frozen": false,
    "now_history": [
@@ -437,6 +485,11 @@
      "2026-11-02",
      -0.184,
      0.06
+    ],
+    [
+     "2026-11-03",
+     -0.182,
+     0.059
     ]
    ]
   }

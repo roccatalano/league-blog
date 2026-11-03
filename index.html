@@ -701,7 +701,6 @@ function tradeChart(series, A, B) {
   const W = 600, H = 120, X = i => i / n * W, Y = v => (1 - (v + lim) / (2 * lim)) * H;
   const path = k => pts.map((p, i) => (i ? "L" : "M") + X(i).toFixed(1) + " " + Y(p[k]).toFixed(1)).join(" ");
   const fd = x => new Date(x + "T12:00:00").toLocaleDateString("en-AU", { day: "numeric", month: "short" });
-  const start = new Date(new Date(series[0][0] + "T12:00:00") - 864e5).toISOString().slice(0, 10);
   const end = (k, cls) => `<span class="wp-dot${cls}" style="left:100%;top:${(Y(pts[n][k]) + 2) / (H + 4) * 100}%"></span>`;
   return `<div class="wp tc"><div class="wp-plot" style="height:122px">
     <svg viewBox="0 -2 ${W} ${H + 4}" preserveAspectRatio="none" style="height:122px">
@@ -709,7 +708,7 @@ function tradeChart(series, A, B) {
       <path d="${path(3)}" class="tc-b" vector-effect="non-scaling-stroke"/>
       <path d="${path(2)}" class="tc-a" vector-effect="non-scaling-stroke"/></svg>
     ${end(3, " a")}${end(2, "")}<span class="tc-zero" style="top:${(Y(0) + 2) / (H + 4) * 100}%">0</span></div>
-    <div class="tc-dates"><span>${fd(start)} · trade</span><span>${fd(series[n - 1][0])}</span></div>
+    <div class="tc-dates"><span>Trade</span><span>${fd(series[n - 1][0])}</span></div>
     <div class="tc-key"><span class="ka">${esc(A)}</span><span class="kb">${esc(B)}</span><span class="kn">wins added since the trade</span></div></div>`;
 }
 async function tradesPage() {

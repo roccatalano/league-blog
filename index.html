@@ -130,7 +130,9 @@
   .ok { color: #2f9e44; font-weight: 700; } .miss { color: #e03131; font-weight: 700; }
   @media (max-width: 420px) { .kpi b { font-size: 20px; } }
   /* ---- model record ---- */
-  .rc { padding-top: 24px; }
+  .rc { padding-top: 0; }
+  main.wrap { padding-top: 24px; }
+  .cats a { color: var(--accent); }
   .rc section { margin-bottom: 26px; }
   .rc-chart { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px 16px 12px 16px; margin-bottom: 12px; }
   .rc-cols { position: relative; height: 150px; display: flex; gap: 10px; padding-left: 4px; padding-right: 74px; margin-bottom: 44px; }
@@ -249,6 +251,11 @@
   .tb-sc { font-family: "Archivo Black", Inter, sans-serif; font-size: 18px; }
   .tr-wa { font-family: "Archivo Black", Inter, sans-serif; font-size: 15px; margin-top: 6px; }
   .tr-wa small { display: block; font-family: Inter, sans-serif; font-size: 11px; font-weight: 600; color: var(--muted); }
+  .tr-meta { font-size: 12.5px; color: var(--muted); margin-bottom: 8px; }
+  .mu-team small { display: block; font-weight: 400; font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+  .mu-score small { font-size: 14px; color: var(--muted); }
+  .tr-pend { font-size: 16px; color: var(--muted); }
+  .mu-odds b { color: var(--ink); }
   footer { color: var(--muted); font-size: 13px; text-align: center; padding: 0 16px 32px; }
 </style>
 </head>
@@ -685,7 +692,7 @@ function tradeChart(series, A, B) {
   const last = series[n];
   const fd = x => new Date(x + "T12:00:00").toLocaleDateString("en-AU", { day: "numeric", month: "short" });
   const ticks = "";
-  return `<div class="wp tc"><div class="wp-lbl top">${esc(A)} winning</div><div class="wp-plot" style="height:122px">
+  return `<div class="wp tc"><div class="wp-lbl top">${esc(A)}</div><div class="wp-plot" style="height:122px">
     <svg viewBox="0 -2 ${W} ${H + 4}" preserveAspectRatio="none" style="height:122px">
       <defs><clipPath id="${id}a"><rect x="0" y="0" width="${W}" height="${Y(0)}"/></clipPath><clipPath id="${id}b"><rect x="0" y="${Y(0)}" width="${W}" height="${H}"/></clipPath></defs>
       <line x1="0" x2="${W}" y1="${Y(0)}" y2="${Y(0)}" class="wp-mid"/>
@@ -693,7 +700,7 @@ function tradeChart(series, A, B) {
       <path d="${line}" class="wp-line" vector-effect="non-scaling-stroke"/>${ticks}</svg>
     <span class="wp-dot${last[1] < 0 ? " a" : ""}" style="left:${X(n) / W * 100}%;top:${(Y(last[1]) + 2) / (H + 4) * 100}%"></span></div>
     <div class="tc-dates"><span>${fd(series[0][0])}</span><span>${fd(series[n][0])}</span></div>
-    <div class="wp-lbl bot">${esc(B)} winning</div></div>`;
+    <div class="wp-lbl bot">${esc(B)}</div></div>`;
 }
 async function tradesPage() {
   setNav("trades"); document.title = "Trades · NBA Fantasy 2026";
@@ -704,55 +711,43 @@ async function tradesPage() {
   if (!T.length) { app.innerHTML = '<p class="empty">No trades yet. Somebody get on the phone.</p>'; return; }
   const sg = x => x == null ? "–" : (x >= 0 ? "+" : "−") + Math.abs(x).toFixed(3);
   const cls = x => x == null ? "" : x > 0.0005 ? "pos" : x < -0.0005 ? "neg" : "";
-  const gcls = g => g === "Too early" ? "early" : /^A/.test(g) ? "a" : /^B/.test(g) ? "b" : /^C/.test(g) ? "c" : "d";
   const when = iso => new Date(iso).toLocaleDateString("en-AU", { day: "numeric", month: "short" });
-
-  // leaderboard: processed trades with a result, biggest margins first
-  const done = T.filter(t => t.so_far && Math.min(...Object.values(t.so_far.games)) >= 12);
-  const board = done.length ? `<section><h2 class="rc-h">Best trades so far <small>most matchup wins added since the trade</small></h2><div class="rc-panel">${
-    done.flatMap(t => Object.keys(t.gets).map(team => ({ t, team, other: Object.keys(t.gets).find(x => x !== team), v: t.so_far.wins_added[team] })))
-      .sort((a, b) => b.v - a.v).slice(0, 5).map((x, i) => `<a class="tb-row" href="#/trades" data-k="${esc(x.t.key)}"><span class="tb-rk">${i + 1}</span><span><b>${esc(x.team)}</b><small>got ${x.t.gets[x.team].map(esc).join(" + ")} from ${esc(x.other)}</small></span><span class="tb-sc ${cls(x.v)}">${sg(x.v)}</span></a>`).join("")}</div></section>` : "";
+  const gets = (t, team) => t.gets[team].map(esc).join(" + ");
 
   const cards = T.map(t => {
     const [A, B] = Object.keys(t.gets).sort(), F = t.so_far;
-    const side = (team, other) => {
-      const g = F ? F.grade[team] : null;
-      return `<div class="tr-side"><div class="tr-team">${esc(team)}</div><div class="tr-gets">gets ${t.gets[team].map(esc).join(" + ")}</div>
-        ${g ? `<span class="tr-grade ${gcls(g)}">${esc(g)}</span>` : ""}
-        ${F && F.wins_added ? `<div class="tr-wa ${cls(F.wins_added[team])}">${sg(F.wins_added[team])} <small>wins added so far</small></div>` : ""}</div>`;
-    };
-    let mid = `<div class="tr-mid"><span class="chip">${esc(t.status)}</span></div>`, body = "";
-    if (F) {
-      const [w, l, d] = F.score, lead = w === l ? "Level" : (w > l ? A : B) + " leading";
-      mid = `<div class="tr-mid"><div class="tr-score">${w}-${l}${d ? `<small>-${d}</small>` : ""}</div><div class="tr-lead">${esc(lead)}</div></div>`;
-      const rows = F.cats.map(c => { const f = v => v == null ? "–" : c.cat.includes("%") ? v.toFixed(3).replace(/^0/, "") : Math.round(v);
-        return `<tr><td>${c.cat}</td><td class="${c.res === 1 ? "win" : ""}">${f(c.got)}</td><td class="${c.res === -1 ? "win" : ""}">${f(c.gave)}</td></tr>`; }).join("");
-      const real = F.wins_added ? `<tr><td><strong>Actually added so far</strong></td><td class="${cls(F.wins_added[A])}"><strong>${sg(F.wins_added[A])}</strong></td><td class="${cls(F.wins_added[B])}"><strong>${sg(F.wins_added[B])}</strong></td></tr>` : "";
-      const at = t.at_time ? `<tr><td>Expected, when it happened${t.post ? ` · <a href="#/${esc(t.post)}">review</a>` : ""}</td><td class="${cls(t.at_time[A])}">${sg(t.at_time[A])}</td><td class="${cls(t.at_time[B])}">${sg(t.at_time[B])}</td></tr>` : "";
-      const nw = t.now ? `<tr><td>Expected from today on${t.now_frozen ? " (frozen: a player has moved on)" : ""}</td><td class="${cls(t.now[A])}">${sg(t.now[A])}</td><td class="${cls(t.now[B])}">${sg(t.now[B])}</td></tr>` : "";
-      body = `${tradeChart(F.series, A, B)}
-        <details><summary>Category by category</summary>
-          <p class="note">Stats each side's new players put up in that team's starting lineup since ${when(F.from + "T12:00:00")} (${F.games[A]} and ${F.games[B]} games).</p>
-          <table class="cats"><tr><th>Cat</th><th>${esc(A)}</th><th>${esc(B)}</th></tr>${rows}</table>
-          <p class="note" style="margin-top:12px">In matchup wins: what the trade has actually been worth to each team so far, and what the model expects it to be worth over the rest of the season.</p><table class="cats"><tr><th></th><th>${esc(A)}</th><th>${esc(B)}</th></tr>${real}${at}${nw}</table>
-        </details>`;
-    } else if (t.at_time) {
-      body = `<p class="note">Waiting on league review. The model's verdict: ${esc(A)} ${sg(t.at_time[A])}, ${esc(B)} ${sg(t.at_time[B])} expected wins.</p>`;
+    const head = (mid) => `<div class="mu-head"><div class="mu-team">${esc(A)}<small>${gets(t, A)}</small></div>${mid}<div class="mu-team r">${esc(B)}<small>${gets(t, B)}</small></div></div>`;
+    if (!F) {
+      const at = t.at_time ? `<div class="mu-odds"><span><strong class="${cls(t.at_time[A])}">${sg(t.at_time[A])}</strong> expected</span><span>expected <strong class="${cls(t.at_time[B])}">${sg(t.at_time[B])}</strong></span></div>` : "";
+      return `<div class="card tr"><div class="tr-meta">${when(t.accepted_utc)} · in league review</div>${head('<div class="mu-score tr-pend">vs</div>')}${at}</div>`;
     }
-    return `<div class="card tr" id="tr-${esc(t.key).replace(/[^a-z0-9]/gi, "")}"><div class="meta">${when(t.accepted_utc)}</div>
-      <div class="tr-head">${side(A, B)}${mid}${side(B, A)}</div>${body}</div>`;
+    const [w, l, d] = F.score, g = F.grade, wa = F.wins_added || {};
+    const total = Math.max(w + l, 1);
+    const gr = x => x === "Too early" ? "" : ` · <b>${esc(x)}</b>`;
+    const rows = F.cats.map(c => { const f = v => v == null ? "–" : c.cat.includes("%") ? v.toFixed(3).replace(/^0/, "") : Math.round(v);
+      return `<tr><td>${c.cat}</td><td class="${c.res === 1 ? "win" : ""}">${f(c.got)}</td><td class="${c.res === -1 ? "win" : ""}">${f(c.gave)}</td></tr>`; }).join("");
+    const row = (label, o, strong) => o ? `<tr><td>${label}</td><td class="${cls(o[A])}">${strong ? "<strong>" : ""}${sg(o[A])}${strong ? "</strong>" : ""}</td><td class="${cls(o[B])}">${strong ? "<strong>" : ""}${sg(o[B])}${strong ? "</strong>" : ""}</td></tr>` : "";
+    const early = Math.min(...Object.values(F.games)) < 12 ? " · early days" : "";
+    return `<div class="card tr"><div class="tr-meta">${when(t.accepted_utc)} · ${F.days} day${F.days === 1 ? "" : "s"}${early}</div>
+      ${head(`<div class="mu-score">${w}-${l}${d ? `<small>-${d}</small>` : ""}</div>`)}
+      <div class="bar"><i style="width:${w / total * 100}%"></i><b style="width:${l / total * 100}%"></b></div>
+      <div class="mu-odds"><span><strong class="${cls(wa[A])}">${sg(wa[A])}</strong> wins${gr(g[A])}</span><span>${gr(g[B]).replace(" · ", "")}${g[B] === "Too early" ? "" : " · "}wins <strong class="${cls(wa[B])}">${sg(wa[B])}</strong></span></div>
+      ${tradeChart(F.series, A, B)}
+      <details><summary>Details</summary>
+        <table class="cats"><tr><th>Since ${when(F.from + "T12:00:00")}</th><th>${esc(short(A))}</th><th>${esc(short(B))}</th></tr>
+          <tr><td>Games started</td><td>${F.games[A]}</td><td>${F.games[B]}</td></tr>${rows}</table>
+        <table class="cats" style="margin-top:14px"><tr><th>Matchup wins</th><th>${esc(short(A))}</th><th>${esc(short(B))}</th></tr>
+          ${row("Added so far", wa, true)}${row(`Expected at the time${t.post ? ` · <a href="#/${esc(t.post)}">review</a>` : ""}`, t.at_time)}${row(t.now_frozen ? "Expected from today (frozen)" : "Expected from today", t.now)}</table>
+      </details></div>`;
   }).join("");
 
-  const how = `<details class="rc-how"><summary>How the trade tracker works</summary><div class="explain">
-    <p>Every trade is scored like a <strong>head-to-head matchup between the two hauls</strong>. One team's new players take on the other team's new players across all 9 categories, so a trade can be "leading 6-3".</p>
-    <p>Only games a player <strong>started for the team that traded for him</strong> count. Bench games help nobody. If a player is later dropped or traded on, he stops counting from that day.</p>
-    <p>That score treats every category the same, but teams don't: 20 extra points barely matter to a team that already wins PTS every week, while 5 steals can swing a team that's always on the edge in STL. So each side also gets <strong>wins added so far</strong>. It takes what that team's new players actually produced, minus what the players it gave away produced, and asks the model how much that changed <em>that team's</em> chances against everyone in the league. Stats a team didn't need barely count.</p>
-    <p><strong>Grades</strong> come from wins added per week since the trade, so early and late trades are judged alike. They show "Too early" until both sides have at least 12 games.</p>
-    <p>The <strong>chart</strong> is the margin after each day: above the line, the top team is winning the trade; below, the bottom team is.</p>
-    <p>Under "Category by category" you'll also find the <strong>model's expectations</strong>: how many matchup wins it expected the trade to add over the rest of the season when it happened, and the same sum re-done from today with current rosters, form and injuries.</p></div></details>`;
-  app.innerHTML = `<div class="rc"><p class="updated">Every trade this season, and who's actually winning it. Updated ${esc(ago(TR.updated_utc))}.</p>${board}
-    <section><h2 class="rc-h">All trades <small>newest first</small></h2>${cards}</section>${how}</div>`;
-  app.querySelectorAll(".tb-row").forEach(a => a.onclick = e => { e.preventDefault(); const el = document.getElementById("tr-" + a.dataset.k.replace(/[^a-z0-9]/gi, "")); el && el.scrollIntoView({ behavior: "smooth" }); });
+  const how = `<details class="rc-how"><summary>How this works</summary><div class="explain">
+    <p><strong>The score</strong> treats each trade as a matchup between the two hauls: one team's new players against the other's, across all 9 categories. Only games a player started for his new team count, and he stops counting if he's dropped or traded on.</p>
+    <p><strong>Wins</strong> is how many matchup wins the trade has actually been worth to each team so far. It weighs each category by how much it moves that team's real chances, so stats a team didn't need barely count. That's why the score and the wins can disagree.</p>
+    <p><strong>Grades</strong> come from wins added per week and appear once both sides have 12 games.</p>
+    <p><strong>The chart</strong> is the category margin after each day: above the middle line the top team is winning the trade, below it the bottom team is.</p>
+    <p><strong>Details</strong> has the stats behind it, plus what the model expected when the trade happened and what it expects from today on.</p></div></details>`;
+  app.innerHTML = `<p class="updated">Every trade this season and who's actually winning it · updated ${esc(ago(TR.updated_utc))}.</p>${cards}${how}`;
 }
 
 function route() {

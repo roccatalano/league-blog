@@ -212,6 +212,20 @@
   .rc-how summary { font-weight: 700; color: var(--accent); }
   .rc-how ol { padding-left: 20px; } .rc-how li { margin-bottom: 6px; }
   @media (max-width: 400px) { .rc-m, .rc-note { padding-left: 16px; } }
+  .wp { position: relative; margin: 14px 0 4px; padding: 14px 0 0; touch-action: pan-y; }
+  .wp svg { width: 100%; height: 150px; display: block; overflow: visible; }
+  .wp-grid { stroke: var(--line); stroke-width: 1; vector-effect: non-scaling-stroke; }
+  .wp-mid { stroke: var(--muted); stroke-dasharray: 3 4; stroke-width: 1; vector-effect: non-scaling-stroke; opacity: .7; }
+  .wp-day { font-size: 11px; fill: var(--muted); text-anchor: middle; font-weight: 600; }
+  .wp-fh { fill: var(--accent); opacity: .22; } .wp-fa { fill: #4c6ef5; opacity: .2; }
+  .wp-line { fill: none; stroke: var(--ink); stroke-width: 2.2; stroke-linejoin: round; }
+  .wp-cur { stroke: var(--ink); stroke-width: 1; opacity: .5; }
+  .wp-dot { position: absolute; width: 10px; height: 10px; margin: 6px 0 0 -5px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); pointer-events: none; }
+  .wp-lbl { font-size: 10.5px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .wp-lbl.top { position: absolute; top: 0; left: 0; color: var(--accent); }
+  .wp-lbl.bot { margin-top: -4px; color: #4c6ef5; }
+  .wp-tip { position: absolute; top: -6px; transform: translateX(-50%); background: var(--ink); color: var(--bg); font-size: 12px; padding: 4px 8px; border-radius: 8px; white-space: nowrap; opacity: 0; transition: opacity .15s; pointer-events: none; z-index: 2; }
+  .mu-team.lose { opacity: .5; }
   footer { color: var(--muted); font-size: 13px; text-align: center; padding: 0 16px 32px; }
 </style>
 </head>
@@ -265,13 +279,80 @@ function ago(iso) {
 }
 
 const short = n => n.replace(/[^A-Za-z0-9 ]/g, "").trim().split(/\s+/)[0].slice(0, 9);
+let OH = null, ODDS_WEEK = null;
+const ET_FMT = new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hour12: false });
+function etDay(ts) {  // days since 1970 in US Eastern (fractional)
+  const p = Object.fromEntries(ET_FMT.formatToParts(new Date(ts)).map(x => [x.type, x.value]));
+  return Date.UTC(+p.year, +p.month - 1, +p.day) / 864e5 + ((+p.hour % 24) + +p.minute / 60) / 24;
+}
+function wpChart(pts, home, away, final) {
+  if (!pts || !pts.length) return "";
+  const d0 = etDay(pts[0][0]), mon = Math.floor(d0) - ((new Date(Math.floor(d0) * 864e5).getUTCDay() + 6) % 7);
+  const W = 600, H = 150, X = d => (d - mon) / 7 * W, Y = v => (1 - v / 100) * H;
+  let P = pts.map(p => ({ x: X(etDay(p[0])), v: p[1] + p[2] / 2, t: p[0], s: [p[3], p[4]] }));
+  if (P[0].x > 2) P.unshift({ x: 0, v: P[0].v, t: null, s: [0, 0] });
+  if (final) P.push({ x: W, v: final.v, t: "final", s: final.s });
+  const line = P.map((p, i) => (i ? "L" : "M") + p.x.toFixed(1) + " " + Y(p.v).toFixed(1)).join(" ");
+  const area = `${line} L${P[P.length - 1].x.toFixed(1)} ${Y(50)} L0 ${Y(50)} Z`;
+  const id = "c" + Math.random().toString(36).slice(2, 8);
+  const days = ["M", "T", "W", "T", "F", "S", "S"].map((l, i) => `<line x1="${X(mon + i)}" x2="${X(mon + i)}" y1="0" y2="${H}" class="wp-grid"/><text x="${X(mon + i + 0.5)}" y="${H + 14}" class="wp-day">${l}</text>`).join("");
+  const last = P[P.length - 1];
+  const data = esc(JSON.stringify(P.map(p => [Math.round(p.x), Math.round(p.v), p.t, p.s])));
+  return `<div class="wp" data-p="${data}" data-h="${esc(home)}" data-a="${esc(away)}">
+    <div class="wp-lbl top">${esc(home)} 100%</div>
+    <svg viewBox="0 -2 ${W} ${H + 20}" preserveAspectRatio="none">
+      <defs><clipPath id="${id}a"><rect x="0" y="0" width="${W}" height="${Y(50)}"/></clipPath><clipPath id="${id}b"><rect x="0" y="${Y(50)}" width="${W}" height="${H}"/></clipPath></defs>
+      ${days}<line x1="0" x2="${W}" y1="${Y(50)}" y2="${Y(50)}" class="wp-mid"/>
+      <path d="${area}" class="wp-fh" clip-path="url(#${id}a)"/><path d="${area}" class="wp-fa" clip-path="url(#${id}b)"/>
+      <path d="${line}" class="wp-line" vector-effect="non-scaling-stroke"/>
+      <line class="wp-cur" x1="0" x2="0" y1="0" y2="${H}" style="display:none" vector-effect="non-scaling-stroke"/>
+    </svg>
+    <span class="wp-dot" style="left:${last.x / W * 100}%;top:${Y(last.v) / (H + 22) * 100}%"></span>
+    <div class="wp-lbl bot">${esc(away)} 100%</div>
+    <div class="wp-tip"></div></div>`;
+}
+function wireCharts() {
+  app.querySelectorAll(".wp").forEach(el => {
+    const P = JSON.parse(el.dataset.p), svg = el.querySelector("svg"), cur = el.querySelector(".wp-cur"), tip = el.querySelector(".wp-tip");
+    const show = e => {
+      const r = svg.getBoundingClientRect(), x = (e.clientX - r.left) / r.width * 600;
+      const p = P.reduce((a, b) => Math.abs(b[0] - x) < Math.abs(a[0] - x) ? b : a);
+      cur.setAttribute("x1", p[0]); cur.setAttribute("x2", p[0]); cur.style.display = "";
+      const who = p[1] >= 50 ? el.dataset.h : el.dataset.a, pct = p[1] >= 50 ? p[1] : 100 - p[1];
+      const when = p[2] === "final" ? "Final" : p[2] ? new Date(p[2]).toLocaleString("en-AU", { weekday: "short", hour: "numeric", minute: "2-digit" }) : "Start";
+      tip.innerHTML = `<b>${esc(who)} ${p[2] === "final" ? "won" : pct + "%"}</b> · ${when}${p[3] && (p[3][0] || p[3][1]) ? ` · ${p[3][0]}-${p[3][1]}` : ""}`;
+      tip.style.left = Math.min(Math.max(p[0] / 6, 18), 82) + "%"; tip.style.opacity = 1;
+    };
+    el.addEventListener("pointermove", show); el.addEventListener("pointerdown", show);
+    el.addEventListener("pointerleave", () => { cur.style.display = "none"; tip.style.opacity = 0; });
+  });
+}
+
 async function oddsPage() {
   setNav("odds"); document.title = "Live odds · NBA Fantasy 2026";
   app.innerHTML = '<p class="empty">Loading…</p>';
   let o;
   try { o = await (await fetch("data/odds.json", { cache: "no-cache" })).json(); }
   catch (e) { app.innerHTML = '<p class="empty">Live odds aren\'t available yet.</p>'; return; }
-  const cards = o.matchups.map(m => {
+  try { if (!OH) OH = await (await fetch("data/odds_history.json", { cache: "no-cache" })).json(); } catch (e) { OH = {}; }
+  try { if (!ACC) ACC = await (await fetch("data/accuracy.json", { cache: "no-cache" })).json(); } catch (e) {}
+  const curWk = String(o.matchup_period), wk = ODDS_WEEK && OH[ODDS_WEEK] ? ODDS_WEEK : curWk;
+  const weeks = [...new Set([curWk, ...Object.keys(OH)])].sort((a, b) => b - a);
+  const tabs = weeks.length > 1 ? `<div class="seg">${weeks.map(w => `<button type="button" data-w="${w}" class="${w === wk ? "on" : ""}">${w === curWk ? "This week" : "Week " + w}</button>`).join("")}</div>` : "";
+  const H = (OH && OH[wk]) || {};
+  if (wk !== curWk) {  // a finished week: chart + final result
+    const res = ((ACC && ACC.weeks) || []).find(w => String(w.period) === wk);
+    const cards = Object.entries(H).map(([k, pts]) => {
+      const [home, away] = k.split("|"), r = res && res.matchups.find(m => m.home === home && m.away === away);
+      const fin = r ? { v: r.winner === "HOME" ? 100 : r.winner === "AWAY" ? 0 : 50, s: r.score } : null;
+      const sc = r ? `${r.score[0]}-${r.score[1]}${r.score[2] ? "-" + r.score[2] : ""}` : "–";
+      const swing = Math.max(...pts.map(p => p[1])) - Math.min(...pts.map(p => p[1]));
+      return `<div class="card"><div class="mu-head"><div class="mu-team ${r && r.winner === "HOME" ? "" : "lose"}">${esc(home)}</div><div class="mu-score">${sc}</div><div class="mu-team r ${r && r.winner === "AWAY" ? "" : "lose"}">${esc(away)}</div></div>
+        ${wpChart(pts, home, away, fin)}<p class="note">Opened ${pts[0][1]}% / ${100 - pts[0][1] - pts[0][2]}% · biggest swing ${swing} points${pts.length < 4 ? " · only a few snapshots this week" : ""}</p></div>`;
+    }).join("");
+    app.innerHTML = `${tabs}<p class="updated">Week ${wk}, final. The line shows ${esc("each team's")} win chance through the week; it ends at 100% for the winner.</p>${cards || '<p class="empty">No history for this week.</p>'}`;
+  } else {
+    const cards = o.matchups.map(m => {
     const rows = m.categories.map(c => {
       const h = c.home_win_pct, fmt = v => c.cat.includes("%") ? Number(v).toFixed(3).replace(/^0/, "") : Math.round(v);
       return `<tr><td>${esc(c.cat)}</td><td>${fmt(c.now_home)}</td><td>${fmt(c.now_away)}</td><td class="${h >= 50 ? "win" : ""}">${h}%</td><td class="${h < 50 ? "win" : ""}">${100 - h}%</td></tr>`;
@@ -281,10 +362,15 @@ async function oddsPage() {
       <div class="mu-team r">${esc(m.away)}</div></div>
       <div class="bar"><i style="width:${m.home_win_pct}%"></i><b style="width:${m.away_win_pct}%"></b></div>
       <div class="mu-odds"><span><strong>${m.home_win_pct}%</strong> · $${m.price_home.toFixed(2)}</span><span>$${m.price_away.toFixed(2)} · <strong>${m.away_win_pct}%</strong></span></div>
+      ${wpChart(H[m.home + "|" + m.away], m.home, m.away)}
       <details><summary>Categories</summary><table class="cats"><tr><th></th><th colspan="2">Right now</th><th colspan="2">Chance to win</th></tr><tr><th>Cat</th><th>${esc(short(m.home))}</th><th>${esc(short(m.away))}</th><th>${esc(short(m.home))}</th><th>${esc(short(m.away))}</th></tr>${rows}</table></details></div>`;
   }).join("");
-  app.innerHTML = `<p class="updated">Week ${o.matchup_period} · updated ${esc(ago(o.updated_utc))} · refreshes every 30 min. Score = categories won right now; win % simulates the rest of the week 1,000 times.</p>${cards}`;
+  app.innerHTML = `${tabs}<p class="updated">Week ${o.matchup_period} · updated ${esc(ago(o.updated_utc))} · refreshes every few hours. Score = categories won right now; win % simulates the rest of the week 1,000 times. The chart shows how the win chance has moved this week (tap it for any moment).</p>${cards}`;
+  }
+  app.querySelectorAll(".seg button").forEach(b => b.onclick = () => { ODDS_WEEK = b.dataset.w; oddsPage(); });
+  wireCharts();
 }
+
 
 async function ladderPage() {
   setNav("ladder"); document.title = "Ladder · NBA Fantasy 2026";
@@ -449,7 +535,7 @@ async function injuriesPage() {
     .map(([k, l]) => `<div class="grp">${LABEL[k]} · ${l.length}</div><div class="card">${l.map(row).join("")}</div>`).join("");
   const opt = (v, t) => `<option value="${esc(v)}"${v === f ? " selected" : ""}>${esc(t)}</option>`;
   app.innerHTML = `<div class="filters"><select id="injf">${opt("owned", "On a fantasy team")}${opt("fa", "Free agents")}${opt("all", "Whole NBA")}${teams.map(t => opt(t, t)).join("")}</select></div>
-    <p class="updated">${list.length} injured · updated ${esc(ago(INJ.updated_utc))} · refreshes every 30 min. "Back" is ESPN's projected return date (US time); games missed counts that NBA team's games until then. Projections often move, so check the latest note.</p>
+    <p class="updated">${list.length} injured · updated ${esc(ago(INJ.updated_utc))} · refreshes every few hours. "Back" is ESPN's projected return date (US time); games missed counts that NBA team's games until then. Projections often move, so check the latest note.</p>
     ${groups || '<p class="empty">Nobody injured here. Enjoy it while it lasts.</p>'}`;
   document.getElementById("injf").onchange = e => { INJ_F = e.target.value; injuriesPage(); };
 }

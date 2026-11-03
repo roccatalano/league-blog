@@ -133,8 +133,8 @@
   .rc { padding-top: 24px; }
   .rc section { margin-bottom: 26px; }
   .rc-chart { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px 16px 12px 16px; margin-bottom: 12px; }
-  .rc-cols { position: relative; height: 150px; display: flex; gap: 10px; padding-left: 4px; padding-right: 74px; }
-  .rc-col { flex: 1; max-width: 64px; display: flex; flex-direction: column; }
+  .rc-cols { position: relative; height: 150px; display: flex; gap: 10px; padding-left: 4px; padding-right: 74px; margin-bottom: 44px; }
+  .rc-col { flex: 1; max-width: 64px; display: flex; flex-direction: column; position: relative; }
   .rc-plot { position: relative; flex: 1; }
   .rc-b { position: absolute; left: 12%; right: 12%; border-radius: 5px; animation: rcGrow .6s cubic-bezier(.2,.8,.2,1) both; }
   .rc-b.up { background: #2f9e44; } .rc-b.dn { background: #e03131; }
@@ -142,14 +142,14 @@
   .rc-b.up em { bottom: 100%; margin-bottom: 3px; color: #2f9e44; } .rc-b.dn em { top: 100%; margin-top: 3px; color: #e03131; }
   @keyframes rcGrow { from { transform: scaleY(0); } }
   .rc-b.up { transform-origin: bottom; } .rc-b.dn { transform-origin: top; }
-  .rc-x { text-align: center; font-size: 11.5px; font-weight: 700; color: var(--muted); padding-top: 18px; }
+  .rc-x { position: absolute; left: 0; right: 0; top: 100%; margin-top: 24px; text-align: center; font-size: 11.5px; font-weight: 700; color: var(--muted); }
   .rc-zero, .rc-avg { position: absolute; left: 0; right: 0; height: 0; pointer-events: none; }
   .rc-cols .rc-zero, .rc-cols .rc-avg { bottom: auto; }
   .rc-zero { border-top: 1.5px solid var(--ink); opacity: .55; margin-top: -1px; }
   .rc-avg { border-top: 1.5px dashed var(--accent); }
   .rc-zero em, .rc-avg em { position: absolute; right: 0; transform: translateY(-50%); font-style: normal; font-size: 10.5px; font-weight: 700; background: var(--card); padding: 0 0 0 6px; white-space: nowrap; }
   .rc-zero em { color: var(--muted); } .rc-avg em { color: var(--accent); }
-  .rc-cap { font-size: 12.5px; color: var(--muted); margin: 26px 0 0; line-height: 1.45; }
+  .rc-cap { font-size: 12.5px; color: var(--muted); margin: 0; line-height: 1.45; }
   .rc-hero { background: var(--head); color: #fff; border-radius: 18px; padding: 20px 20px 16px; margin-bottom: 26px; position: relative; overflow: hidden; }
   .rc-hero::after { content: ""; position: absolute; right: -60px; top: -60px; width: 200px; height: 200px; border-radius: 50%; background: radial-gradient(circle, rgba(232,89,12,.35), transparent 70%); }
   .rc-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: .9px; text-transform: uppercase; color: #9aa3b5; }

@@ -130,7 +130,26 @@
   .ok { color: #2f9e44; font-weight: 700; } .miss { color: #e03131; font-weight: 700; }
   @media (max-width: 420px) { .kpi b { font-size: 20px; } }
   /* ---- model record ---- */
+  .rc { padding-top: 24px; }
   .rc section { margin-bottom: 26px; }
+  .rc-chart { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px 16px 12px 16px; margin-bottom: 12px; }
+  .rc-cols { position: relative; height: 150px; display: flex; gap: 10px; padding-left: 4px; padding-right: 74px; }
+  .rc-col { flex: 1; max-width: 64px; display: flex; flex-direction: column; }
+  .rc-plot { position: relative; flex: 1; }
+  .rc-b { position: absolute; left: 12%; right: 12%; border-radius: 5px; animation: rcGrow .6s cubic-bezier(.2,.8,.2,1) both; }
+  .rc-b.up { background: #2f9e44; } .rc-b.dn { background: #e03131; }
+  .rc-b em { position: absolute; left: 50%; transform: translateX(-50%); font-style: normal; font-size: 11.5px; font-weight: 700; white-space: nowrap; }
+  .rc-b.up em { bottom: 100%; margin-bottom: 3px; color: #2f9e44; } .rc-b.dn em { top: 100%; margin-top: 3px; color: #e03131; }
+  @keyframes rcGrow { from { transform: scaleY(0); } }
+  .rc-b.up { transform-origin: bottom; } .rc-b.dn { transform-origin: top; }
+  .rc-x { text-align: center; font-size: 11.5px; font-weight: 700; color: var(--muted); padding-top: 18px; }
+  .rc-zero, .rc-avg { position: absolute; left: 0; right: 0; height: 0; pointer-events: none; }
+  .rc-cols .rc-zero, .rc-cols .rc-avg { bottom: auto; }
+  .rc-zero { border-top: 1.5px solid var(--ink); opacity: .55; margin-top: -1px; }
+  .rc-avg { border-top: 1.5px dashed var(--accent); }
+  .rc-zero em, .rc-avg em { position: absolute; right: 0; transform: translateY(-50%); font-style: normal; font-size: 10.5px; font-weight: 700; background: var(--card); padding: 0 0 0 6px; white-space: nowrap; }
+  .rc-zero em { color: var(--muted); } .rc-avg em { color: var(--accent); }
+  .rc-cap { font-size: 12.5px; color: var(--muted); margin: 26px 0 0; line-height: 1.45; }
   .rc-hero { background: var(--head); color: #fff; border-radius: 18px; padding: 20px 20px 16px; margin-bottom: 26px; position: relative; overflow: hidden; }
   .rc-hero::after { content: ""; position: absolute; right: -60px; top: -60px; width: 200px; height: 200px; border-radius: 50%; background: radial-gradient(circle, rgba(232,89,12,.35), transparent 70%); }
   .rc-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: .9px; text-transform: uppercase; color: #9aa3b5; }
@@ -455,7 +474,6 @@ async function recordPage() {
 
   // ---------- hero: the ruler
   const tick = (v, l) => `<span class="rc-tick" style="left:${pos(v)}%"><em>${l}</em></span>`;
-  const wkPins = W.map(w => `<span class="rc-pin" style="left:${pos(w.brier)}%" title="Week ${w.period}: ${w.brier.toFixed(3)}">${w.period}</span>`).join("");
   const hero = `<section class="rc-hero">
     <div class="rc-eyebrow">Model report card · ${W.length} finished week${W.length === 1 ? "" : "s"}</div>
     <div class="rc-big">${skTxt(O.brier)} <span>than guessing</span></div>
@@ -463,8 +481,8 @@ async function recordPage() {
     <div class="rc-ruler">
       <div class="rc-track"><span class="rc-worse" style="width:${pos(0.25)}%"></span></div>
       ${tick(0.25, "guessing")}${tick(0.15, "good")}${tick(0.05, "elite")}
-      <span class="rc-me" style="left:${pos(O.brier)}%"></span>${wkPins}
-      <div class="rc-ends"><span>← worse</span><span>● season &nbsp; <span class="rc-pin rc-key">1</span> week</span><span>better →</span></div>
+      <span class="rc-me" style="left:${pos(O.brier)}%"></span>
+      <div class="rc-ends"><span>← worse</span><span>better →</span></div>
     </div>
   </section>`;
 
@@ -497,7 +515,18 @@ async function recordPage() {
       <span class="rc-mid"><span class="rc-lbl">${w.called} of ${w.n} right · Brier ${w.brier.toFixed(3)}</span>${dots(w.matchups.map(m => m.called ? "ok" : "no"))}</span>
       <span class="rc-val ${x >= 0 ? "pos" : "neg"}">${x >= 0 ? "+" : "−"}${Math.abs(x)}%</span></summary>${note}${ms}</details>`;
   }).join("");
-  const weeks = `<section><h2 class="rc-h">Week by week <small>% = better or worse than guessing</small></h2><div class="rc-list">${rows}</div></section>`;
+  const asc = W.slice().sort((a, b) => a.period - b.period);
+  const top = Math.max(30, ...asc.map(w => sk(w.brier))), bot = Math.max(10, ...asc.map(w => -sk(w.brier)));
+  const span = top + bot, zero = top / span * 100, seasonY = (top - sk(O.brier)) / span * 100;
+  const bars = asc.map(w => {
+    const x = sk(w.brier), h = Math.abs(x) / span * 100;
+    return `<div class="rc-col"><div class="rc-plot"><span class="rc-b ${x >= 0 ? "up" : "dn"}" style="${x >= 0 ? `bottom:${100 - zero}%` : `top:${zero}%`};height:${h}%"><em>${x >= 0 ? "+" : "−"}${Math.abs(x)}%</em></span></div><span class="rc-x">W${w.period}</span></div>`;
+  }).join("");
+  const chart = `<div class="rc-chart"><div class="rc-cols" style="--z:${zero}%">
+      <span class="rc-zero" style="top:${zero}%"><em>guessing</em></span>
+      <span class="rc-avg" style="top:${seasonY}%"><em>season ${sk(O.brier) >= 0 ? "+" : "−"}${Math.abs(sk(O.brier))}%</em></span>${bars}</div>
+      <p class="rc-cap">Each bar is one week's Brier score turned into % better (green, up) or worse (red, down) than guessing. The dashed line is the season so far.</p></div>`;
+  const weeks = `<section><h2 class="rc-h">Week by week <small>tap a week to see every pick</small></h2>${chart}<div class="rc-list">${rows}</div></section>`;
 
   // ---------- confidence
   const all = W.flatMap(w => w.matchups);
@@ -511,8 +540,9 @@ async function recordPage() {
   const conf = `<section><h2 class="rc-h">Does it know when it's sure? <small>favourite's chance → how often they won</small></h2><div class="rc-panel">${bands}</div></section>`;
 
   // ---------- categories
-  const cats = O.categories ? `<section><h2 class="rc-h">By category <small>${Math.round(O.cat_called)} of ${O.categories} right</small></h2><div class="rc-panel rc-cats">${
-    O.by_category.slice().sort((a, b) => a.brier - b.brier).map(c => `<div class="rc-cat"><b>${esc(c.cat)}</b><span class="rc-bar"><i style="width:${pos(c.brier)}%"></i><u style="left:${pos(0.25)}%"></u></span><small>${skTxt(c.brier)}</small></div>`).join("")}</div></section>` : "";
+  const catPending = `<section><h2 class="rc-h">By category <small>which stats the model reads best</small></h2><div class="rc-panel"><p class="rc-cap" style="margin:12px 0">Starts with week 3. The model only began saving its Monday chance for each category this week, so weeks 1 and 2 can't be scored fairly. From next Monday this section ranks all 9 categories, best to worst, by how much better than guessing it calls each one.</p></div></section>`;
+  const cats = !O.categories ? catPending : `<section><h2 class="rc-h">By category <small>${Math.round(O.cat_called)} of ${O.categories} right</small></h2><div class="rc-panel rc-cats">${
+    O.by_category.slice().sort((a, b) => a.brier - b.brier).map(c => `<div class="rc-cat"><b>${esc(c.cat)}</b><span class="rc-bar"><i style="width:${pos(c.brier)}%"></i><u style="left:${pos(0.25)}%"></u></span><small>${skTxt(c.brier)}</small></div>`).join("")}</div></section>`;
 
   // ---------- how it works (one drawer)
   const how = `<details class="rc-how"><summary>How this works</summary><div class="explain">

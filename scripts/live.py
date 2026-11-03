@@ -87,6 +87,7 @@ def league(d, names, live_pairs):
     title_prices = S._book([sim[t]["title"] for t in ids], S.FUTURES_MARGIN, places=1)
     finals_prices = S._book([sim[t]["finals"] for t in ids], S.FUTURES_MARGIN, places=po_n)
     cat = {t: [0, 0, 0] for t in ids}  # categories won / lost / tied in finished weeks
+    cat_wins = {t: {S.CN[k]: 0 for k in S.CATS} for t in ids}  # weeks each category was won
     for m in d["schedule"]:
         if "away" not in m or m.get("winner") in (None, "UNDECIDED"):
             continue
@@ -96,12 +97,14 @@ def league(d, names, live_pairs):
         tie = 9 - len(hw) - len(aw)
         cat[h][0] += len(hw); cat[h][1] += len(aw); cat[h][2] += tie
         cat[a][0] += len(aw); cat[a][1] += len(hw); cat[a][2] += tie
+        for c in hw: cat_wins[h][c] += 1
+        for c in aw: cat_wins[a][c] += 1
     rows = []
     for i, t in enumerate(d["teams"]):
         r = t["record"]["overall"]
         rows.append({"team": names[t["id"]], "seed": t.get("playoffSeed"),
                      "w": r["wins"], "l": r["losses"], "t": r["ties"],
-                     "cats": cat[t["id"]],
+                     "cats": cat[t["id"]], "cat_wins": cat_wins[t["id"]],
                      "faab_left": 500 - (t.get("transactionCounter", {}) or {}).get("acquisitionBudgetSpent", 0),
                      "power_pct": round(100 * power[t["id"]]),
                      "exp_wins": round(sim[t["id"]]["exp_wins"], 1),
@@ -275,6 +278,19 @@ def main():
     lg["history"] = hist
     with open(lpath, "w") as f:
         json.dump(lg, f, separators=(",", ":"))
+    # one power-rank snapshot per Melbourne day (the day's last run wins), for the power rank chart
+    ppath = os.path.join(ROOT, "data", "power_history.json")
+    try:
+        ph = json.load(open(ppath))
+    except Exception:
+        ph = {"days": []}
+    from zoneinfo import ZoneInfo
+    today = datetime.now(ZoneInfo("Australia/Melbourne")).date().isoformat()
+    snap = {"date": today, "ranks": {r["team"]: r["power_rank"] for r in lg["ladder"]},
+            "pct": {r["team"]: r["power_pct"] for r in lg["ladder"]}}
+    ph["days"] = sorted([x for x in ph["days"] if x["date"] != today] + [snap], key=lambda x: x["date"])
+    with open(ppath, "w") as f:
+        json.dump(ph, f, separators=(",", ":"))
     with open(os.path.join(ROOT, "data", "odds.json"), "w") as f:
         json.dump(o, f, separators=(",", ":"))
     with open(os.path.join(ROOT, "data", "stats.json"), "w") as f:

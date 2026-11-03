@@ -282,6 +282,15 @@
   .ld-r:hover td { background: var(--accent-soft); }
   .ld-r.open td { border-bottom-color: transparent; background: var(--accent-soft); }
   .ld .up, .ld .down { margin-left: 3px; font-size: 10.5px; }
+  .rk-h { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 14px; margin-bottom: 8px; }
+  .rk-h small { color: var(--muted); font-size: 12px; }
+  .rk-wrap { display: grid; grid-template-columns: 22px 1fr 96px; height: 240px; }
+  .rk-axis, .rk-lbls { position: relative; }
+  .rk-plot svg { width: 100%; height: 240px; display: block; overflow: visible; }
+  .rk-y { position: absolute; left: 0; transform: translateY(-50%); font-size: 10.5px; color: var(--muted); }
+  .rk-lbl { position: absolute; left: 8px; transform: translateY(-50%); font-size: 10.5px; font-weight: 700; white-space: nowrap; cursor: pointer; line-height: 1; }
+  .rk-lbl.off { opacity: .3; }
+  .ladder.cw { font-size: 12.5px; } .ld .ladder.cw td, .ld .ladder.cw th { padding-left: 3px; padding-right: 3px; } .ladder.cw th { font-size: 10px; letter-spacing: 0; } .ladder.cw td:nth-child(2) { min-width: 96px; font-size: 12.5px; } .ladder.cw td.cw-sep, .ladder.cw th.cw-sep { border-left: 1px solid var(--line); padding-left: 6px; } .ladder.cw td.top { color: #2b8a3e; font-weight: 700; }
   .ld-x td { padding: 4px 4px 14px !important; text-align: left !important; white-space: normal !important; background: var(--accent-soft); color: var(--ink) !important; }
   .ld-cats { display: grid; grid-template-columns: repeat(9, 1fr); gap: 3px; margin-top: 2px; }
   .ld-c { background: var(--card); border-radius: 8px; padding: 6px 0; text-align: center; border: 1px solid var(--line); }
@@ -301,7 +310,7 @@
 <header><div class="wrap">
   <a href="#"><div class="brand">NBA FANTASY <span>2026</span></div></a>
   <div class="tag">Daily posts, trade reviews and weekly roundups. Updated automatically.</div>
-  <nav><a href="#/" data-n="posts">Posts</a><a href="#/ladder" data-n="ladder">Ladder</a><a href="#/odds" data-n="odds">Live matchups</a><a href="#/trade" data-n="trade">Trade calculator</a><a href="#/dawg" data-n="dawg">Dawg index</a><a href="#/stats" data-n="stats">Stat ranks</a><a href="#/injuries" data-n="injuries">Injuries</a><a href="#/trades" data-n="trades">Trades</a><a href="#/record" data-n="record">Model record</a></nav>
+  <nav><a href="#/" data-n="posts">Posts</a><a href="#/ladder" data-n="ladder">Ladder</a><a href="#/power" data-n="power">Power rankings</a><a href="#/odds" data-n="odds">Live matchups</a><a href="#/trade" data-n="trade">Trade calculator</a><a href="#/dawg" data-n="dawg">Dawg index</a><a href="#/stats" data-n="stats">Stat ranks</a><a href="#/injuries" data-n="injuries">Injuries</a><a href="#/trades" data-n="trades">Trades</a><a href="#/record" data-n="record">Model record</a></nav>
 </div></header>
 <main class="wrap" id="app"><p class="empty">Loading…</p></main>
 <footer>Odds and expected wins come from a model, not a crystal ball.</footer>
@@ -439,53 +448,84 @@ async function oddsPage() {
 }
 
 
-let LAD = null, LAD_SORT = "ladder", LAD_OPEN = null;
+let LAD = null, LAD_OPEN = null, PH = null, LAD_HL = null;
+const day = x => new Date(x + "T12:00:00").toLocaleDateString("en-AU", { day: "numeric", month: "short" });
+async function loadLeague() {
+  if (LAD) return true;
+  app.innerHTML = '<p class="empty">Loading…</p>';
+  try { LAD = await (await fetch("data/league.json", { cache: "no-cache" })).json(); return true; }
+  catch (e) { app.innerHTML = '<p class="empty">The ladder isn\'t available yet.</p>'; return false; }
+}
+const CATS = ["PTS", "REB", "AST", "STL", "BLK", "3PM", "TO", "FG%", "FT%"];
+const TEAM_COLORS = ["#e8590c", "#4c6ef5", "#2f9e44", "#ae3ec9", "#f59f00", "#1098ad", "#e03131", "#5c7cfa", "#74b816", "#d6336c", "#845ef7", "#0ca678", "#fd7e14", "#868e96"];
+function rankChart(days, teams, hl) {
+  if (!days || days.length < 2) return `<div class="card"><p class="note" style="margin:0"><b>Power rank by day</b> · the chart starts today and adds a point each day, so check back tomorrow.</p></div>`;
+  const n = teams.length, W = 600, H = 240, padR = 0;
+  const X = i => i / (days.length - 1) * W, Y = r => (r - 1) / (n - 1) * H;
+  const color = t => TEAM_COLORS[teams.indexOf(t) % TEAM_COLORS.length];
+  const lines = teams.map(t => {
+    const pts = days.map((d, i) => d.ranks[t] ? [X(i), Y(d.ranks[t])] : null).filter(Boolean);
+    if (!pts.length) return "";
+    const on = !hl || hl === t;
+    return `<path d="${pts.map((p, i) => (i ? "L" : "M") + p[0].toFixed(1) + " " + p[1].toFixed(1)).join(" ")}" fill="none" stroke="${color(t)}" stroke-width="${hl === t ? 3.2 : 2}" stroke-linejoin="round" stroke-linecap="round" opacity="${on ? 1 : 0.15}" vector-effect="non-scaling-stroke"/>`;
+  }).join("");
+  const last = days[days.length - 1];
+  const labels = teams.filter(t => last.ranks[t]).map(t => `<span class="rk-lbl${hl && hl !== t ? " off" : ""}" data-t="${esc(t)}" style="top:${Y(last.ranks[t]) / H * 100}%;color:${color(t)}">${last.ranks[t]} ${esc(short(t))}</span>`).join("");
+  const ticks = [1, 4, 7, 10, 14].filter(r => r <= n).map(r => `<span class="rk-y" style="top:${Y(r) / H * 100}%">${r}</span>`).join("");
+  const grid = [1, 4, 7, 10, 14].filter(r => r <= n).map(r => `<line x1="0" x2="${W}" y1="${Y(r)}" y2="${Y(r)}" class="wp-grid" vector-effect="non-scaling-stroke"/>`).join("");
+  const cut = LAD.finals_teams < n ? `<line x1="0" x2="${W}" y1="${(Y(LAD.finals_teams) + Y(LAD.finals_teams + 1)) / 2}" y2="${(Y(LAD.finals_teams) + Y(LAD.finals_teams + 1)) / 2}" stroke="var(--accent)" stroke-dasharray="5 5" stroke-width="1.5" vector-effect="non-scaling-stroke"/>` : "";
+  return `<div class="card rk"><div class="rk-h"><b>Power rank by day</b><small>${hl ? "tap again to clear" : "tap a team"}</small></div>
+    <div class="rk-wrap"><div class="rk-axis">${ticks}</div><div class="rk-plot"><svg viewBox="0 -6 ${W} ${H + 12}" preserveAspectRatio="none">${grid}${cut}${lines}</svg></div><div class="rk-lbls">${labels}</div></div>
+    <div class="tc-dates" style="margin:6px 96px 0 22px"><span>${day(days[0].date)}</span><span>${day(last.date)}</span></div>
+    ${days.some(x => x.rebuilt) ? `<p class="note" style="margin:8px 0 0">Up to ${day(days.filter(x => x.rebuilt).slice(-1)[0].date)} the ranks were rebuilt by replaying the season day by day, with only what the model could have known each morning.</p>` : ""}</div>`;
+}
 async function ladderPage() {
   setNav("ladder"); document.title = "Ladder · NBA Fantasy 2026";
-  if (!LAD) {
-    app.innerHTML = '<p class="empty">Loading…</p>';
-    try { LAD = await (await fetch("data/league.json", { cache: "no-cache" })).json(); }
-    catch (e) { app.innerHTML = '<p class="empty">The ladder isn\'t available yet.</p>'; return; }
-  }
-  const L = LAD, has = L.ladder[0].power_rank != null;
+  if (!await loadLeague()) return;
+  const L = LAD, list = L.ladder.slice().sort((a, b) => (a.seed ?? 99) - (b.seed ?? 99));
+  const has = !!list[0].cat_wins;
+  const best = {}; if (has) CATS.forEach(c => best[c] = Math.max(...list.map(r => r.cat_wins[c])));
+  const head = `<tr><th>#</th><th>Team</th><th>W</th><th>L</th><th>D</th>${has ? CATS.map((c, i) => `<th${i ? "" : ' class="cw-sep"'}>${c}</th>`).join("") : "<th>Cats</th>"}</tr>`;
+  const rows = list.map((r, i) => `<tr class="${i === L.finals_teams - 1 ? "cut" : ""}"><td>${r.seed ?? i + 1}</td><td><span class="tm">${esc(r.team)}</span></td>
+    <td>${r.w}</td><td>${r.l}</td><td>${r.t}</td>${has ? CATS.map((c, k) => { const v = r.cat_wins[c];
+      return `<td class="${k ? "" : "cw-sep"}${v && v === best[c] ? " top" : ""}">${v}</td>`; }).join("") : `<td>${r.cats[0]}-${r.cats[1]}-${r.cats[2]}</td>`}</tr>`).join("");
+  app.innerHTML = `<div class="card ld scroll"><table class="ladder cw">${head}${rows}</table></div>
+    <details class="rc-how"><summary>What the columns mean</summary><div class="explain">
+      <p><strong>W / L / D</strong> are matchup wins, losses and draws. Each category column is <strong>how many weeks that team has won that category</strong> in finished matchups; green marks the league leader in each one.</p>
+      <p>The dashed line is the finals cut (top ${L.finals_teams}).</p></div></details>
+    <p class="updated">Updated ${esc(ago(L.updated_utc))}.</p>`;
+}
+
+async function powerPage() {
+  setNav("power"); document.title = "Power rankings · NBA Fantasy 2026";
+  if (!await loadLeague()) return;
+  if (!PH) { try { PH = await (await fetch("data/power_history.json", { cache: "no-cache" })).json(); } catch (e) { PH = { days: [] }; } }
+  const L = LAD, list = L.ladder.slice().sort((a, b) => a.power_rank - b.power_rank);
   const mv = (x, d = 0) => !x || Math.abs(x) < 0.05 ? "" : `<span class="${x > 0 ? "up" : "down"}">${x > 0 ? "▲" : "▼"}${Math.abs(x).toFixed(d)}</span>`;
   const price = x => "$" + (x >= 10 ? Math.round(x) : x.toFixed(2));
   const pc = x => x >= 1 || x === 0 ? Math.round(x) + "%" : x.toFixed(1) + "%";
-  const SORTS = { ladder: ["Ladder", (a, b) => (a.seed ?? 99) - (b.seed ?? 99)],
-                  power: ["Power", (a, b) => a.power_rank - b.power_rank],
-                  proj: ["Projected", (a, b) => b.proj_w - a.proj_w] };
-  const sort = has ? LAD_SORT : "ladder", list = L.ladder.slice().sort(SORTS[sort][1]);
-  const seg = has ? `<div class="seg">${Object.entries(SORTS).map(([k, [l]]) => `<button type="button" data-s="${k}" class="${k === sort ? "on" : ""}">${l}</button>`).join("")}</div>` : "";
-  const CATS = ["PTS", "REB", "AST", "STL", "BLK", "3PM", "TO", "FG%", "FT%"];
   const ord = k => k + (["th", "st", "nd", "rd"][(k % 100 > 10 && k % 100 < 14) ? 0 : (k % 10 < 4 ? k % 10 : 0)]);
   const detail = r => {
-    if (!has) return "";
     const cells = CATS.map(c => { const v = r.cat_strength[c], k = r.cat_rank[c];
-      const tone = k <= 3 ? "hi" : k >= 12 ? "lo" : "";
-      return `<div class="ld-c ${tone}"><b>${c}</b><span>${v}%</span><small>${ord(k)}</small></div>`; }).join("");
-    return `<tr class="ld-x"><td colspan="5">
-      <div class="ld-cats">${cells}</div>
+      return `<div class="ld-c ${k <= 3 ? "hi" : k >= 12 ? "lo" : ""}"><b>${c}</b><span>${v}%</span><small>${ord(k)}</small></div>`; }).join("");
+    return `<tr class="ld-x"><td colspan="6"><div class="ld-cats">${cells}</div>
       <p class="note" style="font-size:12px;margin:6px 0 0">Chance to win each category vs an average opponent in a typical week · league rank.</p>
-      <div class="ld-facts"><span>Categories <b>${r.cats[0]}-${r.cats[1]}-${r.cats[2]}</b></span><span>Title <b>${pc(r.title_pct)}</b> ${price(r.title_price)}${mv(r.title_move, 1)}</span><span>Finals ${price(r.finals_price)}</span><span>FAAB <b>$${r.faab_left}</b></span></div></td></tr>`;
+      <div class="ld-facts"><span>Record <b>${r.w}-${r.l}-${r.t}</b></span><span>Title ${price(r.title_price)}</span><span>Finals ${price(r.finals_price)}</span><span>FAAB <b>$${r.faab_left}</b></span></div></td></tr>`;
   };
-  const rows = list.map((r, i) => {
-    const cut = sort === "ladder" && i === L.finals_teams - 1 ? " cut" : "", open = LAD_OPEN === r.team;
-    const rank = sort === "ladder" ? (r.seed ?? i + 1) : sort === "power" ? r.power_rank : i + 1;
-    return `<tr class="ld-r${cut}${open ? " open" : ""}" data-t="${esc(r.team)}">
-      <td>${rank}</td>
-      <td><span class="tm">${esc(r.team)}</span><small>${r.w}-${r.l}${r.t ? "-" + r.t : ""} · ${r.cats[0]}-${r.cats[1]}${r.cats[2] ? "-" + r.cats[2] : ""} cats</small></td>
-      ${has ? `<td>${r.proj_w.toFixed(1)}<small>${r.proj_l.toFixed(1)} L</small></td><td>${r.power_rank}${mv(r.power_move)}<small>${r.power_pct}%</small></td>` : ""}
-      <td><b>${pc(r.finals_pct)}</b>${mv(r.finals_move)}</td></tr>${open ? detail(r) : ""}`;
-  }).join("");
-  const head = `<tr><th>#</th><th>Team</th>${has ? "<th>Proj</th><th>Power</th>" : ""}<th>Finals</th></tr>`;
-  app.innerHTML = `${seg}<div class="card ld"><table class="ladder">${head}${rows}</table></div>
+  const rows = list.map(r => { const open = LAD_OPEN === r.team;
+    return `<tr class="ld-r${open ? " open" : ""}" data-t="${esc(r.team)}"><td>${r.power_rank}</td>
+      <td><span class="tm">${esc(r.team)}</span>${r.power_move ? `<small>${mv(r.power_move)} since yesterday</small>` : ""}</td>
+      <td><b>${r.power_pct}%</b></td><td>${r.proj_w.toFixed(1)}</td><td>${pc(r.finals_pct)}${mv(r.finals_move)}</td><td>${pc(r.title_pct)}${mv(r.title_move, 1)}</td></tr>${open ? detail(r) : ""}`; }).join("");
+  const chart = rankChart(PH.days, L.ladder.map(r => r.team).sort(), LAD_HL);
+  app.innerHTML = `${chart}<div class="card ld scroll"><table class="ladder"><tr><th>#</th><th>Team</th><th>Power</th><th>Proj W</th><th>Finals</th><th>Title</th></tr>${rows}</table></div>
     <details class="rc-how"><summary>What the columns mean</summary><div class="explain">
-      <p><strong>Proj</strong> is each team's expected final number of wins (current record plus the model's forecast for every remaining week, from ${L.sims.toLocaleString()} simulated seasons). The small number underneath is projected losses out of ${L.weeks || 18} weeks.</p>
-      <p><strong>Power</strong> ranks teams by roster strength alone: the average chance of beating every other team in a normal week, ignoring the schedule. The % underneath is that average. Arrows show movement over the last day.</p>
-      <p><strong>Finals</strong> is the chance of finishing top ${L.finals_teams}${sort === "ladder" ? " (the dashed line)" : ""}. <strong>Tap a team</strong> for its category strengths, title odds and FAAB left.</p></div></details>
+      <p><strong>Power</strong> ranks teams by roster strength alone: the average chance of beating every other team in a normal week, ignoring the schedule and record. Arrows show movement since yesterday.</p>
+      <p><strong>Proj W</strong> is expected wins at the end of the ${L.weeks || 18}-week regular season (record so far plus the model's forecast, from ${L.sims.toLocaleString()} simulated seasons). <strong>Finals</strong> is the chance of making the top ${L.finals_teams}; <strong>Title</strong> the chance of winning it all.</p>
+      <p><strong>Tap a team</strong> for its category strengths. <strong>Tap a line label</strong> on the chart to highlight that team.</p></div></details>
     <p class="updated">Updated ${esc(ago(L.updated_utc))}.</p>`;
-  app.querySelectorAll(".seg button").forEach(b => b.onclick = () => { LAD_SORT = b.dataset.s; ladderPage(); });
-  app.querySelectorAll(".ld-r").forEach(tr => tr.onclick = () => { LAD_OPEN = LAD_OPEN === tr.dataset.t ? null : tr.dataset.t; ladderPage(); });
+  const pick = t => { LAD_HL = LAD_HL === t ? null : t; powerPage(); };
+  app.querySelectorAll(".rk-lbl").forEach(el => el.onclick = () => pick(el.dataset.t));
+  app.querySelectorAll(".ld-r").forEach(tr => tr.onclick = () => { LAD_OPEN = LAD_OPEN === tr.dataset.t ? null : tr.dataset.t; powerPage(); });
 }
 
 let STATS = null, STAT_MODE = "matchup";
@@ -853,6 +893,7 @@ function route() {
   const slug = decodeURIComponent(location.hash.replace(/^#\/?/, ""));
   if (slug === "odds") return oddsPage();
   if (slug === "ladder") return ladderPage();
+  if (slug === "power") return powerPage();
   if (slug === "dawg") return dawgPage();
   if (slug === "trade") return tradePage();
   if (slug === "stats") return statsPage();

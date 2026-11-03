@@ -8,5 +8,9 @@
   },
   "post": "2026-11-03-trade",
   "at_time_source": "trade review"
+ },
+ "_scan": {
+  "done_through": 14,
+  "trades": []
  }
 }

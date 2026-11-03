@@ -430,11 +430,12 @@ async function recordPage() {
     return `<div class="mrow"><div><strong>${label}</strong><small>Favourite won ${won} of ${g.length}. The model expected about ${exp.toFixed(1)}.</small><small><strong>Verdict:</strong> ${verdict}</small></div></div>`;
   }).join("");
 
+  const skillTxt = b => { const x = Math.round((0.25 - b) / 0.25 * 100); return x >= 0 ? x + "% better" : -x + "% worse"; };
   const ps = O.brier, psWord = ps < 0.15 ? "very good" : ps < 0.2 ? "good" : ps < 0.25 ? "a bit better than guessing" : "no better than guessing";
   const kpis = `<div class="kpis">
     <div class="kpi"><b>${O.called} of ${O.matchups}</b><span>times it picked the winner</span></div>
     <div class="kpi"><b>${pc(O.called / O.matchups)}</b><span>hit rate (guessing would get ~50%)</span></div>
-    <a class="kpi" href="#/record" onclick="document.getElementById('brier').scrollIntoView({behavior:'smooth'});return false" style="color:inherit;text-decoration:none"><b>${ps.toFixed(3)}</b><span>Brier score: ${psWord} (lower is better) ↓</span></a></div>`;
+    <a class="kpi" href="#/record" onclick="document.getElementById('brier').scrollIntoView({behavior:'smooth'});return false" style="color:inherit;text-decoration:none"><b>${ps.toFixed(3)}</b><span>Brier score: ${skillTxt(ps)} than a coin flip ↓</span></a></div>`;
 
   const scoreExplain = `<div class="card" id="brier"><h2 style="margin-top:0">The Brier score, explained</h2><div class="explain">
     <p>Counting right picks misses something: calling a <strong>51% coin flip</strong> right is mostly luck, but calling a <strong>95% "lock"</strong> wrong is a big miss. The Brier score gives the model credit for being <strong>right and confident</strong>, and punishes it for being <strong>confident and wrong</strong>.</p>
@@ -447,16 +448,21 @@ async function recordPage() {
       <tr><td>20% (backed the loser)</td><td>0.80</td><td class="neg">0.64</td></tr>
       <tr><td>5% (backed the loser hard)</td><td>0.95</td><td class="neg">0.90</td></tr></table>
     <p>Squaring is what makes confident misses hurt so much: one 95%-wrong call costs as much as 20 decent calls.</p>
+    <h3>Why is a coin flip 0.25?</h3>
+    <p>Imagine a "model" that knows nothing and says <strong>50%</strong> for every matchup. Whoever wins, it gave them 50%, so it's always 0.50 short of 100%. Square that: 0.50 × 0.50 = <strong>0.25</strong>. Every matchup, every week. That's the score for not even trying, so it's the line to beat.</p>
     <h3>The weekly score</h3>
-    <p>Average the penalties across every matchup. <strong>Lower is better.</strong></p>
-    <table class="cats bl"><tr><th>Brier</th><th>What it means</th></tr>
-      <tr><td>0.00</td><td>Perfect: 100% sure and right every time</td></tr>
-      <tr><td>under 0.15</td><td>Very good</td></tr>
-      <tr><td>0.15 – 0.20</td><td>Good</td></tr>
-      <tr><td>0.20 – 0.25</td><td>A bit better than guessing</td></tr>
-      <tr><td>0.25</td><td>Same as saying "50/50" for every matchup</td></tr>
-      <tr><td>over 0.25</td><td>Worse than not trying</td></tr></table>
-    <p>So far this season: <strong>${O.brier.toFixed(3)}</strong> (${psWord}).</p></div></div>`;
+    <p>Average the penalties across every matchup. <strong>Lower is better.</strong> To see how much better than a coin flip the model is, compare its score with 0.25:</p>
+    <p style="text-align:center"><strong>% better than a coin flip = (0.25 − score) ÷ 0.25</strong></p>
+    <p class="note">Example: a score of 0.10 is 0.15 below 0.25, and 0.15 ÷ 0.25 = 60% better than coin flipping.</p>
+    <table class="cats bl"><tr><th>Brier</th><th>vs coin flip</th><th>What it means</th></tr>
+      <tr><td>0.00</td><td class="pos">100% better</td><td>Perfect: 100% sure and right every time (impossible in practice)</td></tr>
+      <tr><td>0.05</td><td class="pos">80% better</td><td>Elite</td></tr>
+      <tr><td>0.10</td><td class="pos">60% better</td><td>Very good</td></tr>
+      <tr><td>0.15</td><td class="pos">40% better</td><td>Good</td></tr>
+      <tr><td>0.20</td><td>20% better</td><td>A bit better than guessing</td></tr>
+      <tr><td>0.25</td><td>0%</td><td>Same as saying "50/50" every time</td></tr>
+      <tr><td>0.30</td><td class="neg">20% worse</td><td>Worse than not trying: confidently wrong too often</td></tr></table>
+    <p>So far this season: <strong>${O.brier.toFixed(3)}</strong>, which is <strong>${skillTxt(O.brier)}</strong> than coin flipping.</p></div></div>`;
 
   const catCard = O.categories ? `<div class="card"><h2 style="margin-top:0">Category by category</h2>
     <p class="note">Which stats the model predicts best. It called ${Math.round(O.cat_called)} of ${O.categories} category winners (${pc(O.cat_called / O.categories)}).</p>
@@ -470,7 +476,7 @@ async function recordPage() {
         <div class="${m.called ? "ok" : "miss"}">${m.called ? "✓" : "✗"}</div></div>`;
     }).join("");
     const src = w.source === "live" || w.source.startsWith("stored") ? "picks made Monday before the week started" : "picks taken from the first daily post, a few days in, so this week is a bit flattering";
-    return `<details class="card"><summary>Week ${w.period}: picked ${w.called} of ${w.n} · Brier ${w.brier.toFixed(3)}</summary>
+    return `<details class="card"><summary>Week ${w.period}: picked ${w.called} of ${w.n} · Brier ${w.brier.toFixed(3)} (${skillTxt(w.brier)} than a coin flip)</summary>
       <p class="note">${esc(src)}.</p>${rows}</details>`;
   }).join("");
 

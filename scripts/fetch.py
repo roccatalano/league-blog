@@ -148,6 +148,11 @@ def main():
     else:
         data["daily"] = json.loads(S.daily_post_data())
         data["trades"] = trade_reviews()
+        inj = _load(os.path.join(ROOT, "data", "injuries.json"), {})
+        data["injury_report"] = [
+            {k: x.get(k) for k in ("name", "nba_team", "fantasy_team", "on_ir", "status", "injury",
+                                   "return_date", "games_missed", "timeframe", "note")}
+            for x in inj.get("players", []) if x.get("fantasy_team")]
     with open(out_path, "w") as f:
         json.dump(data, f, indent=1, default=str)
     print(f"wrote data/latest.json ({kind}), trades: {len(data.get('trades', []))}")

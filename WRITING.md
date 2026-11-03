@@ -34,7 +34,12 @@ Post body in Markdown.
 - **Matchups:** a quick line per matchup or the most interesting few: score in categories,
   win chances, odds movers and momentum swings, knife-edge categories.
 - **Awards of the day:** performance of the day, worst performance, ice-cold shooter, bench blunders.
-- **Injury watch** and **FAAB splash / transactions** if anything notable.
+- **Injury watch** (`daily.injury_watch` = players newly out; `injury_report` = every injured player on a
+  fantasy team with ESPN's projected `return_date`, `games_missed` and latest `note`): lead with new or
+  long injuries to good players, say how long they're projected out and which fantasy team it hurts.
+  Skip "rest" and one-game absences unless nothing else happened. Return dates are projections, so say
+  "projected back" rather than stating them as fact.
+- **FAAB splash / transactions** if anything notable.
 
 ## What goes in a trade post (`kind: trade`)
 

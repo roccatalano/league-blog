@@ -55,6 +55,9 @@ jobs:
             echo "kind=daily" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Refresh the injury report
+        run: python scripts/injuries.py || echo "Injury report skipped this time"
+
       - name: Fetch league data from ESPN
         env:
           ESPN_S2: ${{ secrets.ESPN_S2 }}

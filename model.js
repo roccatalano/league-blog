@@ -9,14 +9,16 @@
   function make(M) {
     const C = M.consts, KEYS = C.KEYS, CATS = C.CATS, PP = C.PLAY_PROB;
     const pp = s => (s in PP ? PP[s] : 0.8);
+    // season availability incl. injury return date (server.py _avail); falls back to status for old data
+    const av = p => (typeof p.avail === "number" ? p.avail : pp(p.status));
     const value = r => r ? (r["0"] + 1.2 * r["6"] + 1.5 * r["3"] + 3 * r["2"] + 3 * r["1"] + r["17"] - r["11"]) : 0;
     function weeklyDist(players, gpp = 3.4, cap = 38) {
-      const ps = players.filter(p => p.rates && p.slot !== 13 && pp(p.status) > 0)
+      const ps = players.filter(p => p.rates && av(p) > 0)
         .sort((a, b) => value(b.rates) - value(a.rates));
       const mean = {}, vr = {}; KEYS.forEach(k => { mean[k] = 0; vr[k] = 0; });
       let used = 0;
       for (const p of ps) {
-        const g = Math.min(gpp * pp(p.status), Math.max(0, cap - used));
+        const g = Math.min(gpp * av(p), Math.max(0, cap - used));
         if (g <= 0) break;
         used += g;
         for (const k of KEYS) { const m = p.rates[k] || 0; mean[k] += g * m; vr[k] += g * (0.8 * m + 0.07 * m * m) + 0.5 * m * m; }
@@ -72,7 +74,7 @@
       while (active(r) > active(before)) {
         const cands = r.filter(p => p.slot !== 13 && !protect.includes(p));
         const pool = cands.length ? cands : r.filter(p => p.slot !== 13);
-        const worst = pool.reduce((x, y) => (pp(y.status) * value(y.rates) < pp(x.status) * value(x.rates) ? y : x));
+        const worst = pool.reduce((x, y) => (av(y) * value(y.rates) < av(x) * value(x.rates) ? y : x));
         r.splice(r.indexOf(worst), 1); moves.drops.push(worst.name);
       }
       while (active(r) < active(before)) { r.push({ name: "Free agent", status: "ACTIVE", slot: 0, rates: REPL }); moves.adds++; }

@@ -220,6 +220,7 @@ def model(d, names):
         _, pl = S._team_players(t["id"], d)
         teams.append({"id": t["id"], "name": names[t["id"]],
                       "players": [{"name": p["name"], "status": p["status"], "slot": p["slot"],
+                                   "avail": round(S._avail(p), 3), "ret": p["ret"].isoformat() if p.get("ret") else None,
                                    "rates": {k: round(v, 3) for k, v in p["rates"].items()} if p["rates"] else None}
                                   for p in pl]})
     fixtures = [{"week": m["matchupPeriodId"], "home": m["home"]["teamId"], "away": m["away"]["teamId"]}

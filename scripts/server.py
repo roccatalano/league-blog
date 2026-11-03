@@ -297,7 +297,72 @@ def _value(r):
 def _pinfo(p, slot=None):
     return {"id": p["id"], "name": p.get("fullName"), "pro": p.get("proTeamId", 0),
             "elig": [s for s in p.get("eligibleSlots", []) if s in (0, 1, 2, 3, 4, 5, 6, 11)],
-            "status": p.get("injuryStatus", "ACTIVE") or "ACTIVE", "rates": _rates(p), "slot": slot}
+            "status": p.get("injuryStatus", "ACTIVE") or "ACTIVE", "rates": _rates(p), "slot": slot,
+            "ret": _injury_returns().get(_norm(p.get("fullName"))) if (p.get("injuryStatus") or "ACTIVE") != "ACTIVE" else None}
+
+
+# ---- injury return dates (2026-11-03) ----
+# ESPN's public NBA injury feed gives each injured player's projected return date. The season model
+# counts an injured player as missing only the part of the season before that date (see _avail),
+# instead of treating today's status as permanent. The live week sim still uses today's status.
+INJURY_FEED = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/injuries"
+_INJ = {"t": 0, "data": None}
+
+
+def _norm(name):
+    import unicodedata
+    s = unicodedata.normalize("NFKD", name or "").encode("ascii", "ignore").decode().lower()
+    for suf in (" jr.", " jr", " sr.", " sr", " iii", " ii", " iv"):
+        if s.endswith(suf):
+            s = s[: -len(suf)]
+    return "".join(c for c in s if c.isalnum())
+
+
+def _injury_returns():
+    """{normalised name: projected return date (ET)}, cached 30 min. Empty if the feed is down
+    (the model then falls back to treating today's status as lasting all season)."""
+    if time.time() - _INJ["t"] > 1800 or _INJ["data"] is None:
+        from datetime import date
+        out = {}
+        try:
+            r = httpx.get(INJURY_FEED, timeout=15, headers={"User-Agent": "espn-fantasy-mcp"})
+            r.raise_for_status()
+            for team in r.json().get("injuries", []):
+                for i in team.get("injuries", []):
+                    rd = ((i.get("details") or {}).get("returnDate") or "")[:10]
+                    if rd:
+                        out[_norm((i.get("athlete") or {}).get("displayName"))] = date.fromisoformat(rd)
+        except Exception:
+            out = _INJ["data"] or {}
+        _INJ.update(t=time.time(), data=out)
+    return _INJ["data"]
+
+
+def _season_end():
+    try:
+        return max(g for games in _schedule().values() for g in games).date()
+    except Exception:
+        from datetime import date
+        return date(int(SEASON), 4, 12)
+
+
+def _avail(p):
+    """Share of the rest of the regular season's games a player is expected to play.
+    Healthy: PLAY_PROB[ACTIVE]. Injured with a return date: today's status until then, healthy after."""
+    from datetime import timedelta
+    base = PLAY_PROB.get(p["status"], 0.8)
+    healthy = PLAY_PROB["ACTIVE"]
+    ret = p.get("ret")
+    if ret is None or base >= healthy:
+        return base
+    today = datetime.now(ET).date()
+    ret = max(ret, today + timedelta(days=1))  # status still says out: not back before tomorrow
+    end = _season_end()
+    total = (end - today).days
+    if total <= 0:
+        return base
+    after = max(0, (end - ret).days) / total
+    return healthy * after + base * (1 - after)
 
 
 def _schedule():
@@ -487,13 +552,14 @@ def simulate_week(team_id: int = 0) -> str:
 def _weekly_dist(players, games_per_player=3.4, cap=38.0):
     """Mean & variance of weekly category totals for a roster, using its best players up to
     ~10 starters x 3.4 games of capacity. Analytic (normal approx) so it's fast."""
-    ps = sorted([p for p in players if p["rates"] and p["slot"] != 13 and PLAY_PROB.get(p["status"], 0.8) > 0],
+    # IR players are included now: once back they take a starter's games (capacity cap below).
+    ps = sorted([p for p in players if p["rates"] and _avail(p) > 0],
                 key=lambda p: -_value(p["rates"]))
     mean = dict.fromkeys(KEYS, 0.0)
     var = dict.fromkeys(KEYS, 0.0)
     used = 0.0
     for p in ps:
-        g = min(games_per_player * PLAY_PROB.get(p["status"], 0.8), max(0.0, cap - used))
+        g = min(games_per_player * _avail(p), max(0.0, cap - used))
         if g <= 0:
             break
         used += g
@@ -590,7 +656,7 @@ def rank_pickups(position: str = "", limit: int = 15, pool_size: int = 120, this
         cand["active_from"] = _next_claim_time(now)  # waiver bid -> playable only after next 6 PM ET run
         if cand["pro"] == 0:  # unsigned
             continue
-        if not cand["rates"] or PLAY_PROB.get(cand["status"], 0.8) == 0:
+        if not cand["rates"] or _avail(cand) == 0:
             continue
         cand_by_name[cand["name"]] = cand
         v, _ = _fixture_value([q for q in mine if q is not drop] + [cand], d, TEAM_ID, weeks)

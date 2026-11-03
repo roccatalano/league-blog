@@ -293,7 +293,8 @@ async function tradePage() {
     const t = MODEL.teams.find(x => x.id === +sel.value);
     box.innerHTML = t.players.slice().sort((x, y) => (y.rates ? y.rates["0"] : 0) - (x.rates ? x.rates["0"] : 0)).map(p => {
       const r = p.rates, line = r ? `${r["0"].toFixed(1)} pts · ${r["6"].toFixed(1)} reb · ${r["3"].toFixed(1)} ast` : "no stats";
-      const inj = p.status && p.status !== "ACTIVE" ? ` · ${esc(p.status.replace(/_/g, " ").toLowerCase())}` : "";
+      const back = p.ret ? `, back ${new Date(p.ret + "T12:00:00").toLocaleDateString("en-AU", { day: "numeric", month: "short" })}` : "";
+      const inj = p.status && p.status !== "ACTIVE" ? ` · ${esc(p.status.replace(/_/g, " ").toLowerCase())}${back}` : "";
       return `<label><input type="checkbox" value="${esc(p.name)}"> <span>${esc(p.name)}<br><small>${line}${inj}</small></span></label>`;
     }).join("");
   };

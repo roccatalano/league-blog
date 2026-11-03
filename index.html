@@ -301,7 +301,7 @@
 <header><div class="wrap">
   <a href="#"><div class="brand">NBA FANTASY <span>2026</span></div></a>
   <div class="tag">Daily posts, trade reviews and weekly roundups. Updated automatically.</div>
-  <nav><a href="#/" data-n="posts">Posts</a><a href="#/ladder" data-n="ladder">Ladder</a><a href="#/odds" data-n="odds">Live odds</a><a href="#/trade" data-n="trade">Trade calculator</a><a href="#/dawg" data-n="dawg">Dawg index</a><a href="#/stats" data-n="stats">Stat ranks</a><a href="#/injuries" data-n="injuries">Injuries</a><a href="#/trades" data-n="trades">Trades</a><a href="#/record" data-n="record">Model record</a></nav>
+  <nav><a href="#/" data-n="posts">Posts</a><a href="#/ladder" data-n="ladder">Ladder</a><a href="#/odds" data-n="odds">Live matchups</a><a href="#/trade" data-n="trade">Trade calculator</a><a href="#/dawg" data-n="dawg">Dawg index</a><a href="#/stats" data-n="stats">Stat ranks</a><a href="#/injuries" data-n="injuries">Injuries</a><a href="#/trades" data-n="trades">Trades</a><a href="#/record" data-n="record">Model record</a></nav>
 </div></header>
 <main class="wrap" id="app"><p class="empty">Loading…</p></main>
 <footer>Odds and expected wins come from a model, not a crystal ball.</footer>
@@ -397,11 +397,11 @@ function wireCharts() {
 }
 
 async function oddsPage() {
-  setNav("odds"); document.title = "Live odds · NBA Fantasy 2026";
+  setNav("odds"); document.title = "Live matchups · NBA Fantasy 2026";
   app.innerHTML = '<p class="empty">Loading…</p>';
   let o;
   try { o = await (await fetch("data/odds.json", { cache: "no-cache" })).json(); }
-  catch (e) { app.innerHTML = '<p class="empty">Live odds aren\'t available yet.</p>'; return; }
+  catch (e) { app.innerHTML = '<p class="empty">Live matchups aren\'t available yet.</p>'; return; }
   try { if (!OH) OH = await (await fetch("data/odds_history.json", { cache: "no-cache" })).json(); } catch (e) { OH = {}; }
   try { if (!ACC) ACC = await (await fetch("data/accuracy.json", { cache: "no-cache" })).json(); } catch (e) {}
   const curWk = String(o.matchup_period), wk = ODDS_WEEK && OH[ODDS_WEEK] ? ODDS_WEEK : curWk;

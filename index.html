@@ -115,6 +115,78 @@
   .ladder.pk { font-size: 12.5px; } .ld .ladder.pk td, .ld .ladder.pk th { padding-left: 3px; padding-right: 3px; } .ladder.pk th { font-size: 10px; letter-spacing: 0; } .ladder.pk td:nth-child(2) { white-space: normal; min-width: 110px; } .ladder.pk th.srt { cursor: pointer; } .ladder.pk th.on { color: var(--accent); } .ladder.pk td.on { font-weight: 700; }
   .ladder .pos { color: #2f9e44; } .ladder .neg { color: #e03131; }
   .seg.pks button { font-size: 12px; padding: 5px 4px; }
+  /* stat ranks heat map */
+  .seg.sm { margin: 0; padding: 2px; flex: 0 0 auto; } .seg.sm button { font-size: 11.5px; padding: 3px 10px; flex: 0 0 auto; }
+  .hm-h { display: flex; justify-content: space-between; align-items: center; gap: 8px; font-size: 14px; margin-bottom: 10px; }
+  .hm-h small { color: var(--muted); font-size: 12px; }
+  .hm-card { padding: 14px 8px; }
+  .hm { border-collapse: separate; border-spacing: 1.5px; font-size: 12px; width: 100%; table-layout: fixed; font-variant-numeric: tabular-nums; }
+  .hm th { font-size: 9px; color: var(--muted); font-weight: 700; padding: 2px 0 4px; cursor: pointer; text-align: center; letter-spacing: 0; white-space: nowrap; }
+  .hm th.on { color: var(--accent); }
+  .hm td.hm-t, .hm th.hm-t { text-align: left; position: sticky; left: 0; background: var(--card); z-index: 1; font-weight: 700; font-size: 10.5px; line-height: 1.15; width: 72px; padding-right: 3px; cursor: default; overflow-wrap: anywhere; }
+  .hm td.hm-t span { display: none; }
+  .hm tr.me td.hm-t { color: var(--accent); }
+  .hm td.hm-c { text-align: center; border-radius: 6px; height: 30px; font-weight: 700; cursor: pointer; font-size: 11px; padding: 0; }
+  .hm td.hm-c.pick { outline: 2px solid var(--ink); }
+  .hm td.hm-avg { text-align: center; font-weight: 700; font-size: 10.5px; color: var(--muted); padding: 0; }
+  .hm td.hm-avg.on { color: var(--accent); }
+  .hm-pick { font-size: 13px; margin: 10px 2px 0; } .hm-pick.muted { color: var(--muted); font-size: 12px; }
+  .hm-key { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--muted); margin: 8px 2px 0; flex-wrap: wrap; }
+  .hm-key i { width: 90px; height: 8px; border-radius: 4px; background: linear-gradient(90deg, hsla(140,70%,45%,.6), hsla(70,70%,45%,.16), hsla(0,70%,45%,.6)); }
+  .hm-key small { margin-left: auto; }
+  .gb { display: grid; grid-template-columns: 118px 1fr 36px; align-items: center; gap: 8px; font-size: 12.5px; padding: 3px 0; }
+  .gb-t { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600; }
+  .gb.me .gb-t { color: var(--accent); }
+  .gb-b { height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; } .gb-b i { display: block; height: 100%; background: var(--accent); border-radius: 4px; min-width: 3px; }
+  .gb-v { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); font-weight: 600; }
+  /* trade calculator */
+  .tc { padding-bottom: 90px; }
+  .tc-teams { display: grid; grid-template-columns: 1fr 22px 1fr; gap: 6px; align-items: center; margin-bottom: 10px; }
+  .tc-teams span { text-align: center; color: var(--accent); font-weight: 800; }
+  .tc-teams select { width: 100%; min-width: 0; font: inherit; font-size: 13.5px; font-weight: 700; padding: 9px 8px; border-radius: 10px; border: 1px solid var(--line); background: var(--card); color: var(--ink); }
+  .tc-deal { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; position: relative; padding: 12px 14px; }
+  .tc-deal small { display: block; color: var(--muted); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .4px; }
+  .tc-deal b { font-size: 13.5px; line-height: 1.3; display: block; margin-top: 2px; }
+  .tc-clear { position: absolute; top: 8px; right: 10px; font: inherit; font-size: 11.5px; font-weight: 700; color: var(--muted); background: none; border: 0; cursor: pointer; }
+  .tc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .tc-chip { font: inherit; text-align: left; background: var(--card); color: var(--ink); border: 1px solid var(--line); border-radius: 10px; padding: 8px 9px; cursor: pointer; position: relative; min-height: 50px; }
+  .tc-chip b { display: block; font-size: 13px; line-height: 1.2; padding-right: 4px; }
+  .tc-chip small { display: block; color: var(--muted); font-size: 11px; margin-top: 2px; font-variant-numeric: tabular-nums; }
+  .tc-chip em { font-style: normal; font-size: 9.5px; font-weight: 800; letter-spacing: .3px; display: inline-block; margin-top: 4px; padding: 1px 6px; border-radius: 99px; }
+  .tc-chip em.out, .ij-s.out { background: #ffe3e3; color: #c92a2a; } .tc-chip em.dtd, .ij-s.dtd { background: #fff3bf; color: #a66a00; }
+  .tc-chip.on { background: var(--accent); border-color: var(--accent); color: #fff; } .tc-chip.on small { color: rgba(255,255,255,.85); }
+  .tc-bar-wrap { position: fixed; left: 0; right: 0; bottom: 0; padding: 0 12px calc(10px + env(safe-area-inset-bottom)); z-index: 5; pointer-events: none; }
+  .tc-res { pointer-events: auto; max-width: 696px; margin: 0 auto; background: var(--head); color: #fff; border-radius: 16px; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between; gap: 10px; box-shadow: 0 8px 24px rgba(0,0,0,.25); min-height: 34px; }
+  .tc-hint { font-size: 13.5px; font-weight: 600; opacity: .85; margin: 0 auto; text-align: center; }
+  .tc-side small { display: block; font-size: 11px; opacity: .7; max-width: 110px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .tc-side b { font-family: "Archivo Black", Inter, sans-serif; font-size: 22px; } .tc-side.r { text-align: right; }
+  .tc-side b.pos { color: #69db7c; } .tc-side b.neg { color: #ff8787; }
+  .tc-verdict { text-align: center; font-size: 13px; line-height: 1.25; } .tc-verdict small { display: block; font-size: 10.5px; opacity: .6; }
+  .tc-head { display: flex; justify-content: space-between; font-size: 11px; font-weight: 700; color: var(--muted); margin-bottom: 4px; }
+  .tc-row { display: grid; grid-template-columns: 62px 1fr 38px 1fr 62px; align-items: center; gap: 4px; font-size: 12px; padding: 3px 0; }
+  .tc-row b { text-align: center; font-size: 11px; } .tc-row .v { font-variant-numeric: tabular-nums; font-weight: 600; } .tc-row .v:last-child { text-align: right; }
+  .tc-dv { position: relative; height: 8px; background: var(--line); border-radius: 4px; }
+  .tc-dv::after { content: ""; position: absolute; left: 50%; top: -2px; bottom: -2px; width: 1px; background: var(--muted); opacity: .5; }
+  .tc-dv i { position: absolute; top: 0; height: 100%; border-radius: 4px; background: var(--muted); } .tc-dv i.pos { background: #40c057; } .tc-dv i.neg { background: #fa5252; }
+  .tc-det .pos { color: #2f9e44; } .tc-det .neg { color: #e03131; }
+  /* injuries */
+  .ij-card { padding: 4px 14px; }
+  .ij { border-bottom: 1px solid var(--line); } .ij:last-child { border-bottom: 0; }
+  .ij summary { list-style: none; display: grid; grid-template-columns: 1fr auto 64px; gap: 10px; align-items: center; padding: 10px 0; cursor: pointer; }
+  .ij summary::-webkit-details-marker { display: none; }
+  .ij-n b { display: block; font-size: 14.5px; } .ij-n small { color: var(--muted); font-size: 12px; }
+  .ij-n em.ir { font-style: normal; font-size: 9.5px; font-weight: 800; background: var(--line); color: var(--muted); border-radius: 4px; padding: 1px 4px; vertical-align: 2px; }
+  .ij-s { font-size: 11px; font-weight: 800; padding: 3px 8px; border-radius: 99px; }
+  .ij-r { text-align: right; } .ij-r b { display: block; font-size: 13.5px; } .ij-r small { color: var(--muted); font-size: 11px; }
+  .ij-x { font-size: 13px; color: var(--muted); padding: 0 0 12px; line-height: 1.45; }
+  .ij[open] summary .ij-n b { color: var(--accent); }
+  .ij-strip { padding: 14px; }
+  .sb { font: inherit; width: 100%; display: grid; grid-template-columns: 122px 1fr 34px; gap: 8px; align-items: center; background: none; border: 0; color: var(--ink); padding: 3px 4px; border-radius: 6px; cursor: pointer; font-size: 12.5px; text-align: left; }
+  .sb.on { background: var(--accent-soft); } .sb.me .sb-t { color: var(--accent); }
+  .sb-t { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600; }
+  .sb-b { display: flex; height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; } .sb-b i.o { background: #fa5252; } .sb-b i.q { background: #fcc419; }
+  .sb-v { text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; } .sb-v small { color: var(--muted); font-weight: 600; font-size: 10.5px; }
+  @media (prefers-color-scheme: dark) { .tc-chip em.out, .ij-s.out { background: #4a1c1c; color: #ff8787; } .tc-chip em.dtd, .ij-s.dtd { background: #4a3b10; color: #ffd43b; } }
   .grp { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .6px; color: var(--muted); margin: 18px 0 6px; }
   .chip.out { background: #fde2e2; color: #c92a2a; } .chip.dtd { background: #fff3bf; color: #946200; } .chip.ft { background: transparent; color: var(--muted); border: 1px solid var(--line); }
   @media (prefers-color-scheme: dark) { .chip.out { background: #3b1717; color: #ff8787; } .chip.dtd { background: #3a2f0b; color: #ffd43b; } }
@@ -583,120 +655,167 @@ async function powerPage() {
   app.querySelectorAll(".ld-r").forEach(tr => tr.onclick = () => { LAD_OPEN = LAD_OPEN === tr.dataset.t ? null : tr.dataset.t; powerPage(); });
 }
 
-let STATS = null, STAT_MODE = "matchup";
+// ---------------------------------------------------------------- stat ranks (heat map)
+let STATS = null, STAT_MODE = "matchup", STAT_SORT = "avg", STAT_SHOW = "rank", STAT_PICK = null;
+const MY_TEAM = "Gets On Base";
+// rank 1 (green) .. last (red), translucent so it works in light and dark
+const heat = (k, n) => { const t = n > 1 ? (k - 1) / (n - 1) : 0; const h = 140 - 140 * t; return `hsla(${h.toFixed(0)}, 70%, 45%, ${(0.16 + 0.5 * Math.abs(t - 0.5) * 2 * 0.6).toFixed(2)})`; };
 async function statsPage() {
   setNav("stats"); document.title = "Stat ranks · NBA Fantasy 2026";
-  app.innerHTML = '<p class="empty">Loading…</p>';
-  try { if (!STATS) STATS = await (await fetch("data/stats.json", { cache: "no-cache" })).json(); }
-  catch (e) { app.innerHTML = '<p class="empty">Stat ranks aren\'t available yet. They appear after the next data refresh.</p>'; return; }
-  const S = STATS, MODES = { total: "Total", matchup: "Per matchup", day: "Per day", game: "Per game" };
+  if (!STATS) {
+    app.innerHTML = '<p class="empty">Loading…</p>';
+    try { STATS = await (await fetch("data/stats.json", { cache: "no-cache" })).json(); }
+    catch (e) { app.innerHTML = '<p class="empty">Stat ranks aren\'t available yet. They appear after the next data refresh.</p>'; return; }
+  }
+  const S = STATS, MODES = { total: "Total", matchup: "Per matchup", day: "Per day", game: "Per game" }, mode = STAT_MODE;
   if (!S.days_done) { app.innerHTML = '<p class="empty">Stat ranks appear after the next data refresh.</p>'; return; }
-  const open = new Set([...app.querySelectorAll("details[open]")].map(d => d.dataset.cat));
-  if (!open.size) { open.add("PTS"); open.add("GP"); }
-  const mode = STAT_MODE;
-  const basis = mode === "matchup" ? `${S.weeks_done} finished matchup${S.weeks_done === 1 ? "" : "s"}` : `${S.days_done} finished days`;
-  const g = [...S.games].sort((a, b) => (b.per_day ?? -1) - (a.per_day ?? -1));
-  const gRows = g.map((r, i) => `<tr><td>${i + 1}</td><td><span class="tm">${esc(r.team)}</span><small>${r.games} games</small></td><td>${r.per_day == null ? "–" : r.per_day.toFixed(2)}</td><td>${r.per_matchup == null ? "–" : r.per_matchup.toFixed(1)}</td></tr>`).join("");
-  const gCard = `<details class="card scroll" data-cat="GP"${open.has("GP") ? " open" : ""}><summary>Games played — most: ${esc(g[0].team)} (${g[0].per_day.toFixed(2)}/day)</summary>
-    <table class="ladder"><tr><th>#</th><th>Team</th><th>Per day</th><th>Per matchup</th></tr>${gRows}</table>
-    <p class="note">Starters' games only. Per day uses all ${S.days_done} finished days; per matchup uses finished matchups. More games usually means more streaming.</p></details>`;
-  const cards = S.categories.map(c => {
-    const pct = c.cat.includes("%"), fmt = v => v == null ? "–" : pct ? v.toFixed(3).replace(/^0/, "") : v.toFixed(mode === "total" ? 0 : mode === "matchup" ? 1 : 2);
+  const cats = S.categories.map(c => c.cat), teams = [...new Set(S.categories[0].rows.map(r => r.team))];
+  const n = teams.length, val = {}, rank = {};
+  S.categories.forEach(c => {
     const rows = c.rows.filter(r => r[mode] != null).sort((a, b) => c.cat === "TO" ? a[mode] - b[mode] : b[mode] - a[mode]);
-    const sub = r => mode === "game" || mode === "total" ? `<small>${r.games} games</small>` : "";
-    const body = rows.map((r, i) => `<tr><td>${i + 1}</td><td><span class="tm">${esc(r.team)}</span>${sub(r)}</td><td>${fmt(r[mode])}</td></tr>`).join("");
-    const top = rows[0] ? ` — top: ${esc(rows[0].team)} (${fmt(rows[0][mode])})` : "";
-    return `<details class="card scroll" data-cat="${esc(c.cat)}"${open.has(c.cat) ? " open" : ""}><summary>${esc(c.cat)}${c.cat === "TO" ? " · fewest first" : ""}${top}</summary>
-      <table class="ladder"><tr><th>#</th><th>Team</th><th>${MODES[mode]}</th></tr>${body}</table></details>`;
-  }).join("");
-  const toggles = Object.entries(MODES).map(([k, v]) => `<button type="button" data-m="${k}" class="${k === mode ? "on" : ""}">${v}</button>`).join("");
-  const pctNote = mode === "matchup" ? "FG% and FT% are the average of each week's percentage." : "FG% and FT% are season makes ÷ attempts.";
-  app.innerHTML = `${gCard}<div class="seg">${toggles}</div>
-    <p class="updated">Based on ${basis} · updated ${esc(ago(S.updated_utc))}. Per game spreads totals over the games starters actually played, so it rewards player quality, not streaming volume. ${pctNote}</p>${cards}`;
-  app.querySelectorAll(".seg button").forEach(b => b.onclick = () => { STAT_MODE = b.dataset.m; statsPage(); });
+    rows.forEach((r, i) => { (val[r.team] ||= {})[c.cat] = r[mode]; (rank[r.team] ||= {})[c.cat] = i + 1; });
+  });
+  const avg = t => { const v = cats.map(c => rank[t]?.[c]).filter(x => x != null); return v.length ? v.reduce((a, b) => a + b, 0) / v.length : 99; };
+  const sorted = teams.slice().sort((a, b) => STAT_SORT === "avg" ? avg(a) - avg(b) : (rank[a]?.[STAT_SORT] ?? 99) - (rank[b]?.[STAT_SORT] ?? 99));
+  const fmt = (c, v) => v == null ? "–" : c.includes("%") ? v.toFixed(3).replace(/^0/, "") : v >= 100 ? Math.round(v) : v.toFixed(mode === "game" || mode === "day" ? 1 : 0);
+  const th = [...cats, "avg"].map(c => `<th class="srt${c === STAT_SORT ? " on" : ""}" data-c="${c}">${c === "avg" ? "Avg" : c}</th>`).join("");
+  const body = sorted.map((t, i) => `<tr class="${t === MY_TEAM ? "me" : ""}"><td class="hm-t"><span>${i + 1}</span>${esc(t)}</td>${cats.map(c => {
+      const k = rank[t]?.[c], pick = STAT_PICK === t + "|" + c;
+      return `<td class="hm-c${pick ? " pick" : ""}${c === STAT_SORT ? " on" : ""}" data-p="${esc(t)}|${c}" style="background:${k ? heat(k, n) : "transparent"}">${STAT_SHOW === "rank" && !pick ? (k ?? "–") : fmt(c, val[t]?.[c])}</td>`; }).join("")}
+    <td class="hm-avg${STAT_SORT === "avg" ? " on" : ""}">${avg(t).toFixed(1)}</td></tr>`).join("");
+  // what stands out for each team: best and worst categories
+  const pickInfo = STAT_PICK ? (() => { const [t, c] = STAT_PICK.split("|"); return `<div class="hm-pick"><b>${esc(t)}</b> · ${c}: <b>${fmt(c, val[t]?.[c])}</b> ${MODES[mode].toLowerCase()}, ranked ${rank[t]?.[c]} of ${n}${c === "TO" ? " (fewest = 1st)" : ""}</div>`; })() : `<div class="hm-pick muted">Tap a cell to see the number behind it.</div>`;
+  const g = [...S.games].sort((a, b) => (b.per_day ?? -1) - (a.per_day ?? -1)), gmax = g[0]?.per_day || 1, gmin = Math.min(...g.map(x => x.per_day ?? gmax)) * 0.9;
+  const bars = g.map(r => `<div class="gb${r.team === MY_TEAM ? " me" : ""}"><span class="gb-t">${esc(r.team)}</span><span class="gb-b"><i style="width:${((r.per_day - gmin) / (gmax - gmin) * 100).toFixed(1)}%"></i></span><span class="gb-v">${r.per_day.toFixed(2)}</span></div>`).join("");
+  const seg = `<div class="seg">${Object.entries(MODES).map(([k, v]) => `<button type="button" data-m="${k}" class="${k === mode ? "on" : ""}">${v}</button>`).join("")}</div>`;
+  const show = `<div class="seg sm">${[["rank", "Ranks"], ["value", "Values"]].map(([k, v]) => `<button type="button" data-s="${k}" class="${k === STAT_SHOW ? "on" : ""}">${v}</button>`).join("")}</div>`;
+  const basis = mode === "matchup" ? `${S.weeks_done} finished matchup${S.weeks_done === 1 ? "" : "s"}` : `${S.days_done} finished days`;
+  app.innerHTML = `${seg}<div class="card hm-card"><div class="hm-h"><b>Category ranks</b>${show}</div>
+    <div class="scroll"><table class="hm">${`<tr><th class="hm-t">Team</th>${th}</tr>`}${body}</table></div>${pickInfo}
+    <div class="hm-key"><span>1st</span><i></i><span>${n}th</span><small>Tap a heading to sort · Avg = average rank</small></div></div>
+    <div class="card"><div class="hm-h"><b>Games played</b><small>starts per day</small></div>${bars}
+      <p class="note" style="margin:8px 0 0">Starters' games only, over ${S.days_done} finished days. More games usually means more streaming.</p></div>
+    <details class="rc-how"><summary>How it's measured</summary><div class="explain">
+      <p>Based on ${basis}. <strong>Per game</strong> spreads totals over the games starters actually played, so it rewards player quality, not streaming volume. ${mode === "matchup" ? "FG% and FT% are the average of each week's percentage." : "FG% and FT% are season makes ÷ attempts."} TO is ranked fewest first.</p></div></details>
+    <p class="updated">Updated ${esc(ago(S.updated_utc))}.</p>`;
+  app.querySelectorAll(".seg button[data-m]").forEach(b => b.onclick = () => { STAT_MODE = b.dataset.m; statsPage(); });
+  app.querySelectorAll(".seg button[data-s]").forEach(b => b.onclick = () => { STAT_SHOW = b.dataset.s; statsPage(); });
+  app.querySelectorAll(".hm th.srt").forEach(h => h.onclick = () => { STAT_SORT = h.dataset.c; statsPage(); });
+  app.querySelectorAll(".hm td.hm-c").forEach(c => c.onclick = () => { STAT_PICK = STAT_PICK === c.dataset.p ? null : c.dataset.p; statsPage(); });
 }
 
-
-let MODEL = null, LM = null;
+// ---------------------------------------------------------------- trade calculator (tap chips, sticky result)
+let MODEL = null, LM = null, TC = { a: null, b: null, give: new Set(), get: new Set() };
 async function tradePage() {
   setNav("trade"); document.title = "Trade calculator · NBA Fantasy 2026";
-  app.innerHTML = '<p class="empty">Loading…</p>';
-  try { if (!MODEL) { MODEL = await (await fetch("data/model.json", { cache: "no-cache" })).json(); LM = LeagueModel.make(MODEL); } }
-  catch (e) { app.innerHTML = '<p class="empty">The calculator isn\'t available yet.</p>'; return; }
+  if (!MODEL) {
+    app.innerHTML = '<p class="empty">Loading…</p>';
+    try { MODEL = await (await fetch("data/model.json", { cache: "no-cache" })).json(); LM = LeagueModel.make(MODEL); }
+    catch (e) { app.innerHTML = '<p class="empty">The calculator isn\'t available yet.</p>'; return; }
+  }
   const teams = MODEL.teams.slice().sort((x, y) => x.name.localeCompare(y.name));
+  const mine = teams.find(t => t.name === MY_TEAM);
+  if (TC.a == null) { TC.a = (mine || teams[0]).id; TC.b = teams.find(t => t.id !== TC.a).id; }
   const opts = sel => teams.map(t => `<option value="${t.id}" ${t.id === sel ? "selected" : ""}>${esc(t.name)}</option>`).join("");
-  app.innerHTML = `<div class="calc">
-    <p class="updated">Pick two teams and tick the players each side sends. The model scores every remaining matchup (weeks ${MODEL.weeks[0]}-${MODEL.weeks[1]}) before and after.</p>
-    <div class="card"><label class="lbl">Team A sends</label><select id="ta">${opts(teams[0].id)}</select><div class="plist" id="pa"></div></div>
-    <div class="card"><label class="lbl">Team B sends</label><select id="tb">${opts(teams[1].id)}</select><div class="plist" id="pb"></div></div>
-    <div id="out"></div></div>`;
-  const ta = document.getElementById("ta"), tb = document.getElementById("tb");
-  const list = (sel, box) => {
-    const t = MODEL.teams.find(x => x.id === +sel.value);
-    box.innerHTML = t.players.slice().sort((x, y) => (y.rates ? y.rates["0"] : 0) - (x.rates ? x.rates["0"] : 0)).map(p => {
-      const r = p.rates, line = r ? `${r["0"].toFixed(1)} pts · ${r["6"].toFixed(1)} reb · ${r["3"].toFixed(1)} ast` : "no stats";
-      const back = p.ret ? `, back ${new Date(p.ret + "T12:00:00").toLocaleDateString("en-AU", { day: "numeric", month: "short" })}` : "";
-      const inj = p.status && p.status !== "ACTIVE" ? ` · ${esc(p.status.replace(/_/g, " ").toLowerCase())}${back}` : "";
-      return `<label><input type="checkbox" value="${esc(p.name)}"> <span>${esc(p.name)}<br><small>${line}${inj}</small></span></label>`;
+  const dd = s => new Date(s + "T12:00:00").toLocaleDateString("en-AU", { day: "numeric", month: "short" });
+  const chips = (tid, set, side) => MODEL.teams.find(x => x.id === tid).players.slice()
+    .sort((x, y) => (y.rates ? y.rates["0"] : 0) - (x.rates ? x.rates["0"] : 0)).map(p => {
+      const r = p.rates, line = r ? `${r["0"].toFixed(1)} / ${r["6"].toFixed(1)} / ${r["3"].toFixed(1)}` : "no stats";
+      const st = (p.status || "ACTIVE").toUpperCase(), hurt = st !== "ACTIVE";
+      const badge = hurt ? `<em class="${st.startsWith("DAY") ? "dtd" : "out"}">${st.startsWith("DAY") ? "DTD" : "OUT"}${p.ret ? " · " + dd(p.ret) : ""}</em>` : "";
+      return `<button type="button" class="tc-chip${set.has(p.name) ? " on" : ""}" data-side="${side}" data-n="${esc(p.name)}"><b>${esc(p.name)}</b><small>${line}</small>${badge}</button>`;
     }).join("");
-  };
-  const movesNote = (n, m) => (m.drops.length ? `<p class="note">${esc(n)} would have to drop ${m.drops.map(esc).join(" and ")} (their least valuable player) to fit everyone in.</p>` : "")
-    + (m.adds ? `<p class="note">${esc(n)} gets ${m.adds === 1 ? "an open roster spot" : m.adds + " open roster spots"}, counted as a replacement-level free agent.</p>` : "");
-  const run = () => {
-    const out = document.getElementById("out");
-    const a = +ta.value, b = +tb.value;
-    const give = [...document.querySelectorAll("#pa input:checked")].map(x => x.value);
-    const get = [...document.querySelectorAll("#pb input:checked")].map(x => x.value);
-    if (a === b) { out.innerHTML = '<p class="note">Pick two different teams.</p>'; return; }
-    if (!give.length || !get.length) { out.innerHTML = '<p class="note">Tick at least one player on each side.</p>'; return; }
-    const r = LM.evaluate(a, b, give, get), na = MODEL.teams.find(t => t.id === a).name, nb = MODEL.teams.find(t => t.id === b).name;
-    const sgn = x => (x >= 0 ? "+" : "") + x.toFixed(3), cls = x => x > 0.0005 ? "pos" : x < -0.0005 ? "neg" : "";
-    const rows = Object.keys(r.a.cats).map(k => `<tr><td>${k}</td><td class="${cls(r.a.cats[k])}">${pct(r.a.cats[k])}</td><td class="${cls(r.b.cats[k])}">${pct(r.b.cats[k])}</td></tr>`).join("");
-    const winner = Math.abs(r.a.change - r.b.change) < 0.03 ? "Pretty even trade." : (r.a.change > r.b.change ? esc(na) : esc(nb)) + " win this one.";
-    out.innerHTML = `<div class="card"><div class="res">
-      <div><div class="note">${esc(na)}</div><div class="big ${cls(r.a.change)}">${sgn(r.a.change)}</div><div class="note">expected wins</div></div>
-      <div><div class="note">${esc(nb)}</div><div class="big ${cls(r.b.change)}">${sgn(r.b.change)}</div><div class="note">expected wins</div></div></div>
-      <p><strong>${winner}</strong></p>${movesNote(na, r.a.moves)}${movesNote(nb, r.b.moves)}
-      <table class="cats"><tr><th>Category win rate vs league</th><th>${esc(na)}</th><th>${esc(nb)}</th></tr>${rows}</table>
-      <p class="note">Same model as the trade reviews. Rosters as of ${esc(ago(MODEL.updated_utc))}.</p></div>`;
-  };
-  ta.onchange = () => { list(ta, document.getElementById("pa")); run(); };
-  tb.onchange = () => { list(tb, document.getElementById("pb")); run(); };
-  app.querySelector(".calc").addEventListener("change", e => { if (e.target.type === "checkbox") run(); });
-  list(ta, document.getElementById("pa")); list(tb, document.getElementById("pb")); run();
+  const na = MODEL.teams.find(t => t.id === TC.a).name, nb = MODEL.teams.find(t => t.id === TC.b).name;
+  const sgn = x => (x >= 0 ? "+" : "−") + Math.abs(x).toFixed(2), cls = x => x > 0.005 ? "pos" : x < -0.005 ? "neg" : "";
+  let bar, detail = "";
+  if (TC.a === TC.b) bar = `<span class="tc-hint">Pick two different teams.</span>`;
+  else if (!TC.give.size || !TC.get.size) bar = `<span class="tc-hint">${!TC.give.size && !TC.get.size ? "Tap players on both teams to build a trade." : `Now pick who ${!TC.give.size ? esc(na) : esc(nb)} sends.`}</span>`;
+  else {
+    const r = LM.evaluate(TC.a, TC.b, [...TC.give], [...TC.get]);
+    const even = Math.abs(r.a.change - r.b.change) < 0.03, win = r.a.change > r.b.change ? na : nb;
+    bar = `<div class="tc-side"><small>${esc(na)}</small><b class="${cls(r.a.change)}">${sgn(r.a.change)}</b></div>
+      <div class="tc-verdict">${even ? "Pretty even" : `<b>${esc(win)}</b> win it`}<small>expected wins</small></div>
+      <div class="tc-side r"><small>${esc(nb)}</small><b class="${cls(r.b.change)}">${sgn(r.b.change)}</b></div>`;
+    const mx = Math.max(0.02, ...Object.keys(r.a.cats).flatMap(k => [Math.abs(r.a.cats[k]), Math.abs(r.b.cats[k])]));
+    const dv = x => { const w = (Math.abs(x) / mx * 50).toFixed(1); return `<span class="tc-dv"><i class="${cls(x)}" style="${x >= 0 ? "left:50%" : "right:50%"};width:${w}%"></i></span>`; };
+    const rows = Object.keys(r.a.cats).map(k => `<div class="tc-row"><span class="v ${cls(r.a.cats[k])}">${pct(r.a.cats[k])}</span>${dv(r.a.cats[k])}<b>${k}</b>${dv(r.b.cats[k])}<span class="v ${cls(r.b.cats[k])}">${pct(r.b.cats[k])}</span></div>`).join("");
+    const mv = (n, m) => (m.drops.length ? `<p class="note">${esc(n)} would have to drop ${m.drops.map(esc).join(" and ")} to fit everyone in.</p>` : "")
+      + (m.adds ? `<p class="note">${esc(n)} gets ${m.adds === 1 ? "an open roster spot" : m.adds + " open roster spots"}, counted as a replacement-level free agent.</p>` : "");
+    detail = `<div class="card tc-det"><div class="hm-h"><b>Category win rate vs the league</b><small>change</small></div>
+      <div class="tc-head"><span>${esc(na)}</span><span>${esc(nb)}</span></div>${rows}${mv(na, r.a.moves)}${mv(nb, r.b.moves)}
+      <p class="note" style="margin-top:8px">Same model as the trade reviews: every remaining matchup (weeks ${MODEL.weeks[0]}–${MODEL.weeks[1]}) scored before and after. Rosters as of ${esc(ago(MODEL.updated_utc))}.</p></div>`;
+  }
+  const deal = (set) => set.size ? [...set].map(esc).join(" + ") : "—";
+  app.innerHTML = `<div class="tc">
+    <div class="tc-teams"><select id="ta">${opts(TC.a)}</select><span>⇄</span><select id="tb">${opts(TC.b)}</select></div>
+    <div class="tc-deal card"><div><small>${esc(na)} sends</small><b>${deal(TC.give)}</b></div><div><small>${esc(nb)} sends</small><b>${deal(TC.get)}</b></div>
+      ${TC.give.size || TC.get.size ? `<button type="button" class="tc-clear">Clear</button>` : ""}</div>
+    ${detail}
+    <div class="grp">${esc(na)} <span style="text-transform:none;letter-spacing:0;font-weight:600">· pts / reb / ast</span></div><div class="tc-grid">${chips(TC.a, TC.give, "a")}</div>
+    <div class="grp">${esc(nb)}</div><div class="tc-grid">${chips(TC.b, TC.get, "b")}</div>
+    <div class="tc-bar-wrap"><div class="tc-res">${bar}</div></div></div>`;
+  document.getElementById("ta").onchange = e => { TC.a = +e.target.value; TC.give.clear(); tradePage(); };
+  document.getElementById("tb").onchange = e => { TC.b = +e.target.value; TC.get.clear(); tradePage(); };
+  const clr = app.querySelector(".tc-clear"); if (clr) clr.onclick = () => { TC.give.clear(); TC.get.clear(); tradePage(); };
+  app.querySelectorAll(".tc-chip").forEach(c => c.onclick = () => {
+    const s = c.dataset.side === "a" ? TC.give : TC.get, n = c.dataset.n;
+    s.has(n) ? s.delete(n) : s.add(n);
+    const y = window.scrollY; tradePage(); window.scrollTo(0, y);
+  });
 }
 
+// ---------------------------------------------------------------- injuries (by fantasy team)
 let INJ = null, INJ_F = "owned";
 async function injuriesPage() {
   setNav("injuries"); document.title = "Injuries · NBA Fantasy 2026";
-  app.innerHTML = '<p class="empty">Loading…</p>';
-  try { if (!INJ) INJ = await (await fetch("data/injuries.json", { cache: "no-cache" })).json(); }
-  catch (e) { app.innerHTML = '<p class="empty">The injury report isn\'t available yet. It appears after the next data refresh.</p>'; return; }
-  const all = INJ.players, teams = [...new Set(all.map(p => p.fantasy_team).filter(Boolean))].sort();
-  const f = INJ_F, list = all.filter(p => f === "all" ? true : f === "owned" ? p.fantasy_team : f === "fa" ? !p.fantasy_team : p.fantasy_team === f);
-  const ORDER = ["Days", "1 week", "1-2 weeks", "2-4 weeks", "1-2 months", "2+ months", "Season", "Unknown"];
-  const LABEL = { "Days": "Back within a couple of days", "1 week": "Out up to a week", "1-2 weeks": "Out 1–2 weeks", "2-4 weeks": "Out 2–4 weeks",
-                  "1-2 months": "Out 1–2 months", "2+ months": "Out 2+ months", "Season": "Out for the season", "Unknown": "No return date" };
+  if (!INJ) {
+    app.innerHTML = '<p class="empty">Loading…</p>';
+    try { INJ = await (await fetch("data/injuries.json", { cache: "no-cache" })).json(); }
+    catch (e) { app.innerHTML = '<p class="empty">The injury report isn\'t available yet. It appears after the next data refresh.</p>'; return; }
+  }
+  const all = INJ.players, f = INJ_F;
+  const owned = all.filter(p => p.fantasy_team);
+  const teams = [...new Set(owned.map(p => p.fantasy_team))];
+  const isOut = p => !(p.status || "").toLowerCase().startsWith("day");
   const d = s => s ? new Date(s + "T12:00:00").toLocaleDateString("en-AU", { day: "numeric", month: "short" }) : "–";
-  const chip = p => { const s = (p.status || "").toLowerCase(); return `<span class="chip ${s.startsWith("day") ? "dtd" : "out"}">${esc(p.status)}</span>`; };
+  const TF = ["Days", "1 week", "1-2 weeks", "2-4 weeks", "1-2 months", "2+ months", "Season", "Unknown"];
+  const sev = p => TF.indexOf(p.timeframe) + (isOut(p) ? 0 : -0.5);
   const row = p => {
-    const line = p.per_game ? ` · ${p.per_game.PTS}/${p.per_game.REB}/${p.per_game.AST}` : "";
-    const owner = p.fantasy_team ? `${esc(p.fantasy_team)}${p.on_ir ? " (IR)" : ""}` : "Free agent";
     const ret = p.timeframe === "Season" ? "Season" : p.days_out === 0 ? "Any day" : d(p.return_date);
-    const g = p.games_missed == null ? "" : `${p.games_missed} game${p.games_missed === 1 ? "" : "s"} missed`;
-    return `<div class="inj"><div><div class="nm">${esc(p.name)}</div>
-      <div class="sub">${esc(p.nba_team)} ${esc(p.pos || "")} · ${owner}${line}</div>
-      <div class="chips">${chip(p)}${p.injury ? `<span class="chip ft">${esc(p.injury)}</span>` : ""}</div></div>
-      <div class="ret"><small>Back</small><b>${esc(ret)}</b><small>${g}</small></div>
-      ${p.note ? `<div class="nt">${esc(p.note)} <small>(${d(p.note_date)})</small></div>` : ""}</div>`;
+    const line = p.per_game ? `${p.per_game.PTS}/${p.per_game.REB}/${p.per_game.AST}` : "";
+    const who = f === "owned" || teams.includes(f) ? "" : p.fantasy_team ? ` · ${esc(p.fantasy_team)}` : " · free agent";
+    return `<details class="ij"><summary>
+      <span class="ij-n"><b>${esc(p.name)}${p.on_ir ? ' <em class="ir">IR</em>' : ""}</b><small>${esc(p.nba_team)} ${esc(p.pos || "")}${line ? " · " + line : ""}${who}</small></span>
+      <span class="ij-s ${isOut(p) ? "out" : "dtd"}">${isOut(p) ? "Out" : "DTD"}</span>
+      <span class="ij-r"><b>${esc(ret)}</b><small>${p.games_missed == null ? "" : p.games_missed + " gm" + (p.games_missed === 1 ? "" : "s")}</small></span></summary>
+      <div class="ij-x">${p.injury ? `<span class="chip ft">${esc(p.injury)}</span> ` : ""}${p.note ? esc(p.note) + ` <small>(${d(p.note_date)})</small>` : "No note yet."}</div></details>`;
   };
-  const groups = ORDER.map(k => [k, list.filter(p => p.timeframe === k)]).filter(([, l]) => l.length)
-    .map(([k, l]) => `<div class="grp">${LABEL[k]} · ${l.length}</div><div class="card">${l.map(row).join("")}</div>`).join("");
+  // strip: games-losing players per team (Out counts 1, day-to-day ½)
+  const load = t => owned.filter(p => p.fantasy_team === t && !p.on_ir);
+  const strip = teams.map(t => [t, load(t).filter(isOut).length, load(t).filter(p => !isOut(p)).length])
+    .sort((a, b) => (b[1] + b[2] / 2) - (a[1] + a[2] / 2) || a[0].localeCompare(b[0]));
+  const smax = Math.max(1, ...strip.map(s => s[1] + s[2]));
+  const stripHtml = `<div class="card ij-strip"><div class="hm-h"><b>Who's hurting</b><small>out · day-to-day · tap a team</small></div>${strip.map(([t, o, q]) =>
+    `<button type="button" class="sb${t === MY_TEAM ? " me" : ""}${f === t ? " on" : ""}" data-t="${esc(t)}"><span class="sb-t">${esc(t)}</span><span class="sb-b"><i class="o" style="width:${o / smax * 100}%"></i><i class="q" style="width:${q / smax * 100}%"></i></span><span class="sb-v">${o}${q ? `<small>+${q}</small>` : ""}</span></button>`).join("")}
+    <p class="note" style="margin:6px 0 0">Players on IR aren't counted here.</p></div>`;
+  let groups;
+  if (f === "owned" || teams.includes(f)) {
+    const order = (f === "owned" ? teams : [f]).slice().sort((a, b) => (b === MY_TEAM) - (a === MY_TEAM) || a.localeCompare(b));
+    groups = order.map(t => { const l = owned.filter(p => p.fantasy_team === t).sort((a, b) => sev(a) - sev(b));
+      return `<div class="grp">${esc(t)}${t === MY_TEAM ? " · you" : ""} <span style="text-transform:none;letter-spacing:0;font-weight:600">· ${l.length}</span></div><div class="card ij-card">${l.map(row).join("")}</div>`; }).join("");
+  } else {
+    const list = all.filter(p => f === "all" || !p.fantasy_team);
+    const LBL = { "Days": "Back in a couple of days", "1 week": "Out up to a week", "1-2 weeks": "Out 1–2 weeks", "2-4 weeks": "Out 2–4 weeks", "1-2 months": "Out 1–2 months", "2+ months": "Out 2+ months", "Season": "Out for the season", "Unknown": "No return date" };
+    groups = TF.map(k => [k, list.filter(p => p.timeframe === k)]).filter(([, l]) => l.length)
+      .map(([k, l]) => `<div class="grp">${LBL[k]} · ${l.length}</div><div class="card ij-card">${l.map(row).join("")}</div>`).join("");
+  }
   const opt = (v, t) => `<option value="${esc(v)}"${v === f ? " selected" : ""}>${esc(t)}</option>`;
-  app.innerHTML = `<div class="filters"><select id="injf">${opt("owned", "On a fantasy team")}${opt("fa", "Free agents")}${opt("all", "Whole NBA")}${teams.map(t => opt(t, t)).join("")}</select></div>
-    <p class="updated">${list.length} injured · updated ${esc(ago(INJ.updated_utc))} · refreshes every few hours. "Back" is ESPN's projected return date (US time); games missed counts that NBA team's games until then. Projections often move, so check the latest note.</p>
-    ${groups || '<p class="empty">Nobody injured here. Enjoy it while it lasts.</p>'}`;
+  app.innerHTML = `<div class="filters"><select id="injf">${opt("owned", "All fantasy teams")}${opt("fa", "Free agents")}${opt("all", "Whole NBA")}${teams.slice().sort().map(t => opt(t, t)).join("")}</select></div>
+    ${f === "fa" || f === "all" ? "" : stripHtml}
+    ${groups || '<p class="empty">Nobody injured here. Enjoy it while it lasts.</p>'}
+    <p class="updated">Updated ${esc(ago(INJ.updated_utc))}. Tap a player for ESPN's latest note. "Back" is ESPN's projected return (US date) and "gms" the games his NBA team plays before then; projections often move.</p>`;
   document.getElementById("injf").onchange = e => { INJ_F = e.target.value; injuriesPage(); };
+  app.querySelectorAll(".sb").forEach(b => b.onclick = () => { INJ_F = INJ_F === b.dataset.t ? "owned" : b.dataset.t; injuriesPage(); });
 }
 
 let ACC = null, PLOG = null;

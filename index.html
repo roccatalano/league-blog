@@ -275,6 +275,25 @@
   .tc .wp-tip { top: -8px; line-height: 1.45; white-space: nowrap; text-align: left; }
   .tc .wp-tip .pos { color: #69db7c; } .tc .wp-tip .neg { color: #ff8787; }
   .tc-dates { margin-left: 38px; margin-right: 50px; }
+  .ld { padding: 6px 14px; }
+  .ld .ladder td, .ld .ladder th { padding-left: 3px; padding-right: 3px; }
+  .ld .ladder td { font-variant-numeric: tabular-nums; }
+  .ld-r { cursor: pointer; }
+  .ld-r:hover td { background: var(--accent-soft); }
+  .ld-r.open td { border-bottom-color: transparent; background: var(--accent-soft); }
+  .ld .up, .ld .down { margin-left: 3px; font-size: 10.5px; }
+  .ld-x td { padding: 4px 4px 14px !important; text-align: left !important; white-space: normal !important; background: var(--accent-soft); color: var(--ink) !important; }
+  .ld-cats { display: grid; grid-template-columns: repeat(9, 1fr); gap: 3px; margin-top: 2px; }
+  .ld-c { background: var(--card); border-radius: 8px; padding: 6px 0; text-align: center; border: 1px solid var(--line); }
+  .ld-c b { display: block; font-size: 10px; color: var(--muted); font-weight: 700; }
+  .ld-c span { display: block; font-family: "Archivo Black", Inter, sans-serif; font-size: 12.5px; margin-top: 2px; }
+  .ld-c small { display: block !important; font-size: 10px !important; color: var(--muted); }
+  .ld-c.hi { background: #d3f9d8; border-color: #b2f2bb; } .ld-c.hi span { color: #2b8a3e; }
+  .ld-c.lo { background: #ffe3e3; border-color: #ffc9c9; } .ld-c.lo span { color: #c92a2a; }
+  @media (prefers-color-scheme: dark) { .ld-c.hi { background: #173a20; border-color: #1f4d2b; } .ld-c.hi span { color: #8ce99a; } .ld-c.lo { background: #3b1717; border-color: #5c2020; } .ld-c.lo span { color: #ff8787; } }
+  .ld-facts { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px; color: var(--muted); margin-top: 8px; }
+  .ld-facts b { color: var(--ink); }
+  @media (max-width: 420px) { .ld-cats { grid-template-columns: repeat(5, 1fr); } }
   footer { color: var(--muted); font-size: 13px; text-align: center; padding: 0 16px 32px; }
 </style>
 </head>
@@ -420,22 +439,53 @@ async function oddsPage() {
 }
 
 
+let LAD = null, LAD_SORT = "ladder", LAD_OPEN = null;
 async function ladderPage() {
   setNav("ladder"); document.title = "Ladder · NBA Fantasy 2026";
-  app.innerHTML = '<p class="empty">Loading…</p>';
-  let L;
-  try { L = await (await fetch("data/league.json", { cache: "no-cache" })).json(); }
-  catch (e) { app.innerHTML = '<p class="empty">The ladder isn\'t available yet.</p>'; return; }
-  const mv = x => !x ? "" : `<span class="${x > 0 ? "up" : "down"}"> ${x > 0 ? "▲" : "▼"}${Math.abs(x).toFixed(1)}</span>`;
+  if (!LAD) {
+    app.innerHTML = '<p class="empty">Loading…</p>';
+    try { LAD = await (await fetch("data/league.json", { cache: "no-cache" })).json(); }
+    catch (e) { app.innerHTML = '<p class="empty">The ladder isn\'t available yet.</p>'; return; }
+  }
+  const L = LAD, has = L.ladder[0].power_rank != null;
+  const mv = (x, d = 0) => !x || Math.abs(x) < 0.05 ? "" : `<span class="${x > 0 ? "up" : "down"}">${x > 0 ? "▲" : "▼"}${Math.abs(x).toFixed(d)}</span>`;
   const price = x => "$" + (x >= 10 ? Math.round(x) : x.toFixed(2));
-  const rows = L.ladder.map((r, i) => `<tr class="${i === L.finals_teams - 1 ? "cut" : ""}">
-    <td>${r.seed ?? i + 1}</td>
-    <td><span class="tm">${esc(r.team)}</span><small>${r.cats[0]}-${r.cats[1]}-${r.cats[2]} cats · power ${r.power_pct}%</small></td>
-    <td>${r.w}-${r.l}${r.t ? "-" + r.t : ""}</td>
-    <td>${Math.round(r.finals_pct)}%${mv(r.finals_move)}<small>${price(r.finals_price)}</small></td>
-    <td>${r.title_pct >= 1 ? Math.round(r.title_pct) : r.title_pct.toFixed(1)}%${mv(r.title_move)}<small>${price(r.title_price)}</small></td></tr>`).join("");
-  app.innerHTML = `<p class="updated">Updated ${esc(ago(L.updated_utc))}. Top ${L.finals_teams} make the finals (dashed line). Finals and title chances come from ${L.sims.toLocaleString()} simulated seasons, using this week's live odds; arrows show the change over the last day.</p>
-    <div class="card scroll"><table class="ladder"><tr><th>#</th><th>Team</th><th>Rec</th><th>Finals</th><th>Title</th></tr>${rows}</table></div>`;
+  const pc = x => x >= 1 || x === 0 ? Math.round(x) + "%" : x.toFixed(1) + "%";
+  const SORTS = { ladder: ["Ladder", (a, b) => (a.seed ?? 99) - (b.seed ?? 99)],
+                  power: ["Power", (a, b) => a.power_rank - b.power_rank],
+                  proj: ["Projected", (a, b) => b.proj_w - a.proj_w] };
+  const sort = has ? LAD_SORT : "ladder", list = L.ladder.slice().sort(SORTS[sort][1]);
+  const seg = has ? `<div class="seg">${Object.entries(SORTS).map(([k, [l]]) => `<button type="button" data-s="${k}" class="${k === sort ? "on" : ""}">${l}</button>`).join("")}</div>` : "";
+  const CATS = ["PTS", "REB", "AST", "STL", "BLK", "3PM", "TO", "FG%", "FT%"];
+  const ord = k => k + (["th", "st", "nd", "rd"][(k % 100 > 10 && k % 100 < 14) ? 0 : (k % 10 < 4 ? k % 10 : 0)]);
+  const detail = r => {
+    if (!has) return "";
+    const cells = CATS.map(c => { const v = r.cat_strength[c], k = r.cat_rank[c];
+      const tone = k <= 3 ? "hi" : k >= 12 ? "lo" : "";
+      return `<div class="ld-c ${tone}"><b>${c}</b><span>${v}%</span><small>${ord(k)}</small></div>`; }).join("");
+    return `<tr class="ld-x"><td colspan="5">
+      <div class="ld-cats">${cells}</div>
+      <p class="note" style="font-size:12px;margin:6px 0 0">Chance to win each category vs an average opponent in a typical week · league rank.</p>
+      <div class="ld-facts"><span>Categories <b>${r.cats[0]}-${r.cats[1]}-${r.cats[2]}</b></span><span>Title <b>${pc(r.title_pct)}</b> ${price(r.title_price)}${mv(r.title_move, 1)}</span><span>Finals ${price(r.finals_price)}</span><span>FAAB <b>$${r.faab_left}</b></span></div></td></tr>`;
+  };
+  const rows = list.map((r, i) => {
+    const cut = sort === "ladder" && i === L.finals_teams - 1 ? " cut" : "", open = LAD_OPEN === r.team;
+    const rank = sort === "ladder" ? (r.seed ?? i + 1) : sort === "power" ? r.power_rank : i + 1;
+    return `<tr class="ld-r${cut}${open ? " open" : ""}" data-t="${esc(r.team)}">
+      <td>${rank}</td>
+      <td><span class="tm">${esc(r.team)}</span><small>${r.w}-${r.l}${r.t ? "-" + r.t : ""} · ${r.cats[0]}-${r.cats[1]}${r.cats[2] ? "-" + r.cats[2] : ""} cats</small></td>
+      ${has ? `<td>${r.proj_w.toFixed(1)}<small>${r.proj_l.toFixed(1)} L</small></td><td>${r.power_rank}${mv(r.power_move)}<small>${r.power_pct}%</small></td>` : ""}
+      <td><b>${pc(r.finals_pct)}</b>${mv(r.finals_move)}</td></tr>${open ? detail(r) : ""}`;
+  }).join("");
+  const head = `<tr><th>#</th><th>Team</th>${has ? "<th>Proj</th><th>Power</th>" : ""}<th>Finals</th></tr>`;
+  app.innerHTML = `${seg}<div class="card ld"><table class="ladder">${head}${rows}</table></div>
+    <details class="rc-how"><summary>What the columns mean</summary><div class="explain">
+      <p><strong>Proj</strong> is each team's expected final number of wins (current record plus the model's forecast for every remaining week, from ${L.sims.toLocaleString()} simulated seasons). The small number underneath is projected losses out of ${L.weeks || 18} weeks.</p>
+      <p><strong>Power</strong> ranks teams by roster strength alone: the average chance of beating every other team in a normal week, ignoring the schedule. The % underneath is that average. Arrows show movement over the last day.</p>
+      <p><strong>Finals</strong> is the chance of finishing top ${L.finals_teams}${sort === "ladder" ? " (the dashed line)" : ""}. <strong>Tap a team</strong> for its category strengths, title odds and FAAB left.</p></div></details>
+    <p class="updated">Updated ${esc(ago(L.updated_utc))}.</p>`;
+  app.querySelectorAll(".seg button").forEach(b => b.onclick = () => { LAD_SORT = b.dataset.s; ladderPage(); });
+  app.querySelectorAll(".ld-r").forEach(tr => tr.onclick = () => { LAD_OPEN = LAD_OPEN === tr.dataset.t ? null : tr.dataset.t; ladderPage(); });
 }
 
 let STATS = null, STAT_MODE = "matchup";

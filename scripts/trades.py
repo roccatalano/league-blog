@@ -228,7 +228,10 @@ def main():
                             for i in range(len(K)):
                                 tot[side][i] += x[2 + i]
                 w, l, _ = score(tot[A], tot[B])
-                series.append([day["date"], w - l])
+                nd = len(series) + 1
+                dd = [tot[A][i] - tot[B][i] for i in range(len(K))]
+                series.append([day["date"], w - l,
+                               wins_added(ids[A], dd, nd / 7, dists), wins_added(ids[B], [-x for x in dd], nd / 7, dists)])
             w, l, cats = score(tot[A], tot[B])
             ndays = sum(1 for sp in days if days[sp]["date"] >= str(first_day))
             wk = ndays / 7

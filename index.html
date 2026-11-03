@@ -256,6 +256,15 @@
   .mu-score small { font-size: 14px; color: var(--muted); }
   .tr-pend { font-size: 16px; color: var(--muted); }
   .mu-odds b { color: var(--ink); }
+  .tc-a, .tc-b { fill: none; stroke-width: 2.4; stroke-linejoin: round; stroke-linecap: round; }
+  .tc-a { stroke: var(--accent); } .tc-b { stroke: #4c6ef5; }
+  .tc-zero { position: absolute; left: -2px; transform: translate(-100%, -50%); font-size: 10.5px; font-weight: 700; color: var(--muted); padding-right: 4px; }
+  .tc .wp-plot { margin-left: 12px; margin-right: 6px; }
+  .tc-key { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12px; font-weight: 600; margin-top: 6px; color: var(--muted); }
+  .tc-key span::before { content: ""; display: inline-block; width: 14px; height: 3px; border-radius: 2px; vertical-align: middle; margin-right: 6px; }
+  .tc-key .ka { color: var(--ink); } .tc-key .ka::before { background: var(--accent); }
+  .tc-key .kb { color: var(--ink); } .tc-key .kb::before { background: #4c6ef5; }
+  .tc-key .kn::before { display: none; } .tc-key .kn { margin-left: auto; }
   footer { color: var(--muted); font-size: 13px; text-align: center; padding: 0 16px 32px; }
 </style>
 </head>
@@ -685,22 +694,23 @@ async function recordPage() {
 
 let TR = null;
 function tradeChart(series, A, B) {
-  if (!series || series.length < 2) return "";
-  const W = 600, H = 120, n = series.length - 1, X = i => i / n * W, Y = v => (1 - (v + 9) / 18) * H;
-  const line = series.map((p, i) => (i ? "L" : "M") + X(i).toFixed(1) + " " + Y(p[1]).toFixed(1)).join(" ");
-  const area = `${line} L${W} ${Y(0)} L0 ${Y(0)} Z`, id = "t" + Math.random().toString(36).slice(2, 8);
-  const last = series[n];
+  // each team's matchup wins added since the trade, day by day (series: [date, margin, winsA, winsB])
+  if (!series || !series.length || series[0].length < 4) return "";
+  const pts = [[null, 0, 0, 0], ...series], n = pts.length - 1;
+  const lim = Math.max(0.02, ...pts.map(p => Math.max(Math.abs(p[2]), Math.abs(p[3])))) * 1.15;
+  const W = 600, H = 120, X = i => i / n * W, Y = v => (1 - (v + lim) / (2 * lim)) * H;
+  const path = k => pts.map((p, i) => (i ? "L" : "M") + X(i).toFixed(1) + " " + Y(p[k]).toFixed(1)).join(" ");
   const fd = x => new Date(x + "T12:00:00").toLocaleDateString("en-AU", { day: "numeric", month: "short" });
-  const ticks = "";
-  return `<div class="wp tc"><div class="wp-lbl top">${esc(A)}</div><div class="wp-plot" style="height:122px">
+  const start = new Date(new Date(series[0][0] + "T12:00:00") - 864e5).toISOString().slice(0, 10);
+  const end = (k, cls) => `<span class="wp-dot${cls}" style="left:100%;top:${(Y(pts[n][k]) + 2) / (H + 4) * 100}%"></span>`;
+  return `<div class="wp tc"><div class="wp-plot" style="height:122px">
     <svg viewBox="0 -2 ${W} ${H + 4}" preserveAspectRatio="none" style="height:122px">
-      <defs><clipPath id="${id}a"><rect x="0" y="0" width="${W}" height="${Y(0)}"/></clipPath><clipPath id="${id}b"><rect x="0" y="${Y(0)}" width="${W}" height="${H}"/></clipPath></defs>
       <line x1="0" x2="${W}" y1="${Y(0)}" y2="${Y(0)}" class="wp-mid"/>
-      <path d="${area}" class="wp-fh" clip-path="url(#${id}a)"/><path d="${area}" class="wp-fa" clip-path="url(#${id}b)"/>
-      <path d="${line}" class="wp-line" vector-effect="non-scaling-stroke"/>${ticks}</svg>
-    <span class="wp-dot${last[1] < 0 ? " a" : ""}" style="left:${X(n) / W * 100}%;top:${(Y(last[1]) + 2) / (H + 4) * 100}%"></span></div>
-    <div class="tc-dates"><span>${fd(series[0][0])}</span><span>${fd(series[n][0])}</span></div>
-    <div class="wp-lbl bot">${esc(B)}</div></div>`;
+      <path d="${path(3)}" class="tc-b" vector-effect="non-scaling-stroke"/>
+      <path d="${path(2)}" class="tc-a" vector-effect="non-scaling-stroke"/></svg>
+    ${end(3, " a")}${end(2, "")}<span class="tc-zero" style="top:${(Y(0) + 2) / (H + 4) * 100}%">0</span></div>
+    <div class="tc-dates"><span>${fd(start)} · trade</span><span>${fd(series[n - 1][0])}</span></div>
+    <div class="tc-key"><span class="ka">${esc(A)}</span><span class="kb">${esc(B)}</span><span class="kn">wins added since the trade</span></div></div>`;
 }
 async function tradesPage() {
   setNav("trades"); document.title = "Trades · NBA Fantasy 2026";
@@ -745,7 +755,7 @@ async function tradesPage() {
     <p><strong>The score</strong> treats each trade as a matchup between the two hauls: one team's new players against the other's, across all 9 categories. Only games a player started for his new team count, and he stops counting if he's dropped or traded on.</p>
     <p><strong>Wins</strong> is how many matchup wins the trade has actually been worth to each team so far. It weighs each category by how much it moves that team's real chances, so stats a team didn't need barely count. That's why the score and the wins can disagree.</p>
     <p><strong>Grades</strong> come from wins added per week and appear once both sides have 12 games.</p>
-    <p><strong>The chart</strong> is the category margin after each day: above the middle line the top team is winning the trade, below it the bottom team is.</p>
+    <p><strong>The chart</strong> tracks each team's wins added, day by day since the trade. Both lines start at 0; the one climbing is the team winning the trade.</p>
     <p><strong>Details</strong> has the stats behind it, plus what the model expected when the trade happened and what it expects from today on.</p></div></details>`;
   app.innerHTML = `<p class="updated">Every trade this season and who's actually winning it · updated ${esc(ago(TR.updated_utc))}.</p>${cards}${how}`;
 }

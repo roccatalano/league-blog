@@ -228,6 +228,24 @@
   .wp-lbl.bot { margin-top: 2px; color: #4c6ef5; }
   .wp-tip { position: absolute; top: -6px; transform: translateX(-50%); background: var(--ink); color: var(--bg); font-size: 12px; padding: 4px 8px; border-radius: 8px; white-space: nowrap; opacity: 0; transition: opacity .15s; pointer-events: none; z-index: 2; }
   .mu-team.lose { opacity: .5; }
+  .tr-head { display: grid; grid-template-columns: 1fr auto 1fr; gap: 10px; align-items: start; margin-top: 6px; }
+  .tr-side:last-child { text-align: right; }
+  .tr-team { font-weight: 700; font-size: 15px; line-height: 1.25; }
+  .tr-gets { font-size: 12.5px; color: var(--muted); margin-top: 3px; line-height: 1.35; }
+  .tr-grade { display: inline-block; margin-top: 8px; font-family: "Archivo Black", Inter, sans-serif; font-size: 20px; line-height: 1; padding: 6px 10px; border-radius: 10px; }
+  .tr-grade.a { background: #d3f9d8; color: #2b8a3e; } .tr-grade.b { background: #e7f5ff; color: #1971c2; } .tr-grade.c { background: #fff3bf; color: #946200; } .tr-grade.d { background: #ffe3e3; color: #c92a2a; }
+  .tr-grade.early { font-family: Inter, sans-serif; font-size: 11px; font-weight: 700; padding: 4px 8px; background: var(--line); color: var(--muted); }
+  @media (prefers-color-scheme: dark) { .tr-grade.a { background: #173a20; color: #8ce99a; } .tr-grade.b { background: #132c44; color: #74c0fc; } .tr-grade.c { background: #3a2f0b; color: #ffd43b; } .tr-grade.d { background: #3b1717; color: #ff8787; } }
+  .tr-mid { text-align: center; padding-top: 2px; min-width: 64px; }
+  .tr-score { font-family: "Archivo Black", Inter, sans-serif; font-size: 30px; line-height: 1; }
+  .tr-score small { font-size: 14px; color: var(--muted); }
+  .tr-lead { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .4px; margin-top: 4px; max-width: 90px; }
+  .tc { margin-top: 16px; }
+  .tb-row { display: grid; grid-template-columns: 22px 1fr auto; gap: 10px; align-items: center; padding: 11px 0; border-bottom: 1px solid var(--line); color: inherit; text-decoration: none; }
+  .tb-row:last-child { border-bottom: 0; }
+  .tb-row small { display: block; color: var(--muted); font-size: 12px; }
+  .tb-rk { font-family: "Archivo Black", Inter, sans-serif; color: var(--muted); }
+  .tb-sc { font-family: "Archivo Black", Inter, sans-serif; font-size: 18px; }
   footer { color: var(--muted); font-size: 13px; text-align: center; padding: 0 16px 32px; }
 </style>
 </head>
@@ -235,7 +253,7 @@
 <header><div class="wrap">
   <a href="#"><div class="brand">NBA FANTASY <span>2026</span></div></a>
   <div class="tag">Daily posts, trade reviews and weekly roundups. Updated automatically.</div>
-  <nav><a href="#/" data-n="posts">Posts</a><a href="#/ladder" data-n="ladder">Ladder</a><a href="#/odds" data-n="odds">Live odds</a><a href="#/trade" data-n="trade">Trade calculator</a><a href="#/dawg" data-n="dawg">Dawg index</a><a href="#/stats" data-n="stats">Stat ranks</a><a href="#/injuries" data-n="injuries">Injuries</a><a href="#/record" data-n="record">Model record</a></nav>
+  <nav><a href="#/" data-n="posts">Posts</a><a href="#/ladder" data-n="ladder">Ladder</a><a href="#/odds" data-n="odds">Live odds</a><a href="#/trade" data-n="trade">Trade calculator</a><a href="#/dawg" data-n="dawg">Dawg index</a><a href="#/stats" data-n="stats">Stat ranks</a><a href="#/injuries" data-n="injuries">Injuries</a><a href="#/trades" data-n="trades">Trades</a><a href="#/record" data-n="record">Model record</a></nav>
 </div></header>
 <main class="wrap" id="app"><p class="empty">Loading…</p></main>
 <footer>Odds and expected wins come from a model, not a crystal ball.</footer>
@@ -655,6 +673,81 @@ async function recordPage() {
   app.innerHTML = `<div class="rc">${hero}${weeks}${conf}${cats}${how}</div>`;
 }
 
+let TR = null;
+function tradeChart(series, A, B) {
+  if (!series || series.length < 2) return "";
+  const W = 600, H = 120, n = series.length - 1, X = i => i / n * W, Y = v => (1 - (v + 9) / 18) * H;
+  const line = series.map((p, i) => (i ? "L" : "M") + X(i).toFixed(1) + " " + Y(p[1]).toFixed(1)).join(" ");
+  const area = `${line} L${W} ${Y(0)} L0 ${Y(0)} Z`, id = "t" + Math.random().toString(36).slice(2, 8);
+  const last = series[n];
+  const ticks = series.map((p, i) => [p, i]).filter(([p], i) => i === 0 || i === n || new Date(p[0] + "T12:00:00").getDay() === 1)
+    .map(([p, i]) => `<text x="${X(i)}" y="${H + 14}" class="wp-day" text-anchor="${i === 0 ? "start" : i === n ? "end" : "middle"}">${new Date(p[0] + "T12:00:00").toLocaleDateString("en-AU", { day: "numeric", month: "short" })}</text>`).join("");
+  return `<div class="wp tc"><div class="wp-lbl top">${esc(A)} winning</div><div class="wp-plot" style="height:136px">
+    <svg viewBox="0 -2 ${W} ${H + 18}" preserveAspectRatio="none" style="height:136px">
+      <defs><clipPath id="${id}a"><rect x="0" y="0" width="${W}" height="${Y(0)}"/></clipPath><clipPath id="${id}b"><rect x="0" y="${Y(0)}" width="${W}" height="${H}"/></clipPath></defs>
+      <line x1="0" x2="${W}" y1="${Y(0)}" y2="${Y(0)}" class="wp-mid"/>
+      <path d="${area}" class="wp-fh" clip-path="url(#${id}a)"/><path d="${area}" class="wp-fa" clip-path="url(#${id}b)"/>
+      <path d="${line}" class="wp-line" vector-effect="non-scaling-stroke"/>${ticks}</svg>
+    <span class="wp-dot${last[1] < 0 ? " a" : ""}" style="left:${X(n) / W * 100}%;top:${(Y(last[1]) + 2) / (H + 18) * 100}%"></span></div>
+    <div class="wp-lbl bot">${esc(B)} winning</div></div>`;
+}
+async function tradesPage() {
+  setNav("trades"); document.title = "Trades · NBA Fantasy 2026";
+  app.innerHTML = '<p class="empty">Loading…</p>';
+  try { if (!TR) TR = await (await fetch("data/trades.json", { cache: "no-cache" })).json(); }
+  catch (e) { app.innerHTML = '<p class="empty">The trade tracker isn\'t available yet. It appears after the next data refresh.</p>'; return; }
+  const T = TR.trades;
+  if (!T.length) { app.innerHTML = '<p class="empty">No trades yet. Somebody get on the phone.</p>'; return; }
+  const sg = x => x == null ? "–" : (x >= 0 ? "+" : "−") + Math.abs(x).toFixed(3);
+  const cls = x => x == null ? "" : x > 0.0005 ? "pos" : x < -0.0005 ? "neg" : "";
+  const gcls = g => g === "Too early" ? "early" : /^A/.test(g) ? "a" : /^B/.test(g) ? "b" : /^C/.test(g) ? "c" : "d";
+  const when = iso => new Date(iso).toLocaleDateString("en-AU", { day: "numeric", month: "short" });
+
+  // leaderboard: processed trades with a result, biggest margins first
+  const done = T.filter(t => t.so_far && Math.min(...Object.values(t.so_far.games)) >= 12);
+  const board = done.length ? `<section><h2 class="rc-h">Best trades so far <small>biggest category margins since the trade</small></h2><div class="rc-panel">${
+    done.map(t => { const [A, B] = Object.keys(t.gets).sort(), [w, l] = t.so_far.score; return { t, win: w >= l ? A : B, lose: w >= l ? B : A, m: Math.abs(w - l), sc: `${Math.max(w, l)}-${Math.min(w, l)}` }; })
+      .sort((a, b) => b.m - a.m).slice(0, 5).map((x, i) => `<a class="tb-row" href="#/trades" data-k="${esc(x.t.key)}"><span class="tb-rk">${i + 1}</span><span><b>${esc(x.win)}</b><small>beat ${esc(x.lose)} · ${when(x.t.accepted_utc)}</small></span><span class="tb-sc">${x.m ? x.sc : "Level"}</span></a>`).join("")}</div></section>` : "";
+
+  const cards = T.map(t => {
+    const [A, B] = Object.keys(t.gets).sort(), F = t.so_far;
+    const side = (team, other) => {
+      const g = F ? F.grade[team] : null;
+      return `<div class="tr-side"><div class="tr-team">${esc(team)}</div><div class="tr-gets">gets ${t.gets[team].map(esc).join(" + ")}</div>
+        ${g ? `<span class="tr-grade ${gcls(g)}">${esc(g)}</span>` : ""}</div>`;
+    };
+    let mid = `<div class="tr-mid"><span class="chip">${esc(t.status)}</span></div>`, body = "";
+    if (F) {
+      const [w, l, d] = F.score, lead = w === l ? "Level" : (w > l ? A : B) + " leading";
+      mid = `<div class="tr-mid"><div class="tr-score">${w}-${l}${d ? `<small>-${d}</small>` : ""}</div><div class="tr-lead">${esc(lead)}</div></div>`;
+      const rows = F.cats.map(c => { const f = v => v == null ? "–" : c.cat.includes("%") ? v.toFixed(3).replace(/^0/, "") : Math.round(v);
+        return `<tr><td>${c.cat}</td><td class="${c.res === 1 ? "win" : ""}">${f(c.got)}</td><td class="${c.res === -1 ? "win" : ""}">${f(c.gave)}</td></tr>`; }).join("");
+      const at = t.at_time ? `<tr><td>When it happened${t.post ? ` · <a href="#/${esc(t.post)}">review</a>` : ""}</td><td class="${cls(t.at_time[A])}">${sg(t.at_time[A])}</td><td class="${cls(t.at_time[B])}">${sg(t.at_time[B])}</td></tr>` : "";
+      const nw = t.now ? `<tr><td>Today${t.now_frozen ? " (frozen: a player has moved on)" : ""}</td><td class="${cls(t.now[A])}">${sg(t.now[A])}</td><td class="${cls(t.now[B])}">${sg(t.now[B])}</td></tr>` : "";
+      body = `${tradeChart(F.series, A, B)}
+        <details><summary>Category by category</summary>
+          <p class="note">Stats each side's new players put up in that team's starting lineup since ${when(F.from + "T12:00:00")} (${F.games[A]} and ${F.games[B]} games).</p>
+          <table class="cats"><tr><th>Cat</th><th>${esc(A)}</th><th>${esc(B)}</th></tr>${rows}</table>
+          ${at || nw ? `<p class="note" style="margin-top:12px">The model's view: expected wins gained over the rest of the season.</p><table class="cats"><tr><th></th><th>${esc(A)}</th><th>${esc(B)}</th></tr>${at}${nw}</table>` : ""}
+        </details>`;
+    } else if (t.at_time) {
+      body = `<p class="note">Waiting on league review. The model's verdict: ${esc(A)} ${sg(t.at_time[A])}, ${esc(B)} ${sg(t.at_time[B])} expected wins.</p>`;
+    }
+    return `<div class="card tr" id="tr-${esc(t.key).replace(/[^a-z0-9]/gi, "")}"><div class="meta">${when(t.accepted_utc)}</div>
+      <div class="tr-head">${side(A, B)}${mid}${side(B, A)}</div>${body}</div>`;
+  }).join("");
+
+  const how = `<details class="rc-how"><summary>How the trade tracker works</summary><div class="explain">
+    <p>Every trade is scored like a <strong>head-to-head matchup between the two hauls</strong>. One team's new players take on the other team's new players across all 9 categories, so a trade can be "leading 6-3".</p>
+    <p>Only games a player <strong>started for the team that traded for him</strong> count. Bench games help nobody. If a player is later dropped or traded on, he stops counting from that day.</p>
+    <p><strong>Grades</strong> come from the category margin (win 7+ more categories = A+, level = C, and so on). They show "Too early" until both sides have at least 12 games.</p>
+    <p>The <strong>chart</strong> is the margin after each day: above the line, the top team is winning the trade; below, the bottom team is.</p>
+    <p>Under "Category by category" you'll also find the <strong>model's view</strong>: expected wins gained over the rest of the season when the trade happened, and the same sum re-done with today's rosters and injuries.</p></div></details>`;
+  app.innerHTML = `<div class="rc"><p class="updated">Every trade this season, and who's actually winning it. Updated ${esc(ago(TR.updated_utc))}.</p>${board}
+    <section><h2 class="rc-h">All trades <small>newest first</small></h2>${cards}</section>${how}</div>`;
+  app.querySelectorAll(".tb-row").forEach(a => a.onclick = e => { e.preventDefault(); const el = document.getElementById("tr-" + a.dataset.k.replace(/[^a-z0-9]/gi, "")); el && el.scrollIntoView({ behavior: "smooth" }); });
+}
+
 function route() {
   const slug = decodeURIComponent(location.hash.replace(/^#\/?/, ""));
   if (slug === "odds") return oddsPage();
@@ -664,6 +757,7 @@ function route() {
   if (slug === "stats") return statsPage();
   if (slug === "injuries") return injuriesPage();
   if (slug === "record") return recordPage();
+  if (slug === "trades") return tradesPage();
   setNav("posts");
   slug ? show(slug) : home();
 }

@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-03T18:33:47.613971+00:00",
+ "updated_utc": "2026-11-03T23:50:47.772808+00:00",
  "teams_order": "alphabetical",
  "trades": [
   {
@@ -25,7 +25,7 @@
   {
    "key": "Franz Wagner|Josh Hart|Onyeka Okongwu|RJ Barrett",
    "accepted_utc": "2026-11-02T21:12:52+00:00",
-   "status": "in league review",
+   "status": "processed",
    "gets": {
     "Viva La Raza!": [
      "Franz Wagner",
@@ -40,7 +40,98 @@
     "Viva La Raza!": 0.17,
     "mr charloooooo": -0.183
    },
-   "post": "2026-11-03-trade"
+   "post": "2026-11-03-trade",
+   "so_far": {
+    "from": "2026-11-04",
+    "days": 0,
+    "score": [
+     0,
+     0,
+     9
+    ],
+    "cats": [
+     {
+      "cat": "PTS",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "REB",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "AST",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "STL",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "BLK",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "3PM",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "TO",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "FG%",
+      "got": null,
+      "gave": null,
+      "res": 0
+     },
+     {
+      "cat": "FT%",
+      "got": null,
+      "gave": null,
+      "res": 0
+     }
+    ],
+    "games": {
+     "Viva La Raza!": 0,
+     "mr charloooooo": 0
+    },
+    "series": [],
+    "wins_added": {
+     "Viva La Raza!": 0.0,
+     "mr charloooooo": 0.0
+    },
+    "grade": {
+     "Viva La Raza!": "Too early",
+     "mr charloooooo": "Too early"
+    }
+   },
+   "now": {
+    "date": "2026-11-03",
+    "Viva La Raza!": 0.181,
+    "mr charloooooo": -0.176
+   },
+   "now_frozen": false,
+   "now_history": [
+    [
+     "2026-11-03",
+     0.181,
+     -0.176
+    ]
+   ]
   },
   {
    "key": "Damian Lillard|Matas Buzelis|Moussa Diabate|Paul George",
@@ -145,25 +236,25 @@
      [
       "2026-10-31",
       2,
-      0.023,
-      -0.025
+      0.022,
+      -0.026
      ],
      [
       "2026-11-01",
       -2,
       -0.019,
-      0.013
+      0.012
      ],
      [
       "2026-11-02",
       1,
       0.041,
-      -0.04
+      -0.041
      ]
     ],
     "wins_added": {
      "JAReusalem": 0.041,
-     "Stairway to Devin": -0.04
+     "Stairway to Devin": -0.041
     },
     "grade": {
      "JAReusalem": "Too early",
@@ -172,8 +263,8 @@
    },
    "now": {
     "date": "2026-11-03",
-    "JAReusalem": -0.284,
-    "Stairway to Devin": 0.326
+    "JAReusalem": -0.283,
+    "Stairway to Devin": 0.343
    },
    "now_frozen": false,
    "now_history": [
@@ -184,8 +275,8 @@
     ],
     [
      "2026-11-03",
-     -0.284,
-     0.326
+     -0.283,
+     0.343
     ]
    ]
   },
@@ -280,25 +371,25 @@
      [
       "2026-10-29",
       -5,
-      -0.022,
-      0.021
+      -0.023,
+      0.024
      ],
      [
       "2026-10-30",
       -4,
       -0.021,
-      0.019
+      0.02
      ],
      [
       "2026-10-31",
       -3,
-      -0.029,
-      0.025
+      -0.03,
+      0.026
      ],
      [
       "2026-11-01",
       -1,
-      -0.018,
+      -0.019,
       0.02
      ],
      [
@@ -322,7 +413,7 @@
     "Al-Shaida": 0.121,
     "Viva La Raza!": -0.161
    },
-   "now_frozen": false,
+   "now_frozen": true,
    "now_history": [
     [
      "2026-11-02",
@@ -432,25 +523,25 @@
       "2026-10-28",
       8,
       0.046,
-      -0.037
+      -0.038
      ],
      [
       "2026-10-29",
       5,
       0.048,
-      -0.039
+      -0.04
      ],
      [
       "2026-10-30",
       8,
-      0.058,
-      -0.048
+      0.059,
+      -0.049
      ],
      [
       "2026-10-31",
       5,
       0.047,
-      -0.038
+      -0.039
      ],
      [
       "2026-11-01",
@@ -462,12 +553,12 @@
       "2026-11-02",
       4,
       0.043,
-      -0.034
+      -0.035
      ]
     ],
     "wins_added": {
      "Derrick White Girl Wasted": 0.043,
-     "Stairway to Devin": -0.034
+     "Stairway to Devin": -0.035
     },
     "grade": {
      "Derrick White Girl Wasted": "Too early",
@@ -476,8 +567,8 @@
    },
    "now": {
     "date": "2026-11-03",
-    "Derrick White Girl Wasted": -0.182,
-    "Stairway to Devin": 0.059
+    "Derrick White Girl Wasted": -0.187,
+    "Stairway to Devin": 0.062
    },
    "now_frozen": false,
    "now_history": [
@@ -488,8 +579,8 @@
     ],
     [
      "2026-11-03",
-     -0.182,
-     0.059
+     -0.187,
+     0.062
     ]
    ]
   }

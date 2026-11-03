@@ -1,13 +1,24 @@
 {
  "Franz Wagner|Josh Hart|Onyeka Okongwu|RJ Barrett": {
   "first_seen": "2026-11-02",
-  "history": [],
+  "history": [
+   [
+    "2026-11-03",
+    0.181,
+    -0.176
+   ]
+  ],
   "at_time": {
    "Viva La Raza!": 0.17,
    "mr charloooooo": -0.183
   },
   "post": "2026-11-03-trade",
-  "at_time_source": "trade review"
+  "at_time_source": "trade review",
+  "now": {
+   "date": "2026-11-03",
+   "Viva La Raza!": 0.181,
+   "mr charloooooo": -0.176
+  }
  },
  "_trades": {
   "Derik Queen|Paul Reed": {
@@ -67,7 +78,8 @@
     ]
    },
    "dates": [
-    "2026-11-02T21:12:52+00:00"
+    "2026-11-02T21:12:52+00:00",
+    "2026-11-03T21:12:01.580000+00:00"
    ]
   },
   "Aaron Gordon|Kyle Kuzma|Moussa Diabate|Rui Hachimura": {
@@ -96,8 +108,8 @@
    ],
    [
     "2026-11-03",
-    -0.182,
-    0.059
+    -0.187,
+    0.062
    ]
   ],
   "at_time": {
@@ -108,8 +120,8 @@
   "at_time_source": "trade review",
   "now": {
    "date": "2026-11-03",
-   "Derrick White Girl Wasted": -0.182,
-   "Stairway to Devin": 0.059
+   "Derrick White Girl Wasted": -0.187,
+   "Stairway to Devin": 0.062
   }
  },
  "Damian Lillard|Matas Buzelis|Moussa Diabate|Paul George": {
@@ -122,8 +134,8 @@
    ],
    [
     "2026-11-03",
-    -0.284,
-    0.326
+    -0.283,
+    0.343
    ]
   ],
   "at_time": {
@@ -134,8 +146,8 @@
   "at_time_source": "trade review",
   "now": {
    "date": "2026-11-03",
-   "JAReusalem": -0.284,
-   "Stairway to Devin": 0.326
+   "JAReusalem": -0.283,
+   "Stairway to Devin": 0.343
   }
  },
  "Fred VanVleet|Onyeka Okongwu|Scottie Barnes|Trae Young": {

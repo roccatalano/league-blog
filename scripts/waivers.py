@@ -6,8 +6,8 @@ starting lineups in data/player_days.json, which trades.py keeps up to date).
   cats_swung    - re-score each of that team's matchups with and without his stats: how many category
                   results changed because of him (a win turned into a loss, a tie, etc.)
   matchups_swung - weeks where removing him changes the matchup result itself
-  value         - a standard 9-cat player rating: for each game, how far above/below a typical rostered
-                  player's game he was in each category (z-scores; FG%/FT% weighted by attempts; TO counts
+  value         - a standard 9-cat player rating: for each game, how far above/below a typical waiver
+                  pickup's game he was in each category (z-scores; FG%/FT% weighted by attempts; TO counts
                   against), summed over the 9 categories. Total = sum over his starts, per game = average.
 Drops: every drop and what the player has done since, in all his games wherever he is (value, per game).
 A player the same team later re-added doesn't count as a drop.
@@ -94,14 +94,17 @@ def player_info(ids):
 
 
 # ---------------------------------------------------------------- value (9-cat z-scores per game)
-def baseline(days):
-    """Mean / sd per category over every started game by a rostered player; league FG% / FT%."""
+def baseline(days, ref_games):
+    """Zero point = the average game in ref_games (every start a waiver pickup made for the team that added
+    him), so 0 = a typical waiver pickup. Spread (sd) comes from every started game by a rostered player."""
     games = [x[2:] for day in days.values() for x in day["p"].values() if x[1]]
     n = max(1, len(games))
-    mu = {k: sum(g[I[k]] for g in games) / n for _, k in COUNT}
-    sd = {k: math.sqrt(sum((g[I[k]] - mu[k]) ** 2 for g in games) / n) or 1 for _, k in COUNT}
-    fg = sum(g[I["13"]] for g in games) / max(1, sum(g[I["14"]] for g in games))
-    ft = sum(g[I["15"]] for g in games) / max(1, sum(g[I["16"]] for g in games))
+    ref = ref_games or games
+    nr = len(ref)
+    mu = {k: sum(g[I[k]] for g in ref) / nr for _, k in COUNT}
+    sd = {k: math.sqrt(sum((g[I[k]] - sum(h[I[k]] for h in games) / n) ** 2 for g in games) / n) or 1 for _, k in COUNT}
+    fg = sum(g[I["13"]] for g in ref) / max(1, sum(g[I["14"]] for g in ref))
+    ft = sum(g[I["15"]] for g in ref) / max(1, sum(g[I["16"]] for g in ref))
     # percentage impact = made above league rate on his attempts
     imp_fg = [g[I["13"]] - fg * g[I["14"]] for g in games]
     imp_ft = [g[I["15"]] - ft * g[I["16"]] for g in games]
@@ -170,7 +173,6 @@ def main():
                 t = tot.setdefault((week_of[sp], x[0]), [0.0] * len(K))
                 for i in range(len(K)):
                     t[i] += x[2 + i]
-    B = baseline(days)
 
     ids = {a["player"] for a in log["adds"].values()} | {x["player"] for x in log["drops"].values()}
     info = player_info(ids)
@@ -181,6 +183,13 @@ def main():
         k = (a["team"], a["player"])
         if k not in merged or a["date_utc"] < merged[k]["date_utc"]:
             merged[k] = dict(a, bid=max(a["bid"], merged.get(k, {}).get("bid", 0)))
+    def his_games(tid, name, first):
+        return [(sp, days[sp]["p"][name][2:]) for sp in order if days[sp]["date"] >= first
+                and (x := days[sp]["p"].get(name)) and x[0] == tid and x[1]]
+    ref = [g for a in merged.values() if a["team"] in names and a["player"] in info
+           for _, g in his_games(a["team"], info[a["player"]]["name"],
+                                 str(datetime.fromisoformat(a["date_utc"]).astimezone(S.ET).date()))]
+    B = baseline(days, ref)
     picks = []
     for a in merged.values():
         tid, pid = a["team"], a["player"]

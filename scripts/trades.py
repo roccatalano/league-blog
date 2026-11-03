@@ -77,7 +77,10 @@ def find_trades(names, d, log):
         t["executed"] = t["executed"] or status == "EXECUTED"
 
     # 1) executed trades, scanning every scoring period once (the last 3 are re-scanned each run)
-    scan = log.setdefault("_scan", {"done_through": 0, "trades": []})
+    scan = log.get("_scan") or {}
+    if scan.get("v") != 2:
+        scan = log["_scan"] = {"v": 2, "done_through": 0, "trades": []}
+    seen_types = {}
     latest = d["status"].get("latestScoringPeriod") or 1
     first = d["status"].get("firstScoringPeriod") or 1
     found = [x for x in scan["trades"] if x["sp"] < latest - 2]
@@ -87,7 +90,13 @@ def find_trades(names, d, log):
         except Exception:
             continue
         for t in tx:
-            if t.get("type") != "TRADE_ACCEPT" or t.get("status") != "EXECUTED":
+            ty = f'{t.get("type")}/{t.get("status")}'
+            seen_types[ty] = seen_types.get(ty, 0) + 1
+            if "TRADE" in ty and seen_types[ty] == 1:
+                print("trade tx sample:", ty, json.dumps({k: v for k, v in t.items() if k != "items"})[:400],
+                      json.dumps((t.get("items") or [])[:1])[:300])
+            if not str(t.get("type", "")).startswith("TRADE") or t.get("status") != "EXECUTED" \
+                    or not any(it.get("type") == "TRADE" for it in t.get("items", [])):
                 continue
             gets = {}
             for it in t.get("items", []):
@@ -97,6 +106,7 @@ def find_trades(names, d, log):
             when = t.get("processDate") or t.get("proposedDate")
             if len(gets) == 2 and when:
                 found.append({"sp": sp, "id": t.get("id"), "date": datetime.fromtimestamp(when / 1000, timezone.utc).isoformat(), "gets": gets})
+    print("transaction types seen:", seen_types)
     uniq = {}
     for x in found:
         uniq[x["id"]] = x

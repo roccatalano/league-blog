@@ -88,10 +88,9 @@ def main():
         ph = {"days": []}
     ph["days"] = [x for x in ph["days"] if not x.get("rebuilt")]
     live_dates = {x["date"] for x in ph["days"]}
-    # a live day is stored under its Melbourne date; the NBA day before it in the US is the same morning
     for sp in range(first, latest + 1):
         state["sp"] = sp
-        key = (sp_date(sp) + timedelta(days=1)).isoformat()  # Melbourne date of that NBA morning
+        key = sp_date(sp).isoformat()  # US Eastern date of that NBA day (same as the live job)
         if key in live_dates:
             continue
         dA = {"teams": rosters[sp]["teams"], "settings": d_now["settings"], "status": d_now["status"]}

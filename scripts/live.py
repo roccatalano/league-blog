@@ -278,14 +278,13 @@ def main():
     lg["history"] = hist
     with open(lpath, "w") as f:
         json.dump(lg, f, separators=(",", ":"))
-    # one power-rank snapshot per Melbourne day (the day's last run wins), for the power rank chart
+    # one power-rank snapshot per NBA day (US Eastern date; the day's last run wins), for the power rank chart
     ppath = os.path.join(ROOT, "data", "power_history.json")
     try:
         ph = json.load(open(ppath))
     except Exception:
         ph = {"days": []}
-    from zoneinfo import ZoneInfo
-    today = datetime.now(ZoneInfo("Australia/Melbourne")).date().isoformat()
+    today = datetime.now(S.ET).date().isoformat()
     snap = {"date": today, "ranks": {r["team"]: r["power_rank"] for r in lg["ladder"]},
             "pct": {r["team"]: r["power_pct"] for r in lg["ladder"]}}
     ph["days"] = sorted([x for x in ph["days"] if x["date"] != today] + [snap], key=lambda x: x["date"])

@@ -406,14 +406,14 @@ async function recordPage() {
       let st = "";
       if (now) {
         const [h, a] = now.score_now, lead = h === a ? "Level" : (h > a ? now.home : now.away) + " leads";
-        const onTrack = h === a ? "" : ((h > a) === (m.p_home >= 0.5) ? ' · <span class="ok">on track</span>' : ' · <span class="miss">upset brewing</span>');
+        const onTrack = h === a ? "" : ((h > a) === (m.p_home >= 0.5) ? ' · <span class="ok">favourite ahead</span>' : ' · <span class="miss">underdog ahead</span>');
         st = `${esc(lead)} ${score(now.score_now)}${onTrack}`;
       }
       return `<div class="mrow"><div><strong>${esc(m.home)}</strong> v <strong>${esc(m.away)}</strong>
         <small>Monday pick: ${esc(fav)} (${pc(fp)} chance)</small><small>Right now: ${st}</small></div></div>`;
     }).join("");
     live = `<details class="card" open><summary>Week ${ODDS.matchup_period}: in progress</summary>
-      <p class="note">The model's pick from Monday vs the score right now. This week gets marked right or wrong once it finishes on Sunday (US time).</p>${rows}</details>`;
+      <p class="note">The model's pick from Monday vs the score right now. Early leads swing a lot, so don't read much into the first few days. This week gets marked right or wrong once it finishes on Sunday (US time).</p>${rows}</details>`;
   }
 
   if (!W.length) { app.innerHTML = howItWorks + live + '<p class="empty">No finished weeks yet.</p>'; return; }
@@ -426,7 +426,7 @@ async function recordPage() {
     if (!g.length) return "";
     const won = g.filter(m => m.called).length, exp = g.reduce((t, m) => t + m.fav_p, 0);
     const verdict = g.length < 4 ? "too few games to judge yet" : won > exp + 1 ? "too cautious: favourites won more than it said" : won < exp - 1 ? "too cocky: favourites won less than it said" : "about right";
-    return `<div class="mrow"><div><strong>${label}</strong><small>Favourite won ${won} of ${g.length}. The model expected about ${exp.toFixed(1)}.</small></div><div class="note" style="text-align:right;max-width:45%">${verdict}</div></div>`;
+    return `<div class="mrow"><div><strong>${label}</strong><small>Favourite won ${won} of ${g.length}. The model expected about ${exp.toFixed(1)}.</small><small><strong>Verdict:</strong> ${verdict}</small></div></div>`;
   }).join("");
 
   const ps = O.brier, psWord = ps < 0.15 ? "very good" : ps < 0.2 ? "good" : ps < 0.25 ? "a bit better than guessing" : "no better than guessing";

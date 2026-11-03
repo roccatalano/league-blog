@@ -112,6 +112,9 @@
   .inj .ret b { display: block; font-family: "Archivo Black", Inter, sans-serif; font-size: 18px; font-weight: 400; }
   .inj .ret small { color: var(--muted); font-size: 12px; }
   .inj .nt { grid-column: 1 / -1; font-size: 13px; color: var(--muted); }
+  .ladder.pk { font-size: 12.5px; } .ld .ladder.pk td, .ld .ladder.pk th { padding-left: 3px; padding-right: 3px; } .ladder.pk th { font-size: 10px; letter-spacing: 0; } .ladder.pk td:nth-child(2) { white-space: normal; min-width: 110px; } .ladder.pk th.srt { cursor: pointer; } .ladder.pk th.on { color: var(--accent); } .ladder.pk td.on { font-weight: 700; }
+  .ladder .pos { color: #2f9e44; } .ladder .neg { color: #e03131; }
+  .seg.pks button { font-size: 12px; padding: 5px 4px; }
   .grp { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .6px; color: var(--muted); margin: 18px 0 6px; }
   .chip.out { background: #fde2e2; color: #c92a2a; } .chip.dtd { background: #fff3bf; color: #946200; } .chip.ft { background: transparent; color: var(--muted); border: 1px solid var(--line); }
   @media (prefers-color-scheme: dark) { .chip.out { background: #3b1717; color: #ff8787; } .chip.dtd { background: #3a2f0b; color: #ffd43b; } }
@@ -313,7 +316,7 @@
 <header><div class="wrap">
   <a href="#"><div class="brand">NBA FANTASY <span>2026</span></div></a>
   <div class="tag">Daily posts, trade reviews and weekly roundups. Updated automatically.</div>
-  <nav><a href="#/" data-n="posts">Posts</a><a href="#/ladder" data-n="ladder">Ladder</a><a href="#/odds" data-n="odds">Live matchups</a><a href="#/trade" data-n="trade">Trade calculator</a><a href="#/dawg" data-n="dawg">Dawg index</a><a href="#/stats" data-n="stats">Stat ranks</a><a href="#/injuries" data-n="injuries">Injuries</a><a href="#/trades" data-n="trades">Trades</a><a href="#/record" data-n="record">Model record</a></nav>
+  <nav><a href="#/" data-n="posts">Posts</a><a href="#/ladder" data-n="ladder">Ladder</a><a href="#/odds" data-n="odds">Live matchups</a><a href="#/trade" data-n="trade">Trade calculator</a><a href="#/dawg" data-n="dawg">Dawg index</a><a href="#/stats" data-n="stats">Stat ranks</a><a href="#/injuries" data-n="injuries">Injuries</a><a href="#/trades" data-n="trades">Moves</a><a href="#/record" data-n="record">Model record</a></nav>
 </div></header>
 <main class="wrap" id="app"><p class="empty">Loading…</p></main>
 <footer>Odds and expected wins come from a model, not a crystal ball.</footer>
@@ -892,8 +895,57 @@ function wireTradeCharts() {
     plot.addEventListener("pointerleave", () => { cur.style.display = "none"; tip.style.opacity = 0; });
   });
 }
+// ---------------------------------------------------------------- moves: trades + waivers
+let MOVES_TAB = "trades", WV = null;
+const WV_SORT = { best: "cats_swung", worst: "value", drop: "value" };
+async function movesPage() {
+  setNav("trades");
+  if (MOVES_TAB === "waivers") await waiversPage(); else await tradesPage();
+  if (MOVES_TAB === "trades") document.title = "Moves · NBA Fantasy 2026";
+  const seg = `<div class="seg mv">${[["trades", "Trades"], ["waivers", "Waivers"]].map(([k, l]) => `<button type="button" data-m="${k}" class="${k === MOVES_TAB ? "on" : ""}">${l}</button>`).join("")}</div>`;
+  app.insertAdjacentHTML("afterbegin", seg);
+  app.querySelectorAll(".seg.mv button").forEach(b => b.onclick = () => { MOVES_TAB = b.dataset.m; movesPage(); });
+}
+async function waiversPage() {
+  document.title = "Waivers · NBA Fantasy 2026";
+  app.innerHTML = '<p class="empty">Loading…</p>';
+  try { if (!WV) WV = await (await fetch("data/waivers.json", { cache: "no-cache" })).json(); }
+  catch (e) { app.innerHTML = '<p class="empty">The waiver tracker isn\'t available yet. It appears after the next data refresh (within half an hour).</p>'; return; }
+  const P = WV.pickups, D = WV.drops;
+  if (!P.count) { app.innerHTML = '<p class="empty">No pickups yet.</p>'; return; }
+  const sgn = x => x > 0 ? `<span class="pos">+${x}</span>` : x < 0 ? `<span class="neg">−${-x}</span>` : "0";
+  const v1 = x => x == null ? "–" : (x > 0 ? "+" : x < 0 ? "−" : "") + Math.abs(x).toFixed(1);
+  const v2 = x => x == null ? "–" : (x > 0 ? "+" : x < 0 ? "−" : "") + Math.abs(x).toFixed(2);
+  const when = x => new Date(x + "T12:00:00").toLocaleDateString("en-AU", { day: "numeric", month: "short" });
+  const PCOLS = [["cats_swung", "Cats", r => sgn(r.cats_swung)], ["matchups_swung", "Wks", r => sgn(r.matchups_swung)],
+                 ["value", "Value", r => v1(r.value)], ["per_game", "Per gm", r => v2(r.per_game)], ["starts", "Starts", r => r.starts]];
+  const DCOLS = [["value", "Value", r => v1(r.value)], ["per_game", "Per gm", r => v2(r.per_game)], ["games", "Games", r => r.games]];
+  const table = (kind, cols, list, sub) => {
+    const col = WV_SORT[kind], asc = kind === "worst", f = r => r[col] ?? (asc ? 1e9 : -1e9);
+    const rows = list.slice().sort((a, b) => asc ? f(a) - f(b) || a.value - b.value : f(b) - f(a) || b.value - a.value).slice(0, 10);
+    const th = cols.map(([k, l]) => `<th class="srt${k === col ? " on" : ""}" data-k="${kind}" data-c="${k}">${l}${k === col ? (asc ? " ▲" : " ▼") : ""}</th>`).join("");
+    const body = rows.map((r, i) => `<tr><td>${i + 1}</td><td><span class="tm">${esc(r.player)}</span><small>${sub(r)}</small></td>${cols.map(([k, , fmt]) => `<td class="${k === col ? "on" : ""}">${fmt(r)}</td>`).join("")}</tr>`).join("");
+    return `<div class="card ld scroll"><table class="ladder pk"><tr><th>#</th><th>Player</th>${th}</tr>${body}</table></div>`;
+  };
+  const psub = r => `${esc(r.team)} · ${when(r.date)}${r.bid ? " · $" + r.bid : ""}${Object.keys(r.swung || {}).length ? " · " + Object.entries(r.swung).map(([c, n]) => (n > 0 ? "+" : "−") + c + (Math.abs(n) > 1 ? "×" + Math.abs(n) : "")).join(" ") : ""}`;
+  const dsub = r => `cut by ${esc(r.team)} · ${when(r.date)} · now ${esc(r.now)}`;
+  const started = P.all.filter(r => r.starts > 0), worstPool = P.all.filter(r => r.starts >= 3);
+  app.innerHTML = `<p class="updated">Every pickup this season and what he's done for the team that added him · updated ${esc(ago(WV.updated_utc))}. Tap a column to sort.</p>
+    <div class="grp">Best pickups</div>${table("best", PCOLS, started, psub)}
+    ${worstPool.length ? `<div class="grp">Worst pickups <span style="text-transform:none;letter-spacing:0;font-weight:600">· 3+ starts</span></div>${table("worst", PCOLS, worstPool, psub)}` : ""}
+    ${D.count ? `<div class="grp">Worst drops <span style="text-transform:none;letter-spacing:0;font-weight:600">· what he's done since, anywhere</span></div>${table("drop", DCOLS, D.all.filter(r => r.games > 0), dsub)}` : ""}
+    <div class="grp">By team</div><div class="card ld scroll"><table class="ladder pk"><tr><th>#</th><th>Team</th><th>Adds</th><th>Cats</th><th>Wks</th><th>Value</th><th>FAAB</th></tr>${
+      P.by_team.map((r, i) => `<tr><td>${i + 1}</td><td><span class="tm">${esc(r.team)}</span></td><td>${r.pickups}</td><td>${sgn(r.cats_swung)}</td><td>${sgn(r.matchups_swung)}</td><td>${v1(r.value)}</td><td>$${r.faab}</td></tr>`).join("")}</table></div>
+    <details class="rc-how"><summary>How it's measured</summary><div class="explain">
+      <p>A pickup only counts for the team that added him, in games he <strong>started</strong> for them, from the day of the add until he's dropped or traded. It's not his season total.</p>
+      <p><strong>Cats</strong> (categories swung): every week he started, that matchup is re-scored with and without his stats. Each category that changes hands because of him counts +1 if he won it for them, −1 if he cost them (a low FG% or a pile of turnovers can). The small print shows which categories, e.g. +STL×2. <strong>Wks</strong> is the same for whole matchups: weeks he turned from a loss into a win (or a draw), or the other way.</p>
+      <p><strong>Value</strong> is a standard 9-category player rating: for each game, how far above or below a typical rostered player's game he was in each category (turnovers count against, FG% and FT% are weighted by attempts), added up. Total over his starts; <strong>Per gm</strong> is the average, so 0 is an average starter.</p>
+      <p><strong>Worst drops</strong> counts every game since the drop, wherever he is now; if the same team picked him back up, it doesn't count. By team adds up each team's pickups; FAAB is what they bid on them.</p></div></details>`;
+  app.querySelectorAll("th.srt").forEach(th => th.onclick = () => { WV_SORT[th.dataset.k] = th.dataset.c; movesPage(); });
+}
+
 async function tradesPage() {
-  setNav("trades"); document.title = "Trades · NBA Fantasy 2026";
+  document.title = "Moves · NBA Fantasy 2026";
   app.innerHTML = '<p class="empty">Loading…</p>';
   try { if (!TR) TR = await (await fetch("data/trades.json", { cache: "no-cache" })).json(); }
   catch (e) { app.innerHTML = '<p class="empty">The trade tracker isn\'t available yet. It appears after the next data refresh.</p>'; return; }
@@ -951,7 +1003,8 @@ function route() {
   if (slug === "stats") return statsPage();
   if (slug === "injuries") return injuriesPage();
   if (slug === "record") return recordPage();
-  if (slug === "trades") return tradesPage();
+  if (slug === "trades") return movesPage();
+  if (slug === "waivers") { MOVES_TAB = "waivers"; return movesPage(); }
   setNav("posts");
   slug ? show(slug) : home();
 }

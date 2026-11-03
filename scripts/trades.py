@@ -63,73 +63,29 @@ def player_days(d):
     return cache
 
 
-def find_trades(names, d, log):
-    """One record per trade: executed trades from ESPN's transaction history (each day scanned once,
-    then cached), plus accepted-but-in-review ones from the league message feed."""
+def find_trades(names, log, seed):
+    """One record per trade. The league message feed only shows recent items, so every trade is
+    remembered in trades_log.json the first time it's seen (the job runs every few hours).
+    Trades from before the tracker existed come from trades_seed.json."""
     ids = {v: k for k, v in names.items()}
-    pnames = {x["player"]["id"]: x["player"].get("fullName") for x in S._pool()}
-    trades = {}
-
-    def add(key_players, date_iso, gets, status):
-        key = "|".join(sorted(key_players))
-        t = trades.setdefault(key, {"key": key, "dates": [], "gets": gets, "executed": False})
-        t["dates"].append(date_iso)
-        t["executed"] = t["executed"] or status == "EXECUTED"
-
-    # 1) executed trades, scanning every scoring period once (the last 3 are re-scanned each run)
-    scan = log.get("_scan") or {}
-    if scan.get("v") != 2:
-        scan = log["_scan"] = {"v": 2, "done_through": 0, "trades": []}
-    seen_types = {}
-    latest = d["status"].get("latestScoringPeriod") or 1
-    first = d["status"].get("firstScoringPeriod") or 1
-    found = [x for x in scan["trades"] if x["sp"] < latest - 2]
-    for sp in range(max(first, min(scan["done_through"] + 1, latest - 2)), latest + 1):
-        try:
-            tx = S._get(["mTransactions2"], params={"scoringPeriodId": sp}).get("transactions", [])
-        except Exception:
-            continue
-        for t in tx:
-            ty = f'{t.get("type")}/{t.get("status")}'
-            seen_types[ty] = seen_types.get(ty, 0) + 1
-            if "TRADE" in ty and seen_types[ty] == 1:
-                print("trade tx sample:", ty, json.dumps({k: v for k, v in t.items() if k != "items"})[:400],
-                      json.dumps((t.get("items") or [])[:1])[:300])
-            if not str(t.get("type", "")).startswith("TRADE") or t.get("status") != "EXECUTED" \
-                    or not any(it.get("type") == "TRADE" for it in t.get("items", [])):
-                continue
-            gets = {}
-            for it in t.get("items", []):
-                to = names.get(it.get("toTeamId"))
-                if to:
-                    gets.setdefault(to, []).append(pnames.get(it.get("playerId"), str(it.get("playerId"))))
-            when = t.get("processDate") or t.get("proposedDate")
-            if len(gets) == 2 and when:
-                found.append({"sp": sp, "id": t.get("id"), "date": datetime.fromtimestamp(when / 1000, timezone.utc).isoformat(), "gets": gets})
-    print("transaction types seen:", seen_types)
-    uniq = {}
-    for x in found:
-        uniq[x["id"]] = x
-    scan["trades"] = sorted(uniq.values(), key=lambda x: x["date"])
-    scan["done_through"] = latest
-    for x in scan["trades"]:
-        add([n for v in x["gets"].values() for n in v], x["date"], x["gets"], "EXECUTED")
-
-    # 2) the message feed: adds the acceptance date, and trades still in league review
-    for e in sorted(json.loads(S.get_recent_transactions(limit=1000)), key=lambda e: e["date"]):
+    known = log.setdefault("_trades", {})
+    for key, x in seed.items():
+        if not key.startswith("_") and "gets" in x and key not in known:
+            known[key] = {"gets": x["gets"], "dates": x["dates"]}
+    for e in json.loads(S.get_recent_transactions(limit=1000)):
         moves = [m for m in e["moves"] if m["action"] in ("traded", "trade accepted")]
         teams = sorted({m["team"] for m in moves})
         if not moves or len(teams) != 2 or any(t not in ids for t in teams):
             continue
-        gets = {}
+        key = "|".join(sorted({str(m["player"]) for m in moves}))
+        rec = known.setdefault(key, {"gets": {}, "dates": []})
         for m in moves:  # ESPN logs each traded player under the team RECEIVING him
-            gets.setdefault(m["team"], [])
-            if m["player"] not in gets[m["team"]]:
-                gets[m["team"]].append(m["player"])
-        add([str(m["player"]) for m in moves], e["date"], gets, "MSG")
-    for t in trades.values():
-        t["dates"] = sorted(set(t["dates"]))
-    return list(trades.values())
+            lst = rec["gets"].setdefault(m["team"], [])
+            if m["player"] not in lst:
+                lst.append(m["player"])
+        if not any(x[:16] == e["date"][:16] for x in rec["dates"]):  # same message, different precision
+            rec["dates"] = sorted(rec["dates"] + [e["date"]])
+    return [{"key": k, "gets": v["gets"], "dates": v["dates"]} for k, v in known.items() if len(v["gets"]) == 2]
 
 
 def day_of(iso):
@@ -193,11 +149,12 @@ def main():
     seed, log = load(SEED, {}), load(LOG, {})
     today = str(datetime.now(S.ET).date())
     out = []
-    for t in find_trades(names, d, log):
+    log.pop("_scan", None)
+    for t in find_trades(names, log, seed):
         key, gets = t["key"], t["gets"]
         A, B = sorted(gets)
         moved = all(on_team.get(n) == next(k for k, v in names.items() if v == side) for side in (A, B) for n in gets[side])
-        if t["executed"] or moved or len(t["dates"]) >= 2:
+        if moved or len(t["dates"]) >= 2 or day_of(t["dates"][0]) < datetime.now(S.ET).date() - timedelta(days=3):
             start, status = t["dates"][-1], "processed"
         else:
             start, status = None, "in league review"

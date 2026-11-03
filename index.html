@@ -310,7 +310,7 @@
 <header><div class="wrap">
   <a href="#"><div class="brand">NBA FANTASY <span>2026</span></div></a>
   <div class="tag">Daily posts, trade reviews and weekly roundups. Updated automatically.</div>
-  <nav><a href="#/" data-n="posts">Posts</a><a href="#/ladder" data-n="ladder">Ladder</a><a href="#/power" data-n="power">Power rankings</a><a href="#/odds" data-n="odds">Live matchups</a><a href="#/trade" data-n="trade">Trade calculator</a><a href="#/dawg" data-n="dawg">Dawg index</a><a href="#/stats" data-n="stats">Stat ranks</a><a href="#/injuries" data-n="injuries">Injuries</a><a href="#/trades" data-n="trades">Trades</a><a href="#/record" data-n="record">Model record</a></nav>
+  <nav><a href="#/" data-n="posts">Posts</a><a href="#/ladder" data-n="ladder">Ladder</a><a href="#/odds" data-n="odds">Live matchups</a><a href="#/trade" data-n="trade">Trade calculator</a><a href="#/dawg" data-n="dawg">Dawg index</a><a href="#/stats" data-n="stats">Stat ranks</a><a href="#/injuries" data-n="injuries">Injuries</a><a href="#/trades" data-n="trades">Trades</a><a href="#/record" data-n="record">Model record</a></nav>
 </div></header>
 <main class="wrap" id="app"><p class="empty">Loading…</p></main>
 <footer>Odds and expected wins come from a model, not a crystal ball.</footer>
@@ -448,7 +448,7 @@ async function oddsPage() {
 }
 
 
-let LAD = null, LAD_OPEN = null, PH = null, LAD_HL = null;
+let LAD = null, LAD_SORT = "ladder", LAD_OPEN = null, PH = null, LAD_HL = null;
 const day = x => new Date(x + "T12:00:00").toLocaleDateString("en-AU", { day: "numeric", month: "short" });
 async function loadLeague() {
   if (LAD) return true;
@@ -482,6 +482,8 @@ function rankChart(days, teams, hl) {
 async function ladderPage() {
   setNav("ladder"); document.title = "Ladder · NBA Fantasy 2026";
   if (!await loadLeague()) return;
+  if (LAD_SORT === "power") return powerPage();
+  const seg = `<div class="seg">${[["ladder", "Ladder"], ["power", "Power rankings"]].map(([k, l]) => `<button type="button" data-s="${k}" class="${k === LAD_SORT ? "on" : ""}">${l}</button>`).join("")}</div>`;
   const L = LAD, list = L.ladder.slice().sort((a, b) => (a.seed ?? 99) - (b.seed ?? 99));
   const has = !!list[0].cat_wins;
   const best = {}; if (has) CATS.forEach(c => best[c] = Math.max(...list.map(r => r.cat_wins[c])));
@@ -489,15 +491,18 @@ async function ladderPage() {
   const rows = list.map((r, i) => `<tr class="${i === L.finals_teams - 1 ? "cut" : ""}"><td>${r.seed ?? i + 1}</td><td><span class="tm">${esc(r.team)}</span></td>
     <td>${r.w}</td><td>${r.l}</td><td>${r.t}</td>${has ? CATS.map((c, k) => { const v = r.cat_wins[c];
       return `<td class="${k ? "" : "cw-sep"}${v && v === best[c] ? " top" : ""}">${v}</td>`; }).join("") : `<td>${r.cats[0]}-${r.cats[1]}-${r.cats[2]}</td>`}</tr>`).join("");
-  app.innerHTML = `<div class="card ld scroll"><table class="ladder cw">${head}${rows}</table></div>
+  app.innerHTML = `${seg}<div class="card ld scroll"><table class="ladder cw">${head}${rows}</table></div>
     <details class="rc-how"><summary>What the columns mean</summary><div class="explain">
       <p><strong>W / L / D</strong> are matchup wins, losses and draws. Each category column is <strong>how many weeks that team has won that category</strong> in finished matchups; green marks the league leader in each one.</p>
       <p>The dashed line is the finals cut (top ${L.finals_teams}).</p></div></details>
     <p class="updated">Updated ${esc(ago(L.updated_utc))}.</p>`;
+  app.querySelectorAll(".seg button").forEach(b => b.onclick = () => { LAD_SORT = b.dataset.s; ladderPage(); });
 }
 
 async function powerPage() {
-  setNav("power"); document.title = "Power rankings · NBA Fantasy 2026";
+  setNav("ladder"); document.title = "Power rankings · NBA Fantasy 2026";
+  const seg = `<div class="seg">${[["ladder", "Ladder"], ["power", "Power rankings"]].map(([k, l]) => `<button type="button" data-s="${k}" class="${k === LAD_SORT ? "on" : ""}">${l}</button>`).join("")}</div>`;
+
   if (!await loadLeague()) return;
   if (!PH) { try { PH = await (await fetch("data/power_history.json", { cache: "no-cache" })).json(); } catch (e) { PH = { days: [] }; } }
   const L = LAD, list = L.ladder.slice().sort((a, b) => a.power_rank - b.power_rank);
@@ -517,12 +522,13 @@ async function powerPage() {
       <td><span class="tm">${esc(r.team)}</span>${r.power_move ? `<small>${mv(r.power_move)} since yesterday</small>` : ""}</td>
       <td><b>${r.power_pct}%</b></td><td>${r.proj_w.toFixed(1)}</td><td>${pc(r.finals_pct)}${mv(r.finals_move)}</td><td>${pc(r.title_pct)}${mv(r.title_move, 1)}</td></tr>${open ? detail(r) : ""}`; }).join("");
   const chart = rankChart(PH.days, L.ladder.map(r => r.team).sort(), LAD_HL);
-  app.innerHTML = `${chart}<div class="card ld scroll"><table class="ladder"><tr><th>#</th><th>Team</th><th>Power</th><th>Proj W</th><th>Finals</th><th>Title</th></tr>${rows}</table></div>
+  app.innerHTML = `${seg}${chart}<div class="card ld scroll"><table class="ladder"><tr><th>#</th><th>Team</th><th>Power</th><th>Proj W</th><th>Finals</th><th>Title</th></tr>${rows}</table></div>
     <details class="rc-how"><summary>What the columns mean</summary><div class="explain">
       <p><strong>Power</strong> ranks teams by roster strength alone: the average chance of beating every other team in a normal week, ignoring the schedule and record. Arrows show movement since yesterday.</p>
       <p><strong>Proj W</strong> is expected wins at the end of the ${L.weeks || 18}-week regular season (record so far plus the model's forecast, from ${L.sims.toLocaleString()} simulated seasons). <strong>Finals</strong> is the chance of making the top ${L.finals_teams}; <strong>Title</strong> the chance of winning it all.</p>
       <p><strong>Tap a team</strong> for its category strengths. <strong>Tap a line label</strong> on the chart to highlight that team.</p></div></details>
     <p class="updated">Updated ${esc(ago(L.updated_utc))}.</p>`;
+  app.querySelectorAll(".seg button").forEach(b => b.onclick = () => { LAD_SORT = b.dataset.s; ladderPage(); });
   const pick = t => { LAD_HL = LAD_HL === t ? null : t; powerPage(); };
   app.querySelectorAll(".rk-lbl").forEach(el => el.onclick = () => pick(el.dataset.t));
   app.querySelectorAll(".ld-r").forEach(tr => tr.onclick = () => { LAD_OPEN = LAD_OPEN === tr.dataset.t ? null : tr.dataset.t; powerPage(); });
@@ -893,7 +899,7 @@ function route() {
   const slug = decodeURIComponent(location.hash.replace(/^#\/?/, ""));
   if (slug === "odds") return oddsPage();
   if (slug === "ladder") return ladderPage();
-  if (slug === "power") return powerPage();
+  if (slug === "power") { LAD_SORT = "power"; return ladderPage(); }
   if (slug === "dawg") return dawgPage();
   if (slug === "trade") return tradePage();
   if (slug === "stats") return statsPage();

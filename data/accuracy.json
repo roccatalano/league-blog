@@ -1,0 +1,295 @@
+{
+ "updated_utc": "2026-11-03T02:49:07.164719+00:00",
+ "overall": {
+  "matchups": 14,
+  "called": 10,
+  "brier": 0.226,
+  "calibration": [
+   {
+    "bucket": "50-60%",
+    "n": 3,
+    "predicted": 0.53,
+    "actual": 0.667
+   },
+   {
+    "bucket": "60-70%",
+    "n": 1,
+    "predicted": 0.64,
+    "actual": 0.0
+   },
+   {
+    "bucket": "70-80%",
+    "n": 3,
+    "predicted": 0.743,
+    "actual": 1.0
+   },
+   {
+    "bucket": "80-90%",
+    "n": 2,
+    "predicted": 0.855,
+    "actual": 1.0
+   },
+   {
+    "bucket": "90-100%",
+    "n": 5,
+    "predicted": 0.954,
+    "actual": 0.6
+   }
+  ],
+  "categories": 0,
+  "cat_called": 0,
+  "cat_brier": null,
+  "cat_calibration": [],
+  "by_category": []
+ },
+ "weeks": [
+  {
+   "period": 2,
+   "source": "stored Monday opening odds",
+   "matchups": [
+    {
+     "home": "The Real OG",
+     "away": "Viva La Raza!",
+     "p_home": 0.08,
+     "score": [
+      5,
+      4,
+      0
+     ],
+     "winner": "HOME",
+     "fav": "Viva La Raza!",
+     "fav_p": 0.92,
+     "called": false,
+     "brier": 0.8464,
+     "cats": null
+    },
+    {
+     "home": "HE IS HIM ( G.O.A.T)",
+     "away": "Al-Shaida",
+     "p_home": 0.3,
+     "score": [
+      4,
+      5,
+      0
+     ],
+     "winner": "AWAY",
+     "fav": "Al-Shaida",
+     "fav_p": 0.7,
+     "called": true,
+     "brier": 0.09,
+     "cats": null
+    },
+    {
+     "home": "Gets On Base",
+     "away": "JAReusalem",
+     "p_home": 0.08,
+     "score": [
+      4,
+      5,
+      0
+     ],
+     "winner": "AWAY",
+     "fav": "JAReusalem",
+     "fav_p": 0.92,
+     "called": true,
+     "brier": 0.0064,
+     "cats": null
+    },
+    {
+     "home": "Derrick White Girl Wasted",
+     "away": "Giddey up Horsey",
+     "p_home": 0.46,
+     "score": [
+      5,
+      4,
+      0
+     ],
+     "winner": "HOME",
+     "fav": "Giddey up Horsey",
+     "fav_p": 0.54,
+     "called": false,
+     "brier": 0.2916,
+     "cats": null
+    },
+    {
+     "home": "Popoviched",
+     "away": "The Serbian Empire",
+     "p_home": 0.14,
+     "score": [
+      2,
+      7,
+      0
+     ],
+     "winner": "AWAY",
+     "fav": "The Serbian Empire",
+     "fav_p": 0.86,
+     "called": true,
+     "brier": 0.0196,
+     "cats": null
+    },
+    {
+     "home": "mr charloooooo",
+     "away": "Stairway to Devin",
+     "p_home": 0.51,
+     "score": [
+      5,
+      4,
+      0
+     ],
+     "winner": "HOME",
+     "fav": "mr charloooooo",
+     "fav_p": 0.51,
+     "called": true,
+     "brier": 0.2401,
+     "cats": null
+    },
+    {
+     "home": "Torta Pounders",
+     "away": "The haliban",
+     "p_home": 0.64,
+     "score": [
+      3,
+      6,
+      0
+     ],
+     "winner": "AWAY",
+     "fav": "Torta Pounders",
+     "fav_p": 0.64,
+     "called": false,
+     "brier": 0.4096,
+     "cats": null
+    }
+   ],
+   "called": 4,
+   "n": 7,
+   "brier": 0.272,
+   "cat_brier": null,
+   "cat_called": 0,
+   "cat_n": 0
+  },
+  {
+   "period": 1,
+   "source": "first daily post (2026-10-24)",
+   "matchups": [
+    {
+     "home": "Al-Shaida",
+     "away": "The Real OG",
+     "p_home": 0.85,
+     "score": [
+      7,
+      2,
+      0
+     ],
+     "winner": "HOME",
+     "fav": "Al-Shaida",
+     "fav_p": 0.85,
+     "called": true,
+     "brier": 0.0225,
+     "cats": null
+    },
+    {
+     "home": "JAReusalem",
+     "away": "Viva La Raza!",
+     "p_home": 0.98,
+     "score": [
+      8,
+      1,
+      0
+     ],
+     "winner": "HOME",
+     "fav": "JAReusalem",
+     "fav_p": 0.98,
+     "called": true,
+     "brier": 0.0004,
+     "cats": null
+    },
+    {
+     "home": "Giddey up Horsey",
+     "away": "HE IS HIM ( G.O.A.T)",
+     "p_home": 0.25,
+     "score": [
+      3,
+      6,
+      0
+     ],
+     "winner": "AWAY",
+     "fav": "HE IS HIM ( G.O.A.T)",
+     "fav_p": 0.75,
+     "called": true,
+     "brier": 0.0625,
+     "cats": null
+    },
+    {
+     "home": "The Serbian Empire",
+     "away": "Gets On Base",
+     "p_home": 0.54,
+     "score": [
+      7,
+      2,
+      0
+     ],
+     "winner": "HOME",
+     "fav": "The Serbian Empire",
+     "fav_p": 0.54,
+     "called": true,
+     "brier": 0.2116,
+     "cats": null
+    },
+    {
+     "home": "Stairway to Devin",
+     "away": "Derrick White Girl Wasted",
+     "p_home": 0.78,
+     "score": [
+      5,
+      3,
+      1
+     ],
+     "winner": "HOME",
+     "fav": "Stairway to Devin",
+     "fav_p": 0.78,
+     "called": true,
+     "brier": 0.0484,
+     "cats": null
+    },
+    {
+     "home": "The haliban",
+     "away": "Popoviched",
+     "p_home": 0.01,
+     "score": [
+      3,
+      6,
+      0
+     ],
+     "winner": "AWAY",
+     "fav": "Popoviched",
+     "fav_p": 0.99,
+     "called": true,
+     "brier": 0.0001,
+     "cats": null
+    },
+    {
+     "home": "Torta Pounders",
+     "away": "mr charloooooo",
+     "p_home": 0.04,
+     "score": [
+      6,
+      3,
+      0
+     ],
+     "winner": "HOME",
+     "fav": "mr charloooooo",
+     "fav_p": 0.96,
+     "called": false,
+     "brier": 0.9216,
+     "cats": null
+    }
+   ],
+   "called": 6,
+   "n": 7,
+   "brier": 0.181,
+   "cat_brier": null,
+   "cat_called": 0,
+   "cat_n": 0
+  }
+ ]
+}

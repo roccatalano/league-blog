@@ -1,27 +1,7 @@
 {
- "updated_utc": "2026-11-03T02:35:54.989545+00:00",
+ "updated_utc": "2026-11-03T02:49:10.420732+00:00",
  "today_et": "2026-11-02",
  "players": [
-  {
-   "name": "Mitchell Robinson",
-   "nba_team": "BOS",
-   "pos": "C",
-   "status": "Day-To-Day",
-   "injury": "Left Thumb",
-   "return_date": "2026-11-02",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Robinson (undisclosed) exited to the locker room in the first quarter of Monday's game against the Rockets, Gary Washburn of The Boston Globe reports.",
-   "note_date": "2026-11-03",
-   "fantasy_team": "The haliban",
-   "on_ir": false,
-   "per_game": {
-    "PTS": 7.2,
-    "REB": 9.5,
-    "AST": 1.0
-   }
-  },
   {
    "name": "Aaron Nesmith",
    "nba_team": "IND",
@@ -226,13 +206,9 @@
    "timeframe": "Days",
    "note": "Poeltl (shoulder) has been ruled out for Monday's game against the Clippers, Zulfi Sheikh reports.",
    "note_date": "2026-11-03",
-   "fantasy_team": "mr charloooooo",
+   "fantasy_team": null,
    "on_ir": false,
-   "per_game": {
-    "PTS": 10.2,
-    "REB": 7.7,
-    "AST": 2.0
-   }
+   "per_game": null
   },
   {
    "name": "Jalen Johnson",
@@ -555,7 +531,7 @@
    "note": "Hachimura (quadriceps) has been ruled out for Monday's game against the Raptors.",
    "note_date": "2026-11-02",
    "fantasy_team": "Viva La Raza!",
-   "on_ir": false,
+   "on_ir": true,
    "per_game": {
     "PTS": 13.1,
     "REB": 4.6,

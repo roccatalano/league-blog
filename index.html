@@ -282,6 +282,9 @@
   .ld-r:hover td { background: var(--accent-soft); }
   .ld-r.open td { border-bottom-color: transparent; background: var(--accent-soft); }
   .ld .up, .ld .down { margin-left: 3px; font-size: 10.5px; }
+  .rk-play { font: inherit; font-size: 12.5px; font-weight: 700; border: 1px solid var(--accent); color: var(--accent); background: none; border-radius: 99px; padding: 4px 12px; cursor: pointer; }
+  .rk-play:hover { background: var(--accent); color: #fff; }
+  .rk-sub { font-size: 12px; color: var(--muted); margin: -4px 0 6px; min-height: 16px; font-weight: 600; }
   .rk-h { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 14px; margin-bottom: 8px; }
   .rk-h small { color: var(--muted); font-size: 12px; }
   .rk-wrap { display: grid; grid-template-columns: 22px 1fr 96px; height: 240px; }
@@ -458,26 +461,68 @@ async function loadLeague() {
 }
 const CATS = ["PTS", "REB", "AST", "STL", "BLK", "3PM", "TO", "FG%", "FT%"];
 const TEAM_COLORS = ["#e8590c", "#4c6ef5", "#2f9e44", "#ae3ec9", "#f59f00", "#1098ad", "#e03131", "#5c7cfa", "#74b816", "#d6336c", "#845ef7", "#0ca678", "#fd7e14", "#868e96"];
-function rankChart(days, teams, hl) {
+function rankChart(days, teams, hl, f = null) {
   if (!days || days.length < 2) return `<div class="card"><p class="note" style="margin:0"><b>Power rank by day</b> · the chart starts today and adds a point each day, so check back tomorrow.</p></div>`;
-  const n = teams.length, W = 600, H = 240, padR = 0;
-  const X = i => i / (days.length - 1) * W, Y = r => (r - 1) / (n - 1) * H;
+  const N = days.length, full = f == null; f = full ? N - 1 : Math.max(0, Math.min(N - 1, f));
+  const n = teams.length, W = 600, H = 240;
+  const X = i => i / (N - 1) * W, Y = r => (r - 1) / (n - 1) * H;
   const color = t => TEAM_COLORS[teams.indexOf(t) % TEAM_COLORS.length];
+  const i0 = Math.floor(f), fr = f - i0;
+  // rank at fractional day f (eased between days so labels glide)
+  const ease = x => x * x * (3 - 2 * x);
+  const rAt = t => { const a = days[i0].ranks[t], b = (days[i0 + 1] || days[i0]).ranks[t] ?? a; return a == null ? null : a + (b - a) * ease(fr); };
   const lines = teams.map(t => {
-    const pts = days.map((d, i) => d.ranks[t] ? [X(i), Y(d.ranks[t])] : null).filter(Boolean);
+    const pts = [];
+    for (let i = 0; i <= i0; i++) if (days[i].ranks[t]) pts.push([X(i), Y(days[i].ranks[t])]);
+    if (fr > 0 && rAt(t) != null) pts.push([X(f), Y(rAt(t))]);
     if (!pts.length) return "";
     const on = !hl || hl === t;
     return `<path d="${pts.map((p, i) => (i ? "L" : "M") + p[0].toFixed(1) + " " + p[1].toFixed(1)).join(" ")}" fill="none" stroke="${color(t)}" stroke-width="${hl === t ? 3.2 : 2}" stroke-linejoin="round" stroke-linecap="round" opacity="${on ? 1 : 0.15}" vector-effect="non-scaling-stroke"/>`;
   }).join("");
-  const last = days[days.length - 1];
-  const labels = teams.filter(t => last.ranks[t]).map(t => `<span class="rk-lbl${hl && hl !== t ? " off" : ""}" data-t="${esc(t)}" style="top:${Y(last.ranks[t]) / H * 100}%;color:${color(t)}">${last.ranks[t]} ${esc(short(t))}</span>`).join("");
+  const cur = days[Math.round(f)];
+  const labels = teams.filter(t => rAt(t) != null).map(t => `<span class="rk-lbl${hl && hl !== t ? " off" : ""}" data-t="${esc(t)}" style="top:${Y(rAt(t)) / H * 100}%;color:${color(t)}">${cur.ranks[t] ?? ""} ${esc(short(t))}</span>`).join("");
   const ticks = [1, 4, 7, 10, 14].filter(r => r <= n).map(r => `<span class="rk-y" style="top:${Y(r) / H * 100}%">${r}</span>`).join("");
   const grid = [1, 4, 7, 10, 14].filter(r => r <= n).map(r => `<line x1="0" x2="${W}" y1="${Y(r)}" y2="${Y(r)}" class="wp-grid" vector-effect="non-scaling-stroke"/>`).join("");
-  const cut = LAD.finals_teams < n ? `<line x1="0" x2="${W}" y1="${(Y(LAD.finals_teams) + Y(LAD.finals_teams + 1)) / 2}" y2="${(Y(LAD.finals_teams) + Y(LAD.finals_teams + 1)) / 2}" stroke="var(--accent)" stroke-dasharray="5 5" stroke-width="1.5" vector-effect="non-scaling-stroke"/>` : "";
-  return `<div class="card rk"><div class="rk-h"><b>Power rank by day</b><small>${hl ? "tap again to clear" : "tap a team"}</small></div>
-    <div class="rk-wrap"><div class="rk-axis">${ticks}</div><div class="rk-plot"><svg viewBox="0 -6 ${W} ${H + 12}" preserveAspectRatio="none">${grid}${cut}${lines}</svg></div><div class="rk-lbls">${labels}</div></div>
-    <div class="tc-dates" style="margin:6px 96px 0 22px"><span>${day(days[0].date)}</span><span>${day(last.date)}</span></div>
+  const cy = (Y(LAD.finals_teams) + Y(LAD.finals_teams + 1)) / 2;
+  const cut = LAD.finals_teams < n ? `<line x1="0" x2="${W}" y1="${cy}" y2="${cy}" stroke="var(--accent)" stroke-dasharray="5 5" stroke-width="1.5" vector-effect="non-scaling-stroke"/>` : "";
+  const cursor = full ? "" : `<line x1="${X(f)}" x2="${X(f)}" y1="-6" y2="${H + 6}" stroke="var(--muted)" stroke-width="1" opacity=".5" vector-effect="non-scaling-stroke"/>`;
+  const playing = !!RK_PLAY.raf;
+  const btn = `<button type="button" class="rk-play" aria-label="${playing ? "Pause" : "Play"}">${playing ? "❚❚ Pause" : full ? "▶ Play" : "▶ Resume"}</button>`;
+  return `<div class="card rk"><div class="rk-h"><b>Power rank by day</b>${btn}</div>
+    <div class="rk-sub"><span>${full ? (hl ? "tap again to clear" : "tap a team to highlight it") : day(cur.date) + (cur.week ? " · week " + cur.week : "")}</span></div>
+    <div class="rk-wrap"><div class="rk-axis">${ticks}</div><div class="rk-plot"><svg viewBox="0 -6 ${W} ${H + 12}" preserveAspectRatio="none">${grid}${cut}${cursor}${lines}</svg></div><div class="rk-lbls">${labels}</div></div>
+    <div class="tc-dates" style="margin:6px 96px 0 22px"><span>${day(days[0].date)}</span><span>${day(days[N - 1].date)}</span></div>
     ${days.some(x => x.rebuilt) ? `<p class="note" style="margin:8px 0 0">Up to ${day(days.filter(x => x.rebuilt).slice(-1)[0].date)} the ranks were rebuilt by replaying the season day by day, with only what the model could have known each morning.</p>` : ""}</div>`;
+}
+// play button: animate the chart from opening night to today
+const RK_PLAY = { f: null, raf: 0 };
+const RK_MS_PER_DAY = 700;
+function rkRedraw() {
+  const el = app.querySelector(".card.rk"); if (!el) { cancelAnimationFrame(RK_PLAY.raf); RK_PLAY.raf = 0; return; }
+  const tmp = document.createElement("div");
+  tmp.innerHTML = rankChart(PH.days, LAD.ladder.map(r => r.team).sort(), LAD_HL, RK_PLAY.f);
+  for (const sel of [".rk-sub", ".rk-wrap"]) el.querySelector(sel).innerHTML = tmp.querySelector(sel).innerHTML;
+  const b = el.querySelector(".rk-play"), nb = tmp.querySelector(".rk-play");
+  if (b.textContent !== nb.textContent) { b.textContent = nb.textContent; b.setAttribute("aria-label", nb.getAttribute("aria-label")); }
+  el.querySelectorAll(".rk-lbl").forEach(x => x.onclick = () => { LAD_HL = LAD_HL === x.dataset.t ? null : x.dataset.t; rkRedraw(); });
+}
+function rkWire() {
+  const b = app.querySelector(".rk-play"); if (b) b.onclick = rkToggle;
+  app.querySelectorAll(".rk-lbl").forEach(el => el.onclick = () => { LAD_HL = LAD_HL === el.dataset.t ? null : el.dataset.t; rkRedraw(); });
+}
+function rkToggle() {
+  if (RK_PLAY.raf) { cancelAnimationFrame(RK_PLAY.raf); RK_PLAY.raf = 0; rkRedraw(); return; }
+  const N = PH.days.length;
+  if (RK_PLAY.f == null || RK_PLAY.f >= N - 1) RK_PLAY.f = 0;
+  let t0 = null, f0 = RK_PLAY.f;
+  const step = ts => {
+    if (t0 == null) t0 = ts;
+    RK_PLAY.f = f0 + (ts - t0) / RK_MS_PER_DAY;
+    if (RK_PLAY.f >= N - 1) { RK_PLAY.f = null; RK_PLAY.raf = 0; rkRedraw(); return; }
+    RK_PLAY.raf = requestAnimationFrame(step);
+    rkRedraw();
+  };
+  RK_PLAY.raf = requestAnimationFrame(step);
 }
 async function ladderPage() {
   setNav("ladder"); document.title = "Ladder · NBA Fantasy 2026";
@@ -521,6 +566,7 @@ async function powerPage() {
     return `<tr class="ld-r${open ? " open" : ""}" data-t="${esc(r.team)}"><td>${r.power_rank}</td>
       <td><span class="tm">${esc(r.team)}</span>${r.power_move ? `<small>${mv(r.power_move)} since yesterday</small>` : ""}</td>
       <td><b>${r.power_pct}%</b></td><td>${r.proj_w.toFixed(1)}</td><td>${pc(r.finals_pct)}${mv(r.finals_move)}</td><td>${pc(r.title_pct)}${mv(r.title_move, 1)}</td></tr>${open ? detail(r) : ""}`; }).join("");
+  if (RK_PLAY.raf) { cancelAnimationFrame(RK_PLAY.raf); RK_PLAY.raf = 0; } RK_PLAY.f = null;
   const chart = rankChart(PH.days, L.ladder.map(r => r.team).sort(), LAD_HL);
   app.innerHTML = `${seg}${chart}<div class="card ld scroll"><table class="ladder"><tr><th>#</th><th>Team</th><th>Power</th><th>Proj W</th><th>Finals</th><th>Title</th></tr>${rows}</table></div>
     <details class="rc-how"><summary>What the columns mean</summary><div class="explain">
@@ -530,7 +576,7 @@ async function powerPage() {
     <p class="updated">Updated ${esc(ago(L.updated_utc))}.</p>`;
   app.querySelectorAll(".seg button").forEach(b => b.onclick = () => { LAD_SORT = b.dataset.s; ladderPage(); });
   const pick = t => { LAD_HL = LAD_HL === t ? null : t; powerPage(); };
-  app.querySelectorAll(".rk-lbl").forEach(el => el.onclick = () => pick(el.dataset.t));
+  rkWire();
   app.querySelectorAll(".ld-r").forEach(tr => tr.onclick = () => { LAD_OPEN = LAD_OPEN === tr.dataset.t ? null : tr.dataset.t; powerPage(); });
 }
 

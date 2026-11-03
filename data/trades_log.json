@@ -10,6 +10,7 @@
   "at_time_source": "trade review"
  },
  "_scan": {
+  "v": 2,
   "done_through": 14,
   "trades": []
  }

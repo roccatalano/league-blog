@@ -265,6 +265,16 @@
   .tc-key .ka { color: var(--ink); } .tc-key .ka::before { background: var(--accent); }
   .tc-key .kb { color: var(--ink); } .tc-key .kb::before { background: #4c6ef5; }
   .tc-key .kn::before { display: none; } .tc-key .kn { margin-left: auto; }
+  .mu-odds strong.pos, .tc-end.pos, .wp-tip .pos { color: #2f9e44; } .mu-odds strong.neg, .tc-end.neg, .wp-tip .neg { color: #e03131; }
+  .tc-wrap { display: grid; grid-template-columns: 38px 1fr 50px; }
+  .tc-wrap .wp-plot { grid-column: 2; margin: 0; }
+  .tc .wp-plot { margin-left: 0; margin-right: 0; }
+  .tc-axis { position: relative; grid-column: 1; }
+  .tc-y { position: absolute; right: 6px; transform: translateY(-50%); font-size: 10.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .tc-end { position: absolute; left: 100%; margin-left: 10px; transform: translateY(-50%); font-family: "Archivo Black", Inter, sans-serif; font-size: 12.5px; white-space: nowrap; }
+  .tc .wp-tip { top: -8px; line-height: 1.45; white-space: nowrap; text-align: left; }
+  .tc .wp-tip .pos { color: #69db7c; } .tc .wp-tip .neg { color: #ff8787; }
+  .tc-dates { margin-left: 38px; margin-right: 50px; }
   footer { color: var(--muted); font-size: 13px; text-align: center; padding: 0 16px 32px; }
 </style>
 </head>
@@ -697,19 +707,48 @@ function tradeChart(series, A, B) {
   // each team's matchup wins added since the trade, day by day (series: [date, margin, winsA, winsB])
   if (!series || !series.length || series[0].length < 4) return "";
   const pts = [[null, 0, 0, 0], ...series], n = pts.length - 1;
-  const lim = Math.max(0.02, ...pts.map(p => Math.max(Math.abs(p[2]), Math.abs(p[3])))) * 1.15;
-  const W = 600, H = 120, X = i => i / n * W, Y = v => (1 - (v + lim) / (2 * lim)) * H;
+  const big = Math.max(0.005, ...pts.map(p => Math.max(Math.abs(p[2]), Math.abs(p[3]))));
+  const step = [0.005, 0.01, 0.02, 0.025, 0.05, 0.1, 0.2, 0.25, 0.5, 1].find(s => s * 2 >= big) || 1;
+  const lim = step * 2 * 1.08;
+  const W = 600, H = 132, X = i => i / n * W, Y = v => (1 - (v + lim) / (2 * lim)) * H, pct = y => (y + 2) / (H + 4) * 100;
   const path = k => pts.map((p, i) => (i ? "L" : "M") + X(i).toFixed(1) + " " + Y(p[k]).toFixed(1)).join(" ");
+  const sg = x => (x > 0 ? "+" : x < 0 ? "−" : "") + Math.abs(x).toFixed(Math.abs(x) >= 0.1 || step >= 0.05 ? 2 : 3).replace(/^0\./, ".");
   const fd = x => new Date(x + "T12:00:00").toLocaleDateString("en-AU", { day: "numeric", month: "short" });
-  const end = (k, cls) => `<span class="wp-dot${cls}" style="left:100%;top:${(Y(pts[n][k]) + 2) / (H + 4) * 100}%"></span>`;
-  return `<div class="wp tc"><div class="wp-plot" style="height:122px">
-    <svg viewBox="0 -2 ${W} ${H + 4}" preserveAspectRatio="none" style="height:122px">
-      <line x1="0" x2="${W}" y1="${Y(0)}" y2="${Y(0)}" class="wp-mid"/>
-      <path d="${path(3)}" class="tc-b" vector-effect="non-scaling-stroke"/>
-      <path d="${path(2)}" class="tc-a" vector-effect="non-scaling-stroke"/></svg>
-    ${end(3, " a")}${end(2, "")}<span class="tc-zero" style="top:${(Y(0) + 2) / (H + 4) * 100}%">0</span></div>
+  const ticks = [-2, -1, 0, 1, 2].map(k => `<span class="tc-y" style="top:${pct(Y(k * step))}%">${k ? sg(k * step) : "0"}</span>`).join("");
+  const grid = [-2, -1, 1, 2].map(k => `<line x1="0" x2="${W}" y1="${Y(k * step)}" y2="${Y(k * step)}" class="wp-grid" vector-effect="non-scaling-stroke"/>`).join("");
+  // end labels: nudge apart if they'd overlap
+  let ya = pct(Y(pts[n][2])), yb = pct(Y(pts[n][3]));
+  if (Math.abs(ya - yb) < 13) { const m = (ya + yb) / 2, d = ya <= yb ? -6.5 : 6.5; ya = m + d; yb = m - d; }
+  const data = esc(JSON.stringify(pts.map((p, i) => [X(i) / W * 100, p[0], p[2], p[3]])));
+  return `<div class="wp tc" data-p="${data}" data-a="${esc(A)}" data-b="${esc(B)}">
+    <div class="tc-wrap"><div class="tc-axis">${ticks}</div><div class="wp-plot" style="height:136px">
+      <svg viewBox="0 -2 ${W} ${H + 4}" preserveAspectRatio="none" style="height:136px">${grid}
+        <line x1="0" x2="${W}" y1="${Y(0)}" y2="${Y(0)}" class="wp-mid"/>
+        <path d="${path(3)}" class="tc-b" vector-effect="non-scaling-stroke"/>
+        <path d="${path(2)}" class="tc-a" vector-effect="non-scaling-stroke"/>
+        <line class="wp-cur" x1="0" x2="0" y1="0" y2="${H}" style="display:none" vector-effect="non-scaling-stroke"/></svg>
+      <span class="wp-dot a" style="left:100%;top:${pct(Y(pts[n][3]))}%"></span><span class="wp-dot" style="left:100%;top:${pct(Y(pts[n][2]))}%"></span>
+      <span class="tc-end ka ${pts[n][2] >= 0 ? "pos" : "neg"}" style="top:${ya}%">${sg(pts[n][2])}</span>
+      <span class="tc-end kb ${pts[n][3] >= 0 ? "pos" : "neg"}" style="top:${yb}%">${sg(pts[n][3])}</span>
+      <div class="wp-tip"></div></div></div>
     <div class="tc-dates"><span>Trade</span><span>${fd(series[n - 1][0])}</span></div>
-    <div class="tc-key"><span class="ka">${esc(A)}</span><span class="kb">${esc(B)}</span><span class="kn">wins added since the trade</span></div></div>`;
+    <div class="tc-key"><span class="ka">${esc(A)}</span><span class="kb">${esc(B)}</span><span class="kn">wins added · tap for any day</span></div></div>`;
+}
+function wireTradeCharts() {
+  app.querySelectorAll(".tc").forEach(el => {
+    const P = JSON.parse(el.dataset.p), plot = el.querySelector(".wp-plot"), cur = el.querySelector(".wp-cur"), tip = el.querySelector(".wp-tip");
+    const f = x => `<span class="${x > 0.0005 ? "pos" : x < -0.0005 ? "neg" : ""}">${(x >= 0 ? "+" : "−") + Math.abs(x).toFixed(3)}</span>`;
+    const show = e => {
+      const r = plot.getBoundingClientRect(), x = (e.clientX - r.left) / r.width * 100;
+      const p = P.reduce((a, b) => Math.abs(b[0] - x) < Math.abs(a[0] - x) ? b : a);
+      cur.setAttribute("x1", p[0] * 6); cur.setAttribute("x2", p[0] * 6); cur.style.display = "";
+      const day = p[1] ? new Date(p[1] + "T12:00:00").toLocaleDateString("en-AU", { weekday: "short", day: "numeric", month: "short" }) : "Trade day";
+      tip.innerHTML = `<b>${day}</b><br>${esc(el.dataset.a)} ${f(p[2])}<br>${esc(el.dataset.b)} ${f(p[3])}`;
+      tip.style.left = Math.min(Math.max(p[0], 22), 78) + "%"; tip.style.opacity = 1;
+    };
+    plot.addEventListener("pointermove", show); plot.addEventListener("pointerdown", show);
+    plot.addEventListener("pointerleave", () => { cur.style.display = "none"; tip.style.opacity = 0; });
+  });
 }
 async function tradesPage() {
   setNav("trades"); document.title = "Trades · NBA Fantasy 2026";
@@ -757,6 +796,7 @@ async function tradesPage() {
     <p><strong>The chart</strong> tracks each team's wins added, day by day since the trade. Both lines start at 0; the one climbing is the team winning the trade.</p>
     <p><strong>Details</strong> has the stats behind it, plus what the model expected when the trade happened and what it expects from today on.</p></div></details>`;
   app.innerHTML = `<p class="updated">Every trade this season and who's actually winning it · updated ${esc(ago(TR.updated_utc))}.</p>${cards}${how}`;
+  wireTradeCharts();
 }
 
 function route() {

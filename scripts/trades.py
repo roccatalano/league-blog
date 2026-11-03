@@ -113,6 +113,33 @@ def score(got, gave):
     return w, l, out
 
 
+def wins_added(team_id, delta, weeks, dists):
+    """Team-aware value of what a trade has produced so far, in matchup wins.
+    delta = this team's (got - gave) stat totals in K order; spread over `weeks` weeks.
+    Compares the team's weekly totals with and without that per-week difference against every
+    other team, so a category only counts as much as it moves this team's real chances."""
+    if weeks <= 0:
+        return 0.0
+    mean, var = dists[team_id]
+    without = (dict(mean), var)
+    for i, k in enumerate(K):
+        without[0][k] = mean.get(k, 0) - delta[i] / weeks
+    opp = [dv for t, dv in dists.items() if t != team_id]
+    w_with = sum(S._match_win(S._cat_probs((mean, var), o)) for o in opp) / len(opp)
+    w_without = sum(S._match_win(S._cat_probs(without, o)) for o in opp) / len(opp)
+    return round((w_with - w_without) * weeks * S.GAIN_CALIBRATION, 3)
+
+
+def grade_wins(x, games):
+    if games < 12:
+        return "Too early"
+    # x = matchup wins added PER WEEK since the trade, so early and late trades are graded alike
+    for g, lo in (("A+", 0.04), ("A", 0.025), ("B+", 0.012), ("B", 0.004), ("C", -0.004), ("C-", -0.012), ("D+", -0.025), ("D", -0.04)):
+        if x >= lo:
+            return g
+    return "F"
+
+
 def grade(m, games):
     if games < 12:
         return "Too early"
@@ -146,6 +173,7 @@ def main():
     rosters = {t["id"]: S._team_players(t["id"], d)[1] for t in d["teams"]}
     on_team = {p["name"]: tid for tid, pl in rosters.items() for p in pl}
     days = player_days(d)
+    dists = {tid: S._weekly_dist(pl) for tid, pl in rosters.items()}
     seed, log = load(SEED, {}), load(LOG, {})
     today = str(datetime.now(S.ET).date())
     out = []
@@ -202,9 +230,14 @@ def main():
                 w, l, _ = score(tot[A], tot[B])
                 series.append([day["date"], w - l])
             w, l, cats = score(tot[A], tot[B])
-            rec_out["so_far"] = {"from": str(first_day), "score": [w, l, 9 - w - l], "cats": cats,
-                                 "games": games, "series": series,
-                                 "grade": {A: grade(w - l, min(games.values())), B: grade(l - w, min(games.values()))}}
+            ndays = sum(1 for sp in days if days[sp]["date"] >= str(first_day))
+            wk = ndays / 7
+            dA = [tot[A][i] - tot[B][i] for i in range(len(K))]  # A got what B's new players didn't
+            added = {A: wins_added(ids[A], dA, wk, dists), B: wins_added(ids[B], [-x for x in dA], wk, dists)}
+            g = min(games.values())
+            rec_out["so_far"] = {"from": str(first_day), "days": ndays, "score": [w, l, 9 - w - l], "cats": cats,
+                                 "games": games, "series": series, "wins_added": added,
+                                 "grade": {A: grade_wins(added[A] / max(wk, 1e-9), g), B: grade_wins(added[B] / max(wk, 1e-9), g)}}
             nv = {A: now_value(d, names, rosters, A, B, gets), B: now_value(d, names, rosters, B, A, gets)}
             if all(v is not None for v in nv.values()):
                 rec["now"] = {"date": today, **nv}

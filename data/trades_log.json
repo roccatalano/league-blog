@@ -97,8 +97,8 @@
   "history": [
    [
     "2026-11-02",
-    -0.284,
-    0.332
+    -0.268,
+    0.319
    ]
   ],
   "at_time": {
@@ -109,8 +109,8 @@
   "at_time_source": "trade review",
   "now": {
    "date": "2026-11-02",
-   "JAReusalem": -0.284,
-   "Stairway to Devin": 0.332
+   "JAReusalem": -0.268,
+   "Stairway to Devin": 0.319
   }
  },
  "Fred VanVleet|Onyeka Okongwu|Scottie Barnes|Trae Young": {
@@ -118,8 +118,8 @@
   "history": [
    [
     "2026-11-02",
-    0.062,
-    -0.108
+    0.082,
+    -0.128
    ]
   ],
   "at_time": {
@@ -130,8 +130,8 @@
   "at_time_source": "trade review",
   "now": {
    "date": "2026-11-02",
-   "Al-Shaida": 0.062,
-   "Viva La Raza!": -0.108
+   "Al-Shaida": 0.082,
+   "Viva La Raza!": -0.128
   }
  }
 }

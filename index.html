@@ -510,7 +510,8 @@ async function recordPage() {
       return `<div class="rc-m"><i class="${m.called ? "ok" : "no"}"></i><div><b>${esc(m.fav)}</b> <small>${pc(m.fav_p)} to beat ${esc(m.fav === m.home ? m.away : m.home)}</small><small>${esc(win)} ${sc(m.score)}</small></div></div>`;
     }).join("");
     const x = sk(w.brier);
-    const note = w.source === "live" || w.source.startsWith("stored") ? "" : `<p class="rc-note">Picks taken from the first daily post a few days in, so this week flatters the model a little.</p>`;
+    const note = w.started ? `<p class="rc-note">Picks were saved after Monday's games had started (a one-off, now fixed), so this week flatters the model slightly.</p>`
+      : w.source === "live" || w.source.startsWith("stored") ? "" : `<p class="rc-note">Picks taken from the first daily post a few days in, so this week flatters the model a little.</p>`;
     return `<details class="rc-wk"><summary><span class="rc-wn">W${w.period}</span>
       <span class="rc-mid"><span class="rc-lbl">${w.called} of ${w.n} right · Brier ${w.brier.toFixed(3)}</span>${dots(w.matchups.map(m => m.called ? "ok" : "no"))}</span>
       <span class="rc-val ${x >= 0 ? "pos" : "neg"}">${x >= 0 ? "+" : "−"}${Math.abs(x)}%</span></summary>${note}${ms}</details>`;

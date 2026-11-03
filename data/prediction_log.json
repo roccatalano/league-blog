@@ -374,7 +374,8 @@
      }
     }
    }
-  ]
+  ],
+  "started": true
  },
  "2": {
   "source": "stored Monday opening odds",

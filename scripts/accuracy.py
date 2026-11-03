@@ -35,9 +35,13 @@ def capture_opening(log):
     if not o or not o.get("matchups"):
         return
     mp = str(o["matchup_period"])
-    if mp in log and log[mp].get("source") == "live":
+    # games already played this week? (any category won by anyone so far)
+    started = any(m.get("score_now", [0, 0, 9])[2] != 9 for m in o["matchups"])
+    old = log.get(mp)
+    # Keep an existing live capture unless this one is cleaner (taken before any games when the old one wasn't).
+    if old and old.get("source") == "live" and (not old.get("started") or started):
         return
-    log[mp] = {"source": "live", "captured_utc": o.get("updated_utc"), "matchups": [
+    log[mp] = {"source": "live", "captured_utc": o.get("updated_utc"), "started": started, "matchups": [
         {"home": m["home"], "away": m["away"], "p_home": m["home_win_pct"] / 100, "p_tie": m.get("tie_pct", 0) / 100,
          "cats": {c["cat"]: {"p_home": c["home_win_pct"] / 100, "proj_home": c.get("proj_home"), "proj_away": c.get("proj_away")}
                   for c in m.get("categories", [])}}
@@ -128,7 +132,7 @@ def build(log, res):
         if not rows:
             continue
         cb = [c["brier"] for r in rows for c in (r["cats"] or [])]
-        weeks.append({"period": int(mp), "source": log[mp]["source"], "matchups": rows,
+        weeks.append({"period": int(mp), "source": log[mp]["source"], "started": bool(log[mp].get("started")), "matchups": rows,
                       "called": sum(r["called"] for r in rows), "n": len(rows),
                       "brier": round(sum(r["brier"] for r in rows) / len(rows), 3),
                       "cat_brier": round(sum(cb) / len(cb), 3) if cb else None,

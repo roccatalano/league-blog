@@ -115,6 +115,19 @@
   .grp { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .6px; color: var(--muted); margin: 18px 0 6px; }
   .chip.out { background: #fde2e2; color: #c92a2a; } .chip.dtd { background: #fff3bf; color: #946200; } .chip.ft { background: transparent; color: var(--muted); border: 1px solid var(--line); }
   @media (prefers-color-scheme: dark) { .chip.out { background: #3b1717; color: #ff8787; } .chip.dtd { background: #3a2f0b; color: #ffd43b; } }
+  .kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 14px; }
+  .kpi { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 12px; }
+  .kpi b { display: block; font-family: "Archivo Black", Inter, sans-serif; font-size: 24px; font-weight: 400; line-height: 1.1; }
+  .kpi span { font-size: 12px; color: var(--muted); line-height: 1.3; display: block; margin-top: 4px; }
+  .cal { display: grid; grid-template-columns: 64px 1fr 74px; gap: 8px; align-items: center; font-size: 13px; padding: 5px 0; }
+  .cal .track { position: relative; height: 10px; background: var(--line); border-radius: 99px; }
+  .cal .act { position: absolute; left: 0; top: 0; bottom: 0; background: var(--accent); border-radius: 99px; }
+  .cal .pred { position: absolute; top: -3px; bottom: -3px; width: 2px; background: var(--ink); }
+  .mrow { display: grid; grid-template-columns: 1fr auto; gap: 8px; padding: 8px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+  .mrow:last-child { border-bottom: 0; }
+  .mrow small { color: var(--muted); display: block; font-size: 12px; }
+  .ok { color: #2f9e44; font-weight: 700; } .miss { color: #e03131; font-weight: 700; }
+  @media (max-width: 420px) { .kpi b { font-size: 20px; } }
   footer { color: var(--muted); font-size: 13px; text-align: center; padding: 0 16px 32px; }
 </style>
 </head>
@@ -122,7 +135,7 @@
 <header><div class="wrap">
   <a href="#"><div class="brand">NBA FANTASY <span>2026</span></div></a>
   <div class="tag">Daily posts, trade reviews and weekly roundups. Updated automatically.</div>
-  <nav><a href="#/" data-n="posts">Posts</a><a href="#/ladder" data-n="ladder">Ladder</a><a href="#/odds" data-n="odds">Live odds</a><a href="#/trade" data-n="trade">Trade calculator</a><a href="#/dawg" data-n="dawg">Dawg index</a><a href="#/stats" data-n="stats">Stat ranks</a><a href="#/injuries" data-n="injuries">Injuries</a></nav>
+  <nav><a href="#/" data-n="posts">Posts</a><a href="#/ladder" data-n="ladder">Ladder</a><a href="#/odds" data-n="odds">Live odds</a><a href="#/trade" data-n="trade">Trade calculator</a><a href="#/dawg" data-n="dawg">Dawg index</a><a href="#/stats" data-n="stats">Stat ranks</a><a href="#/injuries" data-n="injuries">Injuries</a><a href="#/record" data-n="record">Model record</a></nav>
 </div></header>
 <main class="wrap" id="app"><p class="empty">Loading…</p></main>
 <footer>Odds and expected wins come from a model, not a crystal ball.</footer>
@@ -357,6 +370,49 @@ async function injuriesPage() {
   document.getElementById("injf").onchange = e => { INJ_F = e.target.value; injuriesPage(); };
 }
 
+let ACC = null;
+async function recordPage() {
+  setNav("record"); document.title = "Model record · NBA Fantasy 2026";
+  app.innerHTML = '<p class="empty">Loading…</p>';
+  try { if (!ACC) ACC = await (await fetch("data/accuracy.json", { cache: "no-cache" })).json(); }
+  catch (e) { app.innerHTML = '<p class="empty">The model record isn\'t available yet. It appears after the next data refresh.</p>'; return; }
+  const O = ACC.overall, W = ACC.weeks;
+  if (!W.length) { app.innerHTML = '<p class="empty">No finished weeks yet.</p>'; return; }
+  const pc = x => Math.round(x * 100) + "%";
+  const skill = b => b == null ? "–" : Math.round((1 - b / 0.25) * 100) + "%";
+  const calRows = list => list.map(c => `<div class="cal"><span>${c.bucket}</span>
+      <div class="track"><i class="act" style="width:${c.actual * 100}%"></i><i class="pred" style="left:${c.predicted * 100}%"></i></div>
+      <span>${pc(c.actual)} <small style="color:var(--muted)">of ${c.n}</small></span></div>`).join("");
+  const kpis = `<div class="kpis">
+    <div class="kpi"><b>${O.called}/${O.matchups}</b><span>matchups called right (${pc(O.called / O.matchups)})</span></div>
+    <div class="kpi"><b>${O.brier.toFixed(3)}</b><span>matchup Brier score · coin flip = 0.250</span></div>
+    <div class="kpi"><b>${skill(O.brier)}</b><span>better than a coin flip</span></div></div>`;
+  const catCard = O.categories ? `<div class="card"><h2 style="margin-top:0">Categories</h2>
+    <p class="note">${Math.round(O.cat_called)}/${O.categories} category calls right (${pc(O.cat_called / O.categories)}), Brier ${O.cat_brier.toFixed(3)}. Tracked since the live odds started logging category chances.</p>
+    <table class="cats"><tr><th>Cat</th><th>Called right</th><th>Brier</th></tr>${O.by_category.map(c => `<tr><td>${esc(c.cat)}</td><td>${Math.round(c.called)}/${c.n}</td><td>${c.brier.toFixed(3)}</td></tr>`).join("")}</table>
+    <details><summary>Calibration</summary>${calRows(O.cat_calibration)}</details></div>` : "";
+  const weeks = W.map(w => {
+    const rows = w.matchups.map(m => {
+      const res = m.winner === "TIE" ? "Tie" : (m.winner === "HOME" ? m.home : m.away) + " won";
+      const cats = m.cats ? `<small>Categories: ${m.cats.filter(c => c.won !== 0.5 && (c.won === 1) === (c.p_home >= 0.5)).length}/${m.cats.filter(c => c.won !== 0.5).length} called</small>` : "";
+      return `<div class="mrow"><div><strong>${esc(m.home)}</strong> v <strong>${esc(m.away)}</strong>
+        <small>Model: ${esc(m.fav)} ${pc(m.fav_p)} · ${esc(res)} ${Math.max(m.score[0], m.score[1])}-${Math.min(m.score[0], m.score[1])}${m.score[2] ? "-" + m.score[2] : ""}</small>${cats}</div>
+        <div class="${m.called ? "ok" : "miss"}">${m.called ? "✓" : "✗"}</div></div>`;
+    }).join("");
+    const cb = w.cat_n ? ` · cats ${w.cat_called}/${w.cat_n}` : "";
+    return `<details class="card"><summary>Week ${w.period}: ${w.called}/${w.n} called · Brier ${w.brier.toFixed(3)}${cb}</summary>
+      <p class="note">Predictions: ${esc(w.source === "live" ? "Monday opening live odds" : w.source)}.</p>${rows}</details>`;
+  }).join("");
+  app.innerHTML = `<p class="updated">How the model's pre-week predictions (Monday's opening odds) compared with what happened. Updated ${esc(ago(ACC.updated_utc))}; a week appears once every matchup is final.</p>
+    ${kpis}
+    <div class="card"><h2 style="margin-top:0">Is it calibrated?</h2>
+      <p class="note">When the model makes a team a 70–80% favourite, they should win about 75% of the time. Orange bar = how often the favourite actually won; black tick = what the model said. Small samples bounce around a lot.</p>
+      ${calRows(O.calibration)}</div>
+    ${catCard}
+    <h2 class="grp">Week by week</h2>${weeks}
+    <p class="note">Brier score = average of (predicted chance − result)², lower is better: 0 is perfect, 0.25 is what you'd get saying 50% every time.</p>`;
+}
+
 function route() {
   const slug = decodeURIComponent(location.hash.replace(/^#\/?/, ""));
   if (slug === "odds") return oddsPage();
@@ -365,6 +421,7 @@ function route() {
   if (slug === "trade") return tradePage();
   if (slug === "stats") return statsPage();
   if (slug === "injuries") return injuriesPage();
+  if (slug === "record") return recordPage();
   setNav("posts");
   slug ? show(slug) : home();
 }

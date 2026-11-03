@@ -97,7 +97,7 @@
   "history": [
    [
     "2026-11-02",
-    -0.29,
+    -0.289,
     0.338
    ]
   ],
@@ -109,7 +109,7 @@
   "at_time_source": "trade review",
   "now": {
    "date": "2026-11-02",
-   "JAReusalem": -0.29,
+   "JAReusalem": -0.289,
    "Stairway to Devin": 0.338
   }
  },
@@ -118,8 +118,8 @@
   "history": [
    [
     "2026-11-02",
-    0.052,
-    -0.099
+    0.055,
+    -0.102
    ]
   ],
   "at_time": {
@@ -130,8 +130,8 @@
   "at_time_source": "trade review",
   "now": {
    "date": "2026-11-02",
-   "Al-Shaida": 0.052,
-   "Viva La Raza!": -0.099
+   "Al-Shaida": 0.055,
+   "Viva La Raza!": -0.102
   }
  }
 }

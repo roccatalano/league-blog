@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-03T11:11:32.459469+00:00",
+ "updated_utc": "2026-11-03T18:33:53.822786+00:00",
  "today_et": "2026-11-03",
  "players": [
   {
@@ -47,7 +47,7 @@
    "note": "Sarr (knee) is out for Monday's game against Orlando.",
    "note_date": "2026-11-03",
    "fantasy_team": "Popoviched",
-   "on_ir": true,
+   "on_ir": false,
    "per_game": {
     "PTS": 14.5,
     "REB": 7.0,
@@ -94,14 +94,14 @@
    "name": "Clint Capela",
    "nba_team": "HOU",
    "pos": "C",
-   "status": "Out",
+   "status": "Day-To-Day",
    "injury": "Right Ankle",
    "return_date": "2026-11-04",
    "days_out": 1,
    "games_missed": 0,
    "timeframe": "Days",
    "note": "Capela (ankle) has been ruled out for Monday's game against the Celtics.",
-   "note_date": "2026-11-02",
+   "note_date": "2026-11-03",
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
@@ -405,6 +405,22 @@
     "REB": 7.1,
     "AST": 3.4
    }
+  },
+  {
+   "name": "Nikola Topic",
+   "nba_team": "OKC",
+   "pos": "G",
+   "status": "Out",
+   "injury": "Back",
+   "return_date": "2026-11-04",
+   "days_out": 1,
+   "games_missed": 0,
+   "timeframe": "Days",
+   "note": "Topic (back) will remain on the inactive list for Wednesday's game in Dallas.",
+   "note_date": "2026-10-27",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
   },
   {
    "name": "Obi Toppin",
@@ -711,42 +727,6 @@
    "per_game": null
   },
   {
-   "name": "Nikola Topic",
-   "nba_team": "OKC",
-   "pos": "G",
-   "status": "Out",
-   "injury": "Back",
-   "return_date": "2026-11-06",
-   "days_out": 3,
-   "games_missed": 1,
-   "timeframe": "1 week",
-   "note": "Topic (back) will remain on the inactive list for Wednesday's game in Dallas.",
-   "note_date": "2026-10-27",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
-  },
-  {
-   "name": "Tobias Harris",
-   "nba_team": "SA",
-   "pos": "F",
-   "status": "Out",
-   "injury": "Left Calf",
-   "return_date": "2026-11-06",
-   "days_out": 3,
-   "games_missed": 1,
-   "timeframe": "1 week",
-   "note": "Harris (calf) is listed as out for Saturday's game against Minnesota.",
-   "note_date": "2026-10-30",
-   "fantasy_team": "The haliban",
-   "on_ir": false,
-   "per_game": {
-    "PTS": 14.5,
-    "REB": 5.7,
-    "AST": 2.6
-   }
-  },
-  {
    "name": "Trey Alexander",
    "nba_team": "UTAH",
    "pos": "G",
@@ -1009,6 +989,26 @@
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
+  },
+  {
+   "name": "Tobias Harris",
+   "nba_team": "SA",
+   "pos": "F",
+   "status": "Out",
+   "injury": "Left Calf",
+   "return_date": "2026-11-09",
+   "days_out": 6,
+   "games_missed": 3,
+   "timeframe": "1 week",
+   "note": "Harris (calf) is listed as out for Saturday's game against Minnesota.",
+   "note_date": "2026-10-30",
+   "fantasy_team": "The haliban",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 14.5,
+    "REB": 5.7,
+    "AST": 2.6
+   }
   },
   {
    "name": "Tristan Vukcevic",

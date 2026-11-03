@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-03T11:11:29.063069+00:00",
+ "updated_utc": "2026-11-03T18:33:47.613971+00:00",
  "teams_order": "alphabetical",
  "trades": [
   {
@@ -172,7 +172,7 @@
    },
    "now": {
     "date": "2026-11-03",
-    "JAReusalem": -0.285,
+    "JAReusalem": -0.284,
     "Stairway to Devin": 0.326
    },
    "now_frozen": false,
@@ -184,7 +184,7 @@
     ],
     [
      "2026-11-03",
-     -0.285,
+     -0.284,
      0.326
     ]
    ]
@@ -462,12 +462,12 @@
       "2026-11-02",
       4,
       0.043,
-      -0.035
+      -0.034
      ]
     ],
     "wins_added": {
      "Derrick White Girl Wasted": 0.043,
-     "Stairway to Devin": -0.035
+     "Stairway to Devin": -0.034
     },
     "grade": {
      "Derrick White Girl Wasted": "Too early",

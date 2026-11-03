@@ -370,47 +370,99 @@ async function injuriesPage() {
   document.getElementById("injf").onchange = e => { INJ_F = e.target.value; injuriesPage(); };
 }
 
-let ACC = null;
+let ACC = null, PLOG = null;
 async function recordPage() {
   setNav("record"); document.title = "Model record · NBA Fantasy 2026";
   app.innerHTML = '<p class="empty">Loading…</p>';
-  try { if (!ACC) ACC = await (await fetch("data/accuracy.json", { cache: "no-cache" })).json(); }
-  catch (e) { app.innerHTML = '<p class="empty">The model record isn\'t available yet. It appears after the next data refresh.</p>'; return; }
-  const O = ACC.overall, W = ACC.weeks;
-  if (!W.length) { app.innerHTML = '<p class="empty">No finished weeks yet.</p>'; return; }
-  const pc = x => Math.round(x * 100) + "%";
-  const skill = b => b == null ? "–" : Math.round((1 - b / 0.25) * 100) + "%";
-  const calRows = list => list.map(c => `<div class="cal"><span>${c.bucket}</span>
-      <div class="track"><i class="act" style="width:${c.actual * 100}%"></i><i class="pred" style="left:${c.predicted * 100}%"></i></div>
-      <span>${pc(c.actual)} <small style="color:var(--muted)">of ${c.n}</small></span></div>`).join("");
+  let ODDS = null;
+  try {
+    if (!ACC) ACC = await (await fetch("data/accuracy.json", { cache: "no-cache" })).json();
+    if (!PLOG) PLOG = await (await fetch("data/prediction_log.json", { cache: "no-cache" })).json();
+    ODDS = await (await fetch("data/odds.json", { cache: "no-cache" })).json();
+  } catch (e) { if (!ACC) { app.innerHTML = '<p class="empty">The model record isn\'t available yet. It appears after the next data refresh.</p>'; return; } }
+  const O = ACC.overall, W = ACC.weeks, pc = x => Math.round(x * 100) + "%";
+  const score = s => `${Math.max(s[0], s[1])}-${Math.min(s[0], s[1])}${s[2] ? "-" + s[2] : ""}`;
+
+  const howItWorks = `<details class="card"><summary>How does the model work? (plain English)</summary><div class="explain">
+    <h3>1. How good is each player?</h3>
+    <p>For every player we work out what they average per game in each of the 9 categories. Early in the season we mix this year's numbers with last year's (or ESPN's projection), and lean more on this year as games pile up, so one hot week doesn't fool it.</p>
+    <h3>2. How many games will they play?</h3>
+    <p>We use the real NBA schedule. Healthy players are expected to play about 93% of their games (rest days happen). Injured players count as out until ESPN's projected return date, then healthy again.</p>
+    <h3>3. Who starts each day?</h3>
+    <p>We assume every manager sets their best possible lineup every day, using whoever has a game. (Real managers sometimes forget, so this flatters lazy teams a little.)</p>
+    <h3>4. Play the week 1,000 times</h3>
+    <p>Real games are random: a 20-point scorer might drop 8 or 35. So the computer plays out the rest of the week 1,000 times with that randomness built in, adds up each team's stats, and counts who wins each category. If Team A wins in 700 of the 1,000 runs, that's a 70% chance.</p>
+    <h3>5. Odds</h3>
+    <p>The % chance is turned into bookie-style prices (70% ≈ $1.35) with a small margin, just for fun. Nobody's actually betting. We hope.</p>
+  </div></details>`;
+
+  // ---- this week (in progress)
+  let live = "";
+  const cur = ODDS && PLOG && PLOG[String(ODDS.matchup_period)];
+  if (cur && !W.some(w => w.period === ODDS.matchup_period)) {
+    const rows = cur.matchups.map(m => {
+      const now = ODDS.matchups.find(x => x.home === m.home && x.away === m.away);
+      const fav = m.p_home >= 0.5 ? m.home : m.away, fp = Math.max(m.p_home, 1 - m.p_home);
+      let st = "";
+      if (now) {
+        const [h, a] = now.score_now, lead = h === a ? "Level" : (h > a ? now.home : now.away) + " leads";
+        const onTrack = h === a ? "" : ((h > a) === (m.p_home >= 0.5) ? ' · <span class="ok">on track</span>' : ' · <span class="miss">upset brewing</span>');
+        st = `${esc(lead)} ${score(now.score_now)}${onTrack}`;
+      }
+      return `<div class="mrow"><div><strong>${esc(m.home)}</strong> v <strong>${esc(m.away)}</strong>
+        <small>Monday pick: ${esc(fav)} (${pc(fp)} chance)</small><small>Right now: ${st}</small></div></div>`;
+    }).join("");
+    live = `<details class="card" open><summary>Week ${ODDS.matchup_period}: in progress</summary>
+      <p class="note">The model's pick from Monday vs the score right now. This week gets marked right or wrong once it finishes on Sunday (US time).</p>${rows}</details>`;
+  }
+
+  if (!W.length) { app.innerHTML = howItWorks + live + '<p class="empty">No finished weeks yet.</p>'; return; }
+
+  // ---- confidence check, in words
+  const groups = [["Coin flips (50–60%)", 0.5, 0.6], ["Leaning (60–75%)", 0.6, 0.75], ["Confident (75–90%)", 0.75, 0.9], ["Very confident (90%+)", 0.9, 1.01]];
+  const all = W.flatMap(w => w.matchups);
+  const conf = groups.map(([label, lo, hi]) => {
+    const g = all.filter(m => m.fav_p >= lo && m.fav_p < hi);
+    if (!g.length) return "";
+    const won = g.filter(m => m.called).length, exp = g.reduce((t, m) => t + m.fav_p, 0);
+    const verdict = g.length < 4 ? "too few games to judge yet" : won > exp + 1 ? "too cautious: favourites won more than it said" : won < exp - 1 ? "too cocky: favourites won less than it said" : "about right";
+    return `<div class="mrow"><div><strong>${label}</strong><small>Favourite won ${won} of ${g.length}. The model expected about ${exp.toFixed(1)}.</small></div><div class="note" style="text-align:right;max-width:45%">${verdict}</div></div>`;
+  }).join("");
+
+  const ps = O.brier, psWord = ps < 0.15 ? "very good" : ps < 0.2 ? "good" : ps < 0.25 ? "a bit better than guessing" : "no better than guessing";
   const kpis = `<div class="kpis">
-    <div class="kpi"><b>${O.called}/${O.matchups}</b><span>matchups called right (${pc(O.called / O.matchups)})</span></div>
-    <div class="kpi"><b>${O.brier.toFixed(3)}</b><span>matchup Brier score · coin flip = 0.250</span></div>
-    <div class="kpi"><b>${skill(O.brier)}</b><span>better than a coin flip</span></div></div>`;
-  const catCard = O.categories ? `<div class="card"><h2 style="margin-top:0">Categories</h2>
-    <p class="note">${Math.round(O.cat_called)}/${O.categories} category calls right (${pc(O.cat_called / O.categories)}), Brier ${O.cat_brier.toFixed(3)}. Tracked since the live odds started logging category chances.</p>
-    <table class="cats"><tr><th>Cat</th><th>Called right</th><th>Brier</th></tr>${O.by_category.map(c => `<tr><td>${esc(c.cat)}</td><td>${Math.round(c.called)}/${c.n}</td><td>${c.brier.toFixed(3)}</td></tr>`).join("")}</table>
-    <details><summary>Calibration</summary>${calRows(O.cat_calibration)}</details></div>` : "";
+    <div class="kpi"><b>${O.called} of ${O.matchups}</b><span>times it picked the winner</span></div>
+    <div class="kpi"><b>${pc(O.called / O.matchups)}</b><span>hit rate (guessing would get ~50%)</span></div>
+    <div class="kpi"><b>${ps.toFixed(2)}</b><span>prediction score: ${psWord}</span></div></div>`;
+
+  const scoreExplain = `<details class="card"><summary>What's the "prediction score"?</summary><div class="explain">
+    <p>Just counting right picks is a bit unfair: calling a 51% coin flip right is luck, but calling a 95% lock wrong is a real miss. The prediction score takes the <strong>% chance</strong> into account.</p>
+    <p>Each matchup gets a penalty. Confident and right: almost no penalty. A 50/50 call: a medium penalty either way. Confident and <strong>wrong</strong>: a big penalty. The score is the average penalty, so <strong>lower is better</strong>.</p>
+    <p><strong>0</strong> = perfect &nbsp;·&nbsp; <strong>0.25</strong> = the same as saying "50/50" for every matchup &nbsp;·&nbsp; above 0.25 = worse than guessing.</p>
+    <p class="note">(Maths fans: it's the Brier score, the average of (chance − result)², where result is 1 for a win and 0 for a loss.)</p></div></details>`;
+
+  const catCard = O.categories ? `<div class="card"><h2 style="margin-top:0">Category by category</h2>
+    <p class="note">Which stats the model predicts best. It called ${Math.round(O.cat_called)} of ${O.categories} category winners (${pc(O.cat_called / O.categories)}).</p>
+    <table class="cats"><tr><th>Category</th><th>Called right</th><th>Score</th></tr>${O.by_category.map(c => `<tr><td>${esc(c.cat)}</td><td>${Math.round(c.called)} of ${c.n}</td><td>${c.brier.toFixed(2)}</td></tr>`).join("")}</table></div>` : "";
+
   const weeks = W.map(w => {
     const rows = w.matchups.map(m => {
-      const res = m.winner === "TIE" ? "Tie" : (m.winner === "HOME" ? m.home : m.away) + " won";
-      const cats = m.cats ? `<small>Categories: ${m.cats.filter(c => c.won !== 0.5 && (c.won === 1) === (c.p_home >= 0.5)).length}/${m.cats.filter(c => c.won !== 0.5).length} called</small>` : "";
+      const winner = m.winner === "TIE" ? "Tied" : (m.winner === "HOME" ? m.home : m.away) + " won";
       return `<div class="mrow"><div><strong>${esc(m.home)}</strong> v <strong>${esc(m.away)}</strong>
-        <small>Model: ${esc(m.fav)} ${pc(m.fav_p)} · ${esc(res)} ${Math.max(m.score[0], m.score[1])}-${Math.min(m.score[0], m.score[1])}${m.score[2] ? "-" + m.score[2] : ""}</small>${cats}</div>
+        <small>Picked ${esc(m.fav)} (${pc(m.fav_p)} chance) · ${esc(winner)} ${score(m.score)}</small></div>
         <div class="${m.called ? "ok" : "miss"}">${m.called ? "✓" : "✗"}</div></div>`;
     }).join("");
-    const cb = w.cat_n ? ` · cats ${w.cat_called}/${w.cat_n}` : "";
-    return `<details class="card"><summary>Week ${w.period}: ${w.called}/${w.n} called · Brier ${w.brier.toFixed(3)}${cb}</summary>
-      <p class="note">Predictions: ${esc(w.source === "live" ? "Monday opening live odds" : w.source)}.</p>${rows}</details>`;
+    const src = w.source === "live" || w.source.startsWith("stored") ? "picks made Monday before the week started" : "picks taken from the first daily post, a few days in, so this week is a bit flattering";
+    return `<details class="card"><summary>Week ${w.period}: picked ${w.called} of ${w.n} · score ${w.brier.toFixed(2)}</summary>
+      <p class="note">${esc(src)}.</p>${rows}</details>`;
   }).join("");
-  app.innerHTML = `<p class="updated">How the model's pre-week predictions (Monday's opening odds) compared with what happened. Updated ${esc(ago(ACC.updated_utc))}; a week appears once every matchup is final.</p>
-    ${kpis}
-    <div class="card"><h2 style="margin-top:0">Is it calibrated?</h2>
-      <p class="note">When the model makes a team a 70–80% favourite, they should win about 75% of the time. Orange bar = how often the favourite actually won; black tick = what the model said. Small samples bounce around a lot.</p>
-      ${calRows(O.calibration)}</div>
+
+  app.innerHTML = `<p class="updated">Every Monday the model picks a winner for each matchup and gives a % chance. This page checks how those picks turned out. Updated ${esc(ago(ACC.updated_utc))}.</p>
+    ${kpis}${howItWorks}${live}
+    <div class="card"><h2 style="margin-top:0">When it's confident, is it right?</h2>
+      <p class="note">If the model says 80% for a bunch of teams, about 8 in 10 of them should win. Fewer means it's too cocky; more means it's too cautious.</p>${conf}</div>
     ${catCard}
-    <h2 class="grp">Week by week</h2>${weeks}
-    <p class="note">Brier score = average of (predicted chance − result)², lower is better: 0 is perfect, 0.25 is what you'd get saying 50% every time.</p>`;
+    <h2 class="grp">Finished weeks</h2>${weeks}${scoreExplain}`;
 }
 
 function route() {

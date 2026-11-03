@@ -63,25 +63,62 @@ def player_days(d):
     return cache
 
 
-def find_trades(names):
-    """Merge ESPN's trade messages (accepted, then processed) into one record per trade."""
-    tx = json.loads(S.get_recent_transactions(limit=1000))
+def find_trades(names, d, log):
+    """One record per trade: executed trades from ESPN's transaction history (each day scanned once,
+    then cached), plus accepted-but-in-review ones from the league message feed."""
     ids = {v: k for k, v in names.items()}
+    pnames = {x["player"]["id"]: x["player"].get("fullName") for x in S._pool()}
     trades = {}
-    for e in sorted(tx, key=lambda e: e["date"]):
+
+    def add(key_players, date_iso, gets, status):
+        key = "|".join(sorted(key_players))
+        t = trades.setdefault(key, {"key": key, "dates": [], "gets": gets, "executed": False})
+        t["dates"].append(date_iso)
+        t["executed"] = t["executed"] or status == "EXECUTED"
+
+    # 1) executed trades, scanning every scoring period once (the last 3 are re-scanned each run)
+    scan = log.setdefault("_scan", {"done_through": 0, "trades": []})
+    latest = d["status"].get("latestScoringPeriod") or 1
+    first = d["status"].get("firstScoringPeriod") or 1
+    found = [x for x in scan["trades"] if x["sp"] < latest - 2]
+    for sp in range(max(first, min(scan["done_through"] + 1, latest - 2)), latest + 1):
+        try:
+            tx = S._get(["mTransactions2"], params={"scoringPeriodId": sp}).get("transactions", [])
+        except Exception:
+            continue
+        for t in tx:
+            if t.get("type") != "TRADE_ACCEPT" or t.get("status") != "EXECUTED":
+                continue
+            gets = {}
+            for it in t.get("items", []):
+                to = names.get(it.get("toTeamId"))
+                if to:
+                    gets.setdefault(to, []).append(pnames.get(it.get("playerId"), str(it.get("playerId"))))
+            when = t.get("processDate") or t.get("proposedDate")
+            if len(gets) == 2 and when:
+                found.append({"sp": sp, "id": t.get("id"), "date": datetime.fromtimestamp(when / 1000, timezone.utc).isoformat(), "gets": gets})
+    uniq = {}
+    for x in found:
+        uniq[x["id"]] = x
+    scan["trades"] = sorted(uniq.values(), key=lambda x: x["date"])
+    scan["done_through"] = latest
+    for x in scan["trades"]:
+        add([n for v in x["gets"].values() for n in v], x["date"], x["gets"], "EXECUTED")
+
+    # 2) the message feed: adds the acceptance date, and trades still in league review
+    for e in sorted(json.loads(S.get_recent_transactions(limit=1000)), key=lambda e: e["date"]):
         moves = [m for m in e["moves"] if m["action"] in ("traded", "trade accepted")]
-        if not moves:
-            continue
         teams = sorted({m["team"] for m in moves})
-        if len(teams) != 2 or any(t not in ids for t in teams):
+        if not moves or len(teams) != 2 or any(t not in ids for t in teams):
             continue
-        key = "|".join(sorted(str(m["player"]) for m in moves))
-        t = trades.setdefault(key, {"key": key, "dates": [], "gets": {}})
-        t["dates"].append(e["date"])
+        gets = {}
         for m in moves:  # ESPN logs each traded player under the team RECEIVING him
-            t["gets"].setdefault(m["team"], [])
-            if m["player"] not in t["gets"][m["team"]]:
-                t["gets"][m["team"]].append(m["player"])
+            gets.setdefault(m["team"], [])
+            if m["player"] not in gets[m["team"]]:
+                gets[m["team"]].append(m["player"])
+        add([str(m["player"]) for m in moves], e["date"], gets, "MSG")
+    for t in trades.values():
+        t["dates"] = sorted(set(t["dates"]))
     return list(trades.values())
 
 
@@ -146,14 +183,12 @@ def main():
     seed, log = load(SEED, {}), load(LOG, {})
     today = str(datetime.now(S.ET).date())
     out = []
-    for t in find_trades(names):
+    for t in find_trades(names, d, log):
         key, gets = t["key"], t["gets"]
         A, B = sorted(gets)
         moved = all(on_team.get(n) == next(k for k, v in names.items() if v == side) for side in (A, B) for n in gets[side])
-        if len(t["dates"]) >= 2:
+        if t["executed"] or moved or len(t["dates"]) >= 2:
             start, status = t["dates"][-1], "processed"
-        elif moved or day_of(t["dates"][0]) < datetime.now(S.ET).date() - timedelta(days=3):
-            start, status = t["dates"][0], "processed"
         else:
             start, status = None, "in league review"
         rec = log.setdefault(key, {"first_seen": today, "history": []})

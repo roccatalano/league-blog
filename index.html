@@ -392,6 +392,31 @@
   .of-sides small { display: block; color: var(--muted); font-size: 12px; }
   .of-sides .r { text-align: right; }
   .of-sides strong { font-variant-numeric: tabular-nums; }
+  .of-chips { display: flex; gap: 6px; overflow-x: auto; padding: 2px 0 10px; margin-bottom: 4px; scrollbar-width: none; }
+  .of-chips::-webkit-scrollbar { display: none; }
+  .of-chips button { flex: 0 0 auto; font: inherit; font-size: 13px; font-weight: 600; padding: 5px 12px; border-radius: 99px; border: 1px solid var(--line); background: var(--card); color: var(--muted); cursor: pointer; }
+  .of-chips button.on { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+  .of-q { padding: 10px 8px 6px; }
+  .of-q svg { width: 100%; height: auto; display: block; overflow: visible; }
+  .of-q .ax { stroke: var(--line); stroke-width: 1.5; } .of-q .ql { fill: var(--muted); font-size: 11px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; }
+  .of-q .al { fill: var(--muted); font-size: 11px; }
+  .of-q circle { fill: var(--accent); stroke: var(--card); stroke-width: 2; cursor: pointer; } .of-q circle.dim { opacity: .25; }
+  .of-q text.dn { fill: var(--ink); font-size: 11.5px; font-weight: 600; cursor: pointer; pointer-events: auto; } .of-q text.dn.dim { opacity: .3; }
+  .of-tm { padding: 12px 16px; cursor: pointer; }
+  .of-tm .h { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+  .of-tm .h b { font-size: 15.5px; } .of-tag { font-size: 12px; font-weight: 700; color: var(--accent); white-space: nowrap; }
+  .of-nums { display: flex; gap: 14px; font-size: 13px; color: var(--muted); margin-top: 2px; font-variant-numeric: tabular-nums; }
+  .of-nums strong { color: var(--ink); }
+  .of-bw { font-size: 12.5px; color: var(--muted); margin-top: 6px; line-height: 1.45; }
+  .of-row { background: var(--card); border: 1px solid var(--line); border-radius: 12px; margin: 0 0 6px; }
+  .of-row > summary { list-style: none; display: grid; grid-template-columns: 44px 1fr auto 44px; gap: 8px; align-items: center; padding: 9px 12px; cursor: pointer; font-size: 14px; }
+  .of-row > summary::-webkit-details-marker { display: none; }
+  .of-row > summary { color: var(--ink); font-weight: 400; }
+  .of-row .d { color: var(--muted); font-size: 12.5px; } .of-row .w { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .of-row .v { text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; font-size: 13.5px; }
+  .of-row[open] > summary { border-bottom: 1px solid var(--line); }
+  .of-row .of-sides { padding: 0 12px 10px; }
+  .of-row { margin-top: 0; } details.of-row { margin-top: 0; }
   footer { color: var(--muted); font-size: 13px; text-align: center; padding: 0 16px 32px; }
 </style>
 </head>
@@ -399,7 +424,7 @@
 <header><div class="wrap">
   <a href="#"><div class="brand">NBA FANTASY <span>2026</span></div></a>
   <div class="tag">Daily posts, trade reviews and weekly roundups. Updated automatically.</div>
-  <nav><a href="#/" data-n="posts">Posts</a><a href="#/ladder" data-n="ladder">Ladder</a><a href="#/odds" data-n="odds">Live matchups</a><a href="#/trade" data-n="trade">Trade calculator</a><a href="#/stats" data-n="stats">Stat ranks</a><a href="#/injuries" data-n="injuries">Injuries</a><a href="#/trades" data-n="trades">Moves</a><a href="#/record" data-n="record">Model record</a></nav>
+  <nav><a href="#/" data-n="posts">Posts</a><a href="#/ladder" data-n="ladder">Ladder</a><a href="#/odds" data-n="odds">Live matchups</a><a href="#/trade" data-n="trade">Trade calculator</a><a href="#/stats" data-n="stats">Stat ranks</a><a href="#/injuries" data-n="injuries">Injuries</a><a href="#/trades" data-n="trades">Moves</a><a href="#/offers" data-n="offers">Offers</a><a href="#/record" data-n="record">Model record</a></nav>
 </div></header>
 <main class="wrap" id="app"><p class="empty">Loading…</p></main>
 <footer>Odds and expected wins come from a model, not a crystal ball.</footer>
@@ -996,9 +1021,9 @@ let MOVES_TAB = "trades", WV = null;
 const WV_SORT = { best: "cats_swung", worst: "value", drop: "value" };
 async function movesPage() {
   setNav("trades");
-  if (MOVES_TAB === "waivers") await waiversPage(); else if (MOVES_TAB === "offers") await offersPage(); else await tradesPage();
+  if (MOVES_TAB === "waivers") await waiversPage(); else await tradesPage();
   if (MOVES_TAB === "trades") document.title = "Moves · NBA Fantasy 2026";
-  const seg = `<div class="seg mv">${[["trades", "Trades"], ["offers", "Offers"], ["waivers", "Waivers"]].map(([k, l]) => `<button type="button" data-m="${k}" class="${k === MOVES_TAB ? "on" : ""}">${l}</button>`).join("")}</div>`;
+  const seg = `<div class="seg mv">${[["trades", "Trades"], ["waivers", "Waivers"]].map(([k, l]) => `<button type="button" data-m="${k}" class="${k === MOVES_TAB ? "on" : ""}">${l}</button>`).join("")}</div>`;
   app.insertAdjacentHTML("afterbegin", seg);
   app.querySelectorAll(".seg.mv button").forEach(b => b.onclick = () => { MOVES_TAB = b.dataset.m; movesPage(); });
 }
@@ -1040,9 +1065,9 @@ async function waiversPage() {
   app.querySelectorAll("th.srt").forEach(th => th.onclick = () => { WV_SORT[th.dataset.k] = th.dataset.c; movesPage(); });
 }
 
-let OF = null, OF_ALL = false;
+let OF = null, OF_VIEW = null, OF_TEAM = null;
 async function offersPage() {
-  document.title = "Trade offers · NBA Fantasy 2026";
+  setNav("offers"); document.title = "Trade offers · NBA Fantasy 2026";
   app.innerHTML = '<p class="empty">Loading…</p>';
   try { if (!OF) OF = await (await fetch("data/offers.json", { cache: "no-cache" })).json(); }
   catch (e) { app.innerHTML = '<p class="empty">The offers tracker isn\'t available yet. It appears after the next data refresh (within half an hour).</p>'; return; }
@@ -1050,33 +1075,65 @@ async function offersPage() {
   const cls = x => x == null ? "" : x > 0.005 ? "pos" : x < -0.005 ? "neg" : "";
   const when = iso => new Date(iso).toLocaleDateString("en-AU", { day: "numeric", month: "short" });
   const ocl = o => o.startsWith("cancel") ? "cancelled" : o;
+  const nick = n => { const w = n.replace(/[^A-Za-z0-9 ]/g, "").trim().split(/\s+/).filter((x, i, a) => !(i === 0 && a.length > 1 && /^(the|mr|a)$/i.test(x)));
+    return (w[0].length <= 3 && w[1] ? w[0] + " " + w[1] : w[0]).slice(0, 11); };
   const gets = (o, team) => o.moves.filter(m => m.to === team).map(m => esc(m.player)).join(" + ") || "–";
-  const card = o => {
-    const two = o.receiver && o.teams.length === 2;
+  const others = o => o.receiver && o.teams.length === 2 ? o.receiver : o.teams.filter(t => t !== o.sender).join(", ");
+  const sides = o => { const two = o.receiver && o.teams.length === 2;
     const side = (t, g, r) => `<div${r ? ' class="r"' : ""}><small>${esc(t)} gets</small>${gets(o, t)}${g != null ? `<small>model: <strong class="${cls(g)}">${sg(g)}</strong> wins</small>` : ""}</div>`;
-    return `<div class="card of"><div class="of-top"><span>${when(o.proposed)} · <b>${esc(o.sender)}</b> → ${esc(two ? o.receiver : o.teams.filter(t => t !== o.sender).join(", "))}</span><span class="of-oc ${ocl(o.outcome)}">${esc(ocl(o.outcome))}</span></div>
-      <div class="of-sides">${side(o.sender, o.sender_gain)}${two ? side(o.receiver, o.receiver_gain, true) : ""}</div></div>`;
-  };
-  const O = OF.offers, live = O.filter(o => o.outcome === "pending"), rated = O.filter(o => o.receiver_gain != null);
-  const best = rated.slice().sort((a, b) => b.receiver_gain - a.receiver_gain).slice(0, 3);
-  const worst = rated.slice().sort((a, b) => a.receiver_gain - b.receiver_gain).slice(0, 3);
-  const past = O.filter(o => o.outcome !== "pending"), shown = OF_ALL ? past : past.slice(0, 15);
-  const T = OF.teams.filter(t => t.sent);
-  const tbl = `<div class="card ld scroll"><table class="ladder pk"><tr><th>#</th><th>Team</th><th>Sent</th><th>Them</th><th>Self</th><th>Acc</th><th>Dec</th></tr>${
-    T.map((t, i) => `<tr><td>${t.generosity == null ? "–" : i + 1}</td><td><span class="tm">${esc(t.team)}</span>${t.best_sent ? `<small>best: ${sg(t.best_sent.receiver_gain)} to ${esc(t.best_sent.receiver)} · worst: ${sg(t.worst_sent.receiver_gain)} to ${esc(t.worst_sent.receiver)}</small>` : "<small>no rated offers yet</small>"}</td><td>${t.sent}</td><td class="${cls(t.generosity)}">${sg(t.generosity)}</td><td class="${cls(t.self_gain)}">${sg(t.self_gain)}</td><td>${t.sent_accepted}</td><td>${t.sent_declined}</td></tr>`).join("")}</table></div>`;
-  const how = `<details class="rc-how"><summary>How it's measured</summary><div class="explain">
-    <p>Every trade offer made in the league is saved here when it's sent, including ones that get declined, cancelled or expire. ESPN deletes an offer's players once it's answered, so offers answered before this tracker started (${OF.lost_before_logging}) only show up in the accept/decline counts.</p>
-    <p><strong>Model</strong> numbers are how many matchup wins the trade would add or cost each team over the rest of the season, rated by the same model as the trade calculator when the offer is first seen. Older offers whose players have since moved can't be rated.</p>
-    <p><strong>By team</strong> ranks teams by the offers they <strong>sent</strong>. <strong>Them</strong> is what their offers were worth to the team receiving them, on average: high means they send good offers, low means lowballs. <strong>Self</strong> is what they were asking to gain. Acc/Dec count their offers that were accepted or declined.</p>
+    return `<div class="of-sides">${side(o.sender, o.sender_gain)}${two ? side(o.receiver, o.receiver_gain, true) : ""}</div>`; };
+  const card = o => `<div class="card of"><div class="of-top"><span>${when(o.proposed)} · <b>${esc(o.sender)}</b> → ${esc(others(o))}</span><span class="of-oc ${ocl(o.outcome)}">${esc(ocl(o.outcome))}</span></div>${sides(o)}</div>`;
+  const row = o => `<details class="of-row"><summary><span class="d">${when(o.proposed)}</span><span class="w"><b>${esc(nick(o.sender))}</b> → ${esc(nick(others(o)))}</span><span class="of-oc ${ocl(o.outcome)}">${esc(ocl(o.outcome))}</span><span class="v ${cls(o.receiver_gain)}">${sg(o.receiver_gain)}</span></summary>${sides(o)}</details>`;
+  const tag = t => t.rated_sent < 2 ? "Too few offers" : t.self_gain > 0.03 && t.generosity < -0.03 ? "Shark" : t.generosity > 0.03 && t.self_gain < 0 ? "Generous" : t.self_gain < -0.01 && t.generosity < -0.01 ? "Just bad" : t.self_gain >= -0.01 && t.generosity >= -0.01 ? "Fair dealer" : "Even-steven";
+
+  const all = OF.offers, mine = o => !OF_TEAM || o.teams.includes(OF_TEAM);
+  const O = all.filter(mine), live = O.filter(o => o.outcome === "pending"), past = O.filter(o => o.outcome !== "pending");
+  if (!OF_VIEW) OF_VIEW = all.some(o => o.outcome === "pending") ? "live" : "teams";
+  const seg = `<div class="seg ofv">${[["live", `Live · ${live.length}`], ["teams", "Teams"], ["history", "History"]].map(([k, l]) => `<button type="button" data-v="${k}" class="${k === OF_VIEW ? "on" : ""}">${l}</button>`).join("")}</div>`;
+  const names = [...new Set(all.flatMap(o => o.teams))].sort((a, b) => a.localeCompare(b));
+  const chips = `<div class="of-chips"><button type="button" data-t="" class="${OF_TEAM ? "" : "on"}">All teams</button>${names.map(n => `<button type="button" data-t="${esc(n)}" class="${n === OF_TEAM ? "on" : ""}">${esc(nick(n))}</button>`).join("")}</div>`;
+
+  let body = "";
+  if (OF_VIEW === "live") {
+    body = live.length ? live.map(card).join("") : `<p class="empty">No offers on the table${OF_TEAM ? " for " + esc(OF_TEAM) : ""} right now.</p>`;
+  } else if (OF_VIEW === "teams") {
+    const T = OF.teams.filter(t => t.rated_sent), lim = Math.max(0.1, ...T.flatMap(t => [Math.abs(t.self_gain), Math.abs(t.generosity)])) * 1.15;
+    const W = 320, X = v => W / 2 + v / lim * (W / 2 - 14), Y = v => W / 2 - v / lim * (W / 2 - 14);
+    const placed = T.map(t => { const r = 4 + Math.min(t.rated_sent, 20) / 3, x = X(t.self_gain), y = Y(t.generosity); return { x0: x - r, x1: x + r, y: y + 4 }; });
+    const dots = T.slice().sort((a, b) => b.generosity - a.generosity).map(t => { const dim = OF_TEAM && t.team !== OF_TEAM ? " dim" : "", x = X(t.self_gain), y = Y(t.generosity), right = x > W * 0.7;
+      const lw = nick(t.team).length * 6.5 + 4, x0 = right ? x - 9 - lw : x + 9; let ly = y + 4;
+      for (let k = 0; k < 8 && placed.some(q => Math.abs(q.y - ly) < 13 && x0 < q.x1 && q.x0 < x0 + lw); k++) ly += 13;
+      placed.push({ x0, x1: x0 + lw, y: ly });
+      return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${4 + Math.min(t.rated_sent, 20) / 3}" class="${dim}" data-t="${esc(t.team)}"/><text x="${(right ? x - 9 : x + 9).toFixed(1)}" y="${ly.toFixed(1)}" text-anchor="${right ? "end" : "start"}" class="dn${dim}" data-t="${esc(t.team)}">${esc(nick(t.team))}</text>`; }).join("");
+    const quad = `<div class="card of-q"><svg viewBox="-4 -4 ${W + 8} ${W + 30}">
+      <line x1="0" x2="${W}" y1="${W / 2}" y2="${W / 2}" class="ax"/><line y1="0" y2="${W}" x1="${W / 2}" x2="${W / 2}" class="ax"/>
+      <text x="6" y="14" class="ql">Generous</text><text x="${W - 6}" y="14" text-anchor="end" class="ql">Fair dealers</text>
+      <text x="6" y="${W - 6}" class="ql">Just bad</text><text x="${W - 6}" y="${W - 6}" text-anchor="end" class="ql">Sharks</text>
+      ${dots}
+      <text x="${W / 2}" y="${W + 20}" text-anchor="middle" class="al">← asks for less · what they ask for themselves · asks for more →</text>
+    </svg><p class="note" style="margin:2px 8px 4px">Up = their offers help the other team. Right = they ask a lot for themselves. Bigger dot = more offers. Tap a team.</p></div>`;
+    const tcard = t => `<div class="card of-tm" data-t="${esc(t.team)}"><div class="h"><b>${esc(t.team)}</b><span class="of-tag">${tag(t)}</span></div>
+      <div class="of-nums"><span>Sent <strong>${t.sent}</strong></span><span>Them <strong class="${cls(t.generosity)}">${sg(t.generosity)}</strong></span><span>Self <strong class="${cls(t.self_gain)}">${sg(t.self_gain)}</strong></span><span>Declined <strong>${t.sent_declined}</strong></span></div>
+      ${t.best_sent ? `<div class="of-bw">Best: <strong class="${cls(t.best_sent.receiver_gain)}">${sg(t.best_sent.receiver_gain)}</strong> to ${esc(t.best_sent.receiver)}${t.rated_sent > 1 ? ` · Worst: <strong class="${cls(t.worst_sent.receiver_gain)}">${sg(t.worst_sent.receiver_gain)}</strong> to ${esc(t.worst_sent.receiver)}` : ""}</div>` : ""}</div>`;
+    const list = OF.teams.filter(t => t.sent && (!OF_TEAM || t.team === OF_TEAM));
+    const quiet = OF.teams.filter(t => !t.sent).map(t => esc(nick(t.team)));
+    body = quad + (list.length ? list.map(tcard).join("") : `<p class="empty">${esc(OF_TEAM)} hasn't sent an offer yet.</p>`)
+      + (!OF_TEAM && quiet.length ? `<p class="note">No offers sent yet: ${quiet.join(", ")}.</p>` : "");
+  } else {
+    const wk = iso => { const d = new Date(iso); const m = new Date(d.getFullYear(), d.getMonth(), d.getDate() - (d.getDay() + 6) % 7); return `${m.getFullYear()}-${String(m.getMonth() + 1).padStart(2, "0")}-${String(m.getDate()).padStart(2, "0")}`; };
+    const groups = {}; past.forEach(o => (groups[wk(o.proposed)] ||= []).push(o));
+    body = past.length ? `<p class="note" style="margin:0 0 8px">The number is what each offer was worth to the team receiving it. Tap one for the players.</p>` + Object.entries(groups).map(([k, L]) => `<div class="grp">Week of ${new Date(k + "T12:00:00").toLocaleDateString("en-AU", { day: "numeric", month: "short" })} · ${L.length}</div>${L.map(row).join("")}`).join("") : '<p class="empty">No past offers.</p>';
+  }
+  const how = `<details class="rc-how" style="margin-top:16px"><summary>How it's measured</summary><div class="explain">
+    <p>Every trade offer made in the league is saved when it's sent, including ones that get declined, cancelled or expire. ESPN deletes an offer's players once it's answered, so the ${OF.lost_before_logging} offers answered before this tracker started can't be shown.</p>
+    <p><strong>Model</strong> numbers are how many matchup wins the trade would add or cost each team over the rest of the season, rated when the offer is first seen. Older offers whose players have since moved can't be rated.</p>
+    <p><strong>Them</strong> is what a team's sent offers were worth to whoever received them, on average. <strong>Self</strong> is what they were asking to gain. <strong>Sharks</strong> ask a lot and give little; <strong>fair dealers</strong> send offers that help both sides.</p>
     <p><strong>Cancelled</strong> covers offers withdrawn by the sender and ones that expired, since ESPN records both the same way.</p></div></details>`;
-  app.innerHTML = `<p class="updated">Every trade offer this season, live and past · ${O.length} logged · updated ${esc(ago(OF.updated_utc))}.</p>
-    <div class="grp">Live now · ${live.length}</div>${live.length ? live.map(card).join("") : '<p class="empty">No offers on the table right now.</p>'}
-    <div class="grp">Who sends the best and worst offers</div>${tbl}
-    ${best.length ? `<div class="grp">Best offers sent</div>${best.map(card).join("")}<div class="grp">Worst offers sent</div>${worst.map(card).join("")}` : ""}
-    <div class="grp">Past offers · ${past.length}</div>${shown.map(card).join("")}
-    ${past.length > shown.length ? `<button type="button" class="seg" id="of-more" style="width:100%;justify-content:center;font:inherit;font-weight:600;color:var(--accent);cursor:pointer">Show all ${past.length}</button>` : ""}
-    ${how}`;
-  const more = document.getElementById("of-more"); if (more) more.onclick = () => { OF_ALL = true; movesPage(); };
+  app.innerHTML = `<p class="updated">Every trade offer this season · ${all.length} logged · updated ${esc(ago(OF.updated_utc))}.</p>${seg}${chips}${body}${how}`;
+  app.querySelectorAll(".seg.ofv button").forEach(b => b.onclick = () => { OF_VIEW = b.dataset.v; offersPage(); });
+  app.querySelectorAll(".of-chips button").forEach(b => b.onclick = () => { OF_TEAM = b.dataset.t || null; offersPage(); });
+  app.querySelectorAll(".of-q [data-t], .of-tm").forEach(el => el.onclick = () => { OF_TEAM = OF_TEAM === el.dataset.t ? null : el.dataset.t; offersPage(); });
+  const on = app.querySelector(".of-chips button.on"); if (on && OF_TEAM) on.scrollIntoView({ inline: "center", block: "nearest" });
 }
 
 async function tradesPage() {
@@ -1139,7 +1196,7 @@ function route() {
   if (slug === "record") return recordPage();
   if (slug === "trades") return movesPage();
   if (slug === "waivers") { MOVES_TAB = "waivers"; return movesPage(); }
-  if (slug === "offers") { MOVES_TAB = "offers"; return movesPage(); }
+  if (slug === "offers") return offersPage();
   setNav("posts");
   slug ? show(slug) : home();
 }

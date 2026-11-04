@@ -1,6 +1,31 @@
 {
- "updated_utc": "2026-11-04T12:44:08.365042+00:00",
+ "updated_utc": "2026-11-04T20:13:59.750861+00:00",
  "offers": [
+  {
+   "id": "a8a884d3-61f0-4608-b81c-05244fc2b5f2",
+   "proposed": "2026-11-04T13:27:04.401000+00:00",
+   "sender": "Derrick White Girl Wasted",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Gets On Base"
+   ],
+   "outcome": "pending",
+   "moves": [
+    {
+     "player": "Bilal Coulibaly",
+     "from": "Derrick White Girl Wasted",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Ace Bailey",
+     "from": "Gets On Base",
+     "to": "Derrick White Girl Wasted"
+    }
+   ],
+   "sender_gain": 0.177,
+   "receiver_gain": -0.137
+  },
   {
    "id": "237b268a-4d2c-46d3-b132-ab976dc17d2e",
    "proposed": "2026-11-04T12:26:26.313000+00:00",
@@ -3351,13 +3376,13 @@
   },
   {
    "team": "Derrick White Girl Wasted",
-   "sent": 14,
+   "sent": 15,
    "received": 4,
-   "rated_sent": 8,
+   "rated_sent": 9,
    "sent_accepted": 2,
    "sent_declined": 0,
-   "generosity": 0.156,
-   "self_gain": -0.203,
+   "generosity": 0.123,
+   "self_gain": -0.161,
    "best_sent": {
     "id": "81d2c045-e0d8-46be-90c2-6c945778fedf",
     "receiver": "Giddey up Horsey",
@@ -3549,7 +3574,7 @@
   {
    "team": "Gets On Base",
    "sent": 27,
-   "received": 18,
+   "received": 19,
    "rated_sent": 17,
    "sent_accepted": 0,
    "sent_declined": 7,
@@ -3781,5 +3806,5 @@
    "worst_sent": null
   }
  ],
- "lost_before_logging": 53
+ "lost_before_logging": 54
 }

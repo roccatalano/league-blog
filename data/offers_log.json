@@ -3237,6 +3237,33 @@
     "mr charloooooo": -0.274
    },
    "rated_on": "at the time (trade tracker)"
+  },
+  "a8a884d3-61f0-4608-b81c-05244fc2b5f2": {
+   "proposed": "2026-11-04T13:27:04.401000+00:00",
+   "proposed_by": "Derrick White Girl Wasted",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Gets On Base"
+   ],
+   "moves": [
+    {
+     "player": "Bilal Coulibaly",
+     "from": "Derrick White Girl Wasted",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Ace Bailey",
+     "from": "Gets On Base",
+     "to": "Derrick White Girl Wasted"
+    }
+   ],
+   "espn_status": "PENDING",
+   "live_now": true,
+   "rating": {
+    "Derrick White Girl Wasted": 0.177,
+    "Gets On Base": -0.137
+   },
+   "rated_on": "2026-11-04"
   }
  },
  "outcomes": {
@@ -3579,6 +3606,11 @@
    "outcome": "accepted",
    "by": "Popoviched",
    "date": "2026-11-04T12:17:55.905000+00:00"
+  },
+  "52712aff-cdac-418b-b429-b89c67646038": {
+   "outcome": "declined",
+   "by": "HE IS HIM ( G.O.A.T)",
+   "date": "2026-11-04T14:59:12.624000+00:00"
   }
  },
  "synced_periods": [
@@ -3600,5 +3632,5 @@
   15,
   16
  ],
- "last_sync": "2026-11-04T12:44:08.039393+00:00"
+ "last_sync": "2026-11-04T20:13:59.311440+00:00"
 }

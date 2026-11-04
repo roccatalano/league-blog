@@ -9,8 +9,8 @@
    ],
    [
     "2026-11-04",
-    0.142,
-    -0.174
+    0.136,
+    -0.167
    ]
   ],
   "at_time": {
@@ -21,8 +21,8 @@
   "at_time_source": "trade review",
   "now": {
    "date": "2026-11-04",
-   "Viva La Raza!": 0.142,
-   "mr charloooooo": -0.174
+   "Viva La Raza!": 0.136,
+   "mr charloooooo": -0.167
   }
  },
  "_trades": {
@@ -162,7 +162,7 @@
    [
     "2026-11-04",
     -0.187,
-    0.062
+    0.061
    ]
   ],
   "at_time": {
@@ -174,7 +174,7 @@
   "now": {
    "date": "2026-11-04",
    "Derrick White Girl Wasted": -0.187,
-   "Stairway to Devin": 0.062
+   "Stairway to Devin": 0.061
   }
  },
  "Damian Lillard|Matas Buzelis|Moussa Diabate|Paul George": {

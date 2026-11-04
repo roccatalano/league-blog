@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-04T12:44:06.778214+00:00",
+ "updated_utc": "2026-11-04T20:13:57.789569+00:00",
  "teams_order": "alphabetical",
  "trades": [
   {
@@ -269,8 +269,8 @@
    },
    "now": {
     "date": "2026-11-04",
-    "Viva La Raza!": 0.142,
-    "mr charloooooo": -0.174
+    "Viva La Raza!": 0.136,
+    "mr charloooooo": -0.167
    },
    "now_frozen": false,
    "now_history": [
@@ -281,8 +281,8 @@
     ],
     [
      "2026-11-04",
-     0.142,
-     -0.174
+     0.136,
+     -0.167
     ]
    ]
   },
@@ -718,7 +718,7 @@
       "2026-11-02",
       4,
       0.043,
-      -0.035
+      -0.036
      ],
      [
       "2026-11-03",
@@ -739,7 +739,7 @@
    "now": {
     "date": "2026-11-04",
     "Derrick White Girl Wasted": -0.187,
-    "Stairway to Devin": 0.062
+    "Stairway to Devin": 0.061
    },
    "now_frozen": false,
    "now_history": [
@@ -756,7 +756,7 @@
     [
      "2026-11-04",
      -0.187,
-     0.062
+     0.061
     ]
    ]
   }

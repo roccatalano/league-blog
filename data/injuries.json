@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-04T12:44:13.197305+00:00",
+ "updated_utc": "2026-11-04T20:14:05.621715+00:00",
  "today_et": "2026-11-04",
  "players": [
   {
@@ -55,6 +55,26 @@
    "per_game": null
   },
   {
+   "name": "Bilal Coulibaly",
+   "nba_team": "WSH",
+   "pos": "G",
+   "status": "Day-To-Day",
+   "injury": "Illness",
+   "return_date": "2026-11-04",
+   "days_out": 0,
+   "games_missed": 0,
+   "timeframe": "Days",
+   "note": "Coulibaly (illness) is questionable for Wednesday against the Hawks.",
+   "note_date": "2026-11-04",
+   "fantasy_team": "Derrick White Girl Wasted",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 9.6,
+    "REB": 3.8,
+    "AST": 1.8
+   }
+  },
+  {
    "name": "Cameron Johnson",
    "nba_team": "DEN",
    "pos": "F",
@@ -65,22 +85,6 @@
    "games_missed": 0,
    "timeframe": "Days",
    "note": "Johnson (lower body injury management) is listed as probable for Wednesday's game against Toronto.",
-   "note_date": "2026-11-03",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
-  },
-  {
-   "name": "Clint Capela",
-   "nba_team": "HOU",
-   "pos": "C",
-   "status": "Day-To-Day",
-   "injury": "Right Ankle",
-   "return_date": "2026-11-04",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Capela (ankle) is listed as questionable for Wednesday's game against the Timberwolves.",
    "note_date": "2026-11-03",
    "fantasy_team": null,
    "on_ir": false,
@@ -124,6 +128,26 @@
     "PTS": 30.9,
     "REB": 11.7,
     "AST": 6.1
+   }
+  },
+  {
+   "name": "Isaiah Jackson",
+   "nba_team": "LAC",
+   "pos": "F",
+   "status": "Day-To-Day",
+   "injury": "Groin",
+   "return_date": "2026-11-04",
+   "days_out": 0,
+   "games_missed": 0,
+   "timeframe": "Days",
+   "note": "Jackson chipped in 19 points (9-11 FG, 1-1 3Pt), eight rebounds and two assists in 26 minutes during Monday's 125-118 loss to the Raptors.",
+   "note_date": "2026-11-04",
+   "fantasy_team": "Al-Shaida",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 8.2,
+    "REB": 6.1,
+    "AST": 1.5
    }
   },
   {
@@ -219,26 +243,6 @@
    "per_game": null
   },
   {
-   "name": "Jayson Tatum",
-   "nba_team": "BOS",
-   "pos": "F",
-   "status": "Day-To-Day",
-   "injury": "Rest",
-   "return_date": "2026-11-04",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Tatum (rest) is questionable for Wednesday against the Bucks, Taylor Snow of the Celtics' official site reports.",
-   "note_date": "2026-11-03",
-   "fantasy_team": "Stairway to Devin",
-   "on_ir": false,
-   "per_game": {
-    "PTS": 26.8,
-    "REB": 7.8,
-    "AST": 6.5
-   }
-  },
-  {
    "name": "Jordan Goodwin",
    "nba_team": "PHX",
    "pos": "G",
@@ -279,24 +283,20 @@
    }
   },
   {
-   "name": "Josh Hart",
-   "nba_team": "NY",
+   "name": "Kam Jones",
+   "nba_team": "MIL",
    "pos": "G",
    "status": "Day-To-Day",
-   "injury": "Ankle",
+   "injury": "Right Ankle",
    "return_date": "2026-11-04",
    "days_out": 0,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Hart is questionable for Wednesday's game against the Bulls due to right ankle soreness.",
-   "note_date": "2026-11-03",
-   "fantasy_team": "Viva La Raza!",
+   "note": "Jones (ankle) is questionable for Wednesday against the Celtics.",
+   "note_date": "2026-11-04",
+   "fantasy_team": null,
    "on_ir": false,
-   "per_game": {
-    "PTS": 11.0,
-    "REB": 7.6,
-    "AST": 4.6
-   }
+   "per_game": null
   },
   {
    "name": "Kelly Oubre Jr.",
@@ -315,26 +315,6 @@
    "per_game": null
   },
   {
-   "name": "Kon Knueppel",
-   "nba_team": "CHA",
-   "pos": "G",
-   "status": "Out",
-   "injury": "Left Hamstring",
-   "return_date": "2026-11-04",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Knueppel (hamstring) is listed as probable for Wednesday's game against the Nets.",
-   "note_date": "2026-11-03",
-   "fantasy_team": "The Real OG",
-   "on_ir": true,
-   "per_game": {
-    "PTS": 19.8,
-    "REB": 5.8,
-    "AST": 3.7
-   }
-  },
-  {
    "name": "Mo Bamba",
    "nba_team": "UTAH",
    "pos": "C",
@@ -344,8 +324,8 @@
    "days_out": 0,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Bamba is questionable for Wednesday's game in New Orleans due to a sprained right ankle.",
-   "note_date": "2026-11-03",
+   "note": "Bamba (ankle) participated in Wednesday's morning shootaround, per Shreyas Laddha of The Salt Lake Tribune.",
+   "note_date": "2026-11-04",
    "fantasy_team": "mr charloooooo",
    "on_ir": false,
    "per_game": {
@@ -353,22 +333,6 @@
     "REB": 5.6,
     "AST": 0.3
    }
-  },
-  {
-   "name": "Myron Gardner",
-   "nba_team": "MIA",
-   "pos": "F",
-   "status": "Day-To-Day",
-   "injury": "Right Quadriceps",
-   "return_date": "2026-11-04",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Gardner (quadriceps) is listed as questionable for Wednesday's game against the Clippers.",
-   "note_date": "2026-11-04",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
   },
   {
    "name": "Nic Claxton",
@@ -492,31 +456,11 @@
    "days_out": 0,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Aldama (knee) is questionable for Wednesday's game against the Spurs.",
-   "note_date": "2026-11-03",
+   "note": "Aldama (knee) is doubtful for Wednesday's game against the Spurs, per NBA reporter Marc Stein.",
+   "note_date": "2026-11-04",
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
-  },
-  {
-   "name": "Terrence Shannon Jr.",
-   "nba_team": "MIN",
-   "pos": "G",
-   "status": "Day-To-Day",
-   "injury": "Left Hip",
-   "return_date": "2026-11-04",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Shannon (hip) is listed as questionable for Wednesday's game in Houston.",
-   "note_date": "2026-11-03",
-   "fantasy_team": "Al-Shaida",
-   "on_ir": false,
-   "per_game": {
-    "PTS": 10.1,
-    "REB": 2.5,
-    "AST": 1.8
-   }
   },
   {
    "name": "Trey Murphy III",
@@ -528,8 +472,8 @@
    "days_out": 0,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Murphy (knee) is probable for Wednesday's game versus the Jazz.",
-   "note_date": "2026-11-03",
+   "note": "Murphy (knees) is now questionable for Wednesday against the Jazz.",
+   "note_date": "2026-11-04",
    "fantasy_team": "HE IS HIM ( G.O.A.T)",
    "on_ir": false,
    "per_game": {
@@ -553,26 +497,6 @@
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
-  },
-  {
-   "name": "Anthony Black",
-   "nba_team": "ORL",
-   "pos": "G",
-   "status": "Day-To-Day",
-   "injury": "Rest",
-   "return_date": "2026-11-05",
-   "days_out": 1,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Black will be rested Monday against the Wizards.",
-   "note_date": "2026-11-03",
-   "fantasy_team": "Al-Shaida",
-   "on_ir": true,
-   "per_game": {
-    "PTS": 14.4,
-    "REB": 3.9,
-    "AST": 3.8
-   }
   },
   {
    "name": "Brandon Williams",
@@ -616,8 +540,8 @@
    "days_out": 2,
    "games_missed": 1,
    "timeframe": "Days",
-   "note": "Head coach JJ Redick said Monday that Thiero (knee) has participated in live action, and the hope is that he'll be available by the end of the week, Khobi Price of The California Post reports.",
-   "note_date": "2026-11-03",
+   "note": "The Lakers assigned Thiero (knee) to the G League's Coachella Valley Lakers on Wednesday, per Khobi Price of The California Post.",
+   "note_date": "2026-11-04",
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
@@ -637,6 +561,26 @@
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
+  },
+  {
+   "name": "Jayson Tatum",
+   "nba_team": "BOS",
+   "pos": "F",
+   "status": "Out",
+   "injury": "Rest",
+   "return_date": "2026-11-06",
+   "days_out": 2,
+   "games_missed": 1,
+   "timeframe": "Days",
+   "note": "Tatum will be rested Wednesday against the Bucks, Jack Simone of BostonSportsJournal.com reports.",
+   "note_date": "2026-11-04",
+   "fantasy_team": "Stairway to Devin",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 26.8,
+    "REB": 7.8,
+    "AST": 6.5
+   }
   },
   {
    "name": "Jock Landale",
@@ -723,6 +667,26 @@
    "per_game": null
   },
   {
+   "name": "Terrence Shannon Jr.",
+   "nba_team": "MIN",
+   "pos": "G",
+   "status": "Out",
+   "injury": "Left Hip",
+   "return_date": "2026-11-06",
+   "days_out": 2,
+   "games_missed": 1,
+   "timeframe": "Days",
+   "note": "Shannon (hip) is out for Wednesday against the Rockets.",
+   "note_date": "2026-11-04",
+   "fantasy_team": "Al-Shaida",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 10.1,
+    "REB": 2.5,
+    "AST": 1.8
+   }
+  },
+  {
    "name": "Trey Alexander",
    "nba_team": "UTAH",
    "pos": "G",
@@ -755,6 +719,22 @@
    "per_game": null
   },
   {
+   "name": "Clint Capela",
+   "nba_team": "HOU",
+   "pos": "C",
+   "status": "Out",
+   "injury": "Right Ankle",
+   "return_date": "2026-11-07",
+   "days_out": 3,
+   "games_missed": 1,
+   "timeframe": "1 week",
+   "note": "Capela (ankle) is out for Wednesday's game against the Timberwolves.",
+   "note_date": "2026-11-04",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
+  },
+  {
    "name": "Egor Demin",
    "nba_team": "BKN",
    "pos": "G",
@@ -772,6 +752,26 @@
     "PTS": 13.0,
     "REB": 3.7,
     "AST": 4.0
+   }
+  },
+  {
+   "name": "Josh Hart",
+   "nba_team": "NY",
+   "pos": "G",
+   "status": "Out",
+   "injury": "Ankle",
+   "return_date": "2026-11-07",
+   "days_out": 3,
+   "games_missed": 1,
+   "timeframe": "1 week",
+   "note": "Hart is out for Wednesday's game against the Bulls due to right ankle soreness.",
+   "note_date": "2026-11-04",
+   "fantasy_team": "Viva La Raza!",
+   "on_ir": true,
+   "per_game": {
+    "PTS": 11.0,
+    "REB": 7.6,
+    "AST": 4.6
    }
   },
   {
@@ -871,7 +871,7 @@
    "note": "Missi (knee) won't play in Saturday's game against Atlanta.",
    "note_date": "2026-10-30",
    "fantasy_team": "The Real OG",
-   "on_ir": false,
+   "on_ir": true,
    "per_game": {
     "PTS": 7.8,
     "REB": 7.5,
@@ -888,8 +888,8 @@
    "days_out": 5,
    "games_missed": 2,
    "timeframe": "1 week",
-   "note": "Williams (hamstring) is listed as out for Monday's game against the Pistons.",
-   "note_date": "2026-11-01",
+   "note": "Charlotte assigned Williams (hamstring) to the G League's Greensboro Swarm on Wednesday.",
+   "note_date": "2026-11-04",
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
@@ -1344,8 +1344,8 @@
    "days_out": 27,
    "games_missed": 12,
    "timeframe": "2-4 weeks",
-   "note": "The Warriors are exploring potential trades involving Porzingis (personal), who remains away from the team indefinitely while dealing with ongoing health concerns, Anthony Slater of ESPN.com reports.",
-   "note_date": "2026-10-28",
+   "note": "The Warriors have stopped issuing salary payments to Porzingis, who remains away from the team and is considering retirement, Anthony Slater and Shams Charania of ESPN reported Wednesday.",
+   "note_date": "2026-11-04",
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null

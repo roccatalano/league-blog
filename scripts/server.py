@@ -1034,6 +1034,104 @@ def find_trades(max_results: int = 5, min_my_gain: float = 0.1, partner_team_id:
 
 
 # ---------------------------------------------------------------------------
+# TRADE LOG (2026-11-04)
+# ESPN deletes an offer's player list once it is accepted or declined (only a stub with the
+# deciding team + date survives). So every trade tool call snapshots all league offers into
+# trades_log.json while they are still visible; outcomes are filled in later from the stubs.
+# ---------------------------------------------------------------------------
+TRADE_LOG = os.environ.get("TRADE_LOG") or os.path.join(os.path.dirname(os.path.abspath(__file__)), "trades_log.json")
+TRADE_EXPIRY_DAYS = 2
+
+
+def _sync_trade_log():
+    """Merge every visible league trade offer/outcome into trades_log.json; returns the log."""
+    try:
+        with open(TRADE_LOG) as f:
+            log = json.load(f)
+    except Exception:
+        log = {"offers": {}, "outcomes": {}, "synced_periods": []}
+    st = _get(["mStatus", "mTeam", "mPendingTransactions"])
+    names = {t["id"]: t.get("name") for t in st["teams"]}
+    latest = st["status"].get("latestScoringPeriod") or 0
+    done = set(log.get("synced_periods", []))
+    periods = [sp for sp in range(0, latest + 1) if sp not in done or sp >= latest - 2]
+    txs = list(st.get("pendingTransactions") or [])
+    for sp in periods:
+        txs += _get(["mTransactions2"], params={"scoringPeriodId": sp}).get("transactions") or []
+    pname = {p["id"]: (p.get("player") or p).get("fullName") for p in _pool()}
+    iso = lambda ms: datetime.fromtimestamp(ms / 1000, timezone.utc).isoformat() if ms else None
+    live = {t.get("id") for t in (st.get("pendingTransactions") or [])}
+    for t in txs:
+        typ, tid = t.get("type"), str(t.get("id"))
+        if typ == "TRADE_PROPOSAL":
+            items = [i for i in t.get("items") or [] if i.get("playerId")]
+            o = log["offers"].setdefault(tid, {})
+            o.update({
+                "proposed": iso(t.get("proposedDate")), "proposed_by": names.get(t.get("teamId")),
+                "teams": sorted({names.get(x) for i in items for x in (i.get("fromTeamId"), i.get("toTeamId")) if x}),
+                "moves": [{"player": pname.get(i["playerId"]) or f"player {i['playerId']}",
+                           "from": names.get(i.get("fromTeamId")), "to": names.get(i.get("toTeamId"))} for i in items],
+                "espn_status": t.get("status"), "live_now": t.get("id") in live,
+            })
+        elif typ in ("TRADE_ACCEPT", "TRADE_DECLINE") and t.get("relatedTransactionId"):
+            log["outcomes"][str(t["relatedTransactionId"])] = {
+                "outcome": "accepted" if typ == "TRADE_ACCEPT" else "declined",
+                "by": names.get(t.get("teamId")), "date": iso(t.get("proposedDate"))}
+    log["synced_periods"] = sorted(done | set(range(0, latest + 1)))
+    log["last_sync"] = datetime.now(timezone.utc).isoformat()
+    try:
+        with open(TRADE_LOG, "w") as f:
+            json.dump(log, f, indent=1)
+    except Exception:
+        pass
+    return log
+
+
+def _offer_outcome(oid, o, log):
+    if oid in log["outcomes"]:
+        return log["outcomes"][oid]["outcome"]
+    if o.get("live_now"):
+        return "pending"
+    if o.get("espn_status") == "CANCELED":
+        return "cancelled/expired"
+    try:
+        age = datetime.now(timezone.utc) - datetime.fromisoformat(o["proposed"])
+        return "expired" if age.days >= TRADE_EXPIRY_DAYS else "pending"
+    except Exception:
+        return "unknown"
+
+
+@mcp.tool()
+def trade_history(team: str = "", outcome: str = "", limit: int = 50) -> str:
+    """Every trade offer made in the league (logged locally, since ESPN drops the players once
+    an offer is accepted/declined). Filters: team = team name (partial ok, e.g. 'me' or 'charlo'),
+    outcome = pending / accepted / declined / expired / cancelled. Newest first."""
+    log = _sync_trade_log()
+    mine = _teams().get(TEAM_ID)
+    q = (mine if team.strip().lower() == "me" else team).lower()
+    rows = []
+    for oid, o in log["offers"].items():
+        oc = _offer_outcome(oid, o, log)
+        if q and not any(q in (n or "").lower() for n in o["teams"]):
+            continue
+        if outcome and outcome.lower() not in oc:
+            continue
+        out = {"proposed": o["proposed"], "proposed_by": o["proposed_by"], "teams": o["teams"],
+               "outcome": oc, "moves": o["moves"]}
+        if oid in log["outcomes"]:
+            out["decided"] = log["outcomes"][oid]["date"]
+        rows.append(out)
+    rows.sort(key=lambda r: r["proposed"] or "", reverse=True)
+    lost = [v for k, v in log["outcomes"].items() if k not in log["offers"]]
+    return json.dumps({"offers": rows[:limit], "total_matching": len(rows),
+                       "outcomes_without_players": len(lost),
+                       "note": "outcomes_without_players = offers decided before logging began (ESPN kept only "
+                               "who accepted/declined and when). 'expired' = still marked pending by ESPN "
+                               f"but older than {TRADE_EXPIRY_DAYS} days.",
+                       "last_sync": log.get("last_sync")}, indent=1)
+
+
+# ---------------------------------------------------------------------------
 # INCOMING / PENDING TRADES
 # ---------------------------------------------------------------------------
 @mcp.tool()
@@ -1041,6 +1139,10 @@ def get_pending_trades() -> str:
     """Trade offers involving my team that are still pending (offers I've received AND ones I've sent),
     each evaluated: my and their expected-win change for the rest of the season, category changes,
     and whether I proposed it or received it. Use it to recommend accept / counter / decline."""
+    try:
+        _sync_trade_log()
+    except Exception:
+        pass
     d = _get(["mPendingTransactions", "mTransactions2", "mRoster", "mTeam", "mSettings", "mStatus", "mMatchup"])
     names = {t["id"]: t.get("name") for t in d["teams"]}
     raw = (d.get("pendingTransactions") or []) + [t for t in (d.get("transactions") or [])

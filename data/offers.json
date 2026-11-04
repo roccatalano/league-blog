@@ -1,0 +1,3251 @@
+{
+ "updated_utc": "2026-11-04T11:20:52.871714+00:00",
+ "offers": [
+  {
+   "id": "40e2b0f2-c0c7-4b77-89ef-638934fe2abb",
+   "proposed": "2026-11-04T11:06:59.584000+00:00",
+   "sender": "Gets On Base",
+   "receiver": "mr charloooooo",
+   "teams": [
+    "Gets On Base",
+    "mr charloooooo"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Ace Bailey",
+     "from": "Gets On Base",
+     "to": "mr charloooooo"
+    },
+    {
+     "player": "Anfernee Simons",
+     "from": "Gets On Base",
+     "to": "mr charloooooo"
+    },
+    {
+     "player": "Jrue Holiday",
+     "from": "mr charloooooo",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Christian Braun",
+     "from": "mr charloooooo",
+     "to": "Gets On Base"
+    }
+   ],
+   "sender_gain": 0.182,
+   "receiver_gain": -0.208
+  },
+  {
+   "id": "aebe3b5c-ca87-4556-91e4-dc07052c7ca5",
+   "proposed": "2026-11-04T11:02:18.764000+00:00",
+   "sender": "Popoviched",
+   "receiver": "The haliban",
+   "teams": [
+    "Popoviched",
+    "The haliban"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Desmond Bane",
+     "from": "Popoviched",
+     "to": "The haliban"
+    },
+    {
+     "player": "Walker Kessler",
+     "from": "The haliban",
+     "to": "Popoviched"
+    }
+   ],
+   "sender_gain": 0.222,
+   "receiver_gain": -0.18
+  },
+  {
+   "id": "fd9a686e-af42-4428-be2a-3a53343a4265",
+   "proposed": "2026-11-04T11:00:58.271000+00:00",
+   "sender": "mr charloooooo",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Gets On Base",
+    "mr charloooooo"
+   ],
+   "outcome": "pending",
+   "moves": [
+    {
+     "player": "Jrue Holiday",
+     "from": "mr charloooooo",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Khaman Maluach",
+     "from": "mr charloooooo",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Jake LaRavia",
+     "from": "Gets On Base",
+     "to": "mr charloooooo"
+    },
+    {
+     "player": "Ace Bailey",
+     "from": "Gets On Base",
+     "to": "mr charloooooo"
+    }
+   ],
+   "sender_gain": -0.009,
+   "receiver_gain": -0.128
+  },
+  {
+   "id": "04ae764b-8d36-4b38-a55f-46dfbe3c307e",
+   "proposed": "2026-11-04T10:56:00.620000+00:00",
+   "sender": "Gets On Base",
+   "receiver": "mr charloooooo",
+   "teams": [
+    "Gets On Base",
+    "mr charloooooo"
+   ],
+   "outcome": "declined",
+   "moves": [
+    {
+     "player": "Ace Bailey",
+     "from": "Gets On Base",
+     "to": "mr charloooooo"
+    },
+    {
+     "player": "Anfernee Simons",
+     "from": "Gets On Base",
+     "to": "mr charloooooo"
+    },
+    {
+     "player": "Jrue Holiday",
+     "from": "mr charloooooo",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Christian Braun",
+     "from": "mr charloooooo",
+     "to": "Gets On Base"
+    }
+   ],
+   "sender_gain": 0.182,
+   "receiver_gain": -0.208,
+   "decided": "2026-11-04T11:06:59.584000+00:00"
+  },
+  {
+   "id": "e9c4f67c-18c7-4941-9c35-6e390186a5e4",
+   "proposed": "2026-11-04T07:57:09.834000+00:00",
+   "sender": "mr charloooooo",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Gets On Base",
+    "mr charloooooo"
+   ],
+   "outcome": "pending",
+   "moves": [
+    {
+     "player": "Ace Bailey",
+     "from": "Gets On Base",
+     "to": "mr charloooooo"
+    },
+    {
+     "player": "Jrue Holiday",
+     "from": "mr charloooooo",
+     "to": "Gets On Base"
+    }
+   ],
+   "sender_gain": -0.078,
+   "receiver_gain": 0.067
+  },
+  {
+   "id": "9010d1ed-ca45-4ca0-a9e5-e247ef2a3aa1",
+   "proposed": "2026-11-04T07:55:13.467000+00:00",
+   "sender": "mr charloooooo",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Gets On Base",
+    "mr charloooooo"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Ace Bailey",
+     "from": "Gets On Base",
+     "to": "mr charloooooo"
+    },
+    {
+     "player": "Jrue Holiday",
+     "from": "mr charloooooo",
+     "to": "Gets On Base"
+    }
+   ],
+   "sender_gain": -0.078,
+   "receiver_gain": 0.067
+  },
+  {
+   "id": "de04a5b6-0c2c-4c3c-88f3-c864187db53d",
+   "proposed": "2026-11-04T07:54:17.359000+00:00",
+   "sender": "mr charloooooo",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Gets On Base",
+    "mr charloooooo"
+   ],
+   "outcome": "pending",
+   "moves": [
+    {
+     "player": "Ace Bailey",
+     "from": "Gets On Base",
+     "to": "mr charloooooo"
+    },
+    {
+     "player": "Jrue Holiday",
+     "from": "mr charloooooo",
+     "to": "Gets On Base"
+    }
+   ],
+   "sender_gain": -0.078,
+   "receiver_gain": 0.067
+  },
+  {
+   "id": "30d66200-28cc-4f19-a2e0-05407b0eb3b3",
+   "proposed": "2026-11-04T06:32:07.423000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "The Serbian Empire",
+   "teams": [
+    "The Serbian Empire",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Darius Garland",
+     "from": "Viva La Raza!",
+     "to": "The Serbian Empire"
+    },
+    {
+     "player": "Brandon Miller",
+     "from": "The Serbian Empire",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": 0.3,
+   "receiver_gain": -0.317
+  },
+  {
+   "id": "0bf09e67-0309-4318-b268-eda2ad0477a0",
+   "proposed": "2026-11-04T06:32:03.060000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "The Serbian Empire",
+   "teams": [
+    "The Serbian Empire",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Darius Garland",
+     "from": "Viva La Raza!",
+     "to": "The Serbian Empire"
+    },
+    {
+     "player": "Ty Jerome",
+     "from": "The Serbian Empire",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": 0.458,
+   "receiver_gain": -0.446
+  },
+  {
+   "id": "9bd9baee-8c57-433c-9094-0801aa3484e3",
+   "proposed": "2026-11-04T06:31:57.410000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "HE IS HIM ( G.O.A.T)",
+   "teams": [
+    "HE IS HIM ( G.O.A.T)",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "De'Andre Hunter",
+     "from": "Viva La Raza!",
+     "to": "HE IS HIM ( G.O.A.T)"
+    },
+    {
+     "player": "Myles Turner",
+     "from": "HE IS HIM ( G.O.A.T)",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": 0.415,
+   "receiver_gain": -0.249
+  },
+  {
+   "id": "3b384c50-cb5a-402e-9d33-65fa0710ddc7",
+   "proposed": "2026-11-04T06:31:51.597000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "The Real OG",
+   "teams": [
+    "The Real OG",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Darius Garland",
+     "from": "Viva La Raza!",
+     "to": "The Real OG"
+    },
+    {
+     "player": "Zion Williamson",
+     "from": "The Real OG",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": 0.119,
+   "receiver_gain": -0.077
+  },
+  {
+   "id": "50069f98-1074-427c-b6f5-bae7899c6793",
+   "proposed": "2026-11-04T02:45:15.002000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "Derrick White Girl Wasted",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Jaylen Brown",
+     "from": "Viva La Raza!",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Darius Garland",
+     "from": "Viva La Raza!",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Isaiah Stewart",
+     "from": "Derrick White Girl Wasted",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Jamal Murray",
+     "from": "Derrick White Girl Wasted",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": 0.215,
+   "receiver_gain": -0.282
+  },
+  {
+   "id": "38277c0e-4a7c-428b-bb15-93c20a862848",
+   "proposed": "2026-11-04T01:08:36.578000+00:00",
+   "sender": "Stairway to Devin",
+   "receiver": "Popoviched",
+   "teams": [
+    "Popoviched",
+    "Stairway to Devin"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Derik Queen",
+     "from": "Stairway to Devin",
+     "to": "Popoviched"
+    },
+    {
+     "player": "Duncan Robinson",
+     "from": "Popoviched",
+     "to": "Stairway to Devin"
+    }
+   ],
+   "sender_gain": -0.065,
+   "receiver_gain": 0.115
+  },
+  {
+   "id": "20a9e1f0-5b6d-450b-bf0a-e158095cb2fa",
+   "proposed": "2026-11-04T00:51:34.620000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "HE IS HIM ( G.O.A.T)",
+   "teams": [
+    "HE IS HIM ( G.O.A.T)",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "De'Andre Hunter",
+     "from": "Viva La Raza!",
+     "to": "HE IS HIM ( G.O.A.T)"
+    },
+    {
+     "player": "Myles Turner",
+     "from": "HE IS HIM ( G.O.A.T)",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": 0.415,
+   "receiver_gain": -0.249
+  },
+  {
+   "id": "bd510826-6c97-4d2e-9b50-6cf6a6b452ae",
+   "proposed": "2026-11-03T13:27:19.659000+00:00",
+   "sender": "Gets On Base",
+   "receiver": "Giddey up Horsey",
+   "teams": [
+    "Gets On Base",
+    "Giddey up Horsey"
+   ],
+   "outcome": "pending",
+   "moves": [
+    {
+     "player": "Ace Bailey",
+     "from": "Gets On Base",
+     "to": "Giddey up Horsey"
+    },
+    {
+     "player": "Ausar Thompson",
+     "from": "Giddey up Horsey",
+     "to": "Gets On Base"
+    }
+   ],
+   "sender_gain": 0.002,
+   "receiver_gain": 0.038
+  },
+  {
+   "id": "aec9c50d-58b1-45b4-8085-f5cc995245ea",
+   "proposed": "2026-11-03T13:04:20.518000+00:00",
+   "sender": "mr charloooooo",
+   "receiver": "The haliban",
+   "teams": [
+    "The haliban",
+    "mr charloooooo"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Derrick White",
+     "from": "The haliban",
+     "to": "mr charloooooo"
+    },
+    {
+     "player": "Zach LaVine",
+     "from": "mr charloooooo",
+     "to": "The haliban"
+    }
+   ],
+   "sender_gain": 0.207,
+   "receiver_gain": -0.133
+  },
+  {
+   "id": "1506c945-af9d-4fe2-91d8-7edd961c948f",
+   "proposed": "2026-11-03T13:03:47.915000+00:00",
+   "sender": "Derrick White Girl Wasted",
+   "receiver": "JAReusalem",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "JAReusalem"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Paul Reed",
+     "from": "Derrick White Girl Wasted",
+     "to": "JAReusalem"
+    },
+    {
+     "player": "CJ McCollum",
+     "from": "JAReusalem",
+     "to": "Derrick White Girl Wasted"
+    }
+   ],
+   "sender_gain": 0.183,
+   "receiver_gain": -0.123
+  },
+  {
+   "id": "938049f8-9a68-4211-a92f-5933d6938f6e",
+   "proposed": "2026-11-03T13:03:24.711000+00:00",
+   "sender": "Derrick White Girl Wasted",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Gets On Base"
+   ],
+   "outcome": "pending",
+   "moves": [
+    {
+     "player": "Paul Reed",
+     "from": "Derrick White Girl Wasted",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Ace Bailey",
+     "from": "Gets On Base",
+     "to": "Derrick White Girl Wasted"
+    }
+   ],
+   "sender_gain": 0.189,
+   "receiver_gain": -0.168
+  },
+  {
+   "id": "cf48a21a-977c-4176-8cfe-a2729e5e1592",
+   "proposed": "2026-11-03T10:04:39.732000+00:00",
+   "sender": "JAReusalem",
+   "receiver": "HE IS HIM ( G.O.A.T)",
+   "teams": [
+    "HE IS HIM ( G.O.A.T)",
+    "JAReusalem"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Devin Vassell",
+     "from": "JAReusalem",
+     "to": "HE IS HIM ( G.O.A.T)"
+    },
+    {
+     "player": "CJ McCollum",
+     "from": "JAReusalem",
+     "to": "HE IS HIM ( G.O.A.T)"
+    },
+    {
+     "player": "Tari Eason",
+     "from": "HE IS HIM ( G.O.A.T)",
+     "to": "JAReusalem"
+    },
+    {
+     "player": "Davion Mitchell",
+     "from": "HE IS HIM ( G.O.A.T)",
+     "to": "JAReusalem"
+    }
+   ],
+   "sender_gain": -0.163,
+   "receiver_gain": 0.188
+  },
+  {
+   "id": "b28f4a97-269d-4b82-8284-87e002b5f59b",
+   "proposed": "2026-11-03T09:48:15.799000+00:00",
+   "sender": "JAReusalem",
+   "receiver": "Derrick White Girl Wasted",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "JAReusalem"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Devin Vassell",
+     "from": "JAReusalem",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Cameron Johnson",
+     "from": "JAReusalem",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Ayo Dosunmu",
+     "from": "JAReusalem",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Naji Marshall",
+     "from": "Derrick White Girl Wasted",
+     "to": "JAReusalem"
+    },
+    {
+     "player": "Jamal Murray",
+     "from": "Derrick White Girl Wasted",
+     "to": "JAReusalem"
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "b24f5189-a91e-4253-8a37-5a9dcaaa155d",
+   "proposed": "2026-11-03T04:06:24.999000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "Giddey up Horsey",
+   "teams": [
+    "Giddey up Horsey",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Aaron Gordon",
+     "from": "Viva La Raza!",
+     "to": "Giddey up Horsey"
+    },
+    {
+     "player": "Darius Garland",
+     "from": "Viva La Raza!",
+     "to": "Giddey up Horsey"
+    },
+    {
+     "player": "Josh Giddey",
+     "from": "Giddey up Horsey",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Ivica Zubac",
+     "from": "Giddey up Horsey",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "3cfee3b4-ff97-4044-9e1e-9c287d692ae7",
+   "proposed": "2026-11-02T21:45:39.295000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "Stairway to Devin",
+   "teams": [
+    "Stairway to Devin",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Darius Garland",
+     "from": "Viva La Raza!",
+     "to": "Stairway to Devin"
+    },
+    {
+     "player": "Rui Hachimura",
+     "from": "Viva La Raza!",
+     "to": "Stairway to Devin"
+    },
+    {
+     "player": "Matas Buzelis",
+     "from": "Stairway to Devin",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Paul George",
+     "from": "Stairway to Devin",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "a4197bb7-5fe2-4935-8ac2-01d8cafb8708",
+   "proposed": "2026-11-02T21:45:36.409000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "The haliban",
+   "teams": [
+    "The haliban",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Rui Hachimura",
+     "from": "Viva La Raza!",
+     "to": "The haliban"
+    },
+    {
+     "player": "Darius Garland",
+     "from": "Viva La Raza!",
+     "to": "The haliban"
+    },
+    {
+     "player": "Mikal Bridges",
+     "from": "The haliban",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Walker Kessler",
+     "from": "The haliban",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "5899196b-0d56-465d-a17f-4589a968af44",
+   "proposed": "2026-11-02T21:45:33.076000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "JAReusalem",
+   "teams": [
+    "JAReusalem",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Aaron Gordon",
+     "from": "Viva La Raza!",
+     "to": "JAReusalem"
+    },
+    {
+     "player": "Darius Garland",
+     "from": "Viva La Raza!",
+     "to": "JAReusalem"
+    },
+    {
+     "player": "Ayo Dosunmu",
+     "from": "JAReusalem",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Dyson Daniels",
+     "from": "JAReusalem",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "d8ca701c-b5a8-4ba4-aa4e-0944f1140e48",
+   "proposed": "2026-11-02T21:45:27.965000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "The Real OG",
+   "teams": [
+    "The Real OG",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Darius Garland",
+     "from": "Viva La Raza!",
+     "to": "The Real OG"
+    },
+    {
+     "player": "Zion Williamson",
+     "from": "The Real OG",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": 0.119,
+   "receiver_gain": -0.077
+  },
+  {
+   "id": "b2156b3b-baf6-439e-af0b-12a710bf3f01",
+   "proposed": "2026-11-02T21:45:24.474000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "The Real OG",
+   "teams": [
+    "The Real OG",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Darius Garland",
+     "from": "Viva La Raza!",
+     "to": "The Real OG"
+    },
+    {
+     "player": "Rui Hachimura",
+     "from": "Viva La Raza!",
+     "to": "The Real OG"
+    },
+    {
+     "player": "Yves Missi",
+     "from": "The Real OG",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Zion Williamson",
+     "from": "The Real OG",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "18159d7e-d5c6-46ad-ba6b-b3e0ed80213e",
+   "proposed": "2026-11-02T21:45:19.158000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "JAReusalem",
+   "teams": [
+    "JAReusalem",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Darius Garland",
+     "from": "Viva La Raza!",
+     "to": "JAReusalem"
+    },
+    {
+     "player": "Rui Hachimura",
+     "from": "Viva La Raza!",
+     "to": "JAReusalem"
+    },
+    {
+     "player": "Moussa Diabate",
+     "from": "JAReusalem",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Dyson Daniels",
+     "from": "JAReusalem",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "5c4c33ed-359d-4843-a8a3-4ea14b863419",
+   "proposed": "2026-11-02T21:45:12.523000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "JAReusalem",
+   "teams": [
+    "JAReusalem",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Bennedict Mathurin",
+     "from": "Viva La Raza!",
+     "to": "JAReusalem"
+    },
+    {
+     "player": "Darius Garland",
+     "from": "Viva La Raza!",
+     "to": "JAReusalem"
+    },
+    {
+     "player": "Moussa Diabate",
+     "from": "JAReusalem",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Dyson Daniels",
+     "from": "JAReusalem",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "e691da27-a434-4498-9b2b-f60158fcfb8b",
+   "proposed": "2026-11-02T20:50:36.615000+00:00",
+   "sender": "mr charloooooo",
+   "receiver": "JAReusalem",
+   "teams": [
+    "JAReusalem",
+    "mr charloooooo"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Khaman Maluach",
+     "from": "mr charloooooo",
+     "to": "JAReusalem"
+    },
+    {
+     "player": "Ja Morant",
+     "from": "mr charloooooo",
+     "to": "JAReusalem"
+    },
+    {
+     "player": "Brook Lopez",
+     "from": "JAReusalem",
+     "to": "mr charloooooo"
+    },
+    {
+     "player": "Moussa Diabate",
+     "from": "JAReusalem",
+     "to": "mr charloooooo"
+    },
+    {
+     "player": "Jakob Poeltl",
+     "from": "mr charloooooo",
+     "to": null
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "b44ec4c3-e3be-4d1a-ae20-3c792953a169",
+   "proposed": "2026-11-02T20:26:51.837000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "mr charloooooo",
+   "teams": [
+    "Viva La Raza!",
+    "mr charloooooo"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Rui Hachimura",
+     "from": "Viva La Raza!",
+     "to": "mr charloooooo"
+    },
+    {
+     "player": "Darius Garland",
+     "from": "Viva La Raza!",
+     "to": "mr charloooooo"
+    },
+    {
+     "player": "Franz Wagner",
+     "from": "mr charloooooo",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "29a353ef-4f8c-4f5d-b75e-f240bd79c8cf",
+   "proposed": "2026-11-02T20:14:26.774000+00:00",
+   "sender": "Popoviched",
+   "receiver": "Torta Pounders",
+   "teams": [
+    "Popoviched",
+    "Torta Pounders"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Alex Sarr",
+     "from": "Popoviched",
+     "to": "Torta Pounders"
+    },
+    {
+     "player": "Dejounte Murray",
+     "from": "Torta Pounders",
+     "to": "Popoviched"
+    }
+   ],
+   "sender_gain": 0.136,
+   "receiver_gain": -0.15
+  },
+  {
+   "id": "38f05af9-1878-423c-9fae-fafdd4567e32",
+   "proposed": "2026-11-01T12:32:14.979000+00:00",
+   "sender": "Torta Pounders",
+   "receiver": "Stairway to Devin",
+   "teams": [
+    "Stairway to Devin",
+    "Torta Pounders"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Naz Reid",
+     "from": "Torta Pounders",
+     "to": "Stairway to Devin"
+    },
+    {
+     "player": "Yaxel Lendeborg",
+     "from": "Stairway to Devin",
+     "to": "Torta Pounders"
+    }
+   ],
+   "sender_gain": -0.001,
+   "receiver_gain": 0.05
+  },
+  {
+   "id": "a23ffe22-5100-40c9-8c0b-13764db6b250",
+   "proposed": "2026-11-01T10:35:55.109000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "JAReusalem",
+   "teams": [
+    "JAReusalem",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Rui Hachimura",
+     "from": "Viva La Raza!",
+     "to": "JAReusalem"
+    },
+    {
+     "player": "Darius Garland",
+     "from": "Viva La Raza!",
+     "to": "JAReusalem"
+    },
+    {
+     "player": "Dyson Daniels",
+     "from": "JAReusalem",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Ayo Dosunmu",
+     "from": "JAReusalem",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "ea39744d-13c1-4b21-a3be-404fa0f827a9",
+   "proposed": "2026-11-01T10:31:41.449000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "Popoviched",
+   "teams": [
+    "Popoviched",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Darius Garland",
+     "from": "Viva La Raza!",
+     "to": "Popoviched"
+    },
+    {
+     "player": "Desmond Bane",
+     "from": "Popoviched",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": 0.19,
+   "receiver_gain": -0.2
+  },
+  {
+   "id": "56762e22-4432-43c2-8fb1-b8f58dadb185",
+   "proposed": "2026-11-01T10:31:32.325000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "JAReusalem",
+   "teams": [
+    "JAReusalem",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Rui Hachimura",
+     "from": "Viva La Raza!",
+     "to": "JAReusalem"
+    },
+    {
+     "player": "Darius Garland",
+     "from": "Viva La Raza!",
+     "to": "JAReusalem"
+    },
+    {
+     "player": "Bennedict Mathurin",
+     "from": "Viva La Raza!",
+     "to": "JAReusalem"
+    },
+    {
+     "player": "Dyson Daniels",
+     "from": "JAReusalem",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Devin Vassell",
+     "from": "JAReusalem",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Moussa Diabate",
+     "from": "JAReusalem",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "83446128-c11e-4cfe-93ac-0047903c9f92",
+   "proposed": "2026-11-01T10:02:24.217000+00:00",
+   "sender": "Popoviched",
+   "receiver": "Viva La Raza!",
+   "teams": [
+    "Popoviched",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Tristan da Silva",
+     "from": "Popoviched",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Alex Sarr",
+     "from": "Popoviched",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Desmond Bane",
+     "from": "Popoviched",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Trae Young",
+     "from": "Viva La Raza!",
+     "to": "Popoviched"
+    },
+    {
+     "player": "Onyeka Okongwu",
+     "from": "Viva La Raza!",
+     "to": "Popoviched"
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "a3eb7fdf-e7d0-49ca-a9de-8db36a0f8196",
+   "proposed": "2026-11-01T07:45:05.599000+00:00",
+   "sender": "Popoviched",
+   "receiver": "Giddey up Horsey",
+   "teams": [
+    "Giddey up Horsey",
+    "Popoviched"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Tristan da Silva",
+     "from": "Popoviched",
+     "to": "Giddey up Horsey"
+    },
+    {
+     "player": "Alex Sarr",
+     "from": "Popoviched",
+     "to": "Giddey up Horsey"
+    },
+    {
+     "player": "Josh Giddey",
+     "from": "Giddey up Horsey",
+     "to": "Popoviched"
+    }
+   ],
+   "sender_gain": 0.113,
+   "receiver_gain": -0.181
+  },
+  {
+   "id": "73014373-b43d-49c1-b876-e1ec6221bf89",
+   "proposed": "2026-10-31T13:47:27.973000+00:00",
+   "sender": "Derrick White Girl Wasted",
+   "receiver": "The Serbian Empire",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "The Serbian Empire"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Kawhi Leonard",
+     "from": "Derrick White Girl Wasted",
+     "to": "The Serbian Empire"
+    },
+    {
+     "player": "Pascal Siakam",
+     "from": "The Serbian Empire",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Naji Marshall",
+     "from": "Derrick White Girl Wasted",
+     "to": null
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "9d70e448-3763-46e4-8d38-68a76cec3137",
+   "proposed": "2026-10-31T13:46:22.455000+00:00",
+   "sender": "Derrick White Girl Wasted",
+   "receiver": "HE IS HIM ( G.O.A.T)",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "HE IS HIM ( G.O.A.T)"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Kawhi Leonard",
+     "from": "Derrick White Girl Wasted",
+     "to": "HE IS HIM ( G.O.A.T)"
+    },
+    {
+     "player": "OG Anunoby",
+     "from": "HE IS HIM ( G.O.A.T)",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Naji Marshall",
+     "from": "Derrick White Girl Wasted",
+     "to": null
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "3b979a0d-6330-4f8e-a27c-cb356a9e55d0",
+   "proposed": "2026-10-31T07:57:06.703000+00:00",
+   "sender": "Popoviched",
+   "receiver": "Derrick White Girl Wasted",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Popoviched"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Payton Pritchard",
+     "from": "Popoviched",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Cameron Boozer",
+     "from": "Derrick White Girl Wasted",
+     "to": "Popoviched"
+    }
+   ],
+   "sender_gain": 0.26,
+   "receiver_gain": -0.2
+  },
+  {
+   "id": "7e08a169-0b20-4216-99ab-c04081747ae7",
+   "proposed": "2026-10-31T01:14:37.651000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "Giddey up Horsey",
+   "teams": [
+    "Giddey up Horsey",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "RJ Barrett",
+     "from": "Viva La Raza!",
+     "to": "Giddey up Horsey"
+    },
+    {
+     "player": "Bam Adebayo",
+     "from": "Viva La Raza!",
+     "to": "Giddey up Horsey"
+    },
+    {
+     "player": "Julius Randle",
+     "from": "Giddey up Horsey",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Josh Giddey",
+     "from": "Giddey up Horsey",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "b4a1421c-969f-42ee-bc05-df10899011b0",
+   "proposed": "2026-10-31T00:58:46.057000+00:00",
+   "sender": "Popoviched",
+   "receiver": "Giddey up Horsey",
+   "teams": [
+    "Giddey up Horsey",
+    "Popoviched"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Desmond Bane",
+     "from": "Popoviched",
+     "to": "Giddey up Horsey"
+    },
+    {
+     "player": "Josh Giddey",
+     "from": "Giddey up Horsey",
+     "to": "Popoviched"
+    }
+   ],
+   "sender_gain": 0.101,
+   "receiver_gain": -0.025
+  },
+  {
+   "id": "62c60e17-2f53-464e-8e60-c81e3aae343b",
+   "proposed": "2026-10-29T02:13:14.595000+00:00",
+   "sender": "Derrick White Girl Wasted",
+   "receiver": "Torta Pounders",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Torta Pounders"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Day'Ron Sharpe",
+     "from": "Derrick White Girl Wasted",
+     "to": "Torta Pounders"
+    },
+    {
+     "player": "Luke Kennard",
+     "from": "Derrick White Girl Wasted",
+     "to": "Torta Pounders"
+    },
+    {
+     "player": "Andrew Nembhard",
+     "from": "Derrick White Girl Wasted",
+     "to": "Torta Pounders"
+    },
+    {
+     "player": "Tyrese Haliburton",
+     "from": "Torta Pounders",
+     "to": "Derrick White Girl Wasted"
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "28f6270a-bedc-42c3-9a6e-535c1cb2a8c8",
+   "proposed": "2026-10-29T01:06:07.809000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "The haliban",
+   "teams": [
+    "The haliban",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Brandon Ingram",
+     "from": "Viva La Raza!",
+     "to": "The haliban"
+    },
+    {
+     "player": "Bam Adebayo",
+     "from": "Viva La Raza!",
+     "to": "The haliban"
+    },
+    {
+     "player": "Walker Kessler",
+     "from": "The haliban",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Mikal Bridges",
+     "from": "The haliban",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Rui Hachimura",
+     "from": "Viva La Raza!",
+     "to": null
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "eecb3c9d-ae15-40e2-b37a-fa2112210232",
+   "proposed": "2026-10-29T01:06:01.974000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "The haliban",
+   "teams": [
+    "The haliban",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Brandon Ingram",
+     "from": "Viva La Raza!",
+     "to": "The haliban"
+    },
+    {
+     "player": "Jaylen Brown",
+     "from": "Viva La Raza!",
+     "to": "The haliban"
+    },
+    {
+     "player": "Walker Kessler",
+     "from": "The haliban",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Mikal Bridges",
+     "from": "The haliban",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Scoot Henderson",
+     "from": "Viva La Raza!",
+     "to": null
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "9d05e90d-3ebd-441b-8c9b-9dfbd3827e7b",
+   "proposed": "2026-10-28T21:06:58.958000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "Giddey up Horsey",
+   "teams": [
+    "Giddey up Horsey",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Jaylen Brown",
+     "from": "Viva La Raza!",
+     "to": "Giddey up Horsey"
+    },
+    {
+     "player": "Josh Giddey",
+     "from": "Giddey up Horsey",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Julius Randle",
+     "from": "Giddey up Horsey",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Scoot Henderson",
+     "from": "Viva La Raza!",
+     "to": null
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "b284699d-2370-405f-8373-e2c9706c405b",
+   "proposed": "2026-10-28T10:51:32.510000+00:00",
+   "sender": "Popoviched",
+   "receiver": "Viva La Raza!",
+   "teams": [
+    "Popoviched",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Alex Sarr",
+     "from": "Popoviched",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Darius Garland",
+     "from": "Viva La Raza!",
+     "to": "Popoviched"
+    }
+   ],
+   "sender_gain": -0.249,
+   "receiver_gain": 0.171
+  },
+  {
+   "id": "f6dce649-2d0c-4cf4-a27b-78adeef8340b",
+   "proposed": "2026-10-28T09:45:34.277000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "JAReusalem",
+   "teams": [
+    "JAReusalem",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Scoot Henderson",
+     "from": "Viva La Raza!",
+     "to": "JAReusalem"
+    },
+    {
+     "player": "Kyle Kuzma",
+     "from": "JAReusalem",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "6185fec5-0280-4a68-810d-9a41133fbd9e",
+   "proposed": "2026-10-28T09:45:30.067000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "JAReusalem",
+   "teams": [
+    "JAReusalem",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Scoot Henderson",
+     "from": "Viva La Raza!",
+     "to": "JAReusalem"
+    },
+    {
+     "player": "Devin Vassell",
+     "from": "JAReusalem",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "fd943fd2-61d9-4ebe-b3e4-a73c572c9c72",
+   "proposed": "2026-10-28T09:41:45.846000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "The haliban",
+   "teams": [
+    "The haliban",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Rui Hachimura",
+     "from": "Viva La Raza!",
+     "to": "The haliban"
+    },
+    {
+     "player": "Jaylen Brown",
+     "from": "Viva La Raza!",
+     "to": "The haliban"
+    },
+    {
+     "player": "Walker Kessler",
+     "from": "The haliban",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Mikal Bridges",
+     "from": "The haliban",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "ba697167-617d-4f4d-8648-a403577556bf",
+   "proposed": "2026-10-27T23:07:09.569000+00:00",
+   "sender": "Popoviched",
+   "receiver": "The haliban",
+   "teams": [
+    "Popoviched",
+    "The haliban"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Michael Porter Jr.",
+     "from": "Popoviched",
+     "to": "The haliban"
+    },
+    {
+     "player": "Derrick White",
+     "from": "The haliban",
+     "to": "Popoviched"
+    }
+   ],
+   "sender_gain": -0.152,
+   "receiver_gain": 0.261
+  },
+  {
+   "id": "acf5e2d6-17fb-4037-976a-edcb893102a6",
+   "proposed": "2026-10-27T09:35:00.022000+00:00",
+   "sender": "Popoviched",
+   "receiver": "Derrick White Girl Wasted",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Popoviched"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Michael Porter Jr.",
+     "from": "Popoviched",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Stephon Castle",
+     "from": "Derrick White Girl Wasted",
+     "to": "Popoviched"
+    }
+   ],
+   "sender_gain": -0.327,
+   "receiver_gain": 0.337
+  },
+  {
+   "id": "b042e47c-e624-4c2d-910d-4d1bf1ce0468",
+   "proposed": "2026-10-26T21:23:33.203000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "Stairway to Devin",
+   "teams": [
+    "Stairway to Devin",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Scottie Barnes",
+     "from": "Viva La Raza!",
+     "to": "Stairway to Devin"
+    },
+    {
+     "player": "Chet Holmgren",
+     "from": "Stairway to Devin",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Damian Lillard",
+     "from": "Stairway to Devin",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Naji Marshall",
+     "from": "Viva La Raza!",
+     "to": null
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "333bb90a-7ed6-46e4-ba56-af76c777bee7",
+   "proposed": "2026-10-26T09:33:00.533000+00:00",
+   "sender": "Gets On Base",
+   "receiver": "Al-Shaida",
+   "teams": [
+    "Al-Shaida",
+    "Gets On Base"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Anfernee Simons",
+     "from": "Gets On Base",
+     "to": "Al-Shaida"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Al-Shaida"
+    },
+    {
+     "player": "Austin Reaves",
+     "from": "Al-Shaida",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Neemias Queta",
+     "from": "Al-Shaida",
+     "to": "Gets On Base"
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "4575d58f-01b3-4b91-a171-73b36bebe46e",
+   "proposed": "2026-10-26T09:33:00.533000+00:00",
+   "sender": "Gets On Base",
+   "receiver": "Al-Shaida",
+   "teams": [
+    "Al-Shaida",
+    "Gets On Base"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Al-Shaida"
+    },
+    {
+     "player": "Anfernee Simons",
+     "from": "Gets On Base",
+     "to": "Al-Shaida"
+    },
+    {
+     "player": "Daniel Gafford",
+     "from": "Al-Shaida",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Trae Young",
+     "from": "Al-Shaida",
+     "to": "Gets On Base"
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "abea1f99-1dd9-4e1c-9747-21db1cda6896",
+   "proposed": "2026-10-26T09:33:00.533000+00:00",
+   "sender": "Gets On Base",
+   "receiver": "Al-Shaida",
+   "teams": [
+    "Al-Shaida",
+    "Gets On Base"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Al-Shaida"
+    },
+    {
+     "player": "Trae Young",
+     "from": "Al-Shaida",
+     "to": "Gets On Base"
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "3f4bdb5d-2c38-46ca-b730-6146ae03cde3",
+   "proposed": "2026-10-26T09:33:00.533000+00:00",
+   "sender": "Gets On Base",
+   "receiver": "Al-Shaida",
+   "teams": [
+    "Al-Shaida",
+    "Gets On Base"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Al-Shaida"
+    },
+    {
+     "player": "Austin Reaves",
+     "from": "Al-Shaida",
+     "to": "Gets On Base"
+    }
+   ],
+   "sender_gain": 0.161,
+   "receiver_gain": -0.202
+  },
+  {
+   "id": "75c6054e-ec39-416a-9de9-9ce4b9d606f3",
+   "proposed": "2026-10-24T14:22:44.149000+00:00",
+   "sender": "Gets On Base",
+   "receiver": "Torta Pounders",
+   "teams": [
+    "Gets On Base",
+    "Torta Pounders"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Jalen Duren",
+     "from": "Gets On Base",
+     "to": "Torta Pounders"
+    },
+    {
+     "player": "Norman Powell",
+     "from": "Gets On Base",
+     "to": "Torta Pounders"
+    },
+    {
+     "player": "Malik Monk",
+     "from": "Torta Pounders",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Tyrese Haliburton",
+     "from": "Torta Pounders",
+     "to": "Gets On Base"
+    }
+   ],
+   "sender_gain": 0.019,
+   "receiver_gain": 0.121
+  },
+  {
+   "id": "bdc3a7e9-c682-4938-aff5-d37e711261c3",
+   "proposed": "2026-10-24T14:22:37.167000+00:00",
+   "sender": "Gets On Base",
+   "receiver": "Torta Pounders",
+   "teams": [
+    "Gets On Base",
+    "Torta Pounders"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Jalen Duren",
+     "from": "Gets On Base",
+     "to": "Torta Pounders"
+    },
+    {
+     "player": "Norman Powell",
+     "from": "Gets On Base",
+     "to": "Torta Pounders"
+    },
+    {
+     "player": "Tyrese Haliburton",
+     "from": "Torta Pounders",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Reed Sheppard",
+     "from": "Torta Pounders",
+     "to": "Gets On Base"
+    }
+   ],
+   "sender_gain": 0.373,
+   "receiver_gain": -0.228
+  },
+  {
+   "id": "21292f8c-b771-45ef-a6a5-e46d312e482b",
+   "proposed": "2026-10-24T14:22:31.311000+00:00",
+   "sender": "Gets On Base",
+   "receiver": "Torta Pounders",
+   "teams": [
+    "Gets On Base",
+    "Torta Pounders"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Jalen Duren",
+     "from": "Gets On Base",
+     "to": "Torta Pounders"
+    },
+    {
+     "player": "Norman Powell",
+     "from": "Gets On Base",
+     "to": "Torta Pounders"
+    },
+    {
+     "player": "Julian Champagnie",
+     "from": "Torta Pounders",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Tyrese Haliburton",
+     "from": "Torta Pounders",
+     "to": "Gets On Base"
+    }
+   ],
+   "sender_gain": 0.256,
+   "receiver_gain": -0.187
+  },
+  {
+   "id": "5d9344d3-6559-431e-951f-d486913237bb",
+   "proposed": "2026-10-24T14:22:23.926000+00:00",
+   "sender": "Gets On Base",
+   "receiver": "Torta Pounders",
+   "teams": [
+    "Gets On Base",
+    "Torta Pounders"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Norman Powell",
+     "from": "Gets On Base",
+     "to": "Torta Pounders"
+    },
+    {
+     "player": "Jalen Duren",
+     "from": "Gets On Base",
+     "to": "Torta Pounders"
+    },
+    {
+     "player": "Alex Caruso",
+     "from": "Torta Pounders",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Tyrese Haliburton",
+     "from": "Torta Pounders",
+     "to": "Gets On Base"
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "063f3487-e600-4653-9ad8-7990aac2e2c1",
+   "proposed": "2026-10-24T09:34:10.007000+00:00",
+   "sender": "Gets On Base",
+   "receiver": "Al-Shaida",
+   "teams": [
+    "Al-Shaida",
+    "Gets On Base"
+   ],
+   "outcome": "expired",
+   "moves": [
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Al-Shaida"
+    },
+    {
+     "player": "Trae Young",
+     "from": "Al-Shaida",
+     "to": "Gets On Base"
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "72341e8b-3027-4990-9733-4dfab7d9e8d6",
+   "proposed": "2026-10-24T09:33:48.741000+00:00",
+   "sender": "Gets On Base",
+   "receiver": "Al-Shaida",
+   "teams": [
+    "Al-Shaida",
+    "Gets On Base"
+   ],
+   "outcome": "expired",
+   "moves": [
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Al-Shaida"
+    },
+    {
+     "player": "Anfernee Simons",
+     "from": "Gets On Base",
+     "to": "Al-Shaida"
+    },
+    {
+     "player": "Daniel Gafford",
+     "from": "Al-Shaida",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Trae Young",
+     "from": "Al-Shaida",
+     "to": "Gets On Base"
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "3192b0a2-d55a-492b-bdbd-e2d43fcdb902",
+   "proposed": "2026-10-24T09:33:22.559000+00:00",
+   "sender": "Gets On Base",
+   "receiver": "Al-Shaida",
+   "teams": [
+    "Al-Shaida",
+    "Gets On Base"
+   ],
+   "outcome": "expired",
+   "moves": [
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Al-Shaida"
+    },
+    {
+     "player": "Austin Reaves",
+     "from": "Al-Shaida",
+     "to": "Gets On Base"
+    }
+   ],
+   "sender_gain": 0.161,
+   "receiver_gain": -0.202
+  },
+  {
+   "id": "bf9e514c-39bc-475b-a848-d14623a605be",
+   "proposed": "2026-10-24T09:33:07.419000+00:00",
+   "sender": "Gets On Base",
+   "receiver": "Al-Shaida",
+   "teams": [
+    "Al-Shaida",
+    "Gets On Base"
+   ],
+   "outcome": "expired",
+   "moves": [
+    {
+     "player": "Anfernee Simons",
+     "from": "Gets On Base",
+     "to": "Al-Shaida"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Al-Shaida"
+    },
+    {
+     "player": "Austin Reaves",
+     "from": "Al-Shaida",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Neemias Queta",
+     "from": "Al-Shaida",
+     "to": "Gets On Base"
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "2547feb3-7f5d-4f20-bd41-666dcbb44930",
+   "proposed": "2026-10-24T09:21:57.291000+00:00",
+   "sender": "Gets On Base",
+   "receiver": "Torta Pounders",
+   "teams": [
+    "Gets On Base",
+    "Torta Pounders"
+   ],
+   "outcome": "declined",
+   "moves": [
+    {
+     "player": "Jalen Duren",
+     "from": "Gets On Base",
+     "to": "Torta Pounders"
+    },
+    {
+     "player": "Norman Powell",
+     "from": "Gets On Base",
+     "to": "Torta Pounders"
+    },
+    {
+     "player": "Tyrese Haliburton",
+     "from": "Torta Pounders",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Reed Sheppard",
+     "from": "Torta Pounders",
+     "to": "Gets On Base"
+    }
+   ],
+   "sender_gain": 0.373,
+   "receiver_gain": -0.228,
+   "decided": "2026-10-24T14:22:37.167000+00:00"
+  },
+  {
+   "id": "b4c03b4f-399b-46ea-960f-0476ff71d07b",
+   "proposed": "2026-10-24T09:21:02.236000+00:00",
+   "sender": "Gets On Base",
+   "receiver": "Torta Pounders",
+   "teams": [
+    "Gets On Base",
+    "Torta Pounders"
+   ],
+   "outcome": "declined",
+   "moves": [
+    {
+     "player": "Jalen Duren",
+     "from": "Gets On Base",
+     "to": "Torta Pounders"
+    },
+    {
+     "player": "Norman Powell",
+     "from": "Gets On Base",
+     "to": "Torta Pounders"
+    },
+    {
+     "player": "Malik Monk",
+     "from": "Torta Pounders",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Tyrese Haliburton",
+     "from": "Torta Pounders",
+     "to": "Gets On Base"
+    }
+   ],
+   "sender_gain": 0.019,
+   "receiver_gain": 0.121,
+   "decided": "2026-10-24T14:22:44.149000+00:00"
+  },
+  {
+   "id": "73e175ad-8d6a-4045-a891-cf85ba1c6c87",
+   "proposed": "2026-10-24T09:20:43.819000+00:00",
+   "sender": "Gets On Base",
+   "receiver": "Torta Pounders",
+   "teams": [
+    "Gets On Base",
+    "Torta Pounders"
+   ],
+   "outcome": "declined",
+   "moves": [
+    {
+     "player": "Norman Powell",
+     "from": "Gets On Base",
+     "to": "Torta Pounders"
+    },
+    {
+     "player": "Jalen Duren",
+     "from": "Gets On Base",
+     "to": "Torta Pounders"
+    },
+    {
+     "player": "Alex Caruso",
+     "from": "Torta Pounders",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Tyrese Haliburton",
+     "from": "Torta Pounders",
+     "to": "Gets On Base"
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null,
+   "decided": "2026-10-24T14:22:23.926000+00:00"
+  },
+  {
+   "id": "d928fb0a-2c53-4704-9700-11494380542b",
+   "proposed": "2026-10-24T09:20:23.278000+00:00",
+   "sender": "Gets On Base",
+   "receiver": "Torta Pounders",
+   "teams": [
+    "Gets On Base",
+    "Torta Pounders"
+   ],
+   "outcome": "declined",
+   "moves": [
+    {
+     "player": "Jalen Duren",
+     "from": "Gets On Base",
+     "to": "Torta Pounders"
+    },
+    {
+     "player": "Norman Powell",
+     "from": "Gets On Base",
+     "to": "Torta Pounders"
+    },
+    {
+     "player": "Julian Champagnie",
+     "from": "Torta Pounders",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Tyrese Haliburton",
+     "from": "Torta Pounders",
+     "to": "Gets On Base"
+    }
+   ],
+   "sender_gain": 0.256,
+   "receiver_gain": -0.187,
+   "decided": "2026-10-24T14:22:31.311000+00:00"
+  },
+  {
+   "id": "ddc40abc-e14a-4e2f-9df4-cc70e1f7269f",
+   "proposed": "2026-10-24T09:09:39.684000+00:00",
+   "sender": "Gets On Base",
+   "receiver": "Torta Pounders",
+   "teams": [
+    "Gets On Base",
+    "Torta Pounders"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Torta Pounders"
+    },
+    {
+     "player": "Anthony Davis",
+     "from": "Gets On Base",
+     "to": "Torta Pounders"
+    },
+    {
+     "player": "Naz Reid",
+     "from": "Torta Pounders",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Tyrese Haliburton",
+     "from": "Torta Pounders",
+     "to": "Gets On Base"
+    }
+   ],
+   "sender_gain": 0.017,
+   "receiver_gain": 0.195
+  },
+  {
+   "id": "2e92ec63-e129-4f74-a1db-8aa434c0f9d7",
+   "proposed": "2026-10-23T13:01:38.684000+00:00",
+   "sender": "Gets On Base",
+   "receiver": "Torta Pounders",
+   "teams": [
+    "Gets On Base",
+    "Torta Pounders"
+   ],
+   "outcome": "expired",
+   "moves": [
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Torta Pounders"
+    },
+    {
+     "player": "Anthony Davis",
+     "from": "Gets On Base",
+     "to": "Torta Pounders"
+    },
+    {
+     "player": "Naz Reid",
+     "from": "Torta Pounders",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Tyrese Haliburton",
+     "from": "Torta Pounders",
+     "to": "Gets On Base"
+    }
+   ],
+   "sender_gain": 0.017,
+   "receiver_gain": 0.195
+  },
+  {
+   "id": "dd9e8065-13ca-4b9c-bc13-256cd0e6adf3",
+   "proposed": "2026-10-22T02:21:12.182000+00:00",
+   "sender": "Derrick White Girl Wasted",
+   "receiver": "HE IS HIM ( G.O.A.T)",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "HE IS HIM ( G.O.A.T)"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Herbert Jones",
+     "from": "Derrick White Girl Wasted",
+     "to": "HE IS HIM ( G.O.A.T)"
+    },
+    {
+     "player": "Isaiah Hartenstein",
+     "from": "Derrick White Girl Wasted",
+     "to": "HE IS HIM ( G.O.A.T)"
+    },
+    {
+     "player": "Andrew Nembhard",
+     "from": "Derrick White Girl Wasted",
+     "to": "HE IS HIM ( G.O.A.T)"
+    },
+    {
+     "player": "Devin Booker",
+     "from": "HE IS HIM ( G.O.A.T)",
+     "to": "Derrick White Girl Wasted"
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "e68f950b-f3f6-49ba-aac4-d2f27954dd2d",
+   "proposed": "2026-10-17T03:27:01.893000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Gets On Base",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Brandon Ingram",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Norman Powell",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": 0.041,
+   "receiver_gain": -0.15
+  },
+  {
+   "id": "6e0c76d6-76e5-4450-abe9-633a85bcd6be",
+   "proposed": "2026-10-16T10:51:02.251000+00:00",
+   "sender": "Gets On Base",
+   "receiver": "Al-Shaida",
+   "teams": [
+    "Al-Shaida",
+    "Gets On Base"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Anthony Davis",
+     "from": "Gets On Base",
+     "to": "Al-Shaida"
+    },
+    {
+     "player": "Giannis Antetokounmpo",
+     "from": "Gets On Base",
+     "to": "Al-Shaida"
+    },
+    {
+     "player": "Trae Young",
+     "from": "Al-Shaida",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Luka Doncic",
+     "from": "Al-Shaida",
+     "to": "Gets On Base"
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "c79d1daf-d6b3-4488-bbb0-cd8eede81cd0",
+   "proposed": "2026-10-16T09:40:02.352000+00:00",
+   "sender": "JAReusalem",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Gets On Base",
+    "JAReusalem"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Tim Hardaway Jr.",
+     "from": "JAReusalem",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "JAReusalem"
+    },
+    {
+     "player": "CJ McCollum",
+     "from": "JAReusalem",
+     "to": "Gets On Base"
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "d45c526c-a92d-4813-96ba-fa66acbe596a",
+   "proposed": "2026-10-15T23:14:40.035000+00:00",
+   "sender": "Derrick White Girl Wasted",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Gets On Base"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Ajay Mitchell",
+     "from": "Derrick White Girl Wasted",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Quentin Grimes",
+     "from": "Gets On Base",
+     "to": "Derrick White Girl Wasted"
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "f3e86767-321d-4c2c-8010-a775cbdaa14a",
+   "proposed": "2026-10-15T08:37:45.562000+00:00",
+   "sender": "Derrick White Girl Wasted",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Gets On Base"
+   ],
+   "outcome": "expired",
+   "moves": [
+    {
+     "player": "Ajay Mitchell",
+     "from": "Derrick White Girl Wasted",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Quentin Grimes",
+     "from": "Gets On Base",
+     "to": "Derrick White Girl Wasted"
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "c30ccaa6-98c0-4adf-88b8-50bb2d056153",
+   "proposed": "2026-10-15T08:22:30.079000+00:00",
+   "sender": "Gets On Base",
+   "receiver": "Torta Pounders",
+   "teams": [
+    "Gets On Base",
+    "Torta Pounders"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Anthony Davis",
+     "from": "Gets On Base",
+     "to": "Torta Pounders"
+    },
+    {
+     "player": "Tyrese Haliburton",
+     "from": "Torta Pounders",
+     "to": "Gets On Base"
+    }
+   ],
+   "sender_gain": 0.148,
+   "receiver_gain": 0.04
+  },
+  {
+   "id": "e8c4b21f-46ea-431c-aa08-86bb30f044dd",
+   "proposed": "2026-10-15T03:27:41.092000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Gets On Base",
+    "Viva La Raza!"
+   ],
+   "outcome": "expired",
+   "moves": [
+    {
+     "player": "Brandon Ingram",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Norman Powell",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": 0.041,
+   "receiver_gain": -0.15
+  },
+  {
+   "id": "c0a9030b-f528-4cb9-b3f2-df2b0cc0ed2c",
+   "proposed": "2026-10-15T01:44:51.182000+00:00",
+   "sender": "Popoviched",
+   "receiver": "JAReusalem",
+   "teams": [
+    "JAReusalem",
+    "Popoviched"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Kel'el Ware",
+     "from": "Popoviched",
+     "to": "JAReusalem"
+    },
+    {
+     "player": "Matas Buzelis",
+     "from": "JAReusalem",
+     "to": "Popoviched"
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "661b860b-96fa-4963-afd7-093e9f948d6e",
+   "proposed": "2026-10-14T11:11:17.724000+00:00",
+   "sender": "Gets On Base",
+   "receiver": "The Real OG",
+   "teams": [
+    "Gets On Base",
+    "The Real OG"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Anthony Davis",
+     "from": "Gets On Base",
+     "to": "The Real OG"
+    },
+    {
+     "player": "Jalen Brunson",
+     "from": "The Real OG",
+     "to": "Gets On Base"
+    }
+   ],
+   "sender_gain": -0.348,
+   "receiver_gain": 0.414
+  },
+  {
+   "id": "fed242cc-86e8-4225-aca4-2250750bede6",
+   "proposed": "2026-10-14T10:55:39.006000+00:00",
+   "sender": "Gets On Base",
+   "receiver": "Al-Shaida",
+   "teams": [
+    "Al-Shaida",
+    "Gets On Base"
+   ],
+   "outcome": "expired",
+   "moves": [
+    {
+     "player": "Anthony Davis",
+     "from": "Gets On Base",
+     "to": "Al-Shaida"
+    },
+    {
+     "player": "Giannis Antetokounmpo",
+     "from": "Gets On Base",
+     "to": "Al-Shaida"
+    },
+    {
+     "player": "Trae Young",
+     "from": "Al-Shaida",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Luka Doncic",
+     "from": "Al-Shaida",
+     "to": "Gets On Base"
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "c6f763d9-b312-43e1-b52b-034315317ddb",
+   "proposed": "2026-10-14T10:54:11.811000+00:00",
+   "sender": "Gets On Base",
+   "receiver": "The Real OG",
+   "teams": [
+    "Gets On Base",
+    "The Real OG"
+   ],
+   "outcome": "declined",
+   "moves": [
+    {
+     "player": "Anthony Davis",
+     "from": "Gets On Base",
+     "to": "The Real OG"
+    },
+    {
+     "player": "Jalen Brunson",
+     "from": "The Real OG",
+     "to": "Gets On Base"
+    }
+   ],
+   "sender_gain": -0.348,
+   "receiver_gain": 0.414,
+   "decided": "2026-10-14T11:11:17.724000+00:00"
+  },
+  {
+   "id": "df2564cf-90d9-4972-8ff9-1ffe83473ae2",
+   "proposed": "2026-10-14T10:51:13.230000+00:00",
+   "sender": "Gets On Base",
+   "receiver": "Torta Pounders",
+   "teams": [
+    "Gets On Base",
+    "Torta Pounders"
+   ],
+   "outcome": "declined",
+   "moves": [
+    {
+     "player": "Anthony Davis",
+     "from": "Gets On Base",
+     "to": "Torta Pounders"
+    },
+    {
+     "player": "Tyrese Haliburton",
+     "from": "Torta Pounders",
+     "to": "Gets On Base"
+    }
+   ],
+   "sender_gain": 0.148,
+   "receiver_gain": 0.04,
+   "decided": "2026-10-15T08:22:30.079000+00:00"
+  },
+  {
+   "id": "0a8d020f-4769-4218-a520-e3eae90ee15a",
+   "proposed": "2026-10-14T09:42:57.862000+00:00",
+   "sender": "JAReusalem",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Gets On Base",
+    "JAReusalem"
+   ],
+   "outcome": "expired",
+   "moves": [
+    {
+     "player": "Tim Hardaway Jr.",
+     "from": "JAReusalem",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "JAReusalem"
+    },
+    {
+     "player": "CJ McCollum",
+     "from": "JAReusalem",
+     "to": "Gets On Base"
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "ee7398ed-2494-456b-88e9-1963fb5c4753",
+   "proposed": "2026-10-13T11:03:00.803000+00:00",
+   "sender": "Popoviched",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Gets On Base",
+    "Popoviched"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Grayson Allen",
+     "from": "Popoviched",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "John Collins",
+     "from": "Popoviched",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Rudy Gobert",
+     "from": "Gets On Base",
+     "to": "Popoviched"
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "fe653535-43e0-49c1-adec-5fc939fce640",
+   "proposed": "2026-10-13T10:48:00.734000+00:00",
+   "sender": "Popoviched",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Gets On Base",
+    "Popoviched"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Jordan Poole",
+     "from": "Popoviched",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "John Collins",
+     "from": "Popoviched",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Popoviched"
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "a605f8d8-a465-4581-86ca-ed92daa5963b",
+   "proposed": "2026-10-11T11:03:14.391000+00:00",
+   "sender": "Popoviched",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Gets On Base",
+    "Popoviched"
+   ],
+   "outcome": "expired",
+   "moves": [
+    {
+     "player": "Grayson Allen",
+     "from": "Popoviched",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "John Collins",
+     "from": "Popoviched",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Rudy Gobert",
+     "from": "Gets On Base",
+     "to": "Popoviched"
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "67f77619-652d-4fcd-8073-324f2fcf5dd8",
+   "proposed": "2026-10-11T10:48:24.598000+00:00",
+   "sender": "Popoviched",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Gets On Base",
+    "Popoviched"
+   ],
+   "outcome": "expired",
+   "moves": [
+    {
+     "player": "Jordan Poole",
+     "from": "Popoviched",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "John Collins",
+     "from": "Popoviched",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Popoviched"
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "60f9413d-ff42-4b64-9f96-c666aee9dc47",
+   "proposed": "2026-10-09T11:42:37.446000+00:00",
+   "sender": "Popoviched",
+   "receiver": "The Real OG",
+   "teams": [
+    "Popoviched",
+    "The Real OG"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Grayson Allen",
+     "from": "Popoviched",
+     "to": "The Real OG"
+    },
+    {
+     "player": "Jordan Poole",
+     "from": "Popoviched",
+     "to": "The Real OG"
+    },
+    {
+     "player": "Cedric Coward",
+     "from": "The Real OG",
+     "to": "Popoviched"
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  }
+ ],
+ "teams": [
+  {
+   "team": "JAReusalem",
+   "sent": 4,
+   "received": 10,
+   "rated_sent": 1,
+   "sent_accepted": 0,
+   "sent_declined": 0,
+   "generosity": 0.188,
+   "self_gain": -0.163,
+   "best_sent": {
+    "id": "cf48a21a-977c-4176-8cfe-a2729e5e1592",
+    "receiver": "HE IS HIM ( G.O.A.T)",
+    "receiver_gain": 0.188,
+    "sender_gain": -0.163,
+    "moves": [
+     {
+      "player": "Devin Vassell",
+      "from": "JAReusalem",
+      "to": "HE IS HIM ( G.O.A.T)"
+     },
+     {
+      "player": "CJ McCollum",
+      "from": "JAReusalem",
+      "to": "HE IS HIM ( G.O.A.T)"
+     },
+     {
+      "player": "Tari Eason",
+      "from": "HE IS HIM ( G.O.A.T)",
+      "to": "JAReusalem"
+     },
+     {
+      "player": "Davion Mitchell",
+      "from": "HE IS HIM ( G.O.A.T)",
+      "to": "JAReusalem"
+     }
+    ],
+    "outcome": "cancelled/expired"
+   },
+   "worst_sent": {
+    "id": "cf48a21a-977c-4176-8cfe-a2729e5e1592",
+    "receiver": "HE IS HIM ( G.O.A.T)",
+    "receiver_gain": 0.188,
+    "sender_gain": -0.163,
+    "moves": [
+     {
+      "player": "Devin Vassell",
+      "from": "JAReusalem",
+      "to": "HE IS HIM ( G.O.A.T)"
+     },
+     {
+      "player": "CJ McCollum",
+      "from": "JAReusalem",
+      "to": "HE IS HIM ( G.O.A.T)"
+     },
+     {
+      "player": "Tari Eason",
+      "from": "HE IS HIM ( G.O.A.T)",
+      "to": "JAReusalem"
+     },
+     {
+      "player": "Davion Mitchell",
+      "from": "HE IS HIM ( G.O.A.T)",
+      "to": "JAReusalem"
+     }
+    ],
+    "outcome": "cancelled/expired"
+   }
+  },
+  {
+   "team": "Stairway to Devin",
+   "sent": 1,
+   "received": 3,
+   "rated_sent": 1,
+   "sent_accepted": 0,
+   "sent_declined": 0,
+   "generosity": 0.115,
+   "self_gain": -0.065,
+   "best_sent": {
+    "id": "38277c0e-4a7c-428b-bb15-93c20a862848",
+    "receiver": "Popoviched",
+    "receiver_gain": 0.115,
+    "sender_gain": -0.065,
+    "moves": [
+     {
+      "player": "Derik Queen",
+      "from": "Stairway to Devin",
+      "to": "Popoviched"
+     },
+     {
+      "player": "Duncan Robinson",
+      "from": "Popoviched",
+      "to": "Stairway to Devin"
+     }
+    ],
+    "outcome": "cancelled/expired"
+   },
+   "worst_sent": {
+    "id": "38277c0e-4a7c-428b-bb15-93c20a862848",
+    "receiver": "Popoviched",
+    "receiver_gain": 0.115,
+    "sender_gain": -0.065,
+    "moves": [
+     {
+      "player": "Derik Queen",
+      "from": "Stairway to Devin",
+      "to": "Popoviched"
+     },
+     {
+      "player": "Duncan Robinson",
+      "from": "Popoviched",
+      "to": "Stairway to Devin"
+     }
+    ],
+    "outcome": "cancelled/expired"
+   }
+  },
+  {
+   "team": "Torta Pounders",
+   "sent": 1,
+   "received": 14,
+   "rated_sent": 1,
+   "sent_accepted": 0,
+   "sent_declined": 0,
+   "generosity": 0.05,
+   "self_gain": -0.001,
+   "best_sent": {
+    "id": "38f05af9-1878-423c-9fae-fafdd4567e32",
+    "receiver": "Stairway to Devin",
+    "receiver_gain": 0.05,
+    "sender_gain": -0.001,
+    "moves": [
+     {
+      "player": "Naz Reid",
+      "from": "Torta Pounders",
+      "to": "Stairway to Devin"
+     },
+     {
+      "player": "Yaxel Lendeborg",
+      "from": "Stairway to Devin",
+      "to": "Torta Pounders"
+     }
+    ],
+    "outcome": "cancelled/expired"
+   },
+   "worst_sent": {
+    "id": "38f05af9-1878-423c-9fae-fafdd4567e32",
+    "receiver": "Stairway to Devin",
+    "receiver_gain": 0.05,
+    "sender_gain": -0.001,
+    "moves": [
+     {
+      "player": "Naz Reid",
+      "from": "Torta Pounders",
+      "to": "Stairway to Devin"
+     },
+     {
+      "player": "Yaxel Lendeborg",
+      "from": "Stairway to Devin",
+      "to": "Torta Pounders"
+     }
+    ],
+    "outcome": "cancelled/expired"
+   }
+  },
+  {
+   "team": "Popoviched",
+   "sent": 15,
+   "received": 2,
+   "rated_sent": 8,
+   "sent_accepted": 0,
+   "sent_declined": 0,
+   "generosity": 0.004,
+   "self_gain": 0.013,
+   "best_sent": {
+    "id": "acf5e2d6-17fb-4037-976a-edcb893102a6",
+    "receiver": "Derrick White Girl Wasted",
+    "receiver_gain": 0.337,
+    "sender_gain": -0.327,
+    "moves": [
+     {
+      "player": "Michael Porter Jr.",
+      "from": "Popoviched",
+      "to": "Derrick White Girl Wasted"
+     },
+     {
+      "player": "Stephon Castle",
+      "from": "Derrick White Girl Wasted",
+      "to": "Popoviched"
+     }
+    ],
+    "outcome": "cancelled/expired"
+   },
+   "worst_sent": {
+    "id": "3b979a0d-6330-4f8e-a27c-cb356a9e55d0",
+    "receiver": "Derrick White Girl Wasted",
+    "receiver_gain": -0.2,
+    "sender_gain": 0.26,
+    "moves": [
+     {
+      "player": "Payton Pritchard",
+      "from": "Popoviched",
+      "to": "Derrick White Girl Wasted"
+     },
+     {
+      "player": "Cameron Boozer",
+      "from": "Derrick White Girl Wasted",
+      "to": "Popoviched"
+     }
+    ],
+    "outcome": "cancelled/expired"
+   }
+  },
+  {
+   "team": "Gets On Base",
+   "sent": 27,
+   "received": 15,
+   "rated_sent": 17,
+   "sent_accepted": 0,
+   "sent_declined": 7,
+   "generosity": -0.004,
+   "self_gain": 0.095,
+   "best_sent": {
+    "id": "661b860b-96fa-4963-afd7-093e9f948d6e",
+    "receiver": "The Real OG",
+    "receiver_gain": 0.414,
+    "sender_gain": -0.348,
+    "moves": [
+     {
+      "player": "Anthony Davis",
+      "from": "Gets On Base",
+      "to": "The Real OG"
+     },
+     {
+      "player": "Jalen Brunson",
+      "from": "The Real OG",
+      "to": "Gets On Base"
+     }
+    ],
+    "outcome": "cancelled/expired"
+   },
+   "worst_sent": {
+    "id": "bdc3a7e9-c682-4938-aff5-d37e711261c3",
+    "receiver": "Torta Pounders",
+    "receiver_gain": -0.228,
+    "sender_gain": 0.373,
+    "moves": [
+     {
+      "player": "Jalen Duren",
+      "from": "Gets On Base",
+      "to": "Torta Pounders"
+     },
+     {
+      "player": "Norman Powell",
+      "from": "Gets On Base",
+      "to": "Torta Pounders"
+     },
+     {
+      "player": "Tyrese Haliburton",
+      "from": "Torta Pounders",
+      "to": "Gets On Base"
+     },
+     {
+      "player": "Reed Sheppard",
+      "from": "Torta Pounders",
+      "to": "Gets On Base"
+     }
+    ],
+    "outcome": "cancelled/expired"
+   }
+  },
+  {
+   "team": "mr charloooooo",
+   "sent": 6,
+   "received": 3,
+   "rated_sent": 5,
+   "sent_accepted": 0,
+   "sent_declined": 0,
+   "generosity": -0.012,
+   "self_gain": -0.007,
+   "best_sent": {
+    "id": "e9c4f67c-18c7-4941-9c35-6e390186a5e4",
+    "receiver": "Gets On Base",
+    "receiver_gain": 0.067,
+    "sender_gain": -0.078,
+    "moves": [
+     {
+      "player": "Ace Bailey",
+      "from": "Gets On Base",
+      "to": "mr charloooooo"
+     },
+     {
+      "player": "Jrue Holiday",
+      "from": "mr charloooooo",
+      "to": "Gets On Base"
+     }
+    ],
+    "outcome": "pending"
+   },
+   "worst_sent": {
+    "id": "aec9c50d-58b1-45b4-8085-f5cc995245ea",
+    "receiver": "The haliban",
+    "receiver_gain": -0.133,
+    "sender_gain": 0.207,
+    "moves": [
+     {
+      "player": "Derrick White",
+      "from": "The haliban",
+      "to": "mr charloooooo"
+     },
+     {
+      "player": "Zach LaVine",
+      "from": "mr charloooooo",
+      "to": "The haliban"
+     }
+    ],
+    "outcome": "cancelled/expired"
+   }
+  },
+  {
+   "team": "Derrick White Girl Wasted",
+   "sent": 8,
+   "received": 4,
+   "rated_sent": 2,
+   "sent_accepted": 0,
+   "sent_declined": 0,
+   "generosity": -0.146,
+   "self_gain": 0.186,
+   "best_sent": {
+    "id": "1506c945-af9d-4fe2-91d8-7edd961c948f",
+    "receiver": "JAReusalem",
+    "receiver_gain": -0.123,
+    "sender_gain": 0.183,
+    "moves": [
+     {
+      "player": "Paul Reed",
+      "from": "Derrick White Girl Wasted",
+      "to": "JAReusalem"
+     },
+     {
+      "player": "CJ McCollum",
+      "from": "JAReusalem",
+      "to": "Derrick White Girl Wasted"
+     }
+    ],
+    "outcome": "cancelled/expired"
+   },
+   "worst_sent": {
+    "id": "938049f8-9a68-4211-a92f-5933d6938f6e",
+    "receiver": "Gets On Base",
+    "receiver_gain": -0.168,
+    "sender_gain": 0.189,
+    "moves": [
+     {
+      "player": "Paul Reed",
+      "from": "Derrick White Girl Wasted",
+      "to": "Gets On Base"
+     },
+     {
+      "player": "Ace Bailey",
+      "from": "Gets On Base",
+      "to": "Derrick White Girl Wasted"
+     }
+    ],
+    "outcome": "pending"
+   }
+  },
+  {
+   "team": "Viva La Raza!",
+   "sent": 28,
+   "received": 2,
+   "rated_sent": 10,
+   "sent_accepted": 0,
+   "sent_declined": 0,
+   "generosity": -0.22,
+   "self_gain": 0.231,
+   "best_sent": {
+    "id": "3b384c50-cb5a-402e-9d33-65fa0710ddc7",
+    "receiver": "The Real OG",
+    "receiver_gain": -0.077,
+    "sender_gain": 0.119,
+    "moves": [
+     {
+      "player": "Darius Garland",
+      "from": "Viva La Raza!",
+      "to": "The Real OG"
+     },
+     {
+      "player": "Zion Williamson",
+      "from": "The Real OG",
+      "to": "Viva La Raza!"
+     }
+    ],
+    "outcome": "cancelled/expired"
+   },
+   "worst_sent": {
+    "id": "0bf09e67-0309-4318-b268-eda2ad0477a0",
+    "receiver": "The Serbian Empire",
+    "receiver_gain": -0.446,
+    "sender_gain": 0.458,
+    "moves": [
+     {
+      "player": "Darius Garland",
+      "from": "Viva La Raza!",
+      "to": "The Serbian Empire"
+     },
+     {
+      "player": "Ty Jerome",
+      "from": "The Serbian Empire",
+      "to": "Viva La Raza!"
+     }
+    ],
+    "outcome": "cancelled/expired"
+   }
+  },
+  {
+   "team": "Al-Shaida",
+   "sent": 0,
+   "received": 10,
+   "rated_sent": 0,
+   "sent_accepted": 0,
+   "sent_declined": 0,
+   "generosity": null,
+   "self_gain": null,
+   "best_sent": null,
+   "worst_sent": null
+  },
+  {
+   "team": "The Serbian Empire",
+   "sent": 0,
+   "received": 3,
+   "rated_sent": 0,
+   "sent_accepted": 0,
+   "sent_declined": 0,
+   "generosity": null,
+   "self_gain": null,
+   "best_sent": null,
+   "worst_sent": null
+  },
+  {
+   "team": "Giddey up Horsey",
+   "sent": 0,
+   "received": 6,
+   "rated_sent": 0,
+   "sent_accepted": 0,
+   "sent_declined": 0,
+   "generosity": null,
+   "self_gain": null,
+   "best_sent": null,
+   "worst_sent": null
+  },
+  {
+   "team": "HE IS HIM ( G.O.A.T)",
+   "sent": 0,
+   "received": 5,
+   "rated_sent": 0,
+   "sent_accepted": 0,
+   "sent_declined": 0,
+   "generosity": null,
+   "self_gain": null,
+   "best_sent": null,
+   "worst_sent": null
+  },
+  {
+   "team": "The Real OG",
+   "sent": 0,
+   "received": 6,
+   "rated_sent": 0,
+   "sent_accepted": 0,
+   "sent_declined": 0,
+   "generosity": null,
+   "self_gain": null,
+   "best_sent": null,
+   "worst_sent": null
+  },
+  {
+   "team": "The haliban",
+   "sent": 0,
+   "received": 7,
+   "rated_sent": 0,
+   "sent_accepted": 0,
+   "sent_declined": 0,
+   "generosity": null,
+   "self_gain": null,
+   "best_sent": null,
+   "worst_sent": null
+  }
+ ],
+ "lost_before_logging": 59
+}

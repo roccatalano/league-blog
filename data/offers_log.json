@@ -20,7 +20,7 @@
     }
    ],
    "espn_status": "PENDING",
-   "live_now": true,
+   "live_now": false,
    "rating": {
     "Gets On Base": 0.067,
     "mr charloooooo": -0.078
@@ -74,7 +74,7 @@
     }
    ],
    "espn_status": "PENDING",
-   "live_now": true,
+   "live_now": false,
    "rating": {
     "Derrick White Girl Wasted": 0.189,
     "Gets On Base": -0.168
@@ -111,7 +111,7 @@
     }
    ],
    "espn_status": "PENDING",
-   "live_now": true,
+   "live_now": false,
    "rating": {
     "Gets On Base": -0.128,
     "mr charloooooo": -0.009
@@ -2952,6 +2952,291 @@
     "Viva La Raza!": 0.033
    },
    "rated_on": "at the time (trade tracker)"
+  },
+  "a48c9843-1566-4c74-bf46-0fe91a8859ad": {
+   "proposed": "2026-11-04T12:14:05.662000+00:00",
+   "proposed_by": "Viva La Raza!",
+   "teams": [
+    "The haliban",
+    "Viva La Raza!"
+   ],
+   "moves": [
+    {
+     "player": "Darius Garland",
+     "from": "Viva La Raza!",
+     "to": "The haliban"
+    },
+    {
+     "player": "Walker Kessler",
+     "from": "The haliban",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "The haliban": -0.31,
+    "Viva La Raza!": 0.424
+   },
+   "rated_on": "2026-11-04"
+  },
+  "6fbd1d39-b9a3-46d4-8261-32bc2605c228": {
+   "proposed": "2026-11-04T12:22:25.019000+00:00",
+   "proposed_by": "Derrick White Girl Wasted",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Giddey up Horsey"
+   ],
+   "moves": [
+    {
+     "player": "Bilal Coulibaly",
+     "from": "Derrick White Girl Wasted",
+     "to": "Giddey up Horsey"
+    },
+    {
+     "player": "Jamal Murray",
+     "from": "Derrick White Girl Wasted",
+     "to": "Giddey up Horsey"
+    },
+    {
+     "player": "Deni Avdija",
+     "from": "Giddey up Horsey",
+     "to": "Derrick White Girl Wasted"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Derrick White Girl Wasted": -0.639,
+    "Giddey up Horsey": 0.435
+   },
+   "rated_on": "2026-11-04"
+  },
+  "81d2c045-e0d8-46be-90c2-6c945778fedf": {
+   "proposed": "2026-11-04T12:22:40.511000+00:00",
+   "proposed_by": "Derrick White Girl Wasted",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Giddey up Horsey"
+   ],
+   "moves": [
+    {
+     "player": "Kawhi Leonard",
+     "from": "Derrick White Girl Wasted",
+     "to": "Giddey up Horsey"
+    },
+    {
+     "player": "Jamal Murray",
+     "from": "Derrick White Girl Wasted",
+     "to": "Giddey up Horsey"
+    },
+    {
+     "player": "Cade Cunningham",
+     "from": "Giddey up Horsey",
+     "to": "Derrick White Girl Wasted"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Derrick White Girl Wasted": -0.868,
+    "Giddey up Horsey": 0.719
+   },
+   "rated_on": "2026-11-04"
+  },
+  "e0dd53fd-7a6a-4d83-bfc0-2e2c3f55470b": {
+   "proposed": "2026-11-04T12:22:29.976000+00:00",
+   "proposed_by": "Derrick White Girl Wasted",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Gets On Base"
+   ],
+   "moves": [
+    {
+     "player": "Paul Reed",
+     "from": "Derrick White Girl Wasted",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Ace Bailey",
+     "from": "Gets On Base",
+     "to": "Derrick White Girl Wasted"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Derrick White Girl Wasted": 0.189,
+    "Gets On Base": -0.168
+   },
+   "rated_on": "2026-11-04"
+  },
+  "fef99772-d610-4c2a-a1ad-676481876cc5": {
+   "proposed": "2026-11-04T12:17:55.905000+00:00",
+   "proposed_by": "mr charloooooo",
+   "teams": [
+    "Gets On Base",
+    "mr charloooooo"
+   ],
+   "moves": [
+    {
+     "player": "Jrue Holiday",
+     "from": "mr charloooooo",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Khaman Maluach",
+     "from": "mr charloooooo",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Jake LaRavia",
+     "from": "Gets On Base",
+     "to": "mr charloooooo"
+    },
+    {
+     "player": "Ace Bailey",
+     "from": "Gets On Base",
+     "to": "mr charloooooo"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Gets On Base": -0.128,
+    "mr charloooooo": -0.009
+   },
+   "rated_on": "2026-11-04"
+  },
+  "13672cb5-0a45-4620-8c18-8058497b7c4d": {
+   "proposed": "2026-11-04T12:17:55.905000+00:00",
+   "proposed_by": "mr charloooooo",
+   "teams": [
+    "Gets On Base",
+    "mr charloooooo"
+   ],
+   "moves": [
+    {
+     "player": "Ace Bailey",
+     "from": "Gets On Base",
+     "to": "mr charloooooo"
+    },
+    {
+     "player": "Jrue Holiday",
+     "from": "mr charloooooo",
+     "to": "Gets On Base"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Gets On Base": 0.067,
+    "mr charloooooo": -0.078
+   },
+   "rated_on": "2026-11-04"
+  },
+  "8125ae7e-0386-4f79-b8c6-7bae1ded8394": {
+   "proposed": "2026-11-04T12:01:04.098000+00:00",
+   "proposed_by": "Derrick White Girl Wasted",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Viva La Raza!"
+   ],
+   "moves": [
+    {
+     "player": "Paul Reed",
+     "from": "Derrick White Girl Wasted",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Jamal Murray",
+     "from": "Derrick White Girl Wasted",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Jaylen Brown",
+     "from": "Viva La Raza!",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Darius Garland",
+     "from": "Viva La Raza!",
+     "to": "Derrick White Girl Wasted"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Derrick White Girl Wasted": -0.176,
+    "Viva La Raza!": 0.108
+   },
+   "rated_on": "2026-11-04"
+  },
+  "237b268a-4d2c-46d3-b132-ab976dc17d2e": {
+   "proposed": "2026-11-04T12:26:26.313000+00:00",
+   "proposed_by": "Derrick White Girl Wasted",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Viva La Raza!"
+   ],
+   "moves": [
+    {
+     "player": "Jaylen Brown",
+     "from": "Viva La Raza!",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Darius Garland",
+     "from": "Viva La Raza!",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Paul Reed",
+     "from": "Derrick White Girl Wasted",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Jamal Murray",
+     "from": "Derrick White Girl Wasted",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "espn_status": "ACCEPTED",
+   "live_now": false,
+   "trade_key": "Darius Garland|Jamal Murray|Jaylen Brown|Paul Reed",
+   "rating": {
+    "Derrick White Girl Wasted": -0.166,
+    "Viva La Raza!": 0.104
+   },
+   "rated_on": "at the time (trade tracker)"
+  },
+  "5463c32e-90d7-42ec-8095-1b1ac6dd67d9": {
+   "proposed": "2026-11-04T12:17:55.905000+00:00",
+   "proposed_by": "mr charloooooo",
+   "teams": [
+    "Popoviched",
+    "mr charloooooo"
+   ],
+   "moves": [
+    {
+     "player": "Jrue Holiday",
+     "from": "mr charloooooo",
+     "to": "Popoviched"
+    },
+    {
+     "player": "Jaxson Hayes",
+     "from": "Popoviched",
+     "to": "mr charloooooo"
+    }
+   ],
+   "espn_status": "ACCEPTED",
+   "live_now": false,
+   "trade_key": "Jaxson Hayes|Jrue Holiday",
+   "rating": {
+    "Popoviched": 0.408,
+    "mr charloooooo": -0.274
+   },
+   "rated_on": "at the time (trade tracker)"
   }
  },
  "outcomes": {
@@ -3284,6 +3569,16 @@
    "outcome": "declined",
    "by": "Al-Shaida",
    "date": "2026-11-04T11:18:30.777000+00:00"
+  },
+  "237b268a-4d2c-46d3-b132-ab976dc17d2e": {
+   "outcome": "accepted",
+   "by": "Viva La Raza!",
+   "date": "2026-11-04T12:26:26.313000+00:00"
+  },
+  "5463c32e-90d7-42ec-8095-1b1ac6dd67d9": {
+   "outcome": "accepted",
+   "by": "Popoviched",
+   "date": "2026-11-04T12:17:55.905000+00:00"
   }
  },
  "synced_periods": [
@@ -3305,5 +3600,5 @@
   15,
   16
  ],
- "last_sync": "2026-11-04T11:57:00.576205+00:00"
+ "last_sync": "2026-11-04T12:44:08.039393+00:00"
 }

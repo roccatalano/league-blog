@@ -1,7 +1,45 @@
 {
- "updated_utc": "2026-11-04T11:56:59.177534+00:00",
+ "updated_utc": "2026-11-04T12:44:06.778214+00:00",
  "teams_order": "alphabetical",
  "trades": [
+  {
+   "key": "Darius Garland|Jamal Murray|Jaylen Brown|Paul Reed",
+   "accepted_utc": "2026-11-04T12:26:26.429000+00:00",
+   "status": "in league review",
+   "gets": {
+    "Derrick White Girl Wasted": [
+     "Jaylen Brown",
+     "Darius Garland"
+    ],
+    "Viva La Raza!": [
+     "Paul Reed",
+     "Jamal Murray"
+    ]
+   },
+   "at_time": {
+    "Derrick White Girl Wasted": -0.166,
+    "Viva La Raza!": 0.104
+   },
+   "post": null
+  },
+  {
+   "key": "Jaxson Hayes|Jrue Holiday",
+   "accepted_utc": "2026-11-04T12:17:55.958000+00:00",
+   "status": "in league review",
+   "gets": {
+    "Popoviched": [
+     "Jrue Holiday"
+    ],
+    "mr charloooooo": [
+     "Jaxson Hayes"
+    ]
+   },
+   "at_time": {
+    "Popoviched": 0.408,
+    "mr charloooooo": -0.274
+   },
+   "post": null
+  },
   {
    "key": "Darius Acuff Jr.|Dejounte Murray|Naz Reid",
    "accepted_utc": "2026-11-04T05:56:33.114000+00:00",

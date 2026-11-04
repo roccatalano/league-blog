@@ -116,6 +116,34 @@
    "dates": [
     "2026-11-04T05:56:33.114000+00:00"
    ]
+  },
+  "Darius Garland|Jamal Murray|Jaylen Brown|Paul Reed": {
+   "gets": {
+    "Derrick White Girl Wasted": [
+     "Jaylen Brown",
+     "Darius Garland"
+    ],
+    "Viva La Raza!": [
+     "Paul Reed",
+     "Jamal Murray"
+    ]
+   },
+   "dates": [
+    "2026-11-04T12:26:26.429000+00:00"
+   ]
+  },
+  "Jaxson Hayes|Jrue Holiday": {
+   "gets": {
+    "Popoviched": [
+     "Jrue Holiday"
+    ],
+    "mr charloooooo": [
+     "Jaxson Hayes"
+    ]
+   },
+   "dates": [
+    "2026-11-04T12:17:55.958000+00:00"
+   ]
   }
  },
  "Derik Queen|Paul Reed": {
@@ -227,6 +255,24 @@
   "at_time": {
    "Popoviched": 0.903,
    "Torta Pounders": -0.708
+  },
+  "at_time_source": "model when first seen"
+ },
+ "Darius Garland|Jamal Murray|Jaylen Brown|Paul Reed": {
+  "first_seen": "2026-11-04",
+  "history": [],
+  "at_time": {
+   "Derrick White Girl Wasted": -0.166,
+   "Viva La Raza!": 0.104
+  },
+  "at_time_source": "model when first seen"
+ },
+ "Jaxson Hayes|Jrue Holiday": {
+  "first_seen": "2026-11-04",
+  "history": [],
+  "at_time": {
+   "Popoviched": 0.408,
+   "mr charloooooo": -0.274
   },
   "at_time_source": "model when first seen"
  }

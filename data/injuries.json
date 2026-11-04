@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-03T23:50:54.422689+00:00",
+ "updated_utc": "2026-11-04T04:30:35.595060+00:00",
  "today_et": "2026-11-03",
  "players": [
   {
@@ -23,6 +23,22 @@
    }
   },
   {
+   "name": "Alpha Diallo",
+   "nba_team": "DEN",
+   "pos": "F",
+   "status": "Day-To-Day",
+   "injury": "Right Wrist",
+   "return_date": "2026-11-04",
+   "days_out": 1,
+   "games_missed": 0,
+   "timeframe": "Days",
+   "note": "Diallo (wrist) is probable for Wednesday's game against the Raptors.",
+   "note_date": "2026-11-03",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
+  },
+  {
    "name": "Anthony Gill",
    "nba_team": "WSH",
    "pos": "F",
@@ -33,6 +49,22 @@
    "games_missed": 0,
    "timeframe": "Days",
    "note": "Gill (back) is questionable for Wednesday against the Hawks.",
+   "note_date": "2026-11-03",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
+  },
+  {
+   "name": "Cameron Johnson",
+   "nba_team": "DEN",
+   "pos": "F",
+   "status": "Day-To-Day",
+   "injury": "Ankle",
+   "return_date": "2026-11-04",
+   "days_out": 1,
+   "games_missed": 0,
+   "timeframe": "Days",
+   "note": "Johnson (lower body injury management) is listed as probable for Wednesday's game against Toronto.",
    "note_date": "2026-11-03",
    "fantasy_team": null,
    "on_ir": false,
@@ -75,40 +107,44 @@
    }
   },
   {
-   "name": "Derrick Jones Jr.",
-   "nba_team": "LAC",
+   "name": "Giannis Antetokounmpo",
+   "nba_team": "MIA",
    "pos": "F",
    "status": "Day-To-Day",
-   "injury": "Right Knee",
+   "injury": "Right Wrist",
    "return_date": "2026-11-04",
    "days_out": 1,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Jones (knee) has been ruled out for Monday's game against the Raptors.",
-   "note_date": "2026-11-03",
-   "fantasy_team": "mr charloooooo",
+   "note": "Antetokounmpo is probable to play Wednesday against the Clippers due to a sprained right wrist.",
+   "note_date": "2026-11-04",
+   "fantasy_team": "Gets On Base",
    "on_ir": false,
    "per_game": {
-    "PTS": 10.2,
-    "REB": 3.8,
-    "AST": 1.2
+    "PTS": 30.9,
+    "REB": 11.7,
+    "AST": 6.1
    }
   },
   {
-   "name": "Dylan Cardwell",
-   "nba_team": "SAC",
+   "name": "Ivica Zubac",
+   "nba_team": "IND",
    "pos": "C",
    "status": "Out",
-   "injury": "Left Calf",
+   "injury": "Left Ankle",
    "return_date": "2026-11-04",
    "days_out": 1,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Cardwell (calf) has been ruled out for Monday's game against the Mavericks.",
-   "note_date": "2026-11-02",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
+   "note": "Zubac (ankle) is listed as questionable for Wednesday's game against the Grizzlies.",
+   "note_date": "2026-11-03",
+   "fantasy_team": "Giddey up Horsey",
+   "on_ir": true,
+   "per_game": {
+    "PTS": 13.9,
+    "REB": 10.9,
+    "AST": 2.1
+   }
   },
   {
    "name": "Jakob Poeltl",
@@ -212,8 +248,8 @@
    "days_out": 1,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Goodwin won't return to Monday's game against the Warriors due to a left calf injury, Duane Rankin of The Arizona Republic reports. He recorded four points (2-3 FG, 0-1 3Pt), two rebounds, two assists and one steal in 10 minutes before exiting.",
-   "note_date": "2026-11-03",
+   "note": "Goodwin (calf) is questionable for Wednesday's game against Portland, Duane Rankin of The Arizona Republic reports.",
+   "note_date": "2026-11-04",
    "fantasy_team": "Gets On Base",
    "on_ir": false,
    "per_game": {
@@ -272,7 +308,7 @@
    "days_out": 1,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Oubre (knee) has been ruled out for Monday's game against the Hawks.",
+   "note": "Oubre (knee) is questionable for Wednesday's game against the Grizzlies.",
    "note_date": "2026-11-03",
    "fantasy_team": null,
    "on_ir": false,
@@ -317,6 +353,22 @@
     "REB": 5.6,
     "AST": 0.3
    }
+  },
+  {
+   "name": "Myron Gardner",
+   "nba_team": "MIA",
+   "pos": "F",
+   "status": "Day-To-Day",
+   "injury": "Right Quadriceps",
+   "return_date": "2026-11-04",
+   "days_out": 1,
+   "games_missed": 0,
+   "timeframe": "Days",
+   "note": "Gardner (quadriceps) is listed as questionable for Wednesday's game against the Clippers.",
+   "note_date": "2026-11-04",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
   },
   {
    "name": "Nic Claxton",
@@ -379,6 +431,26 @@
    }
   },
   {
+   "name": "Precious Achiuwa",
+   "nba_team": "SAC",
+   "pos": "F",
+   "status": "Day-To-Day",
+   "injury": "Left Ankle",
+   "return_date": "2026-11-04",
+   "days_out": 1,
+   "games_missed": 0,
+   "timeframe": "Days",
+   "note": "Achiuwa (ankle) is listed as probable for Wednesday's game against the Lakers.",
+   "note_date": "2026-11-04",
+   "fantasy_team": "HE IS HIM ( G.O.A.T)",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 10.5,
+    "REB": 6.7,
+    "AST": 1.4
+   }
+  },
+  {
    "name": "Quinten Post",
    "nba_team": "MEM",
    "pos": "C",
@@ -395,24 +467,20 @@
    "per_game": null
   },
   {
-   "name": "Rui Hachimura",
-   "nba_team": "LAC",
+   "name": "Rasheer Fleming",
+   "nba_team": "PHX",
    "pos": "F",
    "status": "Day-To-Day",
-   "injury": "Left Quadriceps",
+   "injury": "Left Ankle",
    "return_date": "2026-11-04",
    "days_out": 1,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Hachimura (quadriceps) has been ruled out for Monday's game against the Raptors.",
-   "note_date": "2026-11-03",
-   "fantasy_team": "Viva La Raza!",
-   "on_ir": true,
-   "per_game": {
-    "PTS": 13.1,
-    "REB": 4.6,
-    "AST": 1.0
-   }
+   "note": "Fleming is questionable for Wednesday's game against the Trail Blazers due to a sprained left ankle, Duane Rankin of The Arizona Republic reports.",
+   "note_date": "2026-11-04",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
   },
   {
    "name": "Santi Aldama",
@@ -426,22 +494,6 @@
    "timeframe": "Days",
    "note": "Aldama (knee) is questionable for Wednesday's game against the Spurs.",
    "note_date": "2026-11-03",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
-  },
-  {
-   "name": "Spencer Jones",
-   "nba_team": "DEN",
-   "pos": "F",
-   "status": "Out",
-   "injury": "Hamstring",
-   "return_date": "2026-11-04",
-   "days_out": 1,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Jones (hamstring) is listed as out for Monday's game against the Trail Blazers.",
-   "note_date": "2026-11-01",
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
@@ -631,7 +683,7 @@
    "note": "Watson (hamstring) is out for Wednesday's game in Oklahoma City.",
    "note_date": "2026-11-03",
    "fantasy_team": "The Serbian Empire",
-   "on_ir": false,
+   "on_ir": true,
    "per_game": {
     "PTS": 13.3,
     "REB": 4.7,
@@ -843,26 +895,6 @@
    "per_game": null
   },
   {
-   "name": "Ivica Zubac",
-   "nba_team": "IND",
-   "pos": "C",
-   "status": "Out",
-   "injury": "Left Ankle",
-   "return_date": "2026-11-09",
-   "days_out": 6,
-   "games_missed": 2,
-   "timeframe": "1 week",
-   "note": "Zubac (ankle) has been ruled out for Monday's game against the Hawks.",
-   "note_date": "2026-11-02",
-   "fantasy_team": "Giddey up Horsey",
-   "on_ir": true,
-   "per_game": {
-    "PTS": 13.9,
-    "REB": 10.9,
-    "AST": 2.1
-   }
-  },
-  {
    "name": "Jalen Duren",
    "nba_team": "DET",
    "pos": "C",
@@ -1034,6 +1066,22 @@
    "timeframe": "1 week",
    "note": "Raynaud (knee) is progressing in his rehabilitation and will be re-evaluated in approximately two weeks, Brenden Nunes of KHTK Sactown Sports 1140 reports.",
    "note_date": "2026-10-26",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
+  },
+  {
+   "name": "Spencer Jones",
+   "nba_team": "DEN",
+   "pos": "F",
+   "status": "Out",
+   "injury": "Hamstring",
+   "return_date": "2026-11-11",
+   "days_out": 8,
+   "games_missed": 3,
+   "timeframe": "1-2 weeks",
+   "note": "Jones (hamstring) is out for Wednesday's game against the Raptors.",
+   "note_date": "2026-11-03",
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
@@ -1240,8 +1288,8 @@
    "days_out": 20,
    "games_missed": 9,
    "timeframe": "2-4 weeks",
-   "note": "Leonard (knee) is expected to be sidelined for at least three to four weeks, Chris Haynes of NBA TV reports.",
-   "note_date": "2026-10-29",
+   "note": "Leonard has completed treatment to reduce swelling in his left knee and he will be re-evaluated in one week, Brett Siegel of ClutchPoints.com reports.",
+   "note_date": "2026-11-04",
    "fantasy_team": "Derrick White Girl Wasted",
    "on_ir": true,
    "per_game": {

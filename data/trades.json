@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-03T23:50:47.772808+00:00",
+ "updated_utc": "2026-11-04T04:30:30.283670+00:00",
  "teams_order": "alphabetical",
  "trades": [
   {
@@ -122,14 +122,14 @@
    "now": {
     "date": "2026-11-03",
     "Viva La Raza!": 0.181,
-    "mr charloooooo": -0.176
+    "mr charloooooo": -0.177
    },
    "now_frozen": false,
    "now_history": [
     [
      "2026-11-03",
      0.181,
-     -0.176
+     -0.177
     ]
    ]
   },

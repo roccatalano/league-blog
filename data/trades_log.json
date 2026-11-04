@@ -6,6 +6,11 @@
     "2026-11-03",
     0.181,
     -0.177
+   ],
+   [
+    "2026-11-04",
+    0.142,
+    -0.174
    ]
   ],
   "at_time": {
@@ -15,9 +20,9 @@
   "post": "2026-11-03-trade",
   "at_time_source": "trade review",
   "now": {
-   "date": "2026-11-03",
-   "Viva La Raza!": 0.181,
-   "mr charloooooo": -0.177
+   "date": "2026-11-04",
+   "Viva La Raza!": 0.142,
+   "mr charloooooo": -0.174
   }
  },
  "_trades": {
@@ -94,7 +99,22 @@
     ]
    },
    "dates": [
-    "2026-11-03T09:53:38.236000+00:00"
+    "2026-11-03T09:53:38.236000+00:00",
+    "2026-11-04T09:53:00.713000+00:00"
+   ]
+  },
+  "Darius Acuff Jr.|Dejounte Murray|Naz Reid": {
+   "gets": {
+    "Torta Pounders": [
+     "Darius Acuff Jr."
+    ],
+    "Popoviched": [
+     "Dejounte Murray",
+     "Naz Reid"
+    ]
+   },
+   "dates": [
+    "2026-11-04T05:56:33.114000+00:00"
    ]
   }
  },
@@ -110,6 +130,11 @@
     "2026-11-03",
     -0.187,
     0.062
+   ],
+   [
+    "2026-11-04",
+    -0.187,
+    0.062
    ]
   ],
   "at_time": {
@@ -119,7 +144,7 @@
   "post": "2026-10-27-trade",
   "at_time_source": "trade review",
   "now": {
-   "date": "2026-11-03",
+   "date": "2026-11-04",
    "Derrick White Girl Wasted": -0.187,
    "Stairway to Devin": 0.062
   }
@@ -178,10 +203,30 @@
  },
  "Aaron Gordon|Kyle Kuzma|Moussa Diabate|Rui Hachimura": {
   "first_seen": "2026-11-03",
-  "history": [],
+  "history": [
+   [
+    "2026-11-04",
+    0.096,
+    -0.067
+   ]
+  ],
   "at_time": {
    "JAReusalem": 0.093,
    "Viva La Raza!": 0.033
+  },
+  "at_time_source": "model when first seen",
+  "now": {
+   "date": "2026-11-04",
+   "JAReusalem": 0.096,
+   "Viva La Raza!": -0.067
+  }
+ },
+ "Darius Acuff Jr.|Dejounte Murray|Naz Reid": {
+  "first_seen": "2026-11-04",
+  "history": [],
+  "at_time": {
+   "Popoviched": 0.903,
+   "Torta Pounders": -0.708
   },
   "at_time_source": "model when first seen"
  }

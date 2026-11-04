@@ -2739,6 +2739,219 @@
     "mr charloooooo": -0.208
    },
    "rated_on": "2026-11-04"
+  },
+  "6ae60702-8cec-44ac-a0c5-9e7b5f9831a9": {
+   "proposed": "2026-10-26T02:10:40.063000+00:00",
+   "proposed_by": "Derrick White Girl Wasted",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Stairway to Devin"
+   ],
+   "moves": [
+    {
+     "player": "Derik Queen",
+     "from": "Derrick White Girl Wasted",
+     "to": "Stairway to Devin"
+    },
+    {
+     "player": "Paul Reed",
+     "from": "Stairway to Devin",
+     "to": "Derrick White Girl Wasted"
+    }
+   ],
+   "espn_status": "ACCEPTED",
+   "live_now": false,
+   "trade_key": "Derik Queen|Paul Reed",
+   "rating": {
+    "Stairway to Devin": 0.341,
+    "Derrick White Girl Wasted": -0.337
+   },
+   "rated_on": "at the time (trade tracker)"
+  },
+  "cf8b268c-62fd-4ae7-afe9-3aa855333b7a": {
+   "proposed": "2026-10-27T08:45:13.915000+00:00",
+   "proposed_by": "Al-Shaida",
+   "teams": [
+    "Al-Shaida",
+    "Viva La Raza!"
+   ],
+   "moves": [
+    {
+     "player": "Fred VanVleet",
+     "from": "Viva La Raza!",
+     "to": "Al-Shaida"
+    },
+    {
+     "player": "Scottie Barnes",
+     "from": "Viva La Raza!",
+     "to": "Al-Shaida"
+    },
+    {
+     "player": "Onyeka Okongwu",
+     "from": "Al-Shaida",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Trae Young",
+     "from": "Al-Shaida",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "espn_status": "ACCEPTED",
+   "live_now": false,
+   "trade_key": "Fred VanVleet|Onyeka Okongwu|Scottie Barnes|Trae Young",
+   "rating": {
+    "Al-Shaida": 0.048,
+    "Viva La Raza!": -0.112
+   },
+   "rated_on": "at the time (trade tracker)"
+  },
+  "90f044ed-b6ad-4b4a-9645-ff3928351d52": {
+   "proposed": "2026-10-27T09:09:39.109000+00:00",
+   "proposed_by": "JAReusalem",
+   "teams": [
+    "JAReusalem",
+    "Stairway to Devin"
+   ],
+   "moves": [
+    {
+     "player": "Matas Buzelis",
+     "from": "JAReusalem",
+     "to": "Stairway to Devin"
+    },
+    {
+     "player": "Paul George",
+     "from": "JAReusalem",
+     "to": "Stairway to Devin"
+    },
+    {
+     "player": "Moussa Diabate",
+     "from": "Stairway to Devin",
+     "to": "JAReusalem"
+    },
+    {
+     "player": "Damian Lillard",
+     "from": "Stairway to Devin",
+     "to": "JAReusalem"
+    }
+   ],
+   "espn_status": "ACCEPTED",
+   "live_now": false,
+   "trade_key": "Damian Lillard|Matas Buzelis|Moussa Diabate|Paul George",
+   "rating": {
+    "Stairway to Devin": 0.286,
+    "JAReusalem": -0.22
+   },
+   "rated_on": "at the time (trade tracker)"
+  },
+  "bf426256-a0ee-40ff-9265-b422fe848bdc": {
+   "proposed": "2026-11-02T21:12:52.837000+00:00",
+   "proposed_by": "mr charloooooo",
+   "teams": [
+    "Viva La Raza!",
+    "mr charloooooo"
+   ],
+   "moves": [
+    {
+     "player": "Franz Wagner",
+     "from": "mr charloooooo",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Josh Hart",
+     "from": "mr charloooooo",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "RJ Barrett",
+     "from": "Viva La Raza!",
+     "to": "mr charloooooo"
+    },
+    {
+     "player": "Onyeka Okongwu",
+     "from": "Viva La Raza!",
+     "to": "mr charloooooo"
+    }
+   ],
+   "espn_status": "ACCEPTED",
+   "live_now": false,
+   "trade_key": "Franz Wagner|Josh Hart|Onyeka Okongwu|RJ Barrett",
+   "rating": {
+    "Viva La Raza!": 0.17,
+    "mr charloooooo": -0.183
+   },
+   "rated_on": "at the time (trade tracker)"
+  },
+  "881d44b7-aeca-4d45-9b8d-08166a1b2c6a": {
+   "proposed": "2026-11-04T05:56:33.064000+00:00",
+   "proposed_by": "Torta Pounders",
+   "teams": [
+    "Popoviched",
+    "Torta Pounders"
+   ],
+   "moves": [
+    {
+     "player": "Darius Acuff Jr.",
+     "from": "Popoviched",
+     "to": "Torta Pounders"
+    },
+    {
+     "player": "Dejounte Murray",
+     "from": "Torta Pounders",
+     "to": "Popoviched"
+    },
+    {
+     "player": "Naz Reid",
+     "from": "Torta Pounders",
+     "to": "Popoviched"
+    }
+   ],
+   "espn_status": "ACCEPTED",
+   "live_now": false,
+   "trade_key": "Darius Acuff Jr.|Dejounte Murray|Naz Reid",
+   "rating": {
+    "Popoviched": 0.903,
+    "Torta Pounders": -0.708
+   },
+   "rated_on": "at the time (trade tracker)"
+  },
+  "c9a0f364-8182-489c-838f-afb637bca8c8": {
+   "proposed": "2026-11-03T09:53:38.185000+00:00",
+   "proposed_by": "JAReusalem",
+   "teams": [
+    "JAReusalem",
+    "Viva La Raza!"
+   ],
+   "moves": [
+    {
+     "player": "Aaron Gordon",
+     "from": "Viva La Raza!",
+     "to": "JAReusalem"
+    },
+    {
+     "player": "Rui Hachimura",
+     "from": "Viva La Raza!",
+     "to": "JAReusalem"
+    },
+    {
+     "player": "Kyle Kuzma",
+     "from": "JAReusalem",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Moussa Diabate",
+     "from": "JAReusalem",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "espn_status": "ACCEPTED",
+   "live_now": false,
+   "trade_key": "Aaron Gordon|Kyle Kuzma|Moussa Diabate|Rui Hachimura",
+   "rating": {
+    "JAReusalem": 0.093,
+    "Viva La Raza!": 0.033
+   },
+   "rated_on": "at the time (trade tracker)"
   }
  },
  "outcomes": {
@@ -3092,5 +3305,5 @@
   15,
   16
  ],
- "last_sync": "2026-11-04T11:22:25.218781+00:00"
+ "last_sync": "2026-11-04T11:57:00.576205+00:00"
 }

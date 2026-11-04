@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-04T11:22:25.714749+00:00",
+ "updated_utc": "2026-11-04T11:57:00.968400+00:00",
  "offers": [
   {
    "id": "40e2b0f2-c0c7-4b77-89ef-638934fe2abb",
@@ -308,6 +308,37 @@
    "receiver_gain": -0.077
   },
   {
+   "id": "881d44b7-aeca-4d45-9b8d-08166a1b2c6a",
+   "proposed": "2026-11-04T05:56:33.064000+00:00",
+   "sender": "Torta Pounders",
+   "receiver": "Popoviched",
+   "teams": [
+    "Popoviched",
+    "Torta Pounders"
+   ],
+   "outcome": "accepted",
+   "moves": [
+    {
+     "player": "Darius Acuff Jr.",
+     "from": "Popoviched",
+     "to": "Torta Pounders"
+    },
+    {
+     "player": "Dejounte Murray",
+     "from": "Torta Pounders",
+     "to": "Popoviched"
+    },
+    {
+     "player": "Naz Reid",
+     "from": "Torta Pounders",
+     "to": "Popoviched"
+    }
+   ],
+   "sender_gain": -0.708,
+   "receiver_gain": 0.903,
+   "decided": "2026-11-04T05:56:33.064000+00:00"
+  },
+  {
    "id": "50069f98-1074-427c-b6f5-bae7899c6793",
    "proposed": "2026-11-04T02:45:15.002000+00:00",
    "sender": "Viva La Raza!",
@@ -526,6 +557,42 @@
    ],
    "sender_gain": -0.163,
    "receiver_gain": 0.188
+  },
+  {
+   "id": "c9a0f364-8182-489c-838f-afb637bca8c8",
+   "proposed": "2026-11-03T09:53:38.185000+00:00",
+   "sender": "JAReusalem",
+   "receiver": "Viva La Raza!",
+   "teams": [
+    "JAReusalem",
+    "Viva La Raza!"
+   ],
+   "outcome": "accepted",
+   "moves": [
+    {
+     "player": "Aaron Gordon",
+     "from": "Viva La Raza!",
+     "to": "JAReusalem"
+    },
+    {
+     "player": "Rui Hachimura",
+     "from": "Viva La Raza!",
+     "to": "JAReusalem"
+    },
+    {
+     "player": "Kyle Kuzma",
+     "from": "JAReusalem",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Moussa Diabate",
+     "from": "JAReusalem",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": 0.093,
+   "receiver_gain": 0.033,
+   "decided": "2026-11-03T09:53:38.185000+00:00"
   },
   {
    "id": "b28f4a97-269d-4b82-8284-87e002b5f59b",
@@ -836,6 +903,42 @@
    ],
    "sender_gain": null,
    "receiver_gain": null
+  },
+  {
+   "id": "bf426256-a0ee-40ff-9265-b422fe848bdc",
+   "proposed": "2026-11-02T21:12:52.837000+00:00",
+   "sender": "mr charloooooo",
+   "receiver": "Viva La Raza!",
+   "teams": [
+    "Viva La Raza!",
+    "mr charloooooo"
+   ],
+   "outcome": "accepted",
+   "moves": [
+    {
+     "player": "Franz Wagner",
+     "from": "mr charloooooo",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Josh Hart",
+     "from": "mr charloooooo",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "RJ Barrett",
+     "from": "Viva La Raza!",
+     "to": "mr charloooooo"
+    },
+    {
+     "player": "Onyeka Okongwu",
+     "from": "Viva La Raza!",
+     "to": "mr charloooooo"
+    }
+   ],
+   "sender_gain": -0.183,
+   "receiver_gain": 0.17,
+   "decided": "2026-11-02T21:12:52.837000+00:00"
   },
   {
    "id": "e691da27-a434-4498-9b2b-f60158fcfb8b",
@@ -1588,6 +1691,78 @@
    "receiver_gain": 0.337
   },
   {
+   "id": "90f044ed-b6ad-4b4a-9645-ff3928351d52",
+   "proposed": "2026-10-27T09:09:39.109000+00:00",
+   "sender": "JAReusalem",
+   "receiver": "Stairway to Devin",
+   "teams": [
+    "JAReusalem",
+    "Stairway to Devin"
+   ],
+   "outcome": "accepted",
+   "moves": [
+    {
+     "player": "Matas Buzelis",
+     "from": "JAReusalem",
+     "to": "Stairway to Devin"
+    },
+    {
+     "player": "Paul George",
+     "from": "JAReusalem",
+     "to": "Stairway to Devin"
+    },
+    {
+     "player": "Moussa Diabate",
+     "from": "Stairway to Devin",
+     "to": "JAReusalem"
+    },
+    {
+     "player": "Damian Lillard",
+     "from": "Stairway to Devin",
+     "to": "JAReusalem"
+    }
+   ],
+   "sender_gain": -0.22,
+   "receiver_gain": 0.286,
+   "decided": "2026-10-27T09:09:39.109000+00:00"
+  },
+  {
+   "id": "cf8b268c-62fd-4ae7-afe9-3aa855333b7a",
+   "proposed": "2026-10-27T08:45:13.915000+00:00",
+   "sender": "Al-Shaida",
+   "receiver": "Viva La Raza!",
+   "teams": [
+    "Al-Shaida",
+    "Viva La Raza!"
+   ],
+   "outcome": "accepted",
+   "moves": [
+    {
+     "player": "Fred VanVleet",
+     "from": "Viva La Raza!",
+     "to": "Al-Shaida"
+    },
+    {
+     "player": "Scottie Barnes",
+     "from": "Viva La Raza!",
+     "to": "Al-Shaida"
+    },
+    {
+     "player": "Onyeka Okongwu",
+     "from": "Al-Shaida",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Trae Young",
+     "from": "Al-Shaida",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": 0.048,
+   "receiver_gain": -0.112,
+   "decided": "2026-10-27T08:45:13.915000+00:00"
+  },
+  {
    "id": "b042e47c-e624-4c2d-910d-4d1bf1ce0468",
    "proposed": "2026-10-26T21:23:33.203000+00:00",
    "sender": "Viva La Raza!",
@@ -1741,6 +1916,32 @@
    ],
    "sender_gain": 0.161,
    "receiver_gain": -0.202
+  },
+  {
+   "id": "6ae60702-8cec-44ac-a0c5-9e7b5f9831a9",
+   "proposed": "2026-10-26T02:10:40.063000+00:00",
+   "sender": "Derrick White Girl Wasted",
+   "receiver": "Stairway to Devin",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Stairway to Devin"
+   ],
+   "outcome": "accepted",
+   "moves": [
+    {
+     "player": "Derik Queen",
+     "from": "Derrick White Girl Wasted",
+     "to": "Stairway to Devin"
+    },
+    {
+     "player": "Paul Reed",
+     "from": "Stairway to Devin",
+     "to": "Derrick White Girl Wasted"
+    }
+   ],
+   "sender_gain": -0.337,
+   "receiver_gain": 0.341,
+   "decided": "2026-10-26T02:10:40.063000+00:00"
   },
   {
    "id": "75c6054e-ec39-416a-9de9-9ce4b9d606f3",
@@ -2761,77 +2962,130 @@
  ],
  "teams": [
   {
-   "team": "JAReusalem",
-   "sent": 4,
-   "received": 10,
-   "rated_sent": 1,
-   "sent_accepted": 0,
+   "team": "Torta Pounders",
+   "sent": 2,
+   "received": 14,
+   "rated_sent": 2,
+   "sent_accepted": 1,
    "sent_declined": 0,
-   "generosity": 0.188,
-   "self_gain": -0.163,
+   "generosity": 0.477,
+   "self_gain": -0.354,
    "best_sent": {
-    "id": "cf48a21a-977c-4176-8cfe-a2729e5e1592",
-    "receiver": "HE IS HIM ( G.O.A.T)",
-    "receiver_gain": 0.188,
-    "sender_gain": -0.163,
+    "id": "881d44b7-aeca-4d45-9b8d-08166a1b2c6a",
+    "receiver": "Popoviched",
+    "receiver_gain": 0.903,
+    "sender_gain": -0.708,
     "moves": [
      {
-      "player": "Devin Vassell",
-      "from": "JAReusalem",
-      "to": "HE IS HIM ( G.O.A.T)"
+      "player": "Darius Acuff Jr.",
+      "from": "Popoviched",
+      "to": "Torta Pounders"
      },
      {
-      "player": "CJ McCollum",
-      "from": "JAReusalem",
-      "to": "HE IS HIM ( G.O.A.T)"
+      "player": "Dejounte Murray",
+      "from": "Torta Pounders",
+      "to": "Popoviched"
      },
      {
-      "player": "Tari Eason",
-      "from": "HE IS HIM ( G.O.A.T)",
-      "to": "JAReusalem"
-     },
-     {
-      "player": "Davion Mitchell",
-      "from": "HE IS HIM ( G.O.A.T)",
-      "to": "JAReusalem"
+      "player": "Naz Reid",
+      "from": "Torta Pounders",
+      "to": "Popoviched"
      }
     ],
-    "outcome": "cancelled/expired"
+    "outcome": "accepted"
    },
    "worst_sent": {
-    "id": "cf48a21a-977c-4176-8cfe-a2729e5e1592",
-    "receiver": "HE IS HIM ( G.O.A.T)",
-    "receiver_gain": 0.188,
-    "sender_gain": -0.163,
+    "id": "38f05af9-1878-423c-9fae-fafdd4567e32",
+    "receiver": "Stairway to Devin",
+    "receiver_gain": 0.05,
+    "sender_gain": -0.001,
     "moves": [
      {
-      "player": "Devin Vassell",
-      "from": "JAReusalem",
-      "to": "HE IS HIM ( G.O.A.T)"
+      "player": "Naz Reid",
+      "from": "Torta Pounders",
+      "to": "Stairway to Devin"
      },
      {
-      "player": "CJ McCollum",
-      "from": "JAReusalem",
-      "to": "HE IS HIM ( G.O.A.T)"
-     },
-     {
-      "player": "Tari Eason",
-      "from": "HE IS HIM ( G.O.A.T)",
-      "to": "JAReusalem"
-     },
-     {
-      "player": "Davion Mitchell",
-      "from": "HE IS HIM ( G.O.A.T)",
-      "to": "JAReusalem"
+      "player": "Yaxel Lendeborg",
+      "from": "Stairway to Devin",
+      "to": "Torta Pounders"
      }
     ],
     "outcome": "cancelled/expired"
    }
   },
   {
+   "team": "JAReusalem",
+   "sent": 6,
+   "received": 10,
+   "rated_sent": 3,
+   "sent_accepted": 2,
+   "sent_declined": 0,
+   "generosity": 0.169,
+   "self_gain": -0.097,
+   "best_sent": {
+    "id": "90f044ed-b6ad-4b4a-9645-ff3928351d52",
+    "receiver": "Stairway to Devin",
+    "receiver_gain": 0.286,
+    "sender_gain": -0.22,
+    "moves": [
+     {
+      "player": "Matas Buzelis",
+      "from": "JAReusalem",
+      "to": "Stairway to Devin"
+     },
+     {
+      "player": "Paul George",
+      "from": "JAReusalem",
+      "to": "Stairway to Devin"
+     },
+     {
+      "player": "Moussa Diabate",
+      "from": "Stairway to Devin",
+      "to": "JAReusalem"
+     },
+     {
+      "player": "Damian Lillard",
+      "from": "Stairway to Devin",
+      "to": "JAReusalem"
+     }
+    ],
+    "outcome": "accepted"
+   },
+   "worst_sent": {
+    "id": "c9a0f364-8182-489c-838f-afb637bca8c8",
+    "receiver": "Viva La Raza!",
+    "receiver_gain": 0.033,
+    "sender_gain": 0.093,
+    "moves": [
+     {
+      "player": "Aaron Gordon",
+      "from": "Viva La Raza!",
+      "to": "JAReusalem"
+     },
+     {
+      "player": "Rui Hachimura",
+      "from": "Viva La Raza!",
+      "to": "JAReusalem"
+     },
+     {
+      "player": "Kyle Kuzma",
+      "from": "JAReusalem",
+      "to": "Viva La Raza!"
+     },
+     {
+      "player": "Moussa Diabate",
+      "from": "JAReusalem",
+      "to": "Viva La Raza!"
+     }
+    ],
+    "outcome": "accepted"
+   }
+  },
+  {
    "team": "Stairway to Devin",
    "sent": 1,
-   "received": 3,
+   "received": 5,
    "rated_sent": 1,
    "sent_accepted": 0,
    "sent_declined": 0,
@@ -2877,57 +3131,115 @@
    }
   },
   {
-   "team": "Torta Pounders",
-   "sent": 1,
-   "received": 14,
-   "rated_sent": 1,
-   "sent_accepted": 0,
+   "team": "mr charloooooo",
+   "sent": 7,
+   "received": 3,
+   "rated_sent": 6,
+   "sent_accepted": 1,
    "sent_declined": 0,
-   "generosity": 0.05,
-   "self_gain": -0.001,
+   "generosity": 0.018,
+   "self_gain": -0.036,
    "best_sent": {
-    "id": "38f05af9-1878-423c-9fae-fafdd4567e32",
-    "receiver": "Stairway to Devin",
-    "receiver_gain": 0.05,
-    "sender_gain": -0.001,
+    "id": "bf426256-a0ee-40ff-9265-b422fe848bdc",
+    "receiver": "Viva La Raza!",
+    "receiver_gain": 0.17,
+    "sender_gain": -0.183,
     "moves": [
      {
-      "player": "Naz Reid",
-      "from": "Torta Pounders",
-      "to": "Stairway to Devin"
+      "player": "Franz Wagner",
+      "from": "mr charloooooo",
+      "to": "Viva La Raza!"
      },
      {
-      "player": "Yaxel Lendeborg",
-      "from": "Stairway to Devin",
-      "to": "Torta Pounders"
+      "player": "Josh Hart",
+      "from": "mr charloooooo",
+      "to": "Viva La Raza!"
+     },
+     {
+      "player": "RJ Barrett",
+      "from": "Viva La Raza!",
+      "to": "mr charloooooo"
+     },
+     {
+      "player": "Onyeka Okongwu",
+      "from": "Viva La Raza!",
+      "to": "mr charloooooo"
      }
     ],
-    "outcome": "cancelled/expired"
+    "outcome": "accepted"
    },
    "worst_sent": {
-    "id": "38f05af9-1878-423c-9fae-fafdd4567e32",
-    "receiver": "Stairway to Devin",
-    "receiver_gain": 0.05,
-    "sender_gain": -0.001,
+    "id": "aec9c50d-58b1-45b4-8085-f5cc995245ea",
+    "receiver": "The haliban",
+    "receiver_gain": -0.133,
+    "sender_gain": 0.207,
     "moves": [
      {
-      "player": "Naz Reid",
-      "from": "Torta Pounders",
-      "to": "Stairway to Devin"
+      "player": "Derrick White",
+      "from": "The haliban",
+      "to": "mr charloooooo"
      },
      {
-      "player": "Yaxel Lendeborg",
-      "from": "Stairway to Devin",
-      "to": "Torta Pounders"
+      "player": "Zach LaVine",
+      "from": "mr charloooooo",
+      "to": "The haliban"
      }
     ],
     "outcome": "cancelled/expired"
    }
   },
   {
+   "team": "Derrick White Girl Wasted",
+   "sent": 9,
+   "received": 4,
+   "rated_sent": 3,
+   "sent_accepted": 1,
+   "sent_declined": 0,
+   "generosity": 0.017,
+   "self_gain": 0.012,
+   "best_sent": {
+    "id": "6ae60702-8cec-44ac-a0c5-9e7b5f9831a9",
+    "receiver": "Stairway to Devin",
+    "receiver_gain": 0.341,
+    "sender_gain": -0.337,
+    "moves": [
+     {
+      "player": "Derik Queen",
+      "from": "Derrick White Girl Wasted",
+      "to": "Stairway to Devin"
+     },
+     {
+      "player": "Paul Reed",
+      "from": "Stairway to Devin",
+      "to": "Derrick White Girl Wasted"
+     }
+    ],
+    "outcome": "accepted"
+   },
+   "worst_sent": {
+    "id": "938049f8-9a68-4211-a92f-5933d6938f6e",
+    "receiver": "Gets On Base",
+    "receiver_gain": -0.168,
+    "sender_gain": 0.189,
+    "moves": [
+     {
+      "player": "Paul Reed",
+      "from": "Derrick White Girl Wasted",
+      "to": "Gets On Base"
+     },
+     {
+      "player": "Ace Bailey",
+      "from": "Gets On Base",
+      "to": "Derrick White Girl Wasted"
+     }
+    ],
+    "outcome": "pending"
+   }
+  },
+  {
    "team": "Popoviched",
    "sent": 15,
-   "received": 2,
+   "received": 3,
    "rated_sent": 8,
    "sent_accepted": 0,
    "sent_declined": 0,
@@ -3031,105 +3343,77 @@
    }
   },
   {
-   "team": "mr charloooooo",
-   "sent": 6,
-   "received": 3,
-   "rated_sent": 5,
-   "sent_accepted": 0,
+   "team": "Al-Shaida",
+   "sent": 1,
+   "received": 10,
+   "rated_sent": 1,
+   "sent_accepted": 1,
    "sent_declined": 0,
-   "generosity": -0.012,
-   "self_gain": -0.007,
+   "generosity": -0.112,
+   "self_gain": 0.048,
    "best_sent": {
-    "id": "e9c4f67c-18c7-4941-9c35-6e390186a5e4",
-    "receiver": "Gets On Base",
-    "receiver_gain": 0.067,
-    "sender_gain": -0.078,
+    "id": "cf8b268c-62fd-4ae7-afe9-3aa855333b7a",
+    "receiver": "Viva La Raza!",
+    "receiver_gain": -0.112,
+    "sender_gain": 0.048,
     "moves": [
      {
-      "player": "Ace Bailey",
-      "from": "Gets On Base",
-      "to": "mr charloooooo"
+      "player": "Fred VanVleet",
+      "from": "Viva La Raza!",
+      "to": "Al-Shaida"
      },
      {
-      "player": "Jrue Holiday",
-      "from": "mr charloooooo",
-      "to": "Gets On Base"
+      "player": "Scottie Barnes",
+      "from": "Viva La Raza!",
+      "to": "Al-Shaida"
+     },
+     {
+      "player": "Onyeka Okongwu",
+      "from": "Al-Shaida",
+      "to": "Viva La Raza!"
+     },
+     {
+      "player": "Trae Young",
+      "from": "Al-Shaida",
+      "to": "Viva La Raza!"
      }
     ],
-    "outcome": "pending"
+    "outcome": "accepted"
    },
    "worst_sent": {
-    "id": "aec9c50d-58b1-45b4-8085-f5cc995245ea",
-    "receiver": "The haliban",
-    "receiver_gain": -0.133,
-    "sender_gain": 0.207,
+    "id": "cf8b268c-62fd-4ae7-afe9-3aa855333b7a",
+    "receiver": "Viva La Raza!",
+    "receiver_gain": -0.112,
+    "sender_gain": 0.048,
     "moves": [
      {
-      "player": "Derrick White",
-      "from": "The haliban",
-      "to": "mr charloooooo"
+      "player": "Fred VanVleet",
+      "from": "Viva La Raza!",
+      "to": "Al-Shaida"
      },
      {
-      "player": "Zach LaVine",
-      "from": "mr charloooooo",
-      "to": "The haliban"
-     }
-    ],
-    "outcome": "cancelled/expired"
-   }
-  },
-  {
-   "team": "Derrick White Girl Wasted",
-   "sent": 8,
-   "received": 4,
-   "rated_sent": 2,
-   "sent_accepted": 0,
-   "sent_declined": 0,
-   "generosity": -0.146,
-   "self_gain": 0.186,
-   "best_sent": {
-    "id": "1506c945-af9d-4fe2-91d8-7edd961c948f",
-    "receiver": "JAReusalem",
-    "receiver_gain": -0.123,
-    "sender_gain": 0.183,
-    "moves": [
-     {
-      "player": "Paul Reed",
-      "from": "Derrick White Girl Wasted",
-      "to": "JAReusalem"
+      "player": "Scottie Barnes",
+      "from": "Viva La Raza!",
+      "to": "Al-Shaida"
      },
      {
-      "player": "CJ McCollum",
-      "from": "JAReusalem",
-      "to": "Derrick White Girl Wasted"
-     }
-    ],
-    "outcome": "cancelled/expired"
-   },
-   "worst_sent": {
-    "id": "938049f8-9a68-4211-a92f-5933d6938f6e",
-    "receiver": "Gets On Base",
-    "receiver_gain": -0.168,
-    "sender_gain": 0.189,
-    "moves": [
-     {
-      "player": "Paul Reed",
-      "from": "Derrick White Girl Wasted",
-      "to": "Gets On Base"
+      "player": "Onyeka Okongwu",
+      "from": "Al-Shaida",
+      "to": "Viva La Raza!"
      },
      {
-      "player": "Ace Bailey",
-      "from": "Gets On Base",
-      "to": "Derrick White Girl Wasted"
+      "player": "Trae Young",
+      "from": "Al-Shaida",
+      "to": "Viva La Raza!"
      }
     ],
-    "outcome": "pending"
+    "outcome": "accepted"
    }
   },
   {
    "team": "Viva La Raza!",
    "sent": 28,
-   "received": 2,
+   "received": 5,
    "rated_sent": 10,
    "sent_accepted": 0,
    "sent_declined": 0,
@@ -3173,18 +3457,6 @@
     ],
     "outcome": "cancelled/expired"
    }
-  },
-  {
-   "team": "Al-Shaida",
-   "sent": 0,
-   "received": 10,
-   "rated_sent": 0,
-   "sent_accepted": 0,
-   "sent_declined": 0,
-   "generosity": null,
-   "self_gain": null,
-   "best_sent": null,
-   "worst_sent": null
   },
   {
    "team": "The Serbian Empire",
@@ -3247,5 +3519,5 @@
    "worst_sent": null
   }
  ],
- "lost_before_logging": 59
+ "lost_before_logging": 53
 }

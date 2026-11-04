@@ -28,6 +28,35 @@ OUT = os.path.join(ROOT, "data", "offers.json")
 RATE_WINDOW_DAYS = 3  # try to rate an offer for this long after it was made
 
 
+def backfill_accepted(log):
+    """Accepted offers decided before logging began have no players in ESPN's data any more.
+    Rebuild them from the trade tracker (data/trades.json): the team that accepted is the receiver."""
+    try:
+        with open(os.path.join(ROOT, "data", "trades.json")) as f:
+            trades = json.load(f)["trades"]
+    except Exception:
+        return
+    ts = lambda iso: datetime.fromisoformat(iso).timestamp()
+    for oid, oc in log["outcomes"].items():
+        if oc["outcome"] != "accepted" or oid in log["offers"]:
+            continue
+        cands = [t for t in trades if oc["by"] in t["gets"] and len(t["gets"]) == 2]
+        cands.sort(key=lambda t: abs(ts(t["accepted_utc"]) - ts(oc["date"])))
+        if not cands or abs(ts(cands[0]["accepted_utc"]) - ts(oc["date"])) > 1.2 * 86400:
+            continue
+        t = cands[0]
+        if any(o.get("trade_key") == t["key"] for o in log["offers"].values()):
+            continue
+        recv = oc["by"]
+        sender = next(n for n in t["gets"] if n != recv)
+        log["offers"][oid] = {
+            "proposed": oc["date"], "proposed_by": sender, "teams": sorted(t["gets"]),
+            "moves": [{"player": p, "from": o, "to": n} for n in t["gets"] for o in t["gets"] if o != n for p in t["gets"][n]],
+            "espn_status": "ACCEPTED", "live_now": False, "trade_key": t["key"],
+            "rating": t.get("at_time"), "rated_on": "at the time (trade tracker)",
+        }
+
+
 def main():
     log = S._sync_trade_log()
     d = S._get(["mRoster", "mTeam", "mMatchup", "mSettings", "mStatus"])
@@ -67,6 +96,7 @@ def main():
 
     now = datetime.now(timezone.utc)
     today = str(now.date())
+    backfill_accepted(log)
     for oid, o in log["offers"].items():
         if "rating" in o:
             continue

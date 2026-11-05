@@ -9,8 +9,8 @@
    ],
    [
     "2026-11-04",
-    0.136,
-    -0.167
+    0.125,
+    -0.172
    ]
   ],
   "at_time": {
@@ -21,8 +21,8 @@
   "at_time_source": "trade review",
   "now": {
    "date": "2026-11-04",
-   "Viva La Raza!": 0.136,
-   "mr charloooooo": -0.167
+   "Viva La Raza!": 0.125,
+   "mr charloooooo": -0.172
   }
  },
  "_trades": {
@@ -161,8 +161,8 @@
    ],
    [
     "2026-11-04",
-    -0.187,
-    0.061
+    -0.224,
+    0.032
    ]
   ],
   "at_time": {
@@ -173,8 +173,8 @@
   "at_time_source": "trade review",
   "now": {
    "date": "2026-11-04",
-   "Derrick White Girl Wasted": -0.187,
-   "Stairway to Devin": 0.061
+   "Derrick White Girl Wasted": -0.224,
+   "Stairway to Devin": 0.032
   }
  },
  "Damian Lillard|Matas Buzelis|Moussa Diabate|Paul George": {
@@ -234,8 +234,8 @@
   "history": [
    [
     "2026-11-04",
-    0.096,
-    -0.067
+    0.179,
+    -0.04
    ]
   ],
   "at_time": {
@@ -245,8 +245,8 @@
   "at_time_source": "model when first seen",
   "now": {
    "date": "2026-11-04",
-   "JAReusalem": 0.096,
-   "Viva La Raza!": -0.067
+   "JAReusalem": 0.179,
+   "Viva La Raza!": -0.04
   }
  },
  "Darius Acuff Jr.|Dejounte Murray|Naz Reid": {

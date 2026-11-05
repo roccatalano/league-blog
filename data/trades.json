@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-05T00:58:16.457589+00:00",
+ "updated_utc": "2026-11-05T07:46:56.787171+00:00",
  "teams_order": "alphabetical",
  "trades": [
   {
@@ -43,7 +43,7 @@
   {
    "key": "Darius Acuff Jr.|Dejounte Murray|Naz Reid",
    "accepted_utc": "2026-11-04T05:56:33.114000+00:00",
-   "status": "in league review",
+   "status": "processed",
    "gets": {
     "Torta Pounders": [
      "Darius Acuff Jr."
@@ -57,7 +57,88 @@
     "Popoviched": 0.903,
     "Torta Pounders": -0.708
    },
-   "post": null
+   "post": null,
+   "so_far": {
+    "from": "2026-11-06",
+    "days": 0,
+    "score": [
+     0,
+     0,
+     9
+    ],
+    "cats": [
+     {
+      "cat": "PTS",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "REB",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "AST",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "STL",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "BLK",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "3PM",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "TO",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "FG%",
+      "got": null,
+      "gave": null,
+      "res": 0
+     },
+     {
+      "cat": "FT%",
+      "got": null,
+      "gave": null,
+      "res": 0
+     }
+    ],
+    "games": {
+     "Popoviched": 0,
+     "Torta Pounders": 0
+    },
+    "series": [],
+    "wins_added": {
+     "Popoviched": 0.0,
+     "Torta Pounders": 0.0
+    },
+    "grade": {
+     "Popoviched": "Too early",
+     "Torta Pounders": "Too early"
+    }
+   },
+   "now": null,
+   "now_frozen": true,
+   "now_history": []
   },
   {
    "key": "Aaron Gordon|Kyle Kuzma|Moussa Diabate|Rui Hachimura",
@@ -157,9 +238,9 @@
     }
    },
    "now": {
-    "date": "2026-11-04",
-    "JAReusalem": 0.179,
-    "Viva La Raza!": -0.04
+    "date": "2026-11-05",
+    "JAReusalem": 0.201,
+    "Viva La Raza!": -0.164
    },
    "now_frozen": false,
    "now_history": [
@@ -167,6 +248,11 @@
      "2026-11-04",
      0.179,
      -0.04
+    ],
+    [
+     "2026-11-05",
+     0.201,
+     -0.164
     ]
    ]
   },
@@ -268,9 +354,9 @@
     }
    },
    "now": {
-    "date": "2026-11-04",
-    "Viva La Raza!": 0.125,
-    "mr charloooooo": -0.172
+    "date": "2026-11-05",
+    "Viva La Raza!": 0.116,
+    "mr charloooooo": -0.143
    },
    "now_frozen": false,
    "now_history": [
@@ -283,6 +369,11 @@
      "2026-11-04",
      0.125,
      -0.172
+    ],
+    [
+     "2026-11-05",
+     0.116,
+     -0.143
     ]
    ]
   },
@@ -401,19 +492,19 @@
      [
       "2026-11-02",
       1,
-      0.039,
-      -0.042
+      0.038,
+      -0.041
      ],
      [
       "2026-11-03",
       1,
-      0.04,
-      -0.043
+      0.039,
+      -0.042
      ]
     ],
     "wins_added": {
-     "JAReusalem": 0.04,
-     "Stairway to Devin": -0.043
+     "JAReusalem": 0.039,
+     "Stairway to Devin": -0.042
     },
     "grade": {
      "JAReusalem": "Too early",
@@ -530,43 +621,43 @@
      [
       "2026-10-29",
       -5,
-      -0.022,
-      0.025
+      -0.023,
+      0.023
      ],
      [
       "2026-10-30",
       -4,
-      -0.021,
-      0.022
+      -0.022,
+      0.021
      ],
      [
       "2026-10-31",
       -3,
-      -0.03,
-      0.03
+      -0.031,
+      0.029
      ],
      [
       "2026-11-01",
       -1,
       -0.019,
-      0.022
+      0.021
      ],
      [
       "2026-11-02",
       -1,
       -0.016,
-      0.02
+      0.017
      ],
      [
       "2026-11-03",
       -1,
-      -0.017,
-      0.02
+      -0.016,
+      0.018
      ]
     ],
     "wins_added": {
-     "Al-Shaida": -0.017,
-     "Viva La Raza!": 0.02
+     "Al-Shaida": -0.016,
+     "Viva La Raza!": 0.018
     },
     "grade": {
      "Al-Shaida": "Too early",
@@ -688,48 +779,48 @@
       "2026-10-28",
       8,
       0.046,
-      -0.039
+      -0.038
      ],
      [
       "2026-10-29",
       5,
-      0.049,
-      -0.041
+      0.048,
+      -0.04
      ],
      [
       "2026-10-30",
       8,
-      0.059,
-      -0.051
+      0.058,
+      -0.05
      ],
      [
       "2026-10-31",
       5,
       0.047,
-      -0.04
+      -0.039
      ],
      [
       "2026-11-01",
       5,
-      0.048,
-      -0.041
+      0.047,
+      -0.04
      ],
      [
       "2026-11-02",
       4,
-      0.044,
-      -0.037
+      0.043,
+      -0.035
      ],
      [
       "2026-11-03",
       4,
-      0.044,
-      -0.037
+      0.043,
+      -0.036
      ]
     ],
     "wins_added": {
-     "Derrick White Girl Wasted": 0.044,
-     "Stairway to Devin": -0.037
+     "Derrick White Girl Wasted": 0.043,
+     "Stairway to Devin": -0.036
     },
     "grade": {
      "Derrick White Girl Wasted": "Too early",
@@ -737,9 +828,9 @@
     }
    },
    "now": {
-    "date": "2026-11-04",
-    "Derrick White Girl Wasted": -0.224,
-    "Stairway to Devin": 0.032
+    "date": "2026-11-05",
+    "Derrick White Girl Wasted": -0.209,
+    "Stairway to Devin": 0.067
    },
    "now_frozen": false,
    "now_history": [
@@ -757,6 +848,11 @@
      "2026-11-04",
      -0.224,
      0.032
+    ],
+    [
+     "2026-11-05",
+     -0.209,
+     0.067
     ]
    ]
   }

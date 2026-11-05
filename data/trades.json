@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-05T16:00:13.919487+00:00",
+ "updated_utc": "2026-11-05T21:54:24.331146+00:00",
  "teams_order": "alphabetical",
  "trades": [
   {
@@ -101,14 +101,14 @@
    },
    "now": {
     "date": "2026-11-05",
-    "Derrick White Girl Wasted": -0.085,
+    "Derrick White Girl Wasted": -0.084,
     "Viva La Raza!": 0.056
    },
    "now_frozen": false,
    "now_history": [
     [
      "2026-11-05",
-     -0.085,
+     -0.084,
      0.056
     ]
    ]

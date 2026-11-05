@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-05T16:00:22.063387+00:00",
+ "updated_utc": "2026-11-05T21:54:32.753857+00:00",
  "today_et": "2026-11-05",
  "players": [
   {
@@ -21,42 +21,6 @@
     "REB": 8.0,
     "AST": 2.4
    }
-  },
-  {
-   "name": "Jordan Goodwin",
-   "nba_team": "PHX",
-   "pos": "G",
-   "status": "Day-To-Day",
-   "injury": "Left Calf",
-   "return_date": "2026-11-05",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Goodwin (calf) won't play in Wednesday's game against Portland.",
-   "note_date": "2026-11-05",
-   "fantasy_team": "Gets On Base",
-   "on_ir": false,
-   "per_game": {
-    "PTS": 8.5,
-    "REB": 4.5,
-    "AST": 2.3
-   }
-  },
-  {
-   "name": "Rasheer Fleming",
-   "nba_team": "PHX",
-   "pos": "F",
-   "status": "Day-To-Day",
-   "injury": "Left Ankle",
-   "return_date": "2026-11-05",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Fleming is out for Wednesday's game against the Trail Blazers due to a sprained left ankle.",
-   "note_date": "2026-11-05",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
   },
   {
    "name": "Adem Bona",
@@ -84,8 +48,8 @@
    "days_out": 1,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "The Lakers assigned Thiero (knee) to the G League's Coachella Valley Lakers on Wednesday, per Khobi Price of The California Post.",
-   "note_date": "2026-11-04",
+   "note": "The Lakers recalled Thiero (knee) from the G League's Coachella Valley Lakers on Thursday, per Ryan Ward of SI.com.",
+   "note_date": "2026-11-05",
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
@@ -215,26 +179,6 @@
    "per_game": null
   },
   {
-   "name": "Jayson Tatum",
-   "nba_team": "BOS",
-   "pos": "F",
-   "status": "Day-To-Day",
-   "injury": "Rest",
-   "return_date": "2026-11-06",
-   "days_out": 1,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Tatum will be rested Wednesday against the Bucks, Jack Simone of BostonSportsJournal.com reports.",
-   "note_date": "2026-11-05",
-   "fantasy_team": "Stairway to Devin",
-   "on_ir": false,
-   "per_game": {
-    "PTS": 26.8,
-    "REB": 7.8,
-    "AST": 6.5
-   }
-  },
-  {
    "name": "Jock Landale",
    "nba_team": "ATL",
    "pos": "C",
@@ -270,7 +214,7 @@
    "name": "Kon Knueppel",
    "nba_team": "CHA",
    "pos": "G",
-   "status": "Out",
+   "status": "Day-To-Day",
    "injury": "Left Leg",
    "return_date": "2026-11-06",
    "days_out": 1,
@@ -312,7 +256,7 @@
    "days_out": 1,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Pritchard exited Wednesday's 109-102 win over the Bucks and did not return due to a right eye abrasion, finishing with 10 points (4-7 FG, 2-2 FT), five assists and one rebound across 18 minutes.",
+   "note": "Pritchard (eye) is questionable for Friday against Charlotte, Taylor Snow of the Celtics' official site reports.",
    "note_date": "2026-11-05",
    "fantasy_team": "Popoviched",
    "on_ir": false,
@@ -436,7 +380,7 @@
    "days_out": 1,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Murphy (knees) is listed as out for Wednesday's game against Utah.",
+   "note": "Murphy (knee) is probable for Friday's game against Minnesota.",
    "note_date": "2026-11-05",
    "fantasy_team": "HE IS HIM ( G.O.A.T)",
    "on_ir": false,
@@ -531,6 +475,26 @@
    "per_game": null
   },
   {
+   "name": "Jordan Goodwin",
+   "nba_team": "PHX",
+   "pos": "G",
+   "status": "Out",
+   "injury": "Left Calf",
+   "return_date": "2026-11-07",
+   "days_out": 2,
+   "games_missed": 1,
+   "timeframe": "Days",
+   "note": "Goodwin (calf) is out for Thursday's game against Orlando.",
+   "note_date": "2026-11-05",
+   "fantasy_team": "Gets On Base",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 8.5,
+    "REB": 4.5,
+    "AST": 2.3
+   }
+  },
+  {
    "name": "Josh Hart",
    "nba_team": "NY",
    "pos": "G",
@@ -577,6 +541,22 @@
    "games_missed": 0,
    "timeframe": "Days",
    "note": "Clowney (knee) supplied seven points (3-6 FG, 1-4 3Pt), one rebound and one assist over 17 minutes during Wednesday's 114-104 victory over the Hornets.",
+   "note_date": "2026-11-05",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
+  },
+  {
+   "name": "Rasheer Fleming",
+   "nba_team": "PHX",
+   "pos": "F",
+   "status": "Out",
+   "injury": "Left Ankle",
+   "return_date": "2026-11-07",
+   "days_out": 2,
+   "games_missed": 1,
+   "timeframe": "Days",
+   "note": "Fleming is out for Thursday's game against the Magic due to a sprained left ankle.",
    "note_date": "2026-11-05",
    "fantasy_team": null,
    "on_ir": false,
@@ -664,8 +644,8 @@
    "days_out": 3,
    "games_missed": 0,
    "timeframe": "1 week",
-   "note": "Claxton (hamstring) is listed as out for Wednesday's game against New York.",
-   "note_date": "2026-11-04",
+   "note": "The Bulls assigned Claxton (hamstring) to the G League's Windy City Bulls on Thursday.",
+   "note_date": "2026-11-05",
    "fantasy_team": "Stairway to Devin",
    "on_ir": false,
    "per_game": {
@@ -700,8 +680,8 @@
    "days_out": 3,
    "games_missed": 1,
    "timeframe": "1 week",
-   "note": "Missi (knee) won't play in Saturday's game against Atlanta.",
-   "note_date": "2026-10-30",
+   "note": "Missi (knee) is out for Friday's game against Minnesota.",
+   "note_date": "2026-11-05",
    "fantasy_team": "The Real OG",
    "on_ir": true,
    "per_game": {

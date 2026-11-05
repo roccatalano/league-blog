@@ -1946,7 +1946,8 @@
     }
    ],
    "espn_status": "CANCELED",
-   "live_now": false
+   "live_now": false,
+   "rating": null
   },
   "d8ca701c-b5a8-4ba4-aa4e-0944f1140e48": {
    "proposed": "2026-11-02T21:45:27.965000+00:00",
@@ -2005,7 +2006,8 @@
     }
    ],
    "espn_status": "CANCELED",
-   "live_now": false
+   "live_now": false,
+   "rating": null
   },
   "b24f5189-a91e-4253-8a37-5a9dcaaa155d": {
    "proposed": "2026-11-03T04:06:24.999000+00:00",
@@ -2069,7 +2071,8 @@
     }
    ],
    "espn_status": "CANCELED",
-   "live_now": false
+   "live_now": false,
+   "rating": null
   },
   "5899196b-0d56-465d-a17f-4589a968af44": {
    "proposed": "2026-11-02T21:45:33.076000+00:00",
@@ -2101,7 +2104,8 @@
     }
    ],
    "espn_status": "CANCELED",
-   "live_now": false
+   "live_now": false,
+   "rating": null
   },
   "3cfee3b4-ff97-4044-9e1e-9c287d692ae7": {
    "proposed": "2026-11-02T21:45:39.295000+00:00",
@@ -2133,7 +2137,8 @@
     }
    ],
    "espn_status": "CANCELED",
-   "live_now": false
+   "live_now": false,
+   "rating": null
   },
   "18159d7e-d5c6-46ad-ba6b-b3e0ed80213e": {
    "proposed": "2026-11-02T21:45:19.158000+00:00",
@@ -2165,7 +2170,8 @@
     }
    ],
    "espn_status": "CANCELED",
-   "live_now": false
+   "live_now": false,
+   "rating": null
   },
   "29a353ef-4f8c-4f5d-b75e-f240bd79c8cf": {
    "proposed": "2026-11-02T20:14:26.774000+00:00",
@@ -2219,7 +2225,8 @@
     }
    ],
    "espn_status": "CANCELED",
-   "live_now": false
+   "live_now": false,
+   "rating": null
   },
   "e691da27-a434-4498-9b2b-f60158fcfb8b": {
    "proposed": "2026-11-02T20:50:36.615000+00:00",
@@ -2256,7 +2263,8 @@
     }
    ],
    "espn_status": "CANCELED",
-   "live_now": false
+   "live_now": false,
+   "rating": null
   },
   "9bd9baee-8c57-433c-9094-0801aa3484e3": {
    "proposed": "2026-11-04T06:31:57.410000+00:00",
@@ -3702,5 +3710,5 @@
   16,
   17
  ],
- "last_sync": "2026-11-05T16:00:15.700031+00:00"
+ "last_sync": "2026-11-05T21:54:25.747880+00:00"
 }

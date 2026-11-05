@@ -1,11 +1,11 @@
 {
- "updated_utc": "2026-11-05T07:46:56.787171+00:00",
+ "updated_utc": "2026-11-05T16:00:13.919487+00:00",
  "teams_order": "alphabetical",
  "trades": [
   {
    "key": "Darius Garland|Jamal Murray|Jaylen Brown|Paul Reed",
    "accepted_utc": "2026-11-04T12:26:26.429000+00:00",
-   "status": "in league review",
+   "status": "processed",
    "gets": {
     "Derrick White Girl Wasted": [
      "Jaylen Brown",
@@ -20,12 +20,103 @@
     "Derrick White Girl Wasted": -0.166,
     "Viva La Raza!": 0.104
    },
-   "post": null
+   "post": null,
+   "so_far": {
+    "from": "2026-11-06",
+    "days": 0,
+    "score": [
+     0,
+     0,
+     9
+    ],
+    "cats": [
+     {
+      "cat": "PTS",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "REB",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "AST",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "STL",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "BLK",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "3PM",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "TO",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "FG%",
+      "got": null,
+      "gave": null,
+      "res": 0
+     },
+     {
+      "cat": "FT%",
+      "got": null,
+      "gave": null,
+      "res": 0
+     }
+    ],
+    "games": {
+     "Derrick White Girl Wasted": 0,
+     "Viva La Raza!": 0
+    },
+    "series": [],
+    "wins_added": {
+     "Derrick White Girl Wasted": 0.0,
+     "Viva La Raza!": 0.0
+    },
+    "grade": {
+     "Derrick White Girl Wasted": "Too early",
+     "Viva La Raza!": "Too early"
+    }
+   },
+   "now": {
+    "date": "2026-11-05",
+    "Derrick White Girl Wasted": -0.085,
+    "Viva La Raza!": 0.056
+   },
+   "now_frozen": false,
+   "now_history": [
+    [
+     "2026-11-05",
+     -0.085,
+     0.056
+    ]
+   ]
   },
   {
    "key": "Jaxson Hayes|Jrue Holiday",
    "accepted_utc": "2026-11-04T12:17:55.958000+00:00",
-   "status": "in league review",
+   "status": "processed",
    "gets": {
     "Popoviched": [
      "Jrue Holiday"
@@ -38,7 +129,98 @@
     "Popoviched": 0.408,
     "mr charloooooo": -0.274
    },
-   "post": null
+   "post": null,
+   "so_far": {
+    "from": "2026-11-06",
+    "days": 0,
+    "score": [
+     0,
+     0,
+     9
+    ],
+    "cats": [
+     {
+      "cat": "PTS",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "REB",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "AST",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "STL",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "BLK",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "3PM",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "TO",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "FG%",
+      "got": null,
+      "gave": null,
+      "res": 0
+     },
+     {
+      "cat": "FT%",
+      "got": null,
+      "gave": null,
+      "res": 0
+     }
+    ],
+    "games": {
+     "Popoviched": 0,
+     "mr charloooooo": 0
+    },
+    "series": [],
+    "wins_added": {
+     "Popoviched": 0.0,
+     "mr charloooooo": 0.0
+    },
+    "grade": {
+     "Popoviched": "Too early",
+     "mr charloooooo": "Too early"
+    }
+   },
+   "now": {
+    "date": "2026-11-05",
+    "Popoviched": 0.09,
+    "mr charloooooo": -0.271
+   },
+   "now_frozen": false,
+   "now_history": [
+    [
+     "2026-11-05",
+     0.09,
+     -0.271
+    ]
+   ]
   },
   {
    "key": "Darius Acuff Jr.|Dejounte Murray|Naz Reid",
@@ -136,9 +318,19 @@
      "Torta Pounders": "Too early"
     }
    },
-   "now": null,
-   "now_frozen": true,
-   "now_history": []
+   "now": {
+    "date": "2026-11-05",
+    "Popoviched": 0.637,
+    "Torta Pounders": -0.699
+   },
+   "now_frozen": false,
+   "now_history": [
+    [
+     "2026-11-05",
+     0.637,
+     -0.699
+    ]
+   ]
   },
   {
    "key": "Aaron Gordon|Kyle Kuzma|Moussa Diabate|Rui Hachimura",
@@ -239,8 +431,8 @@
    },
    "now": {
     "date": "2026-11-05",
-    "JAReusalem": 0.201,
-    "Viva La Raza!": -0.164
+    "JAReusalem": 0.216,
+    "Viva La Raza!": -0.206
    },
    "now_frozen": false,
    "now_history": [
@@ -251,8 +443,8 @@
     ],
     [
      "2026-11-05",
-     0.201,
-     -0.164
+     0.216,
+     -0.206
     ]
    ]
   },
@@ -277,76 +469,83 @@
    "post": "2026-11-03-trade",
    "so_far": {
     "from": "2026-11-04",
-    "days": 0,
+    "days": 1,
     "score": [
-     0,
-     0,
-     9
+     1,
+     6,
+     2
     ],
     "cats": [
      {
       "cat": "PTS",
       "got": 0.0,
-      "gave": 0.0,
-      "res": 0
+      "gave": 36.0,
+      "res": -1
      },
      {
       "cat": "REB",
       "got": 0.0,
-      "gave": 0.0,
-      "res": 0
+      "gave": 21.0,
+      "res": -1
      },
      {
       "cat": "AST",
       "got": 0.0,
-      "gave": 0.0,
-      "res": 0
+      "gave": 7.0,
+      "res": -1
      },
      {
       "cat": "STL",
       "got": 0.0,
-      "gave": 0.0,
-      "res": 0
+      "gave": 2.0,
+      "res": -1
      },
      {
       "cat": "BLK",
       "got": 0.0,
-      "gave": 0.0,
-      "res": 0
+      "gave": 1.0,
+      "res": -1
      },
      {
       "cat": "3PM",
       "got": 0.0,
-      "gave": 0.0,
-      "res": 0
+      "gave": 5.0,
+      "res": -1
      },
      {
       "cat": "TO",
       "got": 0.0,
-      "gave": 0.0,
-      "res": 0
+      "gave": 3.0,
+      "res": 1
      },
      {
       "cat": "FG%",
       "got": null,
-      "gave": null,
+      "gave": 0.462,
       "res": 0
      },
      {
       "cat": "FT%",
       "got": null,
-      "gave": null,
+      "gave": 0.7,
       "res": 0
      }
     ],
     "games": {
      "Viva La Raza!": 0,
-     "mr charloooooo": 0
+     "mr charloooooo": 2
     },
-    "series": [],
+    "series": [
+     [
+      "2026-11-04",
+      -5,
+      -0.043,
+      0.033
+     ]
+    ],
     "wins_added": {
-     "Viva La Raza!": 0.0,
-     "mr charloooooo": 0.0
+     "Viva La Raza!": -0.043,
+     "mr charloooooo": 0.033
     },
     "grade": {
      "Viva La Raza!": "Too early",
@@ -355,8 +554,8 @@
    },
    "now": {
     "date": "2026-11-05",
-    "Viva La Raza!": 0.116,
-    "mr charloooooo": -0.143
+    "Viva La Raza!": 0.1,
+    "mr charloooooo": -0.136
    },
    "now_frozen": false,
    "now_history": [
@@ -372,8 +571,8 @@
     ],
     [
      "2026-11-05",
-     0.116,
-     -0.143
+     0.1,
+     -0.136
     ]
    ]
   },
@@ -398,36 +597,36 @@
    "post": "2026-10-28-trade",
    "so_far": {
     "from": "2026-10-29",
-    "days": 6,
+    "days": 7,
     "score": [
-     5,
-     4,
+     6,
+     3,
      0
     ],
     "cats": [
      {
       "cat": "PTS",
-      "got": 78.0,
-      "gave": 53.0,
+      "got": 103.0,
+      "gave": 90.0,
       "res": 1
      },
      {
       "cat": "REB",
-      "got": 42.0,
-      "gave": 20.0,
+      "got": 45.0,
+      "gave": 28.0,
       "res": 1
      },
      {
       "cat": "AST",
-      "got": 18.0,
-      "gave": 19.0,
+      "got": 23.0,
+      "gave": 27.0,
       "res": -1
      },
      {
       "cat": "STL",
       "got": 8.0,
-      "gave": 5.0,
-      "res": 1
+      "gave": 10.0,
+      "res": -1
      },
      {
       "cat": "BLK",
@@ -437,32 +636,32 @@
      },
      {
       "cat": "3PM",
-      "got": 5.0,
-      "gave": 7.0,
+      "got": 7.0,
+      "gave": 13.0,
       "res": -1
      },
      {
       "cat": "TO",
-      "got": 10.0,
-      "gave": 13.0,
+      "got": 11.0,
+      "gave": 20.0,
       "res": 1
      },
      {
       "cat": "FG%",
-      "got": 0.429,
-      "gave": 0.444,
-      "res": -1
+      "got": 0.45,
+      "gave": 0.446,
+      "res": 1
      },
      {
       "cat": "FT%",
-      "got": 0.826,
-      "gave": 1.0,
-      "res": -1
+      "got": 0.857,
+      "gave": 0.786,
+      "res": 1
      }
     ],
     "games": {
-     "JAReusalem": 6,
-     "Stairway to Devin": 4
+     "JAReusalem": 7,
+     "Stairway to Devin": 6
     },
     "series": [
      [
@@ -487,7 +686,7 @@
       "2026-11-01",
       -2,
       -0.021,
-      0.012
+      0.013
      ],
      [
       "2026-11-02",
@@ -500,11 +699,17 @@
       1,
       0.039,
       -0.042
+     ],
+     [
+      "2026-11-04",
+      3,
+      0.025,
+      -0.021
      ]
     ],
     "wins_added": {
-     "JAReusalem": 0.039,
-     "Stairway to Devin": -0.042
+     "JAReusalem": 0.025,
+     "Stairway to Devin": -0.021
     },
     "grade": {
      "JAReusalem": "Too early",
@@ -551,83 +756,83 @@
    "post": "2026-10-28-trade",
    "so_far": {
     "from": "2026-10-29",
-    "days": 6,
+    "days": 7,
     "score": [
      4,
-     5,
-     0
+     4,
+     1
     ],
     "cats": [
      {
       "cat": "PTS",
-      "got": 116.0,
-      "gave": 84.0,
+      "got": 151.0,
+      "gave": 102.0,
       "res": 1
      },
      {
       "cat": "REB",
-      "got": 33.0,
-      "gave": 41.0,
+      "got": 42.0,
+      "gave": 43.0,
       "res": -1
      },
      {
       "cat": "AST",
-      "got": 33.0,
-      "gave": 24.0,
+      "got": 42.0,
+      "gave": 30.0,
       "res": 1
      },
      {
       "cat": "STL",
-      "got": 8.0,
-      "gave": 5.0,
+      "got": 11.0,
+      "gave": 7.0,
       "res": 1
      },
      {
       "cat": "BLK",
       "got": 0.0,
-      "gave": 3.0,
+      "gave": 4.0,
       "res": -1
      },
      {
       "cat": "3PM",
-      "got": 6.0,
-      "gave": 9.0,
-      "res": -1
+      "got": 11.0,
+      "gave": 11.0,
+      "res": 0
      },
      {
       "cat": "TO",
-      "got": 13.0,
-      "gave": 9.0,
+      "got": 22.0,
+      "gave": 13.0,
       "res": -1
      },
      {
       "cat": "FG%",
       "got": 0.484,
-      "gave": 0.459,
+      "gave": 0.466,
       "res": 1
      },
      {
       "cat": "FT%",
-      "got": 0.545,
-      "gave": 0.76,
+      "got": 0.564,
+      "gave": 0.793,
       "res": -1
      }
     ],
     "games": {
-     "Al-Shaida": 5,
-     "Viva La Raza!": 5
+     "Al-Shaida": 7,
+     "Viva La Raza!": 6
     },
     "series": [
      [
       "2026-10-29",
       -5,
       -0.023,
-      0.023
+      0.024
      ],
      [
       "2026-10-30",
       -4,
-      -0.022,
+      -0.021,
       0.021
      ],
      [
@@ -640,7 +845,7 @@
       "2026-11-01",
       -1,
       -0.019,
-      0.021
+      0.02
      ],
      [
       "2026-11-02",
@@ -652,12 +857,18 @@
       "2026-11-03",
       -1,
       -0.016,
-      0.018
+      0.017
+     ],
+     [
+      "2026-11-04",
+      0,
+      -0.005,
+      0.005
      ]
     ],
     "wins_added": {
-     "Al-Shaida": -0.016,
-     "Viva La Raza!": 0.018
+     "Al-Shaida": -0.005,
+     "Viva La Raza!": 0.005
     },
     "grade": {
      "Al-Shaida": "Too early",
@@ -702,29 +913,29 @@
    "post": "2026-10-27-trade",
    "so_far": {
     "from": "2026-10-27",
-    "days": 8,
+    "days": 9,
     "score": [
-     6,
-     2,
-     1
+     5,
+     4,
+     0
     ],
     "cats": [
      {
       "cat": "PTS",
       "got": 61.0,
-      "gave": 48.0,
-      "res": 1
+      "gave": 68.0,
+      "res": -1
      },
      {
       "cat": "REB",
       "got": 22.0,
-      "gave": 29.0,
+      "gave": 38.0,
       "res": -1
      },
      {
       "cat": "AST",
       "got": 8.0,
-      "gave": 13.0,
+      "gave": 19.0,
       "res": -1
      },
      {
@@ -736,7 +947,7 @@
      {
       "cat": "BLK",
       "got": 4.0,
-      "gave": 2.0,
+      "gave": 3.0,
       "res": 1
      },
      {
@@ -748,31 +959,31 @@
      {
       "cat": "TO",
       "got": 8.0,
-      "gave": 13.0,
+      "gave": 15.0,
       "res": 1
      },
      {
       "cat": "FG%",
       "got": 0.676,
-      "gave": 0.531,
+      "gave": 0.472,
       "res": 1
      },
      {
       "cat": "FT%",
       "got": 0.8,
-      "gave": 0.8,
-      "res": 0
+      "gave": 0.842,
+      "res": -1
      }
     ],
     "games": {
      "Derrick White Girl Wasted": 4,
-     "Stairway to Devin": 4
+     "Stairway to Devin": 5
     },
     "series": [
      [
       "2026-10-27",
       5,
-      0.027,
+      0.026,
       -0.022
      ],
      [
@@ -784,19 +995,19 @@
      [
       "2026-10-29",
       5,
-      0.048,
+      0.047,
       -0.04
      ],
      [
       "2026-10-30",
       8,
-      0.058,
-      -0.05
+      0.059,
+      -0.049
      ],
      [
       "2026-10-31",
       5,
-      0.047,
+      0.046,
       -0.039
      ],
      [
@@ -808,19 +1019,25 @@
      [
       "2026-11-02",
       4,
-      0.043,
-      -0.035
+      0.042,
+      -0.036
      ],
      [
       "2026-11-03",
       4,
-      0.043,
+      0.042,
       -0.036
+     ],
+     [
+      "2026-11-04",
+      1,
+      0.016,
+      -0.013
      ]
     ],
     "wins_added": {
-     "Derrick White Girl Wasted": 0.043,
-     "Stairway to Devin": -0.036
+     "Derrick White Girl Wasted": 0.016,
+     "Stairway to Devin": -0.013
     },
     "grade": {
      "Derrick White Girl Wasted": "Too early",
@@ -832,7 +1049,7 @@
     "Derrick White Girl Wasted": -0.209,
     "Stairway to Devin": 0.067
    },
-   "now_frozen": false,
+   "now_frozen": true,
    "now_history": [
     [
      "2026-11-02",

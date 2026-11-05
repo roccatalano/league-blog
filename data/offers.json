@@ -1,6 +1,61 @@
 {
- "updated_utc": "2026-11-05T07:46:58.678778+00:00",
+ "updated_utc": "2026-11-05T16:00:16.189710+00:00",
  "offers": [
+  {
+   "id": "014c4a06-3e7c-434f-b311-97ca234cddf1",
+   "proposed": "2026-11-05T13:27:01.879000+00:00",
+   "sender": "Gets On Base",
+   "receiver": "Giddey up Horsey",
+   "teams": [
+    "Gets On Base",
+    "Giddey up Horsey"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Ace Bailey",
+     "from": "Gets On Base",
+     "to": "Giddey up Horsey"
+    },
+    {
+     "player": "Ausar Thompson",
+     "from": "Giddey up Horsey",
+     "to": "Gets On Base"
+    }
+   ],
+   "sender_gain": 0.038,
+   "receiver_gain": 0.019
+  },
+  {
+   "id": "269b05c3-4834-43e4-b323-49a896d140ff",
+   "proposed": "2026-11-05T10:09:40.028000+00:00",
+   "sender": "Popoviched",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Gets On Base",
+    "Popoviched"
+   ],
+   "outcome": "pending",
+   "moves": [
+    {
+     "player": "John Collins",
+     "from": "Popoviched",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Jalen Johnson",
+     "from": "Popoviched",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Giannis Antetokounmpo",
+     "from": "Gets On Base",
+     "to": "Popoviched"
+    }
+   ],
+   "sender_gain": -0.058,
+   "receiver_gain": 0.084
+  },
   {
    "id": "a8a884d3-61f0-4608-b81c-05244fc2b5f2",
    "proposed": "2026-11-04T13:27:04.401000+00:00",
@@ -724,7 +779,7 @@
     "Gets On Base",
     "Giddey up Horsey"
    ],
-   "outcome": "pending",
+   "outcome": "expired",
    "moves": [
     {
      "player": "Ace Bailey",
@@ -799,7 +854,7 @@
     "Derrick White Girl Wasted",
     "Gets On Base"
    ],
-   "outcome": "pending",
+   "outcome": "expired",
    "moves": [
     {
      "player": "Paul Reed",
@@ -3525,13 +3580,13 @@
   },
   {
    "team": "Popoviched",
-   "sent": 15,
+   "sent": 16,
    "received": 4,
-   "rated_sent": 8,
+   "rated_sent": 9,
    "sent_accepted": 0,
    "sent_declined": 0,
-   "generosity": 0.004,
-   "self_gain": 0.013,
+   "generosity": 0.013,
+   "self_gain": 0.005,
    "best_sent": {
     "id": "acf5e2d6-17fb-4037-976a-edcb893102a6",
     "receiver": "Derrick White Girl Wasted",
@@ -3573,13 +3628,13 @@
   },
   {
    "team": "Gets On Base",
-   "sent": 27,
-   "received": 19,
-   "rated_sent": 17,
+   "sent": 28,
+   "received": 20,
+   "rated_sent": 18,
    "sent_accepted": 0,
    "sent_declined": 7,
-   "generosity": -0.004,
-   "self_gain": 0.095,
+   "generosity": -0.003,
+   "self_gain": 0.092,
    "best_sent": {
     "id": "661b860b-96fa-4963-afd7-093e9f948d6e",
     "receiver": "The Real OG",
@@ -3760,7 +3815,7 @@
   {
    "team": "Giddey up Horsey",
    "sent": 0,
-   "received": 8,
+   "received": 9,
    "rated_sent": 0,
    "sent_accepted": 0,
    "sent_declined": 0,
@@ -3806,5 +3861,5 @@
    "worst_sent": null
   }
  ],
- "lost_before_logging": 55
+ "lost_before_logging": 56
 }

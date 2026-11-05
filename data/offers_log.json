@@ -47,7 +47,7 @@
     }
    ],
    "espn_status": "PENDING",
-   "live_now": true,
+   "live_now": false,
    "rating": {
     "Gets On Base": 0.002,
     "Giddey up Horsey": 0.038
@@ -3264,6 +3264,65 @@
     "Gets On Base": -0.137
    },
    "rated_on": "2026-11-04"
+  },
+  "269b05c3-4834-43e4-b323-49a896d140ff": {
+   "proposed": "2026-11-05T10:09:40.028000+00:00",
+   "proposed_by": "Popoviched",
+   "teams": [
+    "Gets On Base",
+    "Popoviched"
+   ],
+   "moves": [
+    {
+     "player": "John Collins",
+     "from": "Popoviched",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Jalen Johnson",
+     "from": "Popoviched",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Giannis Antetokounmpo",
+     "from": "Gets On Base",
+     "to": "Popoviched"
+    }
+   ],
+   "espn_status": "PENDING",
+   "live_now": true,
+   "rating": {
+    "Gets On Base": 0.084,
+    "Popoviched": -0.058
+   },
+   "rated_on": "2026-11-05"
+  },
+  "014c4a06-3e7c-434f-b311-97ca234cddf1": {
+   "proposed": "2026-11-05T13:27:01.879000+00:00",
+   "proposed_by": "Gets On Base",
+   "teams": [
+    "Gets On Base",
+    "Giddey up Horsey"
+   ],
+   "moves": [
+    {
+     "player": "Ace Bailey",
+     "from": "Gets On Base",
+     "to": "Giddey up Horsey"
+    },
+    {
+     "player": "Ausar Thompson",
+     "from": "Giddey up Horsey",
+     "to": "Gets On Base"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Gets On Base": 0.038,
+    "Giddey up Horsey": 0.019
+   },
+   "rated_on": "2026-11-05"
   }
  },
  "outcomes": {
@@ -3616,6 +3675,11 @@
    "outcome": "declined",
    "by": "Torta Pounders",
    "date": "2026-11-04T22:43:09.795000+00:00"
+  },
+  "2007d146-9651-4236-9bc9-403518623a30": {
+   "outcome": "declined",
+   "by": "JAReusalem",
+   "date": "2026-11-05T09:42:57.295000+00:00"
   }
  },
  "synced_periods": [
@@ -3635,7 +3699,8 @@
   13,
   14,
   15,
-  16
+  16,
+  17
  ],
- "last_sync": "2026-11-05T07:46:58.367626+00:00"
+ "last_sync": "2026-11-05T16:00:15.700031+00:00"
 }

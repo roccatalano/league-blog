@@ -14,8 +14,8 @@
    ],
    [
     "2026-11-05",
-    0.116,
-    -0.143
+    0.1,
+    -0.136
    ]
   ],
   "at_time": {
@@ -26,8 +26,8 @@
   "at_time_source": "trade review",
   "now": {
    "date": "2026-11-05",
-   "Viva La Raza!": 0.116,
-   "mr charloooooo": -0.143
+   "Viva La Raza!": 0.1,
+   "mr charloooooo": -0.136
   }
  },
  "_trades": {
@@ -135,7 +135,8 @@
     ]
    },
    "dates": [
-    "2026-11-04T12:26:26.429000+00:00"
+    "2026-11-04T12:26:26.429000+00:00",
+    "2026-11-05T12:26:01.717000+00:00"
    ]
   },
   "Jaxson Hayes|Jrue Holiday": {
@@ -148,7 +149,8 @@
     ]
    },
    "dates": [
-    "2026-11-04T12:17:55.958000+00:00"
+    "2026-11-04T12:17:55.958000+00:00",
+    "2026-11-05T12:17:01.440000+00:00"
    ]
   }
  },
@@ -250,8 +252,8 @@
    ],
    [
     "2026-11-05",
-    0.201,
-    -0.164
+    0.216,
+    -0.206
    ]
   ],
   "at_time": {
@@ -261,35 +263,68 @@
   "at_time_source": "model when first seen",
   "now": {
    "date": "2026-11-05",
-   "JAReusalem": 0.201,
-   "Viva La Raza!": -0.164
+   "JAReusalem": 0.216,
+   "Viva La Raza!": -0.206
   }
  },
  "Darius Acuff Jr.|Dejounte Murray|Naz Reid": {
   "first_seen": "2026-11-04",
-  "history": [],
+  "history": [
+   [
+    "2026-11-05",
+    0.637,
+    -0.699
+   ]
+  ],
   "at_time": {
    "Popoviched": 0.903,
    "Torta Pounders": -0.708
   },
-  "at_time_source": "model when first seen"
+  "at_time_source": "model when first seen",
+  "now": {
+   "date": "2026-11-05",
+   "Popoviched": 0.637,
+   "Torta Pounders": -0.699
+  }
  },
  "Darius Garland|Jamal Murray|Jaylen Brown|Paul Reed": {
   "first_seen": "2026-11-04",
-  "history": [],
+  "history": [
+   [
+    "2026-11-05",
+    -0.085,
+    0.056
+   ]
+  ],
   "at_time": {
    "Derrick White Girl Wasted": -0.166,
    "Viva La Raza!": 0.104
   },
-  "at_time_source": "model when first seen"
+  "at_time_source": "model when first seen",
+  "now": {
+   "date": "2026-11-05",
+   "Derrick White Girl Wasted": -0.085,
+   "Viva La Raza!": 0.056
+  }
  },
  "Jaxson Hayes|Jrue Holiday": {
   "first_seen": "2026-11-04",
-  "history": [],
+  "history": [
+   [
+    "2026-11-05",
+    0.09,
+    -0.271
+   ]
+  ],
   "at_time": {
    "Popoviched": 0.408,
    "mr charloooooo": -0.274
   },
-  "at_time_source": "model when first seen"
+  "at_time_source": "model when first seen",
+  "now": {
+   "date": "2026-11-05",
+   "Popoviched": 0.09,
+   "mr charloooooo": -0.271
+  }
  }
 }

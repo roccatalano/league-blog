@@ -1,6 +1,32 @@
 {
- "updated_utc": "2026-11-06T16:39:03.688274+00:00",
+ "updated_utc": "2026-11-06T21:54:59.238387+00:00",
  "offers": [
+  {
+   "id": "94f5d434-dcf6-491c-8663-7b4a17605f3c",
+   "proposed": "2026-11-06T21:26:32.478000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "Torta Pounders",
+   "teams": [
+    "Torta Pounders",
+    "Viva La Raza!"
+   ],
+   "outcome": "accepted",
+   "moves": [
+    {
+     "player": "Paul Reed",
+     "from": "Viva La Raza!",
+     "to": "Torta Pounders"
+    },
+    {
+     "player": "Neemias Queta",
+     "from": "Torta Pounders",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": 0.051,
+   "receiver_gain": -0.076,
+   "decided": "2026-11-06T21:26:32.478000+00:00"
+  },
   {
    "id": "a0238b4b-76c6-4221-ac52-0c2344a81975",
    "proposed": "2026-11-06T13:27:02.398000+00:00",
@@ -3462,7 +3488,7 @@
   {
    "team": "Torta Pounders",
    "sent": 2,
-   "received": 14,
+   "received": 15,
    "rated_sent": 2,
    "sent_accepted": 1,
    "sent_declined": 0,
@@ -3905,31 +3931,31 @@
   },
   {
    "team": "Viva La Raza!",
-   "sent": 29,
+   "sent": 30,
    "received": 7,
-   "rated_sent": 11,
-   "sent_accepted": 0,
+   "rated_sent": 12,
+   "sent_accepted": 1,
    "sent_declined": 0,
-   "generosity": -0.228,
-   "self_gain": 0.249,
+   "generosity": -0.215,
+   "self_gain": 0.232,
    "best_sent": {
-    "id": "3b384c50-cb5a-402e-9d33-65fa0710ddc7",
-    "receiver": "The Real OG",
-    "receiver_gain": -0.077,
-    "sender_gain": 0.119,
+    "id": "94f5d434-dcf6-491c-8663-7b4a17605f3c",
+    "receiver": "Torta Pounders",
+    "receiver_gain": -0.076,
+    "sender_gain": 0.051,
     "moves": [
      {
-      "player": "Darius Garland",
+      "player": "Paul Reed",
       "from": "Viva La Raza!",
-      "to": "The Real OG"
+      "to": "Torta Pounders"
      },
      {
-      "player": "Zion Williamson",
-      "from": "The Real OG",
+      "player": "Neemias Queta",
+      "from": "Torta Pounders",
       "to": "Viva La Raza!"
      }
     ],
-    "outcome": "cancelled/expired"
+    "outcome": "accepted"
    },
    "worst_sent": {
     "id": "0bf09e67-0309-4318-b268-eda2ad0477a0",
@@ -4012,5 +4038,5 @@
    "worst_sent": null
   }
  ],
- "lost_before_logging": 56
+ "lost_before_logging": 57
 }

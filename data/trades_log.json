@@ -19,8 +19,8 @@
    ],
    [
     "2026-11-06",
-    0.108,
-    -0.146
+    0.107,
+    -0.145
    ]
   ],
   "at_time": {
@@ -31,8 +31,8 @@
   "at_time_source": "trade review",
   "now": {
    "date": "2026-11-06",
-   "Viva La Raza!": 0.108,
-   "mr charloooooo": -0.146
+   "Viva La Raza!": 0.107,
+   "mr charloooooo": -0.145
   }
  },
  "_trades": {
@@ -172,6 +172,19 @@
    "dates": [
     "2026-11-06T13:14:57.581000+00:00"
    ]
+  },
+  "Neemias Queta|Paul Reed": {
+   "gets": {
+    "Torta Pounders": [
+     "Paul Reed"
+    ],
+    "Viva La Raza!": [
+     "Neemias Queta"
+    ]
+   },
+   "dates": [
+    "2026-11-06T21:26:32.530000+00:00"
+   ]
   }
  },
  "Derik Queen|Paul Reed": {
@@ -277,7 +290,7 @@
    ],
    [
     "2026-11-06",
-    0.215,
+    0.213,
     -0.206
    ]
   ],
@@ -288,7 +301,7 @@
   "at_time_source": "model when first seen",
   "now": {
    "date": "2026-11-06",
-   "JAReusalem": 0.215,
+   "JAReusalem": 0.213,
    "Viva La Raza!": -0.206
   }
  },
@@ -302,8 +315,8 @@
    ],
    [
     "2026-11-06",
-    0.636,
-    -0.697
+    0.635,
+    -0.708
    ]
   ],
   "at_time": {
@@ -313,8 +326,8 @@
   "at_time_source": "model when first seen",
   "now": {
    "date": "2026-11-06",
-   "Popoviched": 0.636,
-   "Torta Pounders": -0.697
+   "Popoviched": 0.635,
+   "Torta Pounders": -0.708
   }
  },
  "Darius Garland|Jamal Murray|Jaylen Brown|Paul Reed": {
@@ -328,7 +341,7 @@
    [
     "2026-11-06",
     -0.102,
-    0.056
+    0.058
    ]
   ],
   "at_time": {
@@ -339,7 +352,7 @@
   "now": {
    "date": "2026-11-06",
    "Derrick White Girl Wasted": -0.102,
-   "Viva La Raza!": 0.056
+   "Viva La Raza!": 0.058
   }
  },
  "Jaxson Hayes|Jrue Holiday": {
@@ -352,7 +365,7 @@
    ],
    [
     "2026-11-06",
-    0.087,
+    0.086,
     -0.264
    ]
   ],
@@ -363,7 +376,7 @@
   "at_time_source": "model when first seen",
   "now": {
    "date": "2026-11-06",
-   "Popoviched": 0.087,
+   "Popoviched": 0.086,
    "mr charloooooo": -0.264
   }
  },
@@ -373,6 +386,15 @@
   "at_time": {
    "Derrick White Girl Wasted": -0.102,
    "Popoviched": 0.022
+  },
+  "at_time_source": "model when first seen"
+ },
+ "Neemias Queta|Paul Reed": {
+  "first_seen": "2026-11-06",
+  "history": [],
+  "at_time": {
+   "Torta Pounders": -0.076,
+   "Viva La Raza!": 0.051
   },
   "at_time_source": "model when first seen"
  }

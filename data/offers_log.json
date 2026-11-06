@@ -3494,6 +3494,34 @@
     "Popoviched": 0.022
    },
    "rated_on": "at the time (trade tracker)"
+  },
+  "94f5d434-dcf6-491c-8663-7b4a17605f3c": {
+   "proposed": "2026-11-06T21:26:32.478000+00:00",
+   "proposed_by": "Viva La Raza!",
+   "teams": [
+    "Torta Pounders",
+    "Viva La Raza!"
+   ],
+   "moves": [
+    {
+     "player": "Paul Reed",
+     "from": "Viva La Raza!",
+     "to": "Torta Pounders"
+    },
+    {
+     "player": "Neemias Queta",
+     "from": "Torta Pounders",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "espn_status": "ACCEPTED",
+   "live_now": false,
+   "trade_key": "Neemias Queta|Paul Reed",
+   "rating": {
+    "Torta Pounders": -0.076,
+    "Viva La Raza!": 0.051
+   },
+   "rated_on": "at the time (trade tracker)"
   }
  },
  "outcomes": {
@@ -3856,6 +3884,16 @@
    "outcome": "accepted",
    "by": "Popoviched",
    "date": "2026-11-06T13:14:57.527000+00:00"
+  },
+  "1a89dd27-1e6b-4691-8113-ba27b71c6ad1": {
+   "outcome": "declined",
+   "by": "mr charloooooo",
+   "date": "2026-11-06T17:59:32.308000+00:00"
+  },
+  "94f5d434-dcf6-491c-8663-7b4a17605f3c": {
+   "outcome": "accepted",
+   "by": "Torta Pounders",
+   "date": "2026-11-06T21:26:32.478000+00:00"
   }
  },
  "synced_periods": [
@@ -3879,5 +3917,5 @@
   17,
   18
  ],
- "last_sync": "2026-11-06T16:39:03.123406+00:00"
+ "last_sync": "2026-11-06T21:54:58.648669+00:00"
 }

@@ -1,6 +1,66 @@
 {
- "updated_utc": "2026-11-05T21:54:26.127838+00:00",
+ "updated_utc": "2026-11-06T01:57:28.791679+00:00",
  "offers": [
+  {
+   "id": "ed5d6e3d-7e7a-4126-b48a-3d535547ce35",
+   "proposed": "2026-11-05T22:26:26.431000+00:00",
+   "sender": "Popoviched",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Gets On Base",
+    "Popoviched"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "John Collins",
+     "from": "Popoviched",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Duncan Robinson",
+     "from": "Popoviched",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Popoviched"
+    }
+   ],
+   "sender_gain": 0.306,
+   "receiver_gain": 0.033
+  },
+  {
+   "id": "126031c2-7656-40bf-8d74-9548058f6998",
+   "proposed": "2026-11-05T22:25:02.753000+00:00",
+   "sender": "Popoviched",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Gets On Base",
+    "Popoviched"
+   ],
+   "outcome": "pending",
+   "moves": [
+    {
+     "player": "John Collins",
+     "from": "Popoviched",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Duncan Robinson",
+     "from": "Popoviched",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Popoviched"
+    }
+   ],
+   "sender_gain": 0.306,
+   "receiver_gain": 0.033
+  },
   {
    "id": "014c4a06-3e7c-434f-b311-97ca234cddf1",
    "proposed": "2026-11-05T13:27:01.879000+00:00",
@@ -3580,13 +3640,13 @@
   },
   {
    "team": "Popoviched",
-   "sent": 16,
+   "sent": 18,
    "received": 4,
-   "rated_sent": 9,
+   "rated_sent": 11,
    "sent_accepted": 0,
    "sent_declined": 0,
-   "generosity": 0.013,
-   "self_gain": 0.005,
+   "generosity": 0.017,
+   "self_gain": 0.06,
    "best_sent": {
     "id": "acf5e2d6-17fb-4037-976a-edcb893102a6",
     "receiver": "Derrick White Girl Wasted",
@@ -3629,7 +3689,7 @@
   {
    "team": "Gets On Base",
    "sent": 28,
-   "received": 20,
+   "received": 22,
    "rated_sent": 18,
    "sent_accepted": 0,
    "sent_declined": 7,

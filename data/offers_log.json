@@ -3331,6 +3331,70 @@
     "Giddey up Horsey": 0.019
    },
    "rated_on": "2026-11-05"
+  },
+  "ed5d6e3d-7e7a-4126-b48a-3d535547ce35": {
+   "proposed": "2026-11-05T22:26:26.431000+00:00",
+   "proposed_by": "Popoviched",
+   "teams": [
+    "Gets On Base",
+    "Popoviched"
+   ],
+   "moves": [
+    {
+     "player": "John Collins",
+     "from": "Popoviched",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Duncan Robinson",
+     "from": "Popoviched",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Popoviched"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Gets On Base": 0.033,
+    "Popoviched": 0.306
+   },
+   "rated_on": "2026-11-06"
+  },
+  "126031c2-7656-40bf-8d74-9548058f6998": {
+   "proposed": "2026-11-05T22:25:02.753000+00:00",
+   "proposed_by": "Popoviched",
+   "teams": [
+    "Gets On Base",
+    "Popoviched"
+   ],
+   "moves": [
+    {
+     "player": "John Collins",
+     "from": "Popoviched",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Duncan Robinson",
+     "from": "Popoviched",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Popoviched"
+    }
+   ],
+   "espn_status": "PENDING",
+   "live_now": false,
+   "rating": {
+    "Gets On Base": 0.033,
+    "Popoviched": 0.306
+   },
+   "rated_on": "2026-11-06"
   }
  },
  "outcomes": {
@@ -3710,5 +3774,5 @@
   16,
   17
  ],
- "last_sync": "2026-11-05T21:54:25.747880+00:00"
+ "last_sync": "2026-11-06T01:57:28.312728+00:00"
 }

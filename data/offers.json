@@ -1,6 +1,67 @@
 {
- "updated_utc": "2026-11-06T08:58:37.284909+00:00",
+ "updated_utc": "2026-11-06T16:39:03.688274+00:00",
  "offers": [
+  {
+   "id": "a0238b4b-76c6-4221-ac52-0c2344a81975",
+   "proposed": "2026-11-06T13:27:02.398000+00:00",
+   "sender": "Derrick White Girl Wasted",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Gets On Base"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Bilal Coulibaly",
+     "from": "Derrick White Girl Wasted",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Ace Bailey",
+     "from": "Gets On Base",
+     "to": "Derrick White Girl Wasted"
+    }
+   ],
+   "sender_gain": 0.159,
+   "receiver_gain": -0.108
+  },
+  {
+   "id": "2acde130-3e61-44af-8479-9e717065411f",
+   "proposed": "2026-11-06T13:14:57.527000+00:00",
+   "sender": "Derrick White Girl Wasted",
+   "receiver": "Popoviched",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Popoviched"
+   ],
+   "outcome": "accepted",
+   "moves": [
+    {
+     "player": "Karl-Anthony Towns",
+     "from": "Derrick White Girl Wasted",
+     "to": "Popoviched"
+    },
+    {
+     "player": "Ajay Mitchell",
+     "from": "Derrick White Girl Wasted",
+     "to": "Popoviched"
+    },
+    {
+     "player": "Jrue Holiday",
+     "from": "Popoviched",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Jalen Johnson",
+     "from": "Popoviched",
+     "to": "Derrick White Girl Wasted"
+    }
+   ],
+   "sender_gain": -0.102,
+   "receiver_gain": 0.022,
+   "decided": "2026-11-06T13:14:57.527000+00:00"
+  },
   {
    "id": "5fe68685-3521-4acd-9539-c088037d8212",
    "proposed": "2026-11-06T06:50:07.599000+00:00",
@@ -155,7 +216,7 @@
     "Derrick White Girl Wasted",
     "Gets On Base"
    ],
-   "outcome": "pending",
+   "outcome": "expired",
    "moves": [
     {
      "player": "Bilal Coulibaly",
@@ -507,7 +568,7 @@
     "Gets On Base",
     "mr charloooooo"
    ],
-   "outcome": "pending",
+   "outcome": "expired",
    "moves": [
     {
      "player": "Jrue Holiday",
@@ -3520,59 +3581,6 @@
    }
   },
   {
-   "team": "Derrick White Girl Wasted",
-   "sent": 15,
-   "received": 4,
-   "rated_sent": 9,
-   "sent_accepted": 2,
-   "sent_declined": 0,
-   "generosity": 0.123,
-   "self_gain": -0.161,
-   "best_sent": {
-    "id": "81d2c045-e0d8-46be-90c2-6c945778fedf",
-    "receiver": "Giddey up Horsey",
-    "receiver_gain": 0.719,
-    "sender_gain": -0.868,
-    "moves": [
-     {
-      "player": "Kawhi Leonard",
-      "from": "Derrick White Girl Wasted",
-      "to": "Giddey up Horsey"
-     },
-     {
-      "player": "Jamal Murray",
-      "from": "Derrick White Girl Wasted",
-      "to": "Giddey up Horsey"
-     },
-     {
-      "player": "Cade Cunningham",
-      "from": "Giddey up Horsey",
-      "to": "Derrick White Girl Wasted"
-     }
-    ],
-    "outcome": "cancelled/expired"
-   },
-   "worst_sent": {
-    "id": "e0dd53fd-7a6a-4d83-bfc0-2e2c3f55470b",
-    "receiver": "Gets On Base",
-    "receiver_gain": -0.168,
-    "sender_gain": 0.189,
-    "moves": [
-     {
-      "player": "Paul Reed",
-      "from": "Derrick White Girl Wasted",
-      "to": "Gets On Base"
-     },
-     {
-      "player": "Ace Bailey",
-      "from": "Gets On Base",
-      "to": "Derrick White Girl Wasted"
-     }
-    ],
-    "outcome": "cancelled/expired"
-   }
-  },
-  {
    "team": "Stairway to Devin",
    "sent": 1,
    "received": 5,
@@ -3615,6 +3623,59 @@
       "player": "Duncan Robinson",
       "from": "Popoviched",
       "to": "Stairway to Devin"
+     }
+    ],
+    "outcome": "cancelled/expired"
+   }
+  },
+  {
+   "team": "Derrick White Girl Wasted",
+   "sent": 17,
+   "received": 4,
+   "rated_sent": 11,
+   "sent_accepted": 3,
+   "sent_declined": 0,
+   "generosity": 0.093,
+   "self_gain": -0.126,
+   "best_sent": {
+    "id": "81d2c045-e0d8-46be-90c2-6c945778fedf",
+    "receiver": "Giddey up Horsey",
+    "receiver_gain": 0.719,
+    "sender_gain": -0.868,
+    "moves": [
+     {
+      "player": "Kawhi Leonard",
+      "from": "Derrick White Girl Wasted",
+      "to": "Giddey up Horsey"
+     },
+     {
+      "player": "Jamal Murray",
+      "from": "Derrick White Girl Wasted",
+      "to": "Giddey up Horsey"
+     },
+     {
+      "player": "Cade Cunningham",
+      "from": "Giddey up Horsey",
+      "to": "Derrick White Girl Wasted"
+     }
+    ],
+    "outcome": "cancelled/expired"
+   },
+   "worst_sent": {
+    "id": "e0dd53fd-7a6a-4d83-bfc0-2e2c3f55470b",
+    "receiver": "Gets On Base",
+    "receiver_gain": -0.168,
+    "sender_gain": 0.189,
+    "moves": [
+     {
+      "player": "Paul Reed",
+      "from": "Derrick White Girl Wasted",
+      "to": "Gets On Base"
+     },
+     {
+      "player": "Ace Bailey",
+      "from": "Gets On Base",
+      "to": "Derrick White Girl Wasted"
      }
     ],
     "outcome": "cancelled/expired"
@@ -3671,7 +3732,7 @@
   {
    "team": "Popoviched",
    "sent": 19,
-   "received": 4,
+   "received": 5,
    "rated_sent": 12,
    "sent_accepted": 0,
    "sent_declined": 0,
@@ -3719,7 +3780,7 @@
   {
    "team": "Gets On Base",
    "sent": 28,
-   "received": 23,
+   "received": 24,
    "rated_sent": 18,
    "sent_accepted": 0,
    "sent_declined": 7,

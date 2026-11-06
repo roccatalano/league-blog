@@ -2511,7 +2511,8 @@
     }
    ],
    "espn_status": "CANCELED",
-   "live_now": false
+   "live_now": false,
+   "rating": null
   },
   "38277c0e-4a7c-428b-bb15-93c20a862848": {
    "proposed": "2026-11-04T01:08:36.578000+00:00",
@@ -3267,7 +3268,7 @@
     }
    ],
    "espn_status": "PENDING",
-   "live_now": true,
+   "live_now": false,
    "rating": {
     "Derrick White Girl Wasted": 0.177,
     "Gets On Base": -0.137
@@ -3428,6 +3429,71 @@
     "Popoviched": -0.089
    },
    "rated_on": "2026-11-06"
+  },
+  "a0238b4b-76c6-4221-ac52-0c2344a81975": {
+   "proposed": "2026-11-06T13:27:02.398000+00:00",
+   "proposed_by": "Derrick White Girl Wasted",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Gets On Base"
+   ],
+   "moves": [
+    {
+     "player": "Bilal Coulibaly",
+     "from": "Derrick White Girl Wasted",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Ace Bailey",
+     "from": "Gets On Base",
+     "to": "Derrick White Girl Wasted"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Derrick White Girl Wasted": 0.159,
+    "Gets On Base": -0.108
+   },
+   "rated_on": "2026-11-06"
+  },
+  "2acde130-3e61-44af-8479-9e717065411f": {
+   "proposed": "2026-11-06T13:14:57.527000+00:00",
+   "proposed_by": "Derrick White Girl Wasted",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Popoviched"
+   ],
+   "moves": [
+    {
+     "player": "Karl-Anthony Towns",
+     "from": "Derrick White Girl Wasted",
+     "to": "Popoviched"
+    },
+    {
+     "player": "Ajay Mitchell",
+     "from": "Derrick White Girl Wasted",
+     "to": "Popoviched"
+    },
+    {
+     "player": "Jrue Holiday",
+     "from": "Popoviched",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Jalen Johnson",
+     "from": "Popoviched",
+     "to": "Derrick White Girl Wasted"
+    }
+   ],
+   "espn_status": "ACCEPTED",
+   "live_now": false,
+   "trade_key": "Ajay Mitchell|Jalen Johnson|Jrue Holiday|Karl-Anthony Towns",
+   "rating": {
+    "Derrick White Girl Wasted": -0.102,
+    "Popoviched": 0.022
+   },
+   "rated_on": "at the time (trade tracker)"
   }
  },
  "outcomes": {
@@ -3785,6 +3851,11 @@
    "outcome": "declined",
    "by": "JAReusalem",
    "date": "2026-11-05T09:42:57.295000+00:00"
+  },
+  "2acde130-3e61-44af-8479-9e717065411f": {
+   "outcome": "accepted",
+   "by": "Popoviched",
+   "date": "2026-11-06T13:14:57.527000+00:00"
   }
  },
  "synced_periods": [
@@ -3808,5 +3879,5 @@
   17,
   18
  ],
- "last_sync": "2026-11-06T08:58:36.780107+00:00"
+ "last_sync": "2026-11-06T16:39:03.123406+00:00"
 }

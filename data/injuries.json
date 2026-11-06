@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-06T08:58:43.526450+00:00",
+ "updated_utc": "2026-11-06T16:39:11.104190+00:00",
  "today_et": "2026-11-06",
  "players": [
   {
@@ -79,6 +79,22 @@
    }
   },
   {
+   "name": "Devin Carter",
+   "nba_team": "BOS",
+   "pos": "G",
+   "status": "Out",
+   "injury": "Illness",
+   "return_date": "2026-11-06",
+   "days_out": 0,
+   "games_missed": 0,
+   "timeframe": "Days",
+   "note": "Carter (illness) practiced with the G League's Maine Celtics on Wednesday.",
+   "note_date": "2026-11-04",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
+  },
+  {
    "name": "Jalen Johnson",
    "nba_team": "ATL",
    "pos": "F",
@@ -117,6 +133,38 @@
     "REB": 9.2,
     "AST": 1.9
    }
+  },
+  {
+   "name": "Kam Jones",
+   "nba_team": "MIL",
+   "pos": "G",
+   "status": "Day-To-Day",
+   "injury": "Right Ankle",
+   "return_date": "2026-11-06",
+   "days_out": 0,
+   "games_missed": 0,
+   "timeframe": "Days",
+   "note": "Jones (ankle/two-way player) is out for Friday's game against Toronto.",
+   "note_date": "2026-11-06",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
+  },
+  {
+   "name": "Kyle Anderson",
+   "nba_team": "TOR",
+   "pos": "F",
+   "status": "Day-To-Day",
+   "injury": "Illness",
+   "return_date": "2026-11-06",
+   "days_out": 0,
+   "games_missed": 0,
+   "timeframe": "Days",
+   "note": "Anderson is questionable for Friday against the Bucks due to illness.",
+   "note_date": "2026-11-06",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
   },
   {
    "name": "Max Christie",
@@ -265,6 +313,22 @@
     "REB": 2.5,
     "AST": 1.8
    }
+  },
+  {
+   "name": "Trey Alexander",
+   "nba_team": "UTAH",
+   "pos": "G",
+   "status": "Out",
+   "injury": "Left Knee",
+   "return_date": "2026-11-06",
+   "days_out": 0,
+   "games_missed": 0,
+   "timeframe": "Days",
+   "note": "Alexander won't play Wednesday against the Grizzlies due to a left knee bone bruise.",
+   "note_date": "2026-10-24",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
   },
   {
    "name": "Trey Murphy III",
@@ -559,22 +623,6 @@
    }
   },
   {
-   "name": "Devin Carter",
-   "nba_team": "BOS",
-   "pos": "G",
-   "status": "Out",
-   "injury": "Illness",
-   "return_date": "2026-11-08",
-   "days_out": 2,
-   "games_missed": 1,
-   "timeframe": "Days",
-   "note": "Carter (illness) practiced with the G League's Maine Celtics on Wednesday.",
-   "note_date": "2026-11-04",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
-  },
-  {
    "name": "Isaiah Joe",
    "nba_team": "DET",
    "pos": "G",
@@ -607,22 +655,6 @@
    "per_game": null
   },
   {
-   "name": "Kam Jones",
-   "nba_team": "MIL",
-   "pos": "G",
-   "status": "Out",
-   "injury": "Right Ankle",
-   "return_date": "2026-11-08",
-   "days_out": 2,
-   "games_missed": 1,
-   "timeframe": "Days",
-   "note": "Jones (ankle/two-way player) is out for Friday's game against Toronto.",
-   "note_date": "2026-11-06",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
-  },
-  {
    "name": "Nic Claxton",
    "nba_team": "CHI",
    "pos": "C",
@@ -641,22 +673,6 @@
     "REB": 7.1,
     "AST": 3.4
    }
-  },
-  {
-   "name": "Trey Alexander",
-   "nba_team": "UTAH",
-   "pos": "G",
-   "status": "Out",
-   "injury": "Left Knee",
-   "return_date": "2026-11-08",
-   "days_out": 2,
-   "games_missed": 1,
-   "timeframe": "Days",
-   "note": "Alexander won't play Wednesday against the Grizzlies due to a left knee bone bruise.",
-   "note_date": "2026-10-24",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
   },
   {
    "name": "Yanic Konan Niederhauser",

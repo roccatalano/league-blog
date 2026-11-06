@@ -157,6 +157,21 @@
     "2026-11-04T12:17:55.958000+00:00",
     "2026-11-05T12:17:01.440000+00:00"
    ]
+  },
+  "Ajay Mitchell|Jalen Johnson|Jrue Holiday|Karl-Anthony Towns": {
+   "gets": {
+    "Popoviched": [
+     "Karl-Anthony Towns",
+     "Ajay Mitchell"
+    ],
+    "Derrick White Girl Wasted": [
+     "Jrue Holiday",
+     "Jalen Johnson"
+    ]
+   },
+   "dates": [
+    "2026-11-06T13:14:57.581000+00:00"
+   ]
   }
  },
  "Derik Queen|Paul Reed": {
@@ -351,5 +366,14 @@
    "Popoviched": 0.087,
    "mr charloooooo": -0.264
   }
+ },
+ "Ajay Mitchell|Jalen Johnson|Jrue Holiday|Karl-Anthony Towns": {
+  "first_seen": "2026-11-06",
+  "history": [],
+  "at_time": {
+   "Derrick White Girl Wasted": -0.102,
+   "Popoviched": 0.022
+  },
+  "at_time_source": "model when first seen"
  }
 }

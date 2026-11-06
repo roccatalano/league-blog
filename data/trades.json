@@ -1,7 +1,27 @@
 {
- "updated_utc": "2026-11-06T08:58:34.980736+00:00",
+ "updated_utc": "2026-11-06T16:39:01.660411+00:00",
  "teams_order": "alphabetical",
  "trades": [
+  {
+   "key": "Ajay Mitchell|Jalen Johnson|Jrue Holiday|Karl-Anthony Towns",
+   "accepted_utc": "2026-11-06T13:14:57.581000+00:00",
+   "status": "in league review",
+   "gets": {
+    "Popoviched": [
+     "Karl-Anthony Towns",
+     "Ajay Mitchell"
+    ],
+    "Derrick White Girl Wasted": [
+     "Jrue Holiday",
+     "Jalen Johnson"
+    ]
+   },
+   "at_time": {
+    "Derrick White Girl Wasted": -0.102,
+    "Popoviched": 0.022
+   },
+   "post": null
+  },
   {
    "key": "Darius Garland|Jamal Murray|Jaylen Brown|Paul Reed",
    "accepted_utc": "2026-11-04T12:26:26.429000+00:00",

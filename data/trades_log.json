@@ -24,8 +24,8 @@
    ],
    [
     "2026-11-07",
-    0.07,
-    -0.107
+    0.072,
+    -0.108
    ]
   ],
   "at_time": {
@@ -36,8 +36,8 @@
   "at_time_source": "trade review",
   "now": {
    "date": "2026-11-07",
-   "Viva La Raza!": 0.07,
-   "mr charloooooo": -0.107
+   "Viva La Raza!": 0.072,
+   "mr charloooooo": -0.108
   }
  },
  "_trades": {
@@ -189,7 +189,8 @@
     ]
    },
    "dates": [
-    "2026-11-06T21:26:32.530000+00:00"
+    "2026-11-06T21:26:32.530000+00:00",
+    "2026-11-07T21:26:01.464000+00:00"
    ]
   }
  },
@@ -301,8 +302,8 @@
    ],
    [
     "2026-11-07",
-    0.2,
-    -0.184
+    0.143,
+    -0.115
    ]
   ],
   "at_time": {
@@ -312,8 +313,8 @@
   "at_time_source": "model when first seen",
   "now": {
    "date": "2026-11-07",
-   "JAReusalem": 0.2,
-   "Viva La Raza!": -0.184
+   "JAReusalem": 0.143,
+   "Viva La Raza!": -0.115
   }
  },
  "Darius Acuff Jr.|Dejounte Murray|Naz Reid": {
@@ -331,8 +332,8 @@
    ],
    [
     "2026-11-07",
-    0.616,
-    -0.636
+    0.617,
+    -0.718
    ]
   ],
   "at_time": {
@@ -342,8 +343,8 @@
   "at_time_source": "model when first seen",
   "now": {
    "date": "2026-11-07",
-   "Popoviched": 0.616,
-   "Torta Pounders": -0.636
+   "Popoviched": 0.617,
+   "Torta Pounders": -0.718
   }
  },
  "Darius Garland|Jamal Murray|Jaylen Brown|Paul Reed": {
@@ -411,8 +412,8 @@
   "history": [
    [
     "2026-11-07",
-    -0.14,
-    0.061
+    -0.136,
+    0.053
    ]
   ],
   "at_time": {
@@ -422,17 +423,28 @@
   "at_time_source": "model when first seen",
   "now": {
    "date": "2026-11-07",
-   "Derrick White Girl Wasted": -0.14,
-   "Popoviched": 0.061
+   "Derrick White Girl Wasted": -0.136,
+   "Popoviched": 0.053
   }
  },
  "Neemias Queta|Paul Reed": {
   "first_seen": "2026-11-06",
-  "history": [],
+  "history": [
+   [
+    "2026-11-07",
+    -0.057,
+    0.04
+   ]
+  ],
   "at_time": {
    "Torta Pounders": -0.076,
    "Viva La Raza!": 0.051
   },
-  "at_time_source": "model when first seen"
+  "at_time_source": "model when first seen",
+  "now": {
+   "date": "2026-11-07",
+   "Torta Pounders": -0.057,
+   "Viva La Raza!": 0.04
+  }
  }
 }

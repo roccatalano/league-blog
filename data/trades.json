@@ -1,11 +1,11 @@
 {
- "updated_utc": "2026-11-07T19:19:06.147763+00:00",
+ "updated_utc": "2026-11-07T22:53:14.955364+00:00",
  "teams_order": "alphabetical",
  "trades": [
   {
    "key": "Neemias Queta|Paul Reed",
    "accepted_utc": "2026-11-06T21:26:32.530000+00:00",
-   "status": "in league review",
+   "status": "processed",
    "gets": {
     "Torta Pounders": [
      "Paul Reed"
@@ -18,7 +18,98 @@
     "Torta Pounders": -0.076,
     "Viva La Raza!": 0.051
    },
-   "post": null
+   "post": null,
+   "so_far": {
+    "from": "2026-11-08",
+    "days": 0,
+    "score": [
+     0,
+     0,
+     9
+    ],
+    "cats": [
+     {
+      "cat": "PTS",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "REB",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "AST",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "STL",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "BLK",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "3PM",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "TO",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "FG%",
+      "got": null,
+      "gave": null,
+      "res": 0
+     },
+     {
+      "cat": "FT%",
+      "got": null,
+      "gave": null,
+      "res": 0
+     }
+    ],
+    "games": {
+     "Torta Pounders": 0,
+     "Viva La Raza!": 0
+    },
+    "series": [],
+    "wins_added": {
+     "Torta Pounders": 0.0,
+     "Viva La Raza!": 0.0
+    },
+    "grade": {
+     "Torta Pounders": "Too early",
+     "Viva La Raza!": "Too early"
+    }
+   },
+   "now": {
+    "date": "2026-11-07",
+    "Torta Pounders": -0.057,
+    "Viva La Raza!": 0.04
+   },
+   "now_frozen": false,
+   "now_history": [
+    [
+     "2026-11-07",
+     -0.057,
+     0.04
+    ]
+   ]
   },
   {
    "key": "Ajay Mitchell|Jalen Johnson|Jrue Holiday|Karl-Anthony Towns",
@@ -119,15 +210,15 @@
    },
    "now": {
     "date": "2026-11-07",
-    "Derrick White Girl Wasted": -0.14,
-    "Popoviched": 0.061
+    "Derrick White Girl Wasted": -0.136,
+    "Popoviched": 0.053
    },
    "now_frozen": false,
    "now_history": [
     [
      "2026-11-07",
-     -0.14,
-     0.061
+     -0.136,
+     0.053
     ]
    ]
   },
@@ -240,7 +331,7 @@
     "Derrick White Girl Wasted": -0.168,
     "Viva La Raza!": 0.073
    },
-   "now_frozen": false,
+   "now_frozen": true,
    "now_history": [
     [
      "2026-11-05",
@@ -475,12 +566,12 @@
      [
       "2026-11-06",
       -2,
-      -0.001,
+      -0.002,
       -0.001
      ]
     ],
     "wins_added": {
-     "Popoviched": -0.001,
+     "Popoviched": -0.002,
      "Torta Pounders": -0.001
     },
     "grade": {
@@ -490,8 +581,8 @@
    },
    "now": {
     "date": "2026-11-07",
-    "Popoviched": 0.616,
-    "Torta Pounders": -0.636
+    "Popoviched": 0.617,
+    "Torta Pounders": -0.718
    },
    "now_frozen": false,
    "now_history": [
@@ -507,8 +598,8 @@
     ],
     [
      "2026-11-07",
-     0.616,
-     -0.636
+     0.617,
+     -0.718
     ]
    ]
   },
@@ -610,12 +701,12 @@
       "2026-11-06",
       -4,
       -0.02,
-      0.02
+      0.019
      ]
     ],
     "wins_added": {
      "JAReusalem": -0.02,
-     "Viva La Raza!": 0.02
+     "Viva La Raza!": 0.019
     },
     "grade": {
      "JAReusalem": "Too early",
@@ -624,8 +715,8 @@
    },
    "now": {
     "date": "2026-11-07",
-    "JAReusalem": 0.2,
-    "Viva La Raza!": -0.184
+    "JAReusalem": 0.143,
+    "Viva La Raza!": -0.115
    },
    "now_frozen": false,
    "now_history": [
@@ -646,8 +737,8 @@
     ],
     [
      "2026-11-07",
-     0.2,
-     -0.184
+     0.143,
+     -0.115
     ]
    ]
   },
@@ -754,12 +845,12 @@
      [
       "2026-11-06",
       -3,
-      -0.086,
+      -0.083,
       0.074
      ]
     ],
     "wins_added": {
-     "Viva La Raza!": -0.086,
+     "Viva La Raza!": -0.083,
      "mr charloooooo": 0.074
     },
     "grade": {
@@ -769,8 +860,8 @@
    },
    "now": {
     "date": "2026-11-07",
-    "Viva La Raza!": 0.07,
-    "mr charloooooo": -0.107
+    "Viva La Raza!": 0.072,
+    "mr charloooooo": -0.108
    },
    "now_frozen": false,
    "now_history": [
@@ -796,8 +887,8 @@
     ],
     [
      "2026-11-07",
-     0.07,
-     -0.107
+     0.072,
+     -0.108
     ]
    ]
   },
@@ -940,12 +1031,12 @@
      [
       "2026-11-06",
       1,
-      0.033,
+      0.034,
       -0.024
      ]
     ],
     "wins_added": {
-     "JAReusalem": 0.033,
+     "JAReusalem": 0.034,
      "Stairway to Devin": -0.024
     },
     "grade": {
@@ -1063,26 +1154,26 @@
      [
       "2026-10-29",
       -5,
-      -0.025,
-      0.026
+      -0.024,
+      0.025
      ],
      [
       "2026-10-30",
       -4,
       -0.022,
-      0.024
+      0.025
      ],
      [
       "2026-10-31",
       -3,
-      -0.032,
-      0.034
+      -0.031,
+      0.036
      ],
      [
       "2026-11-01",
       -1,
-      -0.019,
-      0.023
+      -0.018,
+      0.024
      ],
      [
       "2026-11-02",
@@ -1094,30 +1185,30 @@
       "2026-11-03",
       -1,
       -0.015,
-      0.019
+      0.018
      ],
      [
       "2026-11-04",
       0,
       -0.003,
-      0.007
+      0.008
      ],
      [
       "2026-11-05",
       0,
       -0.003,
-      0.007
+      0.008
      ],
      [
       "2026-11-06",
       -1,
       -0.026,
-      0.029
+      0.03
      ]
     ],
     "wins_added": {
      "Al-Shaida": -0.026,
-     "Viva La Raza!": 0.029
+     "Viva La Raza!": 0.03
     },
     "grade": {
      "Al-Shaida": "Too early",
@@ -1244,8 +1335,8 @@
      [
       "2026-10-29",
       5,
-      0.046,
-      -0.041
+      0.045,
+      -0.04
      ],
      [
       "2026-10-30",
@@ -1256,14 +1347,14 @@
      [
       "2026-10-31",
       5,
-      0.046,
+      0.047,
       -0.04
      ],
      [
       "2026-11-01",
       5,
       0.047,
-      -0.041
+      -0.04
      ],
      [
       "2026-11-02",
@@ -1280,25 +1371,25 @@
      [
       "2026-11-04",
       1,
-      0.018,
+      0.019,
       -0.013
      ],
      [
       "2026-11-05",
       1,
-      0.018,
+      0.019,
       -0.013
      ],
      [
       "2026-11-06",
       3,
       0.021,
-      -0.016
+      -0.017
      ]
     ],
     "wins_added": {
      "Derrick White Girl Wasted": 0.021,
-     "Stairway to Devin": -0.016
+     "Stairway to Devin": -0.017
     },
     "grade": {
      "Derrick White Girl Wasted": "Too early",

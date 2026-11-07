@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-07T19:19:21.000185+00:00",
+ "updated_utc": "2026-11-07T22:53:22.264037+00:00",
  "today_et": "2026-11-07",
  "players": [
   {
@@ -23,22 +23,6 @@
    }
   },
   {
-   "name": "Trey Alexander",
-   "nba_team": "UTAH",
-   "pos": "G",
-   "status": "Out",
-   "injury": "Left Knee",
-   "return_date": "2026-11-06",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Alexander won't play Wednesday against the Grizzlies due to a left knee bone bruise.",
-   "note_date": "2026-10-24",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
-  },
-  {
    "name": "Anthony Davis",
    "nba_team": "WSH",
    "pos": "F",
@@ -48,7 +32,7 @@
    "days_out": 0,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Davis (ankle) is listed as out for Friday's game against the Hawks.",
+   "note": "Davis (ankle) is questionable for Saturday's game against the Thunder.",
    "note_date": "2026-11-07",
    "fantasy_team": "Gets On Base",
    "on_ir": false,
@@ -56,26 +40,6 @@
     "PTS": 22.9,
     "REB": 10.6,
     "AST": 2.8
-   }
-  },
-  {
-   "name": "DeMar DeRozan",
-   "nba_team": "DEN",
-   "pos": "G",
-   "status": "Day-To-Day",
-   "injury": "Back",
-   "return_date": "2026-11-07",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "DeRozan (back) is probable for Saturday's game against the Pacers.",
-   "note_date": "2026-11-06",
-   "fantasy_team": "The haliban",
-   "on_ir": false,
-   "per_game": {
-    "PTS": 15.6,
-    "REB": 2.7,
-    "AST": 3.5
    }
   },
   {
@@ -119,7 +83,7 @@
    "nba_team": "GS",
    "pos": "F",
    "status": "Day-To-Day",
-   "injury": "Knee",
+   "injury": "Left Knee",
    "return_date": "2026-11-07",
    "days_out": 0,
    "games_missed": 0,
@@ -129,26 +93,6 @@
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
-  },
-  {
-   "name": "Jalen Johnson",
-   "nba_team": "ATL",
-   "pos": "F",
-   "status": "Out",
-   "injury": "Left Ankle",
-   "return_date": "2026-11-07",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Johnson (ankle) is probable for Saturday's game against Brooklyn.",
-   "note_date": "2026-11-07",
-   "fantasy_team": "Derrick White Girl Wasted",
-   "on_ir": false,
-   "per_game": {
-    "PTS": 21.5,
-    "REB": 10.1,
-    "AST": 7.9
-   }
   },
   {
    "name": "Jordan Goodwin",
@@ -169,22 +113,6 @@
     "REB": 4.5,
     "AST": 2.3
    }
-  },
-  {
-   "name": "Kelly Oubre Jr.",
-   "nba_team": "IND",
-   "pos": "G",
-   "status": "Day-To-Day",
-   "injury": "Left Calf",
-   "return_date": "2026-11-07",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Oubre (calf) is questionable for Saturday's game against Denver.",
-   "note_date": "2026-11-06",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
   },
   {
    "name": "Noah Clowney",
@@ -214,22 +142,6 @@
    "timeframe": "Days",
    "note": "Fleming (ankle) is questionable for Saturday's game against the Rockets.",
    "note_date": "2026-11-07",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
-  },
-  {
-   "name": "T.J. McConnell",
-   "nba_team": "IND",
-   "pos": "G",
-   "status": "Out",
-   "injury": "Right Hamstring",
-   "return_date": "2026-11-07",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "McConnell (hamstring) is questionable for Saturday's game against Denver.",
-   "note_date": "2026-11-06",
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
@@ -291,17 +203,33 @@
    }
   },
   {
-   "name": "Isaiah Joe",
+   "name": "Elijah Harkless",
    "nba_team": "DET",
    "pos": "G",
-   "status": "Out",
-   "injury": "Right Hip",
+   "status": "Day-To-Day",
+   "injury": "Not Injury Related",
    "return_date": "2026-11-08",
    "days_out": 1,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Joe (hip) has been ruled out for Wednesday's game against Philadelphia.",
-   "note_date": "2026-11-03",
+   "note": "Harkless signed a two-way contract with the Pistons, Keith Smith of Spotrac.com reports.",
+   "note_date": "2026-11-07",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
+  },
+  {
+   "name": "Isaac Jones",
+   "nba_team": "DET",
+   "pos": "C",
+   "status": "Day-To-Day",
+   "injury": "Not Injury Related",
+   "return_date": "2026-11-08",
+   "days_out": 1,
+   "games_missed": 0,
+   "timeframe": "Days",
+   "note": "Jones posted 18 points (6-14 FG, 0-3 3Pt, 3-3 FT), 10 rebounds, an assist, two steals and two blocks in Wednesday's 100-88 Summer League loss to the Suns.",
+   "note_date": "2026-11-07",
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
@@ -311,13 +239,13 @@
    "nba_team": "CHI",
    "pos": "F",
    "status": "Day-To-Day",
-   "injury": "Left Hand",
+   "injury": "Left Finger",
    "return_date": "2026-11-08",
    "days_out": 1,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Smith (hand) won't return to Wednesday's game against the Knicks.",
-   "note_date": "2026-11-05",
+   "note": "Smith (finger) is probable for Sunday's game against Philadelphia.",
+   "note_date": "2026-11-07",
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
@@ -339,6 +267,26 @@
    "per_game": null
   },
   {
+   "name": "Luka Doncic",
+   "nba_team": "LAL",
+   "pos": "G",
+   "status": "Day-To-Day",
+   "injury": "Back",
+   "return_date": "2026-11-08",
+   "days_out": 1,
+   "games_missed": 0,
+   "timeframe": "Days",
+   "note": "Doncic (back) is questionable for Sunday's game against the Pistons.",
+   "note_date": "2026-11-07",
+   "fantasy_team": "Al-Shaida",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 35.7,
+    "REB": 8.2,
+    "AST": 8.4
+   }
+  },
+  {
    "name": "Nic Claxton",
    "nba_team": "CHI",
    "pos": "C",
@@ -348,8 +296,8 @@
    "days_out": 1,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Head coach Tiago Splittler said Friday that Claxton (hamstring) is expected to make his season debut Sunday against the 76ers, per Joel Lorenzi of The Athletic.",
-   "note_date": "2026-11-06",
+   "note": "Claxton (hamstring) has been downgraded to questionable for Sunday's game against the 76ers.",
+   "note_date": "2026-11-07",
    "fantasy_team": "Stairway to Devin",
    "on_ir": false,
    "per_game": {
@@ -379,6 +327,22 @@
    }
   },
   {
+   "name": "Tobe Awaka",
+   "nba_team": "CHI",
+   "pos": "F",
+   "status": "Day-To-Day",
+   "injury": "Left Knee",
+   "return_date": "2026-11-08",
+   "days_out": 1,
+   "games_missed": 0,
+   "timeframe": "Days",
+   "note": "Awaka (knee) is questionable for Sundays' game against the 76ers.",
+   "note_date": "2026-11-07",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
+  },
+  {
    "name": "Yanic Konan Niederhauser",
    "nba_team": "LAC",
    "pos": "C",
@@ -390,22 +354,6 @@
    "timeframe": "Days",
    "note": "The Clippers recalled Niederhauser (foot) from the G League's San Diego Clippers on Sunday.",
    "note_date": "2026-11-02",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
-  },
-  {
-   "name": "Zach Collins",
-   "nba_team": "CHI",
-   "pos": "F",
-   "status": "Day-To-Day",
-   "injury": "Illness",
-   "return_date": "2026-11-08",
-   "days_out": 1,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Collins didn't practice Friday due to an illness, per K.C. Johnson of Chicago Sports Network.",
-   "note_date": "2026-11-06",
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
@@ -517,6 +465,22 @@
     "REB": 3.8,
     "AST": 5.8
    }
+  },
+  {
+   "name": "Isaiah Joe",
+   "nba_team": "DET",
+   "pos": "G",
+   "status": "Out",
+   "injury": "Right Hip",
+   "return_date": "2026-11-09",
+   "days_out": 2,
+   "games_missed": 1,
+   "timeframe": "Days",
+   "note": "Joe (hip) has been ruled out for Sunday's game against the Lakers.",
+   "note_date": "2026-11-07",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
   },
   {
    "name": "Isaiah Stewart",
@@ -807,6 +771,26 @@
    }
   },
   {
+   "name": "Desmond Bane",
+   "nba_team": "ORL",
+   "pos": "G",
+   "status": "Out",
+   "injury": "Illness",
+   "return_date": "2026-11-10",
+   "days_out": 3,
+   "games_missed": 1,
+   "timeframe": "1 week",
+   "note": "Bane (illness) has been ruled out for Saturday's game against the Warriors.",
+   "note_date": "2026-11-07",
+   "fantasy_team": "Popoviched",
+   "on_ir": true,
+   "per_game": {
+    "PTS": 19.6,
+    "REB": 4.5,
+    "AST": 3.9
+   }
+  },
+  {
    "name": "Jalen Suggs",
    "nba_team": "ORL",
    "pos": "G",
@@ -836,7 +820,7 @@
    "days_out": 3,
    "games_missed": 1,
    "timeframe": "1 week",
-   "note": "Williams (back) has been ruled out for Friday's game against the Grizzlies.",
+   "note": "Williams (back) has been ruled out for Saturday's game against the Wizards, Brandon Rahbar of DailyThunder.com reports.",
    "note_date": "2026-11-07",
    "fantasy_team": null,
    "on_ir": false,
@@ -915,6 +899,26 @@
    "per_game": null
   },
   {
+   "name": "Robert Williams III",
+   "nba_team": "POR",
+   "pos": "C",
+   "status": "Out",
+   "injury": "Rest",
+   "return_date": "2026-11-10",
+   "days_out": 3,
+   "games_missed": 1,
+   "timeframe": "1 week",
+   "note": "Williams (rest) won't play in Saturday's game against the Spurs.",
+   "note_date": "2026-11-07",
+   "fantasy_team": "JAReusalem",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 7.5,
+    "REB": 7.5,
+    "AST": 1.2
+   }
+  },
+  {
    "name": "Egor Demin",
    "nba_team": "BKN",
    "pos": "G",
@@ -933,6 +937,22 @@
     "REB": 3.7,
     "AST": 4.0
    }
+  },
+  {
+   "name": "Zach Collins",
+   "nba_team": "CHI",
+   "pos": "F",
+   "status": "Out",
+   "injury": "Illness",
+   "return_date": "2026-11-11",
+   "days_out": 4,
+   "games_missed": 1,
+   "timeframe": "1 week",
+   "note": "Collins (illness) is out for Sunday's game against Philadelphia.",
+   "note_date": "2026-11-07",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
   },
   {
    "name": "Dereck Lively II",
@@ -1012,8 +1032,8 @@
    "days_out": 6,
    "games_missed": 3,
    "timeframe": "1 week",
-   "note": "Haliburton (hamstring) will miss at least the next two weeks of action, Shams Charania of ESPN reports.",
-   "note_date": "2026-10-28",
+   "note": "Haliburton (hamstring) is progressing well but does not have a timetable to return, Dustin Dopirak of The Indianapolis Star reports.",
+   "note_date": "2026-11-07",
    "fantasy_team": "Torta Pounders",
    "on_ir": true,
    "per_game": {

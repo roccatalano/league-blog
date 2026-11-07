@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-07T08:11:22.912880+00:00",
+ "updated_utc": "2026-11-07T14:59:18.108548+00:00",
  "offers": [
   {
    "id": "42efff36-2713-4458-9c7b-111eb0705ea0",
@@ -237,7 +237,7 @@
     "Gets On Base",
     "Popoviched"
    ],
-   "outcome": "pending",
+   "outcome": "expired",
    "moves": [
     {
      "player": "John Collins",

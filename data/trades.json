@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-07T08:11:20.310515+00:00",
+ "updated_utc": "2026-11-07T14:59:15.432578+00:00",
  "teams_order": "alphabetical",
  "trades": [
   {
@@ -23,7 +23,7 @@
   {
    "key": "Ajay Mitchell|Jalen Johnson|Jrue Holiday|Karl-Anthony Towns",
    "accepted_utc": "2026-11-06T13:14:57.581000+00:00",
-   "status": "in league review",
+   "status": "processed",
    "gets": {
     "Popoviched": [
      "Karl-Anthony Towns",
@@ -38,7 +38,98 @@
     "Derrick White Girl Wasted": -0.102,
     "Popoviched": 0.022
    },
-   "post": null
+   "post": null,
+   "so_far": {
+    "from": "2026-11-08",
+    "days": 0,
+    "score": [
+     0,
+     0,
+     9
+    ],
+    "cats": [
+     {
+      "cat": "PTS",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "REB",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "AST",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "STL",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "BLK",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "3PM",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "TO",
+      "got": 0.0,
+      "gave": 0.0,
+      "res": 0
+     },
+     {
+      "cat": "FG%",
+      "got": null,
+      "gave": null,
+      "res": 0
+     },
+     {
+      "cat": "FT%",
+      "got": null,
+      "gave": null,
+      "res": 0
+     }
+    ],
+    "games": {
+     "Derrick White Girl Wasted": 0,
+     "Popoviched": 0
+    },
+    "series": [],
+    "wins_added": {
+     "Derrick White Girl Wasted": 0.0,
+     "Popoviched": 0.0
+    },
+    "grade": {
+     "Derrick White Girl Wasted": "Too early",
+     "Popoviched": "Too early"
+    }
+   },
+   "now": {
+    "date": "2026-11-07",
+    "Derrick White Girl Wasted": -0.133,
+    "Popoviched": 0.062
+   },
+   "now_frozen": false,
+   "now_history": [
+    [
+     "2026-11-07",
+     -0.133,
+     0.062
+    ]
+   ]
   },
   {
    "key": "Darius Garland|Jamal Murray|Jaylen Brown|Paul Reed",
@@ -131,12 +222,12 @@
      [
       "2026-11-06",
       4,
-      0.019,
+      0.018,
       -0.025
      ]
     ],
     "wins_added": {
-     "Derrick White Girl Wasted": 0.019,
+     "Derrick White Girl Wasted": 0.018,
      "Viva La Raza!": -0.025
     },
     "grade": {
@@ -146,8 +237,8 @@
    },
    "now": {
     "date": "2026-11-07",
-    "Derrick White Girl Wasted": -0.095,
-    "Viva La Raza!": 0.068
+    "Derrick White Girl Wasted": -0.148,
+    "Viva La Raza!": 0.074
    },
    "now_frozen": false,
    "now_history": [
@@ -163,8 +254,8 @@
     ],
     [
      "2026-11-07",
-     -0.095,
-     0.068
+     -0.148,
+     0.074
     ]
    ]
   },
@@ -275,7 +366,7 @@
     "Popoviched": 0.134,
     "mr charloooooo": -0.256
    },
-   "now_frozen": false,
+   "now_frozen": true,
    "now_history": [
     [
      "2026-11-05",
@@ -384,12 +475,12 @@
      [
       "2026-11-06",
       -2,
-      -0.002,
+      -0.001,
       -0.001
      ]
     ],
     "wins_added": {
-     "Popoviched": -0.002,
+     "Popoviched": -0.001,
      "Torta Pounders": -0.001
     },
     "grade": {
@@ -399,7 +490,7 @@
    },
    "now": {
     "date": "2026-11-07",
-    "Popoviched": 0.638,
+    "Popoviched": 0.62,
     "Torta Pounders": -0.638
    },
    "now_frozen": false,
@@ -416,7 +507,7 @@
     ],
     [
      "2026-11-07",
-     0.638,
+     0.62,
      -0.638
     ]
    ]
@@ -533,8 +624,8 @@
    },
    "now": {
     "date": "2026-11-07",
-    "JAReusalem": 0.19,
-    "Viva La Raza!": -0.176
+    "JAReusalem": 0.195,
+    "Viva La Raza!": -0.182
    },
    "now_frozen": false,
    "now_history": [
@@ -555,8 +646,8 @@
     ],
     [
      "2026-11-07",
-     0.19,
-     -0.176
+     0.195,
+     -0.182
     ]
    ]
   },
@@ -663,13 +754,13 @@
      [
       "2026-11-06",
       -3,
-      -0.085,
-      0.073
+      -0.086,
+      0.074
      ]
     ],
     "wins_added": {
-     "Viva La Raza!": -0.085,
-     "mr charloooooo": 0.073
+     "Viva La Raza!": -0.086,
+     "mr charloooooo": 0.074
     },
     "grade": {
      "Viva La Raza!": "Too early",
@@ -678,8 +769,8 @@
    },
    "now": {
     "date": "2026-11-07",
-    "Viva La Raza!": 0.083,
-    "mr charloooooo": -0.103
+    "Viva La Raza!": 0.071,
+    "mr charloooooo": -0.1
    },
    "now_frozen": false,
    "now_history": [
@@ -705,8 +796,8 @@
     ],
     [
      "2026-11-07",
-     0.083,
-     -0.103
+     0.071,
+     -0.1
     ]
    ]
   },
@@ -990,7 +1081,7 @@
      [
       "2026-11-01",
       -1,
-      -0.018,
+      -0.019,
       0.022
      ],
      [
@@ -1002,20 +1093,20 @@
      [
       "2026-11-03",
       -1,
-      -0.015,
-      0.018
+      -0.016,
+      0.019
      ],
      [
       "2026-11-04",
       0,
-      -0.002,
+      -0.003,
       0.006
      ],
      [
       "2026-11-05",
       0,
       -0.003,
-      0.006
+      0.007
      ],
      [
       "2026-11-06",
@@ -1141,73 +1232,73 @@
      [
       "2026-10-27",
       5,
-      0.025,
+      0.024,
       -0.022
      ],
      [
       "2026-10-28",
       8,
-      0.045,
+      0.043,
       -0.039
      ],
      [
       "2026-10-29",
       5,
-      0.047,
+      0.046,
       -0.041
      ],
      [
       "2026-10-30",
       8,
-      0.058,
+      0.057,
       -0.051
      ],
      [
       "2026-10-31",
       5,
-      0.046,
+      0.047,
       -0.04
      ],
      [
       "2026-11-01",
       5,
-      0.047,
-      -0.04
+      0.048,
+      -0.041
      ],
      [
       "2026-11-02",
       4,
-      0.042,
+      0.043,
       -0.036
      ],
      [
       "2026-11-03",
       4,
-      0.042,
+      0.043,
       -0.036
      ],
      [
       "2026-11-04",
       1,
-      0.017,
-      -0.012
+      0.02,
+      -0.013
      ],
      [
       "2026-11-05",
       1,
-      0.017,
-      -0.012
+      0.02,
+      -0.013
      ],
      [
       "2026-11-06",
       3,
-      0.021,
-      -0.016
+      0.023,
+      -0.017
      ]
     ],
     "wins_added": {
-     "Derrick White Girl Wasted": 0.021,
-     "Stairway to Devin": -0.016
+     "Derrick White Girl Wasted": 0.023,
+     "Stairway to Devin": -0.017
     },
     "grade": {
      "Derrick White Girl Wasted": "Too early",

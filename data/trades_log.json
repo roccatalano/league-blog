@@ -24,8 +24,8 @@
    ],
    [
     "2026-11-07",
-    0.071,
-    -0.1
+    0.07,
+    -0.107
    ]
   ],
   "at_time": {
@@ -36,8 +36,8 @@
   "at_time_source": "trade review",
   "now": {
    "date": "2026-11-07",
-   "Viva La Raza!": 0.071,
-   "mr charloooooo": -0.1
+   "Viva La Raza!": 0.07,
+   "mr charloooooo": -0.107
   }
  },
  "_trades": {
@@ -301,8 +301,8 @@
    ],
    [
     "2026-11-07",
-    0.195,
-    -0.182
+    0.2,
+    -0.184
    ]
   ],
   "at_time": {
@@ -312,8 +312,8 @@
   "at_time_source": "model when first seen",
   "now": {
    "date": "2026-11-07",
-   "JAReusalem": 0.195,
-   "Viva La Raza!": -0.182
+   "JAReusalem": 0.2,
+   "Viva La Raza!": -0.184
   }
  },
  "Darius Acuff Jr.|Dejounte Murray|Naz Reid": {
@@ -331,8 +331,8 @@
    ],
    [
     "2026-11-07",
-    0.62,
-    -0.638
+    0.616,
+    -0.636
    ]
   ],
   "at_time": {
@@ -342,8 +342,8 @@
   "at_time_source": "model when first seen",
   "now": {
    "date": "2026-11-07",
-   "Popoviched": 0.62,
-   "Torta Pounders": -0.638
+   "Popoviched": 0.616,
+   "Torta Pounders": -0.636
   }
  },
  "Darius Garland|Jamal Murray|Jaylen Brown|Paul Reed": {
@@ -361,8 +361,8 @@
    ],
    [
     "2026-11-07",
-    -0.148,
-    0.074
+    -0.168,
+    0.073
    ]
   ],
   "at_time": {
@@ -372,8 +372,8 @@
   "at_time_source": "model when first seen",
   "now": {
    "date": "2026-11-07",
-   "Derrick White Girl Wasted": -0.148,
-   "Viva La Raza!": 0.074
+   "Derrick White Girl Wasted": -0.168,
+   "Viva La Raza!": 0.073
   }
  },
  "Jaxson Hayes|Jrue Holiday": {
@@ -411,8 +411,8 @@
   "history": [
    [
     "2026-11-07",
-    -0.133,
-    0.062
+    -0.14,
+    0.061
    ]
   ],
   "at_time": {
@@ -422,8 +422,8 @@
   "at_time_source": "model when first seen",
   "now": {
    "date": "2026-11-07",
-   "Derrick White Girl Wasted": -0.133,
-   "Popoviched": 0.062
+   "Derrick White Girl Wasted": -0.14,
+   "Popoviched": 0.061
   }
  },
  "Neemias Queta|Paul Reed": {

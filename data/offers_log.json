@@ -3522,6 +3522,33 @@
     "Viva La Raza!": 0.051
    },
    "rated_on": "at the time (trade tracker)"
+  },
+  "42efff36-2713-4458-9c7b-111eb0705ea0": {
+   "proposed": "2026-11-07T08:04:11.015000+00:00",
+   "proposed_by": "Viva La Raza!",
+   "teams": [
+    "Giddey up Horsey",
+    "Viva La Raza!"
+   ],
+   "moves": [
+    {
+     "player": "Kyle Kuzma",
+     "from": "Viva La Raza!",
+     "to": "Giddey up Horsey"
+    },
+    {
+     "player": "Egor Demin",
+     "from": "Giddey up Horsey",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Giddey up Horsey": -0.315,
+    "Viva La Raza!": 0.311
+   },
+   "rated_on": "2026-11-07"
   }
  },
  "outcomes": {
@@ -3894,6 +3921,11 @@
    "outcome": "accepted",
    "by": "Torta Pounders",
    "date": "2026-11-06T21:26:32.478000+00:00"
+  },
+  "92200142-3e78-49b4-b0b5-b23ed72c0f71": {
+   "outcome": "declined",
+   "by": "mr charloooooo",
+   "date": "2026-11-07T07:18:15.780000+00:00"
   }
  },
  "synced_periods": [
@@ -3915,7 +3947,8 @@
   15,
   16,
   17,
-  18
+  18,
+  19
  ],
- "last_sync": "2026-11-07T01:32:33.669733+00:00"
+ "last_sync": "2026-11-07T08:11:22.147409+00:00"
 }

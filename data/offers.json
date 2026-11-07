@@ -1,6 +1,31 @@
 {
- "updated_utc": "2026-11-07T01:32:34.084130+00:00",
+ "updated_utc": "2026-11-07T08:11:22.912880+00:00",
  "offers": [
+  {
+   "id": "42efff36-2713-4458-9c7b-111eb0705ea0",
+   "proposed": "2026-11-07T08:04:11.015000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "Giddey up Horsey",
+   "teams": [
+    "Giddey up Horsey",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Kyle Kuzma",
+     "from": "Viva La Raza!",
+     "to": "Giddey up Horsey"
+    },
+    {
+     "player": "Egor Demin",
+     "from": "Giddey up Horsey",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": 0.311,
+   "receiver_gain": -0.315
+  },
   {
    "id": "94f5d434-dcf6-491c-8663-7b4a17605f3c",
    "proposed": "2026-11-06T21:26:32.478000+00:00",
@@ -3931,13 +3956,13 @@
   },
   {
    "team": "Viva La Raza!",
-   "sent": 30,
+   "sent": 31,
    "received": 7,
-   "rated_sent": 12,
+   "rated_sent": 13,
    "sent_accepted": 1,
    "sent_declined": 0,
-   "generosity": -0.215,
-   "self_gain": 0.232,
+   "generosity": -0.223,
+   "self_gain": 0.238,
    "best_sent": {
     "id": "94f5d434-dcf6-491c-8663-7b4a17605f3c",
     "receiver": "Torta Pounders",
@@ -3992,7 +4017,7 @@
   {
    "team": "Giddey up Horsey",
    "sent": 0,
-   "received": 9,
+   "received": 10,
    "rated_sent": 0,
    "sent_accepted": 0,
    "sent_declined": 0,
@@ -4038,5 +4063,5 @@
    "worst_sent": null
   }
  ],
- "lost_before_logging": 57
+ "lost_before_logging": 58
 }

@@ -21,6 +21,11 @@
     "2026-11-06",
     0.149,
     -0.171
+   ],
+   [
+    "2026-11-07",
+    0.083,
+    -0.103
    ]
   ],
   "at_time": {
@@ -30,9 +35,9 @@
   "post": "2026-11-03-trade",
   "at_time_source": "trade review",
   "now": {
-   "date": "2026-11-06",
-   "Viva La Raza!": 0.149,
-   "mr charloooooo": -0.171
+   "date": "2026-11-07",
+   "Viva La Raza!": 0.083,
+   "mr charloooooo": -0.103
   }
  },
  "_trades": {
@@ -292,6 +297,11 @@
     "2026-11-06",
     -0.092,
     -0.212
+   ],
+   [
+    "2026-11-07",
+    0.19,
+    -0.176
    ]
   ],
   "at_time": {
@@ -300,9 +310,9 @@
   },
   "at_time_source": "model when first seen",
   "now": {
-   "date": "2026-11-06",
-   "JAReusalem": -0.092,
-   "Viva La Raza!": -0.212
+   "date": "2026-11-07",
+   "JAReusalem": 0.19,
+   "Viva La Raza!": -0.176
   }
  },
  "Darius Acuff Jr.|Dejounte Murray|Naz Reid": {
@@ -317,6 +327,11 @@
     "2026-11-06",
     0.63,
     -0.613
+   ],
+   [
+    "2026-11-07",
+    0.638,
+    -0.638
    ]
   ],
   "at_time": {
@@ -325,9 +340,9 @@
   },
   "at_time_source": "model when first seen",
   "now": {
-   "date": "2026-11-06",
-   "Popoviched": 0.63,
-   "Torta Pounders": -0.613
+   "date": "2026-11-07",
+   "Popoviched": 0.638,
+   "Torta Pounders": -0.638
   }
  },
  "Darius Garland|Jamal Murray|Jaylen Brown|Paul Reed": {
@@ -342,6 +357,11 @@
     "2026-11-06",
     -0.124,
     -0.046
+   ],
+   [
+    "2026-11-07",
+    -0.095,
+    0.068
    ]
   ],
   "at_time": {
@@ -350,9 +370,9 @@
   },
   "at_time_source": "model when first seen",
   "now": {
-   "date": "2026-11-06",
-   "Derrick White Girl Wasted": -0.124,
-   "Viva La Raza!": -0.046
+   "date": "2026-11-07",
+   "Derrick White Girl Wasted": -0.095,
+   "Viva La Raza!": 0.068
   }
  },
  "Jaxson Hayes|Jrue Holiday": {
@@ -367,6 +387,11 @@
     "2026-11-06",
     0.146,
     -0.262
+   ],
+   [
+    "2026-11-07",
+    0.134,
+    -0.256
    ]
   ],
   "at_time": {
@@ -375,9 +400,9 @@
   },
   "at_time_source": "model when first seen",
   "now": {
-   "date": "2026-11-06",
-   "Popoviched": 0.146,
-   "mr charloooooo": -0.262
+   "date": "2026-11-07",
+   "Popoviched": 0.134,
+   "mr charloooooo": -0.256
   }
  },
  "Ajay Mitchell|Jalen Johnson|Jrue Holiday|Karl-Anthony Towns": {

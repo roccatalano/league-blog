@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-07T22:53:22.264037+00:00",
+ "updated_utc": "2026-11-08T02:00:01.335438+00:00",
  "today_et": "2026-11-07",
  "players": [
   {
@@ -17,189 +17,9 @@
    "fantasy_team": "Al-Shaida",
    "on_ir": false,
    "per_game": {
-    "PTS": 8.9,
-    "REB": 8.0,
-    "AST": 2.4
-   }
-  },
-  {
-   "name": "Anthony Davis",
-   "nba_team": "WSH",
-   "pos": "F",
-   "status": "Day-To-Day",
-   "injury": "Right Ankle",
-   "return_date": "2026-11-07",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Davis (ankle) is questionable for Saturday's game against the Thunder.",
-   "note_date": "2026-11-07",
-   "fantasy_team": "Gets On Base",
-   "on_ir": false,
-   "per_game": {
-    "PTS": 22.9,
-    "REB": 10.6,
-    "AST": 2.8
-   }
-  },
-  {
-   "name": "Draymond Green",
-   "nba_team": "GS",
-   "pos": "F",
-   "status": "Day-To-Day",
-   "injury": "Right Elbow",
-   "return_date": "2026-11-07",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Green (elbow) is listed as questionable ahead of Saturday's game against Orlando.",
-   "note_date": "2026-11-06",
-   "fantasy_team": "Derrick White Girl Wasted",
-   "on_ir": false,
-   "per_game": {
-    "PTS": 6.9,
-    "REB": 5.7,
-    "AST": 6.1
-   }
-  },
-  {
-   "name": "Gary Payton II",
-   "nba_team": "GS",
-   "pos": "G",
-   "status": "Day-To-Day",
-   "injury": "Right Calf",
-   "return_date": "2026-11-07",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Payton is questionable to play Saturday against the Magic due to right calf tightness.",
-   "note_date": "2026-11-06",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
-  },
-  {
-   "name": "Gui Santos",
-   "nba_team": "GS",
-   "pos": "F",
-   "status": "Day-To-Day",
-   "injury": "Left Knee",
-   "return_date": "2026-11-07",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Santos (knee) is questionable for Saturday's game versus Orlando, per Nick Friedell of The Athletic.",
-   "note_date": "2026-11-06",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
-  },
-  {
-   "name": "Jordan Goodwin",
-   "nba_team": "PHX",
-   "pos": "G",
-   "status": "Day-To-Day",
-   "injury": "Left Calf",
-   "return_date": "2026-11-07",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Goodwin (calf) is doubtful for Saturday's game against the Rockets.",
-   "note_date": "2026-11-07",
-   "fantasy_team": "Gets On Base",
-   "on_ir": false,
-   "per_game": {
-    "PTS": 8.5,
-    "REB": 4.5,
-    "AST": 2.3
-   }
-  },
-  {
-   "name": "Noah Clowney",
-   "nba_team": "BKN",
-   "pos": "F",
-   "status": "Day-To-Day",
-   "injury": "Illness",
-   "return_date": "2026-11-07",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Clowney is listed as questionable for Saturday's game against the Hawks due to an illness.",
-   "note_date": "2026-11-07",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
-  },
-  {
-   "name": "Rasheer Fleming",
-   "nba_team": "PHX",
-   "pos": "F",
-   "status": "Day-To-Day",
-   "injury": "Left Ankle",
-   "return_date": "2026-11-07",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Fleming (ankle) is questionable for Saturday's game against the Rockets.",
-   "note_date": "2026-11-07",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
-  },
-  {
-   "name": "Adem Bona",
-   "nba_team": "PHI",
-   "pos": "C",
-   "status": "Day-To-Day",
-   "injury": "Back",
-   "return_date": "2026-11-08",
-   "days_out": 1,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Bona (neck) is listed as out for Friday's game versus the Cavaliers.",
-   "note_date": "2026-11-07",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
-  },
-  {
-   "name": "Brandon Ingram",
-   "nba_team": "LAC",
-   "pos": "F",
-   "status": "Out",
-   "injury": "Right Achilles",
-   "return_date": "2026-11-08",
-   "days_out": 1,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Ingram (Achilles) has progressed to full contact basketball activities, per NBA writer Justin Russo.",
-   "note_date": "2026-11-06",
-   "fantasy_team": "Viva La Raza!",
-   "on_ir": true,
-   "per_game": {
-    "PTS": 22.6,
-    "REB": 5.7,
-    "AST": 4.8
-   }
-  },
-  {
-   "name": "De'Andre Hunter",
-   "nba_team": "SAC",
-   "pos": "F",
-   "status": "Day-To-Day",
-   "injury": "Illness",
-   "return_date": "2026-11-08",
-   "days_out": 1,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Hunter (illness) is listed as out for Friday's game against San Antonio.",
-   "note_date": "2026-11-07",
-   "fantasy_team": "Viva La Raza!",
-   "on_ir": false,
-   "per_game": {
-    "PTS": 14.6,
-    "REB": 4.3,
-    "AST": 1.5
+    "PTS": 8.8,
+    "REB": 7.8,
+    "AST": 2.6
    }
   },
   {
@@ -260,11 +80,71 @@
    "days_out": 1,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Beringer was ruled out for the second half of Friday's game against the Pelicans due to a nasal fracture, Dane Moore of 'The Dane Moore NBA Podcast' reports.",
+   "note": "Beringer (nose) is questionable for Sunday's game against the Jazz.",
    "note_date": "2026-11-07",
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
+  },
+  {
+   "name": "Joel Embiid",
+   "nba_team": "PHI",
+   "pos": "C",
+   "status": "Day-To-Day",
+   "injury": "Right Foot",
+   "return_date": "2026-11-08",
+   "days_out": 1,
+   "games_missed": 0,
+   "timeframe": "Days",
+   "note": "Embiid (foot) is probable for Sunday's game against the Bulls.",
+   "note_date": "2026-11-07",
+   "fantasy_team": "Al-Shaida",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 24.1,
+    "REB": 8.7,
+    "AST": 4.1
+   }
+  },
+  {
+   "name": "Keegan Murray",
+   "nba_team": "SAC",
+   "pos": "F",
+   "status": "Out",
+   "injury": "Left Ankle",
+   "return_date": "2026-11-08",
+   "days_out": 1,
+   "games_missed": 0,
+   "timeframe": "Days",
+   "note": "Murray (ankle) is questionable for Sunday's game against the Heat.",
+   "note_date": "2026-11-08",
+   "fantasy_team": "Popoviched",
+   "on_ir": true,
+   "per_game": {
+    "PTS": 13.0,
+    "REB": 5.6,
+    "AST": 1.5
+   }
+  },
+  {
+   "name": "Lauri Markkanen",
+   "nba_team": "UTAH",
+   "pos": "F",
+   "status": "Day-To-Day",
+   "injury": "Right Wrist",
+   "return_date": "2026-11-08",
+   "days_out": 1,
+   "games_missed": 0,
+   "timeframe": "Days",
+   "note": "Markkanen is questionable for Sunday's game against the Timberwolves due to a right wrist sprain.",
+   "note_date": "2026-11-07",
+   "fantasy_team": "Torta Pounders",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 21.8,
+    "REB": 7.0,
+    "AST": 1.9
+   }
   },
   {
    "name": "Luka Doncic",
@@ -307,26 +187,6 @@
    }
   },
   {
-   "name": "Terrence Shannon Jr.",
-   "nba_team": "MIN",
-   "pos": "G",
-   "status": "Out",
-   "injury": "Left Hip",
-   "return_date": "2026-11-08",
-   "days_out": 1,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Shannon (hip) has been ruled out for Friday's game against New Orleans.",
-   "note_date": "2026-11-06",
-   "fantasy_team": "Al-Shaida",
-   "on_ir": true,
-   "per_game": {
-    "PTS": 10.1,
-    "REB": 2.5,
-    "AST": 1.8
-   }
-  },
-  {
    "name": "Tobe Awaka",
    "nba_team": "CHI",
    "pos": "F",
@@ -357,6 +217,26 @@
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
+  },
+  {
+   "name": "Anthony Davis",
+   "nba_team": "WSH",
+   "pos": "F",
+   "status": "Out",
+   "injury": "Right Ankle",
+   "return_date": "2026-11-09",
+   "days_out": 2,
+   "games_missed": 1,
+   "timeframe": "Days",
+   "note": "Davis (ankle) won't play Saturday against the Thunder.",
+   "note_date": "2026-11-07",
+   "fantasy_team": "Gets On Base",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 22.9,
+    "REB": 10.6,
+    "AST": 2.8
+   }
   },
   {
    "name": "Asa Newell",
@@ -575,6 +455,26 @@
    "per_game": null
   },
   {
+   "name": "Jordan Goodwin",
+   "nba_team": "PHX",
+   "pos": "G",
+   "status": "Out",
+   "injury": "Left Calf",
+   "return_date": "2026-11-09",
+   "days_out": 2,
+   "games_missed": 1,
+   "timeframe": "Days",
+   "note": "Goodwin (calf) is out for Saturday's game against the Rockets.",
+   "note_date": "2026-11-08",
+   "fantasy_team": "Gets On Base",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 8.5,
+    "REB": 4.5,
+    "AST": 2.3
+   }
+  },
+  {
    "name": "Keshon Gilbert",
    "nba_team": "ATL",
    "pos": "G",
@@ -771,6 +671,42 @@
    }
   },
   {
+   "name": "Adem Bona",
+   "nba_team": "PHI",
+   "pos": "C",
+   "status": "Out",
+   "injury": "Back",
+   "return_date": "2026-11-10",
+   "days_out": 3,
+   "games_missed": 1,
+   "timeframe": "1 week",
+   "note": "Bona (back) is out for Sunday's game in Chicago.",
+   "note_date": "2026-11-07",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
+  },
+  {
+   "name": "Brandon Ingram",
+   "nba_team": "LAC",
+   "pos": "F",
+   "status": "Out",
+   "injury": "Right Achilles",
+   "return_date": "2026-11-10",
+   "days_out": 3,
+   "games_missed": 1,
+   "timeframe": "1 week",
+   "note": "Ingram (Achilles) won't play in Sunday's game against New Orleans, Law Murray of The Athletic reports.",
+   "note_date": "2026-11-08",
+   "fantasy_team": "Viva La Raza!",
+   "on_ir": true,
+   "per_game": {
+    "PTS": 22.6,
+    "REB": 5.7,
+    "AST": 4.8
+   }
+  },
+  {
    "name": "Desmond Bane",
    "nba_team": "ORL",
    "pos": "G",
@@ -788,6 +724,26 @@
     "PTS": 19.6,
     "REB": 4.5,
     "AST": 3.9
+   }
+  },
+  {
+   "name": "Isaiah Jackson",
+   "nba_team": "LAC",
+   "pos": "F",
+   "status": "Out",
+   "injury": "Left Groin",
+   "return_date": "2026-11-10",
+   "days_out": 3,
+   "games_missed": 1,
+   "timeframe": "1 week",
+   "note": "Jackson (groin) won't suit up for Sunday's game against the Pelicans, Law Murray of The Athletic reports.",
+   "note_date": "2026-11-08",
+   "fantasy_team": "Al-Shaida",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 7.9,
+    "REB": 6.0,
+    "AST": 1.5
    }
   },
   {
@@ -860,26 +816,6 @@
     "PTS": 11.0,
     "REB": 7.6,
     "AST": 4.6
-   }
-  },
-  {
-   "name": "Keegan Murray",
-   "nba_team": "SAC",
-   "pos": "F",
-   "status": "Out",
-   "injury": "Ankle",
-   "return_date": "2026-11-10",
-   "days_out": 3,
-   "games_missed": 1,
-   "timeframe": "1 week",
-   "note": "Murray (ankle) will be re-evaluated in 10-to-14 days, NBA reporter Marc Stein reports.",
-   "note_date": "2026-10-26",
-   "fantasy_team": "Popoviched",
-   "on_ir": true,
-   "per_game": {
-    "PTS": 13.0,
-    "REB": 5.6,
-    "AST": 1.5
    }
   },
   {

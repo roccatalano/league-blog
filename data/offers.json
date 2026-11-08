@@ -1,6 +1,31 @@
 {
- "updated_utc": "2026-11-08T08:50:48.538450+00:00",
+ "updated_utc": "2026-11-08T15:43:45.452216+00:00",
  "offers": [
+  {
+   "id": "b61e71ef-06a6-4c15-8713-5354eb47c399",
+   "proposed": "2026-11-08T09:42:30.079000+00:00",
+   "sender": "Derrick White Girl Wasted",
+   "receiver": "JAReusalem",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "JAReusalem"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Darius Garland",
+     "from": "Derrick White Girl Wasted",
+     "to": "JAReusalem"
+    },
+    {
+     "player": "Dyson Daniels",
+     "from": "JAReusalem",
+     "to": "Derrick White Girl Wasted"
+    }
+   ],
+   "sender_gain": 0.104,
+   "receiver_gain": -0.09
+  },
   {
    "id": "42efff36-2713-4458-9c7b-111eb0705ea0",
    "proposed": "2026-11-07T08:04:11.015000+00:00",
@@ -3566,7 +3591,7 @@
   {
    "team": "JAReusalem",
    "sent": 6,
-   "received": 10,
+   "received": 11,
    "rated_sent": 3,
    "sent_accepted": 2,
    "sent_declined": 0,
@@ -3681,13 +3706,13 @@
   },
   {
    "team": "Derrick White Girl Wasted",
-   "sent": 17,
+   "sent": 18,
    "received": 4,
-   "rated_sent": 11,
+   "rated_sent": 12,
    "sent_accepted": 3,
    "sent_declined": 0,
-   "generosity": 0.093,
-   "self_gain": -0.126,
+   "generosity": 0.078,
+   "self_gain": -0.107,
    "best_sent": {
     "id": "81d2c045-e0d8-46be-90c2-6c945778fedf",
     "receiver": "Giddey up Horsey",
@@ -4063,5 +4088,5 @@
    "worst_sent": null
   }
  ],
- "lost_before_logging": 58
+ "lost_before_logging": 59
 }

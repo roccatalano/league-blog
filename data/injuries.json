@@ -1,39 +1,7 @@
 {
- "updated_utc": "2026-11-08T08:50:53.448197+00:00",
+ "updated_utc": "2026-11-08T15:43:54.307371+00:00",
  "today_et": "2026-11-08",
  "players": [
-  {
-   "name": "Elijah Harkless",
-   "nba_team": "DET",
-   "pos": "G",
-   "status": "Day-To-Day",
-   "injury": "Not Injury Related",
-   "return_date": "2026-11-08",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Harkless signed a two-way contract with the Pistons, Keith Smith of Spotrac.com reports.",
-   "note_date": "2026-11-07",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
-  },
-  {
-   "name": "Isaac Jones",
-   "nba_team": "DET",
-   "pos": "C",
-   "status": "Day-To-Day",
-   "injury": "Not Injury Related",
-   "return_date": "2026-11-08",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Jones posted 18 points (6-14 FG, 0-3 3Pt, 3-3 FT), 10 rebounds, an assist, two steals and two blocks in Wednesday's 100-88 Summer League loss to the Suns.",
-   "note_date": "2026-11-07",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
-  },
   {
    "name": "Jalen Smith",
    "nba_team": "CHI",
@@ -46,9 +14,13 @@
    "timeframe": "Days",
    "note": "Smith (finger) is probable for Sunday's game against Philadelphia.",
    "note_date": "2026-11-07",
-   "fantasy_team": null,
+   "fantasy_team": "Popoviched",
    "on_ir": false,
-   "per_game": null
+   "per_game": {
+    "PTS": 10.2,
+    "REB": 6.9,
+    "AST": 1.4
+   }
   },
   {
    "name": "Joan Beringer",
@@ -167,6 +139,26 @@
    }
   },
   {
+   "name": "Norman Powell",
+   "nba_team": "CHI",
+   "pos": "G",
+   "status": "Day-To-Day",
+   "injury": "Right Shoulder",
+   "return_date": "2026-11-08",
+   "days_out": 0,
+   "games_missed": 0,
+   "timeframe": "Days",
+   "note": "Powell (shoulder) is listed as questionable for Sunday's game against the 76ers.",
+   "note_date": "2026-11-08",
+   "fantasy_team": "Gets On Base",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 22.4,
+    "REB": 3.3,
+    "AST": 2.3
+   }
+  },
+  {
    "name": "Tobe Awaka",
    "nba_team": "CHI",
    "pos": "F",
@@ -258,7 +250,7 @@
    "name": "Deandre Ayton",
    "nba_team": "WSH",
    "pos": "C",
-   "status": "Out",
+   "status": "Day-To-Day",
    "injury": "Leg",
    "return_date": "2026-11-09",
    "days_out": 1,
@@ -266,13 +258,9 @@
    "timeframe": "Days",
    "note": "Ayton won't return to Saturday's game against the Thunder due to a lower leg injury.",
    "note_date": "2026-11-08",
-   "fantasy_team": "Al-Shaida",
+   "fantasy_team": null,
    "on_ir": false,
-   "per_game": {
-    "PTS": 9.0,
-    "REB": 6.5,
-    "AST": 1.0
-   }
+   "per_game": null
   },
   {
    "name": "Dennis Schroder",
@@ -886,9 +874,13 @@
    "timeframe": "1 week",
    "note": "Brown, who finished with 18 points (5-13 FG, 3-8 3Pt, 5-7 FT), one rebound, three assists and one steal over 25 minutes in Saturday's 124-121 loss to Atlanta, won't play in Sunday's game against Dallas, Erik Slater of ClutchPoints.com reports.",
    "note_date": "2026-11-08",
-   "fantasy_team": null,
+   "fantasy_team": "Viva La Raza!",
    "on_ir": false,
-   "per_game": null
+   "per_game": {
+    "PTS": 15.0,
+    "REB": 2.4,
+    "AST": 3.5
+   }
   },
   {
    "name": "Zach Collins",

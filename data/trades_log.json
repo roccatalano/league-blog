@@ -29,8 +29,8 @@
    ],
    [
     "2026-11-08",
-    0.083,
-    -0.128
+    0.078,
+    -0.131
    ]
   ],
   "at_time": {
@@ -41,8 +41,8 @@
   "at_time_source": "trade review",
   "now": {
    "date": "2026-11-08",
-   "Viva La Raza!": 0.083,
-   "mr charloooooo": -0.128
+   "Viva La Raza!": 0.078,
+   "mr charloooooo": -0.131
   }
  },
  "_trades": {
@@ -347,8 +347,8 @@
    ],
    [
     "2026-11-08",
-    0.612,
-    -0.706
+    0.602,
+    -0.711
    ]
   ],
   "at_time": {
@@ -358,8 +358,8 @@
   "at_time_source": "model when first seen",
   "now": {
    "date": "2026-11-08",
-   "Popoviched": 0.612,
-   "Torta Pounders": -0.706
+   "Popoviched": 0.602,
+   "Torta Pounders": -0.711
   }
  },
  "Darius Garland|Jamal Murray|Jaylen Brown|Paul Reed": {
@@ -432,8 +432,8 @@
    ],
    [
     "2026-11-08",
-    -0.183,
-    0.095
+    -0.181,
+    0.099
    ]
   ],
   "at_time": {
@@ -443,8 +443,8 @@
   "at_time_source": "model when first seen",
   "now": {
    "date": "2026-11-08",
-   "Derrick White Girl Wasted": -0.183,
-   "Popoviched": 0.095
+   "Derrick White Girl Wasted": -0.181,
+   "Popoviched": 0.099
   }
  },
  "Neemias Queta|Paul Reed": {
@@ -457,8 +457,8 @@
    ],
    [
     "2026-11-08",
-    -0.055,
-    0.049
+    -0.056,
+    0.056
    ]
   ],
   "at_time": {
@@ -468,8 +468,8 @@
   "at_time_source": "model when first seen",
   "now": {
    "date": "2026-11-08",
-   "Torta Pounders": -0.055,
-   "Viva La Raza!": 0.049
+   "Torta Pounders": -0.056,
+   "Viva La Raza!": 0.056
   }
  }
 }

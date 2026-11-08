@@ -3549,6 +3549,33 @@
     "Viva La Raza!": 0.311
    },
    "rated_on": "2026-11-07"
+  },
+  "b61e71ef-06a6-4c15-8713-5354eb47c399": {
+   "proposed": "2026-11-08T09:42:30.079000+00:00",
+   "proposed_by": "Derrick White Girl Wasted",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "JAReusalem"
+   ],
+   "moves": [
+    {
+     "player": "Darius Garland",
+     "from": "Derrick White Girl Wasted",
+     "to": "JAReusalem"
+    },
+    {
+     "player": "Dyson Daniels",
+     "from": "JAReusalem",
+     "to": "Derrick White Girl Wasted"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Derrick White Girl Wasted": 0.104,
+    "JAReusalem": -0.09
+   },
+   "rated_on": "2026-11-08"
   }
  },
  "outcomes": {
@@ -3926,6 +3953,11 @@
    "outcome": "declined",
    "by": "mr charloooooo",
    "date": "2026-11-07T07:18:15.780000+00:00"
+  },
+  "d42600de-5f13-4e8a-8778-9b9a780cb79e": {
+   "outcome": "declined",
+   "by": "Derrick White Girl Wasted",
+   "date": "2026-11-08T09:43:27.111000+00:00"
   }
  },
  "synced_periods": [
@@ -3951,5 +3983,5 @@
   19,
   20
  ],
- "last_sync": "2026-11-08T08:50:48.078855+00:00"
+ "last_sync": "2026-11-08T15:43:44.752787+00:00"
 }

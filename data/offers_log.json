@@ -3576,6 +3576,34 @@
     "JAReusalem": -0.09
    },
    "rated_on": "2026-11-08"
+  },
+  "efd67113-8aef-41e5-bb44-6932aa31c4f7": {
+   "proposed": "2026-11-09T10:06:12.819000+00:00",
+   "proposed_by": "Stairway to Devin",
+   "teams": [
+    "Stairway to Devin",
+    "The Serbian Empire"
+   ],
+   "moves": [
+    {
+     "player": "Immanuel Quickley",
+     "from": "The Serbian Empire",
+     "to": "Stairway to Devin"
+    },
+    {
+     "player": "Dylan Harper",
+     "from": "Stairway to Devin",
+     "to": "The Serbian Empire"
+    }
+   ],
+   "espn_status": "ACCEPTED",
+   "live_now": false,
+   "trade_key": "Dylan Harper|Immanuel Quickley",
+   "rating": {
+    "Stairway to Devin": 0.126,
+    "The Serbian Empire": -0.169
+   },
+   "rated_on": "at the time (trade tracker)"
   }
  },
  "outcomes": {
@@ -3958,6 +3986,11 @@
    "outcome": "declined",
    "by": "Derrick White Girl Wasted",
    "date": "2026-11-08T09:43:27.111000+00:00"
+  },
+  "efd67113-8aef-41e5-bb44-6932aa31c4f7": {
+   "outcome": "accepted",
+   "by": "The Serbian Empire",
+   "date": "2026-11-09T10:06:12.819000+00:00"
   }
  },
  "synced_periods": [
@@ -3981,7 +4014,8 @@
   17,
   18,
   19,
-  20
+  20,
+  21
  ],
- "last_sync": "2026-11-09T04:13:09.441100+00:00"
+ "last_sync": "2026-11-09T13:11:28.139552+00:00"
 }

@@ -1,6 +1,32 @@
 {
- "updated_utc": "2026-11-09T04:13:09.876957+00:00",
+ "updated_utc": "2026-11-09T13:11:28.461542+00:00",
  "offers": [
+  {
+   "id": "efd67113-8aef-41e5-bb44-6932aa31c4f7",
+   "proposed": "2026-11-09T10:06:12.819000+00:00",
+   "sender": "Stairway to Devin",
+   "receiver": "The Serbian Empire",
+   "teams": [
+    "Stairway to Devin",
+    "The Serbian Empire"
+   ],
+   "outcome": "accepted",
+   "moves": [
+    {
+     "player": "Immanuel Quickley",
+     "from": "The Serbian Empire",
+     "to": "Stairway to Devin"
+    },
+    {
+     "player": "Dylan Harper",
+     "from": "Stairway to Devin",
+     "to": "The Serbian Empire"
+    }
+   ],
+   "sender_gain": 0.126,
+   "receiver_gain": -0.169,
+   "decided": "2026-11-09T10:06:12.819000+00:00"
+  },
   {
    "id": "b61e71ef-06a6-4c15-8713-5354eb47c399",
    "proposed": "2026-11-08T09:42:30.079000+00:00",
@@ -3657,54 +3683,6 @@
    }
   },
   {
-   "team": "Stairway to Devin",
-   "sent": 1,
-   "received": 5,
-   "rated_sent": 1,
-   "sent_accepted": 0,
-   "sent_declined": 0,
-   "generosity": 0.115,
-   "self_gain": -0.065,
-   "best_sent": {
-    "id": "38277c0e-4a7c-428b-bb15-93c20a862848",
-    "receiver": "Popoviched",
-    "receiver_gain": 0.115,
-    "sender_gain": -0.065,
-    "moves": [
-     {
-      "player": "Derik Queen",
-      "from": "Stairway to Devin",
-      "to": "Popoviched"
-     },
-     {
-      "player": "Duncan Robinson",
-      "from": "Popoviched",
-      "to": "Stairway to Devin"
-     }
-    ],
-    "outcome": "cancelled/expired"
-   },
-   "worst_sent": {
-    "id": "38277c0e-4a7c-428b-bb15-93c20a862848",
-    "receiver": "Popoviched",
-    "receiver_gain": 0.115,
-    "sender_gain": -0.065,
-    "moves": [
-     {
-      "player": "Derik Queen",
-      "from": "Stairway to Devin",
-      "to": "Popoviched"
-     },
-     {
-      "player": "Duncan Robinson",
-      "from": "Popoviched",
-      "to": "Stairway to Devin"
-     }
-    ],
-    "outcome": "cancelled/expired"
-   }
-  },
-  {
    "team": "Derrick White Girl Wasted",
    "sent": 18,
    "received": 4,
@@ -3912,6 +3890,54 @@
    }
   },
   {
+   "team": "Stairway to Devin",
+   "sent": 2,
+   "received": 5,
+   "rated_sent": 2,
+   "sent_accepted": 1,
+   "sent_declined": 0,
+   "generosity": -0.027,
+   "self_gain": 0.03,
+   "best_sent": {
+    "id": "38277c0e-4a7c-428b-bb15-93c20a862848",
+    "receiver": "Popoviched",
+    "receiver_gain": 0.115,
+    "sender_gain": -0.065,
+    "moves": [
+     {
+      "player": "Derik Queen",
+      "from": "Stairway to Devin",
+      "to": "Popoviched"
+     },
+     {
+      "player": "Duncan Robinson",
+      "from": "Popoviched",
+      "to": "Stairway to Devin"
+     }
+    ],
+    "outcome": "cancelled/expired"
+   },
+   "worst_sent": {
+    "id": "efd67113-8aef-41e5-bb44-6932aa31c4f7",
+    "receiver": "The Serbian Empire",
+    "receiver_gain": -0.169,
+    "sender_gain": 0.126,
+    "moves": [
+     {
+      "player": "Immanuel Quickley",
+      "from": "The Serbian Empire",
+      "to": "Stairway to Devin"
+     },
+     {
+      "player": "Dylan Harper",
+      "from": "Stairway to Devin",
+      "to": "The Serbian Empire"
+     }
+    ],
+    "outcome": "accepted"
+   }
+  },
+  {
    "team": "Al-Shaida",
    "sent": 1,
    "received": 10,
@@ -4030,7 +4056,7 @@
   {
    "team": "The Serbian Empire",
    "sent": 0,
-   "received": 3,
+   "received": 4,
    "rated_sent": 0,
    "sent_accepted": 0,
    "sent_declined": 0,

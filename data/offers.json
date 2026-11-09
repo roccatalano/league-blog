@@ -1,6 +1,41 @@
 {
- "updated_utc": "2026-11-09T13:11:28.461542+00:00",
+ "updated_utc": "2026-11-09T23:05:05.323017+00:00",
  "offers": [
+  {
+   "id": "bd9f9a3b-2512-41bb-a03b-b39d038694be",
+   "proposed": "2026-11-09T22:26:08.034000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "Giddey up Horsey",
+   "teams": [
+    "Giddey up Horsey",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Bam Adebayo",
+     "from": "Viva La Raza!",
+     "to": "Giddey up Horsey"
+    },
+    {
+     "player": "Alex Caruso",
+     "from": "Viva La Raza!",
+     "to": "Giddey up Horsey"
+    },
+    {
+     "player": "Josh Giddey",
+     "from": "Giddey up Horsey",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Ivica Zubac",
+     "from": "Giddey up Horsey",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": -0.095,
+   "receiver_gain": 0.08
+  },
   {
    "id": "efd67113-8aef-41e5-bb44-6932aa31c4f7",
    "proposed": "2026-11-09T10:06:12.819000+00:00",
@@ -4007,31 +4042,41 @@
   },
   {
    "team": "Viva La Raza!",
-   "sent": 31,
+   "sent": 32,
    "received": 7,
-   "rated_sent": 13,
+   "rated_sent": 14,
    "sent_accepted": 1,
    "sent_declined": 0,
-   "generosity": -0.223,
-   "self_gain": 0.238,
+   "generosity": -0.201,
+   "self_gain": 0.215,
    "best_sent": {
-    "id": "94f5d434-dcf6-491c-8663-7b4a17605f3c",
-    "receiver": "Torta Pounders",
-    "receiver_gain": -0.076,
-    "sender_gain": 0.051,
+    "id": "bd9f9a3b-2512-41bb-a03b-b39d038694be",
+    "receiver": "Giddey up Horsey",
+    "receiver_gain": 0.08,
+    "sender_gain": -0.095,
     "moves": [
      {
-      "player": "Paul Reed",
+      "player": "Bam Adebayo",
       "from": "Viva La Raza!",
-      "to": "Torta Pounders"
+      "to": "Giddey up Horsey"
      },
      {
-      "player": "Neemias Queta",
-      "from": "Torta Pounders",
+      "player": "Alex Caruso",
+      "from": "Viva La Raza!",
+      "to": "Giddey up Horsey"
+     },
+     {
+      "player": "Josh Giddey",
+      "from": "Giddey up Horsey",
+      "to": "Viva La Raza!"
+     },
+     {
+      "player": "Ivica Zubac",
+      "from": "Giddey up Horsey",
       "to": "Viva La Raza!"
      }
     ],
-    "outcome": "accepted"
+    "outcome": "cancelled/expired"
    },
    "worst_sent": {
     "id": "0bf09e67-0309-4318-b268-eda2ad0477a0",
@@ -4068,7 +4113,7 @@
   {
    "team": "Giddey up Horsey",
    "sent": 0,
-   "received": 10,
+   "received": 11,
    "rated_sent": 0,
    "sent_accepted": 0,
    "sent_declined": 0,
@@ -4114,5 +4159,5 @@
    "worst_sent": null
   }
  ],
- "lost_before_logging": 59
+ "lost_before_logging": 60
 }

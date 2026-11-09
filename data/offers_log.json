@@ -3604,6 +3604,43 @@
     "The Serbian Empire": -0.169
    },
    "rated_on": "at the time (trade tracker)"
+  },
+  "bd9f9a3b-2512-41bb-a03b-b39d038694be": {
+   "proposed": "2026-11-09T22:26:08.034000+00:00",
+   "proposed_by": "Viva La Raza!",
+   "teams": [
+    "Giddey up Horsey",
+    "Viva La Raza!"
+   ],
+   "moves": [
+    {
+     "player": "Bam Adebayo",
+     "from": "Viva La Raza!",
+     "to": "Giddey up Horsey"
+    },
+    {
+     "player": "Alex Caruso",
+     "from": "Viva La Raza!",
+     "to": "Giddey up Horsey"
+    },
+    {
+     "player": "Josh Giddey",
+     "from": "Giddey up Horsey",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Ivica Zubac",
+     "from": "Giddey up Horsey",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Giddey up Horsey": 0.08,
+    "Viva La Raza!": -0.095
+   },
+   "rated_on": "2026-11-09"
   }
  },
  "outcomes": {
@@ -3991,6 +4028,11 @@
    "outcome": "accepted",
    "by": "The Serbian Empire",
    "date": "2026-11-09T10:06:12.819000+00:00"
+  },
+  "c89dc9b0-2d74-498e-b451-59e4f5462239": {
+   "outcome": "declined",
+   "by": "Torta Pounders",
+   "date": "2026-11-09T14:07:54.600000+00:00"
   }
  },
  "synced_periods": [
@@ -4017,5 +4059,5 @@
   20,
   21
  ],
- "last_sync": "2026-11-09T13:11:28.139552+00:00"
+ "last_sync": "2026-11-09T23:05:04.966096+00:00"
 }

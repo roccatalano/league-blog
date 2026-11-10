@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-10T13:12:47.902103+00:00",
+ "updated_utc": "2026-11-10T20:32:24.320036+00:00",
  "today_et": "2026-11-10",
  "players": [
   {
@@ -75,26 +75,6 @@
    "per_game": null
   },
   {
-   "name": "Jordan Goodwin",
-   "nba_team": "PHX",
-   "pos": "G",
-   "status": "Out",
-   "injury": "Right Calf",
-   "return_date": "2026-11-10",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Goodwin (calf) has been ruled out for Monday's game against the Spurs, Kellan Olson of ArizonaSports.com reports.",
-   "note_date": "2026-11-10",
-   "fantasy_team": "Gets On Base",
-   "on_ir": false,
-   "per_game": {
-    "PTS": 8.5,
-    "REB": 4.5,
-    "AST": 2.3
-   }
-  },
-  {
    "name": "Josh Hart",
    "nba_team": "NY",
    "pos": "G",
@@ -104,8 +84,8 @@
    "days_out": 0,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Hart is questionable for Tuesday's game against the Bucks due to right ankle soreness.",
-   "note_date": "2026-11-09",
+   "note": "Hart is doubtful for Tuesday's game against the Bucks due to an illness.",
+   "note_date": "2026-11-10",
    "fantasy_team": "Viva La Raza!",
    "on_ir": false,
    "per_game": {
@@ -135,23 +115,43 @@
    }
   },
   {
-   "name": "Lauri Markkanen",
-   "nba_team": "UTAH",
-   "pos": "F",
+   "name": "Kel'el Ware",
+   "nba_team": "MIL",
+   "pos": "C",
    "status": "Day-To-Day",
-   "injury": "Right Wrist",
+   "injury": "Left Ankle",
    "return_date": "2026-11-10",
    "days_out": 0,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Markkanen (wrist) is questionable for Tuesday's game against Miami.",
+   "note": "Ware is questionable for Tuesday's game against the Knicks due to a left ankle sprain.",
    "note_date": "2026-11-10",
-   "fantasy_team": "Torta Pounders",
+   "fantasy_team": "Popoviched",
    "on_ir": false,
    "per_game": {
-    "PTS": 21.8,
-    "REB": 7.0,
-    "AST": 1.9
+    "PTS": 11.2,
+    "REB": 9.1,
+    "AST": 0.8
+   }
+  },
+  {
+   "name": "Tristan da Silva",
+   "nba_team": "ORL",
+   "pos": "F",
+   "status": "Day-To-Day",
+   "injury": "Left Calf",
+   "return_date": "2026-11-10",
+   "days_out": 0,
+   "games_missed": 0,
+   "timeframe": "Days",
+   "note": "Da Silva is questionable for Tuesday's game against the Kings due to a left calf strain.",
+   "note_date": "2026-11-10",
+   "fantasy_team": "Popoviched",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 10.9,
+    "REB": 3.4,
+    "AST": 1.5
    }
   },
   {
@@ -206,13 +206,9 @@
    "timeframe": "Days",
    "note": "Coulibaly (hand) is out for Monday's game against the Pistons.",
    "note_date": "2026-11-10",
-   "fantasy_team": "Derrick White Girl Wasted",
+   "fantasy_team": null,
    "on_ir": false,
-   "per_game": {
-    "PTS": 9.0,
-    "REB": 3.8,
-    "AST": 1.7
-   }
+   "per_game": null
   },
   {
    "name": "Brandon Williams",
@@ -379,22 +375,6 @@
    "per_game": null
   },
   {
-   "name": "Jonathan Isaac",
-   "nba_team": "ORL",
-   "pos": "F",
-   "status": "Out",
-   "injury": "Left Knee",
-   "return_date": "2026-11-11",
-   "days_out": 1,
-   "games_missed": 1,
-   "timeframe": "Days",
-   "note": "Isaac (knee) is out for Tuesday's game against Sacramento.",
-   "note_date": "2026-11-09",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
-  },
-  {
    "name": "Keyonte George",
    "nba_team": "UTAH",
    "pos": "G",
@@ -412,6 +392,26 @@
     "PTS": 21.8,
     "REB": 3.9,
     "AST": 6.2
+   }
+  },
+  {
+   "name": "Lauri Markkanen",
+   "nba_team": "UTAH",
+   "pos": "F",
+   "status": "Out",
+   "injury": "Right Wrist",
+   "return_date": "2026-11-11",
+   "days_out": 1,
+   "games_missed": 1,
+   "timeframe": "Days",
+   "note": "Markkanen is out for Tuesday's game versus the Heat with a right wrist sprain.",
+   "note_date": "2026-11-10",
+   "fantasy_team": "Torta Pounders",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 21.8,
+    "REB": 7.0,
+    "AST": 1.9
    }
   },
   {
@@ -579,22 +579,6 @@
    }
   },
   {
-   "name": "Trendon Watford",
-   "nba_team": "NO",
-   "pos": "F",
-   "status": "Day-To-Day",
-   "injury": "Ankle",
-   "return_date": "2026-11-11",
-   "days_out": 1,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Watford (ankle) is out for Monday's game versus Utah.",
-   "note_date": "2026-11-10",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
-  },
-  {
    "name": "Trey Murphy III",
    "nba_team": "NO",
    "pos": "F",
@@ -604,7 +588,7 @@
    "days_out": 1,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Murphy (knees) has been ruled out for Monday's game against Golden State.",
+   "note": "Murphy (knee) is probable for Wednesday's game against the Nets.",
    "note_date": "2026-11-10",
    "fantasy_team": "HE IS HIM ( G.O.A.T)",
    "on_ir": false,
@@ -629,26 +613,6 @@
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
-  },
-  {
-   "name": "Zion Williamson",
-   "nba_team": "NO",
-   "pos": "F",
-   "status": "Day-To-Day",
-   "injury": "Rest",
-   "return_date": "2026-11-11",
-   "days_out": 1,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Williamson (rest) is out for Monday's game against the Warriors.",
-   "note_date": "2026-11-10",
-   "fantasy_team": "The Real OG",
-   "on_ir": false,
-   "per_game": {
-    "PTS": 22.1,
-    "REB": 5.8,
-    "AST": 3.7
-   }
   },
   {
    "name": "Adem Bona",
@@ -859,6 +823,22 @@
    "per_game": null
   },
   {
+   "name": "Trendon Watford",
+   "nba_team": "NO",
+   "pos": "F",
+   "status": "Out",
+   "injury": "Ankle",
+   "return_date": "2026-11-13",
+   "days_out": 3,
+   "games_missed": 1,
+   "timeframe": "1 week",
+   "note": "Watford (ankle) is out for Wednesday's game against the Nets.",
+   "note_date": "2026-11-10",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
+  },
+  {
    "name": "Tyrese Haliburton",
    "nba_team": "IND",
    "pos": "G",
@@ -961,6 +941,22 @@
     "REB": 3.7,
     "AST": 4.3
    }
+  },
+  {
+   "name": "Jonathan Isaac",
+   "nba_team": "ORL",
+   "pos": "F",
+   "status": "Out",
+   "injury": "Left Knee",
+   "return_date": "2026-11-16",
+   "days_out": 6,
+   "games_missed": 3,
+   "timeframe": "1 week",
+   "note": "Isaac (knee) is out for Tuesday's game against Sacramento.",
+   "note_date": "2026-11-09",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
   },
   {
    "name": "Tristan Vukcevic",
@@ -1160,8 +1156,8 @@
    "days_out": 13,
    "games_missed": 6,
    "timeframe": "1-2 weeks",
-   "note": "Leonard has completed treatment to reduce swelling in his left knee and he will be re-evaluated in one week, Brett Siegel of ClutchPoints.com reports.",
-   "note_date": "2026-11-04",
+   "note": "Leonard (knee) is continuing the reconditioning process, and another update will be provided in one week, Blake Murphy of Sportsnet.ca reports.",
+   "note_date": "2026-11-10",
    "fantasy_team": "Derrick White Girl Wasted",
    "on_ir": true,
    "per_game": {

@@ -40,7 +40,7 @@
    [
     "2026-11-10",
     0.148,
-    -0.181
+    -0.18
    ]
   ],
   "at_time": {
@@ -52,7 +52,7 @@
   "now": {
    "date": "2026-11-10",
    "Viva La Raza!": 0.148,
-   "mr charloooooo": -0.181
+   "mr charloooooo": -0.18
   }
  },
  "_trades": {
@@ -396,8 +396,8 @@
    ],
    [
     "2026-11-10",
-    0.447,
-    -0.618
+    0.449,
+    -0.617
    ]
   ],
   "at_time": {
@@ -407,8 +407,8 @@
   "at_time_source": "model when first seen",
   "now": {
    "date": "2026-11-10",
-   "Popoviched": 0.447,
-   "Torta Pounders": -0.618
+   "Popoviched": 0.449,
+   "Torta Pounders": -0.617
   }
  },
  "Darius Garland|Jamal Murray|Jaylen Brown|Paul Reed": {
@@ -491,8 +491,8 @@
    ],
    [
     "2026-11-10",
-    -0.217,
-    0.141
+    -0.251,
+    0.142
    ]
   ],
   "at_time": {
@@ -502,8 +502,8 @@
   "at_time_source": "model when first seen",
   "now": {
    "date": "2026-11-10",
-   "Derrick White Girl Wasted": -0.217,
-   "Popoviched": 0.141
+   "Derrick White Girl Wasted": -0.251,
+   "Popoviched": 0.142
   }
  },
  "Neemias Queta|Paul Reed": {
@@ -526,8 +526,8 @@
    ],
    [
     "2026-11-10",
-    -0.138,
-    0.089
+    -0.133,
+    0.092
    ]
   ],
   "at_time": {
@@ -537,8 +537,8 @@
   "at_time_source": "model when first seen",
   "now": {
    "date": "2026-11-10",
-   "Torta Pounders": -0.138,
-   "Viva La Raza!": 0.089
+   "Torta Pounders": -0.133,
+   "Viva La Raza!": 0.092
   }
  },
  "Dylan Harper|Immanuel Quickley": {
@@ -546,8 +546,8 @@
   "history": [
    [
     "2026-11-10",
-    0.133,
-    -0.176
+    0.134,
+    -0.177
    ]
   ],
   "at_time": {
@@ -557,8 +557,8 @@
   "at_time_source": "model when first seen",
   "now": {
    "date": "2026-11-10",
-   "Stairway to Devin": 0.133,
-   "The Serbian Empire": -0.176
+   "Stairway to Devin": 0.134,
+   "The Serbian Empire": -0.177
   }
  },
  "Collin Gillespie|Darius Garland|Jared McCain|Rudy Gobert": {

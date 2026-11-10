@@ -3764,6 +3764,233 @@
     "Viva La Raza!": 0.126
    },
    "rated_on": "2026-11-10"
+  },
+  "4f34ce15-1f3a-41ab-84d0-996346c9071b": {
+   "proposed": "2026-11-10T09:33:31.807000+00:00",
+   "proposed_by": "Derrick White Girl Wasted",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Gets On Base"
+   ],
+   "moves": [
+    {
+     "player": "Jared McCain",
+     "from": "Derrick White Girl Wasted",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Darius Garland",
+     "from": "Derrick White Girl Wasted",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Collin Gillespie",
+     "from": "Gets On Base",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Rudy Gobert",
+     "from": "Gets On Base",
+     "to": "Derrick White Girl Wasted"
+    }
+   ],
+   "espn_status": "PENDING",
+   "live_now": true,
+   "rating": {
+    "Derrick White Girl Wasted": -0.013,
+    "Gets On Base": 0.078
+   },
+   "rated_on": "2026-11-10"
+  },
+  "068595ed-0cab-4003-a3fd-af008349653b": {
+   "proposed": "2026-11-10T09:34:23.741000+00:00",
+   "proposed_by": "Derrick White Girl Wasted",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Gets On Base"
+   ],
+   "moves": [
+    {
+     "player": "Darius Garland",
+     "from": "Derrick White Girl Wasted",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Ace Bailey",
+     "from": "Gets On Base",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Rudy Gobert",
+     "from": "Gets On Base",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Bilal Coulibaly",
+     "from": "Derrick White Girl Wasted",
+     "to": null
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Derrick White Girl Wasted": 0.143,
+    "Gets On Base": 0.022
+   },
+   "rated_on": "2026-11-10"
+  },
+  "1b5df66a-6106-4e1b-ae42-19f46eabd808": {
+   "proposed": "2026-11-10T09:34:23.741000+00:00",
+   "proposed_by": "Gets On Base",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Gets On Base"
+   ],
+   "moves": [
+    {
+     "player": "Rudy Gobert",
+     "from": "Gets On Base",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Ace Bailey",
+     "from": "Gets On Base",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Draymond Green",
+     "from": "Derrick White Girl Wasted",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Darius Garland",
+     "from": "Derrick White Girl Wasted",
+     "to": "Gets On Base"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Derrick White Girl Wasted": 0.001,
+    "Gets On Base": 0.159
+   },
+   "rated_on": "2026-11-10"
+  },
+  "ee846a25-5271-4dec-8e97-0eb218c15726": {
+   "proposed": "2026-11-10T09:12:20.541000+00:00",
+   "proposed_by": "Gets On Base",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Gets On Base"
+   ],
+   "moves": [
+    {
+     "player": "Rudy Gobert",
+     "from": "Gets On Base",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Ace Bailey",
+     "from": "Gets On Base",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Draymond Green",
+     "from": "Derrick White Girl Wasted",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Darius Garland",
+     "from": "Derrick White Girl Wasted",
+     "to": "Gets On Base"
+    }
+   ],
+   "espn_status": "PENDING",
+   "live_now": false,
+   "rating": {
+    "Derrick White Girl Wasted": 0.001,
+    "Gets On Base": 0.159
+   },
+   "rated_on": "2026-11-10"
+  },
+  "4799ab94-4da6-48c0-ac46-6a9821c46a9d": {
+   "proposed": "2026-11-10T09:38:37.658000+00:00",
+   "proposed_by": "Derrick White Girl Wasted",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "The haliban"
+   ],
+   "moves": [
+    {
+     "player": "Jrue Holiday",
+     "from": "Derrick White Girl Wasted",
+     "to": "The haliban"
+    },
+    {
+     "player": "Bilal Coulibaly",
+     "from": "Derrick White Girl Wasted",
+     "to": "The haliban"
+    },
+    {
+     "player": "Mo Bamba",
+     "from": "Derrick White Girl Wasted",
+     "to": "The haliban"
+    },
+    {
+     "player": "Jordan Poole",
+     "from": "The haliban",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Walker Kessler",
+     "from": "The haliban",
+     "to": "Derrick White Girl Wasted"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Derrick White Girl Wasted": 0.559,
+    "The haliban": -0.4
+   },
+   "rated_on": "2026-11-10"
+  },
+  "624f480f-f3e3-450f-9f03-3c24193bf7d2": {
+   "proposed": "2026-11-10T08:36:12.022000+00:00",
+   "proposed_by": "Derrick White Girl Wasted",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Gets On Base"
+   ],
+   "moves": [
+    {
+     "player": "Darius Garland",
+     "from": "Derrick White Girl Wasted",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Ace Bailey",
+     "from": "Gets On Base",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Rudy Gobert",
+     "from": "Gets On Base",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Bilal Coulibaly",
+     "from": "Derrick White Girl Wasted",
+     "to": null
+    }
+   ],
+   "espn_status": "PENDING",
+   "live_now": false,
+   "rating": {
+    "Derrick White Girl Wasted": 0.143,
+    "Gets On Base": 0.022
+   },
+   "rated_on": "2026-11-10"
   }
  },
  "outcomes": {
@@ -4161,6 +4388,16 @@
    "outcome": "declined",
    "by": "Viva La Raza!",
    "date": "2026-11-09T23:14:43.456000+00:00"
+  },
+  "e71c3bf1-9c83-46b4-bc06-8feab14a33eb": {
+   "outcome": "declined",
+   "by": "mr charloooooo",
+   "date": "2026-11-10T06:12:56.635000+00:00"
+  },
+  "4f34ce15-1f3a-41ab-84d0-996346c9071b": {
+   "outcome": "accepted",
+   "by": "Gets On Base",
+   "date": "2026-11-10T09:34:23.741000+00:00"
   }
  },
  "synced_periods": [
@@ -4185,7 +4422,8 @@
   18,
   19,
   20,
-  21
+  21,
+  22
  ],
- "last_sync": "2026-11-10T04:43:28.451555+00:00"
+ "last_sync": "2026-11-10T13:12:41.636867+00:00"
 }

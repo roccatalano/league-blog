@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-10T04:43:32.339055+00:00",
+ "updated_utc": "2026-11-10T13:12:45.303968+00:00",
  "overall": {
   "matchups": 21,
   "called": 14,
@@ -166,7 +166,7 @@
        "proj_home": 196.7,
        "proj_away": 235.4,
        "act_home": 214.0,
-       "act_away": 248.0,
+       "act_away": 247.0,
        "brier": 0.0049
       },
       {
@@ -185,7 +185,7 @@
        "won": 1.0,
        "proj_home": 38.8,
        "proj_away": 38.2,
-       "act_home": 38.0,
+       "act_home": 39.0,
        "act_away": 33.0,
        "brier": 0.2209
       },
@@ -282,7 +282,7 @@
        "won": 1.0,
        "proj_home": 152.3,
        "proj_away": 89.1,
-       "act_home": 164.0,
+       "act_home": 165.0,
        "act_away": 99.0,
        "brier": 0.0
       },
@@ -486,7 +486,7 @@
        "won": 1.0,
        "proj_home": 201.1,
        "proj_away": 187.4,
-       "act_home": 237.0,
+       "act_home": 236.0,
        "act_away": 204.0,
        "brier": 0.0729
       },
@@ -506,7 +506,7 @@
        "won": 0.0,
        "proj_home": 36.3,
        "proj_away": 45.0,
-       "act_home": 32.0,
+       "act_home": 31.0,
        "act_away": 43.0,
        "brier": 0.0121
       },
@@ -517,7 +517,7 @@
        "proj_home": 27.6,
        "proj_away": 30.0,
        "act_home": 24.0,
-       "act_away": 31.0,
+       "act_away": 30.0,
        "brier": 0.1089
       },
       {
@@ -653,7 +653,7 @@
        "won": 0.0,
        "proj_home": 0.472,
        "proj_away": 0.459,
-       "act_home": 0.44636015,
+       "act_home": 0.44721689,
        "act_away": 0.46516008,
        "brier": 0.3969
       },
@@ -807,7 +807,7 @@
        "won": 1.0,
        "proj_home": 203.2,
        "proj_away": 182.8,
-       "act_home": 201.0,
+       "act_home": 202.0,
        "act_away": 190.0,
        "brier": 0.0289
       },
@@ -867,7 +867,7 @@
        "won": 1.0,
        "proj_home": 0.485,
        "proj_away": 0.456,
-       "act_home": 0.4536862,
+       "act_home": 0.45283019,
        "act_away": 0.42682927,
        "brier": 0.0625
       },

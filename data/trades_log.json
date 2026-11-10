@@ -36,6 +36,11 @@
     "2026-11-09",
     0.141,
     -0.173
+   ],
+   [
+    "2026-11-10",
+    0.148,
+    -0.181
    ]
   ],
   "at_time": {
@@ -45,9 +50,9 @@
   "post": "2026-11-03-trade",
   "at_time_source": "trade review",
   "now": {
-   "date": "2026-11-09",
-   "Viva La Raza!": 0.141,
-   "mr charloooooo": -0.173
+   "date": "2026-11-10",
+   "Viva La Raza!": 0.148,
+   "mr charloooooo": -0.181
   }
  },
  "_trades": {
@@ -213,7 +218,23 @@
     ]
    },
    "dates": [
-    "2026-11-09T10:06:12.876000+00:00"
+    "2026-11-09T10:06:12.876000+00:00",
+    "2026-11-10T10:06:00.922000+00:00"
+   ]
+  },
+  "Collin Gillespie|Darius Garland|Jared McCain|Rudy Gobert": {
+   "gets": {
+    "Derrick White Girl Wasted": [
+     "Collin Gillespie",
+     "Rudy Gobert"
+    ],
+    "Gets On Base": [
+     "Jared McCain",
+     "Darius Garland"
+    ]
+   },
+   "dates": [
+    "2026-11-10T09:34:23.800000+00:00"
    ]
   }
  },
@@ -372,6 +393,11 @@
     "2026-11-09",
     0.442,
     -0.615
+   ],
+   [
+    "2026-11-10",
+    0.447,
+    -0.618
    ]
   ],
   "at_time": {
@@ -380,9 +406,9 @@
   },
   "at_time_source": "model when first seen",
   "now": {
-   "date": "2026-11-09",
-   "Popoviched": 0.442,
-   "Torta Pounders": -0.615
+   "date": "2026-11-10",
+   "Popoviched": 0.447,
+   "Torta Pounders": -0.618
   }
  },
  "Darius Garland|Jamal Murray|Jaylen Brown|Paul Reed": {
@@ -462,6 +488,11 @@
     "2026-11-09",
     -0.218,
     0.141
+   ],
+   [
+    "2026-11-10",
+    -0.217,
+    0.141
    ]
   ],
   "at_time": {
@@ -470,8 +501,8 @@
   },
   "at_time_source": "model when first seen",
   "now": {
-   "date": "2026-11-09",
-   "Derrick White Girl Wasted": -0.218,
+   "date": "2026-11-10",
+   "Derrick White Girl Wasted": -0.217,
    "Popoviched": 0.141
   }
  },
@@ -492,6 +523,11 @@
     "2026-11-09",
     -0.131,
     0.089
+   ],
+   [
+    "2026-11-10",
+    -0.138,
+    0.089
    ]
   ],
   "at_time": {
@@ -500,17 +536,37 @@
   },
   "at_time_source": "model when first seen",
   "now": {
-   "date": "2026-11-09",
-   "Torta Pounders": -0.131,
+   "date": "2026-11-10",
+   "Torta Pounders": -0.138,
    "Viva La Raza!": 0.089
   }
  },
  "Dylan Harper|Immanuel Quickley": {
   "first_seen": "2026-11-09",
-  "history": [],
+  "history": [
+   [
+    "2026-11-10",
+    0.133,
+    -0.176
+   ]
+  ],
   "at_time": {
    "Stairway to Devin": 0.126,
    "The Serbian Empire": -0.169
+  },
+  "at_time_source": "model when first seen",
+  "now": {
+   "date": "2026-11-10",
+   "Stairway to Devin": 0.133,
+   "The Serbian Empire": -0.176
+  }
+ },
+ "Collin Gillespie|Darius Garland|Jared McCain|Rudy Gobert": {
+  "first_seen": "2026-11-10",
+  "history": [],
+  "at_time": {
+   "Derrick White Girl Wasted": -0.021,
+   "Gets On Base": 0.083
   },
   "at_time_source": "model when first seen"
  }

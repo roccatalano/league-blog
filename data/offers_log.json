@@ -3641,6 +3641,129 @@
     "Viva La Raza!": -0.095
    },
    "rated_on": "2026-11-09"
+  },
+  "61e17672-1f45-4010-a646-9103883e8cb9": {
+   "proposed": "2026-11-10T02:48:16.743000+00:00",
+   "proposed_by": "Viva La Raza!",
+   "teams": [
+    "Gets On Base",
+    "Viva La Raza!"
+   ],
+   "moves": [
+    {
+     "player": "Bam Adebayo",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Anthony Davis",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "espn_status": "PENDING",
+   "live_now": true,
+   "rating": {
+    "Gets On Base": -0.27,
+    "Viva La Raza!": 0.342
+   },
+   "rated_on": "2026-11-10"
+  },
+  "1c052625-ad3b-4d5e-b8cf-e18317cd4e59": {
+   "proposed": "2026-11-09T23:14:32.134000+00:00",
+   "proposed_by": "Viva La Raza!",
+   "teams": [
+    "The Serbian Empire",
+    "Viva La Raza!"
+   ],
+   "moves": [
+    {
+     "player": "De'Andre Hunter",
+     "from": "Viva La Raza!",
+     "to": "The Serbian Empire"
+    },
+    {
+     "player": "Peyton Watson",
+     "from": "The Serbian Empire",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "The Serbian Empire": -0.241,
+    "Viva La Raza!": 0.309
+   },
+   "rated_on": "2026-11-10"
+  },
+  "745b51bc-c028-4db0-a216-82f31a3bcfaf": {
+   "proposed": "2026-11-09T23:14:37.214000+00:00",
+   "proposed_by": "Viva La Raza!",
+   "teams": [
+    "The Serbian Empire",
+    "Viva La Raza!"
+   ],
+   "moves": [
+    {
+     "player": "Alex Caruso",
+     "from": "Viva La Raza!",
+     "to": "The Serbian Empire"
+    },
+    {
+     "player": "De'Andre Hunter",
+     "from": "Viva La Raza!",
+     "to": "The Serbian Empire"
+    },
+    {
+     "player": "Peyton Watson",
+     "from": "The Serbian Empire",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "The Serbian Empire": -0.241,
+    "Viva La Raza!": 0.309
+   },
+   "rated_on": "2026-11-10"
+  },
+  "67e3d739-aaf1-499e-bc0b-ba3352c3047f": {
+   "proposed": "2026-11-10T01:56:50.914000+00:00",
+   "proposed_by": "Viva La Raza!",
+   "teams": [
+    "The Serbian Empire",
+    "Viva La Raza!"
+   ],
+   "moves": [
+    {
+     "player": "AJ Dybantsa",
+     "from": "Viva La Raza!",
+     "to": "The Serbian Empire"
+    },
+    {
+     "player": "Josh Hart",
+     "from": "Viva La Raza!",
+     "to": "The Serbian Empire"
+    },
+    {
+     "player": "Peyton Watson",
+     "from": "The Serbian Empire",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Brandon Miller",
+     "from": "The Serbian Empire",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "The Serbian Empire": -0.117,
+    "Viva La Raza!": 0.126
+   },
+   "rated_on": "2026-11-10"
   }
  },
  "outcomes": {
@@ -4033,6 +4156,11 @@
    "outcome": "declined",
    "by": "Torta Pounders",
    "date": "2026-11-09T14:07:54.600000+00:00"
+  },
+  "162098e0-54af-4a82-ba80-70363fc54f9a": {
+   "outcome": "declined",
+   "by": "Viva La Raza!",
+   "date": "2026-11-09T23:14:43.456000+00:00"
   }
  },
  "synced_periods": [
@@ -4059,5 +4187,5 @@
   20,
   21
  ],
- "last_sync": "2026-11-09T23:05:04.966096+00:00"
+ "last_sync": "2026-11-10T04:43:28.451555+00:00"
 }

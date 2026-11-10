@@ -1,6 +1,121 @@
 {
- "updated_utc": "2026-11-09T23:05:05.323017+00:00",
+ "updated_utc": "2026-11-10T04:43:28.840903+00:00",
  "offers": [
+  {
+   "id": "61e17672-1f45-4010-a646-9103883e8cb9",
+   "proposed": "2026-11-10T02:48:16.743000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Gets On Base",
+    "Viva La Raza!"
+   ],
+   "outcome": "pending",
+   "moves": [
+    {
+     "player": "Bam Adebayo",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Anthony Davis",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": 0.342,
+   "receiver_gain": -0.27
+  },
+  {
+   "id": "67e3d739-aaf1-499e-bc0b-ba3352c3047f",
+   "proposed": "2026-11-10T01:56:50.914000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "The Serbian Empire",
+   "teams": [
+    "The Serbian Empire",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "AJ Dybantsa",
+     "from": "Viva La Raza!",
+     "to": "The Serbian Empire"
+    },
+    {
+     "player": "Josh Hart",
+     "from": "Viva La Raza!",
+     "to": "The Serbian Empire"
+    },
+    {
+     "player": "Peyton Watson",
+     "from": "The Serbian Empire",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Brandon Miller",
+     "from": "The Serbian Empire",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": 0.126,
+   "receiver_gain": -0.117
+  },
+  {
+   "id": "745b51bc-c028-4db0-a216-82f31a3bcfaf",
+   "proposed": "2026-11-09T23:14:37.214000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "The Serbian Empire",
+   "teams": [
+    "The Serbian Empire",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Alex Caruso",
+     "from": "Viva La Raza!",
+     "to": "The Serbian Empire"
+    },
+    {
+     "player": "De'Andre Hunter",
+     "from": "Viva La Raza!",
+     "to": "The Serbian Empire"
+    },
+    {
+     "player": "Peyton Watson",
+     "from": "The Serbian Empire",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": 0.309,
+   "receiver_gain": -0.241
+  },
+  {
+   "id": "1c052625-ad3b-4d5e-b8cf-e18317cd4e59",
+   "proposed": "2026-11-09T23:14:32.134000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "The Serbian Empire",
+   "teams": [
+    "The Serbian Empire",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "De'Andre Hunter",
+     "from": "Viva La Raza!",
+     "to": "The Serbian Empire"
+    },
+    {
+     "player": "Peyton Watson",
+     "from": "The Serbian Empire",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": 0.309,
+   "receiver_gain": -0.241
+  },
   {
    "id": "bd9f9a3b-2512-41bb-a03b-b39d038694be",
    "proposed": "2026-11-09T22:26:08.034000+00:00",
@@ -3869,7 +3984,7 @@
   {
    "team": "Gets On Base",
    "sent": 28,
-   "received": 24,
+   "received": 25,
    "rated_sent": 18,
    "sent_accepted": 0,
    "sent_declined": 7,
@@ -4042,13 +4157,13 @@
   },
   {
    "team": "Viva La Raza!",
-   "sent": 32,
+   "sent": 36,
    "received": 7,
-   "rated_sent": 14,
+   "rated_sent": 18,
    "sent_accepted": 1,
    "sent_declined": 0,
-   "generosity": -0.201,
-   "self_gain": 0.215,
+   "generosity": -0.205,
+   "self_gain": 0.227,
    "best_sent": {
     "id": "bd9f9a3b-2512-41bb-a03b-b39d038694be",
     "receiver": "Giddey up Horsey",
@@ -4101,7 +4216,7 @@
   {
    "team": "The Serbian Empire",
    "sent": 0,
-   "received": 4,
+   "received": 7,
    "rated_sent": 0,
    "sent_accepted": 0,
    "sent_declined": 0,
@@ -4159,5 +4274,5 @@
    "worst_sent": null
   }
  ],
- "lost_before_logging": 60
+ "lost_before_logging": 61
 }

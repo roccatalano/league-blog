@@ -41,6 +41,11 @@
     "2026-11-10",
     0.146,
     -0.177
+   ],
+   [
+    "2026-11-11",
+    0.164,
+    -0.207
    ]
   ],
   "at_time": {
@@ -50,9 +55,9 @@
   "post": "2026-11-03-trade",
   "at_time_source": "trade review",
   "now": {
-   "date": "2026-11-10",
-   "Viva La Raza!": 0.146,
-   "mr charloooooo": -0.177
+   "date": "2026-11-11",
+   "Viva La Raza!": 0.164,
+   "mr charloooooo": -0.207
   }
  },
  "_trades": {
@@ -398,6 +403,11 @@
     "2026-11-10",
     0.452,
     -0.619
+   ],
+   [
+    "2026-11-11",
+    0.43,
+    -0.587
    ]
   ],
   "at_time": {
@@ -406,9 +416,9 @@
   },
   "at_time_source": "model when first seen",
   "now": {
-   "date": "2026-11-10",
-   "Popoviched": 0.452,
-   "Torta Pounders": -0.619
+   "date": "2026-11-11",
+   "Popoviched": 0.43,
+   "Torta Pounders": -0.587
   }
  },
  "Darius Garland|Jamal Murray|Jaylen Brown|Paul Reed": {
@@ -493,6 +503,11 @@
     "2026-11-10",
     -0.2,
     0.095
+   ],
+   [
+    "2026-11-11",
+    -0.245,
+    0.138
    ]
   ],
   "at_time": {
@@ -501,9 +516,9 @@
   },
   "at_time_source": "model when first seen",
   "now": {
-   "date": "2026-11-10",
-   "Derrick White Girl Wasted": -0.2,
-   "Popoviched": 0.095
+   "date": "2026-11-11",
+   "Derrick White Girl Wasted": -0.245,
+   "Popoviched": 0.138
   }
  },
  "Neemias Queta|Paul Reed": {
@@ -528,6 +543,11 @@
     "2026-11-10",
     -0.135,
     0.093
+   ],
+   [
+    "2026-11-11",
+    -0.097,
+    0.006
    ]
   ],
   "at_time": {
@@ -536,9 +556,9 @@
   },
   "at_time_source": "model when first seen",
   "now": {
-   "date": "2026-11-10",
-   "Torta Pounders": -0.135,
-   "Viva La Raza!": 0.093
+   "date": "2026-11-11",
+   "Torta Pounders": -0.097,
+   "Viva La Raza!": 0.006
   }
  },
  "Dylan Harper|Immanuel Quickley": {
@@ -548,6 +568,11 @@
     "2026-11-10",
     0.133,
     -0.177
+   ],
+   [
+    "2026-11-11",
+    0.135,
+    -0.18
    ]
   ],
   "at_time": {
@@ -556,9 +581,9 @@
   },
   "at_time_source": "model when first seen",
   "now": {
-   "date": "2026-11-10",
-   "Stairway to Devin": 0.133,
-   "The Serbian Empire": -0.177
+   "date": "2026-11-11",
+   "Stairway to Devin": 0.135,
+   "The Serbian Empire": -0.18
   }
  },
  "Collin Gillespie|Darius Garland|Jared McCain|Rudy Gobert": {

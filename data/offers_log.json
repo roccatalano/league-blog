@@ -3795,7 +3795,7 @@
     }
    ],
    "espn_status": "PENDING",
-   "live_now": true,
+   "live_now": false,
    "rating": {
     "Derrick White Girl Wasted": -0.013,
     "Gets On Base": 0.078
@@ -4396,8 +4396,8 @@
   },
   "4f34ce15-1f3a-41ab-84d0-996346c9071b": {
    "outcome": "accepted",
-   "by": "Gets On Base",
-   "date": "2026-11-10T09:34:23.741000+00:00"
+   "by": "Derrick White Girl Wasted",
+   "date": "2026-11-11T09:34:00.620000+00:00"
   }
  },
  "synced_periods": [
@@ -4423,7 +4423,8 @@
   19,
   20,
   21,
-  22
+  22,
+  23
  ],
- "last_sync": "2026-11-11T07:36:17.538883+00:00"
+ "last_sync": "2026-11-11T15:47:05.733883+00:00"
 }

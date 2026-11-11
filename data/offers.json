@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-11T07:36:18.038556+00:00",
+ "updated_utc": "2026-11-11T15:47:06.144202+00:00",
  "offers": [
   {
    "id": "4799ab94-4da6-48c0-ac46-6a9821c46a9d",
@@ -145,7 +145,7 @@
    ],
    "sender_gain": -0.013,
    "receiver_gain": 0.078,
-   "decided": "2026-11-10T09:34:23.741000+00:00"
+   "decided": "2026-11-11T09:34:00.620000+00:00"
   },
   {
    "id": "ee846a25-5271-4dec-8e97-0eb218c15726",
@@ -3981,74 +3981,6 @@
    }
   },
   {
-   "team": "JAReusalem",
-   "sent": 6,
-   "received": 11,
-   "rated_sent": 3,
-   "sent_accepted": 2,
-   "sent_declined": 0,
-   "generosity": 0.169,
-   "self_gain": -0.097,
-   "best_sent": {
-    "id": "90f044ed-b6ad-4b4a-9645-ff3928351d52",
-    "receiver": "Stairway to Devin",
-    "receiver_gain": 0.286,
-    "sender_gain": -0.22,
-    "moves": [
-     {
-      "player": "Matas Buzelis",
-      "from": "JAReusalem",
-      "to": "Stairway to Devin"
-     },
-     {
-      "player": "Paul George",
-      "from": "JAReusalem",
-      "to": "Stairway to Devin"
-     },
-     {
-      "player": "Moussa Diabate",
-      "from": "Stairway to Devin",
-      "to": "JAReusalem"
-     },
-     {
-      "player": "Damian Lillard",
-      "from": "Stairway to Devin",
-      "to": "JAReusalem"
-     }
-    ],
-    "outcome": "accepted"
-   },
-   "worst_sent": {
-    "id": "c9a0f364-8182-489c-838f-afb637bca8c8",
-    "receiver": "Viva La Raza!",
-    "receiver_gain": 0.033,
-    "sender_gain": 0.093,
-    "moves": [
-     {
-      "player": "Aaron Gordon",
-      "from": "Viva La Raza!",
-      "to": "JAReusalem"
-     },
-     {
-      "player": "Rui Hachimura",
-      "from": "Viva La Raza!",
-      "to": "JAReusalem"
-     },
-     {
-      "player": "Kyle Kuzma",
-      "from": "JAReusalem",
-      "to": "Viva La Raza!"
-     },
-     {
-      "player": "Moussa Diabate",
-      "from": "JAReusalem",
-      "to": "Viva La Raza!"
-     }
-    ],
-    "outcome": "accepted"
-   }
-  },
-  {
    "team": "mr charloooooo",
    "sent": 10,
    "received": 3,
@@ -4460,6 +4392,18 @@
    "team": "Giddey up Horsey",
    "sent": 0,
    "received": 11,
+   "rated_sent": 0,
+   "sent_accepted": 0,
+   "sent_declined": 0,
+   "generosity": null,
+   "self_gain": null,
+   "best_sent": null,
+   "worst_sent": null
+  },
+  {
+   "team": "Donbambaklava",
+   "sent": 0,
+   "received": 0,
    "rated_sent": 0,
    "sent_accepted": 0,
    "sent_declined": 0,

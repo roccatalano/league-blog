@@ -1,9 +1,9 @@
 {
- "updated_utc": "2026-11-11T07:36:22.200826+00:00",
+ "updated_utc": "2026-11-11T15:47:09.747923+00:00",
  "overall": {
-  "matchups": 21,
-  "called": 14,
-  "brier": 0.205,
+  "matchups": 18,
+  "called": 11,
+  "brier": 0.239,
   "calibration": [
    {
     "bucket": "50-60%",
@@ -31,20 +31,20 @@
    },
    {
     "bucket": "90-100%",
-    "n": 6,
-    "predicted": 0.958,
-    "actual": 0.667
+    "n": 3,
+    "predicted": 0.957,
+    "actual": 0.333
    }
   ],
-  "categories": 63,
-  "cat_called": 56.0,
-  "cat_brier": 0.123,
+  "categories": 54,
+  "cat_called": 47.0,
+  "cat_brier": 0.134,
   "cat_calibration": [
    {
     "bucket": "50-60%",
-    "n": 11,
-    "predicted": 0.555,
-    "actual": 0.909
+    "n": 9,
+    "predicted": 0.553,
+    "actual": 0.889
    },
    {
     "bucket": "60-70%",
@@ -54,77 +54,77 @@
    },
    {
     "bucket": "70-80%",
-    "n": 16,
+    "n": 15,
     "predicted": 0.744,
-    "actual": 0.875
+    "actual": 0.867
    },
    {
     "bucket": "80-90%",
-    "n": 7,
-    "predicted": 0.847,
-    "actual": 0.714
+    "n": 5,
+    "predicted": 0.844,
+    "actual": 0.6
    },
    {
     "bucket": "90-100%",
-    "n": 23,
-    "predicted": 0.967,
-    "actual": 0.957
+    "n": 19,
+    "predicted": 0.971,
+    "actual": 0.947
    }
   ],
   "by_category": [
    {
     "cat": "PTS",
-    "n": 7,
-    "called": 6.0,
-    "brier": 0.091
+    "n": 6,
+    "called": 5.0,
+    "brier": 0.104
    },
    {
     "cat": "REB",
-    "n": 7,
-    "called": 6.0,
-    "brier": 0.14
+    "n": 6,
+    "called": 5.0,
+    "brier": 0.158
    },
    {
     "cat": "AST",
-    "n": 7,
-    "called": 6.0,
-    "brier": 0.105
+    "n": 6,
+    "called": 5.0,
+    "brier": 0.123
    },
    {
     "cat": "STL",
-    "n": 7,
-    "called": 7.0,
-    "brier": 0.103
+    "n": 6,
+    "called": 6.0,
+    "brier": 0.12
    },
    {
     "cat": "BLK",
-    "n": 7,
-    "called": 6.0,
-    "brier": 0.151
+    "n": 6,
+    "called": 5.0,
+    "brier": 0.176
    },
    {
     "cat": "3PM",
-    "n": 7,
-    "called": 7.0,
-    "brier": 0.044
+    "n": 6,
+    "called": 6.0,
+    "brier": 0.05
    },
    {
     "cat": "TO",
-    "n": 7,
-    "called": 6.0,
-    "brier": 0.108
+    "n": 6,
+    "called": 5.0,
+    "brier": 0.093
    },
    {
     "cat": "FG%",
-    "n": 7,
-    "called": 5.0,
-    "brier": 0.221
+    "n": 6,
+    "called": 4.0,
+    "brier": 0.247
    },
    {
     "cat": "FT%",
-    "n": 7,
-    "called": 7.0,
-    "brier": 0.143
+    "n": 6,
+    "called": 6.0,
+    "brier": 0.134
    }
   ]
  },
@@ -775,121 +775,14 @@
        "brier": 0.2116
       }
      ]
-    },
-    {
-     "home": "JAReusalem",
-     "away": "Popoviched",
-     "p_home": 0.98,
-     "score": [
-      8,
-      1,
-      0
-     ],
-     "winner": "HOME",
-     "fav": "JAReusalem",
-     "fav_p": 0.98,
-     "called": true,
-     "brier": 0.0004,
-     "cats": [
-      {
-       "cat": "PTS",
-       "p_home": 0.88,
-       "won": 1.0,
-       "proj_home": 621.0,
-       "proj_away": 555.0,
-       "act_home": 679.0,
-       "act_away": 593.0,
-       "brier": 0.0144
-      },
-      {
-       "cat": "REB",
-       "p_home": 0.83,
-       "won": 1.0,
-       "proj_home": 203.2,
-       "proj_away": 182.8,
-       "act_home": 202.0,
-       "act_away": 190.0,
-       "brier": 0.0289
-      },
-      {
-       "cat": "AST",
-       "p_home": 0.97,
-       "won": 1.0,
-       "proj_home": 155.8,
-       "proj_away": 124.6,
-       "act_home": 156.0,
-       "act_away": 108.0,
-       "brier": 0.0009
-      },
-      {
-       "cat": "STL",
-       "p_home": 0.99,
-       "won": 1.0,
-       "proj_home": 58.1,
-       "proj_away": 40.9,
-       "act_home": 53.0,
-       "act_away": 36.0,
-       "brier": 0.0001
-      },
-      {
-       "cat": "BLK",
-       "p_home": 0.94,
-       "won": 1.0,
-       "proj_home": 27.1,
-       "proj_away": 19.2,
-       "act_home": 22.0,
-       "act_away": 16.0,
-       "brier": 0.0036
-      },
-      {
-       "cat": "3PM",
-       "p_home": 0.1,
-       "won": 0.0,
-       "proj_home": 68.6,
-       "proj_away": 82.2,
-       "act_home": 74.0,
-       "act_away": 92.0,
-       "brier": 0.01
-      },
-      {
-       "cat": "TO",
-       "p_home": 0.56,
-       "won": 1.0,
-       "proj_home": 71.0,
-       "proj_away": 72.2,
-       "act_home": 72.0,
-       "act_away": 77.0,
-       "brier": 0.1936
-      },
-      {
-       "cat": "FG%",
-       "p_home": 0.75,
-       "won": 1.0,
-       "proj_home": 0.485,
-       "proj_away": 0.456,
-       "act_home": 0.45283019,
-       "act_away": 0.42682927,
-       "brier": 0.0625
-      },
-      {
-       "cat": "FT%",
-       "p_home": 0.56,
-       "won": 1.0,
-       "proj_home": 0.817,
-       "proj_away": 0.802,
-       "act_home": 0.86206897,
-       "act_away": 0.79411765,
-       "brier": 0.1936
-      }
-     ]
     }
    ],
-   "called": 4,
-   "n": 7,
-   "brier": 0.163,
-   "cat_brier": 0.123,
-   "cat_called": 56,
-   "cat_n": 63
+   "called": 3,
+   "n": 6,
+   "brier": 0.19,
+   "cat_brier": 0.134,
+   "cat_called": 47,
+   "cat_n": 54
   },
   {
    "period": 2,
@@ -926,22 +819,6 @@
      "fav_p": 0.7,
      "called": true,
      "brier": 0.09,
-     "cats": null
-    },
-    {
-     "home": "Gets On Base",
-     "away": "JAReusalem",
-     "p_home": 0.08,
-     "score": [
-      4,
-      5,
-      0
-     ],
-     "winner": "AWAY",
-     "fav": "JAReusalem",
-     "fav_p": 0.92,
-     "called": true,
-     "brier": 0.0064,
      "cats": null
     },
     {
@@ -1009,9 +886,9 @@
      "cats": null
     }
    ],
-   "called": 4,
-   "n": 7,
-   "brier": 0.272,
+   "called": 3,
+   "n": 6,
+   "brier": 0.316,
    "cat_brier": null,
    "cat_called": 0,
    "cat_n": 0
@@ -1035,22 +912,6 @@
      "fav_p": 0.85,
      "called": true,
      "brier": 0.0225,
-     "cats": null
-    },
-    {
-     "home": "JAReusalem",
-     "away": "Viva La Raza!",
-     "p_home": 0.98,
-     "score": [
-      8,
-      1,
-      0
-     ],
-     "winner": "HOME",
-     "fav": "JAReusalem",
-     "fav_p": 0.98,
-     "called": true,
-     "brier": 0.0004,
      "cats": null
     },
     {
@@ -1134,9 +995,9 @@
      "cats": null
     }
    ],
-   "called": 6,
-   "n": 7,
-   "brier": 0.181,
+   "called": 5,
+   "n": 6,
+   "brier": 0.211,
    "cat_brier": null,
    "cat_called": 0,
    "cat_n": 0

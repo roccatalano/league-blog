@@ -3662,7 +3662,7 @@
     }
    ],
    "espn_status": "PENDING",
-   "live_now": true,
+   "live_now": false,
    "rating": {
     "Gets On Base": -0.27,
     "Viva La Raza!": 0.342
@@ -3991,6 +3991,33 @@
     "Gets On Base": 0.022
    },
    "rated_on": "2026-11-10"
+  },
+  "05230ecd-c050-420c-aee4-b4895d92f0f9": {
+   "proposed": "2026-11-11T20:14:04.450000+00:00",
+   "proposed_by": "Viva La Raza!",
+   "teams": [
+    "Gets On Base",
+    "Viva La Raza!"
+   ],
+   "moves": [
+    {
+     "player": "Bam Adebayo",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Anthony Davis",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Gets On Base": -0.3,
+    "Viva La Raza!": 0.335
+   },
+   "rated_on": "2026-11-11"
   }
  },
  "outcomes": {
@@ -4426,5 +4453,5 @@
   22,
   23
  ],
- "last_sync": "2026-11-11T15:47:05.733883+00:00"
+ "last_sync": "2026-11-11T22:26:28.337254+00:00"
 }

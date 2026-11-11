@@ -1,6 +1,31 @@
 {
- "updated_utc": "2026-11-11T15:47:06.144202+00:00",
+ "updated_utc": "2026-11-11T22:26:28.792938+00:00",
  "offers": [
+  {
+   "id": "05230ecd-c050-420c-aee4-b4895d92f0f9",
+   "proposed": "2026-11-11T20:14:04.450000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Gets On Base",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Bam Adebayo",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Anthony Davis",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": 0.335,
+   "receiver_gain": -0.3
+  },
   {
    "id": "4799ab94-4da6-48c0-ac46-6a9821c46a9d",
    "proposed": "2026-11-10T09:38:37.658000+00:00",
@@ -4147,7 +4172,7 @@
   {
    "team": "Gets On Base",
    "sent": 30,
-   "received": 28,
+   "received": 29,
    "rated_sent": 20,
    "sent_accepted": 0,
    "sent_declined": 7,
@@ -4320,13 +4345,13 @@
   },
   {
    "team": "Viva La Raza!",
-   "sent": 36,
+   "sent": 37,
    "received": 7,
-   "rated_sent": 18,
+   "rated_sent": 19,
    "sent_accepted": 1,
    "sent_declined": 0,
-   "generosity": -0.205,
-   "self_gain": 0.227,
+   "generosity": -0.21,
+   "self_gain": 0.233,
    "best_sent": {
     "id": "bd9f9a3b-2512-41bb-a03b-b39d038694be",
     "receiver": "Giddey up Horsey",

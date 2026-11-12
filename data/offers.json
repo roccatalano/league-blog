@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-12T03:14:32.847986+00:00",
+ "updated_utc": "2026-11-12T11:37:50.375004+00:00",
  "offers": [
   {
    "id": "05230ecd-c050-420c-aee4-b4895d92f0f9",
@@ -181,7 +181,7 @@
     "Derrick White Girl Wasted",
     "Gets On Base"
    ],
-   "outcome": "pending",
+   "outcome": "expired",
    "moves": [
     {
      "player": "Rudy Gobert",
@@ -216,7 +216,7 @@
     "Derrick White Girl Wasted",
     "Gets On Base"
    ],
-   "outcome": "pending",
+   "outcome": "expired",
    "moves": [
     {
      "player": "Darius Garland",
@@ -4426,7 +4426,7 @@
    "worst_sent": null
   },
   {
-   "team": "Donbambaklava",
+   "team": "OnlyFranz",
    "sent": 0,
    "received": 0,
    "rated_sent": 0,
@@ -4474,5 +4474,5 @@
    "worst_sent": null
   }
  ],
- "lost_before_logging": 62
+ "lost_before_logging": 64
 }

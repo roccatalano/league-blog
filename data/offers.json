@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-11T22:26:28.792938+00:00",
+ "updated_utc": "2026-11-12T03:14:32.847986+00:00",
  "offers": [
   {
    "id": "05230ecd-c050-420c-aee4-b4895d92f0f9",
@@ -251,7 +251,7 @@
     "Gets On Base",
     "Viva La Raza!"
    ],
-   "outcome": "pending",
+   "outcome": "expired",
    "moves": [
     {
      "player": "Bam Adebayo",

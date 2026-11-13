@@ -4018,6 +4018,38 @@
     "Viva La Raza!": 0.335
    },
    "rated_on": "2026-11-11"
+  },
+  "3e3b514b-6d16-49a6-af88-97d2f0cbc965": {
+   "proposed": "2026-11-13T04:11:39.495000+00:00",
+   "proposed_by": "Popoviched",
+   "teams": [
+    "Giddey up Horsey",
+    "Popoviched"
+   ],
+   "moves": [
+    {
+     "player": "Tristan da Silva",
+     "from": "Popoviched",
+     "to": "Giddey up Horsey"
+    },
+    {
+     "player": "Desmond Bane",
+     "from": "Popoviched",
+     "to": "Giddey up Horsey"
+    },
+    {
+     "player": "Josh Giddey",
+     "from": "Giddey up Horsey",
+     "to": "Popoviched"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Giddey up Horsey": 0.061,
+    "Popoviched": 0.048
+   },
+   "rated_on": "2026-11-13"
   }
  },
  "outcomes": {
@@ -4474,5 +4506,5 @@
   23,
   24
  ],
- "last_sync": "2026-11-13T00:38:33.893305+00:00"
+ "last_sync": "2026-11-13T07:33:08.032400+00:00"
 }

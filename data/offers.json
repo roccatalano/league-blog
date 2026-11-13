@@ -1,6 +1,36 @@
 {
- "updated_utc": "2026-11-13T00:38:34.530843+00:00",
+ "updated_utc": "2026-11-13T07:33:08.402556+00:00",
  "offers": [
+  {
+   "id": "3e3b514b-6d16-49a6-af88-97d2f0cbc965",
+   "proposed": "2026-11-13T04:11:39.495000+00:00",
+   "sender": "Popoviched",
+   "receiver": "Giddey up Horsey",
+   "teams": [
+    "Giddey up Horsey",
+    "Popoviched"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Tristan da Silva",
+     "from": "Popoviched",
+     "to": "Giddey up Horsey"
+    },
+    {
+     "player": "Desmond Bane",
+     "from": "Popoviched",
+     "to": "Giddey up Horsey"
+    },
+    {
+     "player": "Josh Giddey",
+     "from": "Giddey up Horsey",
+     "to": "Popoviched"
+    }
+   ],
+   "sender_gain": 0.048,
+   "receiver_gain": 0.061
+  },
   {
    "id": "05230ecd-c050-420c-aee4-b4895d92f0f9",
    "proposed": "2026-11-11T20:14:04.450000+00:00",
@@ -4123,12 +4153,12 @@
   },
   {
    "team": "Popoviched",
-   "sent": 19,
+   "sent": 20,
    "received": 5,
-   "rated_sent": 12,
+   "rated_sent": 13,
    "sent_accepted": 0,
    "sent_declined": 0,
-   "generosity": 0.025,
+   "generosity": 0.028,
    "self_gain": 0.047,
    "best_sent": {
     "id": "acf5e2d6-17fb-4037-976a-edcb893102a6",
@@ -4416,7 +4446,7 @@
   {
    "team": "Giddey up Horsey",
    "sent": 0,
-   "received": 11,
+   "received": 12,
    "rated_sent": 0,
    "sent_accepted": 0,
    "sent_declined": 0,

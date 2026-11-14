@@ -1,6 +1,31 @@
 {
- "updated_utc": "2026-11-14T08:37:04.978171+00:00",
+ "updated_utc": "2026-11-14T15:29:05.947854+00:00",
  "offers": [
+  {
+   "id": "89132e44-9d8e-492b-ab62-76b71ce8f6e3",
+   "proposed": "2026-11-14T09:08:03.908000+00:00",
+   "sender": "mr charloooooo",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Gets On Base",
+    "mr charloooooo"
+   ],
+   "outcome": "pending",
+   "moves": [
+    {
+     "player": "Brandin Podziemski",
+     "from": "Gets On Base",
+     "to": "mr charloooooo"
+    },
+    {
+     "player": "Kris Dunn",
+     "from": "mr charloooooo",
+     "to": null
+    }
+   ],
+   "sender_gain": 0.283,
+   "receiver_gain": -0.337
+  },
   {
    "id": "2a2c1a4f-e351-49cf-9aaa-4e142b4953bc",
    "proposed": "2026-11-14T03:45:22.012000+00:00",
@@ -4061,54 +4086,6 @@
    }
   },
   {
-   "team": "mr charloooooo",
-   "sent": 10,
-   "received": 3,
-   "rated_sent": 9,
-   "sent_accepted": 2,
-   "sent_declined": 0,
-   "generosity": 0.051,
-   "self_gain": -0.064,
-   "best_sent": {
-    "id": "5463c32e-90d7-42ec-8095-1b1ac6dd67d9",
-    "receiver": "Popoviched",
-    "receiver_gain": 0.408,
-    "sender_gain": -0.274,
-    "moves": [
-     {
-      "player": "Jrue Holiday",
-      "from": "mr charloooooo",
-      "to": "Popoviched"
-     },
-     {
-      "player": "Jaxson Hayes",
-      "from": "Popoviched",
-      "to": "mr charloooooo"
-     }
-    ],
-    "outcome": "accepted"
-   },
-   "worst_sent": {
-    "id": "aec9c50d-58b1-45b4-8085-f5cc995245ea",
-    "receiver": "The haliban",
-    "receiver_gain": -0.133,
-    "sender_gain": 0.207,
-    "moves": [
-     {
-      "player": "Derrick White",
-      "from": "The haliban",
-      "to": "mr charloooooo"
-     },
-     {
-      "player": "Zach LaVine",
-      "from": "mr charloooooo",
-      "to": "The haliban"
-     }
-    ],
-    "outcome": "cancelled/expired"
-   }
-  },
-  {
    "team": "Derrick White Girl Wasted",
    "sent": 22,
    "received": 6,
@@ -4225,9 +4202,57 @@
    }
   },
   {
+   "team": "mr charloooooo",
+   "sent": 11,
+   "received": 3,
+   "rated_sent": 10,
+   "sent_accepted": 2,
+   "sent_declined": 0,
+   "generosity": 0.012,
+   "self_gain": -0.03,
+   "best_sent": {
+    "id": "5463c32e-90d7-42ec-8095-1b1ac6dd67d9",
+    "receiver": "Popoviched",
+    "receiver_gain": 0.408,
+    "sender_gain": -0.274,
+    "moves": [
+     {
+      "player": "Jrue Holiday",
+      "from": "mr charloooooo",
+      "to": "Popoviched"
+     },
+     {
+      "player": "Jaxson Hayes",
+      "from": "Popoviched",
+      "to": "mr charloooooo"
+     }
+    ],
+    "outcome": "accepted"
+   },
+   "worst_sent": {
+    "id": "89132e44-9d8e-492b-ab62-76b71ce8f6e3",
+    "receiver": "Gets On Base",
+    "receiver_gain": -0.337,
+    "sender_gain": 0.283,
+    "moves": [
+     {
+      "player": "Brandin Podziemski",
+      "from": "Gets On Base",
+      "to": "mr charloooooo"
+     },
+     {
+      "player": "Kris Dunn",
+      "from": "mr charloooooo",
+      "to": null
+     }
+    ],
+    "outcome": "pending"
+   }
+  },
+  {
    "team": "Gets On Base",
    "sent": 30,
-   "received": 29,
+   "received": 30,
    "rated_sent": 20,
    "sent_accepted": 0,
    "sent_declined": 7,
@@ -4529,5 +4554,5 @@
    "worst_sent": null
   }
  ],
- "lost_before_logging": 70
+ "lost_before_logging": 71
 }

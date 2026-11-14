@@ -4077,6 +4077,33 @@
     "Viva La Raza!": 0.022
    },
    "rated_on": "2026-11-14"
+  },
+  "89132e44-9d8e-492b-ab62-76b71ce8f6e3": {
+   "proposed": "2026-11-14T09:08:03.908000+00:00",
+   "proposed_by": "mr charloooooo",
+   "teams": [
+    "Gets On Base",
+    "mr charloooooo"
+   ],
+   "moves": [
+    {
+     "player": "Brandin Podziemski",
+     "from": "Gets On Base",
+     "to": "mr charloooooo"
+    },
+    {
+     "player": "Kris Dunn",
+     "from": "mr charloooooo",
+     "to": null
+    }
+   ],
+   "espn_status": "PENDING",
+   "live_now": true,
+   "rating": {
+    "Gets On Base": -0.337,
+    "mr charloooooo": 0.283
+   },
+   "rated_on": "2026-11-14"
   }
  },
  "outcomes": {
@@ -4524,6 +4551,11 @@
    "outcome": "declined",
    "by": "Torta Pounders",
    "date": "2026-11-14T04:01:57.717000+00:00"
+  },
+  "96f31a4e-105e-432b-a7d1-806479c1913d": {
+   "outcome": "declined",
+   "by": "OnlyFranz",
+   "date": "2026-11-14T09:45:20.786000+00:00"
   }
  },
  "synced_periods": [
@@ -4555,5 +4587,5 @@
   25,
   26
  ],
- "last_sync": "2026-11-14T08:37:04.221280+00:00"
+ "last_sync": "2026-11-14T15:29:05.373573+00:00"
 }

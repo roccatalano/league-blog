@@ -1,23 +1,7 @@
 {
- "updated_utc": "2026-11-13T21:46:57.209004+00:00",
+ "updated_utc": "2026-11-14T01:56:47.391573+00:00",
  "today_et": "2026-11-13",
  "players": [
-  {
-   "name": "Aaron Nesmith",
-   "nba_team": "IND",
-   "pos": "G",
-   "status": "Day-To-Day",
-   "injury": "Right Knee",
-   "return_date": "2026-11-13",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Nesmith (knee) is questionable for Friday's game against the Knicks.",
-   "note_date": "2026-11-12",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
-  },
   {
    "name": "Ajay Mitchell",
    "nba_team": "OKC",
@@ -36,74 +20,6 @@
     "PTS": 17.0,
     "REB": 3.8,
     "AST": 3.8
-   }
-  },
-  {
-   "name": "Bennedict Mathurin",
-   "nba_team": "NO",
-   "pos": "G",
-   "status": "Day-To-Day",
-   "injury": "Right Thumb",
-   "return_date": "2026-11-13",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Mathurin (thumb) is listed as questionable for Friday's game against Memphis.",
-   "note_date": "2026-11-13",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
-  },
-  {
-   "name": "Charles Bassey",
-   "nba_team": "GS",
-   "pos": "C",
-   "status": "Day-To-Day",
-   "injury": "Left Toe",
-   "return_date": "2026-11-13",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Bassey is probable for Friday's game against the Spurs due to left toe soreness.",
-   "note_date": "2026-11-12",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
-  },
-  {
-   "name": "Dailyn Swain",
-   "nba_team": "CHI",
-   "pos": "G",
-   "status": "Day-To-Day",
-   "injury": "Right Back",
-   "return_date": "2026-11-13",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Swain (back) is listed as questionable for Friday's game against Atlanta.",
-   "note_date": "2026-11-12",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
-  },
-  {
-   "name": "De'Aaron Fox",
-   "nba_team": "SA",
-   "pos": "G",
-   "status": "Day-To-Day",
-   "injury": "Left Hip",
-   "return_date": "2026-11-13",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Fox is questionable for Friday's game against the Warriors due to left hip soreness.",
-   "note_date": "2026-11-12",
-   "fantasy_team": "The Serbian Empire",
-   "on_ir": false,
-   "per_game": {
-    "PTS": 17.8,
-    "REB": 4.1,
-    "AST": 5.9
    }
   },
   {
@@ -127,170 +43,6 @@
    }
   },
   {
-   "name": "Jalen Suggs",
-   "nba_team": "ORL",
-   "pos": "G",
-   "status": "Out",
-   "injury": "Right Knee",
-   "return_date": "2026-11-13",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Suggs (knee) participated in Friday's morning shootaround and remains questionable for Friday's game against the Bucks, Jason Beede of the Orlando Sentinel reports.",
-   "note_date": "2026-11-13",
-   "fantasy_team": "Stairway to Devin",
-   "on_ir": false,
-   "per_game": {
-    "PTS": 12.4,
-    "REB": 3.7,
-    "AST": 4.3
-   }
-  },
-  {
-   "name": "Jamal Cain",
-   "nba_team": "ORL",
-   "pos": "F",
-   "status": "Day-To-Day",
-   "injury": "Left Shoulder",
-   "return_date": "2026-11-13",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Cain (shoulder) participated in Friday morning's shootaround and remains questionable for Friday's game against the Bucks, Jason Beede of the Orlando Sentinel reports.",
-   "note_date": "2026-11-13",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
-  },
-  {
-   "name": "Kingston Flemings",
-   "nba_team": "ATL",
-   "pos": "G",
-   "status": "Day-To-Day",
-   "injury": "Back",
-   "return_date": "2026-11-13",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Flemings (back) is questionable for Friday's game against the Bulls.",
-   "note_date": "2026-11-12",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
-  },
-  {
-   "name": "Klay Thompson",
-   "nba_team": "MIA",
-   "pos": "G",
-   "status": "Day-To-Day",
-   "injury": "Left Ankle",
-   "return_date": "2026-11-13",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Thompson (ankle) is listed as probable for Friday's game against the Cavaliers.",
-   "note_date": "2026-11-13",
-   "fantasy_team": "Torta Pounders",
-   "on_ir": false,
-   "per_game": {
-    "PTS": 13.2,
-    "REB": 2.0,
-    "AST": 1.7
-   }
-  },
-  {
-   "name": "Norman Powell",
-   "nba_team": "CHI",
-   "pos": "G",
-   "status": "Day-To-Day",
-   "injury": "Right Shoulder",
-   "return_date": "2026-11-13",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Powell (shoulder) is questionable for Friday's game against the Hawks.",
-   "note_date": "2026-11-12",
-   "fantasy_team": "Gets On Base",
-   "on_ir": true,
-   "per_game": {
-    "PTS": 22.4,
-    "REB": 3.3,
-    "AST": 2.3
-   }
-  },
-  {
-   "name": "Pelle Larsson",
-   "nba_team": "MIA",
-   "pos": "G",
-   "status": "Day-To-Day",
-   "injury": "Illness",
-   "return_date": "2026-11-13",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Larsson (illness) is listed as doubtful for Friday's game against Cleveland.",
-   "note_date": "2026-11-13",
-   "fantasy_team": "HE IS HIM ( G.O.A.T)",
-   "on_ir": false,
-   "per_game": {
-    "PTS": 11.4,
-    "REB": 3.5,
-    "AST": 3.4
-   }
-  },
-  {
-   "name": "T.J. McConnell",
-   "nba_team": "IND",
-   "pos": "G",
-   "status": "Day-To-Day",
-   "injury": "Right Hamstring",
-   "return_date": "2026-11-13",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "McConnell is probable for Friday's game against the Knicks due to a right hamstring strain.",
-   "note_date": "2026-11-12",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
-  },
-  {
-   "name": "Tristan da Silva",
-   "nba_team": "ORL",
-   "pos": "F",
-   "status": "Day-To-Day",
-   "injury": "Left Calf",
-   "return_date": "2026-11-13",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Da Silva (calf) participated in Friday's morning shootaround and remains questionable for Friday's game against Milwaukee, Jason Beede of the Orlando Sentinel reports.",
-   "note_date": "2026-11-13",
-   "fantasy_team": "Popoviched",
-   "on_ir": false,
-   "per_game": {
-    "PTS": 10.9,
-    "REB": 3.4,
-    "AST": 1.5
-   }
-  },
-  {
-   "name": "Ugonna Onyenso",
-   "nba_team": "DET",
-   "pos": "C",
-   "status": "Day-To-Day",
-   "injury": "Left Foot",
-   "return_date": "2026-11-13",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Onyenso agreed to a two-way contract with the Pistons on Thursday.",
-   "note_date": "2026-11-11",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
-  },
-  {
    "name": "Bryce McGowens",
    "nba_team": "NO",
    "pos": "G",
@@ -302,6 +54,22 @@
    "timeframe": "Days",
    "note": "McGowens (elbow) is listed as out for Friday's game against the Grizzlies.",
    "note_date": "2026-11-13",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
+  },
+  {
+   "name": "Dailyn Swain",
+   "nba_team": "CHI",
+   "pos": "G",
+   "status": "Out",
+   "injury": "Right Back",
+   "return_date": "2026-11-14",
+   "days_out": 1,
+   "games_missed": 1,
+   "timeframe": "Days",
+   "note": "Swain (back) is out for Friday's game against the Hawks.",
+   "note_date": "2026-11-14",
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
@@ -343,6 +111,42 @@
    "per_game": null
   },
   {
+   "name": "Klay Thompson",
+   "nba_team": "MIA",
+   "pos": "G",
+   "status": "Out",
+   "injury": "Left Ankle",
+   "return_date": "2026-11-14",
+   "days_out": 1,
+   "games_missed": 1,
+   "timeframe": "Days",
+   "note": "Thompson (ankle) is out for Friday's game against the Cavaliers.",
+   "note_date": "2026-11-13",
+   "fantasy_team": "Torta Pounders",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 13.2,
+    "REB": 2.0,
+    "AST": 1.7
+   }
+  },
+  {
+   "name": "Max Christie",
+   "nba_team": "DAL",
+   "pos": "G",
+   "status": "Day-To-Day",
+   "injury": "Ankle",
+   "return_date": "2026-11-14",
+   "days_out": 1,
+   "games_missed": 0,
+   "timeframe": "Days",
+   "note": "Christie is questionable for Saturday's game against the Cavaliers due to a sprained left ankle.",
+   "note_date": "2026-11-13",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
+  },
+  {
    "name": "Mikel Brown Jr.",
    "nba_team": "BKN",
    "pos": "G",
@@ -352,8 +156,8 @@
    "days_out": 1,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Brown has been ruled out for Wednesday's game against the Pelicans due to an illness, Sharif Phillips-Keaton of USA Today reports.",
-   "note_date": "2026-11-12",
+   "note": "Brown (illness) is listed as questionable for Saturday's game against Memphis.",
+   "note_date": "2026-11-13",
    "fantasy_team": "Viva La Raza!",
    "on_ir": true,
    "per_game": {
@@ -361,6 +165,22 @@
     "REB": 2.4,
     "AST": 3.5
    }
+  },
+  {
+   "name": "Morez Johnson Jr.",
+   "nba_team": "DAL",
+   "pos": "F",
+   "status": "Day-To-Day",
+   "injury": "Left Lower Leg",
+   "return_date": "2026-11-14",
+   "days_out": 1,
+   "games_missed": 0,
+   "timeframe": "Days",
+   "note": "Johnson (left shin contusion) is listed as probable for Saturday against Cleveland.",
+   "note_date": "2026-11-13",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
   },
   {
    "name": "Nolan Traore",
@@ -372,11 +192,31 @@
    "days_out": 1,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Traore (calf) has been ruled out for Wednesday's game against the Pelicans, Ian Begley of SportsNet New York reports.",
-   "note_date": "2026-11-12",
+   "note": "Traore (calf) is listed as probable for Saturday's game against Memphis.",
+   "note_date": "2026-11-13",
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
+  },
+  {
+   "name": "Pelle Larsson",
+   "nba_team": "MIA",
+   "pos": "G",
+   "status": "Out",
+   "injury": "Illness",
+   "return_date": "2026-11-14",
+   "days_out": 1,
+   "games_missed": 1,
+   "timeframe": "Days",
+   "note": "Larsson (illness) is out for Friday's game against Cleveland.",
+   "note_date": "2026-11-13",
+   "fantasy_team": "HE IS HIM ( G.O.A.T)",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 11.4,
+    "REB": 3.5,
+    "AST": 3.4
+   }
   },
   {
    "name": "Quinten Post",
@@ -445,6 +285,22 @@
     "REB": 5.0,
     "AST": 3.5
    }
+  },
+  {
+   "name": "Ugonna Onyenso",
+   "nba_team": "DET",
+   "pos": "C",
+   "status": "Day-To-Day",
+   "injury": "Left Foot",
+   "return_date": "2026-11-14",
+   "days_out": 1,
+   "games_missed": 0,
+   "timeframe": "Days",
+   "note": "Onyenso agreed to a two-way contract with the Pistons on Thursday.",
+   "note_date": "2026-11-11",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
   },
   {
    "name": "Yves Missi",
@@ -822,6 +678,22 @@
    "timeframe": "1 week",
    "note": "Isaac (knee) is out for Tuesday's game against Sacramento.",
    "note_date": "2026-11-09",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
+  },
+  {
+   "name": "Nae'Qwan Tomlin",
+   "nba_team": "CLE",
+   "pos": "F",
+   "status": "Out",
+   "injury": "Back",
+   "return_date": "2026-11-16",
+   "days_out": 3,
+   "games_missed": 2,
+   "timeframe": "1 week",
+   "note": "Tomlin is set to miss several weeks with a lower back stress reaction, Chris Fedor of The Cleveland Plain Dealer reports.",
+   "note_date": "2026-10-20",
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
@@ -1825,6 +1697,42 @@
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
+  },
+  {
+   "name": "Charles Bassey",
+   "nba_team": "GS",
+   "pos": "C",
+   "status": "Day-To-Day",
+   "injury": null,
+   "return_date": null,
+   "days_out": null,
+   "games_missed": null,
+   "timeframe": "Unknown",
+   "note": "Bassey is probable for Friday's game against the Spurs due to left toe soreness.",
+   "note_date": "2026-11-12",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
+  },
+  {
+   "name": "De'Aaron Fox",
+   "nba_team": "SA",
+   "pos": "G",
+   "status": "Day-To-Day",
+   "injury": null,
+   "return_date": null,
+   "days_out": null,
+   "games_missed": null,
+   "timeframe": "Unknown",
+   "note": "Fox is questionable for Friday's game against the Warriors due to left hip soreness.",
+   "note_date": "2026-11-12",
+   "fantasy_team": "The Serbian Empire",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 17.8,
+    "REB": 4.1,
+    "AST": 5.9
+   }
   }
  ]
 }

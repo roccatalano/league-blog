@@ -4050,6 +4050,33 @@
     "Popoviched": 0.048
    },
    "rated_on": "2026-11-13"
+  },
+  "2a2c1a4f-e351-49cf-9aaa-4e142b4953bc": {
+   "proposed": "2026-11-14T03:45:22.012000+00:00",
+   "proposed_by": "Viva La Raza!",
+   "teams": [
+    "Al-Shaida",
+    "Viva La Raza!"
+   ],
+   "moves": [
+    {
+     "player": "Trae Young",
+     "from": "Viva La Raza!",
+     "to": "Al-Shaida"
+    },
+    {
+     "player": "Kevin Durant",
+     "from": "Al-Shaida",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Al-Shaida": -0.108,
+    "Viva La Raza!": 0.022
+   },
+   "rated_on": "2026-11-14"
   }
  },
  "outcomes": {
@@ -4492,6 +4519,11 @@
    "outcome": "declined",
    "by": "Stairway to Devin",
    "date": "2026-11-13T22:57:51.791000+00:00"
+  },
+  "f9724e7c-6e88-44e6-936d-4be0600a3668": {
+   "outcome": "declined",
+   "by": "Torta Pounders",
+   "date": "2026-11-14T04:01:57.717000+00:00"
   }
  },
  "synced_periods": [
@@ -4520,7 +4552,8 @@
   22,
   23,
   24,
-  25
+  25,
+  26
  ],
- "last_sync": "2026-11-14T01:56:38.007363+00:00"
+ "last_sync": "2026-11-14T08:37:04.221280+00:00"
 }

@@ -1,6 +1,31 @@
 {
- "updated_utc": "2026-11-14T01:56:38.577721+00:00",
+ "updated_utc": "2026-11-14T08:37:04.978171+00:00",
  "offers": [
+  {
+   "id": "2a2c1a4f-e351-49cf-9aaa-4e142b4953bc",
+   "proposed": "2026-11-14T03:45:22.012000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "Al-Shaida",
+   "teams": [
+    "Al-Shaida",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Trae Young",
+     "from": "Viva La Raza!",
+     "to": "Al-Shaida"
+    },
+    {
+     "player": "Kevin Durant",
+     "from": "Al-Shaida",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": 0.022,
+   "receiver_gain": -0.108
+  },
   {
    "id": "3e3b514b-6d16-49a6-af88-97d2f0cbc965",
    "proposed": "2026-11-13T04:11:39.495000+00:00",
@@ -4308,7 +4333,7 @@
   {
    "team": "Al-Shaida",
    "sent": 1,
-   "received": 10,
+   "received": 11,
    "rated_sent": 1,
    "sent_accepted": 1,
    "sent_declined": 0,
@@ -4375,13 +4400,13 @@
   },
   {
    "team": "Viva La Raza!",
-   "sent": 37,
+   "sent": 38,
    "received": 7,
-   "rated_sent": 19,
+   "rated_sent": 20,
    "sent_accepted": 1,
    "sent_declined": 0,
-   "generosity": -0.21,
-   "self_gain": 0.233,
+   "generosity": -0.205,
+   "self_gain": 0.222,
    "best_sent": {
     "id": "bd9f9a3b-2512-41bb-a03b-b39d038694be",
     "receiver": "Giddey up Horsey",
@@ -4504,5 +4529,5 @@
    "worst_sent": null
   }
  ],
- "lost_before_logging": 69
+ "lost_before_logging": 70
 }

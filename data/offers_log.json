@@ -4131,6 +4131,87 @@
     "Viva La Raza!": 0.127
    },
    "rated_on": "2026-11-15"
+  },
+  "a6b6bfe3-6245-4ef0-87dc-e8ee39e8d239": {
+   "proposed": "2026-11-15T07:30:05.676000+00:00",
+   "proposed_by": "Derrick White Girl Wasted",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Gets On Base"
+   ],
+   "moves": [
+    {
+     "player": "Jrue Holiday",
+     "from": "Derrick White Girl Wasted",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Ace Bailey",
+     "from": "Gets On Base",
+     "to": "Derrick White Girl Wasted"
+    }
+   ],
+   "espn_status": "PENDING",
+   "live_now": true,
+   "rating": {
+    "Derrick White Girl Wasted": 0.092,
+    "Gets On Base": -0.059
+   },
+   "rated_on": "2026-11-15"
+  },
+  "b6bfacbe-5b74-4dd8-8a92-aa9b36460918": {
+   "proposed": "2026-11-15T09:56:36.411000+00:00",
+   "proposed_by": "Viva La Raza!",
+   "teams": [
+    "The Serbian Empire",
+    "Viva La Raza!"
+   ],
+   "moves": [
+    {
+     "player": "Ayo Dosunmu",
+     "from": "Viva La Raza!",
+     "to": "The Serbian Empire"
+    },
+    {
+     "player": "Brandon Miller",
+     "from": "The Serbian Empire",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "The Serbian Empire": -0.171,
+    "Viva La Raza!": 0.148
+   },
+   "rated_on": "2026-11-15"
+  },
+  "c031cb51-5761-4c9d-b1c3-00921260e0b0": {
+   "proposed": "2026-11-15T09:04:03.072000+00:00",
+   "proposed_by": "Viva La Raza!",
+   "teams": [
+    "The Serbian Empire",
+    "Viva La Raza!"
+   ],
+   "moves": [
+    {
+     "player": "AJ Dybantsa",
+     "from": "Viva La Raza!",
+     "to": "The Serbian Empire"
+    },
+    {
+     "player": "Brandon Miller",
+     "from": "The Serbian Empire",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "The Serbian Empire": -0.391,
+    "Viva La Raza!": 0.365
+   },
+   "rated_on": "2026-11-15"
   }
  },
  "outcomes": {
@@ -4588,6 +4669,21 @@
    "outcome": "declined",
    "by": "Derrick White Girl Wasted",
    "date": "2026-11-15T04:59:18.468000+00:00"
+  },
+  "6c0c3edc-def4-4228-8932-be228e50c88c": {
+   "outcome": "declined",
+   "by": "HE IS HIM ( G.O.A.T)",
+   "date": "2026-11-15T09:54:09.316000+00:00"
+  },
+  "7d797a03-18f5-41d3-9f53-3252ee79cbba": {
+   "outcome": "declined",
+   "by": "HE IS HIM ( G.O.A.T)",
+   "date": "2026-11-15T09:54:19.860000+00:00"
+  },
+  "94a51c8e-5a76-403e-ba74-f4215644381b": {
+   "outcome": "accepted",
+   "by": "Stairway to Devin",
+   "date": "2026-11-15T09:18:48.469000+00:00"
   }
  },
  "synced_periods": [
@@ -4617,7 +4713,8 @@
   23,
   24,
   25,
-  26
+  26,
+  27
  ],
- "last_sync": "2026-11-15T06:55:42.551391+00:00"
+ "last_sync": "2026-11-15T14:29:11.132417+00:00"
 }

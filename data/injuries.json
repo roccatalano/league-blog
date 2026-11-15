@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-15T06:55:49.475300+00:00",
+ "updated_utc": "2026-11-15T14:29:17.955439+00:00",
  "today_et": "2026-11-15",
  "players": [
   {
@@ -99,7 +99,7 @@
    "note": "Mitchell (ankle) is questionable to suit up for Sunday's game against the Kings.",
    "note_date": "2026-11-15",
    "fantasy_team": "Popoviched",
-   "on_ir": true,
+   "on_ir": false,
    "per_game": {
     "PTS": 17.0,
     "REB": 3.8,
@@ -478,13 +478,9 @@
    "timeframe": "Days",
    "note": "According to Grizzlies head coach Tuomas Iisalo, Jackson suffered a \"relatively serious\" foot injury in Saturday's 129-110 win over Brooklyn, Michael Wallace of the Grizzlies' official site reports.",
    "note_date": "2026-11-15",
-   "fantasy_team": "Derrick White Girl Wasted",
+   "fantasy_team": null,
    "on_ir": false,
-   "per_game": {
-    "PTS": 10.3,
-    "REB": 3.8,
-    "AST": 1.3
-   }
+   "per_game": null
   },
   {
    "name": "Jalen Smith",
@@ -499,7 +495,7 @@
    "note": "Smith (finger) has been ruled out for Saturday's game against Minnesota, K.C. Johnson of Chicago Sports Network reports.",
    "note_date": "2026-11-14",
    "fantasy_team": "Popoviched",
-   "on_ir": false,
+   "on_ir": true,
    "per_game": {
     "PTS": 11.1,
     "REB": 7.0,
@@ -574,13 +570,9 @@
    "timeframe": "Days",
    "note": "Grant (head) is out for Saturday's game against the Nets.",
    "note_date": "2026-11-15",
-   "fantasy_team": "mr charloooooo",
+   "fantasy_team": null,
    "on_ir": false,
-   "per_game": {
-    "PTS": 15.0,
-    "REB": 2.8,
-    "AST": 2.1
-   }
+   "per_game": null
   },
   {
    "name": "Joel Embiid",
@@ -707,7 +699,7 @@
    "note": "Watson (hamstring) has been ruled out for Saturday's game against the Mavericks.",
    "note_date": "2026-11-14",
    "fantasy_team": "The Serbian Empire",
-   "on_ir": false,
+   "on_ir": true,
    "per_game": {
     "PTS": 12.6,
     "REB": 4.8,
@@ -863,7 +855,7 @@
    "note": "Edey (ankle) is listed as out for Saturday's game against the Nets.",
    "note_date": "2026-11-15",
    "fantasy_team": "Giddey up Horsey",
-   "on_ir": false,
+   "on_ir": true,
    "per_game": {
     "PTS": 10.7,
     "REB": 9.6,

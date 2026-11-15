@@ -1,6 +1,31 @@
 {
- "updated_utc": "2026-11-15T00:02:21.782846+00:00",
+ "updated_utc": "2026-11-15T06:55:42.942081+00:00",
  "offers": [
+  {
+   "id": "33ea8cd9-2485-4ad3-88b1-d60a67774967",
+   "proposed": "2026-11-15T02:42:16.813000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "The Serbian Empire",
+   "teams": [
+    "The Serbian Empire",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Ayo Dosunmu",
+     "from": "Viva La Raza!",
+     "to": "The Serbian Empire"
+    },
+    {
+     "player": "Brandon Miller",
+     "from": "The Serbian Empire",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": 0.127,
+   "receiver_gain": -0.165
+  },
   {
    "id": "89132e44-9d8e-492b-ab62-76b71ce8f6e3",
    "proposed": "2026-11-14T09:08:03.908000+00:00",
@@ -4425,13 +4450,13 @@
   },
   {
    "team": "Viva La Raza!",
-   "sent": 38,
+   "sent": 39,
    "received": 7,
-   "rated_sent": 20,
+   "rated_sent": 21,
    "sent_accepted": 1,
    "sent_declined": 0,
-   "generosity": -0.205,
-   "self_gain": 0.222,
+   "generosity": -0.203,
+   "self_gain": 0.218,
    "best_sent": {
     "id": "bd9f9a3b-2512-41bb-a03b-b39d038694be",
     "receiver": "Giddey up Horsey",
@@ -4484,7 +4509,7 @@
   {
    "team": "The Serbian Empire",
    "sent": 0,
-   "received": 7,
+   "received": 8,
    "rated_sent": 0,
    "sent_accepted": 0,
    "sent_declined": 0,
@@ -4554,5 +4579,5 @@
    "worst_sent": null
   }
  ],
- "lost_before_logging": 71
+ "lost_before_logging": 72
 }

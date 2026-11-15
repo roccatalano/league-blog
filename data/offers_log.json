@@ -4104,6 +4104,33 @@
     "mr charloooooo": 0.283
    },
    "rated_on": "2026-11-14"
+  },
+  "33ea8cd9-2485-4ad3-88b1-d60a67774967": {
+   "proposed": "2026-11-15T02:42:16.813000+00:00",
+   "proposed_by": "Viva La Raza!",
+   "teams": [
+    "The Serbian Empire",
+    "Viva La Raza!"
+   ],
+   "moves": [
+    {
+     "player": "Ayo Dosunmu",
+     "from": "Viva La Raza!",
+     "to": "The Serbian Empire"
+    },
+    {
+     "player": "Brandon Miller",
+     "from": "The Serbian Empire",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "The Serbian Empire": -0.165,
+    "Viva La Raza!": 0.127
+   },
+   "rated_on": "2026-11-15"
   }
  },
  "outcomes": {
@@ -4556,6 +4583,11 @@
    "outcome": "declined",
    "by": "OnlyFranz",
    "date": "2026-11-14T09:45:20.786000+00:00"
+  },
+  "139d26bb-87e8-4a9a-ab22-c57dc15be8fa": {
+   "outcome": "declined",
+   "by": "Derrick White Girl Wasted",
+   "date": "2026-11-15T04:59:18.468000+00:00"
   }
  },
  "synced_periods": [
@@ -4587,5 +4619,5 @@
   25,
   26
  ],
- "last_sync": "2026-11-15T00:02:21.219210+00:00"
+ "last_sync": "2026-11-15T06:55:42.551391+00:00"
 }

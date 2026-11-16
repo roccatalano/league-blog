@@ -4098,7 +4098,7 @@
     }
    ],
    "espn_status": "PENDING",
-   "live_now": true,
+   "live_now": false,
    "rating": {
     "Gets On Base": -0.337,
     "mr charloooooo": 0.283
@@ -4355,6 +4355,218 @@
     "Viva La Raza!": 0.182
    },
    "rated_on": "2026-11-16"
+  },
+  "c4e1a7f5-3f84-4363-8851-3075254033a9": {
+   "proposed": "2026-11-16T09:46:23.818000+00:00",
+   "proposed_by": "Derrick White Girl Wasted",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Gets On Base"
+   ],
+   "moves": [
+    {
+     "player": "Andrew Nembhard",
+     "from": "Derrick White Girl Wasted",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Derik Queen",
+     "from": "Derrick White Girl Wasted",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Ace Bailey",
+     "from": "Gets On Base",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Kawhi Leonard",
+     "from": "Derrick White Girl Wasted",
+     "to": "Gets On Base"
+    }
+   ],
+   "espn_status": "PENDING",
+   "live_now": true,
+   "rating": {
+    "Derrick White Girl Wasted": -0.319,
+    "Gets On Base": 0.342
+   },
+   "rated_on": "2026-11-16"
+  },
+  "44078e4c-4fda-47d1-a313-8b471ce76aa8": {
+   "proposed": "2026-11-16T12:44:58.623000+00:00",
+   "proposed_by": "Derrick White Girl Wasted",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Gets On Base"
+   ],
+   "moves": [
+    {
+     "player": "Derik Queen",
+     "from": "Derrick White Girl Wasted",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Jaylen Brown",
+     "from": "Derrick White Girl Wasted",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Ace Bailey",
+     "from": "Gets On Base",
+     "to": "Derrick White Girl Wasted"
+    }
+   ],
+   "espn_status": "PENDING",
+   "live_now": true,
+   "rating": {
+    "Derrick White Girl Wasted": 0.297,
+    "Gets On Base": -0.304
+   },
+   "rated_on": "2026-11-16"
+  },
+  "8607c1ac-6e6a-456b-87fa-aacdb0014b1b": {
+   "proposed": "2026-11-16T12:48:14.440000+00:00",
+   "proposed_by": "Derrick White Girl Wasted",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Popoviched"
+   ],
+   "moves": [
+    {
+     "player": "Derik Queen",
+     "from": "Derrick White Girl Wasted",
+     "to": "Popoviched"
+    },
+    {
+     "player": "Jaylen Brown",
+     "from": "Derrick White Girl Wasted",
+     "to": "Popoviched"
+    },
+    {
+     "player": "Andrew Nembhard",
+     "from": "Derrick White Girl Wasted",
+     "to": "Popoviched"
+    },
+    {
+     "player": "Jalen Smith",
+     "from": "Popoviched",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "LaMelo Ball",
+     "from": "Popoviched",
+     "to": "Derrick White Girl Wasted"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Derrick White Girl Wasted": 0.291,
+    "Popoviched": -0.444
+   },
+   "rated_on": "2026-11-16"
+  },
+  "c80c514f-2ae1-4123-a229-83d16138b0d2": {
+   "proposed": "2026-11-16T12:49:23.951000+00:00",
+   "proposed_by": "Derrick White Girl Wasted",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "OnlyFranz"
+   ],
+   "moves": [
+    {
+     "player": "Jaylen Brown",
+     "from": "Derrick White Girl Wasted",
+     "to": "OnlyFranz"
+    },
+    {
+     "player": "Dyson Daniels",
+     "from": "OnlyFranz",
+     "to": "Derrick White Girl Wasted"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Derrick White Girl Wasted": 0.109,
+    "OnlyFranz": -0.062
+   },
+   "rated_on": "2026-11-16"
+  },
+  "81bb7a59-bf8b-42df-900a-340dbf4b2109": {
+   "proposed": "2026-11-16T12:48:06.159000+00:00",
+   "proposed_by": "Derrick White Girl Wasted",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "The haliban"
+   ],
+   "moves": [
+    {
+     "player": "Jaylen Brown",
+     "from": "Derrick White Girl Wasted",
+     "to": "The haliban"
+    },
+    {
+     "player": "Jrue Holiday",
+     "from": "Derrick White Girl Wasted",
+     "to": "The haliban"
+    },
+    {
+     "player": "Derrick White",
+     "from": "The haliban",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Walker Kessler",
+     "from": "The haliban",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Ryan Kalkbrenner",
+     "from": "Derrick White Girl Wasted",
+     "to": null
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Derrick White Girl Wasted": 0.642,
+    "The haliban": -0.551
+   },
+   "rated_on": "2026-11-16"
+  },
+  "9e4aac1a-1fd2-46d5-abfd-9635c6cfec02": {
+   "proposed": "2026-11-16T09:07:01.430000+00:00",
+   "proposed_by": "mr charloooooo",
+   "teams": [
+    "Gets On Base",
+    "mr charloooooo"
+   ],
+   "moves": [
+    {
+     "player": "Brandin Podziemski",
+     "from": "Gets On Base",
+     "to": "mr charloooooo"
+    },
+    {
+     "player": "Kris Dunn",
+     "from": "mr charloooooo",
+     "to": null
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false
   }
  },
  "outcomes": {
@@ -4827,6 +5039,41 @@
    "outcome": "accepted",
    "by": "Stairway to Devin",
    "date": "2026-11-15T09:18:48.469000+00:00"
+  },
+  "4dff0bfb-2dc1-4438-b321-bb5841b4c1ec": {
+   "outcome": "accepted",
+   "by": "The haliban",
+   "date": "2026-11-16T05:54:53.851000+00:00"
+  },
+  "2cf154af-8e2a-413e-9618-3d09330f7e2a": {
+   "outcome": "declined",
+   "by": "The Real OG",
+   "date": "2026-11-16T09:18:59.541000+00:00"
+  },
+  "fde493e5-2aeb-4d4c-b5a8-f38109103139": {
+   "outcome": "declined",
+   "by": "Derrick White Girl Wasted",
+   "date": "2026-11-16T12:49:20.085000+00:00"
+  },
+  "b5374480-9b5d-4235-9c35-2af2189b3daf": {
+   "outcome": "declined",
+   "by": "The Real OG",
+   "date": "2026-11-16T09:18:54.628000+00:00"
+  },
+  "3c323d09-951a-4f26-8482-f5451a38929a": {
+   "outcome": "declined",
+   "by": "mr charloooooo",
+   "date": "2026-11-16T09:01:45.606000+00:00"
+  },
+  "f0a16979-bd33-40b9-b47e-b54145937852": {
+   "outcome": "declined",
+   "by": "Derrick White Girl Wasted",
+   "date": "2026-11-16T12:49:05.765000+00:00"
+  },
+  "e1a4df39-735d-4f35-9cc1-5bf2dbb42c5e": {
+   "outcome": "declined",
+   "by": "Derrick White Girl Wasted",
+   "date": "2026-11-16T12:48:23.708000+00:00"
   }
  },
  "synced_periods": [
@@ -4857,7 +5104,8 @@
   24,
   25,
   26,
-  27
+  27,
+  28
  ],
- "last_sync": "2026-11-16T04:24:02.190552+00:00"
+ "last_sync": "2026-11-16T13:01:18.380239+00:00"
 }

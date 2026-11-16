@@ -1,6 +1,211 @@
 {
- "updated_utc": "2026-11-16T04:24:02.775829+00:00",
+ "updated_utc": "2026-11-16T13:01:18.655813+00:00",
  "offers": [
+  {
+   "id": "c80c514f-2ae1-4123-a229-83d16138b0d2",
+   "proposed": "2026-11-16T12:49:23.951000+00:00",
+   "sender": "Derrick White Girl Wasted",
+   "receiver": "OnlyFranz",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "OnlyFranz"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Jaylen Brown",
+     "from": "Derrick White Girl Wasted",
+     "to": "OnlyFranz"
+    },
+    {
+     "player": "Dyson Daniels",
+     "from": "OnlyFranz",
+     "to": "Derrick White Girl Wasted"
+    }
+   ],
+   "sender_gain": 0.109,
+   "receiver_gain": -0.062
+  },
+  {
+   "id": "8607c1ac-6e6a-456b-87fa-aacdb0014b1b",
+   "proposed": "2026-11-16T12:48:14.440000+00:00",
+   "sender": "Derrick White Girl Wasted",
+   "receiver": "Popoviched",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Popoviched"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Derik Queen",
+     "from": "Derrick White Girl Wasted",
+     "to": "Popoviched"
+    },
+    {
+     "player": "Jaylen Brown",
+     "from": "Derrick White Girl Wasted",
+     "to": "Popoviched"
+    },
+    {
+     "player": "Andrew Nembhard",
+     "from": "Derrick White Girl Wasted",
+     "to": "Popoviched"
+    },
+    {
+     "player": "Jalen Smith",
+     "from": "Popoviched",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "LaMelo Ball",
+     "from": "Popoviched",
+     "to": "Derrick White Girl Wasted"
+    }
+   ],
+   "sender_gain": 0.291,
+   "receiver_gain": -0.444
+  },
+  {
+   "id": "81bb7a59-bf8b-42df-900a-340dbf4b2109",
+   "proposed": "2026-11-16T12:48:06.159000+00:00",
+   "sender": "Derrick White Girl Wasted",
+   "receiver": "The haliban",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "The haliban"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Jaylen Brown",
+     "from": "Derrick White Girl Wasted",
+     "to": "The haliban"
+    },
+    {
+     "player": "Jrue Holiday",
+     "from": "Derrick White Girl Wasted",
+     "to": "The haliban"
+    },
+    {
+     "player": "Derrick White",
+     "from": "The haliban",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Walker Kessler",
+     "from": "The haliban",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Ryan Kalkbrenner",
+     "from": "Derrick White Girl Wasted",
+     "to": null
+    }
+   ],
+   "sender_gain": 0.642,
+   "receiver_gain": -0.551
+  },
+  {
+   "id": "44078e4c-4fda-47d1-a313-8b471ce76aa8",
+   "proposed": "2026-11-16T12:44:58.623000+00:00",
+   "sender": "Derrick White Girl Wasted",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Gets On Base"
+   ],
+   "outcome": "pending",
+   "moves": [
+    {
+     "player": "Derik Queen",
+     "from": "Derrick White Girl Wasted",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Jaylen Brown",
+     "from": "Derrick White Girl Wasted",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Ace Bailey",
+     "from": "Gets On Base",
+     "to": "Derrick White Girl Wasted"
+    }
+   ],
+   "sender_gain": 0.297,
+   "receiver_gain": -0.304
+  },
+  {
+   "id": "c4e1a7f5-3f84-4363-8851-3075254033a9",
+   "proposed": "2026-11-16T09:46:23.818000+00:00",
+   "sender": "Derrick White Girl Wasted",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Gets On Base"
+   ],
+   "outcome": "pending",
+   "moves": [
+    {
+     "player": "Andrew Nembhard",
+     "from": "Derrick White Girl Wasted",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Derik Queen",
+     "from": "Derrick White Girl Wasted",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Ace Bailey",
+     "from": "Gets On Base",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Kawhi Leonard",
+     "from": "Derrick White Girl Wasted",
+     "to": "Gets On Base"
+    }
+   ],
+   "sender_gain": -0.319,
+   "receiver_gain": 0.342
+  },
+  {
+   "id": "9e4aac1a-1fd2-46d5-abfd-9635c6cfec02",
+   "proposed": "2026-11-16T09:07:01.430000+00:00",
+   "sender": "mr charloooooo",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Gets On Base",
+    "mr charloooooo"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Brandin Podziemski",
+     "from": "Gets On Base",
+     "to": "mr charloooooo"
+    },
+    {
+     "player": "Kris Dunn",
+     "from": "mr charloooooo",
+     "to": null
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
   {
    "id": "cc039262-6008-4a84-a79b-61ddf0dd8536",
    "proposed": "2026-11-16T02:49:21.462000+00:00",
@@ -245,7 +450,7 @@
     "Gets On Base",
     "mr charloooooo"
    ],
-   "outcome": "pending",
+   "outcome": "expired",
    "moves": [
     {
      "player": "Brandin Podziemski",
@@ -4321,77 +4526,9 @@
    }
   },
   {
-   "team": "Derrick White Girl Wasted",
-   "sent": 23,
-   "received": 6,
-   "rated_sent": 17,
-   "sent_accepted": 4,
-   "sent_declined": 0,
-   "generosity": 0.035,
-   "self_gain": -0.021,
-   "best_sent": {
-    "id": "81d2c045-e0d8-46be-90c2-6c945778fedf",
-    "receiver": "Giddey up Horsey",
-    "receiver_gain": 0.719,
-    "sender_gain": -0.868,
-    "moves": [
-     {
-      "player": "Kawhi Leonard",
-      "from": "Derrick White Girl Wasted",
-      "to": "Giddey up Horsey"
-     },
-     {
-      "player": "Jamal Murray",
-      "from": "Derrick White Girl Wasted",
-      "to": "Giddey up Horsey"
-     },
-     {
-      "player": "Cade Cunningham",
-      "from": "Giddey up Horsey",
-      "to": "Derrick White Girl Wasted"
-     }
-    ],
-    "outcome": "cancelled/expired"
-   },
-   "worst_sent": {
-    "id": "4799ab94-4da6-48c0-ac46-6a9821c46a9d",
-    "receiver": "The haliban",
-    "receiver_gain": -0.4,
-    "sender_gain": 0.559,
-    "moves": [
-     {
-      "player": "Jrue Holiday",
-      "from": "Derrick White Girl Wasted",
-      "to": "The haliban"
-     },
-     {
-      "player": "Bilal Coulibaly",
-      "from": "Derrick White Girl Wasted",
-      "to": "The haliban"
-     },
-     {
-      "player": "Mo Bamba",
-      "from": "Derrick White Girl Wasted",
-      "to": "The haliban"
-     },
-     {
-      "player": "Jordan Poole",
-      "from": "The haliban",
-      "to": "Derrick White Girl Wasted"
-     },
-     {
-      "player": "Walker Kessler",
-      "from": "The haliban",
-      "to": "Derrick White Girl Wasted"
-     }
-    ],
-    "outcome": "cancelled/expired"
-   }
-  },
-  {
    "team": "Popoviched",
    "sent": 20,
-   "received": 6,
+   "received": 7,
    "rated_sent": 13,
    "sent_accepted": 0,
    "sent_declined": 0,
@@ -4438,7 +4575,7 @@
   },
   {
    "team": "mr charloooooo",
-   "sent": 11,
+   "sent": 12,
    "received": 3,
    "rated_sent": 10,
    "sent_accepted": 2,
@@ -4481,13 +4618,13 @@
       "to": null
      }
     ],
-    "outcome": "pending"
+    "outcome": "expired"
    }
   },
   {
    "team": "Gets On Base",
    "sent": 30,
-   "received": 32,
+   "received": 35,
    "rated_sent": 20,
    "sent_accepted": 0,
    "sent_declined": 7,
@@ -4537,6 +4674,74 @@
       "player": "Reed Sheppard",
       "from": "Torta Pounders",
       "to": "Gets On Base"
+     }
+    ],
+    "outcome": "cancelled/expired"
+   }
+  },
+  {
+   "team": "Derrick White Girl Wasted",
+   "sent": 28,
+   "received": 6,
+   "rated_sent": 22,
+   "sent_accepted": 4,
+   "sent_declined": 0,
+   "generosity": -0.019,
+   "self_gain": 0.03,
+   "best_sent": {
+    "id": "81d2c045-e0d8-46be-90c2-6c945778fedf",
+    "receiver": "Giddey up Horsey",
+    "receiver_gain": 0.719,
+    "sender_gain": -0.868,
+    "moves": [
+     {
+      "player": "Kawhi Leonard",
+      "from": "Derrick White Girl Wasted",
+      "to": "Giddey up Horsey"
+     },
+     {
+      "player": "Jamal Murray",
+      "from": "Derrick White Girl Wasted",
+      "to": "Giddey up Horsey"
+     },
+     {
+      "player": "Cade Cunningham",
+      "from": "Giddey up Horsey",
+      "to": "Derrick White Girl Wasted"
+     }
+    ],
+    "outcome": "cancelled/expired"
+   },
+   "worst_sent": {
+    "id": "81bb7a59-bf8b-42df-900a-340dbf4b2109",
+    "receiver": "The haliban",
+    "receiver_gain": -0.551,
+    "sender_gain": 0.642,
+    "moves": [
+     {
+      "player": "Jaylen Brown",
+      "from": "Derrick White Girl Wasted",
+      "to": "The haliban"
+     },
+     {
+      "player": "Jrue Holiday",
+      "from": "Derrick White Girl Wasted",
+      "to": "The haliban"
+     },
+     {
+      "player": "Derrick White",
+      "from": "The haliban",
+      "to": "Derrick White Girl Wasted"
+     },
+     {
+      "player": "Walker Kessler",
+      "from": "The haliban",
+      "to": "Derrick White Girl Wasted"
+     },
+     {
+      "player": "Ryan Kalkbrenner",
+      "from": "Derrick White Girl Wasted",
+      "to": null
      }
     ],
     "outcome": "cancelled/expired"
@@ -4661,7 +4866,7 @@
   {
    "team": "OnlyFranz",
    "sent": 1,
-   "received": 0,
+   "received": 1,
    "rated_sent": 1,
    "sent_accepted": 0,
    "sent_declined": 0,
@@ -4825,7 +5030,7 @@
   {
    "team": "The haliban",
    "sent": 0,
-   "received": 9,
+   "received": 10,
    "rated_sent": 0,
    "sent_accepted": 0,
    "sent_declined": 0,
@@ -4835,5 +5040,5 @@
    "worst_sent": null
   }
  ],
- "lost_before_logging": 75
+ "lost_before_logging": 82
 }

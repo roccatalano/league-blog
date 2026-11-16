@@ -1,6 +1,141 @@
 {
- "updated_utc": "2026-11-15T23:42:09.228402+00:00",
+ "updated_utc": "2026-11-16T04:24:02.775829+00:00",
  "offers": [
+  {
+   "id": "cc039262-6008-4a84-a79b-61ddf0dd8536",
+   "proposed": "2026-11-16T02:49:21.462000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "Giddey up Horsey",
+   "teams": [
+    "Giddey up Horsey",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "De'Andre Hunter",
+     "from": "Viva La Raza!",
+     "to": "Giddey up Horsey"
+    },
+    {
+     "player": "Julius Randle",
+     "from": "Giddey up Horsey",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Kyshawn George",
+     "from": "Giddey up Horsey",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Bam Adebayo",
+     "from": "Viva La Raza!",
+     "to": "Giddey up Horsey"
+    }
+   ],
+   "sender_gain": -0.106,
+   "receiver_gain": 0.059
+  },
+  {
+   "id": "2b8abfc2-c7db-49ca-a9c2-cd2a7a8c2b14",
+   "proposed": "2026-11-16T01:15:32.884000+00:00",
+   "sender": "OnlyFranz",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Gets On Base",
+    "OnlyFranz"
+   ],
+   "outcome": "pending",
+   "moves": [
+    {
+     "player": "Brook Lopez",
+     "from": "OnlyFranz",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Devin Vassell",
+     "from": "OnlyFranz",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "OnlyFranz"
+    }
+   ],
+   "sender_gain": 0.358,
+   "receiver_gain": -0.122
+  },
+  {
+   "id": "cd29097e-b886-49a3-888f-0ddc5a1864d4",
+   "proposed": "2026-11-15T23:57:45.824000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "Popoviched",
+   "teams": [
+    "Popoviched",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "De'Andre Hunter",
+     "from": "Viva La Raza!",
+     "to": "Popoviched"
+    },
+    {
+     "player": "Bam Adebayo",
+     "from": "Viva La Raza!",
+     "to": "Popoviched"
+    },
+    {
+     "player": "Desmond Bane",
+     "from": "Popoviched",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Naz Reid",
+     "from": "Popoviched",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": 0.182,
+   "receiver_gain": 0.034
+  },
+  {
+   "id": "1b5acb94-bad6-426f-a994-262ac7821285",
+   "proposed": "2026-11-15T23:57:34.717000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "The Serbian Empire",
+   "teams": [
+    "The Serbian Empire",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "De'Andre Hunter",
+     "from": "Viva La Raza!",
+     "to": "The Serbian Empire"
+    },
+    {
+     "player": "Domantas Sabonis",
+     "from": "The Serbian Empire",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Brandon Miller",
+     "from": "The Serbian Empire",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Bam Adebayo",
+     "from": "Viva La Raza!",
+     "to": "The Serbian Empire"
+    }
+   ],
+   "sender_gain": 0.346,
+   "receiver_gain": -0.354
+  },
   {
    "id": "b6bfacbe-5b74-4dd8-8a92-aa9b36460918",
    "proposed": "2026-11-15T09:56:36.411000+00:00",
@@ -4256,7 +4391,7 @@
   {
    "team": "Popoviched",
    "sent": 20,
-   "received": 5,
+   "received": 6,
    "rated_sent": 13,
    "sent_accepted": 0,
    "sent_declined": 0,
@@ -4352,7 +4487,7 @@
   {
    "team": "Gets On Base",
    "sent": 30,
-   "received": 31,
+   "received": 32,
    "rated_sent": 20,
    "sent_accepted": 0,
    "sent_declined": 7,
@@ -4524,14 +4659,72 @@
    }
   },
   {
+   "team": "OnlyFranz",
+   "sent": 1,
+   "received": 0,
+   "rated_sent": 1,
+   "sent_accepted": 0,
+   "sent_declined": 0,
+   "generosity": -0.122,
+   "self_gain": 0.358,
+   "best_sent": {
+    "id": "2b8abfc2-c7db-49ca-a9c2-cd2a7a8c2b14",
+    "receiver": "Gets On Base",
+    "receiver_gain": -0.122,
+    "sender_gain": 0.358,
+    "moves": [
+     {
+      "player": "Brook Lopez",
+      "from": "OnlyFranz",
+      "to": "Gets On Base"
+     },
+     {
+      "player": "Devin Vassell",
+      "from": "OnlyFranz",
+      "to": "Gets On Base"
+     },
+     {
+      "player": "Donovan Clingan",
+      "from": "Gets On Base",
+      "to": "OnlyFranz"
+     }
+    ],
+    "outcome": "pending"
+   },
+   "worst_sent": {
+    "id": "2b8abfc2-c7db-49ca-a9c2-cd2a7a8c2b14",
+    "receiver": "Gets On Base",
+    "receiver_gain": -0.122,
+    "sender_gain": 0.358,
+    "moves": [
+     {
+      "player": "Brook Lopez",
+      "from": "OnlyFranz",
+      "to": "Gets On Base"
+     },
+     {
+      "player": "Devin Vassell",
+      "from": "OnlyFranz",
+      "to": "Gets On Base"
+     },
+     {
+      "player": "Donovan Clingan",
+      "from": "Gets On Base",
+      "to": "OnlyFranz"
+     }
+    ],
+    "outcome": "pending"
+   }
+  },
+  {
    "team": "Viva La Raza!",
-   "sent": 41,
+   "sent": 44,
    "received": 7,
-   "rated_sent": 23,
+   "rated_sent": 26,
    "sent_accepted": 1,
    "sent_declined": 0,
-   "generosity": -0.21,
-   "self_gain": 0.221,
+   "generosity": -0.196,
+   "self_gain": 0.212,
    "best_sent": {
     "id": "bd9f9a3b-2512-41bb-a03b-b39d038694be",
     "receiver": "Giddey up Horsey",
@@ -4584,7 +4777,7 @@
   {
    "team": "The Serbian Empire",
    "sent": 0,
-   "received": 10,
+   "received": 11,
    "rated_sent": 0,
    "sent_accepted": 0,
    "sent_declined": 0,
@@ -4596,19 +4789,7 @@
   {
    "team": "Giddey up Horsey",
    "sent": 0,
-   "received": 12,
-   "rated_sent": 0,
-   "sent_accepted": 0,
-   "sent_declined": 0,
-   "generosity": null,
-   "self_gain": null,
-   "best_sent": null,
-   "worst_sent": null
-  },
-  {
-   "team": "OnlyFranz",
-   "sent": 0,
-   "received": 0,
+   "received": 13,
    "rated_sent": 0,
    "sent_accepted": 0,
    "sent_declined": 0,

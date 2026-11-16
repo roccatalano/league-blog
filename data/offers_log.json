@@ -4212,6 +4212,149 @@
     "Viva La Raza!": 0.365
    },
    "rated_on": "2026-11-15"
+  },
+  "2b8abfc2-c7db-49ca-a9c2-cd2a7a8c2b14": {
+   "proposed": "2026-11-16T01:15:32.884000+00:00",
+   "proposed_by": "OnlyFranz",
+   "teams": [
+    "Gets On Base",
+    "OnlyFranz"
+   ],
+   "moves": [
+    {
+     "player": "Brook Lopez",
+     "from": "OnlyFranz",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Devin Vassell",
+     "from": "OnlyFranz",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "OnlyFranz"
+    }
+   ],
+   "espn_status": "PENDING",
+   "live_now": true,
+   "rating": {
+    "Gets On Base": -0.122,
+    "OnlyFranz": 0.358
+   },
+   "rated_on": "2026-11-16"
+  },
+  "cc039262-6008-4a84-a79b-61ddf0dd8536": {
+   "proposed": "2026-11-16T02:49:21.462000+00:00",
+   "proposed_by": "Viva La Raza!",
+   "teams": [
+    "Giddey up Horsey",
+    "Viva La Raza!"
+   ],
+   "moves": [
+    {
+     "player": "De'Andre Hunter",
+     "from": "Viva La Raza!",
+     "to": "Giddey up Horsey"
+    },
+    {
+     "player": "Julius Randle",
+     "from": "Giddey up Horsey",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Kyshawn George",
+     "from": "Giddey up Horsey",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Bam Adebayo",
+     "from": "Viva La Raza!",
+     "to": "Giddey up Horsey"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Giddey up Horsey": 0.059,
+    "Viva La Raza!": -0.106
+   },
+   "rated_on": "2026-11-16"
+  },
+  "1b5acb94-bad6-426f-a994-262ac7821285": {
+   "proposed": "2026-11-15T23:57:34.717000+00:00",
+   "proposed_by": "Viva La Raza!",
+   "teams": [
+    "The Serbian Empire",
+    "Viva La Raza!"
+   ],
+   "moves": [
+    {
+     "player": "De'Andre Hunter",
+     "from": "Viva La Raza!",
+     "to": "The Serbian Empire"
+    },
+    {
+     "player": "Domantas Sabonis",
+     "from": "The Serbian Empire",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Brandon Miller",
+     "from": "The Serbian Empire",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Bam Adebayo",
+     "from": "Viva La Raza!",
+     "to": "The Serbian Empire"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "The Serbian Empire": -0.354,
+    "Viva La Raza!": 0.346
+   },
+   "rated_on": "2026-11-16"
+  },
+  "cd29097e-b886-49a3-888f-0ddc5a1864d4": {
+   "proposed": "2026-11-15T23:57:45.824000+00:00",
+   "proposed_by": "Viva La Raza!",
+   "teams": [
+    "Popoviched",
+    "Viva La Raza!"
+   ],
+   "moves": [
+    {
+     "player": "De'Andre Hunter",
+     "from": "Viva La Raza!",
+     "to": "Popoviched"
+    },
+    {
+     "player": "Bam Adebayo",
+     "from": "Viva La Raza!",
+     "to": "Popoviched"
+    },
+    {
+     "player": "Desmond Bane",
+     "from": "Popoviched",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Naz Reid",
+     "from": "Popoviched",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Popoviched": 0.034,
+    "Viva La Raza!": 0.182
+   },
+   "rated_on": "2026-11-16"
   }
  },
  "outcomes": {
@@ -4716,5 +4859,5 @@
   26,
   27
  ],
- "last_sync": "2026-11-15T23:42:08.772654+00:00"
+ "last_sync": "2026-11-16T04:24:02.190552+00:00"
 }

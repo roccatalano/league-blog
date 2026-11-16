@@ -4567,6 +4567,112 @@
    ],
    "espn_status": "CANCELED",
    "live_now": false
+  },
+  "32487e48-409c-43dc-9b64-9faaae83170a": {
+   "proposed": "2026-11-16T13:30:56.193000+00:00",
+   "proposed_by": "Derrick White Girl Wasted",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Gets On Base"
+   ],
+   "moves": [
+    {
+     "player": "Jaylen Brown",
+     "from": "Derrick White Girl Wasted",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Ryan Kalkbrenner",
+     "from": "Derrick White Girl Wasted",
+     "to": null
+    }
+   ],
+   "espn_status": "PENDING",
+   "live_now": true,
+   "rating": {
+    "Derrick White Girl Wasted": 0.21,
+    "Gets On Base": -0.226
+   },
+   "rated_on": "2026-11-16"
+  },
+  "10661d9a-a261-46e5-a77b-d8b02439c955": {
+   "proposed": "2026-11-16T19:13:54.896000+00:00",
+   "proposed_by": "Viva La Raza!",
+   "teams": [
+    "HE IS HIM ( G.O.A.T)",
+    "Viva La Raza!"
+   ],
+   "moves": [
+    {
+     "player": "De'Andre Hunter",
+     "from": "Viva La Raza!",
+     "to": "HE IS HIM ( G.O.A.T)"
+    },
+    {
+     "player": "Bam Adebayo",
+     "from": "Viva La Raza!",
+     "to": "HE IS HIM ( G.O.A.T)"
+    },
+    {
+     "player": "Devin Booker",
+     "from": "HE IS HIM ( G.O.A.T)",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Myles Turner",
+     "from": "HE IS HIM ( G.O.A.T)",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "HE IS HIM ( G.O.A.T)": -0.137,
+    "Viva La Raza!": 0.243
+   },
+   "rated_on": "2026-11-16"
+  },
+  "99148c29-8b52-458b-b656-2940b3c8ffdb": {
+   "proposed": "2026-11-16T19:13:31.505000+00:00",
+   "proposed_by": "Viva La Raza!",
+   "teams": [
+    "HE IS HIM ( G.O.A.T)",
+    "Viva La Raza!"
+   ],
+   "moves": [
+    {
+     "player": "Jakob Poeltl",
+     "from": "Viva La Raza!",
+     "to": "HE IS HIM ( G.O.A.T)"
+    },
+    {
+     "player": "De'Andre Hunter",
+     "from": "Viva La Raza!",
+     "to": "HE IS HIM ( G.O.A.T)"
+    },
+    {
+     "player": "Myles Turner",
+     "from": "HE IS HIM ( G.O.A.T)",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Tari Eason",
+     "from": "HE IS HIM ( G.O.A.T)",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "HE IS HIM ( G.O.A.T)": -0.208,
+    "Viva La Raza!": 0.34
+   },
+   "rated_on": "2026-11-16"
   }
  },
  "outcomes": {
@@ -5074,6 +5180,16 @@
    "outcome": "declined",
    "by": "Derrick White Girl Wasted",
    "date": "2026-11-16T12:48:23.708000+00:00"
+  },
+  "405ad381-5ff2-4573-9787-f8c04165f4e0": {
+   "outcome": "declined",
+   "by": "Stairway to Devin",
+   "date": "2026-11-16T20:54:56.640000+00:00"
+  },
+  "4f68073d-3236-4c97-b803-4d22be36f00b": {
+   "outcome": "declined",
+   "by": "Viva La Raza!",
+   "date": "2026-11-16T19:14:05.377000+00:00"
   }
  },
  "synced_periods": [
@@ -5107,5 +5223,5 @@
   27,
   28
  ],
- "last_sync": "2026-11-16T13:01:18.380239+00:00"
+ "last_sync": "2026-11-16T22:58:16.057309+00:00"
 }

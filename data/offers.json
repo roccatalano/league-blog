@@ -1,6 +1,106 @@
 {
- "updated_utc": "2026-11-16T13:01:18.655813+00:00",
+ "updated_utc": "2026-11-16T22:58:16.657235+00:00",
  "offers": [
+  {
+   "id": "10661d9a-a261-46e5-a77b-d8b02439c955",
+   "proposed": "2026-11-16T19:13:54.896000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "HE IS HIM ( G.O.A.T)",
+   "teams": [
+    "HE IS HIM ( G.O.A.T)",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "De'Andre Hunter",
+     "from": "Viva La Raza!",
+     "to": "HE IS HIM ( G.O.A.T)"
+    },
+    {
+     "player": "Bam Adebayo",
+     "from": "Viva La Raza!",
+     "to": "HE IS HIM ( G.O.A.T)"
+    },
+    {
+     "player": "Devin Booker",
+     "from": "HE IS HIM ( G.O.A.T)",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Myles Turner",
+     "from": "HE IS HIM ( G.O.A.T)",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": 0.243,
+   "receiver_gain": -0.137
+  },
+  {
+   "id": "99148c29-8b52-458b-b656-2940b3c8ffdb",
+   "proposed": "2026-11-16T19:13:31.505000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "HE IS HIM ( G.O.A.T)",
+   "teams": [
+    "HE IS HIM ( G.O.A.T)",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Jakob Poeltl",
+     "from": "Viva La Raza!",
+     "to": "HE IS HIM ( G.O.A.T)"
+    },
+    {
+     "player": "De'Andre Hunter",
+     "from": "Viva La Raza!",
+     "to": "HE IS HIM ( G.O.A.T)"
+    },
+    {
+     "player": "Myles Turner",
+     "from": "HE IS HIM ( G.O.A.T)",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Tari Eason",
+     "from": "HE IS HIM ( G.O.A.T)",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": 0.34,
+   "receiver_gain": -0.208
+  },
+  {
+   "id": "32487e48-409c-43dc-9b64-9faaae83170a",
+   "proposed": "2026-11-16T13:30:56.193000+00:00",
+   "sender": "Derrick White Girl Wasted",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Gets On Base"
+   ],
+   "outcome": "pending",
+   "moves": [
+    {
+     "player": "Jaylen Brown",
+     "from": "Derrick White Girl Wasted",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Ryan Kalkbrenner",
+     "from": "Derrick White Girl Wasted",
+     "to": null
+    }
+   ],
+   "sender_gain": 0.21,
+   "receiver_gain": -0.226
+  },
   {
    "id": "c80c514f-2ae1-4123-a229-83d16138b0d2",
    "proposed": "2026-11-16T12:49:23.951000+00:00",
@@ -4624,7 +4724,7 @@
   {
    "team": "Gets On Base",
    "sent": 30,
-   "received": 35,
+   "received": 36,
    "rated_sent": 20,
    "sent_accepted": 0,
    "sent_declined": 7,
@@ -4680,14 +4780,62 @@
    }
   },
   {
+   "team": "Stairway to Devin",
+   "sent": 2,
+   "received": 5,
+   "rated_sent": 2,
+   "sent_accepted": 1,
+   "sent_declined": 0,
+   "generosity": -0.027,
+   "self_gain": 0.03,
+   "best_sent": {
+    "id": "38277c0e-4a7c-428b-bb15-93c20a862848",
+    "receiver": "Popoviched",
+    "receiver_gain": 0.115,
+    "sender_gain": -0.065,
+    "moves": [
+     {
+      "player": "Derik Queen",
+      "from": "Stairway to Devin",
+      "to": "Popoviched"
+     },
+     {
+      "player": "Duncan Robinson",
+      "from": "Popoviched",
+      "to": "Stairway to Devin"
+     }
+    ],
+    "outcome": "cancelled/expired"
+   },
+   "worst_sent": {
+    "id": "efd67113-8aef-41e5-bb44-6932aa31c4f7",
+    "receiver": "The Serbian Empire",
+    "receiver_gain": -0.169,
+    "sender_gain": 0.126,
+    "moves": [
+     {
+      "player": "Immanuel Quickley",
+      "from": "The Serbian Empire",
+      "to": "Stairway to Devin"
+     },
+     {
+      "player": "Dylan Harper",
+      "from": "Stairway to Devin",
+      "to": "The Serbian Empire"
+     }
+    ],
+    "outcome": "accepted"
+   }
+  },
+  {
    "team": "Derrick White Girl Wasted",
-   "sent": 28,
+   "sent": 29,
    "received": 6,
-   "rated_sent": 22,
+   "rated_sent": 23,
    "sent_accepted": 4,
    "sent_declined": 0,
-   "generosity": -0.019,
-   "self_gain": 0.03,
+   "generosity": -0.028,
+   "self_gain": 0.038,
    "best_sent": {
     "id": "81d2c045-e0d8-46be-90c2-6c945778fedf",
     "receiver": "Giddey up Horsey",
@@ -4745,54 +4893,6 @@
      }
     ],
     "outcome": "cancelled/expired"
-   }
-  },
-  {
-   "team": "Stairway to Devin",
-   "sent": 2,
-   "received": 5,
-   "rated_sent": 2,
-   "sent_accepted": 1,
-   "sent_declined": 0,
-   "generosity": -0.027,
-   "self_gain": 0.03,
-   "best_sent": {
-    "id": "38277c0e-4a7c-428b-bb15-93c20a862848",
-    "receiver": "Popoviched",
-    "receiver_gain": 0.115,
-    "sender_gain": -0.065,
-    "moves": [
-     {
-      "player": "Derik Queen",
-      "from": "Stairway to Devin",
-      "to": "Popoviched"
-     },
-     {
-      "player": "Duncan Robinson",
-      "from": "Popoviched",
-      "to": "Stairway to Devin"
-     }
-    ],
-    "outcome": "cancelled/expired"
-   },
-   "worst_sent": {
-    "id": "efd67113-8aef-41e5-bb44-6932aa31c4f7",
-    "receiver": "The Serbian Empire",
-    "receiver_gain": -0.169,
-    "sender_gain": 0.126,
-    "moves": [
-     {
-      "player": "Immanuel Quickley",
-      "from": "The Serbian Empire",
-      "to": "Stairway to Devin"
-     },
-     {
-      "player": "Dylan Harper",
-      "from": "Stairway to Devin",
-      "to": "The Serbian Empire"
-     }
-    ],
-    "outcome": "accepted"
    }
   },
   {
@@ -4923,13 +5023,13 @@
   },
   {
    "team": "Viva La Raza!",
-   "sent": 44,
+   "sent": 46,
    "received": 7,
-   "rated_sent": 26,
+   "rated_sent": 28,
    "sent_accepted": 1,
    "sent_declined": 0,
-   "generosity": -0.196,
-   "self_gain": 0.212,
+   "generosity": -0.194,
+   "self_gain": 0.218,
    "best_sent": {
     "id": "bd9f9a3b-2512-41bb-a03b-b39d038694be",
     "receiver": "Giddey up Horsey",
@@ -5006,7 +5106,7 @@
   {
    "team": "HE IS HIM ( G.O.A.T)",
    "sent": 0,
-   "received": 5,
+   "received": 7,
    "rated_sent": 0,
    "sent_accepted": 0,
    "sent_declined": 0,
@@ -5040,5 +5140,5 @@
    "worst_sent": null
   }
  ],
- "lost_before_logging": 82
+ "lost_before_logging": 84
 }

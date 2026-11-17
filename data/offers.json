@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-17T14:12:54.394069+00:00",
+ "updated_utc": "2026-11-17T22:32:27.368781+00:00",
  "offers": [
   {
    "id": "d2bb6466-f745-4f72-aba7-4765f65a1bc5",
@@ -5316,5 +5316,5 @@
    "worst_sent": null
   }
  ],
- "lost_before_logging": 90
+ "lost_before_logging": 91
 }

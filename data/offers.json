@@ -1,6 +1,31 @@
 {
- "updated_utc": "2026-11-16T22:58:16.657235+00:00",
+ "updated_utc": "2026-11-17T04:59:01.421073+00:00",
  "offers": [
+  {
+   "id": "db695119-372c-4447-90fd-64a2c303cf90",
+   "proposed": "2026-11-17T01:26:17.112000+00:00",
+   "sender": "Stairway to Devin",
+   "receiver": "Torta Pounders",
+   "teams": [
+    "Stairway to Devin",
+    "Torta Pounders"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "James Harden",
+     "from": "Stairway to Devin",
+     "to": "Torta Pounders"
+    },
+    {
+     "player": "Tyrese Haliburton",
+     "from": "Torta Pounders",
+     "to": "Stairway to Devin"
+    }
+   ],
+   "sender_gain": 0.254,
+   "receiver_gain": -0.309
+  },
   {
    "id": "10661d9a-a261-46e5-a77b-d8b02439c955",
    "proposed": "2026-11-16T19:13:54.896000+00:00",
@@ -4575,7 +4600,7 @@
   {
    "team": "Torta Pounders",
    "sent": 2,
-   "received": 15,
+   "received": 16,
    "rated_sent": 2,
    "sent_accepted": 1,
    "sent_declined": 0,
@@ -4780,54 +4805,6 @@
    }
   },
   {
-   "team": "Stairway to Devin",
-   "sent": 2,
-   "received": 5,
-   "rated_sent": 2,
-   "sent_accepted": 1,
-   "sent_declined": 0,
-   "generosity": -0.027,
-   "self_gain": 0.03,
-   "best_sent": {
-    "id": "38277c0e-4a7c-428b-bb15-93c20a862848",
-    "receiver": "Popoviched",
-    "receiver_gain": 0.115,
-    "sender_gain": -0.065,
-    "moves": [
-     {
-      "player": "Derik Queen",
-      "from": "Stairway to Devin",
-      "to": "Popoviched"
-     },
-     {
-      "player": "Duncan Robinson",
-      "from": "Popoviched",
-      "to": "Stairway to Devin"
-     }
-    ],
-    "outcome": "cancelled/expired"
-   },
-   "worst_sent": {
-    "id": "efd67113-8aef-41e5-bb44-6932aa31c4f7",
-    "receiver": "The Serbian Empire",
-    "receiver_gain": -0.169,
-    "sender_gain": 0.126,
-    "moves": [
-     {
-      "player": "Immanuel Quickley",
-      "from": "The Serbian Empire",
-      "to": "Stairway to Devin"
-     },
-     {
-      "player": "Dylan Harper",
-      "from": "Stairway to Devin",
-      "to": "The Serbian Empire"
-     }
-    ],
-    "outcome": "accepted"
-   }
-  },
-  {
    "team": "Derrick White Girl Wasted",
    "sent": 29,
    "received": 6,
@@ -4961,6 +4938,54 @@
      }
     ],
     "outcome": "accepted"
+   }
+  },
+  {
+   "team": "Stairway to Devin",
+   "sent": 3,
+   "received": 5,
+   "rated_sent": 3,
+   "sent_accepted": 1,
+   "sent_declined": 0,
+   "generosity": -0.121,
+   "self_gain": 0.105,
+   "best_sent": {
+    "id": "38277c0e-4a7c-428b-bb15-93c20a862848",
+    "receiver": "Popoviched",
+    "receiver_gain": 0.115,
+    "sender_gain": -0.065,
+    "moves": [
+     {
+      "player": "Derik Queen",
+      "from": "Stairway to Devin",
+      "to": "Popoviched"
+     },
+     {
+      "player": "Duncan Robinson",
+      "from": "Popoviched",
+      "to": "Stairway to Devin"
+     }
+    ],
+    "outcome": "cancelled/expired"
+   },
+   "worst_sent": {
+    "id": "db695119-372c-4447-90fd-64a2c303cf90",
+    "receiver": "Torta Pounders",
+    "receiver_gain": -0.309,
+    "sender_gain": 0.254,
+    "moves": [
+     {
+      "player": "James Harden",
+      "from": "Stairway to Devin",
+      "to": "Torta Pounders"
+     },
+     {
+      "player": "Tyrese Haliburton",
+      "from": "Torta Pounders",
+      "to": "Stairway to Devin"
+     }
+    ],
+    "outcome": "cancelled/expired"
    }
   },
   {

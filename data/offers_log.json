@@ -4673,6 +4673,33 @@
     "Viva La Raza!": 0.34
    },
    "rated_on": "2026-11-16"
+  },
+  "db695119-372c-4447-90fd-64a2c303cf90": {
+   "proposed": "2026-11-17T01:26:17.112000+00:00",
+   "proposed_by": "Stairway to Devin",
+   "teams": [
+    "Stairway to Devin",
+    "Torta Pounders"
+   ],
+   "moves": [
+    {
+     "player": "James Harden",
+     "from": "Stairway to Devin",
+     "to": "Torta Pounders"
+    },
+    {
+     "player": "Tyrese Haliburton",
+     "from": "Torta Pounders",
+     "to": "Stairway to Devin"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Stairway to Devin": 0.254,
+    "Torta Pounders": -0.309
+   },
+   "rated_on": "2026-11-17"
   }
  },
  "outcomes": {
@@ -5223,5 +5250,5 @@
   27,
   28
  ],
- "last_sync": "2026-11-16T22:58:16.057309+00:00"
+ "last_sync": "2026-11-17T04:59:01.073263+00:00"
 }

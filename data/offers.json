@@ -1,6 +1,96 @@
 {
- "updated_utc": "2026-11-17T04:59:01.421073+00:00",
+ "updated_utc": "2026-11-17T14:12:54.394069+00:00",
  "offers": [
+  {
+   "id": "d2bb6466-f745-4f72-aba7-4765f65a1bc5",
+   "proposed": "2026-11-17T11:39:14.468000+00:00",
+   "sender": "The Real OG",
+   "receiver": "The Serbian Empire",
+   "teams": [
+    "The Real OG",
+    "The Serbian Empire"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Jalen Green",
+     "from": "The Real OG",
+     "to": "The Serbian Empire"
+    },
+    {
+     "player": "Kon Knueppel",
+     "from": "The Real OG",
+     "to": "The Serbian Empire"
+    },
+    {
+     "player": "Paolo Banchero",
+     "from": "The Real OG",
+     "to": "The Serbian Empire"
+    },
+    {
+     "player": "Nikola Jokic",
+     "from": "The Serbian Empire",
+     "to": "The Real OG"
+    }
+   ],
+   "sender_gain": 0.711,
+   "receiver_gain": -0.55
+  },
+  {
+   "id": "5b6b7c41-e90d-4055-a985-b947f548ec11",
+   "proposed": "2026-11-17T11:32:02.818000+00:00",
+   "sender": "Popoviched",
+   "receiver": "OnlyFranz",
+   "teams": [
+    "OnlyFranz",
+    "Popoviched"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Naz Reid",
+     "from": "Popoviched",
+     "to": "OnlyFranz"
+    },
+    {
+     "player": "Kel'el Ware",
+     "from": "Popoviched",
+     "to": "OnlyFranz"
+    },
+    {
+     "player": "Tyrese Maxey",
+     "from": "OnlyFranz",
+     "to": "Popoviched"
+    }
+   ],
+   "sender_gain": 0.24,
+   "receiver_gain": -0.284
+  },
+  {
+   "id": "ba68c510-a802-4162-8f58-2f649600ce0e",
+   "proposed": "2026-11-17T07:30:00.982000+00:00",
+   "sender": "Derrick White Girl Wasted",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Gets On Base"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Jrue Holiday",
+     "from": "Derrick White Girl Wasted",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Ace Bailey",
+     "from": "Gets On Base",
+     "to": "Derrick White Girl Wasted"
+    }
+   ],
+   "sender_gain": 0.084,
+   "receiver_gain": -0.048
+  },
   {
    "id": "db695119-372c-4447-90fd-64a2c303cf90",
    "proposed": "2026-11-17T01:26:17.112000+00:00",
@@ -4651,54 +4741,6 @@
    }
   },
   {
-   "team": "Popoviched",
-   "sent": 20,
-   "received": 7,
-   "rated_sent": 13,
-   "sent_accepted": 0,
-   "sent_declined": 0,
-   "generosity": 0.028,
-   "self_gain": 0.047,
-   "best_sent": {
-    "id": "acf5e2d6-17fb-4037-976a-edcb893102a6",
-    "receiver": "Derrick White Girl Wasted",
-    "receiver_gain": 0.337,
-    "sender_gain": -0.327,
-    "moves": [
-     {
-      "player": "Michael Porter Jr.",
-      "from": "Popoviched",
-      "to": "Derrick White Girl Wasted"
-     },
-     {
-      "player": "Stephon Castle",
-      "from": "Derrick White Girl Wasted",
-      "to": "Popoviched"
-     }
-    ],
-    "outcome": "cancelled/expired"
-   },
-   "worst_sent": {
-    "id": "3b979a0d-6330-4f8e-a27c-cb356a9e55d0",
-    "receiver": "Derrick White Girl Wasted",
-    "receiver_gain": -0.2,
-    "sender_gain": 0.26,
-    "moves": [
-     {
-      "player": "Payton Pritchard",
-      "from": "Popoviched",
-      "to": "Derrick White Girl Wasted"
-     },
-     {
-      "player": "Cameron Boozer",
-      "from": "Derrick White Girl Wasted",
-      "to": "Popoviched"
-     }
-    ],
-    "outcome": "cancelled/expired"
-   }
-  },
-  {
    "team": "mr charloooooo",
    "sent": 12,
    "received": 3,
@@ -4747,9 +4789,62 @@
    }
   },
   {
+   "team": "Popoviched",
+   "sent": 21,
+   "received": 7,
+   "rated_sent": 14,
+   "sent_accepted": 0,
+   "sent_declined": 0,
+   "generosity": 0.006,
+   "self_gain": 0.061,
+   "best_sent": {
+    "id": "acf5e2d6-17fb-4037-976a-edcb893102a6",
+    "receiver": "Derrick White Girl Wasted",
+    "receiver_gain": 0.337,
+    "sender_gain": -0.327,
+    "moves": [
+     {
+      "player": "Michael Porter Jr.",
+      "from": "Popoviched",
+      "to": "Derrick White Girl Wasted"
+     },
+     {
+      "player": "Stephon Castle",
+      "from": "Derrick White Girl Wasted",
+      "to": "Popoviched"
+     }
+    ],
+    "outcome": "cancelled/expired"
+   },
+   "worst_sent": {
+    "id": "5b6b7c41-e90d-4055-a985-b947f548ec11",
+    "receiver": "OnlyFranz",
+    "receiver_gain": -0.284,
+    "sender_gain": 0.24,
+    "moves": [
+     {
+      "player": "Naz Reid",
+      "from": "Popoviched",
+      "to": "OnlyFranz"
+     },
+     {
+      "player": "Kel'el Ware",
+      "from": "Popoviched",
+      "to": "OnlyFranz"
+     },
+     {
+      "player": "Tyrese Maxey",
+      "from": "OnlyFranz",
+      "to": "Popoviched"
+     }
+    ],
+    "outcome": "cancelled/expired"
+   }
+  },
+  {
    "team": "Gets On Base",
    "sent": 30,
-   "received": 36,
+   "received": 37,
    "rated_sent": 20,
    "sent_accepted": 0,
    "sent_declined": 7,
@@ -4806,13 +4901,13 @@
   },
   {
    "team": "Derrick White Girl Wasted",
-   "sent": 29,
+   "sent": 30,
    "received": 6,
-   "rated_sent": 23,
+   "rated_sent": 24,
    "sent_accepted": 4,
    "sent_declined": 0,
-   "generosity": -0.028,
-   "self_gain": 0.038,
+   "generosity": -0.029,
+   "self_gain": 0.04,
    "best_sent": {
     "id": "81d2c045-e0d8-46be-90c2-6c945778fedf",
     "receiver": "Giddey up Horsey",
@@ -4991,7 +5086,7 @@
   {
    "team": "OnlyFranz",
    "sent": 1,
-   "received": 1,
+   "received": 2,
    "rated_sent": 1,
    "sent_accepted": 0,
    "sent_declined": 0,
@@ -5105,9 +5200,77 @@
    }
   },
   {
+   "team": "The Real OG",
+   "sent": 1,
+   "received": 6,
+   "rated_sent": 1,
+   "sent_accepted": 0,
+   "sent_declined": 0,
+   "generosity": -0.55,
+   "self_gain": 0.711,
+   "best_sent": {
+    "id": "d2bb6466-f745-4f72-aba7-4765f65a1bc5",
+    "receiver": "The Serbian Empire",
+    "receiver_gain": -0.55,
+    "sender_gain": 0.711,
+    "moves": [
+     {
+      "player": "Jalen Green",
+      "from": "The Real OG",
+      "to": "The Serbian Empire"
+     },
+     {
+      "player": "Kon Knueppel",
+      "from": "The Real OG",
+      "to": "The Serbian Empire"
+     },
+     {
+      "player": "Paolo Banchero",
+      "from": "The Real OG",
+      "to": "The Serbian Empire"
+     },
+     {
+      "player": "Nikola Jokic",
+      "from": "The Serbian Empire",
+      "to": "The Real OG"
+     }
+    ],
+    "outcome": "cancelled/expired"
+   },
+   "worst_sent": {
+    "id": "d2bb6466-f745-4f72-aba7-4765f65a1bc5",
+    "receiver": "The Serbian Empire",
+    "receiver_gain": -0.55,
+    "sender_gain": 0.711,
+    "moves": [
+     {
+      "player": "Jalen Green",
+      "from": "The Real OG",
+      "to": "The Serbian Empire"
+     },
+     {
+      "player": "Kon Knueppel",
+      "from": "The Real OG",
+      "to": "The Serbian Empire"
+     },
+     {
+      "player": "Paolo Banchero",
+      "from": "The Real OG",
+      "to": "The Serbian Empire"
+     },
+     {
+      "player": "Nikola Jokic",
+      "from": "The Serbian Empire",
+      "to": "The Real OG"
+     }
+    ],
+    "outcome": "cancelled/expired"
+   }
+  },
+  {
    "team": "The Serbian Empire",
    "sent": 0,
-   "received": 11,
+   "received": 12,
    "rated_sent": 0,
    "sent_accepted": 0,
    "sent_declined": 0,
@@ -5141,18 +5304,6 @@
    "worst_sent": null
   },
   {
-   "team": "The Real OG",
-   "sent": 0,
-   "received": 6,
-   "rated_sent": 0,
-   "sent_accepted": 0,
-   "sent_declined": 0,
-   "generosity": null,
-   "self_gain": null,
-   "best_sent": null,
-   "worst_sent": null
-  },
-  {
    "team": "The haliban",
    "sent": 0,
    "received": 10,
@@ -5165,5 +5316,5 @@
    "worst_sent": null
   }
  ],
- "lost_before_logging": 84
+ "lost_before_logging": 90
 }

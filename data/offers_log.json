@@ -4700,6 +4700,102 @@
     "Torta Pounders": -0.309
    },
    "rated_on": "2026-11-17"
+  },
+  "ba68c510-a802-4162-8f58-2f649600ce0e": {
+   "proposed": "2026-11-17T07:30:00.982000+00:00",
+   "proposed_by": "Derrick White Girl Wasted",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Gets On Base"
+   ],
+   "moves": [
+    {
+     "player": "Jrue Holiday",
+     "from": "Derrick White Girl Wasted",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Ace Bailey",
+     "from": "Gets On Base",
+     "to": "Derrick White Girl Wasted"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Derrick White Girl Wasted": 0.084,
+    "Gets On Base": -0.048
+   },
+   "rated_on": "2026-11-17"
+  },
+  "d2bb6466-f745-4f72-aba7-4765f65a1bc5": {
+   "proposed": "2026-11-17T11:39:14.468000+00:00",
+   "proposed_by": "The Real OG",
+   "teams": [
+    "The Real OG",
+    "The Serbian Empire"
+   ],
+   "moves": [
+    {
+     "player": "Jalen Green",
+     "from": "The Real OG",
+     "to": "The Serbian Empire"
+    },
+    {
+     "player": "Kon Knueppel",
+     "from": "The Real OG",
+     "to": "The Serbian Empire"
+    },
+    {
+     "player": "Paolo Banchero",
+     "from": "The Real OG",
+     "to": "The Serbian Empire"
+    },
+    {
+     "player": "Nikola Jokic",
+     "from": "The Serbian Empire",
+     "to": "The Real OG"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "The Real OG": 0.711,
+    "The Serbian Empire": -0.55
+   },
+   "rated_on": "2026-11-17"
+  },
+  "5b6b7c41-e90d-4055-a985-b947f548ec11": {
+   "proposed": "2026-11-17T11:32:02.818000+00:00",
+   "proposed_by": "Popoviched",
+   "teams": [
+    "OnlyFranz",
+    "Popoviched"
+   ],
+   "moves": [
+    {
+     "player": "Naz Reid",
+     "from": "Popoviched",
+     "to": "OnlyFranz"
+    },
+    {
+     "player": "Kel'el Ware",
+     "from": "Popoviched",
+     "to": "OnlyFranz"
+    },
+    {
+     "player": "Tyrese Maxey",
+     "from": "OnlyFranz",
+     "to": "Popoviched"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "OnlyFranz": -0.284,
+    "Popoviched": 0.24
+   },
+   "rated_on": "2026-11-17"
   }
  },
  "outcomes": {
@@ -5217,6 +5313,36 @@
    "outcome": "declined",
    "by": "Viva La Raza!",
    "date": "2026-11-16T19:14:05.377000+00:00"
+  },
+  "97c82af0-db7d-4b94-bdba-1f75c310d106": {
+   "outcome": "declined",
+   "by": "HE IS HIM ( G.O.A.T)",
+   "date": "2026-11-17T05:58:18.715000+00:00"
+  },
+  "21cec30f-8545-4f3d-85ad-a645dba1f287": {
+   "outcome": "declined",
+   "by": "Viva La Raza!",
+   "date": "2026-11-17T12:31:57.912000+00:00"
+  },
+  "60db55d1-ac64-42a0-9ae0-bc15885f5588": {
+   "outcome": "declined",
+   "by": "Stairway to Devin",
+   "date": "2026-11-17T11:37:46.068000+00:00"
+  },
+  "95812beb-d203-49b8-9b0e-d327a10b2fbc": {
+   "outcome": "declined",
+   "by": "Popoviched",
+   "date": "2026-11-17T11:24:09.813000+00:00"
+  },
+  "b1ab2e08-24bc-4d02-8441-7aac3b332ca1": {
+   "outcome": "declined",
+   "by": "Popoviched",
+   "date": "2026-11-17T11:24:14.724000+00:00"
+  },
+  "72cb0dea-6389-460e-a96b-6b77caec7fc1": {
+   "outcome": "accepted",
+   "by": "Viva La Raza!",
+   "date": "2026-11-17T12:42:17.449000+00:00"
   }
  },
  "synced_periods": [
@@ -5248,7 +5374,8 @@
   25,
   26,
   27,
-  28
+  28,
+  29
  ],
- "last_sync": "2026-11-17T04:59:01.073263+00:00"
+ "last_sync": "2026-11-17T14:12:53.949243+00:00"
 }

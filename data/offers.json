@@ -1,6 +1,36 @@
 {
- "updated_utc": "2026-11-17T22:32:27.368781+00:00",
+ "updated_utc": "2026-11-18T03:59:41.764332+00:00",
  "offers": [
+  {
+   "id": "7c62e6da-5c82-43e6-8e5b-016a4a1b4273",
+   "proposed": "2026-11-18T01:15:02.749000+00:00",
+   "sender": "OnlyFranz",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Gets On Base",
+    "OnlyFranz"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Brook Lopez",
+     "from": "OnlyFranz",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Devin Vassell",
+     "from": "OnlyFranz",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "OnlyFranz"
+    }
+   ],
+   "sender_gain": 0.326,
+   "receiver_gain": -0.203
+  },
   {
    "id": "d2bb6466-f745-4f72-aba7-4765f65a1bc5",
    "proposed": "2026-11-17T11:39:14.468000+00:00",
@@ -465,7 +495,7 @@
     "Gets On Base",
     "OnlyFranz"
    ],
-   "outcome": "pending",
+   "outcome": "expired",
    "moves": [
     {
      "player": "Brook Lopez",
@@ -4844,7 +4874,7 @@
   {
    "team": "Gets On Base",
    "sent": 30,
-   "received": 37,
+   "received": 38,
    "rated_sent": 20,
    "sent_accepted": 0,
    "sent_declined": 7,
@@ -5085,13 +5115,13 @@
   },
   {
    "team": "OnlyFranz",
-   "sent": 1,
+   "sent": 2,
    "received": 2,
-   "rated_sent": 1,
+   "rated_sent": 2,
    "sent_accepted": 0,
    "sent_declined": 0,
-   "generosity": -0.122,
-   "self_gain": 0.358,
+   "generosity": -0.163,
+   "self_gain": 0.342,
    "best_sent": {
     "id": "2b8abfc2-c7db-49ca-a9c2-cd2a7a8c2b14",
     "receiver": "Gets On Base",
@@ -5114,13 +5144,13 @@
       "to": "OnlyFranz"
      }
     ],
-    "outcome": "pending"
+    "outcome": "expired"
    },
    "worst_sent": {
-    "id": "2b8abfc2-c7db-49ca-a9c2-cd2a7a8c2b14",
+    "id": "7c62e6da-5c82-43e6-8e5b-016a4a1b4273",
     "receiver": "Gets On Base",
-    "receiver_gain": -0.122,
-    "sender_gain": 0.358,
+    "receiver_gain": -0.203,
+    "sender_gain": 0.326,
     "moves": [
      {
       "player": "Brook Lopez",
@@ -5138,7 +5168,7 @@
       "to": "OnlyFranz"
      }
     ],
-    "outcome": "pending"
+    "outcome": "cancelled/expired"
    }
   },
   {

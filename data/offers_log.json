@@ -4238,7 +4238,7 @@
     }
    ],
    "espn_status": "PENDING",
-   "live_now": true,
+   "live_now": false,
    "rating": {
     "Gets On Base": -0.122,
     "OnlyFranz": 0.358
@@ -4796,6 +4796,38 @@
     "Popoviched": 0.24
    },
    "rated_on": "2026-11-17"
+  },
+  "7c62e6da-5c82-43e6-8e5b-016a4a1b4273": {
+   "proposed": "2026-11-18T01:15:02.749000+00:00",
+   "proposed_by": "OnlyFranz",
+   "teams": [
+    "Gets On Base",
+    "OnlyFranz"
+   ],
+   "moves": [
+    {
+     "player": "Brook Lopez",
+     "from": "OnlyFranz",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Devin Vassell",
+     "from": "OnlyFranz",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "OnlyFranz"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Gets On Base": -0.203,
+    "OnlyFranz": 0.326
+   },
+   "rated_on": "2026-11-18"
   }
  },
  "outcomes": {
@@ -5382,5 +5414,5 @@
   28,
   29
  ],
- "last_sync": "2026-11-17T22:32:26.994530+00:00"
+ "last_sync": "2026-11-18T03:59:41.126145+00:00"
 }

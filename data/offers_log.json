@@ -4391,7 +4391,7 @@
     }
    ],
    "espn_status": "PENDING",
-   "live_now": true,
+   "live_now": false,
    "rating": {
     "Derrick White Girl Wasted": -0.319,
     "Gets On Base": 0.342
@@ -4428,7 +4428,7 @@
     }
    ],
    "espn_status": "PENDING",
-   "live_now": true,
+   "live_now": false,
    "rating": {
     "Derrick White Girl Wasted": 0.297,
     "Gets On Base": -0.304
@@ -4826,6 +4826,85 @@
    "rating": {
     "Gets On Base": -0.203,
     "OnlyFranz": 0.326
+   },
+   "rated_on": "2026-11-18"
+  },
+  "a4980ca7-d8c2-4d66-8de8-da0433589e28": {
+   "proposed": "2026-11-18T09:46:00.662000+00:00",
+   "proposed_by": "Derrick White Girl Wasted",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Gets On Base"
+   ],
+   "moves": [
+    {
+     "player": "Andrew Nembhard",
+     "from": "Derrick White Girl Wasted",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Derik Queen",
+     "from": "Derrick White Girl Wasted",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Ace Bailey",
+     "from": "Gets On Base",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Kawhi Leonard",
+     "from": "Derrick White Girl Wasted",
+     "to": "Gets On Base"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Derrick White Girl Wasted": -0.314,
+    "Gets On Base": 0.298
+   },
+   "rated_on": "2026-11-18"
+  },
+  "c6cac443-6a35-4942-8b51-d6a1d224a9a1": {
+   "proposed": "2026-11-18T12:42:02.818000+00:00",
+   "proposed_by": "Derrick White Girl Wasted",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Gets On Base"
+   ],
+   "moves": [
+    {
+     "player": "Derik Queen",
+     "from": "Derrick White Girl Wasted",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Jaylen Brown",
+     "from": "Derrick White Girl Wasted",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Ace Bailey",
+     "from": "Gets On Base",
+     "to": "Derrick White Girl Wasted"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Derrick White Girl Wasted": 0.269,
+    "Gets On Base": -0.252
    },
    "rated_on": "2026-11-18"
   }
@@ -5412,7 +5491,8 @@
   26,
   27,
   28,
-  29
+  29,
+  30
  ],
- "last_sync": "2026-11-18T03:59:41.126145+00:00"
+ "last_sync": "2026-11-18T12:53:15.119063+00:00"
 }

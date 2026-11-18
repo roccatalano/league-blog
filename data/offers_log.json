@@ -4593,7 +4593,7 @@
     }
    ],
    "espn_status": "PENDING",
-   "live_now": true,
+   "live_now": false,
    "rating": {
     "Derrick White Girl Wasted": 0.21,
     "Gets On Base": -0.226
@@ -4905,6 +4905,38 @@
    "rating": {
     "Derrick White Girl Wasted": 0.269,
     "Gets On Base": -0.252
+   },
+   "rated_on": "2026-11-18"
+  },
+  "526dd20d-5ad7-48fc-9d05-513396815c8d": {
+   "proposed": "2026-11-18T13:30:02.853000+00:00",
+   "proposed_by": "Derrick White Girl Wasted",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Gets On Base"
+   ],
+   "moves": [
+    {
+     "player": "Jaylen Brown",
+     "from": "Derrick White Girl Wasted",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Ryan Kalkbrenner",
+     "from": "Derrick White Girl Wasted",
+     "to": null
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Derrick White Girl Wasted": 0.205,
+    "Gets On Base": -0.192
    },
    "rated_on": "2026-11-18"
   }
@@ -5494,5 +5526,5 @@
   29,
   30
  ],
- "last_sync": "2026-11-18T12:53:15.119063+00:00"
+ "last_sync": "2026-11-18T21:03:58.411503+00:00"
 }

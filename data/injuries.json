@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-20T09:33:55.164683+00:00",
+ "updated_utc": "2026-11-20T18:14:40.779074+00:00",
  "today_et": "2026-11-20",
  "players": [
   {
@@ -127,6 +127,26 @@
    "per_game": null
   },
   {
+   "name": "Jalen Smith",
+   "nba_team": "CHI",
+   "pos": "F",
+   "status": "Day-To-Day",
+   "injury": "Illness",
+   "return_date": "2026-11-20",
+   "days_out": 0,
+   "games_missed": 0,
+   "timeframe": "Days",
+   "note": "Smith (illness) has been downgraded to questionable for Friday's game against the Wizards.",
+   "note_date": "2026-11-20",
+   "fantasy_team": "Popoviched",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 11.5,
+    "REB": 7.1,
+    "AST": 1.6
+   }
+  },
+  {
    "name": "Kingston Flemings",
    "nba_team": "ATL",
    "pos": "G",
@@ -199,6 +219,22 @@
    }
   },
   {
+   "name": "Ronald Holland II",
+   "nba_team": "DET",
+   "pos": "F",
+   "status": "Day-To-Day",
+   "injury": "Left Knee",
+   "return_date": "2026-11-20",
+   "days_out": 0,
+   "games_missed": 0,
+   "timeframe": "Days",
+   "note": "Holland (knee) has been upgraded to doubtful for Friday's game against Toronto, Hunter Patterson of The Athletic reports.",
+   "note_date": "2026-11-20",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
+  },
+  {
    "name": "Steven Adams",
    "nba_team": "HOU",
    "pos": "C",
@@ -251,22 +287,6 @@
    }
   },
   {
-   "name": "Adem Bona",
-   "nba_team": "PHI",
-   "pos": "C",
-   "status": "Out",
-   "injury": "Back",
-   "return_date": "2026-11-21",
-   "days_out": 1,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Bona (back) will be re-evaluated in approximately one week after seeing a specialist, Ky Carlin of USA Today reports.",
-   "note_date": "2026-11-12",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
-  },
-  {
    "name": "Brandon Ingram",
    "nba_team": "LAC",
    "pos": "F",
@@ -303,26 +323,6 @@
    "per_game": null
   },
   {
-   "name": "Dean Wade",
-   "nba_team": "PHI",
-   "pos": "F",
-   "status": "Day-To-Day",
-   "injury": "Left Hamstring",
-   "return_date": "2026-11-21",
-   "days_out": 1,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Wade (hamstring) is out for Wednesday's game in Orlando.",
-   "note_date": "2026-11-19",
-   "fantasy_team": "Gets On Base",
-   "on_ir": false,
-   "per_game": {
-    "PTS": 5.2,
-    "REB": 4.3,
-    "AST": 1.5
-   }
-  },
-  {
    "name": "Deni Avdija",
    "nba_team": "POR",
    "pos": "F",
@@ -352,8 +352,8 @@
    "days_out": 1,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Barlow (back) is out for Wednesday's game against Orlando.",
-   "note_date": "2026-11-17",
+   "note": "Barlow (back) is trending toward making his season debut in Saturday's game against the Bucks, Tony Jones of The Athletic reports.",
+   "note_date": "2026-11-20",
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
@@ -484,8 +484,8 @@
    "days_out": 1,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Maxey (foot) is out for Wednesday's game in Orlando, Ky Carlin of USA Today reports.",
-   "note_date": "2026-11-19",
+   "note": "Maxey (foot) was a full participant in Friday's practice, Tony Jones of The Athletic reports.",
+   "note_date": "2026-11-20",
    "fantasy_team": "OnlyFranz",
    "on_ir": false,
    "per_game": {
@@ -631,6 +631,22 @@
    "per_game": null
   },
   {
+   "name": "Nikola Topic",
+   "nba_team": "OKC",
+   "pos": "G",
+   "status": "Out",
+   "injury": "Left Hip",
+   "return_date": "2026-11-22",
+   "days_out": 2,
+   "games_missed": 1,
+   "timeframe": "Days",
+   "note": "Topic (hip) is out for Friday's game against New Orleans.",
+   "note_date": "2026-11-20",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
+  },
+  {
    "name": "Noah Penda",
    "nba_team": "ORL",
    "pos": "F",
@@ -647,17 +663,17 @@
    "per_game": null
   },
   {
-   "name": "Ronald Holland II",
-   "nba_team": "DET",
-   "pos": "F",
+   "name": "Adem Bona",
+   "nba_team": "PHI",
+   "pos": "C",
    "status": "Out",
-   "injury": "Left Knee",
-   "return_date": "2026-11-22",
-   "days_out": 2,
+   "injury": "Back",
+   "return_date": "2026-11-23",
+   "days_out": 3,
    "games_missed": 1,
-   "timeframe": "Days",
-   "note": "Holland (knee) won't play in Friday's game against the Raptors, Blake Murphy of Sportsnet.ca reports.",
-   "note_date": "2026-11-19",
+   "timeframe": "1 week",
+   "note": "Bona (back) participated in Friday's practice, though he still needs to go through a full practice with contact before being cleared to return to game action, Adam Aaronson of PhillyVoice.com reports.",
+   "note_date": "2026-11-20",
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
@@ -780,8 +796,8 @@
    "days_out": 3,
    "games_missed": 1,
    "timeframe": "1 week",
-   "note": "Brown (hamstring) will be re-evaluated at some point this weekend, per Kris Rihm of ESPN.com.",
-   "note_date": "2026-11-18",
+   "note": "Brown (hamstring) went through individual work during Friday's practice, Tony Jones of The Athletic reports.",
+   "note_date": "2026-11-20",
    "fantasy_team": "Derrick White Girl Wasted",
    "on_ir": false,
    "per_game": {

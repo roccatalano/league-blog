@@ -1,6 +1,91 @@
 {
- "updated_utc": "2026-11-20T01:36:28.977756+00:00",
+ "updated_utc": "2026-11-20T09:33:47.972260+00:00",
  "offers": [
+  {
+   "id": "551edb72-7d7a-449f-bd94-44574be8a2ed",
+   "proposed": "2026-11-20T01:44:19.336000+00:00",
+   "sender": "Al-Shaida",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Al-Shaida",
+    "Gets On Base"
+   ],
+   "outcome": "pending",
+   "moves": [
+    {
+     "player": "Anthony Black",
+     "from": "Al-Shaida",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Jalen Duren",
+     "from": "Gets On Base",
+     "to": "Al-Shaida"
+    },
+    {
+     "player": "Joan Beringer",
+     "from": "Al-Shaida",
+     "to": null
+    }
+   ],
+   "sender_gain": 0.207,
+   "receiver_gain": -0.23
+  },
+  {
+   "id": "dbc3cc74-8cf5-4ede-86c2-f7b8522b168b",
+   "proposed": "2026-11-20T01:44:04.630000+00:00",
+   "sender": "Al-Shaida",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Al-Shaida",
+    "Gets On Base"
+   ],
+   "outcome": "pending",
+   "moves": [
+    {
+     "player": "Anthony Black",
+     "from": "Al-Shaida",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Darius Garland",
+     "from": "Gets On Base",
+     "to": "Al-Shaida"
+    }
+   ],
+   "sender_gain": 0.042,
+   "receiver_gain": -0.023
+  },
+  {
+   "id": "3a948544-ae37-4997-8509-cb93f25aa127",
+   "proposed": "2026-11-20T01:43:49.147000+00:00",
+   "sender": "Al-Shaida",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Al-Shaida",
+    "Gets On Base"
+   ],
+   "outcome": "pending",
+   "moves": [
+    {
+     "player": "Anthony Black",
+     "from": "Al-Shaida",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Al-Shaida"
+    },
+    {
+     "player": "Joan Beringer",
+     "from": "Al-Shaida",
+     "to": null
+    }
+   ],
+   "sender_gain": 0.161,
+   "receiver_gain": -0.251
+  },
   {
    "id": "526dd20d-5ad7-48fc-9d05-513396815c8d",
    "proposed": "2026-11-18T13:30:02.853000+00:00",
@@ -4979,7 +5064,7 @@
   {
    "team": "Gets On Base",
    "sent": 30,
-   "received": 41,
+   "received": 44,
    "rated_sent": 20,
    "sent_accepted": 0,
    "sent_declined": 7,
@@ -5103,74 +5188,6 @@
    }
   },
   {
-   "team": "Al-Shaida",
-   "sent": 1,
-   "received": 11,
-   "rated_sent": 1,
-   "sent_accepted": 1,
-   "sent_declined": 0,
-   "generosity": -0.112,
-   "self_gain": 0.048,
-   "best_sent": {
-    "id": "cf8b268c-62fd-4ae7-afe9-3aa855333b7a",
-    "receiver": "Viva La Raza!",
-    "receiver_gain": -0.112,
-    "sender_gain": 0.048,
-    "moves": [
-     {
-      "player": "Fred VanVleet",
-      "from": "Viva La Raza!",
-      "to": "Al-Shaida"
-     },
-     {
-      "player": "Scottie Barnes",
-      "from": "Viva La Raza!",
-      "to": "Al-Shaida"
-     },
-     {
-      "player": "Onyeka Okongwu",
-      "from": "Al-Shaida",
-      "to": "Viva La Raza!"
-     },
-     {
-      "player": "Trae Young",
-      "from": "Al-Shaida",
-      "to": "Viva La Raza!"
-     }
-    ],
-    "outcome": "accepted"
-   },
-   "worst_sent": {
-    "id": "cf8b268c-62fd-4ae7-afe9-3aa855333b7a",
-    "receiver": "Viva La Raza!",
-    "receiver_gain": -0.112,
-    "sender_gain": 0.048,
-    "moves": [
-     {
-      "player": "Fred VanVleet",
-      "from": "Viva La Raza!",
-      "to": "Al-Shaida"
-     },
-     {
-      "player": "Scottie Barnes",
-      "from": "Viva La Raza!",
-      "to": "Al-Shaida"
-     },
-     {
-      "player": "Onyeka Okongwu",
-      "from": "Al-Shaida",
-      "to": "Viva La Raza!"
-     },
-     {
-      "player": "Trae Young",
-      "from": "Al-Shaida",
-      "to": "Viva La Raza!"
-     }
-    ],
-    "outcome": "accepted"
-   }
-  },
-  {
    "team": "Stairway to Devin",
    "sent": 3,
    "received": 5,
@@ -5216,6 +5233,59 @@
      }
     ],
     "outcome": "cancelled/expired"
+   }
+  },
+  {
+   "team": "Al-Shaida",
+   "sent": 4,
+   "received": 11,
+   "rated_sent": 4,
+   "sent_accepted": 1,
+   "sent_declined": 0,
+   "generosity": -0.154,
+   "self_gain": 0.115,
+   "best_sent": {
+    "id": "dbc3cc74-8cf5-4ede-86c2-f7b8522b168b",
+    "receiver": "Gets On Base",
+    "receiver_gain": -0.023,
+    "sender_gain": 0.042,
+    "moves": [
+     {
+      "player": "Anthony Black",
+      "from": "Al-Shaida",
+      "to": "Gets On Base"
+     },
+     {
+      "player": "Darius Garland",
+      "from": "Gets On Base",
+      "to": "Al-Shaida"
+     }
+    ],
+    "outcome": "pending"
+   },
+   "worst_sent": {
+    "id": "3a948544-ae37-4997-8509-cb93f25aa127",
+    "receiver": "Gets On Base",
+    "receiver_gain": -0.251,
+    "sender_gain": 0.161,
+    "moves": [
+     {
+      "player": "Anthony Black",
+      "from": "Al-Shaida",
+      "to": "Gets On Base"
+     },
+     {
+      "player": "Donovan Clingan",
+      "from": "Gets On Base",
+      "to": "Al-Shaida"
+     },
+     {
+      "player": "Joan Beringer",
+      "from": "Al-Shaida",
+      "to": null
+     }
+    ],
+    "outcome": "pending"
    }
   },
   {

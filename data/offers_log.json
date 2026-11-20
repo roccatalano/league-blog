@@ -4940,6 +4940,97 @@
     "Gets On Base": -0.192
    },
    "rated_on": "2026-11-18"
+  },
+  "dbc3cc74-8cf5-4ede-86c2-f7b8522b168b": {
+   "proposed": "2026-11-20T01:44:04.630000+00:00",
+   "proposed_by": "Al-Shaida",
+   "teams": [
+    "Al-Shaida",
+    "Gets On Base"
+   ],
+   "moves": [
+    {
+     "player": "Anthony Black",
+     "from": "Al-Shaida",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Darius Garland",
+     "from": "Gets On Base",
+     "to": "Al-Shaida"
+    }
+   ],
+   "espn_status": "PENDING",
+   "live_now": true,
+   "rating": {
+    "Al-Shaida": 0.042,
+    "Gets On Base": -0.023
+   },
+   "rated_on": "2026-11-20"
+  },
+  "551edb72-7d7a-449f-bd94-44574be8a2ed": {
+   "proposed": "2026-11-20T01:44:19.336000+00:00",
+   "proposed_by": "Al-Shaida",
+   "teams": [
+    "Al-Shaida",
+    "Gets On Base"
+   ],
+   "moves": [
+    {
+     "player": "Anthony Black",
+     "from": "Al-Shaida",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Jalen Duren",
+     "from": "Gets On Base",
+     "to": "Al-Shaida"
+    },
+    {
+     "player": "Joan Beringer",
+     "from": "Al-Shaida",
+     "to": null
+    }
+   ],
+   "espn_status": "PENDING",
+   "live_now": true,
+   "rating": {
+    "Al-Shaida": 0.207,
+    "Gets On Base": -0.23
+   },
+   "rated_on": "2026-11-20"
+  },
+  "3a948544-ae37-4997-8509-cb93f25aa127": {
+   "proposed": "2026-11-20T01:43:49.147000+00:00",
+   "proposed_by": "Al-Shaida",
+   "teams": [
+    "Al-Shaida",
+    "Gets On Base"
+   ],
+   "moves": [
+    {
+     "player": "Anthony Black",
+     "from": "Al-Shaida",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Al-Shaida"
+    },
+    {
+     "player": "Joan Beringer",
+     "from": "Al-Shaida",
+     "to": null
+    }
+   ],
+   "espn_status": "PENDING",
+   "live_now": true,
+   "rating": {
+    "Al-Shaida": 0.161,
+    "Gets On Base": -0.251
+   },
+   "rated_on": "2026-11-20"
   }
  },
  "outcomes": {
@@ -5541,7 +5632,8 @@
   28,
   29,
   30,
-  31
+  31,
+  32
  ],
- "last_sync": "2026-11-20T01:36:28.456216+00:00"
+ "last_sync": "2026-11-20T09:33:47.583026+00:00"
 }

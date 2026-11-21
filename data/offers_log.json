@@ -4961,7 +4961,7 @@
     }
    ],
    "espn_status": "PENDING",
-   "live_now": true,
+   "live_now": false,
    "rating": {
     "Al-Shaida": 0.042,
     "Gets On Base": -0.023
@@ -5085,6 +5085,65 @@
    ],
    "espn_status": "CANCELED",
    "live_now": false
+  },
+  "b94360c0-7cb4-4e24-87ca-17d0101d2f0f": {
+   "proposed": "2026-11-21T02:33:03.825000+00:00",
+   "proposed_by": "Al-Shaida",
+   "teams": [
+    "Al-Shaida",
+    "Gets On Base"
+   ],
+   "moves": [
+    {
+     "player": "Anthony Black",
+     "from": "Al-Shaida",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Darius Garland",
+     "from": "Gets On Base",
+     "to": "Al-Shaida"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Al-Shaida": 0.03,
+    "Gets On Base": -0.019
+   },
+   "rated_on": "2026-11-21"
+  },
+  "391a22bd-8829-4e94-8f7a-c3823dfa78df": {
+   "proposed": "2026-11-21T01:10:13.650000+00:00",
+   "proposed_by": "Stairway to Devin",
+   "teams": [
+    "Stairway to Devin",
+    "mr charloooooo"
+   ],
+   "moves": [
+    {
+     "player": "LeBron James",
+     "from": "Stairway to Devin",
+     "to": "mr charloooooo"
+    },
+    {
+     "player": "Coby White",
+     "from": "Stairway to Devin",
+     "to": "mr charloooooo"
+    },
+    {
+     "player": "Stephen Curry",
+     "from": "mr charloooooo",
+     "to": "Stairway to Devin"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Stairway to Devin": 0.279,
+    "mr charloooooo": -0.181
+   },
+   "rated_on": "2026-11-21"
   }
  },
  "outcomes": {
@@ -5652,6 +5711,16 @@
    "outcome": "declined",
    "by": "Torta Pounders",
    "date": "2026-11-19T23:44:07.310000+00:00"
+  },
+  "dbc3cc74-8cf5-4ede-86c2-f7b8522b168b": {
+   "outcome": "declined",
+   "by": "Gets On Base",
+   "date": "2026-11-21T02:33:03.825000+00:00"
+  },
+  "63a61329-eee1-46bb-b230-eaae0f7e8b91": {
+   "outcome": "declined",
+   "by": "Torta Pounders",
+   "date": "2026-11-21T06:12:41.304000+00:00"
   }
  },
  "synced_periods": [
@@ -5689,5 +5758,5 @@
   31,
   32
  ],
- "last_sync": "2026-11-21T00:05:54.107553+00:00"
+ "last_sync": "2026-11-21T07:32:02.588348+00:00"
 }

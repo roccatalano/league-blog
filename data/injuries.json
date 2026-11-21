@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-21T15:52:56.942566+00:00",
+ "updated_utc": "2026-11-21T21:25:02.332404+00:00",
  "today_et": "2026-11-21",
  "players": [
   {
@@ -23,59 +23,23 @@
    }
   },
   {
-   "name": "Derrick White",
-   "nba_team": "BOS",
-   "pos": "G",
+   "name": "Karl-Anthony Towns",
+   "nba_team": "NY",
+   "pos": "C",
    "status": "Day-To-Day",
-   "injury": "Left Shoulder",
+   "injury": "Illness",
    "return_date": "2026-11-21",
    "days_out": 0,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "White (shoulder) is questionable to play in Saturday's game against Sacramento.",
+   "note": "Towns is questionable for Saturday's game against the Trail Blazers due to an illness.",
    "note_date": "2026-11-21",
-   "fantasy_team": "The haliban",
+   "fantasy_team": "Popoviched",
    "on_ir": false,
    "per_game": {
-    "PTS": 14.6,
-    "REB": 3.8,
-    "AST": 5.1
-   }
-  },
-  {
-   "name": "Dominick Barlow",
-   "nba_team": "PHI",
-   "pos": "F",
-   "status": "Out",
-   "injury": "Back",
-   "return_date": "2026-11-21",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Barlow (back) is probable for Saturday's game versus the Bucks.",
-   "note_date": "2026-11-20",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
-  },
-  {
-   "name": "Jayson Tatum",
-   "nba_team": "BOS",
-   "pos": "F",
-   "status": "Day-To-Day",
-   "injury": "Rest",
-   "return_date": "2026-11-21",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Tatum (rest) is listed as questionable for Saturday's game against Sacramento.",
-   "note_date": "2026-11-21",
-   "fantasy_team": "Stairway to Devin",
-   "on_ir": false,
-   "per_game": {
-    "PTS": 26.5,
-    "REB": 7.7,
-    "AST": 6.3
+    "PTS": 21.6,
+    "REB": 12.6,
+    "AST": 4.2
    }
   },
   {
@@ -88,8 +52,8 @@
    "days_out": 0,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Anunoby (calf) is questionable for Saturday's game against Portland.",
-   "note_date": "2026-11-20",
+   "note": "Anunoby (calf) has been downgraded to doubtful for Saturday's game against the Trail Bllazers.",
+   "note_date": "2026-11-21",
    "fantasy_team": "HE IS HIM ( G.O.A.T)",
    "on_ir": false,
    "per_game": {
@@ -103,13 +67,13 @@
    "nba_team": "DAL",
    "pos": "F",
    "status": "Day-To-Day",
-   "injury": "Shoulder",
+   "injury": "Illness",
    "return_date": "2026-11-21",
    "days_out": 0,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Washington (shoulder) is listed as questionable for Saturday's game versus the Clippers.",
-   "note_date": "2026-11-20",
+   "note": "Washington (illness/shoulder) has been downgraded from questionable to doubtful ahead of Saturday's game against the Clippers.",
+   "note_date": "2026-11-21",
    "fantasy_team": "HE IS HIM ( G.O.A.T)",
    "on_ir": false,
    "per_game": {
@@ -128,7 +92,7 @@
    "days_out": 0,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Achiuwa (lower leg) has been ruled out for Friday's game against the Lakers.",
+   "note": "Achiuwa (lower leg) is questionable for Saturday's game against the Celtics.",
    "note_date": "2026-11-21",
    "fantasy_team": "HE IS HIM ( G.O.A.T)",
    "on_ir": true,
@@ -136,46 +100,6 @@
     "PTS": 9.7,
     "REB": 6.4,
     "AST": 1.2
-   }
-  },
-  {
-   "name": "Ty Jerome",
-   "nba_team": "MEM",
-   "pos": "G",
-   "status": "Out",
-   "injury": "Right Hip",
-   "return_date": "2026-11-21",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Jerome (hip) is probable for Saturday's game in Minnesota.",
-   "note_date": "2026-11-20",
-   "fantasy_team": "The Serbian Empire",
-   "on_ir": false,
-   "per_game": {
-    "PTS": 23.7,
-    "REB": 3.5,
-    "AST": 5.9
-   }
-  },
-  {
-   "name": "Tyrese Maxey",
-   "nba_team": "PHI",
-   "pos": "G",
-   "status": "Day-To-Day",
-   "injury": "Right Foot",
-   "return_date": "2026-11-21",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Maxey (foot) is questionable for Saturday's game against the Bucks.",
-   "note_date": "2026-11-20",
-   "fantasy_team": "OnlyFranz",
-   "on_ir": false,
-   "per_game": {
-    "PTS": 25.7,
-    "REB": 3.4,
-    "AST": 5.8
    }
   },
   {
@@ -243,6 +167,26 @@
    "per_game": null
   },
   {
+   "name": "Derrick White",
+   "nba_team": "BOS",
+   "pos": "G",
+   "status": "Out",
+   "injury": "Left Shoulder",
+   "return_date": "2026-11-22",
+   "days_out": 1,
+   "games_missed": 1,
+   "timeframe": "Days",
+   "note": "White (shoulder) has been ruled out for Saturday's game against Sacramento.",
+   "note_date": "2026-11-21",
+   "fantasy_team": "The haliban",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 14.6,
+    "REB": 3.8,
+    "AST": 5.1
+   }
+  },
+  {
    "name": "Draymond Green",
    "nba_team": "GS",
    "pos": "F",
@@ -279,20 +223,24 @@
    "per_game": null
   },
   {
-   "name": "Felix Okpara",
-   "nba_team": "WSH",
+   "name": "Giannis Antetokounmpo",
+   "nba_team": "MIA",
    "pos": "F",
    "status": "Day-To-Day",
-   "injury": "Back",
+   "injury": "Groin",
    "return_date": "2026-11-22",
    "days_out": 1,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Okpara (illness) is available for Friday's game against Toronto.",
+   "note": "Antetokounmpo (groin) is listed as questionable for Sunday's game against Oklahoma City, Ira Winderman of the South Florida Sun Sentinel reports.",
    "note_date": "2026-11-21",
-   "fantasy_team": null,
+   "fantasy_team": "Gets On Base",
    "on_ir": false,
-   "per_game": null
+   "per_game": {
+    "PTS": 30.1,
+    "REB": 12.0,
+    "AST": 5.9
+   }
   },
   {
    "name": "Jalen Smith",
@@ -315,6 +263,26 @@
    }
   },
   {
+   "name": "Jayson Tatum",
+   "nba_team": "BOS",
+   "pos": "F",
+   "status": "Out",
+   "injury": "Rest",
+   "return_date": "2026-11-22",
+   "days_out": 1,
+   "games_missed": 1,
+   "timeframe": "Days",
+   "note": "Tatum (rest) has been ruled out for Saturday's game against the Kings.",
+   "note_date": "2026-11-21",
+   "fantasy_team": "Stairway to Devin",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 26.5,
+    "REB": 7.7,
+    "AST": 6.3
+   }
+  },
+  {
    "name": "Jock Landale",
    "nba_team": "ATL",
    "pos": "C",
@@ -326,22 +294,6 @@
    "timeframe": "Days",
    "note": "Landale (hip) won't play in Friday's game against the Hornets, Brad Rowland of the Locked On Podcast Network reports.",
    "note_date": "2026-11-19",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
-  },
-  {
-   "name": "Jonathan Isaac",
-   "nba_team": "ORL",
-   "pos": "F",
-   "status": "Out",
-   "injury": "Left Knee",
-   "return_date": "2026-11-22",
-   "days_out": 1,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Isaac (knee) has been ruled out for Monday's game against the Celtics.",
-   "note_date": "2026-11-15",
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
@@ -379,6 +331,26 @@
    "per_game": null
   },
   {
+   "name": "Mitchell Robinson",
+   "nba_team": "BOS",
+   "pos": "C",
+   "status": "Out",
+   "injury": "Illness",
+   "return_date": "2026-11-22",
+   "days_out": 1,
+   "games_missed": 1,
+   "timeframe": "Days",
+   "note": "Robinson (illness) has been ruled out for Saturday's game against the Kings, Keith Smith of Spotrac.com reports.",
+   "note_date": "2026-11-21",
+   "fantasy_team": "The haliban",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 6.3,
+    "REB": 8.3,
+    "AST": 1.0
+   }
+  },
+  {
    "name": "Myron Gardner",
    "nba_team": "MIA",
    "pos": "F",
@@ -388,8 +360,8 @@
    "days_out": 1,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Gardner (hamstring) is out for Wednesday's game against the Bucks.",
-   "note_date": "2026-11-19",
+   "note": "Gardner (hamstring) is probable for Sunday's game against the Thunder.",
+   "note_date": "2026-11-21",
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
@@ -406,22 +378,6 @@
    "timeframe": "Days",
    "note": "Topic (hip) is out for Friday's game against New Orleans.",
    "note_date": "2026-11-21",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
-  },
-  {
-   "name": "Noah Penda",
-   "nba_team": "ORL",
-   "pos": "F",
-   "status": "Out",
-   "injury": "Right Hamstring",
-   "return_date": "2026-11-22",
-   "days_out": 1,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Penda (hamstring) is making progress but remains without a timetable to return to game action, Jason Beede of the Orlando Sentinel reports.",
-   "note_date": "2026-11-14",
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
@@ -779,6 +735,26 @@
    "per_game": null
   },
   {
+   "name": "Trey Murphy III",
+   "nba_team": "NO",
+   "pos": "F",
+   "status": "Out",
+   "injury": "Knee",
+   "return_date": "2026-11-23",
+   "days_out": 2,
+   "games_missed": 1,
+   "timeframe": "Days",
+   "note": "Murphy (knee) has been ruled out for Saturday's game against the Spurs.",
+   "note_date": "2026-11-21",
+   "fantasy_team": "HE IS HIM ( G.O.A.T)",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 18.0,
+    "REB": 5.0,
+    "AST": 3.4
+   }
+  },
+  {
    "name": "Jalen Duren",
    "nba_team": "DET",
    "pos": "C",
@@ -1028,8 +1004,8 @@
    "days_out": 6,
    "games_missed": 2,
    "timeframe": "1 week",
-   "note": "Watford (ankle) has been ruled out for Friday's game against Oklahoma City.",
-   "note_date": "2026-11-19",
+   "note": "Watford (ankle) is out for Saturday's game against the Spurs.",
+   "note_date": "2026-11-21",
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
@@ -1103,6 +1079,22 @@
    "per_game": null
   },
   {
+   "name": "Jonathan Isaac",
+   "nba_team": "ORL",
+   "pos": "F",
+   "status": "Out",
+   "injury": "Left Knee",
+   "return_date": "2026-11-29",
+   "days_out": 8,
+   "games_missed": 3,
+   "timeframe": "1-2 weeks",
+   "note": "Isaac (knee) is out for Sunday's game against the Wizards.",
+   "note_date": "2026-11-21",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
+  },
+  {
    "name": "Julian Strawther",
    "nba_team": "DEN",
    "pos": "G",
@@ -1150,6 +1142,22 @@
    "timeframe": "1-2 weeks",
    "note": "Tomlin (back) will remain on the inactive list for Wednesday's game against the Grizzlies.",
    "note_date": "2026-11-17",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
+  },
+  {
+   "name": "Noah Penda",
+   "nba_team": "ORL",
+   "pos": "F",
+   "status": "Out",
+   "injury": "Right Hamstring",
+   "return_date": "2026-11-29",
+   "days_out": 8,
+   "games_missed": 3,
+   "timeframe": "1-2 weeks",
+   "note": "Penda (hamstring) is making progress but remains without a timetable to return to game action, Jason Beede of the Orlando Sentinel reports.",
+   "note_date": "2026-11-14",
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null

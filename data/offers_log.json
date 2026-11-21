@@ -4993,7 +4993,7 @@
     }
    ],
    "espn_status": "PENDING",
-   "live_now": true,
+   "live_now": false,
    "rating": {
     "Al-Shaida": 0.207,
     "Gets On Base": -0.23
@@ -5025,12 +5025,66 @@
     }
    ],
    "espn_status": "PENDING",
-   "live_now": true,
+   "live_now": false,
    "rating": {
     "Al-Shaida": 0.161,
     "Gets On Base": -0.251
    },
    "rated_on": "2026-11-20"
+  },
+  "c794cec1-e706-4094-8080-0e3b479671fd": {
+   "proposed": "2026-11-20T20:00:02.485000+00:00",
+   "proposed_by": "Al-Shaida",
+   "teams": [
+    "Al-Shaida",
+    "Gets On Base"
+   ],
+   "moves": [
+    {
+     "player": "Anthony Black",
+     "from": "Al-Shaida",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Jalen Duren",
+     "from": "Gets On Base",
+     "to": "Al-Shaida"
+    },
+    {
+     "player": "Joan Beringer",
+     "from": "Al-Shaida",
+     "to": null
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false
+  },
+  "eba00b3c-edb4-49ce-a4dd-a566804c87dd": {
+   "proposed": "2026-11-20T20:00:02.485000+00:00",
+   "proposed_by": "Al-Shaida",
+   "teams": [
+    "Al-Shaida",
+    "Gets On Base"
+   ],
+   "moves": [
+    {
+     "player": "Anthony Black",
+     "from": "Al-Shaida",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Al-Shaida"
+    },
+    {
+     "player": "Joan Beringer",
+     "from": "Al-Shaida",
+     "to": null
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false
   }
  },
  "outcomes": {
@@ -5635,5 +5689,5 @@
   31,
   32
  ],
- "last_sync": "2026-11-20T18:14:33.855545+00:00"
+ "last_sync": "2026-11-21T00:05:54.107553+00:00"
 }

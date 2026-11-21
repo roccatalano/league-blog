@@ -1,6 +1,66 @@
 {
- "updated_utc": "2026-11-20T18:14:34.198134+00:00",
+ "updated_utc": "2026-11-21T00:05:54.650205+00:00",
  "offers": [
+  {
+   "id": "c794cec1-e706-4094-8080-0e3b479671fd",
+   "proposed": "2026-11-20T20:00:02.485000+00:00",
+   "sender": "Al-Shaida",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Al-Shaida",
+    "Gets On Base"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Anthony Black",
+     "from": "Al-Shaida",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Jalen Duren",
+     "from": "Gets On Base",
+     "to": "Al-Shaida"
+    },
+    {
+     "player": "Joan Beringer",
+     "from": "Al-Shaida",
+     "to": null
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
+  {
+   "id": "eba00b3c-edb4-49ce-a4dd-a566804c87dd",
+   "proposed": "2026-11-20T20:00:02.485000+00:00",
+   "sender": "Al-Shaida",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Al-Shaida",
+    "Gets On Base"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Anthony Black",
+     "from": "Al-Shaida",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Al-Shaida"
+    },
+    {
+     "player": "Joan Beringer",
+     "from": "Al-Shaida",
+     "to": null
+    }
+   ],
+   "sender_gain": null,
+   "receiver_gain": null
+  },
   {
    "id": "551edb72-7d7a-449f-bd94-44574be8a2ed",
    "proposed": "2026-11-20T01:44:19.336000+00:00",
@@ -5064,7 +5124,7 @@
   {
    "team": "Gets On Base",
    "sent": 30,
-   "received": 44,
+   "received": 46,
    "rated_sent": 20,
    "sent_accepted": 0,
    "sent_declined": 7,
@@ -5237,7 +5297,7 @@
   },
   {
    "team": "Al-Shaida",
-   "sent": 4,
+   "sent": 6,
    "received": 11,
    "rated_sent": 4,
    "sent_accepted": 1,

@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-22T01:28:36.545121+00:00",
+ "updated_utc": "2026-11-22T08:37:35.207808+00:00",
  "offers": [
   {
    "id": "b94360c0-7cb4-4e24-87ca-17d0101d2f0f",
@@ -125,7 +125,7 @@
     "Al-Shaida",
     "Gets On Base"
    ],
-   "outcome": "pending",
+   "outcome": "expired",
    "moves": [
     {
      "player": "Anthony Black",
@@ -181,7 +181,7 @@
     "Al-Shaida",
     "Gets On Base"
    ],
-   "outcome": "pending",
+   "outcome": "expired",
    "moves": [
     {
      "player": "Anthony Black",
@@ -5353,7 +5353,7 @@
       "to": null
      }
     ],
-    "outcome": "pending"
+    "outcome": "expired"
    }
   },
   {

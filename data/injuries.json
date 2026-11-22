@@ -1,87 +1,7 @@
 {
- "updated_utc": "2026-11-21T21:25:02.332404+00:00",
+ "updated_utc": "2026-11-22T01:28:47.876366+00:00",
  "today_et": "2026-11-21",
  "players": [
-  {
-   "name": "Deni Avdija",
-   "nba_team": "POR",
-   "pos": "F",
-   "status": "Day-To-Day",
-   "injury": "Foot",
-   "return_date": "2026-11-21",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Avdija (foot) is listed as questionable for Saturday's game against the Knicks.",
-   "note_date": "2026-11-20",
-   "fantasy_team": "Giddey up Horsey",
-   "on_ir": false,
-   "per_game": {
-    "PTS": 23.6,
-    "REB": 6.7,
-    "AST": 6.2
-   }
-  },
-  {
-   "name": "Karl-Anthony Towns",
-   "nba_team": "NY",
-   "pos": "C",
-   "status": "Day-To-Day",
-   "injury": "Illness",
-   "return_date": "2026-11-21",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Towns is questionable for Saturday's game against the Trail Blazers due to an illness.",
-   "note_date": "2026-11-21",
-   "fantasy_team": "Popoviched",
-   "on_ir": false,
-   "per_game": {
-    "PTS": 21.6,
-    "REB": 12.6,
-    "AST": 4.2
-   }
-  },
-  {
-   "name": "OG Anunoby",
-   "nba_team": "NY",
-   "pos": "F",
-   "status": "Day-To-Day",
-   "injury": "Calf",
-   "return_date": "2026-11-21",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Anunoby (calf) has been downgraded to doubtful for Saturday's game against the Trail Bllazers.",
-   "note_date": "2026-11-21",
-   "fantasy_team": "HE IS HIM ( G.O.A.T)",
-   "on_ir": false,
-   "per_game": {
-    "PTS": 16.6,
-    "REB": 5.3,
-    "AST": 2.1
-   }
-  },
-  {
-   "name": "P.J. Washington",
-   "nba_team": "DAL",
-   "pos": "F",
-   "status": "Day-To-Day",
-   "injury": "Illness",
-   "return_date": "2026-11-21",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Washington (illness/shoulder) has been downgraded from questionable to doubtful ahead of Saturday's game against the Clippers.",
-   "note_date": "2026-11-21",
-   "fantasy_team": "HE IS HIM ( G.O.A.T)",
-   "on_ir": false,
-   "per_game": {
-    "PTS": 13.6,
-    "REB": 6.6,
-    "AST": 1.5
-   }
-  },
   {
    "name": "Precious Achiuwa",
    "nba_team": "SAC",
@@ -119,38 +39,6 @@
    "per_game": null
   },
   {
-   "name": "Walter Clayton Jr.",
-   "nba_team": "DAL",
-   "pos": "G",
-   "status": "Day-To-Day",
-   "injury": "Knee",
-   "return_date": "2026-11-21",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Clayton (knee) is questionable for Saturday's game against the Clippers.",
-   "note_date": "2026-11-20",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
-  },
-  {
-   "name": "Alex Caruso",
-   "nba_team": "OKC",
-   "pos": "G",
-   "status": "Day-To-Day",
-   "injury": "Right Hip",
-   "return_date": "2026-11-22",
-   "days_out": 1,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Caruso (hip) is listed as out for Friday's game against the Pelicans.",
-   "note_date": "2026-11-21",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
-  },
-  {
    "name": "Brandon Williams",
    "nba_team": "GS",
    "pos": "G",
@@ -165,6 +53,26 @@
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
+  },
+  {
+   "name": "Cade Cunningham",
+   "nba_team": "DET",
+   "pos": "G",
+   "status": "Day-To-Day",
+   "injury": "Right Knee",
+   "return_date": "2026-11-22",
+   "days_out": 1,
+   "games_missed": 0,
+   "timeframe": "Days",
+   "note": "Cunningham (knee) is probable to play Sunday in Atlanta.",
+   "note_date": "2026-11-21",
+   "fantasy_team": "Giddey up Horsey",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 25.1,
+    "REB": 5.4,
+    "AST": 8.9
+   }
   },
   {
    "name": "Derrick White",
@@ -205,22 +113,6 @@
     "REB": 5.4,
     "AST": 6.1
    }
-  },
-  {
-   "name": "Ebuka Okorie",
-   "nba_team": "DET",
-   "pos": "G",
-   "status": "Day-To-Day",
-   "injury": "Left Oblique",
-   "return_date": "2026-11-22",
-   "days_out": 1,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Okorie (oblique) has been ruled out for Friday's game against Toronto.",
-   "note_date": "2026-11-21",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
   },
   {
    "name": "Giannis Antetokounmpo",
@@ -283,22 +175,6 @@
    }
   },
   {
-   "name": "Jock Landale",
-   "nba_team": "ATL",
-   "pos": "C",
-   "status": "Out",
-   "injury": "Right Hip",
-   "return_date": "2026-11-22",
-   "days_out": 1,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Landale (hip) won't play in Friday's game against the Hornets, Brad Rowland of the Locked On Podcast Network reports.",
-   "note_date": "2026-11-19",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
-  },
-  {
    "name": "Jordan Clarkson",
    "nba_team": "NY",
    "pos": "G",
@@ -315,6 +191,26 @@
    "per_game": null
   },
   {
+   "name": "Karl-Anthony Towns",
+   "nba_team": "NY",
+   "pos": "C",
+   "status": "Out",
+   "injury": "Illness",
+   "return_date": "2026-11-22",
+   "days_out": 1,
+   "games_missed": 1,
+   "timeframe": "Days",
+   "note": "Towns (illness) won't play in Saturday's game versus the Trail Blazers.",
+   "note_date": "2026-11-21",
+   "fantasy_team": "Popoviched",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 21.6,
+    "REB": 12.6,
+    "AST": 4.2
+   }
+  },
+  {
    "name": "Kingston Flemings",
    "nba_team": "ATL",
    "pos": "G",
@@ -324,8 +220,8 @@
    "days_out": 1,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Flemings (back) is out for Friday's game against the Hornets, Brad Rowland of the Locked On Podcast Network reports.",
-   "note_date": "2026-11-20",
+   "note": "Flemings (back) is questionable to play Sunday against the Pistons.",
+   "note_date": "2026-11-21",
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
@@ -367,20 +263,84 @@
    "per_game": null
   },
   {
-   "name": "Nikola Topic",
-   "nba_team": "OKC",
+   "name": "Norman Powell",
+   "nba_team": "CHI",
    "pos": "G",
+   "status": "Day-To-Day",
+   "injury": "Right Hamstring",
+   "return_date": "2026-11-22",
+   "days_out": 1,
+   "games_missed": 0,
+   "timeframe": "Days",
+   "note": "Powell is questionable for Sunday's game against the Nuggets due to a right hamstring strain.",
+   "note_date": "2026-11-22",
+   "fantasy_team": "Gets On Base",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 22.6,
+    "REB": 3.4,
+    "AST": 2.5
+   }
+  },
+  {
+   "name": "OG Anunoby",
+   "nba_team": "NY",
+   "pos": "F",
+   "status": "Out",
+   "injury": "Calf",
+   "return_date": "2026-11-22",
+   "days_out": 1,
+   "games_missed": 1,
+   "timeframe": "Days",
+   "note": "Anunoby (calf) has been ruled out for Saturday's game against the Trail Blazers.",
+   "note_date": "2026-11-21",
+   "fantasy_team": "HE IS HIM ( G.O.A.T)",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 16.6,
+    "REB": 5.3,
+    "AST": 2.1
+   }
+  },
+  {
+   "name": "P.J. Washington",
+   "nba_team": "DAL",
+   "pos": "F",
+   "status": "Out",
+   "injury": "Illness",
+   "return_date": "2026-11-22",
+   "days_out": 1,
+   "games_missed": 1,
+   "timeframe": "Days",
+   "note": "Washington (illness/shoulder) is listed as out for Saturday's game against the Clippers.",
+   "note_date": "2026-11-21",
+   "fantasy_team": "HE IS HIM ( G.O.A.T)",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 13.6,
+    "REB": 6.6,
+    "AST": 1.5
+   }
+  },
+  {
+   "name": "Pascal Siakam",
+   "nba_team": "IND",
+   "pos": "F",
    "status": "Day-To-Day",
    "injury": "Left Hip",
    "return_date": "2026-11-22",
    "days_out": 1,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Topic (hip) is out for Friday's game against New Orleans.",
+   "note": "Siakam (hip) is listed as questionable for Sunday's game against New York.",
    "note_date": "2026-11-21",
-   "fantasy_team": null,
+   "fantasy_team": "The Serbian Empire",
    "on_ir": false,
-   "per_game": null
+   "per_game": {
+    "PTS": 22.9,
+    "REB": 6.7,
+    "AST": 3.9
+   }
   },
   {
    "name": "Ronald Holland II",
@@ -392,27 +352,31 @@
    "days_out": 1,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Holland (knee) is listed as out for Friday's game against Toronto.",
+   "note": "Holland (knee) is listed as questionable for Sunday's game against Atlanta.",
    "note_date": "2026-11-21",
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
   },
   {
-   "name": "T.J. McConnell",
-   "nba_team": "IND",
+   "name": "Shai Gilgeous-Alexander",
+   "nba_team": "OKC",
    "pos": "G",
    "status": "Day-To-Day",
-   "injury": "Left Hamstring",
+   "injury": "Back",
    "return_date": "2026-11-22",
    "days_out": 1,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Rick Carlisle revealed during his postgame interview that McConnell exited Friday's 128-119 loss with a left hamstring issue, Tony East of Forbes.com reports.",
+   "note": "Gilgeous-Alexander (back/neck) is listed as questionable for Sunday's game versus Miami.",
    "note_date": "2026-11-21",
-   "fantasy_team": null,
+   "fantasy_team": "mr charloooooo",
    "on_ir": false,
-   "per_game": null
+   "per_game": {
+    "PTS": 31.5,
+    "REB": 4.5,
+    "AST": 5.4
+   }
   },
   {
    "name": "Tobi Lawal",
@@ -442,6 +406,22 @@
    "timeframe": "Days",
    "note": "Bona (back) participated in Friday's practice, though he still needs to go through a full practice with contact before being cleared to return to game action, Adam Aaronson of PhillyVoice.com reports.",
    "note_date": "2026-11-20",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
+  },
+  {
+   "name": "Alex Caruso",
+   "nba_team": "OKC",
+   "pos": "G",
+   "status": "Out",
+   "injury": "Right Hip",
+   "return_date": "2026-11-23",
+   "days_out": 2,
+   "games_missed": 1,
+   "timeframe": "Days",
+   "note": "Caruso (hip) won't play Sunday against the Heat.",
+   "note_date": "2026-11-21",
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
@@ -651,6 +631,22 @@
    }
   },
   {
+   "name": "Jaylin Williams",
+   "nba_team": "OKC",
+   "pos": "F",
+   "status": "Out",
+   "injury": "Back",
+   "return_date": "2026-11-23",
+   "days_out": 2,
+   "games_missed": 1,
+   "timeframe": "Days",
+   "note": "Williams (back) is listed as out for Sunday's game against Miami.",
+   "note_date": "2026-11-21",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
+  },
+  {
    "name": "Jaylon Tyson",
    "nba_team": "CLE",
    "pos": "G",
@@ -703,6 +699,22 @@
    "per_game": null
   },
   {
+   "name": "Nikola Topic",
+   "nba_team": "OKC",
+   "pos": "G",
+   "status": "Out",
+   "injury": "Left Hip",
+   "return_date": "2026-11-23",
+   "days_out": 2,
+   "games_missed": 1,
+   "timeframe": "Days",
+   "note": "Topic (hip) is listed as out for Sunday's game versus the Heat.",
+   "note_date": "2026-11-21",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
+  },
+  {
    "name": "Nolan Traore",
    "nba_team": "BKN",
    "pos": "G",
@@ -735,6 +747,22 @@
    "per_game": null
   },
   {
+   "name": "T.J. McConnell",
+   "nba_team": "IND",
+   "pos": "G",
+   "status": "Out",
+   "injury": "Left Hamstring",
+   "return_date": "2026-11-23",
+   "days_out": 2,
+   "games_missed": 1,
+   "timeframe": "Days",
+   "note": "McConnell (hamstring) is listed as out for Sunday's game in New York.",
+   "note_date": "2026-11-21",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
+  },
+  {
    "name": "Trey Murphy III",
    "nba_team": "NO",
    "pos": "F",
@@ -753,6 +781,42 @@
     "REB": 5.0,
     "AST": 3.4
    }
+  },
+  {
+   "name": "Zion Williamson",
+   "nba_team": "NO",
+   "pos": "F",
+   "status": "Out",
+   "injury": "Left Thigh",
+   "return_date": "2026-11-23",
+   "days_out": 2,
+   "games_missed": 1,
+   "timeframe": "Days",
+   "note": "Williamson is out for Saturday's game against the Spurs due to a left thigh contusion.",
+   "note_date": "2026-11-22",
+   "fantasy_team": "The Real OG",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 22.2,
+    "REB": 5.8,
+    "AST": 3.5
+   }
+  },
+  {
+   "name": "Ebuka Okorie",
+   "nba_team": "DET",
+   "pos": "G",
+   "status": "Out",
+   "injury": "Left Oblique",
+   "return_date": "2026-11-24",
+   "days_out": 3,
+   "games_missed": 1,
+   "timeframe": "1 week",
+   "note": "Okorie (oblique) is out for Sunday's game in Atlanta.",
+   "note_date": "2026-11-21",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
   },
   {
    "name": "Jalen Duren",
@@ -961,6 +1025,22 @@
     "REB": 2.2,
     "AST": 2.1
    }
+  },
+  {
+   "name": "Jock Landale",
+   "nba_team": "ATL",
+   "pos": "C",
+   "status": "Out",
+   "injury": "Right Hip",
+   "return_date": "2026-11-27",
+   "days_out": 6,
+   "games_missed": 1,
+   "timeframe": "1 week",
+   "note": "Landale (hip) won't play Sunday against the Pistons.",
+   "note_date": "2026-11-21",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
   },
   {
    "name": "Sergio de Larrea",

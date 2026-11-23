@@ -1,9 +1,9 @@
 {
- "updated_utc": "2026-11-23T02:57:29.737760+00:00",
+ "updated_utc": "2026-11-23T11:53:24.413336+00:00",
  "overall": {
-  "matchups": 24,
-  "called": 14,
-  "brier": 0.281,
+  "matchups": 31,
+  "called": 20,
+  "brier": 0.254,
   "calibration": [
    {
     "bucket": "50-60%",
@@ -13,14 +13,14 @@
    },
    {
     "bucket": "60-70%",
-    "n": 2,
+    "n": 3,
     "predicted": 0.64,
-    "actual": 0.0
+    "actual": 0.333
    },
    {
     "bucket": "70-80%",
-    "n": 4,
-    "predicted": 0.74,
+    "n": 6,
+    "predicted": 0.737,
     "actual": 1.0
    },
    {
@@ -31,104 +31,866 @@
    },
    {
     "bucket": "90-100%",
-    "n": 7,
-    "predicted": 0.951,
-    "actual": 0.571
+    "n": 11,
+    "predicted": 0.955,
+    "actual": 0.636
    }
   ],
-  "categories": 107,
-  "cat_called": 80.0,
-  "cat_brier": 0.184,
+  "categories": 170,
+  "cat_called": 127.0,
+  "cat_brier": 0.179,
   "cat_calibration": [
    {
     "bucket": "50-60%",
-    "n": 19,
-    "predicted": 0.555,
-    "actual": 0.579
+    "n": 32,
+    "predicted": 0.554,
+    "actual": 0.594
    },
    {
     "bucket": "60-70%",
-    "n": 15,
+    "n": 25,
     "predicted": 0.644,
-    "actual": 0.667
+    "actual": 0.68
    },
    {
     "bucket": "70-80%",
-    "n": 18,
-    "predicted": 0.746,
-    "actual": 0.778
+    "n": 27,
+    "predicted": 0.753,
+    "actual": 0.741
    },
    {
     "bucket": "80-90%",
-    "n": 13,
+    "n": 20,
     "predicted": 0.839,
-    "actual": 0.692
+    "actual": 0.55
    },
    {
     "bucket": "90-100%",
-    "n": 42,
-    "predicted": 0.97,
-    "actual": 0.857
+    "n": 66,
+    "predicted": 0.968,
+    "actual": 0.909
    }
   ],
   "by_category": [
    {
     "cat": "PTS",
-    "n": 12,
-    "called": 9.0,
-    "brier": 0.183
+    "n": 19,
+    "called": 14.0,
+    "brier": 0.166
    },
    {
     "cat": "REB",
-    "n": 12,
-    "called": 8.0,
-    "brier": 0.243
-   },
-   {
-    "cat": "AST",
-    "n": 12,
-    "called": 10.0,
-    "brier": 0.153
-   },
-   {
-    "cat": "STL",
-    "n": 11,
-    "called": 9.0,
+    "n": 19,
+    "called": 15.0,
     "brier": 0.164
    },
    {
+    "cat": "AST",
+    "n": 19,
+    "called": 15.0,
+    "brier": 0.174
+   },
+   {
+    "cat": "STL",
+    "n": 18,
+    "called": 13.0,
+    "brier": 0.173
+   },
+   {
     "cat": "BLK",
-    "n": 12,
-    "called": 8.0,
-    "brier": 0.203
+    "n": 19,
+    "called": 11.0,
+    "brier": 0.258
    },
    {
     "cat": "3PM",
-    "n": 12,
-    "called": 10.0,
-    "brier": 0.194
+    "n": 19,
+    "called": 16.0,
+    "brier": 0.175
    },
    {
     "cat": "TO",
-    "n": 12,
-    "called": 10.0,
-    "brier": 0.092
+    "n": 19,
+    "called": 17.0,
+    "brier": 0.074
    },
    {
     "cat": "FG%",
-    "n": 12,
-    "called": 6.0,
-    "brier": 0.254
+    "n": 19,
+    "called": 12.0,
+    "brier": 0.222
    },
    {
     "cat": "FT%",
-    "n": 12,
-    "called": 10.0,
-    "brier": 0.169
+    "n": 19,
+    "called": 14.0,
+    "brier": 0.209
    }
   ]
  },
  "weeks": [
+  {
+   "period": 5,
+   "source": "live",
+   "started": false,
+   "matchups": [
+    {
+     "home": "Gets On Base",
+     "away": "Popoviched",
+     "p_home": 0.36,
+     "score": [
+      4,
+      5,
+      0
+     ],
+     "winner": "AWAY",
+     "fav": "Popoviched",
+     "fav_p": 0.64,
+     "called": true,
+     "brier": 0.1296,
+     "cats": [
+      {
+       "cat": "PTS",
+       "p_home": 0.44,
+       "won": 1.0,
+       "proj_home": 643.4,
+       "proj_away": 655.3,
+       "act_home": 627.0,
+       "act_away": 624.0,
+       "brier": 0.3136
+      },
+      {
+       "cat": "REB",
+       "p_home": 0.35,
+       "won": 0.0,
+       "proj_home": 230.5,
+       "proj_away": 241.5,
+       "act_home": 222.0,
+       "act_away": 233.0,
+       "brier": 0.1225
+      },
+      {
+       "cat": "AST",
+       "p_home": 0.24,
+       "won": 0.0,
+       "proj_home": 115.1,
+       "proj_away": 127.9,
+       "act_home": 110.0,
+       "act_away": 158.0,
+       "brier": 0.0576
+      },
+      {
+       "cat": "STL",
+       "p_home": 0.55,
+       "won": 0.0,
+       "proj_home": 42.0,
+       "proj_away": 40.9,
+       "act_home": 39.0,
+       "act_away": 52.0,
+       "brier": 0.3025
+      },
+      {
+       "cat": "BLK",
+       "p_home": 0.66,
+       "won": 0.0,
+       "proj_home": 29.4,
+       "proj_away": 26.7,
+       "act_home": 26.0,
+       "act_away": 27.0,
+       "brier": 0.4356
+      },
+      {
+       "cat": "3PM",
+       "p_home": 0.09,
+       "won": 0.0,
+       "proj_home": 74.5,
+       "proj_away": 93.7,
+       "act_home": 67.0,
+       "act_away": 94.0,
+       "brier": 0.0081
+      },
+      {
+       "cat": "TO",
+       "p_home": 0.66,
+       "won": 1.0,
+       "proj_home": 70.5,
+       "proj_away": 75.1,
+       "act_home": 64.0,
+       "act_away": 69.0,
+       "brier": 0.1156
+      },
+      {
+       "cat": "FG%",
+       "p_home": 0.69,
+       "won": 1.0,
+       "proj_home": 0.485,
+       "proj_away": 0.461,
+       "act_home": 0.48516949,
+       "act_away": 0.46137787,
+       "brier": 0.0961
+      },
+      {
+       "cat": "FT%",
+       "p_home": 0.35,
+       "won": 1.0,
+       "proj_home": 0.771,
+       "proj_away": 0.819,
+       "act_home": 0.76691729,
+       "act_away": 0.75862069,
+       "brier": 0.4225
+      }
+     ]
+    },
+    {
+     "home": "Derrick White Girl Wasted",
+     "away": "The Real OG",
+     "p_home": 0.27,
+     "score": [
+      4,
+      5,
+      0
+     ],
+     "winner": "AWAY",
+     "fav": "The Real OG",
+     "fav_p": 0.73,
+     "called": true,
+     "brier": 0.0729,
+     "cats": [
+      {
+       "cat": "PTS",
+       "p_home": 0.0,
+       "won": 0.0,
+       "proj_home": 513.4,
+       "proj_away": 689.6,
+       "act_home": 489.0,
+       "act_away": 715.0,
+       "brier": 0.0
+      },
+      {
+       "cat": "REB",
+       "p_home": 0.92,
+       "won": 1.0,
+       "proj_home": 262.7,
+       "proj_away": 222.3,
+       "act_home": 253.0,
+       "act_away": 230.0,
+       "brier": 0.0064
+      },
+      {
+       "cat": "AST",
+       "p_home": 0.89,
+       "won": 0.0,
+       "proj_home": 170.0,
+       "proj_away": 144.1,
+       "act_home": 171.0,
+       "act_away": 177.0,
+       "brier": 0.7921
+      },
+      {
+       "cat": "STL",
+       "p_home": 0.22,
+       "won": 0.0,
+       "proj_home": 38.5,
+       "proj_away": 44.3,
+       "act_home": 39.0,
+       "act_away": 41.0,
+       "brier": 0.0484
+      },
+      {
+       "cat": "BLK",
+       "p_home": 0.54,
+       "won": 1.0,
+       "proj_home": 28.6,
+       "proj_away": 28.0,
+       "act_home": 27.0,
+       "act_away": 13.0,
+       "brier": 0.2116
+      },
+      {
+       "cat": "3PM",
+       "p_home": 0.04,
+       "won": 0.0,
+       "proj_home": 43.5,
+       "proj_away": 60.8,
+       "act_home": 54.0,
+       "act_away": 85.0,
+       "brier": 0.0016
+      },
+      {
+       "cat": "TO",
+       "p_home": 0.22,
+       "won": 0.0,
+       "proj_home": 86.1,
+       "proj_away": 76.0,
+       "act_home": 84.0,
+       "act_away": 79.0,
+       "brier": 0.0484
+      },
+      {
+       "cat": "FG%",
+       "p_home": 0.58,
+       "won": 1.0,
+       "proj_home": 0.484,
+       "proj_away": 0.473,
+       "act_home": 0.49709302,
+       "act_away": 0.45672192,
+       "brier": 0.1764
+      },
+      {
+       "cat": "FT%",
+       "p_home": 0.39,
+       "won": 1.0,
+       "proj_home": 0.768,
+       "proj_away": 0.801,
+       "act_home": 0.76859504,
+       "act_away": 0.75706215,
+       "brier": 0.3721
+      }
+     ]
+    },
+    {
+     "home": "OnlyFranz",
+     "away": "Stairway to Devin",
+     "p_home": 0.27,
+     "score": [
+      4,
+      5,
+      0
+     ],
+     "winner": "AWAY",
+     "fav": "Stairway to Devin",
+     "fav_p": 0.73,
+     "called": true,
+     "brier": 0.0729,
+     "cats": [
+      {
+       "cat": "PTS",
+       "p_home": 0.17,
+       "won": 0.0,
+       "proj_home": 617.7,
+       "proj_away": 682.0,
+       "act_home": 588.0,
+       "act_away": 714.0,
+       "brier": 0.0289
+      },
+      {
+       "cat": "REB",
+       "p_home": 0.22,
+       "won": 0.0,
+       "proj_home": 206.5,
+       "proj_away": 226.0,
+       "act_home": 203.0,
+       "act_away": 246.0,
+       "brier": 0.0484
+      },
+      {
+       "cat": "AST",
+       "p_home": 0.04,
+       "won": 0.0,
+       "proj_home": 143.4,
+       "proj_away": 180.3,
+       "act_home": 137.0,
+       "act_away": 178.0,
+       "brier": 0.0016
+      },
+      {
+       "cat": "STL",
+       "p_home": 0.5,
+       "won": 0.0,
+       "proj_home": 47.8,
+       "proj_away": 47.6,
+       "act_home": 34.0,
+       "act_away": 50.0,
+       "brier": 0.25
+      },
+      {
+       "cat": "BLK",
+       "p_home": 0.29,
+       "won": 1.0,
+       "proj_home": 25.9,
+       "proj_away": 28.9,
+       "act_home": 24.0,
+       "act_away": 23.0,
+       "brier": 0.5041
+      },
+      {
+       "cat": "3PM",
+       "p_home": 0.41,
+       "won": 0.0,
+       "proj_home": 71.1,
+       "proj_away": 73.5,
+       "act_home": 63.0,
+       "act_away": 77.0,
+       "brier": 0.1681
+      },
+      {
+       "cat": "TO",
+       "p_home": 0.96,
+       "won": 1.0,
+       "proj_home": 68.4,
+       "proj_away": 89.7,
+       "act_home": 60.0,
+       "act_away": 94.0,
+       "brier": 0.0016
+      },
+      {
+       "cat": "FG%",
+       "p_home": 0.54,
+       "won": 1.0,
+       "proj_home": 0.47,
+       "proj_away": 0.463,
+       "act_home": 0.45374449,
+       "act_away": 0.45229682,
+       "brier": 0.2116
+      },
+      {
+       "cat": "FT%",
+       "p_home": 0.56,
+       "won": 1.0,
+       "proj_home": 0.828,
+       "proj_away": 0.807,
+       "act_home": 0.84328358,
+       "act_away": 0.77639752,
+       "brier": 0.1936
+      }
+     ]
+    },
+    {
+     "home": "Al-Shaida",
+     "away": "The haliban",
+     "p_home": 0.08,
+     "score": [
+      6,
+      3,
+      0
+     ],
+     "winner": "HOME",
+     "fav": "The haliban",
+     "fav_p": 0.92,
+     "called": false,
+     "brier": 0.8464,
+     "cats": [
+      {
+       "cat": "PTS",
+       "p_home": 0.22,
+       "won": 1.0,
+       "proj_home": 448.8,
+       "proj_away": 492.1,
+       "act_home": 560.0,
+       "act_away": 494.0,
+       "brier": 0.6084
+      },
+      {
+       "cat": "REB",
+       "p_home": 0.02,
+       "won": 0.0,
+       "proj_home": 170.1,
+       "proj_away": 223.1,
+       "act_home": 180.0,
+       "act_away": 204.0,
+       "brier": 0.0004
+      },
+      {
+       "cat": "AST",
+       "p_home": 0.21,
+       "won": 1.0,
+       "proj_home": 99.5,
+       "proj_away": 113.6,
+       "act_home": 143.0,
+       "act_away": 112.0,
+       "brier": 0.6241
+      },
+      {
+       "cat": "STL",
+       "p_home": 0.18,
+       "won": 1.0,
+       "proj_home": 32.4,
+       "proj_away": 38.9,
+       "act_home": 41.0,
+       "act_away": 30.0,
+       "brier": 0.6724
+      },
+      {
+       "cat": "BLK",
+       "p_home": 0.19,
+       "won": 1.0,
+       "proj_home": 29.0,
+       "proj_away": 34.9,
+       "act_home": 29.0,
+       "act_away": 14.0,
+       "brier": 0.6561
+      },
+      {
+       "cat": "3PM",
+       "p_home": 0.26,
+       "won": 0.0,
+       "proj_home": 37.6,
+       "proj_away": 43.0,
+       "act_home": 44.0,
+       "act_away": 49.0,
+       "brier": 0.0676
+      },
+      {
+       "cat": "TO",
+       "p_home": 0.37,
+       "won": 0.0,
+       "proj_home": 61.6,
+       "proj_away": 57.9,
+       "act_home": 77.0,
+       "act_away": 62.0,
+       "brier": 0.1369
+      },
+      {
+       "cat": "FG%",
+       "p_home": 0.48,
+       "won": 1.0,
+       "proj_home": 0.489,
+       "proj_away": 0.49,
+       "act_home": 0.48018648,
+       "act_away": 0.45685279,
+       "brier": 0.2704
+      },
+      {
+       "cat": "FT%",
+       "p_home": 0.54,
+       "won": 1.0,
+       "proj_home": 0.791,
+       "proj_away": 0.779,
+       "act_home": 0.75362319,
+       "act_away": 0.73275862,
+       "brier": 0.2116
+      }
+     ]
+    },
+    {
+     "home": "Giddey up Horsey",
+     "away": "The Serbian Empire",
+     "p_home": 0.94,
+     "score": [
+      5,
+      4,
+      0
+     ],
+     "winner": "HOME",
+     "fav": "Giddey up Horsey",
+     "fav_p": 0.94,
+     "called": true,
+     "brier": 0.0036,
+     "cats": [
+      {
+       "cat": "PTS",
+       "p_home": 0.93,
+       "won": 1.0,
+       "proj_home": 655.2,
+       "proj_away": 562.7,
+       "act_home": 707.0,
+       "act_away": 631.0,
+       "brier": 0.0049
+      },
+      {
+       "cat": "REB",
+       "p_home": 0.9,
+       "won": 1.0,
+       "proj_home": 243.8,
+       "proj_away": 207.6,
+       "act_home": 265.0,
+       "act_away": 206.0,
+       "brier": 0.01
+      },
+      {
+       "cat": "AST",
+       "p_home": 1.0,
+       "won": 1.0,
+       "proj_home": 195.0,
+       "proj_away": 132.1,
+       "act_home": 218.0,
+       "act_away": 138.0,
+       "brier": 0.0
+      },
+      {
+       "cat": "STL",
+       "p_home": 0.92,
+       "won": 1.0,
+       "proj_home": 45.0,
+       "proj_away": 34.1,
+       "act_home": 41.0,
+       "act_away": 23.0,
+       "brier": 0.0064
+      },
+      {
+       "cat": "BLK",
+       "p_home": 0.92,
+       "won": 1.0,
+       "proj_home": 29.2,
+       "proj_away": 20.8,
+       "act_home": 26.0,
+       "act_away": 11.0,
+       "brier": 0.0064
+      },
+      {
+       "cat": "3PM",
+       "p_home": 0.84,
+       "won": 0.0,
+       "proj_home": 67.0,
+       "proj_away": 56.1,
+       "act_home": 69.0,
+       "act_away": 78.0,
+       "brier": 0.7056
+      },
+      {
+       "cat": "TO",
+       "p_home": 0.0,
+       "won": 0.0,
+       "proj_home": 102.4,
+       "proj_away": 64.5,
+       "act_home": 120.0,
+       "act_away": 87.0,
+       "brier": 0.0
+      },
+      {
+       "cat": "FG%",
+       "p_home": 0.37,
+       "won": 0.0,
+       "proj_home": 0.468,
+       "proj_away": 0.485,
+       "act_home": 0.49450549,
+       "act_away": 0.51198257,
+       "brier": 0.1369
+      },
+      {
+       "cat": "FT%",
+       "p_home": 0.45,
+       "won": 0.0,
+       "proj_home": 0.771,
+       "proj_away": 0.797,
+       "act_home": 0.80991736,
+       "act_away": 0.83,
+       "brier": 0.2025
+      }
+     ]
+    },
+    {
+     "home": "Viva La Raza!",
+     "away": "Torta Pounders",
+     "p_home": 0.98,
+     "score": [
+      6,
+      3,
+      0
+     ],
+     "winner": "HOME",
+     "fav": "Viva La Raza!",
+     "fav_p": 0.98,
+     "called": true,
+     "brier": 0.0004,
+     "cats": [
+      {
+       "cat": "PTS",
+       "p_home": 1.0,
+       "won": 1.0,
+       "proj_home": 593.7,
+       "proj_away": 434.4,
+       "act_home": 589.0,
+       "act_away": 480.0,
+       "brier": 0.0
+      },
+      {
+       "cat": "REB",
+       "p_home": 0.96,
+       "won": 1.0,
+       "proj_home": 199.2,
+       "proj_away": 160.8,
+       "act_home": 223.0,
+       "act_away": 165.0,
+       "brier": 0.0016
+      },
+      {
+       "cat": "AST",
+       "p_home": 1.0,
+       "won": 1.0,
+       "proj_home": 150.6,
+       "proj_away": 101.6,
+       "act_home": 126.0,
+       "act_away": 101.0,
+       "brier": 0.0
+      },
+      {
+       "cat": "STL",
+       "p_home": 0.9,
+       "won": 1.0,
+       "proj_home": 42.8,
+       "proj_away": 33.4,
+       "act_home": 46.0,
+       "act_away": 32.0,
+       "brier": 0.01
+      },
+      {
+       "cat": "BLK",
+       "p_home": 0.81,
+       "won": 0.0,
+       "proj_home": 26.8,
+       "proj_away": 21.8,
+       "act_home": 17.0,
+       "act_away": 20.0,
+       "brier": 0.6561
+      },
+      {
+       "cat": "3PM",
+       "p_home": 0.79,
+       "won": 1.0,
+       "proj_home": 66.6,
+       "proj_away": 58.0,
+       "act_home": 72.0,
+       "act_away": 61.0,
+       "brier": 0.0441
+      },
+      {
+       "cat": "TO",
+       "p_home": 0.07,
+       "won": 0.0,
+       "proj_home": 73.1,
+       "proj_away": 57.4,
+       "act_home": 83.0,
+       "act_away": 64.0,
+       "brier": 0.0049
+      },
+      {
+       "cat": "FG%",
+       "p_home": 0.66,
+       "won": 1.0,
+       "proj_home": 0.481,
+       "proj_away": 0.459,
+       "act_home": 0.45302714,
+       "act_away": 0.45268542,
+       "brier": 0.1156
+      },
+      {
+       "cat": "FT%",
+       "p_home": 0.59,
+       "won": 0.0,
+       "proj_home": 0.827,
+       "proj_away": 0.799,
+       "act_home": 0.76851852,
+       "act_away": 0.8125,
+       "brier": 0.3481
+      }
+     ]
+    },
+    {
+     "home": "HE IS HIM ( G.O.A.T)",
+     "away": "mr charloooooo",
+     "p_home": 1.0,
+     "score": [
+      7,
+      2,
+      0
+     ],
+     "winner": "HOME",
+     "fav": "HE IS HIM ( G.O.A.T)",
+     "fav_p": 1.0,
+     "called": true,
+     "brier": 0.0,
+     "cats": [
+      {
+       "cat": "PTS",
+       "p_home": 1.0,
+       "won": 1.0,
+       "proj_home": 562.4,
+       "proj_away": 378.2,
+       "act_home": 571.0,
+       "act_away": 415.0,
+       "brier": 0.0
+      },
+      {
+       "cat": "REB",
+       "p_home": 1.0,
+       "won": 1.0,
+       "proj_home": 191.2,
+       "proj_away": 110.6,
+       "act_home": 172.0,
+       "act_away": 138.0,
+       "brier": 0.0
+      },
+      {
+       "cat": "AST",
+       "p_home": 1.0,
+       "won": 1.0,
+       "proj_home": 130.7,
+       "proj_away": 70.1,
+       "act_home": 132.0,
+       "act_away": 71.0,
+       "brier": 0.0
+      },
+      {
+       "cat": "STL",
+       "p_home": 0.88,
+       "won": 1.0,
+       "proj_home": 36.4,
+       "proj_away": 28.6,
+       "act_home": 33.0,
+       "act_away": 31.0,
+       "brier": 0.0144
+      },
+      {
+       "cat": "BLK",
+       "p_home": 0.99,
+       "won": 1.0,
+       "proj_home": 32.9,
+       "proj_away": 19.1,
+       "act_home": 32.0,
+       "act_away": 20.0,
+       "brier": 0.0001
+      },
+      {
+       "cat": "3PM",
+       "p_home": 0.98,
+       "won": 1.0,
+       "proj_home": 63.7,
+       "proj_away": 42.4,
+       "act_home": 60.0,
+       "act_away": 47.0,
+       "brier": 0.0004
+      },
+      {
+       "cat": "TO",
+       "p_home": 0.0,
+       "won": 0.0,
+       "proj_home": 70.9,
+       "proj_away": 37.3,
+       "act_home": 69.0,
+       "act_away": 47.0,
+       "brier": 0.0
+      },
+      {
+       "cat": "FG%",
+       "p_home": 0.4,
+       "won": 0.0,
+       "proj_home": 0.47,
+       "proj_away": 0.486,
+       "act_home": 0.47356322,
+       "act_away": 0.4984127,
+       "brier": 0.16
+      },
+      {
+       "cat": "FT%",
+       "p_home": 0.56,
+       "won": 1.0,
+       "proj_home": 0.821,
+       "proj_away": 0.799,
+       "act_home": 0.84615385,
+       "act_away": 0.65060241,
+       "brier": 0.1936
+      }
+     ]
+    }
+   ],
+   "called": 6,
+   "n": 7,
+   "brier": 0.161,
+   "cat_brier": 0.172,
+   "cat_called": 47,
+   "cat_n": 63
+  },
   {
    "period": 4,
    "source": "live",

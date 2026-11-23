@@ -1240,5 +1240,383 @@
     }
    }
   ]
+ },
+ "6": {
+  "source": "live",
+  "captured_utc": "2026-11-23T11:53:04+00:00",
+  "started": false,
+  "matchups": [
+   {
+    "home": "Giddey up Horsey",
+    "away": "OnlyFranz",
+    "p_home": 0.46,
+    "p_tie": 0.0,
+    "cats": {
+     "PTS": {
+      "p_home": 0.63,
+      "proj_home": 625.6,
+      "proj_away": 607.9
+     },
+     "REB": {
+      "p_home": 0.94,
+      "proj_home": 244.1,
+      "proj_away": 201.4
+     },
+     "AST": {
+      "p_home": 0.98,
+      "proj_home": 171.7,
+      "proj_away": 129.8
+     },
+     "STL": {
+      "p_home": 0.34,
+      "proj_home": 39.0,
+      "proj_away": 42.4
+     },
+     "BLK": {
+      "p_home": 0.46,
+      "proj_home": 27.7,
+      "proj_away": 28.1
+     },
+     "3PM": {
+      "p_home": 0.18,
+      "proj_home": 57.7,
+      "proj_away": 67.6
+     },
+     "TO": {
+      "p_home": 0.0,
+      "proj_home": 96.2,
+      "proj_away": 63.0
+     },
+     "FG%": {
+      "p_home": 0.55,
+      "proj_home": 0.482,
+      "proj_away": 0.477
+     },
+     "FT%": {
+      "p_home": 0.33,
+      "proj_home": 0.78,
+      "proj_away": 0.839
+     }
+    }
+   },
+   {
+    "home": "The Serbian Empire",
+    "away": "Al-Shaida",
+    "p_home": 0.41,
+    "p_tie": 0.0,
+    "cats": {
+     "PTS": {
+      "p_home": 0.62,
+      "proj_home": 603.4,
+      "proj_away": 581.9
+     },
+     "REB": {
+      "p_home": 0.52,
+      "proj_home": 207.5,
+      "proj_away": 205.7
+     },
+     "AST": {
+      "p_home": 0.29,
+      "proj_home": 139.5,
+      "proj_away": 151.5
+     },
+     "STL": {
+      "p_home": 0.15,
+      "proj_home": 36.1,
+      "proj_away": 44.5
+     },
+     "BLK": {
+      "p_home": 0.04,
+      "proj_home": 20.5,
+      "proj_away": 31.2
+     },
+     "3PM": {
+      "p_home": 0.7,
+      "proj_home": 61.2,
+      "proj_away": 54.8
+     },
+     "TO": {
+      "p_home": 0.78,
+      "proj_home": 71.7,
+      "proj_away": 81.6
+     },
+     "FG%": {
+      "p_home": 0.63,
+      "proj_home": 0.493,
+      "proj_away": 0.478
+     },
+     "FT%": {
+      "p_home": 0.46,
+      "proj_home": 0.796,
+      "proj_away": 0.806
+     }
+    }
+   },
+   {
+    "home": "Torta Pounders",
+    "away": "Gets On Base",
+    "p_home": 0.31,
+    "p_tie": 0.0,
+    "cats": {
+     "PTS": {
+      "p_home": 0.48,
+      "proj_home": 439.3,
+      "proj_away": 440.0
+     },
+     "REB": {
+      "p_home": 0.25,
+      "proj_home": 144.7,
+      "proj_away": 160.0
+     },
+     "AST": {
+      "p_home": 0.73,
+      "proj_home": 97.0,
+      "proj_away": 87.9
+     },
+     "STL": {
+      "p_home": 0.34,
+      "proj_home": 29.1,
+      "proj_away": 31.8
+     },
+     "BLK": {
+      "p_home": 0.2,
+      "proj_home": 17.0,
+      "proj_away": 21.3
+     },
+     "3PM": {
+      "p_home": 0.46,
+      "proj_home": 61.1,
+      "proj_away": 62.8
+     },
+     "TO": {
+      "p_home": 0.34,
+      "proj_home": 55.0,
+      "proj_away": 50.9
+     },
+     "FG%": {
+      "p_home": 0.44,
+      "proj_home": 0.457,
+      "proj_away": 0.465
+     },
+     "FT%": {
+      "p_home": 0.48,
+      "proj_home": 0.794,
+      "proj_away": 0.803
+     }
+    }
+   },
+   {
+    "home": "Stairway to Devin",
+    "away": "Viva La Raza!",
+    "p_home": 0.25,
+    "p_tie": 0.0,
+    "cats": {
+     "PTS": {
+      "p_home": 0.49,
+      "proj_home": 540.8,
+      "proj_away": 544.3
+     },
+     "REB": {
+      "p_home": 0.17,
+      "proj_home": 170.7,
+      "proj_away": 194.5
+     },
+     "AST": {
+      "p_home": 0.9,
+      "proj_home": 144.9,
+      "proj_away": 119.7
+     },
+     "STL": {
+      "p_home": 0.26,
+      "proj_home": 33.3,
+      "proj_away": 37.5
+     },
+     "BLK": {
+      "p_home": 0.21,
+      "proj_home": 21.1,
+      "proj_away": 25.4
+     },
+     "3PM": {
+      "p_home": 0.11,
+      "proj_home": 56.8,
+      "proj_away": 71.1
+     },
+     "TO": {
+      "p_home": 0.47,
+      "proj_home": 71.4,
+      "proj_away": 70.5
+     },
+     "FG%": {
+      "p_home": 0.43,
+      "proj_home": 0.464,
+      "proj_away": 0.473
+     },
+     "FT%": {
+      "p_home": 0.49,
+      "proj_home": 0.818,
+      "proj_away": 0.816
+     }
+    }
+   },
+   {
+    "home": "The Real OG",
+    "away": "Popoviched",
+    "p_home": 0.17,
+    "p_tie": 0.0,
+    "cats": {
+     "PTS": {
+      "p_home": 0.61,
+      "proj_home": 597.2,
+      "proj_away": 582.6
+     },
+     "REB": {
+      "p_home": 0.15,
+      "proj_home": 195.2,
+      "proj_away": 222.6
+     },
+     "AST": {
+      "p_home": 0.46,
+      "proj_home": 124.5,
+      "proj_away": 126.1
+     },
+     "STL": {
+      "p_home": 0.23,
+      "proj_home": 36.1,
+      "proj_away": 41.6
+     },
+     "BLK": {
+      "p_home": 0.17,
+      "proj_home": 19.3,
+      "proj_away": 24.3
+     },
+     "3PM": {
+      "p_home": 0.14,
+      "proj_home": 59.5,
+      "proj_away": 72.3
+     },
+     "TO": {
+      "p_home": 0.38,
+      "proj_home": 66.9,
+      "proj_away": 63.8
+     },
+     "FG%": {
+      "p_home": 0.53,
+      "proj_home": 0.471,
+      "proj_away": 0.467
+     },
+     "FT%": {
+      "p_home": 0.45,
+      "proj_home": 0.8,
+      "proj_away": 0.821
+     }
+    }
+   },
+   {
+    "home": "The haliban",
+    "away": "HE IS HIM ( G.O.A.T)",
+    "p_home": 0.17,
+    "p_tie": 0.0,
+    "cats": {
+     "PTS": {
+      "p_home": 0.05,
+      "proj_home": 415.6,
+      "proj_away": 508.7
+     },
+     "REB": {
+      "p_home": 0.65,
+      "proj_home": 175.4,
+      "proj_away": 164.8
+     },
+     "AST": {
+      "p_home": 0.05,
+      "proj_home": 99.1,
+      "proj_away": 127.3
+     },
+     "STL": {
+      "p_home": 0.52,
+      "proj_home": 33.1,
+      "proj_away": 32.7
+     },
+     "BLK": {
+      "p_home": 0.19,
+      "proj_home": 22.3,
+      "proj_away": 28.9
+     },
+     "3PM": {
+      "p_home": 0.04,
+      "proj_home": 41.3,
+      "proj_away": 57.0
+     },
+     "TO": {
+      "p_home": 0.92,
+      "proj_home": 49.0,
+      "proj_away": 63.6
+     },
+     "FG%": {
+      "p_home": 0.49,
+      "proj_home": 0.476,
+      "proj_away": 0.474
+     },
+     "FT%": {
+      "p_home": 0.4,
+      "proj_home": 0.788,
+      "proj_away": 0.828
+     }
+    }
+   },
+   {
+    "home": "mr charloooooo",
+    "away": "Derrick White Girl Wasted",
+    "p_home": 0.0,
+    "p_tie": 0.0,
+    "cats": {
+     "PTS": {
+      "p_home": 0.0,
+      "proj_home": 193.9,
+      "proj_away": 413.9
+     },
+     "REB": {
+      "p_home": 0.0,
+      "proj_home": 59.7,
+      "proj_away": 202.3
+     },
+     "AST": {
+      "p_home": 0.0,
+      "proj_home": 35.2,
+      "proj_away": 144.0
+     },
+     "STL": {
+      "p_home": 0.05,
+      "proj_home": 21.3,
+      "proj_away": 32.1
+     },
+     "BLK": {
+      "p_home": 0.0,
+      "proj_home": 9.5,
+      "proj_away": 21.0
+     },
+     "3PM": {
+      "p_home": 0.1,
+      "proj_home": 27.9,
+      "proj_away": 37.9
+     },
+     "TO": {
+      "p_home": 1.0,
+      "proj_home": 21.8,
+      "proj_away": 68.4
+     },
+     "FG%": {
+      "p_home": 0.46,
+      "proj_home": 0.485,
+      "proj_away": 0.493
+     },
+     "FT%": {
+      "p_home": 0.64,
+      "proj_home": 0.836,
+      "proj_away": 0.748
+     }
+    }
+   }
+  ]
  }
 }

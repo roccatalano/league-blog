@@ -5057,7 +5057,8 @@
     }
    ],
    "espn_status": "CANCELED",
-   "live_now": false
+   "live_now": false,
+   "rating": null
   },
   "eba00b3c-edb4-49ce-a4dd-a566804c87dd": {
    "proposed": "2026-11-20T20:00:02.485000+00:00",
@@ -5084,7 +5085,8 @@
     }
    ],
    "espn_status": "CANCELED",
-   "live_now": false
+   "live_now": false,
+   "rating": null
   },
   "b94360c0-7cb4-4e24-87ca-17d0101d2f0f": {
    "proposed": "2026-11-21T02:33:03.825000+00:00",
@@ -5144,6 +5146,43 @@
     "mr charloooooo": -0.181
    },
    "rated_on": "2026-11-21"
+  },
+  "2cb12ed9-a46e-4675-b6fe-171dcd1c38a5": {
+   "proposed": "2026-11-23T22:12:08.716000+00:00",
+   "proposed_by": "Viva La Raza!",
+   "teams": [
+    "OnlyFranz",
+    "Viva La Raza!"
+   ],
+   "moves": [
+    {
+     "player": "LaMelo Ball",
+     "from": "Viva La Raza!",
+     "to": "OnlyFranz"
+    },
+    {
+     "player": "Meleek Thomas",
+     "from": "Viva La Raza!",
+     "to": "OnlyFranz"
+    },
+    {
+     "player": "Dyson Daniels",
+     "from": "OnlyFranz",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Nickeil Alexander-Walker",
+     "from": "OnlyFranz",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "OnlyFranz": -0.26,
+    "Viva La Raza!": 0.394
+   },
+   "rated_on": "2026-11-23"
   }
  },
  "outcomes": {
@@ -5731,6 +5770,11 @@
    "outcome": "declined",
    "by": "Popoviched",
    "date": "2026-11-23T09:02:32.301000+00:00"
+  },
+  "2125db3d-8ae2-4655-98e6-283399379960": {
+   "outcome": "declined",
+   "by": "mr charloooooo",
+   "date": "2026-11-23T20:59:28.760000+00:00"
   }
  },
  "synced_periods": [
@@ -5771,5 +5815,5 @@
   34,
   35
  ],
- "last_sync": "2026-11-23T11:53:18.824053+00:00"
+ "last_sync": "2026-11-23T23:15:09.539542+00:00"
 }

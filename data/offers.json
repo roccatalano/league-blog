@@ -1,6 +1,41 @@
 {
- "updated_utc": "2026-11-23T11:53:19.150995+00:00",
+ "updated_utc": "2026-11-23T23:15:09.939474+00:00",
  "offers": [
+  {
+   "id": "2cb12ed9-a46e-4675-b6fe-171dcd1c38a5",
+   "proposed": "2026-11-23T22:12:08.716000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "OnlyFranz",
+   "teams": [
+    "OnlyFranz",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "LaMelo Ball",
+     "from": "Viva La Raza!",
+     "to": "OnlyFranz"
+    },
+    {
+     "player": "Meleek Thomas",
+     "from": "Viva La Raza!",
+     "to": "OnlyFranz"
+    },
+    {
+     "player": "Dyson Daniels",
+     "from": "OnlyFranz",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Nickeil Alexander-Walker",
+     "from": "OnlyFranz",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": 0.394,
+   "receiver_gain": -0.26
+  },
   {
    "id": "b94360c0-7cb4-4e24-87ca-17d0101d2f0f",
    "proposed": "2026-11-21T02:33:03.825000+00:00",
@@ -5407,7 +5442,7 @@
   {
    "team": "OnlyFranz",
    "sent": 2,
-   "received": 2,
+   "received": 3,
    "rated_sent": 2,
    "sent_accepted": 0,
    "sent_declined": 0,
@@ -5464,13 +5499,13 @@
   },
   {
    "team": "Viva La Raza!",
-   "sent": 46,
+   "sent": 47,
    "received": 7,
-   "rated_sent": 28,
+   "rated_sent": 29,
    "sent_accepted": 1,
    "sent_declined": 0,
-   "generosity": -0.194,
-   "self_gain": 0.218,
+   "generosity": -0.196,
+   "self_gain": 0.224,
    "best_sent": {
     "id": "bd9f9a3b-2512-41bb-a03b-b39d038694be",
     "receiver": "Giddey up Horsey",
@@ -5637,5 +5672,5 @@
    "worst_sent": null
   }
  ],
- "lost_before_logging": 97
+ "lost_before_logging": 98
 }

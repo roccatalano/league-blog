@@ -5183,6 +5183,70 @@
     "Viva La Raza!": 0.394
    },
    "rated_on": "2026-11-23"
+  },
+  "e9379779-e5da-4df6-8d4c-0fd45d132142": {
+   "proposed": "2026-11-24T04:05:16.319000+00:00",
+   "proposed_by": "Torta Pounders",
+   "teams": [
+    "Gets On Base",
+    "Torta Pounders"
+   ],
+   "moves": [
+    {
+     "player": "Tyrese Haliburton",
+     "from": "Torta Pounders",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Giannis Antetokounmpo",
+     "from": "Gets On Base",
+     "to": "Torta Pounders"
+    },
+    {
+     "player": "Donovan Mitchell",
+     "from": "Torta Pounders",
+     "to": "Gets On Base"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Gets On Base": 0.746,
+    "Torta Pounders": -0.619
+   },
+   "rated_on": "2026-11-24"
+  },
+  "e9471520-4ecf-47bb-b648-608c5d9a24b1": {
+   "proposed": "2026-11-24T04:00:02.148000+00:00",
+   "proposed_by": "Torta Pounders",
+   "teams": [
+    "Gets On Base",
+    "Torta Pounders"
+   ],
+   "moves": [
+    {
+     "player": "Tyrese Haliburton",
+     "from": "Torta Pounders",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Giannis Antetokounmpo",
+     "from": "Gets On Base",
+     "to": "Torta Pounders"
+    },
+    {
+     "player": "Donovan Mitchell",
+     "from": "Torta Pounders",
+     "to": "Gets On Base"
+    }
+   ],
+   "espn_status": "PENDING",
+   "live_now": false,
+   "rating": {
+    "Gets On Base": 0.746,
+    "Torta Pounders": -0.619
+   },
+   "rated_on": "2026-11-24"
   }
  },
  "outcomes": {
@@ -5775,6 +5839,16 @@
    "outcome": "declined",
    "by": "mr charloooooo",
    "date": "2026-11-23T20:59:28.760000+00:00"
+  },
+  "97d3bfdd-b06c-4b57-88df-6427c37faf62": {
+   "outcome": "accepted",
+   "by": "Al-Shaida",
+   "date": "2026-11-24T04:05:16.319000+00:00"
+  },
+  "abe98f2f-ffb9-4287-af44-b9aeebf807e9": {
+   "outcome": "declined",
+   "by": "Torta Pounders",
+   "date": "2026-11-24T02:58:12.867000+00:00"
   }
  },
  "synced_periods": [
@@ -5815,5 +5889,5 @@
   34,
   35
  ],
- "last_sync": "2026-11-23T23:15:09.539542+00:00"
+ "last_sync": "2026-11-24T07:00:39.382733+00:00"
 }

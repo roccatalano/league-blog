@@ -1,6 +1,66 @@
 {
- "updated_utc": "2026-11-23T23:15:09.939474+00:00",
+ "updated_utc": "2026-11-24T07:00:39.755319+00:00",
  "offers": [
+  {
+   "id": "e9379779-e5da-4df6-8d4c-0fd45d132142",
+   "proposed": "2026-11-24T04:05:16.319000+00:00",
+   "sender": "Torta Pounders",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Gets On Base",
+    "Torta Pounders"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Tyrese Haliburton",
+     "from": "Torta Pounders",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Giannis Antetokounmpo",
+     "from": "Gets On Base",
+     "to": "Torta Pounders"
+    },
+    {
+     "player": "Donovan Mitchell",
+     "from": "Torta Pounders",
+     "to": "Gets On Base"
+    }
+   ],
+   "sender_gain": -0.619,
+   "receiver_gain": 0.746
+  },
+  {
+   "id": "e9471520-4ecf-47bb-b648-608c5d9a24b1",
+   "proposed": "2026-11-24T04:00:02.148000+00:00",
+   "sender": "Torta Pounders",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Gets On Base",
+    "Torta Pounders"
+   ],
+   "outcome": "pending",
+   "moves": [
+    {
+     "player": "Tyrese Haliburton",
+     "from": "Torta Pounders",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Giannis Antetokounmpo",
+     "from": "Gets On Base",
+     "to": "Torta Pounders"
+    },
+    {
+     "player": "Donovan Mitchell",
+     "from": "Torta Pounders",
+     "to": "Gets On Base"
+    }
+   ],
+   "sender_gain": -0.619,
+   "receiver_gain": 0.746
+  },
   {
    "id": "2cb12ed9-a46e-4675-b6fe-171dcd1c38a5",
    "proposed": "2026-11-23T22:12:08.716000+00:00",
@@ -5060,13 +5120,13 @@
  "teams": [
   {
    "team": "Torta Pounders",
-   "sent": 2,
+   "sent": 4,
    "received": 16,
-   "rated_sent": 2,
+   "rated_sent": 4,
    "sent_accepted": 1,
    "sent_declined": 0,
-   "generosity": 0.477,
-   "self_gain": -0.354,
+   "generosity": 0.611,
+   "self_gain": -0.487,
    "best_sent": {
     "id": "881d44b7-aeca-4d45-9b8d-08166a1b2c6a",
     "receiver": "Popoviched",
@@ -5215,7 +5275,7 @@
   {
    "team": "Gets On Base",
    "sent": 30,
-   "received": 47,
+   "received": 49,
    "rated_sent": 20,
    "sent_accepted": 0,
    "sent_declined": 7,
@@ -5672,5 +5732,5 @@
    "worst_sent": null
   }
  ],
- "lost_before_logging": 98
+ "lost_before_logging": 100
 }

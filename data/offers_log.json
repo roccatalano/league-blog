@@ -5247,6 +5247,33 @@
     "Torta Pounders": -0.619
    },
    "rated_on": "2026-11-24"
+  },
+  "68b0ca41-2f11-4cf9-b7ee-8d1f21a8a141": {
+   "proposed": "2026-11-24T08:18:53.145000+00:00",
+   "proposed_by": "Stairway to Devin",
+   "teams": [
+    "Gets On Base",
+    "Stairway to Devin"
+   ],
+   "moves": [
+    {
+     "player": "LeBron James",
+     "from": "Stairway to Devin",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Stairway to Devin"
+    }
+   ],
+   "espn_status": "PENDING",
+   "live_now": true,
+   "rating": {
+    "Gets On Base": -0.131,
+    "Stairway to Devin": 0.136
+   },
+   "rated_on": "2026-11-24"
   }
  },
  "outcomes": {
@@ -5849,6 +5876,16 @@
    "outcome": "declined",
    "by": "Torta Pounders",
    "date": "2026-11-24T02:58:12.867000+00:00"
+  },
+  "d7e12817-5d1d-4a9c-8ae1-a0e0449a235c": {
+   "outcome": "declined",
+   "by": "mr charloooooo",
+   "date": "2026-11-24T07:58:32.852000+00:00"
+  },
+  "43030121-5639-4727-b0b5-5829f9819a68": {
+   "outcome": "declined",
+   "by": "Stairway to Devin",
+   "date": "2026-11-24T08:34:13.790000+00:00"
   }
  },
  "synced_periods": [
@@ -5887,7 +5924,8 @@
   32,
   33,
   34,
-  35
+  35,
+  36
  ],
- "last_sync": "2026-11-24T07:00:39.382733+00:00"
+ "last_sync": "2026-11-24T19:00:14.434509+00:00"
 }

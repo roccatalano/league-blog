@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-24T07:00:47.192301+00:00",
+ "updated_utc": "2026-11-24T19:00:21.014871+00:00",
  "today_et": "2026-11-24",
  "players": [
   {
@@ -41,6 +41,22 @@
     "REB": 6.6,
     "AST": 1.5
    }
+  },
+  {
+   "name": "Tre Mann",
+   "nba_team": "WSH",
+   "pos": "G",
+   "status": "Day-To-Day",
+   "injury": "Illness",
+   "return_date": "2026-11-24",
+   "days_out": 0,
+   "games_missed": 0,
+   "timeframe": "Days",
+   "note": "Mann (illness) has been downgraded to questionable for Tuesday's game against Boston.",
+   "note_date": "2026-11-24",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
   },
   {
    "name": "Aday Mara",
@@ -136,8 +152,8 @@
    "days_out": 1,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Antetokounmpo (groin) won't play in Sunday's game against Oklahoma City, Clemente Almanza of USA Today reports.",
-   "note_date": "2026-11-23",
+   "note": "Antetokounmpo (groin) participated in most of Tuesday's practice, Zachary Weinberger of ClutchPoints.com reports.",
+   "note_date": "2026-11-24",
    "fantasy_team": "Gets On Base",
    "on_ir": false,
    "per_game": {
@@ -180,6 +196,26 @@
     "PTS": 14.5,
     "REB": 3.0,
     "AST": 3.3
+   }
+  },
+  {
+   "name": "Jalen Smith",
+   "nba_team": "CHI",
+   "pos": "F",
+   "status": "Day-To-Day",
+   "injury": "Illness",
+   "return_date": "2026-11-25",
+   "days_out": 1,
+   "games_missed": 0,
+   "timeframe": "Days",
+   "note": "Smith (illness) is listed as questionable for Wednesday's game against the Hornets.",
+   "note_date": "2026-11-24",
+   "fantasy_team": "Popoviched",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 11.9,
+    "REB": 7.0,
+    "AST": 1.7
    }
   },
   {
@@ -228,8 +264,8 @@
    "days_out": 1,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Clarkson (foot) has been ruled out for Sunday's game against Indiana.",
-   "note_date": "2026-11-22",
+   "note": "Clarkson (foot) didn't participate in Tuesday's practice, Jared Schwartz of the New York Post reports.",
+   "note_date": "2026-11-24",
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
@@ -260,8 +296,8 @@
    "days_out": 1,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "McBride (abdomen) has been ruled out for Sunday's game against the Pacers.",
-   "note_date": "2026-11-23",
+   "note": "McBride (groin) practiced Tuesday, per Jared Schwartz of the New York Post.",
+   "note_date": "2026-11-24",
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
@@ -292,8 +328,8 @@
    "days_out": 1,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Anunoby (calf) won't play Sunday against the Pacers.",
-   "note_date": "2026-11-23",
+   "note": "Anunoby (calf) did not participate in Tuesday's practice, Jared Schwartz of the New York Post reports.",
+   "note_date": "2026-11-24",
    "fantasy_team": "HE IS HIM ( G.O.A.T)",
    "on_ir": false,
    "per_game": {
@@ -314,13 +350,9 @@
    "timeframe": "Days",
    "note": "Kalkbrenner has been ruled out for the rest of Monday's game against Memphis due to left hip soreness. He'll end with two rebounds in nine minutes.",
    "note_date": "2026-11-24",
-   "fantasy_team": "Derrick White Girl Wasted",
+   "fantasy_team": null,
    "on_ir": false,
-   "per_game": {
-    "PTS": 6.0,
-    "REB": 5.5,
-    "AST": 1.0
-   }
+   "per_game": null
   },
   {
    "name": "Scotty Pippen Jr.",
@@ -476,8 +508,8 @@
    "days_out": 3,
    "games_missed": 1,
    "timeframe": "1 week",
-   "note": "Robinson will be re-evaluated in one week due to a left quadriceps strain, Coty M. Davis of The Detroit News reports.",
-   "note_date": "2026-11-17",
+   "note": "Robinson (quadriceps) is considered day-to-day as he progresses in his rehab, Eric Vincent of ClutchPoints.com reports.",
+   "note_date": "2026-11-24",
    "fantasy_team": "Popoviched",
    "on_ir": true,
    "per_game": {
@@ -596,7 +628,7 @@
    "days_out": 3,
    "games_missed": 0,
    "timeframe": "1 week",
-   "note": "McConnell is out for Monday's game against the Thunder due to left hamstring soreness.",
+   "note": "McConnell (hamstring) was assigned to the G League's Noblesville Boom on Tuesday.",
    "note_date": "2026-11-24",
    "fantasy_team": null,
    "on_ir": false,
@@ -767,7 +799,7 @@
    "note": "Nurkic (foot) has been cleared for on-court work and will be re-evaluated in one week.",
    "note_date": "2026-11-20",
    "fantasy_team": "Torta Pounders",
-   "on_ir": true,
+   "on_ir": false,
    "per_game": {
     "PTS": 9.4,
     "REB": 9.1,
@@ -827,22 +859,6 @@
    }
   },
   {
-   "name": "Ebuka Okorie",
-   "nba_team": "DET",
-   "pos": "G",
-   "status": "Out",
-   "injury": "Left Oblique",
-   "return_date": "2026-11-30",
-   "days_out": 6,
-   "games_missed": 3,
-   "timeframe": "1 week",
-   "note": "Okorie (oblique) won't play Tuesday in Orlando.",
-   "note_date": "2026-11-23",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
-  },
-  {
    "name": "Jalen Duren",
    "nba_team": "DET",
    "pos": "C",
@@ -852,8 +868,8 @@
    "days_out": 6,
    "games_missed": 3,
    "timeframe": "1 week",
-   "note": "Duren (hamstring) has been ruled out for Tuesday's game against the Magic.",
-   "note_date": "2026-11-23",
+   "note": "Duren (hamstring) is being assigned to the Motor City Cruise on Wednesday for practice as he ramps up for a return, Eric Vincent of ClutchPoints.com reports.",
+   "note_date": "2026-11-24",
    "fantasy_team": "Gets On Base",
    "on_ir": true,
    "per_game": {
@@ -1115,6 +1131,22 @@
    }
   },
   {
+   "name": "Ebuka Okorie",
+   "nba_team": "DET",
+   "pos": "G",
+   "status": "Out",
+   "injury": "Left Oblique",
+   "return_date": "2026-12-13",
+   "days_out": 19,
+   "games_missed": 5,
+   "timeframe": "2-4 weeks",
+   "note": "The Pistons announced Tuesday that Okorie (oblique) will miss at least two weeks, per Eric Vincent of ClutchPoints.com.",
+   "note_date": "2026-11-24",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
+  },
+  {
    "name": "RJ Barrett",
    "nba_team": "TOR",
    "pos": "F",
@@ -1135,22 +1167,6 @@
    }
   },
   {
-   "name": "Taurean Prince",
-   "nba_team": "DET",
-   "pos": "F",
-   "status": "Out",
-   "injury": "Right Knee",
-   "return_date": "2026-12-13",
-   "days_out": 19,
-   "games_missed": 5,
-   "timeframe": "2-4 weeks",
-   "note": "Prince (knee) underwent surgery to address lingering issues and has no timeline for a return, Hunter Patterson of The Athletic reports.",
-   "note_date": "2026-11-20",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
-  },
-  {
    "name": "Tyrese Haliburton",
    "nba_team": "IND",
    "pos": "G",
@@ -1160,8 +1176,8 @@
    "days_out": 19,
    "games_missed": 4,
    "timeframe": "2-4 weeks",
-   "note": "Haliburton (hamstring) is expected to miss at least two more weeks, Shams Charania of ESPN reports.",
-   "note_date": "2026-11-20",
+   "note": "Haliburton (hamstring) was assigned to the G League's Noblesville Boom on Tuesday.",
+   "note_date": "2026-11-24",
    "fantasy_team": "Torta Pounders",
    "on_ir": true,
    "per_game": {
@@ -1243,12 +1259,28 @@
    "note": "Boozer (ankle) will be re-evaluated in four weeks, Brett Siegel of ClutchPoints.com reports.",
    "note_date": "2026-11-23",
    "fantasy_team": "Derrick White Girl Wasted",
-   "on_ir": false,
+   "on_ir": true,
    "per_game": {
     "PTS": 17.5,
     "REB": 8.6,
     "AST": 4.2
    }
+  },
+  {
+   "name": "Taurean Prince",
+   "nba_team": "DET",
+   "pos": "F",
+   "status": "Out",
+   "injury": "Right Knee",
+   "return_date": "2026-12-26",
+   "days_out": 32,
+   "games_missed": 12,
+   "timeframe": "1-2 months",
+   "note": "Prince underwent arthroscopic right knee surgery Nov. 18 and will be re-evaluated in four weeks, Eric Vincent of ClutchPoints.com reports.",
+   "note_date": "2026-11-24",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
   },
   {
    "name": "Ben Sheppard",
@@ -1307,22 +1339,6 @@
    }
   },
   {
-   "name": "Johnny Furphy",
-   "nba_team": "IND",
-   "pos": "G",
-   "status": "Out",
-   "injury": "Right Knee",
-   "return_date": "2027-01-02",
-   "days_out": 39,
-   "games_missed": 14,
-   "timeframe": "1-2 months",
-   "note": "Furphy (knee) is practicing with the G League's Noblesville Boom, per Alex Golden of SI.com.",
-   "note_date": "2026-10-30",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
-  },
-  {
    "name": "Kristaps Porzingis",
    "nba_team": "GS",
    "pos": "C",
@@ -1334,6 +1350,22 @@
    "timeframe": "1-2 months",
    "note": "Porzingis announced on his social media that he's stepping away from basketball.",
    "note_date": "2026-11-06",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
+  },
+  {
+   "name": "Donte DiVincenzo",
+   "nba_team": "MIN",
+   "pos": "G",
+   "status": "Out",
+   "injury": "Right Achilles",
+   "return_date": "2027-01-03",
+   "days_out": 40,
+   "games_missed": 16,
+   "timeframe": "1-2 months",
+   "note": "DiVincenzo (Achilles) has been cleared for team basketball activities and is targeting a return to game action in January, Jon Krawczynski of The Athletic reports.",
+   "note_date": "2026-11-24",
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
@@ -1351,7 +1383,7 @@
    "note": "Markkanen has been diagnosed with a non-displaced fracture in his right hand and will be sidelined for at least one month, Shams Charania of ESPN reports.",
    "note_date": "2026-11-11",
    "fantasy_team": "Torta Pounders",
-   "on_ir": false,
+   "on_ir": true,
    "per_game": {
     "PTS": 21.8,
     "REB": 7.0,
@@ -1530,22 +1562,6 @@
    "timeframe": "2+ months",
    "note": "Newell underwent surgery Tuesday for a plantar plate tear in his left great toe, and he will be re-evaluated in approximately four months, Brad Rowland of the Locked On Podcast Network reports.",
    "note_date": "2026-11-17",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
-  },
-  {
-   "name": "Donte DiVincenzo",
-   "nba_team": "MIN",
-   "pos": "G",
-   "status": "Out",
-   "injury": "Right Achilles",
-   "return_date": "2027-04-02",
-   "days_out": 129,
-   "games_missed": 56,
-   "timeframe": "2+ months",
-   "note": "DiVincenzo (Achilles) remains confident that he'll return during the 2026-27 season, Jon Krawczynski of The Athletic reports.",
-   "note_date": "2026-10-05",
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null

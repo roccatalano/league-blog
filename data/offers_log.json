@@ -5274,6 +5274,38 @@
     "Stairway to Devin": 0.136
    },
    "rated_on": "2026-11-24"
+  },
+  "23fbefd5-1f0c-4f84-a390-da8394449569": {
+   "proposed": "2026-11-25T02:46:04.724000+00:00",
+   "proposed_by": "Stairway to Devin",
+   "teams": [
+    "Stairway to Devin",
+    "mr charloooooo"
+   ],
+   "moves": [
+    {
+     "player": "Coby White",
+     "from": "Stairway to Devin",
+     "to": "mr charloooooo"
+    },
+    {
+     "player": "Nic Claxton",
+     "from": "Stairway to Devin",
+     "to": "mr charloooooo"
+    },
+    {
+     "player": "Evan Mobley",
+     "from": "mr charloooooo",
+     "to": "Stairway to Devin"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Stairway to Devin": 0.414,
+    "mr charloooooo": -0.425
+   },
+   "rated_on": "2026-11-25"
   }
  },
  "outcomes": {
@@ -5886,6 +5918,16 @@
    "outcome": "declined",
    "by": "Stairway to Devin",
    "date": "2026-11-24T08:34:13.790000+00:00"
+  },
+  "e64c6702-11eb-4c32-afb3-44c6f8678750": {
+   "outcome": "declined",
+   "by": "HE IS HIM ( G.O.A.T)",
+   "date": "2026-11-24T20:27:16.886000+00:00"
+  },
+  "1f8c249f-138f-4c0d-9279-e69958844995": {
+   "outcome": "accepted",
+   "by": "The haliban",
+   "date": "2026-11-25T01:20:25.647000+00:00"
   }
  },
  "synced_periods": [
@@ -5927,5 +5969,5 @@
   35,
   36
  ],
- "last_sync": "2026-11-24T19:00:14.434509+00:00"
+ "last_sync": "2026-11-25T02:59:27.255937+00:00"
 }

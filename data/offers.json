@@ -1,6 +1,351 @@
 {
- "updated_utc": "2026-11-25T02:59:27.920631+00:00",
+ "updated_utc": "2026-11-25T12:25:34.970108+00:00",
  "offers": [
+  {
+   "id": "9abb1d61-fa6e-4580-be3e-2541f39f77e8",
+   "proposed": "2026-11-25T10:28:23.095000+00:00",
+   "sender": "Gets On Base",
+   "receiver": "Viva La Raza!",
+   "teams": [
+    "Gets On Base",
+    "Viva La Raza!"
+   ],
+   "outcome": "pending",
+   "moves": [
+    {
+     "player": "Jared McCain",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Ace Bailey",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Andrew Wiggins",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "LaMelo Ball",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Ayo Dosunmu",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    }
+   ],
+   "sender_gain": 0.173,
+   "receiver_gain": -0.209
+  },
+  {
+   "id": "9ee2668b-441e-4581-9838-4cfe6f73b6b2",
+   "proposed": "2026-11-25T10:27:24.452000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Gets On Base",
+    "Viva La Raza!"
+   ],
+   "outcome": "pending",
+   "moves": [
+    {
+     "player": "LaMelo Ball",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Andrew Wiggins",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Ace Bailey",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": 0.016,
+   "receiver_gain": -0.063
+  },
+  {
+   "id": "4810660b-a8e6-44ef-9209-b20d2e6d3053",
+   "proposed": "2026-11-25T10:25:33.308000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Gets On Base",
+    "Viva La Raza!"
+   ],
+   "outcome": "pending",
+   "moves": [
+    {
+     "player": "Ayo Dosunmu",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "LaMelo Ball",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Norman Powell",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": -0.013,
+   "receiver_gain": -0.034
+  },
+  {
+   "id": "f9cbce2b-1d42-4850-8db5-35cb259a12e5",
+   "proposed": "2026-11-25T10:25:09.695000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Gets On Base",
+    "Viva La Raza!"
+   ],
+   "outcome": "pending",
+   "moves": [
+    {
+     "player": "LaMelo Ball",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Ayo Dosunmu",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Darius Garland",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": 0.027,
+   "receiver_gain": -0.054
+  },
+  {
+   "id": "adbfe8e2-f8a8-4f1b-9ac9-7f4ca8783551",
+   "proposed": "2026-11-25T10:22:33.037000+00:00",
+   "sender": "Gets On Base",
+   "receiver": "Viva La Raza!",
+   "teams": [
+    "Gets On Base",
+    "Viva La Raza!"
+   ],
+   "outcome": "pending",
+   "moves": [
+    {
+     "player": "Jake LaRavia",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "LaMelo Ball",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Ayo Dosunmu",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    }
+   ],
+   "sender_gain": 0.209,
+   "receiver_gain": -0.317
+  },
+  {
+   "id": "c4b89ffd-b1e9-4196-9907-ce1efa5e26f7",
+   "proposed": "2026-11-25T10:22:02.468000+00:00",
+   "sender": "Gets On Base",
+   "receiver": "Viva La Raza!",
+   "teams": [
+    "Gets On Base",
+    "Viva La Raza!"
+   ],
+   "outcome": "pending",
+   "moves": [
+    {
+     "player": "Anfernee Simons",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Ayo Dosunmu",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "LaMelo Ball",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    }
+   ],
+   "sender_gain": 0.346,
+   "receiver_gain": -0.387
+  },
+  {
+   "id": "066a2912-acc6-4f6d-a683-b16aa7bd9033",
+   "proposed": "2026-11-25T10:21:43.853000+00:00",
+   "sender": "Gets On Base",
+   "receiver": "Viva La Raza!",
+   "teams": [
+    "Gets On Base",
+    "Viva La Raza!"
+   ],
+   "outcome": "pending",
+   "moves": [
+    {
+     "player": "Jared McCain",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Ayo Dosunmu",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "LaMelo Ball",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": 0.219,
+   "receiver_gain": -0.262
+  },
+  {
+   "id": "2c9e71b6-c1d9-4e5b-8a90-052e0a93fd5e",
+   "proposed": "2026-11-25T10:18:45.732000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Gets On Base",
+    "Viva La Raza!"
+   ],
+   "outcome": "pending",
+   "moves": [
+    {
+     "player": "Naz Reid",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Andrew Wiggins",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": -0.084,
+   "receiver_gain": 0.042
+  },
+  {
+   "id": "d1758cdc-350e-4426-bbea-18bbfd079f9e",
+   "proposed": "2026-11-25T10:18:04.508000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Gets On Base",
+    "Viva La Raza!"
+   ],
+   "outcome": "pending",
+   "moves": [
+    {
+     "player": "Moussa Diabate",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Naz Reid",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Ace Bailey",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": 0.226,
+   "receiver_gain": -0.228
+  },
+  {
+   "id": "6fbfc515-8142-4c37-b616-5a16a3740cda",
+   "proposed": "2026-11-25T10:12:36.715000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "Gets On Base",
+   "teams": [
+    "Gets On Base",
+    "Viva La Raza!"
+   ],
+   "outcome": "pending",
+   "moves": [
+    {
+     "player": "Naz Reid",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": 0.19,
+   "receiver_gain": -0.184
+  },
   {
    "id": "23fbefd5-1f0c-4f84-a390-da8394449569",
    "proposed": "2026-11-25T02:46:04.724000+00:00",
@@ -5328,64 +5673,6 @@
    }
   },
   {
-   "team": "Gets On Base",
-   "sent": 30,
-   "received": 50,
-   "rated_sent": 20,
-   "sent_accepted": 0,
-   "sent_declined": 7,
-   "generosity": -0.003,
-   "self_gain": 0.099,
-   "best_sent": {
-    "id": "661b860b-96fa-4963-afd7-093e9f948d6e",
-    "receiver": "The Real OG",
-    "receiver_gain": 0.414,
-    "sender_gain": -0.348,
-    "moves": [
-     {
-      "player": "Anthony Davis",
-      "from": "Gets On Base",
-      "to": "The Real OG"
-     },
-     {
-      "player": "Jalen Brunson",
-      "from": "The Real OG",
-      "to": "Gets On Base"
-     }
-    ],
-    "outcome": "cancelled/expired"
-   },
-   "worst_sent": {
-    "id": "bdc3a7e9-c682-4938-aff5-d37e711261c3",
-    "receiver": "Torta Pounders",
-    "receiver_gain": -0.228,
-    "sender_gain": 0.373,
-    "moves": [
-     {
-      "player": "Jalen Duren",
-      "from": "Gets On Base",
-      "to": "Torta Pounders"
-     },
-     {
-      "player": "Norman Powell",
-      "from": "Gets On Base",
-      "to": "Torta Pounders"
-     },
-     {
-      "player": "Tyrese Haliburton",
-      "from": "Torta Pounders",
-      "to": "Gets On Base"
-     },
-     {
-      "player": "Reed Sheppard",
-      "from": "Torta Pounders",
-      "to": "Gets On Base"
-     }
-    ],
-    "outcome": "cancelled/expired"
-   }
-  },
-  {
    "team": "Derrick White Girl Wasted",
    "sent": 33,
    "received": 6,
@@ -5451,6 +5738,64 @@
      }
     ],
     "outcome": "cancelled/expired"
+   }
+  },
+  {
+   "team": "Gets On Base",
+   "sent": 34,
+   "received": 56,
+   "rated_sent": 24,
+   "sent_accepted": 0,
+   "sent_declined": 7,
+   "generosity": -0.051,
+   "self_gain": 0.122,
+   "best_sent": {
+    "id": "661b860b-96fa-4963-afd7-093e9f948d6e",
+    "receiver": "The Real OG",
+    "receiver_gain": 0.414,
+    "sender_gain": -0.348,
+    "moves": [
+     {
+      "player": "Anthony Davis",
+      "from": "Gets On Base",
+      "to": "The Real OG"
+     },
+     {
+      "player": "Jalen Brunson",
+      "from": "The Real OG",
+      "to": "Gets On Base"
+     }
+    ],
+    "outcome": "cancelled/expired"
+   },
+   "worst_sent": {
+    "id": "c4b89ffd-b1e9-4196-9907-ce1efa5e26f7",
+    "receiver": "Viva La Raza!",
+    "receiver_gain": -0.387,
+    "sender_gain": 0.346,
+    "moves": [
+     {
+      "player": "Anfernee Simons",
+      "from": "Gets On Base",
+      "to": "Viva La Raza!"
+     },
+     {
+      "player": "Donovan Clingan",
+      "from": "Gets On Base",
+      "to": "Viva La Raza!"
+     },
+     {
+      "player": "Ayo Dosunmu",
+      "from": "Viva La Raza!",
+      "to": "Gets On Base"
+     },
+     {
+      "player": "LaMelo Ball",
+      "from": "Viva La Raza!",
+      "to": "Gets On Base"
+     }
+    ],
+    "outcome": "pending"
    }
   },
   {
@@ -5565,6 +5910,64 @@
    }
   },
   {
+   "team": "Viva La Raza!",
+   "sent": 53,
+   "received": 11,
+   "rated_sent": 35,
+   "sent_accepted": 1,
+   "sent_declined": 0,
+   "generosity": -0.177,
+   "self_gain": 0.196,
+   "best_sent": {
+    "id": "bd9f9a3b-2512-41bb-a03b-b39d038694be",
+    "receiver": "Giddey up Horsey",
+    "receiver_gain": 0.08,
+    "sender_gain": -0.095,
+    "moves": [
+     {
+      "player": "Bam Adebayo",
+      "from": "Viva La Raza!",
+      "to": "Giddey up Horsey"
+     },
+     {
+      "player": "Alex Caruso",
+      "from": "Viva La Raza!",
+      "to": "Giddey up Horsey"
+     },
+     {
+      "player": "Josh Giddey",
+      "from": "Giddey up Horsey",
+      "to": "Viva La Raza!"
+     },
+     {
+      "player": "Ivica Zubac",
+      "from": "Giddey up Horsey",
+      "to": "Viva La Raza!"
+     }
+    ],
+    "outcome": "cancelled/expired"
+   },
+   "worst_sent": {
+    "id": "0bf09e67-0309-4318-b268-eda2ad0477a0",
+    "receiver": "The Serbian Empire",
+    "receiver_gain": -0.446,
+    "sender_gain": 0.458,
+    "moves": [
+     {
+      "player": "Darius Garland",
+      "from": "Viva La Raza!",
+      "to": "The Serbian Empire"
+     },
+     {
+      "player": "Ty Jerome",
+      "from": "The Serbian Empire",
+      "to": "Viva La Raza!"
+     }
+    ],
+    "outcome": "cancelled/expired"
+   }
+  },
+  {
    "team": "Stairway to Devin",
    "sent": 6,
    "received": 5,
@@ -5612,64 +6015,6 @@
       "player": "Evan Mobley",
       "from": "mr charloooooo",
       "to": "Stairway to Devin"
-     }
-    ],
-    "outcome": "cancelled/expired"
-   }
-  },
-  {
-   "team": "Viva La Raza!",
-   "sent": 47,
-   "received": 7,
-   "rated_sent": 29,
-   "sent_accepted": 1,
-   "sent_declined": 0,
-   "generosity": -0.196,
-   "self_gain": 0.224,
-   "best_sent": {
-    "id": "bd9f9a3b-2512-41bb-a03b-b39d038694be",
-    "receiver": "Giddey up Horsey",
-    "receiver_gain": 0.08,
-    "sender_gain": -0.095,
-    "moves": [
-     {
-      "player": "Bam Adebayo",
-      "from": "Viva La Raza!",
-      "to": "Giddey up Horsey"
-     },
-     {
-      "player": "Alex Caruso",
-      "from": "Viva La Raza!",
-      "to": "Giddey up Horsey"
-     },
-     {
-      "player": "Josh Giddey",
-      "from": "Giddey up Horsey",
-      "to": "Viva La Raza!"
-     },
-     {
-      "player": "Ivica Zubac",
-      "from": "Giddey up Horsey",
-      "to": "Viva La Raza!"
-     }
-    ],
-    "outcome": "cancelled/expired"
-   },
-   "worst_sent": {
-    "id": "0bf09e67-0309-4318-b268-eda2ad0477a0",
-    "receiver": "The Serbian Empire",
-    "receiver_gain": -0.446,
-    "sender_gain": 0.458,
-    "moves": [
-     {
-      "player": "Darius Garland",
-      "from": "Viva La Raza!",
-      "to": "The Serbian Empire"
-     },
-     {
-      "player": "Ty Jerome",
-      "from": "The Serbian Empire",
-      "to": "Viva La Raza!"
      }
     ],
     "outcome": "cancelled/expired"
@@ -5792,5 +6137,5 @@
    "worst_sent": null
   }
  ],
- "lost_before_logging": 104
+ "lost_before_logging": 107
 }

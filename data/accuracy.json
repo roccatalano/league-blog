@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-25T02:59:33.514995+00:00",
+ "updated_utc": "2026-11-25T12:25:39.282514+00:00",
  "overall": {
   "matchups": 31,
   "called": 20,
@@ -273,7 +273,7 @@
        "proj_home": 262.7,
        "proj_away": 222.3,
        "act_home": 253.0,
-       "act_away": 230.0,
+       "act_away": 229.0,
        "brier": 0.0064
       },
       {
@@ -700,7 +700,7 @@
        "won": 1.0,
        "proj_home": 199.2,
        "proj_away": 160.8,
-       "act_home": 223.0,
+       "act_home": 222.0,
        "act_away": 165.0,
        "brier": 0.0016
       },
@@ -807,7 +807,7 @@
        "won": 1.0,
        "proj_home": 191.2,
        "proj_away": 110.6,
-       "act_home": 172.0,
+       "act_home": 171.0,
        "act_away": 138.0,
        "brier": 0.0
       },

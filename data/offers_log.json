@@ -6016,6 +6016,119 @@
     "Viva La Raza!": -0.348
    },
    "rated_on": "2026-11-26"
+  },
+  "d77aefcf-3998-4803-81e1-7f829f871820": {
+   "proposed": "2026-11-26T05:26:39.879000+00:00",
+   "proposed_by": "Derrick White Girl Wasted",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Viva La Raza!"
+   ],
+   "moves": [
+    {
+     "player": "Moussa Diabate",
+     "from": "Viva La Raza!",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Isaiah Jackson",
+     "from": "Derrick White Girl Wasted",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Derik Queen",
+     "from": "Derrick White Girl Wasted",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Derrick White Girl Wasted": 0.057,
+    "Viva La Raza!": -0.055
+   },
+   "rated_on": "2026-11-26"
+  },
+  "48bb6b9c-4b3f-4cae-bae7-d3aecdef8404": {
+   "proposed": "2026-11-26T11:59:36.702000+00:00",
+   "proposed_by": "mr charloooooo",
+   "teams": [
+    "Al-Shaida",
+    "mr charloooooo"
+   ],
+   "moves": [
+    {
+     "player": "Scottie Barnes",
+     "from": "Al-Shaida",
+     "to": "mr charloooooo"
+    },
+    {
+     "player": "Evan Mobley",
+     "from": "mr charloooooo",
+     "to": "Al-Shaida"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Al-Shaida": -0.039,
+    "mr charloooooo": 0.07
+   },
+   "rated_on": "2026-11-26"
+  },
+  "445d3dea-0e64-42ed-8e0d-7f669eb130b3": {
+   "proposed": "2026-11-26T11:59:39.672000+00:00",
+   "proposed_by": "mr charloooooo",
+   "teams": [
+    "The Serbian Empire",
+    "mr charloooooo"
+   ],
+   "moves": [
+    {
+     "player": "Domantas Sabonis",
+     "from": "The Serbian Empire",
+     "to": "mr charloooooo"
+    },
+    {
+     "player": "Evan Mobley",
+     "from": "mr charloooooo",
+     "to": "The Serbian Empire"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "The Serbian Empire": 0.098,
+    "mr charloooooo": -0.075
+   },
+   "rated_on": "2026-11-26"
+  },
+  "c09aac9e-6ff2-40b9-a729-c6e98a530ea3": {
+   "proposed": "2026-11-26T11:41:36.877000+00:00",
+   "proposed_by": "Viva La Raza!",
+   "teams": [
+    "The Serbian Empire",
+    "Viva La Raza!"
+   ],
+   "moves": [
+    {
+     "player": "Tristan da Silva",
+     "from": "Viva La Raza!",
+     "to": "The Serbian Empire"
+    },
+    {
+     "player": "De'Aaron Fox",
+     "from": "The Serbian Empire",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "The Serbian Empire": -0.335,
+    "Viva La Raza!": 0.317
+   },
+   "rated_on": "2026-11-26"
   }
  },
  "outcomes": {
@@ -6658,6 +6771,26 @@
    "outcome": "accepted",
    "by": "Viva La Raza!",
    "date": "2026-11-26T03:10:10.632000+00:00"
+  },
+  "5e214c4a-e7b4-41f2-8881-0f53c9ac0c50": {
+   "outcome": "accepted",
+   "by": "Popoviched",
+   "date": "2026-11-26T12:01:23.313000+00:00"
+  },
+  "fc0f49f3-28f2-46e3-823e-1e22a2bd603b": {
+   "outcome": "declined",
+   "by": "Viva La Raza!",
+   "date": "2026-11-26T09:51:19.734000+00:00"
+  },
+  "0c5591f3-ce8a-4cd6-a3f1-c76324f5c810": {
+   "outcome": "declined",
+   "by": "OnlyFranz",
+   "date": "2026-11-26T11:12:18.061000+00:00"
+  },
+  "70cacb12-a6a2-47da-9de4-fdf15f402add": {
+   "outcome": "declined",
+   "by": "Popoviched",
+   "date": "2026-11-26T11:36:33.950000+00:00"
   }
  },
  "synced_periods": [
@@ -6698,7 +6831,8 @@
   34,
   35,
   36,
-  37
+  37,
+  38
  ],
- "last_sync": "2026-11-26T03:54:25.876152+00:00"
+ "last_sync": "2026-11-26T13:29:20.964668+00:00"
 }

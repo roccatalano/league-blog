@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-26T03:54:32.389959+00:00",
+ "updated_utc": "2026-11-26T13:29:26.016264+00:00",
  "overall": {
   "matchups": 31,
   "called": 20,
@@ -36,9 +36,9 @@
     "actual": 0.636
    }
   ],
-  "categories": 170,
+  "categories": 169,
   "cat_called": 127.0,
-  "cat_brier": 0.179,
+  "cat_brier": 0.178,
   "cat_calibration": [
    {
     "bucket": "50-60%",
@@ -54,9 +54,9 @@
    },
    {
     "bucket": "70-80%",
-    "n": 27,
-    "predicted": 0.753,
-    "actual": 0.741
+    "n": 26,
+    "predicted": 0.755,
+    "actual": 0.769
    },
    {
     "bucket": "80-90%",
@@ -98,9 +98,9 @@
    },
    {
     "cat": "BLK",
-    "n": 19,
+    "n": 18,
     "called": 11.0,
-    "brier": 0.258
+    "brier": 0.245
    },
    {
     "cat": "3PM",
@@ -273,7 +273,7 @@
        "proj_home": 262.7,
        "proj_away": 222.3,
        "act_home": 253.0,
-       "act_away": 229.0,
+       "act_away": 230.0,
        "brier": 0.0064
       },
       {
@@ -353,9 +353,9 @@
      "away": "Stairway to Devin",
      "p_home": 0.27,
      "score": [
-      4,
+      3,
       5,
-      0
+      1
      ],
      "winner": "AWAY",
      "fav": "Stairway to Devin",
@@ -379,7 +379,7 @@
        "won": 0.0,
        "proj_home": 206.5,
        "proj_away": 226.0,
-       "act_home": 203.0,
+       "act_home": 204.0,
        "act_away": 246.0,
        "brier": 0.0484
       },
@@ -406,12 +406,12 @@
       {
        "cat": "BLK",
        "p_home": 0.29,
-       "won": 1.0,
+       "won": 0.5,
        "proj_home": 25.9,
        "proj_away": 28.9,
-       "act_home": 24.0,
+       "act_home": 23.0,
        "act_away": 23.0,
-       "brier": 0.5041
+       "brier": 0.0441
       },
       {
        "cat": "3PM",
@@ -536,7 +536,7 @@
        "won": 0.0,
        "proj_home": 61.6,
        "proj_away": 57.9,
-       "act_home": 77.0,
+       "act_home": 78.0,
        "act_away": 62.0,
        "brier": 0.1369
       },
@@ -593,7 +593,7 @@
        "won": 1.0,
        "proj_home": 243.8,
        "proj_away": 207.6,
-       "act_home": 265.0,
+       "act_home": 266.0,
        "act_away": 206.0,
        "brier": 0.01
       },
@@ -887,9 +887,9 @@
    "called": 6,
    "n": 7,
    "brier": 0.161,
-   "cat_brier": 0.172,
+   "cat_brier": 0.164,
    "cat_called": 47,
-   "cat_n": 63
+   "cat_n": 62
   },
   {
    "period": 4,

@@ -1,6 +1,111 @@
 {
- "updated_utc": "2026-11-26T03:54:26.505959+00:00",
+ "updated_utc": "2026-11-26T13:29:21.431846+00:00",
  "offers": [
+  {
+   "id": "445d3dea-0e64-42ed-8e0d-7f669eb130b3",
+   "proposed": "2026-11-26T11:59:39.672000+00:00",
+   "sender": "mr charloooooo",
+   "receiver": "The Serbian Empire",
+   "teams": [
+    "The Serbian Empire",
+    "mr charloooooo"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Domantas Sabonis",
+     "from": "The Serbian Empire",
+     "to": "mr charloooooo"
+    },
+    {
+     "player": "Evan Mobley",
+     "from": "mr charloooooo",
+     "to": "The Serbian Empire"
+    }
+   ],
+   "sender_gain": -0.075,
+   "receiver_gain": 0.098
+  },
+  {
+   "id": "48bb6b9c-4b3f-4cae-bae7-d3aecdef8404",
+   "proposed": "2026-11-26T11:59:36.702000+00:00",
+   "sender": "mr charloooooo",
+   "receiver": "Al-Shaida",
+   "teams": [
+    "Al-Shaida",
+    "mr charloooooo"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Scottie Barnes",
+     "from": "Al-Shaida",
+     "to": "mr charloooooo"
+    },
+    {
+     "player": "Evan Mobley",
+     "from": "mr charloooooo",
+     "to": "Al-Shaida"
+    }
+   ],
+   "sender_gain": 0.07,
+   "receiver_gain": -0.039
+  },
+  {
+   "id": "c09aac9e-6ff2-40b9-a729-c6e98a530ea3",
+   "proposed": "2026-11-26T11:41:36.877000+00:00",
+   "sender": "Viva La Raza!",
+   "receiver": "The Serbian Empire",
+   "teams": [
+    "The Serbian Empire",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Tristan da Silva",
+     "from": "Viva La Raza!",
+     "to": "The Serbian Empire"
+    },
+    {
+     "player": "De'Aaron Fox",
+     "from": "The Serbian Empire",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": 0.317,
+   "receiver_gain": -0.335
+  },
+  {
+   "id": "d77aefcf-3998-4803-81e1-7f829f871820",
+   "proposed": "2026-11-26T05:26:39.879000+00:00",
+   "sender": "Derrick White Girl Wasted",
+   "receiver": "Viva La Raza!",
+   "teams": [
+    "Derrick White Girl Wasted",
+    "Viva La Raza!"
+   ],
+   "outcome": "cancelled/expired",
+   "moves": [
+    {
+     "player": "Moussa Diabate",
+     "from": "Viva La Raza!",
+     "to": "Derrick White Girl Wasted"
+    },
+    {
+     "player": "Isaiah Jackson",
+     "from": "Derrick White Girl Wasted",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Derik Queen",
+     "from": "Derrick White Girl Wasted",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "sender_gain": 0.057,
+   "receiver_gain": -0.055
+  },
   {
    "id": "3c1bbf84-4d81-45a2-b5f4-984b7c1092e4",
    "proposed": "2026-11-26T03:10:10.632000+00:00",
@@ -711,7 +816,7 @@
     "Gets On Base",
     "Stairway to Devin"
    ],
-   "outcome": "pending",
+   "outcome": "expired",
    "moves": [
     {
      "player": "LeBron James",
@@ -766,7 +871,7 @@
     "Gets On Base",
     "Torta Pounders"
    ],
-   "outcome": "pending",
+   "outcome": "expired",
    "moves": [
     {
      "player": "Tyrese Haliburton",
@@ -5899,13 +6004,13 @@
   },
   {
    "team": "mr charloooooo",
-   "sent": 12,
+   "sent": 14,
    "received": 5,
-   "rated_sent": 10,
+   "rated_sent": 12,
    "sent_accepted": 2,
    "sent_declined": 0,
-   "generosity": 0.012,
-   "self_gain": -0.03,
+   "generosity": 0.015,
+   "self_gain": -0.025,
    "best_sent": {
     "id": "5463c32e-90d7-42ec-8095-1b1ac6dd67d9",
     "receiver": "Popoviched",
@@ -6000,13 +6105,13 @@
   },
   {
    "team": "Derrick White Girl Wasted",
-   "sent": 33,
+   "sent": 34,
    "received": 6,
-   "rated_sent": 27,
+   "rated_sent": 28,
    "sent_accepted": 4,
    "sent_declined": 0,
-   "generosity": -0.031,
-   "self_gain": 0.041,
+   "generosity": -0.032,
+   "self_gain": 0.042,
    "best_sent": {
     "id": "81d2c045-e0d8-46be-90c2-6c945778fedf",
     "receiver": "Giddey up Horsey",
@@ -6127,7 +6232,7 @@
   {
    "team": "Al-Shaida",
    "sent": 7,
-   "received": 11,
+   "received": 12,
    "rated_sent": 5,
    "sent_accepted": 1,
    "sent_declined": 1,
@@ -6175,64 +6280,6 @@
      }
     ],
     "outcome": "expired"
-   }
-  },
-  {
-   "team": "Viva La Raza!",
-   "sent": 59,
-   "received": 14,
-   "rated_sent": 41,
-   "sent_accepted": 1,
-   "sent_declined": 0,
-   "generosity": -0.16,
-   "self_gain": 0.171,
-   "best_sent": {
-    "id": "bd9f9a3b-2512-41bb-a03b-b39d038694be",
-    "receiver": "Giddey up Horsey",
-    "receiver_gain": 0.08,
-    "sender_gain": -0.095,
-    "moves": [
-     {
-      "player": "Bam Adebayo",
-      "from": "Viva La Raza!",
-      "to": "Giddey up Horsey"
-     },
-     {
-      "player": "Alex Caruso",
-      "from": "Viva La Raza!",
-      "to": "Giddey up Horsey"
-     },
-     {
-      "player": "Josh Giddey",
-      "from": "Giddey up Horsey",
-      "to": "Viva La Raza!"
-     },
-     {
-      "player": "Ivica Zubac",
-      "from": "Giddey up Horsey",
-      "to": "Viva La Raza!"
-     }
-    ],
-    "outcome": "cancelled/expired"
-   },
-   "worst_sent": {
-    "id": "0bf09e67-0309-4318-b268-eda2ad0477a0",
-    "receiver": "The Serbian Empire",
-    "receiver_gain": -0.446,
-    "sender_gain": 0.458,
-    "moves": [
-     {
-      "player": "Darius Garland",
-      "from": "Viva La Raza!",
-      "to": "The Serbian Empire"
-     },
-     {
-      "player": "Ty Jerome",
-      "from": "The Serbian Empire",
-      "to": "Viva La Raza!"
-     }
-    ],
-    "outcome": "cancelled/expired"
    }
   },
   {
@@ -6288,6 +6335,64 @@
       "player": "Donovan Clingan",
       "from": "Gets On Base",
       "to": "OnlyFranz"
+     }
+    ],
+    "outcome": "cancelled/expired"
+   }
+  },
+  {
+   "team": "Viva La Raza!",
+   "sent": 60,
+   "received": 15,
+   "rated_sent": 42,
+   "sent_accepted": 1,
+   "sent_declined": 0,
+   "generosity": -0.164,
+   "self_gain": 0.175,
+   "best_sent": {
+    "id": "bd9f9a3b-2512-41bb-a03b-b39d038694be",
+    "receiver": "Giddey up Horsey",
+    "receiver_gain": 0.08,
+    "sender_gain": -0.095,
+    "moves": [
+     {
+      "player": "Bam Adebayo",
+      "from": "Viva La Raza!",
+      "to": "Giddey up Horsey"
+     },
+     {
+      "player": "Alex Caruso",
+      "from": "Viva La Raza!",
+      "to": "Giddey up Horsey"
+     },
+     {
+      "player": "Josh Giddey",
+      "from": "Giddey up Horsey",
+      "to": "Viva La Raza!"
+     },
+     {
+      "player": "Ivica Zubac",
+      "from": "Giddey up Horsey",
+      "to": "Viva La Raza!"
+     }
+    ],
+    "outcome": "cancelled/expired"
+   },
+   "worst_sent": {
+    "id": "0bf09e67-0309-4318-b268-eda2ad0477a0",
+    "receiver": "The Serbian Empire",
+    "receiver_gain": -0.446,
+    "sender_gain": 0.458,
+    "moves": [
+     {
+      "player": "Darius Garland",
+      "from": "Viva La Raza!",
+      "to": "The Serbian Empire"
+     },
+     {
+      "player": "Ty Jerome",
+      "from": "The Serbian Empire",
+      "to": "Viva La Raza!"
      }
     ],
     "outcome": "cancelled/expired"
@@ -6417,7 +6522,7 @@
   {
    "team": "The Serbian Empire",
    "sent": 0,
-   "received": 12,
+   "received": 14,
    "rated_sent": 0,
    "sent_accepted": 0,
    "sent_declined": 0,
@@ -6463,5 +6568,5 @@
    "worst_sent": null
   }
  ],
- "lost_before_logging": 107
+ "lost_before_logging": 111
 }

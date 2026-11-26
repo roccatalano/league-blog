@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-26T13:29:29.099497+00:00",
+ "updated_utc": "2026-11-26T22:31:07.132661+00:00",
  "today_et": "2026-11-26",
  "players": [
   {
@@ -19,6 +19,22 @@
    "per_game": null
   },
   {
+   "name": "Alijah Martin",
+   "nba_team": "TOR",
+   "pos": "G",
+   "status": "Day-To-Day",
+   "injury": "Left Knee",
+   "return_date": "2026-11-27",
+   "days_out": 1,
+   "games_missed": 0,
+   "timeframe": "Days",
+   "note": "Martin is questionable for Friday's game against the Nets due to left knee soreness.",
+   "note_date": "2026-11-26",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
+  },
+  {
    "name": "Andre Drummond",
    "nba_team": "NY",
    "pos": "C",
@@ -28,7 +44,7 @@
    "days_out": 1,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Drummond (head) did not return to Wednesday's 121-102 win over the Cavaliers.",
+   "note": "Drummond (head) is questionable for Friday's game against the Heat.",
    "note_date": "2026-11-26",
    "fantasy_team": "Torta Pounders",
    "on_ir": false,
@@ -36,6 +52,26 @@
     "PTS": 5.1,
     "REB": 7.9,
     "AST": 1.1
+   }
+  },
+  {
+   "name": "Andrew Wiggins",
+   "nba_team": "MIA",
+   "pos": "F",
+   "status": "Day-To-Day",
+   "injury": "Right Ankle",
+   "return_date": "2026-11-27",
+   "days_out": 1,
+   "games_missed": 0,
+   "timeframe": "Days",
+   "note": "Wiggins is probable for Friday's game against the Knicks due to a right ankle sprain.",
+   "note_date": "2026-11-26",
+   "fantasy_team": "Viva La Raza!",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 12.2,
+    "REB": 3.7,
+    "AST": 2.1
    }
   },
   {
@@ -68,31 +104,11 @@
    "days_out": 1,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Mathurin (foot) has been ruled out for Friday's game against the Thunder.",
-   "note_date": "2026-11-19",
+   "note": "Mathurin (foot) is doubtful for Friday's game against the Clippers.",
+   "note_date": "2026-11-26",
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
-  },
-  {
-   "name": "Cade Cunningham",
-   "nba_team": "DET",
-   "pos": "G",
-   "status": "Day-To-Day",
-   "injury": "Knee",
-   "return_date": "2026-11-27",
-   "days_out": 1,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Cunningham (knee) is listed as out for Tuesday's game against Orlando.",
-   "note_date": "2026-11-25",
-   "fantasy_team": "Giddey up Horsey",
-   "on_ir": true,
-   "per_game": {
-    "PTS": 24.4,
-    "REB": 5.3,
-    "AST": 9.1
-   }
   },
   {
    "name": "Chris Youngblood",
@@ -106,6 +122,22 @@
    "timeframe": "Days",
    "note": "Youngblood (heel) has been ruled out for Saturday's game against the Knicks.",
    "note_date": "2026-11-20",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
+  },
+  {
+   "name": "Colin Castleton",
+   "nba_team": "ORL",
+   "pos": "C",
+   "status": "Day-To-Day",
+   "injury": "Calf",
+   "return_date": "2026-11-27",
+   "days_out": 1,
+   "games_missed": 0,
+   "timeframe": "Days",
+   "note": "Castleton totaled five points (2-4 FG, 1-1 3Pt) and four rebounds in seven minutes during Tuesday's 132-116 preseason win over the Cavaliers.",
+   "note_date": "2026-11-26",
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
@@ -131,26 +163,6 @@
    }
   },
   {
-   "name": "Dejounte Murray",
-   "nba_team": "NO",
-   "pos": "G",
-   "status": "Out",
-   "injury": "Ankle",
-   "return_date": "2026-11-27",
-   "days_out": 1,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Murray (ankle) is out for Friday's game against Memphis.",
-   "note_date": "2026-11-13",
-   "fantasy_team": "Popoviched",
-   "on_ir": true,
-   "per_game": {
-    "PTS": 17.2,
-    "REB": 5.1,
-    "AST": 5.7
-   }
-  },
-  {
    "name": "Dereck Lively II",
    "nba_team": "DAL",
    "pos": "C",
@@ -171,23 +183,23 @@
    }
   },
   {
-   "name": "Duncan Robinson",
-   "nba_team": "DET",
+   "name": "Giannis Antetokounmpo",
+   "nba_team": "MIA",
    "pos": "F",
-   "status": "Out",
-   "injury": "Left Quadriceps",
+   "status": "Day-To-Day",
+   "injury": "Right Groin",
    "return_date": "2026-11-27",
    "days_out": 1,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Robinson (quadriceps) is considered day-to-day as he progresses in his rehab, Eric Vincent of ClutchPoints.com reports.",
-   "note_date": "2026-11-24",
-   "fantasy_team": "Popoviched",
-   "on_ir": true,
+   "note": "Antetokounmpo is probable for Friday's game against the Knicks due to right groin tendinitis.",
+   "note_date": "2026-11-26",
+   "fantasy_team": "Gets On Base",
+   "on_ir": false,
    "per_game": {
-    "PTS": 14.2,
-    "REB": 2.2,
-    "AST": 2.1
+    "PTS": 30.2,
+    "REB": 12.1,
+    "AST": 5.8
    }
   },
   {
@@ -208,26 +220,6 @@
     "PTS": 7.8,
     "REB": 5.2,
     "AST": 1.1
-   }
-  },
-  {
-   "name": "Jaylen Brown",
-   "nba_team": "PHI",
-   "pos": "G",
-   "status": "Day-To-Day",
-   "injury": "Left Hamstring",
-   "return_date": "2026-11-27",
-   "days_out": 1,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Brown (hamstring) will receive imaging, and the Sixers will provide an update Thursday, Ky Carlin of USA Today reports.",
-   "note_date": "2026-11-26",
-   "fantasy_team": "Derrick White Girl Wasted",
-   "on_ir": false,
-   "per_game": {
-    "PTS": 22.6,
-    "REB": 6.0,
-    "AST": 3.9
    }
   },
   {
@@ -256,7 +248,7 @@
    "days_out": 1,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Embiid (illness) is out for Wednesday's game against Miami, Ira Winderman of the South Florida Sun Sentinel reports.",
+   "note": "Embiid (illness) is questionable for Friday's game against the Pacers.",
    "note_date": "2026-11-26",
    "fantasy_team": "Al-Shaida",
    "on_ir": false,
@@ -276,8 +268,8 @@
    "days_out": 1,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Clarkson (foot) is out for Wednesday's game against Cleveland.",
-   "note_date": "2026-11-24",
+   "note": "Clarkson (foot) is questionable for Friday's game against the Heat.",
+   "note_date": "2026-11-26",
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
@@ -328,7 +320,7 @@
    "days_out": 1,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "McBride (adductor) has been ruled out for Wednesday's game against the Cavaliers.",
+   "note": "McBride (groin) is questionable for Friday's game against the Heat.",
    "note_date": "2026-11-26",
    "fantasy_team": null,
    "on_ir": false,
@@ -344,23 +336,7 @@
    "days_out": 1,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Robinson (illness) is out for Tuesday's game against Washington, Taylor Snow of the Celtics' official site reports.",
-   "note_date": "2026-11-23",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
-  },
-  {
-   "name": "Moritz Wagner",
-   "nba_team": "BKN",
-   "pos": "C",
-   "status": "Out",
-   "injury": "Left Knee",
-   "return_date": "2026-11-27",
-   "days_out": 1,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Wagner (knee) will not return to Wednesday's game against the Bucks, C.J. Holmes of the New York Daily News reports.",
+   "note": "Robinson (illness) is questionable for Friday's game against the Hawks.",
    "note_date": "2026-11-26",
    "fantasy_team": null,
    "on_ir": false,
@@ -392,8 +368,8 @@
    "days_out": 1,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Anunoby (calf) participated in on-court work for the first time since sustaining the injury, Ian Begley of SportsNet New York reports.",
-   "note_date": "2026-11-25",
+   "note": "Anunoby (calf) is doubtful for Friday's game against the Heat.",
+   "note_date": "2026-11-26",
    "fantasy_team": "HE IS HIM ( G.O.A.T)",
    "on_ir": true,
    "per_game": {
@@ -476,8 +452,8 @@
    "days_out": 1,
    "games_missed": 0,
    "timeframe": "Days",
-   "note": "Watford (ankle) is out for Saturday's game against the Spurs.",
-   "note_date": "2026-11-21",
+   "note": "Watford (ankle) is probable for Friday's game against the Clippers.",
+   "note_date": "2026-11-26",
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
@@ -559,6 +535,26 @@
    }
   },
   {
+   "name": "Jaylen Brown",
+   "nba_team": "PHI",
+   "pos": "G",
+   "status": "Out",
+   "injury": "Left Hamstring",
+   "return_date": "2026-11-28",
+   "days_out": 2,
+   "games_missed": 1,
+   "timeframe": "Days",
+   "note": "Brown (hamstring) is out for Friday's game against the Pacers.",
+   "note_date": "2026-11-26",
+   "fantasy_team": "Derrick White Girl Wasted",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 22.6,
+    "REB": 6.0,
+    "AST": 3.9
+   }
+  },
+  {
    "name": "Jaylin Williams",
    "nba_team": "OKC",
    "pos": "F",
@@ -570,6 +566,22 @@
    "timeframe": "Days",
    "note": "Williams (back) is listed as out for Wednesday's game against Minnesota.",
    "note_date": "2026-11-24",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
+  },
+  {
+   "name": "Moritz Wagner",
+   "nba_team": "BKN",
+   "pos": "C",
+   "status": "Out",
+   "injury": "Left Knee",
+   "return_date": "2026-11-28",
+   "days_out": 2,
+   "games_missed": 1,
+   "timeframe": "Days",
+   "note": "Wagner (knee) won't be available for Friday's game against Toronto.",
+   "note_date": "2026-11-26",
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
@@ -641,6 +653,66 @@
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
+  },
+  {
+   "name": "Cade Cunningham",
+   "nba_team": "DET",
+   "pos": "G",
+   "status": "Out",
+   "injury": "Knee",
+   "return_date": "2026-11-29",
+   "days_out": 3,
+   "games_missed": 1,
+   "timeframe": "1 week",
+   "note": "Cunningham (knee) is listed as out for Tuesday's game against Orlando.",
+   "note_date": "2026-11-26",
+   "fantasy_team": "Giddey up Horsey",
+   "on_ir": true,
+   "per_game": {
+    "PTS": 24.4,
+    "REB": 5.3,
+    "AST": 9.1
+   }
+  },
+  {
+   "name": "Dejounte Murray",
+   "nba_team": "NO",
+   "pos": "G",
+   "status": "Out",
+   "injury": "Ankle",
+   "return_date": "2026-11-29",
+   "days_out": 3,
+   "games_missed": 1,
+   "timeframe": "1 week",
+   "note": "Murray (ankle) is out for Friday's game against Memphis.",
+   "note_date": "2026-11-13",
+   "fantasy_team": "Popoviched",
+   "on_ir": true,
+   "per_game": {
+    "PTS": 17.2,
+    "REB": 5.1,
+    "AST": 5.7
+   }
+  },
+  {
+   "name": "Duncan Robinson",
+   "nba_team": "DET",
+   "pos": "F",
+   "status": "Out",
+   "injury": "Left Quadriceps",
+   "return_date": "2026-11-29",
+   "days_out": 3,
+   "games_missed": 1,
+   "timeframe": "1 week",
+   "note": "Robinson (quadriceps) is considered day-to-day as he progresses in his rehab, Eric Vincent of ClutchPoints.com reports.",
+   "note_date": "2026-11-24",
+   "fantasy_team": "Popoviched",
+   "on_ir": true,
+   "per_game": {
+    "PTS": 14.2,
+    "REB": 2.2,
+    "AST": 2.1
+   }
   },
   {
    "name": "Evan Mobley",
@@ -808,8 +880,8 @@
    "days_out": 4,
    "games_missed": 2,
    "timeframe": "1 week",
-   "note": "Duren (hamstring) is being assigned to the Motor City Cruise on Wednesday for practice as he ramps up for a return, Eric Vincent of ClutchPoints.com reports.",
-   "note_date": "2026-11-24",
+   "note": "Detroit recalled Duren (hamstring) from the G League's Motor City Cruise on Wednesday.",
+   "note_date": "2026-11-26",
    "fantasy_team": "Gets On Base",
    "on_ir": true,
    "per_game": {

@@ -1,103 +1,7 @@
 {
- "updated_utc": "2026-11-25T21:54:02.444379+00:00",
+ "updated_utc": "2026-11-26T03:54:35.540181+00:00",
  "today_et": "2026-11-25",
  "players": [
-  {
-   "name": "Brandon Williams",
-   "nba_team": "GS",
-   "pos": "G",
-   "status": "Out",
-   "injury": "Left Hamstring",
-   "return_date": "2026-11-25",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Head coach Steve Kerr said Tuesday that Williams (hamstring) is questionable to play Wednesday against the Kings, per Dalton Johnson of NBC Sports Bay Area.",
-   "note_date": "2026-11-24",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
-  },
-  {
-   "name": "De'Aaron Fox",
-   "nba_team": "SA",
-   "pos": "G",
-   "status": "Day-To-Day",
-   "injury": "Right Lower Leg",
-   "return_date": "2026-11-25",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Fox (shin) is questionable to play Wednesday's game against the Trail Blazers.",
-   "note_date": "2026-11-25",
-   "fantasy_team": "The Serbian Empire",
-   "on_ir": false,
-   "per_game": {
-    "PTS": 16.4,
-    "REB": 4.0,
-    "AST": 5.7
-   }
-  },
-  {
-   "name": "Jalen Brunson",
-   "nba_team": "NY",
-   "pos": "G",
-   "status": "Day-To-Day",
-   "injury": "Illness",
-   "return_date": "2026-11-25",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Brunson (illness) is probable for Wednesday's game against Cleveland.",
-   "note_date": "2026-11-25",
-   "fantasy_team": "The Real OG",
-   "on_ir": false,
-   "per_game": {
-    "PTS": 26.7,
-    "REB": 3.2,
-    "AST": 6.4
-   }
-  },
-  {
-   "name": "Jalen Smith",
-   "nba_team": "CHI",
-   "pos": "F",
-   "status": "Day-To-Day",
-   "injury": "Illness",
-   "return_date": "2026-11-25",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Smith (illness) is listed as questionable for Wednesday's game against the Hornets.",
-   "note_date": "2026-11-24",
-   "fantasy_team": "Popoviched",
-   "on_ir": false,
-   "per_game": {
-    "PTS": 11.9,
-    "REB": 7.0,
-    "AST": 1.7
-   }
-  },
-  {
-   "name": "Josh Hart",
-   "nba_team": "NY",
-   "pos": "G",
-   "status": "Day-To-Day",
-   "injury": "Right Shoulder",
-   "return_date": "2026-11-25",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Hart (shoulder) has been upgraded to probable for Wednesday's game against the Cavaliers.",
-   "note_date": "2026-11-25",
-   "fantasy_team": "The haliban",
-   "on_ir": false,
-   "per_game": {
-    "PTS": 9.5,
-    "REB": 7.2,
-    "AST": 4.5
-   }
-  },
   {
    "name": "Julian Reese",
    "nba_team": "NO",
@@ -115,102 +19,6 @@
    "per_game": null
   },
   {
-   "name": "Karl-Anthony Towns",
-   "nba_team": "NY",
-   "pos": "C",
-   "status": "Day-To-Day",
-   "injury": "Right Knee",
-   "return_date": "2026-11-25",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Towns (knee) is probable for Wednesday's game against Cleveland.",
-   "note_date": "2026-11-25",
-   "fantasy_team": "Popoviched",
-   "on_ir": false,
-   "per_game": {
-    "PTS": 21.9,
-    "REB": 12.6,
-    "AST": 4.2
-   }
-  },
-  {
-   "name": "Sion James",
-   "nba_team": "CHA",
-   "pos": "G",
-   "status": "Day-To-Day",
-   "injury": "Left Undisclosed",
-   "return_date": "2026-11-25",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "James is probable for Wednesday's game against the Bulls due to general soreness.",
-   "note_date": "2026-11-24",
-   "fantasy_team": null,
-   "on_ir": false,
-   "per_game": null
-  },
-  {
-   "name": "Victor Wembanyama",
-   "nba_team": "SA",
-   "pos": "F",
-   "status": "Day-To-Day",
-   "injury": "Back",
-   "return_date": "2026-11-25",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Wembanyama (back) is questionable for Wednesday's game in Portland.",
-   "note_date": "2026-11-25",
-   "fantasy_team": "HE IS HIM ( G.O.A.T)",
-   "on_ir": false,
-   "per_game": {
-    "PTS": 28.5,
-    "REB": 12.3,
-    "AST": 3.4
-   }
-  },
-  {
-   "name": "Yaxel Lendeborg",
-   "nba_team": "GS",
-   "pos": "F",
-   "status": "Day-To-Day",
-   "injury": "Illness",
-   "return_date": "2026-11-25",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "Lendeborg is questionable for Wednesday's game against the Kings with an illness.",
-   "note_date": "2026-11-24",
-   "fantasy_team": "Stairway to Devin",
-   "on_ir": false,
-   "per_game": {
-    "PTS": 17.4,
-    "REB": 7.2,
-    "AST": 3.9
-   }
-  },
-  {
-   "name": "Zach LaVine",
-   "nba_team": "SAC",
-   "pos": "G",
-   "status": "Day-To-Day",
-   "injury": "Right Knee",
-   "return_date": "2026-11-25",
-   "days_out": 0,
-   "games_missed": 0,
-   "timeframe": "Days",
-   "note": "LaVine (knee) has been downgraded to questionable for Wednesday's game against Golden State.",
-   "note_date": "2026-11-25",
-   "fantasy_team": "mr charloooooo",
-   "on_ir": false,
-   "per_game": {
-    "PTS": 20.4,
-    "REB": 3.8,
-    "AST": 3.0
-   }
-  },
-  {
    "name": "Aaron Nesmith",
    "nba_team": "IND",
    "pos": "G",
@@ -225,6 +33,26 @@
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
+  },
+  {
+   "name": "Andre Drummond",
+   "nba_team": "NY",
+   "pos": "C",
+   "status": "Day-To-Day",
+   "injury": "Head",
+   "return_date": "2026-11-27",
+   "days_out": 2,
+   "games_missed": 1,
+   "timeframe": "Days",
+   "note": "Drummond (head) did not return to Wednesday's 121-102 win over the Cavaliers.",
+   "note_date": "2026-11-26",
+   "fantasy_team": "Torta Pounders",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 5.1,
+    "REB": 7.9,
+    "AST": 1.1
+   }
   },
   {
    "name": "Austin Reaves",
@@ -297,6 +125,26 @@
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
+  },
+  {
+   "name": "De'Aaron Fox",
+   "nba_team": "SA",
+   "pos": "G",
+   "status": "Out",
+   "injury": "Right Lower Leg",
+   "return_date": "2026-11-27",
+   "days_out": 2,
+   "games_missed": 1,
+   "timeframe": "Days",
+   "note": "Fox (shin) has been ruled out for Wednesday's game against Portland, Jeff McDonald of the San Antonio Express-News reports.",
+   "note_date": "2026-11-26",
+   "fantasy_team": "The Serbian Empire",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 16.4,
+    "REB": 4.0,
+    "AST": 5.7
+   }
   },
   {
    "name": "Dejounte Murray",
@@ -379,6 +227,26 @@
    }
   },
   {
+   "name": "Jaylen Brown",
+   "nba_team": "PHI",
+   "pos": "G",
+   "status": "Day-To-Day",
+   "injury": "Left Hamstring",
+   "return_date": "2026-11-27",
+   "days_out": 2,
+   "games_missed": 1,
+   "timeframe": "Days",
+   "note": "Brown (hamstring) will receive imaging, and the Sixers will provide an update Thursday, Ky Carlin of USA Today reports.",
+   "note_date": "2026-11-26",
+   "fantasy_team": "Derrick White Girl Wasted",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 22.6,
+    "REB": 6.0,
+    "AST": 3.9
+   }
+  },
+  {
    "name": "Jock Landale",
    "nba_team": "ATL",
    "pos": "C",
@@ -398,14 +266,14 @@
    "name": "Joel Embiid",
    "nba_team": "PHI",
    "pos": "C",
-   "status": "Out",
+   "status": "Day-To-Day",
    "injury": "Illness",
    "return_date": "2026-11-27",
    "days_out": 2,
    "games_missed": 1,
    "timeframe": "Days",
    "note": "Embiid (illness) is out for Wednesday's game against Miami, Ira Winderman of the South Florida Sun Sentinel reports.",
-   "note_date": "2026-11-25",
+   "note_date": "2026-11-26",
    "fantasy_team": "Al-Shaida",
    "on_ir": false,
    "per_game": {
@@ -429,6 +297,26 @@
    "fantasy_team": null,
    "on_ir": false,
    "per_game": null
+  },
+  {
+   "name": "LaMelo Ball",
+   "nba_team": "MIN",
+   "pos": "G",
+   "status": "Day-To-Day",
+   "injury": "Left Ankle",
+   "return_date": "2026-11-27",
+   "days_out": 2,
+   "games_missed": 1,
+   "timeframe": "Days",
+   "note": "Ball (ankle) did not return to Wednesday's 113-106 win over the Thunder.",
+   "note_date": "2026-11-26",
+   "fantasy_team": "Viva La Raza!",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 20.2,
+    "REB": 4.9,
+    "AST": 6.9
+   }
   },
   {
    "name": "Larry Nance Jr.",
@@ -479,6 +367,22 @@
    "per_game": null
   },
   {
+   "name": "Moritz Wagner",
+   "nba_team": "BKN",
+   "pos": "C",
+   "status": "Out",
+   "injury": "Left Knee",
+   "return_date": "2026-11-27",
+   "days_out": 2,
+   "games_missed": 1,
+   "timeframe": "Days",
+   "note": "Wagner (knee) will not return to Wednesday's game against the Bucks, C.J. Holmes of the New York Daily News reports.",
+   "note_date": "2026-11-26",
+   "fantasy_team": null,
+   "on_ir": false,
+   "per_game": null
+  },
+  {
    "name": "Nate Bittle",
    "nba_team": "TOR",
    "pos": "C",
@@ -504,8 +408,8 @@
    "days_out": 2,
    "games_missed": 1,
    "timeframe": "Days",
-   "note": "Anunoby (calf) is out for Wednesday's game against Cleveland.",
-   "note_date": "2026-11-24",
+   "note": "Anunoby (calf) participated in on-court work for the first time since sustaining the injury, Ian Begley of SportsNet New York reports.",
+   "note_date": "2026-11-25",
    "fantasy_team": "HE IS HIM ( G.O.A.T)",
    "on_ir": true,
    "per_game": {
@@ -595,6 +499,26 @@
    "per_game": null
   },
   {
+   "name": "Zach Edey",
+   "nba_team": "MEM",
+   "pos": "C",
+   "status": "Day-To-Day",
+   "injury": "Left Ankle",
+   "return_date": "2026-11-27",
+   "days_out": 2,
+   "games_missed": 1,
+   "timeframe": "Days",
+   "note": "Edey (ankle) did not return to Wednesday's 115-97 win over the Clippers. He finished with seven points (3-4 FG, 1-1 FT), four rebounds, two assists and two blocks across nine minutes.",
+   "note_date": "2026-11-26",
+   "fantasy_team": "Giddey up Horsey",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 10.8,
+    "REB": 8.9,
+    "AST": 1.1
+   }
+  },
+  {
    "name": "Aday Mara",
    "nba_team": "OKC",
    "pos": "C",
@@ -628,6 +552,26 @@
     "PTS": 14.5,
     "REB": 3.0,
     "AST": 3.3
+   }
+  },
+  {
+   "name": "Jalen Smith",
+   "nba_team": "CHI",
+   "pos": "F",
+   "status": "Out",
+   "injury": "Illness",
+   "return_date": "2026-11-28",
+   "days_out": 3,
+   "games_missed": 1,
+   "timeframe": "1 week",
+   "note": "Smith (illness) is listed as out for Wednesday's game against Charlotte.",
+   "note_date": "2026-11-25",
+   "fantasy_team": "Popoviched",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 11.9,
+    "REB": 7.0,
+    "AST": 1.7
    }
   },
   {
@@ -848,6 +792,26 @@
     "PTS": 23.5,
     "REB": 7.7,
     "AST": 5.5
+   }
+  },
+  {
+   "name": "Zach LaVine",
+   "nba_team": "SAC",
+   "pos": "G",
+   "status": "Out",
+   "injury": "Right Knee",
+   "return_date": "2026-11-29",
+   "days_out": 4,
+   "games_missed": 1,
+   "timeframe": "1 week",
+   "note": "LaVine (knee) is listed as out for Wednesday's game versus the Warriors.",
+   "note_date": "2026-11-25",
+   "fantasy_team": "mr charloooooo",
+   "on_ir": false,
+   "per_game": {
+    "PTS": 20.4,
+    "REB": 3.8,
+    "AST": 3.0
    }
   },
   {
@@ -1120,8 +1084,8 @@
    "days_out": 17,
    "games_missed": 4,
    "timeframe": "2-4 weeks",
-   "note": "Curry has been diagnosed with an oblique abdominal tear and will be re-evaluated in two weeks, Shams Charania of ESPN reports.",
-   "note_date": "2026-11-12",
+   "note": "Curry (abdomen) will be re-evaluated Friday after Thanksgiving, Anthony Slater of ESPN.com reports.",
+   "note_date": "2026-11-26",
    "fantasy_team": "mr charloooooo",
    "on_ir": false,
    "per_game": {

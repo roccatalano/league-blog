@@ -5268,7 +5268,7 @@
     }
    ],
    "espn_status": "PENDING",
-   "live_now": true,
+   "live_now": false,
    "rating": {
     "Gets On Base": -0.131,
     "Stairway to Devin": 0.136
@@ -5337,7 +5337,7 @@
     }
    ],
    "espn_status": "PENDING",
-   "live_now": true,
+   "live_now": false,
    "rating": {
     "Gets On Base": -0.228,
     "Viva La Raza!": 0.226
@@ -5369,7 +5369,7 @@
     }
    ],
    "espn_status": "PENDING",
-   "live_now": true,
+   "live_now": false,
    "rating": {
     "Gets On Base": 0.042,
     "Viva La Raza!": -0.084
@@ -5406,7 +5406,7 @@
     }
    ],
    "espn_status": "PENDING",
-   "live_now": true,
+   "live_now": false,
    "rating": {
     "Gets On Base": 0.219,
     "Viva La Raza!": -0.262
@@ -5480,7 +5480,7 @@
     }
    ],
    "espn_status": "PENDING",
-   "live_now": true,
+   "live_now": false,
    "rating": {
     "Gets On Base": -0.184,
     "Viva La Raza!": 0.19
@@ -5517,7 +5517,7 @@
     }
    ],
    "espn_status": "PENDING",
-   "live_now": true,
+   "live_now": false,
    "rating": {
     "Gets On Base": -0.063,
     "Viva La Raza!": 0.016
@@ -5554,7 +5554,7 @@
     }
    ],
    "espn_status": "PENDING",
-   "live_now": true,
+   "live_now": false,
    "rating": {
     "Gets On Base": -0.054,
     "Viva La Raza!": 0.027
@@ -5591,7 +5591,7 @@
     }
    ],
    "espn_status": "PENDING",
-   "live_now": true,
+   "live_now": false,
    "rating": {
     "Gets On Base": -0.034,
     "Viva La Raza!": -0.013
@@ -5628,7 +5628,7 @@
     }
    ],
    "espn_status": "PENDING",
-   "live_now": true,
+   "live_now": false,
    "rating": {
     "Gets On Base": 0.209,
     "Viva La Raza!": -0.317
@@ -5665,12 +5665,357 @@
     }
    ],
    "espn_status": "PENDING",
-   "live_now": true,
+   "live_now": false,
    "rating": {
     "Gets On Base": 0.346,
     "Viva La Raza!": -0.387
    },
    "rated_on": "2026-11-25"
+  },
+  "3c1bbf84-4d81-45a2-b5f4-984b7c1092e4": {
+   "proposed": "2026-11-26T03:10:10.632000+00:00",
+   "proposed_by": "Gets On Base",
+   "teams": [
+    "Gets On Base",
+    "Viva La Raza!"
+   ],
+   "moves": [
+    {
+     "player": "Jared McCain",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Ayo Dosunmu",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "LaMelo Ball",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Gets On Base": 0.275,
+    "Viva La Raza!": -0.317
+   },
+   "rated_on": "2026-11-26"
+  },
+  "5b33351c-b761-42a9-8819-0e62510e0247": {
+   "proposed": "2026-11-26T03:10:10.632000+00:00",
+   "proposed_by": "Viva La Raza!",
+   "teams": [
+    "Gets On Base",
+    "Viva La Raza!"
+   ],
+   "moves": [
+    {
+     "player": "LaMelo Ball",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Ayo Dosunmu",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Darius Garland",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Gets On Base": -0.001,
+    "Viva La Raza!": -0.021
+   },
+   "rated_on": "2026-11-26"
+  },
+  "8571c9bb-26e4-465c-a509-442afc334b75": {
+   "proposed": "2026-11-26T03:10:10.632000+00:00",
+   "proposed_by": "Viva La Raza!",
+   "teams": [
+    "Gets On Base",
+    "Viva La Raza!"
+   ],
+   "moves": [
+    {
+     "player": "LaMelo Ball",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Andrew Wiggins",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Ace Bailey",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Gets On Base": -0.04,
+    "Viva La Raza!": -0.001
+   },
+   "rated_on": "2026-11-26"
+  },
+  "5c4149bf-01cc-4731-92f9-9b28cdc2a82c": {
+   "proposed": "2026-11-26T03:10:10.632000+00:00",
+   "proposed_by": "Viva La Raza!",
+   "teams": [
+    "Gets On Base",
+    "Viva La Raza!"
+   ],
+   "moves": [
+    {
+     "player": "Ayo Dosunmu",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "LaMelo Ball",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Norman Powell",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Gets On Base": -0.003,
+    "Viva La Raza!": -0.042
+   },
+   "rated_on": "2026-11-26"
+  },
+  "d3ef1d24-d711-4545-a000-f9cdda4d8f6b": {
+   "proposed": "2026-11-26T03:10:10.632000+00:00",
+   "proposed_by": "Gets On Base",
+   "teams": [
+    "Gets On Base",
+    "Viva La Raza!"
+   ],
+   "moves": [
+    {
+     "player": "Anfernee Simons",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Ayo Dosunmu",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "LaMelo Ball",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Gets On Base": 0.356,
+    "Viva La Raza!": -0.418
+   },
+   "rated_on": "2026-11-26"
+  },
+  "1b50937f-4c4f-4dc5-ac51-b0b742471567": {
+   "proposed": "2026-11-26T03:10:10.632000+00:00",
+   "proposed_by": "Viva La Raza!",
+   "teams": [
+    "Gets On Base",
+    "Viva La Raza!"
+   ],
+   "moves": [
+    {
+     "player": "Naz Reid",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Andrew Wiggins",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Gets On Base": 0.036,
+    "Viva La Raza!": -0.101
+   },
+   "rated_on": "2026-11-26"
+  },
+  "10147b25-9049-4124-91bd-7d8b7be3e1e2": {
+   "proposed": "2026-11-26T03:10:10.632000+00:00",
+   "proposed_by": "Viva La Raza!",
+   "teams": [
+    "Gets On Base",
+    "Viva La Raza!"
+   ],
+   "moves": [
+    {
+     "player": "Moussa Diabate",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Naz Reid",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Ace Bailey",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Gets On Base": -0.193,
+    "Viva La Raza!": 0.185
+   },
+   "rated_on": "2026-11-26"
+  },
+  "2e8ea8d2-81db-4712-8939-1371490c64ff": {
+   "proposed": "2026-11-26T03:10:10.632000+00:00",
+   "proposed_by": "Stairway to Devin",
+   "teams": [
+    "Gets On Base",
+    "Stairway to Devin"
+   ],
+   "moves": [
+    {
+     "player": "LeBron James",
+     "from": "Stairway to Devin",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Stairway to Devin"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Gets On Base": -0.076,
+    "Stairway to Devin": 0.096
+   },
+   "rated_on": "2026-11-26"
+  },
+  "328f57ef-145d-4559-90ba-0c348f99430e": {
+   "proposed": "2026-11-26T03:10:10.632000+00:00",
+   "proposed_by": "Viva La Raza!",
+   "teams": [
+    "Gets On Base",
+    "Viva La Raza!"
+   ],
+   "moves": [
+    {
+     "player": "Naz Reid",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Gets On Base": -0.145,
+    "Viva La Raza!": 0.158
+   },
+   "rated_on": "2026-11-26"
+  },
+  "da5d85ff-4bdd-4cb3-a6fc-afcedd656d6e": {
+   "proposed": "2026-11-26T03:10:10.632000+00:00",
+   "proposed_by": "Gets On Base",
+   "teams": [
+    "Gets On Base",
+    "Viva La Raza!"
+   ],
+   "moves": [
+    {
+     "player": "Jake LaRavia",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "Donovan Clingan",
+     "from": "Gets On Base",
+     "to": "Viva La Raza!"
+    },
+    {
+     "player": "LaMelo Ball",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    },
+    {
+     "player": "Ayo Dosunmu",
+     "from": "Viva La Raza!",
+     "to": "Gets On Base"
+    }
+   ],
+   "espn_status": "CANCELED",
+   "live_now": false,
+   "rating": {
+    "Gets On Base": 0.25,
+    "Viva La Raza!": -0.348
+   },
+   "rated_on": "2026-11-26"
   }
  },
  "outcomes": {
@@ -6308,6 +6653,11 @@
    "outcome": "declined",
    "by": "Derrick White Girl Wasted",
    "date": "2026-11-25T10:45:57.176000+00:00"
+  },
+  "9abb1d61-fa6e-4580-be3e-2541f39f77e8": {
+   "outcome": "accepted",
+   "by": "Viva La Raza!",
+   "date": "2026-11-26T03:10:10.632000+00:00"
   }
  },
  "synced_periods": [
@@ -6350,5 +6700,5 @@
   36,
   37
  ],
- "last_sync": "2026-11-25T21:53:55.209028+00:00"
+ "last_sync": "2026-11-26T03:54:25.876152+00:00"
 }

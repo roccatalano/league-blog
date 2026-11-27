@@ -5453,7 +5453,7 @@
     }
    ],
    "espn_status": "PENDING",
-   "live_now": true,
+   "live_now": false,
    "rating": {
     "Gets On Base": 0.173,
     "Viva La Raza!": -0.209
@@ -6769,8 +6769,8 @@
   },
   "9abb1d61-fa6e-4580-be3e-2541f39f77e8": {
    "outcome": "accepted",
-   "by": "Viva La Raza!",
-   "date": "2026-11-26T03:10:10.632000+00:00"
+   "by": "Gets On Base",
+   "date": "2026-11-27T03:10:05.870000+00:00"
   },
   "5e214c4a-e7b4-41f2-8881-0f53c9ac0c50": {
    "outcome": "accepted",
@@ -6839,5 +6839,5 @@
   37,
   38
  ],
- "last_sync": "2026-11-26T22:30:59.307311+00:00"
+ "last_sync": "2026-11-27T04:43:48.174310+00:00"
 }

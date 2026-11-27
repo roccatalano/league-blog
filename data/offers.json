@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-27T04:43:48.587977+00:00",
+ "updated_utc": "2026-11-27T14:37:42.375356+00:00",
  "offers": [
   {
    "id": "445d3dea-0e64-42ed-8e0d-7f669eb130b3",
@@ -486,7 +486,7 @@
     "Gets On Base",
     "Viva La Raza!"
    ],
-   "outcome": "pending",
+   "outcome": "expired",
    "moves": [
     {
      "player": "LaMelo Ball",
@@ -521,7 +521,7 @@
     "Gets On Base",
     "Viva La Raza!"
    ],
-   "outcome": "pending",
+   "outcome": "expired",
    "moves": [
     {
      "player": "Ayo Dosunmu",
@@ -556,7 +556,7 @@
     "Gets On Base",
     "Viva La Raza!"
    ],
-   "outcome": "pending",
+   "outcome": "expired",
    "moves": [
     {
      "player": "LaMelo Ball",
@@ -591,7 +591,7 @@
     "Gets On Base",
     "Viva La Raza!"
    ],
-   "outcome": "pending",
+   "outcome": "expired",
    "moves": [
     {
      "player": "Jake LaRavia",
@@ -626,7 +626,7 @@
     "Gets On Base",
     "Viva La Raza!"
    ],
-   "outcome": "pending",
+   "outcome": "expired",
    "moves": [
     {
      "player": "Anfernee Simons",
@@ -661,7 +661,7 @@
     "Gets On Base",
     "Viva La Raza!"
    ],
-   "outcome": "pending",
+   "outcome": "expired",
    "moves": [
     {
      "player": "Jared McCain",
@@ -696,7 +696,7 @@
     "Gets On Base",
     "Viva La Raza!"
    ],
-   "outcome": "pending",
+   "outcome": "expired",
    "moves": [
     {
      "player": "Naz Reid",
@@ -726,7 +726,7 @@
     "Gets On Base",
     "Viva La Raza!"
    ],
-   "outcome": "pending",
+   "outcome": "expired",
    "moves": [
     {
      "player": "Moussa Diabate",
@@ -761,7 +761,7 @@
     "Gets On Base",
     "Viva La Raza!"
    ],
-   "outcome": "pending",
+   "outcome": "expired",
    "moves": [
     {
      "player": "Naz Reid",
@@ -6568,5 +6568,5 @@
    "worst_sent": null
   }
  ],
- "lost_before_logging": 112
+ "lost_before_logging": 114
 }
